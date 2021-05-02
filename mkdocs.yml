@@ -1,0 +1,74 @@
+site_name: Huma Docs
+site_description: 'Huma Documentation'
+site_url: 'https://docs.huma.com'
+repo_name: 'huma-engineering/huma-docs'
+repo_url: 'https://github.com/huma-engineering/huma-docs'
+edit_uri: 'edit/mainline/docs/content'
+copyright: 'Copyright &copy; 2021 Huma Therapeutics Ltd'
+docs_dir: 'docs/content'
+site_dir: 'docs'
+extra_css:
+  - stylesheets/extra.css
+extra:
+  alternate:
+    - name: English
+      link: ./en/
+      lang: en
+
+nav:
+  - Home: index.en.md
+  - User Manual:
+    - Patient: user-manual/overview.en.md
+    - Clinian Portal:
+      - How it works: user-manual/getting-started/first-app-tutorial.en.md
+  - API:
+      - Manifest: user-manual/manifest/backend-service.en.md
+      - Export organisation: api/guides.en.md
+      - Export deployment: api/get-involved.en.md
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font: false
+  icon:
+    logo: huma/huma
+  favicon: assets/images/huma.svg
+  language: en
+  features:
+    - tabs
+    - instant
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/overrides/.icons
+
+plugins:
+    - search
+    - redirects:
+        redirect_maps:
+            'user-manual/getting-started.md': 'user-manual/getting-started/first-app-tutorial.md'
+    - i18n:
+        default_language: en
+        languages:
+          en: english
+        material_alternate: false
+    - macros:
+        include_dir: docs/content/user-manual/include
