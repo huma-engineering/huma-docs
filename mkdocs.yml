@@ -39,7 +39,9 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-  font: false
+  font: 
+    #text: Girassol
+    text: Noto Sans
   icon:
     logo: huma/huma
   favicon: assets/images/huma.svg
