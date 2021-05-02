@@ -11,9 +11,10 @@ serve:
 		mkdocs serve
 
 common/venv:
-	$(PYTHON) -m venv .venv && \
+	@$(PYTHON) -m venv .venv && \
 		source .venv/bin/activate && \
-		pip install wheel
+		pip install wheel && \
+		pip install -r requirements.txt
 
 common/git-info:
 	@echo "+ GIT Branch: "$(GIT_BRANCH)
