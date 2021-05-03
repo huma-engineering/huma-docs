@@ -12,7 +12,10 @@ serve:
 
 build:
 	@source .venv/bin/activate && \
-		mkdocs build
+		mkdocs build && \
+		echo '+ static folder is `site`' && \
+		echo '+ Also it can be serve by `python3 -m http.server -d ./site  8000`'
+
 
 common/venv:
 	@$(PYTHON) -m venv .venv && \
