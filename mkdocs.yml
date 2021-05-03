@@ -17,12 +17,14 @@ extra:
 
 nav:
   - Home: index.en.md
-  - User Manual:
-    - Patient: user-manual/overview.en.md
-    - Clinian Portal:
-      - How it works: user-manual/getting-started/first-app-tutorial.en.md
+  - User Guides:
+    - Patient: user-guide/overview.en.md
+    - Portal:
+      - Clinian Portal: 
+        - Overview: user-guide/portal/overview.en.md
+        - Export deployment: api/get-involved.en.md
   - API:
-      - Manifest: user-manual/manifest/backend-service.en.md
+      - Manifest: user-guide/manifest/backend-service.en.md
       - Export organisation: api/guides.en.md
       - Export deployment: api/get-involved.en.md
 theme:
@@ -55,6 +57,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed
+  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
@@ -66,11 +69,11 @@ plugins:
     - search
     - redirects:
         redirect_maps:
-            'user-manual/getting-started.md': 'user-manual/getting-started/first-app-tutorial.md'
+            'user-guide/getting-started.md': 'user-guide/getting-started/first-app-tutorial.md'
     - i18n:
         default_language: en
         languages:
           en: english
         material_alternate: false
     - macros:
-        include_dir: docs/content/user-manual/include
+        include_dir: docs/content/user-guide/include
