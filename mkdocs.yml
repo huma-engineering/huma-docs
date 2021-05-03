@@ -6,7 +6,7 @@ repo_url: 'https://github.com/huma-engineering/huma-docs'
 edit_uri: 'edit/mainline/docs/content'
 copyright: 'Copyright &copy; 2021 Huma Therapeutics Ltd'
 docs_dir: 'docs/content'
-site_dir: 'docs'
+#site_dir: 'docs'
 extra_css:
   - stylesheets/extra.css
 extra:
