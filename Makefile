@@ -10,6 +10,10 @@ serve:
 	@source .venv/bin/activate && \
 		mkdocs serve
 
+build:
+	@source .venv/bin/activate && \
+		mkdocs build
+
 common/venv:
 	@$(PYTHON) -m venv .venv && \
 		source .venv/bin/activate && \
