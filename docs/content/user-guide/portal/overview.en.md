@@ -17,7 +17,7 @@ Fill in your personal details, including full name, email, password and unique c
 
 As part of our 2 factor authentication process, you must first verify your email by clicking the link emailed to you and then enter the 6 digit code sent your mobile number via text.
 
-[![Create your account](https://info.huma.com/hubfs/Register-2.gif "Create your account"){ width=50% }](https://f.hubspotusercontent30.net/hubfs/4899239/Register-2.gif =100x)
+[![Create your account](https://info.huma.com/hubfs/Register-2.gif "Create your account")](https://f.hubspotusercontent30.net/hubfs/4899239/Register-2.gif)
 
 ##### Signing in
 
