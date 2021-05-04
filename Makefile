@@ -16,6 +16,8 @@ build:
 		echo '+ static folder is `site`' && \
 		echo '+ Also it can be serve by `python3 -m http.server -d ./site  8000`'
 
+deploy:
+	@firebase deploy --only hosting:huma-docs
 
 common/venv:
 	@$(PYTHON) -m venv .venv && \
