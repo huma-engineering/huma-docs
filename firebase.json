@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "huma-docs",
+    "public": "site",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
