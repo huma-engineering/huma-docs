@@ -9,6 +9,14 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
+  plugins: [
+    [
+      "docusaurus-plugin-openapi",
+      {
+        openapiPath: require.resolve("./apis/documentations.json"),
+      },
+    ],
+  ],
   themeConfig: {
     navbar: {
       title: 'My Site',
@@ -16,6 +24,7 @@ module.exports = {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
+      
       items: [
         {
           type: 'doc',
@@ -24,6 +33,7 @@ module.exports = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: "api/", activeBasePath: "api", label: "API", position: "left"},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
