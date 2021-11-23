@@ -1,30 +1,21 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Huma documentation',
+  tagline: 'Find the latest user guides, developer guides, API references, tutorials, and more.',
+  url: 'https://docs.huma.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-  plugins: [
-    [
-      "docusaurus-plugin-openapi",
-      {
-        openapiPath: require.resolve("./apis/documentations.json"),
-      },
-    ],
-  ],
+  organizationName: 'huma-engineering', // Usually your GitHub org/user name.
+  projectName: 'huma-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: '',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Huma Therapeutics Ltd',
+        src: 'img/huma_logo_black.svg',
       },
-      
       items: [
         {
           type: 'doc',
@@ -32,13 +23,8 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {to: "api/", activeBasePath: "api", label: "API", position: "left"},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        {to: '/blog', label: 'Blog', position: 'right'},
+        {to: "api/", activeBasePath: "api", label: "API", position: "right"},
       ],
     },
     footer: {
