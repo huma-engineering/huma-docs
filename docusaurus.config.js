@@ -23,8 +23,8 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'right'},
-        {to: "api/", activeBasePath: "api", label: "API", position: "right"},
+        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: "api/", activeBasePath: "api", label: "API", position: "left"},
       ],
     },
     footer: {
