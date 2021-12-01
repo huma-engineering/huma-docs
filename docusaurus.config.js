@@ -18,13 +18,68 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
+          type: 'dropdown',
+          position: 'left',
+          label: 'API',
+          items: [
+            {
+              type: 'doc',
+              label: 'Clinician Portal',
+              docId: 'intro',
+            },
+            {
+              type: 'doc',
+              label: 'Huma Mobile App',
+              docId: 'portal/overview',
+            },
+            {
+              type: 'doc',
+              label: 'Admin Portal',
+              docId: 'portal/setup_account',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
           position: 'left',
           label: 'Docs',
+          items: [
+            {
+              type: 'doc',
+              label: 'Clinician Portal',
+              docId: 'portal/overview',
+            },
+            {
+              type: 'doc',
+              label: 'Huma Mobile App',
+              docId: 'intro',
+            },
+            {
+              type: 'doc',
+              label: 'Admin Portal',
+              docId: 'portal/setup_account',
+            },
+          ],
         },
-        {to: "api/", activeBasePath: "sdk", label: "SDK", position: "left"},
-        {to: "api/", activeBasePath: "api", label: "API", position: "left"},
+        {
+          type: 'dropdown',
+          position: 'left',
+          label: 'Guide',
+          items: [
+            {
+              to: 'guide-1',
+              label: 'Guide 1',
+            },
+            {
+              to: 'guide-2',
+              label: 'Guide 2',
+            },
+            {
+              to: 'guide-3',
+              label: 'Guide 3',
+            },
+          ],
+        },
       ],
     },
     footer: {
@@ -95,4 +150,5 @@ module.exports = {
       },
     ],
   ],
+  plugins: [require.resolve('docusaurus-lunr-search')],
 };
