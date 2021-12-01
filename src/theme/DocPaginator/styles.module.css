@@ -1,0 +1,57 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.paginationLink {
+  background-color: var(--ifm-color-cover);
+  border-color: var(--ifm-color-dark);
+  border-radius: 10px;
+  transition: background-color var(--ifm-transition-timing) ease;
+  padding-left: 3rem;
+  position: relative;
+}
+
+.paginationLink:global(.right) {
+  padding-right: 3rem;
+  padding-left: 0;
+}
+
+.paginationLink::after{
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  background-image: var(--ifm-menu-link-sublist-icon);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  left: 1rem;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+}
+
+.paginationLink:global(.right)::after{
+  left: auto;
+  right: 1rem;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.paginationLink :global(.pagination-nav__sublabel) {
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+.paginationLink:hover {
+  border-color: var(--ifm-color-dark);
+  background-color: var(--ifm-color-dark);
+}
+
+.paginationLink :global(.pagination-nav__label) {
+  color: var(--ifm-color-text);
+  font-size: 1rem;
+}
