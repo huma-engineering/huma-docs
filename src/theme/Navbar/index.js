@@ -259,7 +259,7 @@ function Navbar() {
             />
           )}
           {rightItems.map((item, i) => (
-            <NavbarItem {...item} key={i} />
+            item.type == "docsVersionDropdown" ? window.location.href.includes(item.docsPluginId) && <NavbarItem {...item} key={i} /> : <NavbarItem {...item} key={i} />
           ))}
         </div>
       </div>

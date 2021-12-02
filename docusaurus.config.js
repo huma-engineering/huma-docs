@@ -20,22 +20,13 @@ module.exports = {
         {
           type: 'dropdown',
           position: 'left',
-          label: 'API',
+          label: 'Api',
           items: [
             {
               type: 'doc',
-              label: 'Clinician Portal',
+              label: 'Api 1',
+              docsPluginId: 'api',
               docId: 'intro',
-            },
-            {
-              type: 'doc',
-              label: 'Huma Mobile App',
-              docId: 'portal/overview',
-            },
-            {
-              type: 'doc',
-              label: 'Admin Portal',
-              docId: 'portal/setup_account',
             },
           ],
         },
@@ -47,17 +38,20 @@ module.exports = {
             {
               type: 'doc',
               label: 'Clinician Portal',
-              docId: 'portal/overview',
+              docsPluginId: 'portal',
+              docId: 'intro',
             },
             {
               type: 'doc',
               label: 'Huma Mobile App',
+              docsPluginId: 'mobile',
               docId: 'intro',
             },
             {
               type: 'doc',
               label: 'Admin Portal',
-              docId: 'portal/setup_account',
+              docsPluginId: 'admin',
+              docId: 'intro',
             },
           ],
         },
@@ -82,6 +76,12 @@ module.exports = {
         },
         {
           type: 'docsVersionDropdown',
+          docsPluginId: 'portal',
+          position: 'right',
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'mobile',
           position: 'right',
         },
         {
@@ -140,12 +140,12 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
+        // docs: {
+        //   path: 'portal',
+        //   routeBasePath: 'portal',
+        //   sidebarPath: require.resolve('./sidebarsPortal.js'),
+        //   editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+        // },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -158,7 +158,46 @@ module.exports = {
       },
     ],
   ],
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'portal',
+        path: 'portal',
+        routeBasePath: 'portal',
+        sidebarPath: require.resolve('./sidebarsPortal.js'),
+        editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'mobile',
+        path: 'mobile',
+        routeBasePath: 'mobile',
+        sidebarPath: require.resolve('./sidebarsMobile.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'admin',
+        path: 'admin',
+        routeBasePath: 'admin',
+        sidebarPath: require.resolve('./sidebarsAdmin.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: 'api',
+        routeBasePath: 'api',
+        sidebarPath: require.resolve('./sidebarsApi.js'),
+      },
+    ],
+  ],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
