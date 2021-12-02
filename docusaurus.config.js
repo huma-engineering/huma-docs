@@ -80,6 +80,14 @@ module.exports = {
             },
           ],
         },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {
@@ -151,4 +159,8 @@ module.exports = {
     ],
   ],
   plugins: [require.resolve('docusaurus-lunr-search')],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+  },
 };
