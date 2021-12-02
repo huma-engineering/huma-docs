@@ -14,7 +14,7 @@ module.exports = {
       title: '',
       logo: {
         alt: 'Huma Therapeutics Ltd',
-        src: 'img/huma_logo_black.svg',
+        src: '../img/huma_logo_black.svg',
       },
       items: [
         {

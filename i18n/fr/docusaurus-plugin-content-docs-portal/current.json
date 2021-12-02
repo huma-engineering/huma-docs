@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Patient information": {
+    "message": "Patient information",
+    "description": "The label for category Patient information in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Modules": {
+    "message": "Modules",
+    "description": "The label for category Modules in sidebar tutorialSidebar"
+  }
+}

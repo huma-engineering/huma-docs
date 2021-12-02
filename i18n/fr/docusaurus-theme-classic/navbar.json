@@ -1,0 +1,42 @@
+{
+  "item.label.Api": {
+    "message": "Api",
+    "description": "Navbar item with label Api"
+  },
+  "item.label.Docs": {
+    "message": "Docs",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Guide": {
+    "message": "Guide",
+    "description": "Navbar item with label Guide"
+  },
+  "item.label.Api 1": {
+    "message": "Api 1",
+    "description": "Navbar item with label Api 1"
+  },
+  "item.label.Clinician Portal": {
+    "message": "Clinician Portal",
+    "description": "Navbar item with label Clinician Portal"
+  },
+  "item.label.Huma Mobile App": {
+    "message": "Huma Mobile App",
+    "description": "Navbar item with label Huma Mobile App"
+  },
+  "item.label.Admin Portal": {
+    "message": "Admin Portal",
+    "description": "Navbar item with label Admin Portal"
+  },
+  "item.label.Guide 1": {
+    "message": "Guide 1",
+    "description": "Navbar item with label Guide 1"
+  },
+  "item.label.Guide 2": {
+    "message": "Guide 2",
+    "description": "Navbar item with label Guide 2"
+  },
+  "item.label.Guide 3": {
+    "message": "Guide 3",
+    "description": "Navbar item with label Guide 3"
+  }
+}
