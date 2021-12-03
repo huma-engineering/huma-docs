@@ -7,8 +7,6 @@
 
 /* You can override the default Infima variables here. */
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 @font-face {
   font-family: "Victor Serif Smooth";
   src: url("/fonts/VictorSerifSmooth-Bold.woff2") format("woff2"),
@@ -32,6 +30,51 @@
   src: url("/fonts/VictorSerifSmooth-Semibold.woff2") format("woff2"),
     url("/fonts/VictorSerifSmooth-Semibold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Medium.woff2') format('woff2'),
+      url('/fonts/NotoSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-SemiBold.woff2') format('woff2'),
+      url('/fonts/NotoSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Bold.woff2') format('woff2'),
+      url('/fonts/NotoSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Regular.woff2') format('woff2'),
+      url('/fonts/NotoSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Light.woff2') format('woff2'),
+      url('/fonts/NotoSans-Light.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -226,16 +269,12 @@ html[data-theme="dark"] {
 }
 
 .table-of-contents a{
-  max-width: 200px;
+  max-width: 260px;
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   margin: 0;
   position: relative;
   font-size: 0.875rem;
-  padding: 0.7rem 1rem;
-  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding: 0.5rem 1rem;
 }
 
 .table-of-contents a::after{
@@ -243,10 +282,11 @@ html[data-theme="dark"] {
   display: block;
   width: 3px;
   height: 100%;
-  background-color: var(--ifm-toc-border-color-active);
+  border-radius: 10px;
+  background-color: var(--ifm-color-primary);
   position: absolute;
   top: 0;
-  left: 0;
+  left: -2px;
   transform: scaleY(0);
   transform-origin: center top;
   transition: transform 300ms ease;
@@ -257,11 +297,12 @@ html[data-theme="dark"] {
 }
 
 .table-of-contents__link--active {
-  color: var(--ifm-color-text);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
 }
 
 .table-of-contents__link:hover {
-  color: var(--ifm-color-text);
+  color: var(--ifm-color-primary);
 }
 
 @media (max-width: 997px) {

@@ -20,19 +20,6 @@ module.exports = {
         {
           type: 'dropdown',
           position: 'left',
-          label: 'Api',
-          items: [
-            {
-              type: 'doc',
-              label: 'Api 1',
-              docsPluginId: 'api',
-              docId: 'intro',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          position: 'left',
           label: 'Docs',
           items: [
             {
@@ -58,19 +45,32 @@ module.exports = {
         {
           type: 'dropdown',
           position: 'left',
-          label: 'Guide',
+          label: 'SDK',
           items: [
             {
-              to: 'guide-1',
-              label: 'Guide 1',
+              to: 'sdk-1',
+              label: 'Sdk 1',
             },
             {
-              to: 'guide-2',
-              label: 'Guide 2',
+              to: 'sdk-2',
+              label: 'Sdk 2',
             },
             {
-              to: 'guide-3',
-              label: 'Guide 3',
+              to: 'sdk-3',
+              label: 'Sdk 3',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          position: 'left',
+          label: 'API',
+          items: [
+            {
+              type: 'doc',
+              label: 'Api 1',
+              docsPluginId: 'api',
+              docId: 'intro',
             },
           ],
         },
