@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import {
   useThemeConfig,
@@ -16,15 +16,16 @@ import {
 import useWindowSize from '@theme/hooks/useWindowSize';
 import Logo from '@theme/Logo';
 import IconArrow from '@theme/IconArrow';
-import {translate} from '@docusaurus/Translate';
-import {DocSidebarItems} from '@theme/DocSidebarItem';
+import { translate } from '@docusaurus/Translate';
+import { DocSidebarItems } from '@theme/DocSidebarItem';
+import NavbarItem from '@theme/NavbarItem';
 import styles from './styles.module.css';
 
 function useShowAnnouncementBar() {
-  const {isActive} = useAnnouncementBar();
+  const { isActive } = useAnnouncementBar();
   const [showAnnouncementBar, setShowAnnouncementBar] = useState(isActive);
   useScrollPosition(
-    ({scrollY}) => {
+    ({ scrollY }) => {
       if (isActive) {
         setShowAnnouncementBar(scrollY === 0);
       }
@@ -34,7 +35,7 @@ function useShowAnnouncementBar() {
   return isActive && showAnnouncementBar;
 }
 
-function HideableSidebarButton({onClick}) {
+function HideableSidebarButton({ onClick }) {
   return (
     <button
       type="button"
@@ -58,12 +59,14 @@ function HideableSidebarButton({onClick}) {
   );
 }
 
-function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
+function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
   const showAnnouncementBar = useShowAnnouncementBar();
   const {
-    navbar: {hideOnScroll},
+    navbar: { hideOnScroll, items },
     hideableSidebar,
+
   } = useThemeConfig();
+
   return (
     <div
       className={clsx(styles.sidebar, {
@@ -71,6 +74,10 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
         [styles.sidebarHidden]: isHidden,
       })}>
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
+
+      {items.map((item, i) => (
+        item.type == "docsVersionDropdown" && (window.location.href.includes(item.docsPluginId) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+      ))}
       <nav
         className={clsx('menu thin-scrollbar', styles.menu, {
           [styles.menuWithAnnouncementBar]: showAnnouncementBar,
@@ -84,16 +91,24 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
   );
 }
 
-const DocSidebarMobileSecondaryMenu = ({toggleSidebar, sidebar, path}) => {
+const DocSidebarMobileSecondaryMenu = ({ toggleSidebar, sidebar, path }) => {
+
+  const {navbar: { items }} = useThemeConfig();
+
   return (
-    <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list')}>
-      <DocSidebarItems
-        items={sidebar}
-        activePath={path}
-        onItemClick={() => toggleSidebar()}
-        level={1}
-      />
-    </ul>
+    <>
+      {items.map((item, i) => (
+        item.type == "docsVersionDropdown" && (window.location.href.includes(item.docsPluginId) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+      ))}
+      <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list')}>
+        <DocSidebarItems
+          items={sidebar}
+          activePath={path}
+          onItemClick={() => toggleSidebar()}
+          level={1}
+        />
+      </ul>
+    </>
   );
 };
 

@@ -202,10 +202,6 @@ html[data-theme="dark"] {
   color: var(--ifm-color-text);
 }
 
-.navbar__items--right > :last-child {
-  padding-right: var(--ifm-navbar-item-padding-horizontal);
-}
-
 .navbar__search {
   padding-right: 1rem;
 }
