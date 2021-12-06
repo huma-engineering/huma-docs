@@ -24,42 +24,18 @@ module.exports = {
           items: [
             {
               type: 'doc',
-              label: 'Clinician Portal',
+              label: 'Platform play',
               docsPluginId: 'portal',
-              docId: 'intro',
-            },
-            {
-              type: 'doc',
-              label: 'Huma Mobile App',
-              docsPluginId: 'mobile',
-              docId: 'intro',
-            },
-            {
-              type: 'doc',
-              label: 'Admin Portal',
-              docsPluginId: 'admin',
               docId: 'intro',
             },
           ],
         },
         {
-          type: 'dropdown',
+          type: 'doc',
           position: 'left',
           label: 'SDK',
-          items: [
-            {
-              to: 'sdk-1',
-              label: 'Sdk 1',
-            },
-            {
-              to: 'sdk-2',
-              label: 'Sdk 2',
-            },
-            {
-              to: 'sdk-3',
-              label: 'Sdk 3',
-            },
-          ],
+          docsPluginId: 'sdk',
+          docId: 'intro',
         },
         {
           type: 'dropdown',
@@ -68,8 +44,14 @@ module.exports = {
           items: [
             {
               type: 'doc',
-              label: 'Api 1',
-              docsPluginId: 'api',
+              label: 'Platform Play',
+              docsPluginId: 'api-play',
+              docId: 'intro',
+            },
+            {
+              type: 'doc',
+              label: 'Integration',
+              docsPluginId: 'api-integration',
               docId: 'intro',
             },
           ],
@@ -81,7 +63,7 @@ module.exports = {
         },
         {
           type: 'docsVersionDropdown',
-          docsPluginId: 'mobile',
+          docsPluginId: 'sdk',
           position: 'right',
         },
         {
@@ -173,28 +155,28 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'mobile',
-        path: 'mobile',
-        routeBasePath: 'mobile',
-        sidebarPath: require.resolve('./sidebarsMobile.js'),
+        id: 'api-play',
+        path: 'api-play',
+        routeBasePath: 'api-play',
+        sidebarPath: require.resolve('./sidebarsApiPlay.js'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'admin',
-        path: 'admin',
-        routeBasePath: 'admin',
-        sidebarPath: require.resolve('./sidebarsAdmin.js'),
+        id: 'api-integration',
+        path: 'api-integration',
+        routeBasePath: 'api-integration',
+        sidebarPath: require.resolve('./sidebarsApiIntegration.js'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'api',
-        path: 'api',
-        routeBasePath: 'api',
-        sidebarPath: require.resolve('./sidebarsApi.js'),
+        id: 'sdk',
+        path: 'sdk',
+        routeBasePath: 'sdk',
+        sidebarPath: require.resolve('./sidebarsSdk.js'),
       },
     ],
   ],
