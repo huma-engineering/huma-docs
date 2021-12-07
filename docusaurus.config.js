@@ -41,13 +41,6 @@ module.exports = {
           ],
         },
         {
-          type: 'doc',
-          position: 'left',
-          label: 'SDK',
-          docsPluginId: 'sdk',
-          docId: 'intro',
-        },
-        {
           type: 'dropdown',
           position: 'left',
           label: 'API',
@@ -55,7 +48,7 @@ module.exports = {
             {
               type: 'doc',
               label: 'Platform Play',
-              docsPluginId: 'api-play',
+              docsPluginId: 'api-platformplay',
               docId: 'intro',
             },
             {
@@ -65,6 +58,13 @@ module.exports = {
               docId: 'intro',
             },
           ],
+        },
+        {
+          type: 'doc',
+          position: 'left',
+          label: 'SDK',
+          docsPluginId: 'sdk',
+          docId: 'intro',
         },
         {
           type: 'docsVersionDropdown',
@@ -165,10 +165,10 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'api-play',
-        path: 'api-play',
-        routeBasePath: 'api-play',
-        sidebarPath: require.resolve('./sidebarsApiPlay.js'),
+        id: 'api-platformplay',
+        path: 'api-platformplay',
+        routeBasePath: 'api-platformplay',
+        sidebarPath: require.resolve('./sidebarsApiPlatformPlay.js'),
       },
     ],
     [
