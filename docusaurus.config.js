@@ -14,31 +14,9 @@ module.exports = {
       title: '',
       logo: {
         alt: 'Huma Therapeutics Ltd',
-        src: 'img/huma_logo_black.svg',
+        src: '../img/huma_logo_black.svg',
       },
       items: [
-        {
-          type: 'dropdown',
-          position: 'left',
-          label: 'API',
-          items: [
-            {
-              type: 'doc',
-              label: 'Clinician Portal',
-              docId: 'intro',
-            },
-            {
-              type: 'doc',
-              label: 'Huma Mobile App',
-              docId: 'portal/overview',
-            },
-            {
-              type: 'doc',
-              label: 'Admin Portal',
-              docId: 'portal/setup_account',
-            },
-          ],
-        },
         {
           type: 'dropdown',
           position: 'left',
@@ -46,39 +24,51 @@ module.exports = {
           items: [
             {
               type: 'doc',
-              label: 'Clinician Portal',
-              docId: 'portal/overview',
-            },
-            {
-              type: 'doc',
-              label: 'Huma Mobile App',
+              label: 'Platform play',
+              docsPluginId: 'portal',
               docId: 'intro',
-            },
-            {
-              type: 'doc',
-              label: 'Admin Portal',
-              docId: 'portal/setup_account',
             },
           ],
         },
         {
+          type: 'doc',
+          position: 'left',
+          label: 'SDK',
+          docsPluginId: 'sdk',
+          docId: 'intro',
+        },
+        {
           type: 'dropdown',
           position: 'left',
-          label: 'Guide',
+          label: 'API',
           items: [
             {
-              to: 'guide-1',
-              label: 'Guide 1',
+              type: 'doc',
+              label: 'Platform Play',
+              docsPluginId: 'api-play',
+              docId: 'intro',
             },
             {
-              to: 'guide-2',
-              label: 'Guide 2',
-            },
-            {
-              to: 'guide-3',
-              label: 'Guide 3',
+              type: 'doc',
+              label: 'Integration',
+              docsPluginId: 'api-integration',
+              docId: 'intro',
             },
           ],
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'portal',
+          position: 'right',
+        },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'sdk',
+          position: 'right',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
       ],
     },
@@ -132,12 +122,12 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
+        // docs: {
+        //   path: 'portal',
+        //   routeBasePath: 'portal',
+        //   sidebarPath: require.resolve('./sidebarsPortal.js'),
+        //   editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+        // },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -150,5 +140,48 @@ module.exports = {
       },
     ],
   ],
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'portal',
+        path: 'portal',
+        routeBasePath: 'portal',
+        sidebarPath: require.resolve('./sidebarsPortal.js'),
+        editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api-play',
+        path: 'api-play',
+        routeBasePath: 'api-play',
+        sidebarPath: require.resolve('./sidebarsApiPlay.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api-integration',
+        path: 'api-integration',
+        routeBasePath: 'api-integration',
+        sidebarPath: require.resolve('./sidebarsApiIntegration.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'sdk',
+        path: 'sdk',
+        routeBasePath: 'sdk',
+        sidebarPath: require.resolve('./sidebarsSdk.js'),
+      },
+    ],
+  ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+  },
 };
