@@ -35,7 +35,7 @@ module.exports = {
             {
               type: 'doc',
               label: 'Platform play',
-              docsPluginId: 'portal',
+              docsPluginId: 'platformplay',
               docId: 'intro',
             },
           ],
@@ -155,9 +155,9 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'portal',
-        path: 'portal',
-        routeBasePath: 'portal',
+        id: 'platformplay',
+        path: 'platformplay',
+        routeBasePath: 'platformplay',
         sidebarPath: require.resolve('./sidebarsPortal.js'),
         editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
       },
