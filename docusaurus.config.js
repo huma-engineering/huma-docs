@@ -9,6 +9,16 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'huma-engineering', // Usually your GitHub org/user name.
   projectName: 'huma-docs', // Usually your repo name.
+  customFields: {
+    authors: {
+      team: {
+        name: 'Huma team',
+        link: 'https://twitter.com/huma',
+        title: 'Developer, Manager',
+        image: 'sample-profile-img.jpg'
+      }
+    }
+  },
   themeConfig: {
     navbar: {
       title: '',
