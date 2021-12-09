@@ -53,10 +53,8 @@ module.exports = {
           label: 'API',
           items: [
             {
-              type: 'doc',
               label: 'Platform Play',
-              docsPluginId: 'api-play',
-              docId: 'intro',
+              to: "api-play",
             },
             {
               type: 'doc',
@@ -149,6 +147,16 @@ module.exports = {
         },
       },
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [{
+          id: 'api-play',
+          routePath: 'api-play',
+          spec: 'api-play/documentations.json',
+        }],
+      }
+    ]
   ],
   plugins: [
     require.resolve('docusaurus-lunr-search'),
@@ -160,15 +168,6 @@ module.exports = {
         routeBasePath: 'portal',
         sidebarPath: require.resolve('./sidebarsPortal.js'),
         editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'api-play',
-        path: 'api-play',
-        routeBasePath: 'api-play',
-        sidebarPath: require.resolve('./sidebarsApiPlay.js'),
       },
     ],
     [

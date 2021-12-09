@@ -87,11 +87,13 @@
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-text-light: #ffffff;
   --ifm-color-text: #424347;
   --ifm-color-cover: #fbfbfb;
   --ifm-color-dark: #ebebeb;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: "Noto Sans";
+  --ifm-font-family-secondary: "Victor Serif Smooth";
   --ifm-heading-font-weight: 400;
   --ifm-h1-font-size: 1.875rem;
   --ifm-h2-font-size: 1.675rem;
@@ -148,7 +150,7 @@ html[data-theme="dark"] {
 }
 
 .markdown h1:first-child {
-  font-family: "Victor Serif Smooth";
+  font-family: var(--ifm-font-family-secondary);
   font-size: 1.875rem;
 }
 .markdown > h2 {
