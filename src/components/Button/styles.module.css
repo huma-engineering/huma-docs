@@ -1,0 +1,18 @@
+.button {
+  color: var(--ifm-color-text);
+  border: 1px solid var(--ifm-color-text);
+  border-radius: 25px;
+  height: var(--ifm-btn-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.button:hover {
+  color: var(--ifm-color-light);
+  background-color: var(--ifm-color-text);
+  text-decoration: none;
+}

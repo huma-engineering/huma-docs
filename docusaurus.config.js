@@ -68,7 +68,7 @@ module.exports = {
         },
         {
           type: 'docsVersionDropdown',
-          docsPluginId: 'portal',
+          docsPluginId: 'platformplay',
           position: 'right',
         },
         {
@@ -143,6 +143,9 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        },
+        pages: {
+          path: 'src/pages',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

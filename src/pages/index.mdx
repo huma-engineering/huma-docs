@@ -1,0 +1,60 @@
+---
+hide_table_of_contents: true
+class: home
+---
+
+import { CardGradient as Card } from '@site/src/theme/Card';
+import Hero from '@site/src/theme/Hero';
+
+<div class="row">
+    <div class="col">
+        <Hero 
+            image="home-hero.svg"
+            title="Welcome to Huma Documentation"
+            description="Huma is working with various NHS trusts and global healthcare systems to bring connected care to patients and clinicians. "
+        />
+    </div>
+</div>
+
+<div class="row">
+
+ <div class="col">
+     <Card
+        title="Docs" 
+        description="Documentation about products" 
+        icon="icon-docs.svg"
+        links={
+            [
+                {label:"Clinician portal", href: "/platformplay/intro"},
+                {label:"Huma mobile app", href: "/platformplay/intro"},
+                {label:"Admin portal", href: "/platformplay/intro"},
+            ]
+        }
+        button={{name: "Read more", href: "/platformplay/intro"}}
+      />
+ </div>
+
+ <div class="col">
+     <Card
+        title="API" 
+        description="API Documentation" 
+        icon="icon-api.svg"
+        links={
+            [
+                {label:"Huma platform play", href: "/api-platformplay/intro"},
+                {label:"Huma integration", href: "/api-integration/intro"},
+            ]
+        }
+        button={{name: "Read more", href: "/api-platformplay/intro"}}
+      />
+ </div>
+
+  <div class="col">
+     <Card
+        title="SDK" 
+        description="Some information about SDK will be placed here." 
+        icon="icon-sdk.svg"
+        button={{name: "Read more", href: "/sdk/intro"}}
+      />
+ </div>
+</div>
