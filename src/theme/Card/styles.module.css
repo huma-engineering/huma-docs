@@ -41,6 +41,10 @@
   padding: 0.6rem 0;
 }
 
+.cardGradientButton {
+  margin-top: 2rem;
+}
+
 .cardGradient ul a {
   color: var(--ifm-color-text);
   text-decoration: underline;

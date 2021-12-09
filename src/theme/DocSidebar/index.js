@@ -76,7 +76,7 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
 
       {items.map((item, i) => (
-        item.type == "docsVersionDropdown" && (window.location.href.includes(item.docsPluginId) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+        item.type == "docsVersionDropdown" && (window.location.href.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
       ))}
       <nav
         className={clsx('menu thin-scrollbar', styles.menu, {
@@ -98,7 +98,7 @@ const DocSidebarMobileSecondaryMenu = ({ toggleSidebar, sidebar, path }) => {
   return (
     <>
       {items.map((item, i) => (
-        item.type == "docsVersionDropdown" && (window.location.href.includes(item.docsPluginId) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+        item.type == "docsVersionDropdown" && (window.location.href.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
       ))}
       <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list')}>
         <DocSidebarItems

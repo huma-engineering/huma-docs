@@ -15,7 +15,7 @@ export const CardGradient = ({ title, description, icon, links = [], button }) =
           ))}
         </ul>
       </div>
-      {button && <Button href={button.href}>{button.name}</Button>}
+      {button && <div className={styles.cardGradientButton}><Button href={button.href}>{button.name}</Button></div>}
     </div>
   </div >
 }
