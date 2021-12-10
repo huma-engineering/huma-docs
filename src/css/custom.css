@@ -346,6 +346,40 @@ html[data-theme="dark"] {
   max-width: var(--ifm-container-width-page);
 }
 
+.footer {
+  background-color: transparent;
+  border-top: 1px solid var(--ifm-color-dark);
+  padding-top: 3rem;
+}
+
+.footer__title {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.footer__link-item {
+  font-size: 0.875rem;
+  color: var(--ifm-color-text);
+  opacity: 0.5;
+  transition: opacity 300ms ease;
+}
+
+.footer__item a svg {
+  display: none;
+}
+
+.footer__link-item:hover {
+  opacity: 1;
+  color: var(--ifm-color-text);
+  text-decoration: none;
+}
+
+.margin-vert--lg {
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+}
+
 @media (max-width: 997px) {
   .navbar__item.dropdown {
     display: none;
