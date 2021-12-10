@@ -1,0 +1,73 @@
+.cardGradient {
+  height: 100%;
+}
+
+.cardGradientInner {
+  text-align: center;
+  background: linear-gradient(355.92deg, var(--ifm-color-g1) 11.27%, var(--ifm-color-g2) 110.61%);
+  padding: 4rem 1.6rem;
+  padding-bottom: 2rem;
+  border-radius: 0.875rem;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardGradientIcon {
+  width: 92px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.cardGradient img {
+  max-height: 92px;
+  max-height: 92px;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+}
+
+.cardGradient ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cardGradient ul li {
+  padding: 0.6rem 0;
+}
+
+.cardGradientButton {
+  margin-top: 2rem;
+}
+
+.cardGradient ul a {
+  color: var(--ifm-color-text);
+  text-decoration: underline;
+}
+
+.cardGradient ul a:hover {
+  text-decoration: none;
+}
+
+.cardGradient h1 {
+  font-size: 1.875rem;
+  margin-bottom: 1.2rem;
+  font-family: var(--ifm-font-family-secondary);
+}
+
+.cardGradient p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (max-width: 997px) {
+  .cardGradient {
+    padding-bottom: 2rem;
+  }
+}
