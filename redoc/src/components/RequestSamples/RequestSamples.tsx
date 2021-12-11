@@ -1,6 +1,6 @@
-import { observer } from 'mobx-react';
 import * as React from 'react';
-import { isPayloadSample, OperationModel, RedocNormalizedOptions } from '../../services';
+import { FunctionComponent, useContext } from 'react';
+import { isPayloadSample, OperationModel } from '../../services';
 import { PayloadSamples } from '../PayloadSamples/PayloadSamples';
 import { SourceCodeWithCopy } from '../SourceCode/SourceCode';
 
@@ -8,50 +8,45 @@ import { RightPanelHeader, Tab, TabList, TabPanel, Tabs } from '../../common-ele
 import { OptionsContext } from '../OptionsProvider';
 import { l } from '../../services/Labels';
 
-export interface RequestSamplesProps {
+interface componentInterface {
   operation: OperationModel;
+  isActive: boolean;
 }
 
-@observer
-export class RequestSamples extends React.Component<RequestSamplesProps> {
-  static contextType = OptionsContext;
-  context: RedocNormalizedOptions;
-  operation: OperationModel;
+export const RequestSamples: FunctionComponent<componentInterface> = ({ operation, isActive }) => {
 
-  render() {
-    const { operation } = this.props;
-    const samples = operation.codeSamples;
+  const context = useContext(OptionsContext)
+  const samples = operation.codeSamples;
+  const hasSamples = samples.length > 0;
+  const hideTabList = samples.length === 1 ? context.hideSingleRequestSampleTab : false;
 
-    const hasSamples = samples.length > 0;
-    const hideTabList = samples.length === 1 ? this.context.hideSingleRequestSampleTab : false;
-    return (
-      (hasSamples && (
-        <div>
-          <RightPanelHeader> {l('requestSamples')} </RightPanelHeader>
+  return (
+    ((hasSamples && isActive) && (
+      <div>
+        <RightPanelHeader> {l('requestSamples')} </RightPanelHeader>
 
-          <Tabs defaultIndex={0}>
-            <TabList hidden={hideTabList}>
-              {samples.map(sample => (
-                <Tab key={sample.lang + '_' + (sample.label || '')}>
-                  {sample.label !== undefined ? sample.label : sample.lang}
-                </Tab>
-              ))}
-            </TabList>
+        <Tabs defaultIndex={0}>
+          <TabList hidden={hideTabList}>
             {samples.map(sample => (
-              <TabPanel key={sample.lang + '_' + (sample.label || '')}>
-                {isPayloadSample(sample) ? (
-                  <div>
-                    <PayloadSamples content={sample.requestBodyContent} />
-                  </div>
-                ) : (
-                  <SourceCodeWithCopy lang={sample.lang} source={sample.source} />
-                )}
-              </TabPanel>
+              <Tab key={sample.lang + '_' + (sample.label || '')}>
+                {sample.label !== undefined ? sample.label : sample.lang}
+              </Tab>
             ))}
-          </Tabs>
-        </div>
-      )) ||
-      null
-    );
-  }
+          </TabList>
+          {samples.map(sample => (
+            <TabPanel key={sample.lang + '_' + (sample.label || '')}>
+              {isPayloadSample(sample) ? (
+                <div>
+                  <PayloadSamples content={sample.requestBodyContent} />
+                </div>
+              ) : (
+                <SourceCodeWithCopy lang={sample.lang} source={sample.source} />
+              )}
+            </TabPanel>
+          ))}
+        </Tabs>
+      </div>
+    )) ||
+    null
+  );
 }

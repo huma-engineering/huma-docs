@@ -189,3 +189,15 @@ export const PropertiesTable = styled.table`
     background: #ffffff;
   }
 `;
+
+export const RowExecute = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+`;
+
+export const ExecuteRequest = styled.div`
+  background-color: ${({ theme }) => theme.rightPanelInner.backgroundColor};
+  padding: 20px;
+`; 

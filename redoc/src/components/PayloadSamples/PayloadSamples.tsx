@@ -9,6 +9,7 @@ import { InvertedSimpleDropdown, MimeLabel } from './styled.elements';
 
 export interface PayloadSamplesProps {
   content: MediaContentModel;
+  variant?: string;
 }
 
 @observer

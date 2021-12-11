@@ -39,6 +39,12 @@ export function isPayloadSample(
   return sample.lang === 'payload' && (sample as any).requestBodyContent;
 }
 
+export const getPlayloadSample = (samples) => {
+  if (samples && samples.length > 0) {
+    return samples.filter((sample) => sample.lang === 'payload')[0]
+  }
+}
+
 let isCodeSamplesWarningPrinted = false;
 
 /**
@@ -118,8 +124,8 @@ export class OperationModel implements IMenuItem {
         operationSpec.operationId !== undefined
           ? 'operation/' + operationSpec.operationId
           : parent !== undefined
-          ? parent.id + this.pointer
-          : this.pointer;
+            ? parent.id + this.pointer
+            : this.pointer;
 
       this.security = (operationSpec.security || parser.spec.security || []).map(
         security => new SecurityRequirementModel(security, parser),

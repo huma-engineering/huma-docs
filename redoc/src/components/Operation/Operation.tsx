@@ -1,6 +1,6 @@
-import { observer } from 'mobx-react';
-import * as React from 'react';
 
+import * as React from 'react';
+import { FunctionComponent, useState } from 'react';
 import { Badge, DarkRightPanel, H2, MiddlePanel, Row } from '../../common-elements';
 import { ShareLink } from '../../common-elements/linkify';
 import { OperationModel } from '../../services/models';
@@ -16,6 +16,7 @@ import { Parameters } from '../Parameters/Parameters';
 import { RequestSamples } from '../RequestSamples/RequestSamples';
 import { ResponsesList } from '../Responses/ResponsesList';
 import { ResponseSamples } from '../ResponseSamples/ResponseSamples';
+import Execute from '../Execute/Execute';
 import { SecurityRequirements } from '../SecurityRequirement/SecurityRequirement';
 
 const OperationRow = styled(Row)`
@@ -28,17 +29,15 @@ const Description = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.unit * 6}px;
 `;
 
-export interface OperationProps {
+interface componentInterface {
   operation: OperationModel;
 }
 
-@observer
-export class Operation extends React.Component<OperationProps> {
-  render() {
-    const { operation } = this.props;
+export const Operation: FunctionComponent<componentInterface> = ({ operation }) => {
 
-    const { name: summary, description, deprecated, externalDocs, isWebhook } = operation;
-    const hasDescription = !!(description || externalDocs);
+  const { name: summary, description, deprecated, externalDocs, isWebhook } = operation;
+  const hasDescription = !!(description || externalDocs);
+  const [isSamplesActive, setIsSamplesActive] = useState(true);
 
     return (
       <OptionsContext.Consumer>
@@ -67,7 +66,8 @@ export class Operation extends React.Component<OperationProps> {
             </MiddlePanel>
             <DarkRightPanel className="right-panel">
               {!options.pathInMiddlePanel && !isWebhook && <Endpoint operation={operation} />}
-              <RequestSamples operation={operation} />
+              <RequestSamples operation={operation} isActive={isSamplesActive} />
+              <Execute onTogle={setIsSamplesActive} operation={operation}/>
               <ResponseSamples operation={operation} />
               <CallbackSamples callbacks={operation.callbacks} />
             </DarkRightPanel>
@@ -75,5 +75,4 @@ export class Operation extends React.Component<OperationProps> {
         )}
       </OptionsContext.Consumer>
     );
-  }
 }

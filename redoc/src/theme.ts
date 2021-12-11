@@ -159,6 +159,9 @@ const defaultTheme: ThemeInterface = {
     width: '40%',
     textColor: '#ffffff',
   },
+  rightPanelInner: {
+    backgroundColor: '#11171a',
+  },
   codeBlock: {
     backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
   },
@@ -335,6 +338,9 @@ export interface ResolvedThemeInterface {
     textColor: string;
     width: string;
   };
+  rightPanelInner: {
+    backgroundColor: string;
+  }
   codeBlock: {
     backgroundColor: string;
   };
