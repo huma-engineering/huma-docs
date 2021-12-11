@@ -35,7 +35,25 @@ module.exports = {
             {
               type: 'doc',
               label: 'Platform play',
-              docsPluginId: 'portal',
+              docsPluginId: 'platformplay',
+              docId: 'intro',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          position: 'left',
+          label: 'API',
+          items: [
+            {
+              label: 'Platform Play',
+              to: "api-platformplay",
+              docsPluginId: 'api-platformplay',
+            },
+            {
+              type: 'doc',
+              label: 'Integration',
+              docsPluginId: 'api-integration',
               docId: 'intro',
             },
           ],
@@ -48,25 +66,8 @@ module.exports = {
           docId: 'intro',
         },
         {
-          type: 'dropdown',
-          position: 'left',
-          label: 'API',
-          items: [
-            {
-              label: 'Platform Play',
-              to: "api-play",
-            },
-            {
-              type: 'doc',
-              label: 'Integration',
-              docsPluginId: 'api-integration',
-              docId: 'intro',
-            },
-          ],
-        },
-        {
           type: 'docsVersionDropdown',
-          docsPluginId: 'portal',
+          docsPluginId: 'platformplay',
           position: 'right',
         },
         {
@@ -79,51 +80,6 @@ module.exports = {
           position: 'right',
         },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -142,6 +98,9 @@ module.exports = {
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
+        pages: {
+          path: 'src/pages',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -151,9 +110,9 @@ module.exports = {
       'redocusaurus',
       {
         specs: [{
-          id: 'api-play',
-          routePath: 'api-play',
-          spec: 'api-play/documentations.json',
+          id: 'api-platformplay',
+          routePath: 'api-platformplay',
+          spec: 'api-platformplay/documentations.json',
         }],
       }
     ]
@@ -163,9 +122,9 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'portal',
-        path: 'portal',
-        routeBasePath: 'portal',
+        id: 'platformplay',
+        path: 'platformplay',
+        routeBasePath: 'platformplay',
         sidebarPath: require.resolve('./sidebarsPortal.js'),
         editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
       },
