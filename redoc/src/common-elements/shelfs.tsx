@@ -44,7 +44,7 @@ export const ShelfIcon = styled(IntShelfIcon)`
   transition: transform 0.2s ease-out;
   transform: rotateZ(${props => directionMap[props.direction || 'down']});
 
-  polygon {
+  polygon, path {
     fill: ${({ color, theme }) =>
     (color && theme.colors.responses[color] && theme.colors.responses[color].color) || color};
   }

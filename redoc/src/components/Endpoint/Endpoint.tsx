@@ -57,9 +57,9 @@ export class Endpoint extends React.Component<EndpointProps, EndpointState> {
               <ShelfIcon
                 float={'right'}
                 color={inverted ? 'black' : 'white'}
-                size={'20px'}
+                size={'16px'}
                 direction={expanded ? 'up' : 'down'}
-                style={{ marginRight: '-25px' }}
+                style={{ marginRight: '-15px' }}
               />
             </EndpointInfo>
             <ServersOverlay expanded={expanded} aria-hidden={!expanded}>

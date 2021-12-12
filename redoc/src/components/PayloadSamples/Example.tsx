@@ -8,13 +8,15 @@ import { useExternalExample } from './exernalExampleHook';
 export interface ExampleProps {
   example: ExampleModel;
   mimeType: string;
+  variant?: string;
+  onChange?: (e:string) => void
 }
 
-export function Example({ example, mimeType }: ExampleProps) {
+export function Example({ example, mimeType, variant, onChange }: ExampleProps) {
   if (example.value === undefined && example.externalValueUrl) {
     return <ExternalExample example={example} mimeType={mimeType} />;
   } else {
-    return <ExampleValue value={example.value} mimeType={mimeType} />;
+    return <ExampleValue variant={variant} value={example.value} mimeType={mimeType} onChange={onChange} />;
   }
 }
 

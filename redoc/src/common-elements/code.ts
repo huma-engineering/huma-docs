@@ -9,9 +9,9 @@ export const CodeArea = styled.textarea`
       min-width: 60px;
       font-size: 0.9em;
       width: 100%;
-      color: ${props => props.theme.colors.text.primary};
-      background: ${({ theme }) => theme.rightPanel.textColor};
-      margin-top: 1rem;
+      line-height: 1.6em;
+      color: ${({ theme }) => theme.rightPanelInner.codeBlockText};
+      background: ${({ theme }) => theme.rightPanelInner.codeBlock};
      
       &:focus, &:active {
           outline: auto;

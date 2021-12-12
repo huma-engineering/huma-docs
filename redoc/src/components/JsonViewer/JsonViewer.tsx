@@ -1,16 +1,20 @@
 import * as React from 'react';
 import styled from '../../styled-components';
-
+import { FunctionComponent, useRef, useState } from 'react';
 import { SampleControls } from '../../common-elements';
 import { CopyButtonWrapper } from '../../common-elements/CopyButtonWrapper';
 import { PrismDiv } from '../../common-elements/PrismDiv';
+import { CodeArea } from '../../common-elements';
 import { jsonToHTML } from '../../utils/jsonToHtml';
 import { OptionsContext } from '../OptionsProvider';
 import { jsonStyles } from './style';
+import { useEffect } from 'react';
 
-export interface JsonProps {
+interface componentInterface {
   data: any;
   className?: string;
+  variant?: string;
+  onChange?: (e:string) => void
 }
 
 const JsonViewerWrap = styled.div`
@@ -19,28 +23,60 @@ const JsonViewerWrap = styled.div`
   }
 `;
 
-class Json extends React.PureComponent<JsonProps> {
-  node: HTMLDivElement;
+export const Json: FunctionComponent<componentInterface> = ({ data, className, variant, onChange }) => {
 
-  render() {
-    return <CopyButtonWrapper data={this.props.data}>{this.renderInner}</CopyButtonWrapper>;
+  const node = useRef<HTMLDivElement>(null);
+  const [value, setValue] = useState(JSON.stringify(data, undefined, 2));
+
+  useEffect(()=>{
+    if(onChange) onChange(value)
+  }, [value])
+
+  useEffect(()=>{
+    setValue(JSON.stringify(data, undefined, 2))
+  }, [data])
+
+  useEffect(() => {
+    if (variant != "execute" && null !== node.current) {
+      node.current.addEventListener('click', clickListener);
+      node.current.addEventListener('focus', focusListener);
+    }
+
+    return () => {
+      if (variant != "execute" && null !== node.current) {
+        node.current.removeEventListener('click', clickListener);
+        node.current.removeEventListener('focus', focusListener);
+      }
+    }
+  }, [])
+
+  const getJson = (v) => {
+    return v
   }
 
-  renderInner = ({ renderCopyButton }) => (
+  const renderInnerExecute = () => {
+    return <CodeArea
+      rows={20}
+      onChange={e => setValue(e.target.value)}
+      value={getJson(value)}
+    ></CodeArea>
+  };
+
+  const renderInner = ({ renderCopyButton }) => (
     <JsonViewerWrap>
       <SampleControls>
         {renderCopyButton()}
-        <button onClick={this.expandAll}> Expand all </button>
-        <button onClick={this.collapseAll}> Collapse all </button>
+        <button onClick={expandAll}> Expand all </button>
+        <button onClick={collapseAll}> Collapse all </button>
       </SampleControls>
       <OptionsContext.Consumer>
         {options => (
           <PrismDiv
-            className={this.props.className}
+            className={className}
             // tslint:disable-next-line
-            ref={node => (this.node = node!)}
+            ref={node}
             dangerouslySetInnerHTML={{
-              __html: jsonToHTML(this.props.data, options.jsonSampleExpandLevel),
+              __html: jsonToHTML(data, options.jsonSampleExpandLevel),
             }}
           />
         )}
@@ -48,28 +84,32 @@ class Json extends React.PureComponent<JsonProps> {
     </JsonViewerWrap>
   );
 
-  expandAll = () => {
-    const elements = this.node.getElementsByClassName('collapsible');
-    for (const collapsed of Array.prototype.slice.call(elements)) {
-      const parentNode = collapsed.parentNode as Element;
-      parentNode.classList.remove('collapsed');
-      parentNode.querySelector('.collapser')!.setAttribute('aria-label', 'collapse');
+  const expandAll = () => {
+    if (null !== node.current) {
+      const elements = node.current.getElementsByClassName('collapsible');
+      for (const collapsed of Array.prototype.slice.call(elements)) {
+        const parentNode = collapsed.parentNode as Element;
+        parentNode.classList.remove('collapsed');
+        parentNode.querySelector('.collapser')!.setAttribute('aria-label', 'collapse');
+      }
     }
   };
 
-  collapseAll = () => {
-    const elements = this.node.getElementsByClassName('collapsible');
-    // skip first item to avoid collapsing whole object/array
-    const elementsArr = Array.prototype.slice.call(elements, 1);
+  const collapseAll = () => {
+    if (null !== node.current) {
+      const elements = node.current.getElementsByClassName('collapsible');
+      // skip first item to avoid collapsing whole object/array
+      const elementsArr = Array.prototype.slice.call(elements, 1);
 
-    for (const expanded of elementsArr) {
-      const parentNode = expanded.parentNode as Element;
-      parentNode.classList.add('collapsed');
-      parentNode.querySelector('.collapser')!.setAttribute('aria-label', 'expand');
+      for (const expanded of elementsArr) {
+        const parentNode = expanded.parentNode as Element;
+        parentNode.classList.add('collapsed');
+        parentNode.querySelector('.collapser')!.setAttribute('aria-label', 'expand');
+      }
     }
   };
 
-  collapseElement = (target: HTMLElement) => {
+  const collapseElement = (target: HTMLElement) => {
     let collapsed;
     if (target.className === 'collapser') {
       collapsed = target.parentElement!.getElementsByClassName('collapsible')[0];
@@ -83,25 +123,18 @@ class Json extends React.PureComponent<JsonProps> {
     }
   };
 
-  clickListener = (event: MouseEvent) => {
-    this.collapseElement(event.target as HTMLElement);
+  const clickListener = (event: MouseEvent) => {
+    collapseElement(event.target as HTMLElement);
   };
 
-  focusListener = (event: KeyboardEvent) => {
+  const focusListener = (event: KeyboardEvent) => {
     if (event.key === 'Enter') {
-      this.collapseElement(event.target as HTMLElement);
+      collapseElement(event.target as HTMLElement);
     }
   };
 
-  componentDidMount() {
-    this.node!.addEventListener('click', this.clickListener);
-    this.node!.addEventListener('focus', this.focusListener);
-  }
+  return variant == "execute" ? renderInnerExecute() : <CopyButtonWrapper data={data}>{renderInner}</CopyButtonWrapper>;
 
-  componentWillUnmount() {
-    this.node!.removeEventListener('click', this.clickListener);
-    this.node!.removeEventListener('focus', this.focusListener);
-  }
 }
 
 export const JsonViewer = styled(Json)`

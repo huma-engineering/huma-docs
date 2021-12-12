@@ -195,6 +195,7 @@ export const RowExecute = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 `;
 
 export const ExecuteRequest = styled.div`

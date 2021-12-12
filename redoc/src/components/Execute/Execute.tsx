@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { FunctionComponent, useState } from 'react';
-import { RightPanelButton, ExecuteRequest, RowExecute, CodeArea } from '../../common-elements';
+import { RightPanelButton, ExecuteRequest, RowExecute } from '../../common-elements';
 import { l } from '../../services/Labels';
 import { getPlayloadSample } from '../../services';
-import { PayloadSamples } from '../PayloadSamples/PayloadSamples';
+import { PayloadCode } from '../PayloadSamples/PayloadCode';
 
 interface componentInterface {
   operation: any;
@@ -14,15 +14,28 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
 
   const { codeSamples } = operation
   const [isTry, setIsTry] = useState(false)
+  const [value, setValue] = useState("")
+  const samples = getPlayloadSample(codeSamples)
+
+  const onChange = (e) => {
+    setValue(e)
+  }
+
+  const onExecute = () => {
+    console.log(value)
+  }
 
   return (
     <div>
-      {(isTry && codeSamples) && <CodeArea>
-        {getPlayloadSample(codeSamples).source}
-      </CodeArea>}
       {(isTry && codeSamples) &&
         <ExecuteRequest>
-          <PayloadSamples variant="execute" content={getPlayloadSample(codeSamples).requestBodyContent} />
+          {samples &&
+            <PayloadCode
+              variant="execute"
+              content={samples.requestBodyContent}
+              onChange={onChange}
+            />
+          }
         </ExecuteRequest>
       }
       {!isTry && <RowExecute>
@@ -48,7 +61,10 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
         >
           {l('backToSamples')}
         </RightPanelButton>
-        <RightPanelButton className='primary' style={{ width: "calc(50% - 10px)" }}>
+        <RightPanelButton
+          onClick={onExecute}
+          className='primary'
+          style={{ width: "calc(50% - 10px)" }}>
           {l('execute')}
         </RightPanelButton>
       </RowExecute>}

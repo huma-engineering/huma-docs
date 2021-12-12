@@ -161,6 +161,8 @@ const defaultTheme: ThemeInterface = {
   },
   rightPanelInner: {
     backgroundColor: '#11171a',
+    codeBlock: 'rgba(38,50,56,0.4)',
+    codeBlockText: '#ffffff',
   },
   codeBlock: {
     backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
@@ -340,6 +342,8 @@ export interface ResolvedThemeInterface {
   };
   rightPanelInner: {
     backgroundColor: string;
+    codeBlock: string;
+    codeBlockText: string;
   }
   codeBlock: {
     backgroundColor: string;
