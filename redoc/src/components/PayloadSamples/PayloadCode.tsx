@@ -9,10 +9,12 @@ import { InvertedSimpleDropdown, MimeLabel } from './styled.elements';
 interface componentInterface {
   content: MediaContentModel;
   variant?: string;
+  servers?: [];
   onChange?: (e:string) => void;
+  onChangeServer?: (e: string) => void;
 }
 
-export const PayloadCode: FunctionComponent<componentInterface> = ({ content, variant, onChange }) => {
+export const PayloadCode: FunctionComponent<componentInterface> = ({ content, variant, onChange, servers, onChangeServer }) => {
 
   const mimeContent = content;
   if (mimeContent === undefined) {
@@ -30,8 +32,10 @@ export const PayloadCode: FunctionComponent<componentInterface> = ({ content, va
           key="samples"
           mediaType={mediaType}
           variant={variant}
+          servers={servers}
           renderDropdown={renderDropdown}
           onChange={onChange}
+          onChangeServer={onChangeServer}
         />
       )}
     </MediaTypesSwitch>

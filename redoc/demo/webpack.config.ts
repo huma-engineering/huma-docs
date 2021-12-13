@@ -48,6 +48,8 @@ export default (env: { playground?: boolean; bench?: boolean } = {}, { mode }) =
       http: false,
       fs: false,
       os: false,
+      crypto: require.resolve("crypto-browserify"),
+      stream: require.resolve("stream-browserify"),
     },
     alias:
       mode !== 'production'

@@ -50,6 +50,8 @@ export default (env: { standalone?: boolean, browser?: boolean } = {}) => ({
       fs: path.resolve(__dirname, 'src/empty.js'),
       os: path.resolve(__dirname, 'src/empty.js'),
       tty: path.resolve(__dirname, 'src/empty.js'),
+      crypto: require.resolve("crypto-browserify"),
+      stream: require.resolve("stream-browserify"),
     }
   },
   performance: false,

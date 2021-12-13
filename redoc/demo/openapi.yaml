@@ -1,1207 +1,4074 @@
+---
 openapi: 3.0.0
 servers:
-  - url: //petstore.swagger.io/v2
-    description: Default server
-  - url: //petstore.swagger.io/sandbox
-    description: Sandbox server
+- url: https://demoapi.humaapp.io/
 info:
-  description: |
-    This is a sample server Petstore server.
-    You can find out more about Swagger at
-    [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).
-    For this sample, you can use the api key `special-key` to test the authorization filters.
-
-    # Introduction
-    This API is documented in **OpenAPI format** and is based on
-    [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.
-    It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
-    tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard
-    OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
-
-    # OpenAPI Specification
-    This API is documented in **OpenAPI format** and is based on
-    [Petstore sample](http://petstore.swagger.io/) provided by [swagger.io](http://swagger.io) team.
-    It was **extended** to illustrate features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
-    tool and [ReDoc](https://github.com/Redocly/redoc) documentation. In addition to standard
-    OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
-
-    # Cross-Origin Resource Sharing
-    This API features Cross-Origin Resource Sharing (CORS) implemented in compliance with  [W3C spec](https://www.w3.org/TR/cors/).
-    And that allows cross-domain communication from the browser.
-    All responses have a wildcard same-origin which makes them completely public and accessible to everyone, including any code on any site.
-
-    # Authentication
-
-    Petstore offers two forms of authentication:
-      - API Key
-      - OAuth2
-    OAuth2 - an open protocol to allow secure authorization in a simple
-    and standard method from web, mobile and desktop applications.
-
-    <SecurityDefinitions />
-
-  version: 1.0.0
-  title: Swagger Petstore
-  termsOfService: 'http://swagger.io/terms/'
-  contact:
-    name: API Support
-    email: apiteam@swagger.io
-    url: https://github.com/Redocly/redoc
+  title: Huma Platform Play
+  version: 1.14.1
+  description: "Welcome to API documentation for **Platform Play** product. Download
+    the spec [here](./documentations.json).\n\n### Introduction\nThis API is written
+    in **OpenAPI v3** and is based on existing functionalities of [Huma Portal](https://info.huma.com/clinician-portal-guide)
+    And [Huma App](https://apps.apple.com/gb/app/huma/id1519444604).\n\n### Authentication\nThere
+    are two ways to authenticate to the API:\n- End user authentication: Using username,
+    password flow. It may ask to setup 2FA based of deployment configuration.\n- Machine
+    user authencation: Using [Hawk](https://blog.mozilla.org/services/2015/02/05/whats-hawk-and-how-to-use-it/)
+    method to authenticate into system.\n\nFor Hawk authentication, Huma staffs provides
+    you with the necessary credentials.\n\n#### Python / export de-identified data\n
+    \ Download from the export.py file [here](./pyexample/export.py). Make sure to
+    have python3 (>= 3.7) and pip on your system.\n\n  1. Install dependencies:\n
+    \   \n     `$ pip install requests mohawk`\n  \n\n  2. Set AUTH_ID, AUTH_KEY,
+    DEPLOYMENT_ID in code and call export.py:\n\n     `$ python3 export.py`\n\n  3.
+    Or alternatively to step 2, set the env variable and call export.py:\n\n     `$
+    AUTH_ID=<ID> AUTH_KEY=<KEY> DEPLOYMENT_ID=<DEP_ID> python3 export.py`\n  \n  Step
+    2 or 3 generates an export.json based on the input parameters.\n\n#### Note\nOpenAPI
+    syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).\n"
   x-logo:
-    url: 'https://redocly.github.io/redoc/petstore-logo.png'
-    altText: Petstore logo
-  license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
-externalDocs:
-  description: Find out how to create Github repo for your OpenAPI spec.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
+    url: https://upload.wikimedia.org/wikipedia/commons/9/95/Huma_Logo.svg
 tags:
-  - name: pet
-    description: Everything about your Pets
-  - name: store
-    description: Access to Petstore orders
-  - name: user
-    description: Operations about user
-  - name: pet_model
-    x-displayName: The Pet Model
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Pet" />
-  - name: store_model
-    x-displayName: The Order Model
-    description: |
-      <SchemaDefinition schemaRef="#/components/schemas/Order" exampleRef="#/components/examples/Order" showReadOnly={true} showWriteOnly={true} />
-x-tagGroups:
-  - name: General
-    tags:
-      - pet
-      - store
-  - name: User Management
-    tags:
-      - user
-  - name: Models
-    tags:
-      - pet_model
-      - store_model
+- name: Auth
+  description: " Auth module will cover flows related to login signup and password
+    related apis "
+- name: Export
+  description: " Export module is used by clinicians to export the patient data in
+    CSV/JSON format."
+- name: User
+  description: " User module APIs are used to manage the user data/roles"
 paths:
-  /pet:
-    parameters:
-      - name: Accept-Language
-        in: header
-        description: "The language you prefer for messages. Supported values are en-AU, en-CA, en-GB, en-US"
-        example: en-US
-        required: false
-        schema:
-          type: string
-          default: en-AU
-      - name: cookieParam
-        in: cookie
-        description: Some cookie
+  "/api/auth/v1beta/check-auth-attributes":
+    post:
+      tags:
+      - Auth
+      summary: Check authentication attributes
+      description: " Before sign in this API will check the authentication attributes,
+        and it can be used in 3 ways: \n 1. Check auth attributes from email \n 2.
+        Check auth attributes from authToken \n 3. Check auth attributes from phoneNumber
+        \n\n "
+      requestBody:
+        description: Check authentication attributes request
         required: true
-        schema:
-          type: integer
-          format: int64
-    post:
-      tags:
-        - pet
-      summary: Add a new pet to the store
-      description: Add new pet to the store inventory.
-      operationId: addPet
-      responses:
-        '405':
-          description: Invalid input
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-      x-codeSamples:
-        - lang: 'C#'
-          source: |
-            PetStore.v1.Pet pet = new PetStore.v1.Pet();
-            pet.setApiKey("your api key");
-            pet.petType = PetStore.v1.Pet.TYPE_DOG;
-            pet.name = "Rex";
-            // set other fields
-            PetStoreResponse response = pet.create();
-            if (response.statusCode == HttpStatusCode.Created)
-            {
-              // Successfully created
-            }
-            else
-            {
-              // Something wrong -- check response for errors
-              Console.WriteLine(response.getRawResponse());
-            }
-        - lang: PHP
-          source: |
-            $form = new \PetStore\Entities\Pet();
-            $form->setPetType("Dog");
-            $form->setName("Rex");
-            // set other fields
-            try {
-                $pet = $client->pets()->create($form);
-            } catch (UnprocessableEntityException $e) {
-                var_dump($e->getErrors());
-            }
-      requestBody:
-        $ref: '#/components/requestBodies/Pet'
-    put:
-      tags:
-        - pet
-      summary: Update an existing pet
-      description: ''
-      operationId: updatePet
-      responses:
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Pet not found
-        '405':
-          description: Validation exception
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-      x-codeSamples:
-        - lang: PHP
-          source: |
-            $form = new \PetStore\Entities\Pet();
-            $form->setPetId(1);
-            $form->setPetType("Dog");
-            $form->setName("Rex");
-            // set other fields
-            try {
-                $pet = $client->pets()->update($form);
-            } catch (UnprocessableEntityException $e) {
-                var_dump($e->getErrors());
-            }
-      requestBody:
-        $ref: '#/components/requestBodies/Pet'
-  '/pet/{petId}':
-    get:
-      tags:
-        - pet
-      summary: Find pet by ID
-      description: Returns a single pet
-      operationId: getPetById
-      parameters:
-        - name: petId
-          in: path
-          description: ID of pet to return
-          required: true
-          deprecated: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Pet'
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Pet not found
-      security:
-        - api_key: []
-    post:
-      tags:
-        - pet
-      summary: Updates a pet in the store with form data
-      description: ''
-      operationId: updatePetWithForm
-      parameters:
-        - name: petId
-          in: path
-          description: ID of pet that needs to be updated
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '405':
-          description: Invalid input
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-      requestBody:
         content:
-          application/x-www-form-urlencoded:
+          application/json:
             schema:
-              type: object
-              properties:
-                name:
-                  description: Updated name of the pet
-                  type: string
-                status:
-                  description: Updated status of the pet
-                  type: string
-    delete:
-      tags:
-        - pet
-      summary: Deletes a pet
-      description: ''
-      operationId: deletePet
-      parameters:
-        - name: api_key
-          in: header
-          required: false
-          schema:
-            type: string
-          example: "Bearer <TOKEN>"
-        - name: petId
-          in: path
-          description: Pet id to delete
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '400':
-          description: Invalid pet value
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-  '/pet/{petId}/uploadImage':
-    post:
-      tags:
-        - pet
-      summary: uploads an image
-      description: ''
-      operationId: uploadFile
-      parameters:
-        - name: petId
-          in: path
-          description: ID of pet to update
-          required: true
-          schema:
-            type: integer
-            format: int64
+              "$ref": "#/components/schemas/CheckAuthAttributeRequest"
+            examples:
+              Check auth attributes from email:
+                value:
+                  clientId: c2
+                  projectId: p1
+                  tokenType: 0
+                  email: pratik.patel+12301208@huma.com
+              Check auth attributes from authToken:
+                value:
+                  clientId: c2
+                  projectId: p1
+                  tokenType: 0
+                  authToken: "{{authentication token}}"
+              Check auth attributes from phoneNumber:
+                value:
+                  clientId: c1
+                  projectId: p1
+                  tokenType: 0
+                  phoneNumber: "+441700000000"
       responses:
         '200':
-          description: successful operation
+          description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ApiResponse'
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-      requestBody:
-        content:
-          application/octet-stream:
-            schema:
-              type: string
-              format: binary
-  /pet/findByStatus:
-    get:
-      tags:
-        - pet
-      summary: Finds Pets by status
-      description: Multiple status values can be provided with comma separated strings
-      operationId: findPetsByStatus
-      parameters:
-        - name: status
-          in: query
-          description: Status values that need to be considered for filter
-          required: true
-          style: form
-          schema:
-            type: array
-            minItems: 1
-            maxItems: 3
-            items:
-              type: string
-              enum:
-                - available
-                - pending
-                - sold
-              default: available
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Pet'
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Pet'
+                "$ref": "#/components/schemas/CheckAuthAttributeResponse"
         '400':
-          description: Invalid status value
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-  /pet/findByTags:
-    get:
-      tags:
-        - pet
-      summary: Finds Pets by tags
-      description: >-
-        Multiple tags can be provided with comma separated strings. Use tag1,
-        tag2, tag3 for testing.
-      operationId: findPetsByTags
-      deprecated: true
-      parameters:
-        - name: tags
-          in: query
-          description: Tags to filter by
-          required: true
-          style: form
-          schema:
-            type: array
-            items:
-              type: string
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Pet'
-            application/xml:
-              schema:
-                type: array
-                maxItems: 999
-                items:
-                  maxItems: 111
-                  $ref: '#/components/schemas/Pet'
-        '400':
-          description: Invalid tag value
-      security:
-        - petstore_auth:
-            - 'write:pets'
-            - 'read:pets'
-  /store/inventory:
-    get:
-      tags:
-        - store
-      summary: Returns pet inventories by status
-      description: Returns a map of status codes to quantities
-      operationId: getInventory
-      responses:
-        '200':
-          description: successful operation
+          description: Bad Request
           content:
             application/json:
               schema:
                 type: object
-                additionalProperties:
-                  type: integer
-                  format: int32
-      security:
-        - api_key: []
-  /store/order:
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                         * `100004` - FORBIDDEN_ID
+                    example: 100001
+                  message:
+                    type: string
+                    example: Invalid project id
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN_EXPIRED
+                         * `10002` - WRONG_TOKEN
+                         * `100006` - UNAUTHORIZED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100002` - INVALID CLIENT ID
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Only one of authToken,email,phoneNumber should be present
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: string
+                description: 'HTML code would be generated for 500 Internal Server
+                  Error
+
+                  '
+                example: |
+                  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+                            <title>500 Internal Server Error</title>
+                            <h1>Internal Server Error</h1>
+                            <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  "/api/auth/v1beta/signin":
     post:
+      summary: Signin
+      description: " This API is used to sign in the user from Web, Android and iOS "
       tags:
-        - store
-      summary: Place an order for a pet
-      description: ''
-      operationId: placeOrder
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Order'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Order'
-        '400':
-          description: Invalid Order
-          content:
-            application/json:
-              example:
-                status: 400
-                message: "Invalid Order"
+      - Auth
       requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Order'
-        description: order placed for purchasing the pet
+        description: Signin request
         required: true
-  '/store/order/{orderId}':
-    get:
-      tags:
-        - store
-      summary: Find purchase order by ID
-      description: >-
-        For valid response try integer IDs with value <= 5 or > 10. Other values
-        will generated exceptions
-      operationId: getOrderById
-      parameters:
-        - name: orderId
-          in: path
-          description: ID of pet that needs to be fetched
-          required: true
-          schema:
-            type: integer
-            format: int64
-            minimum: 1
-            maximum: 5
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Order'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Order'
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Order not found
-    delete:
-      tags:
-        - store
-      summary: Delete purchase order by ID
-      description: >-
-        For valid response try integer IDs with value < 1000. Anything above
-        1000 or nonintegers will generate API errors
-      operationId: deleteOrder
-      parameters:
-        - name: orderId
-          in: path
-          description: ID of the order that needs to be deleted
-          required: true
-          schema:
-            type: string
-            minimum: 1
-      responses:
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Order not found
-  /store/subscribe:
-    post:
-      tags:
-        - store
-      summary: Subscribe to the Store events
-      description: Add subscription for a store events
-      requestBody:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                callbackUrl:
-                  type: string
-                  format: uri
-                  description: This URL will be called by the server when the desired event will occur
-                  example: https://myserver.com/send/callback/here
-                eventName:
-                  type: string
-                  description: Event name for the subscription
-                  enum:
-                    - orderInProgress
-                    - orderShipped
-                    - orderDelivered
-                  example: orderInProgress
-              required:
-                - callbackUrl
-                - eventName
+              "$ref": "#/components/schemas/SignInRequest"
+            examples:
+              Login with email:
+                value:
+                  clientId: c2
+                  email: "{{email}}"
+                  method: 0
+                  confirmationCode: "{{enter confirmation code}}"
+                  projectId: p1
+              Login with Phone number:
+                value:
+                  clientId: c1
+                  deviceAgent: test Agent
+                  phoneNumber: "+441700000000"
+                  method: 1
+                  confirmationCode: '010101'
+                  projectId: p1
+              Login with email and password:
+                value:
+                  clientId: c1
+                  confirmationCode: "{{enter confirmation code}}"
+                  deviceAgent: test Agent
+                  email: "{{email}}"
+                  method: 2
+                  projectId: p1
+                  password: 12qw!@QW
+              Login with 2FA:
+                value:
+                  clientId: c3
+                  email: pratik.patel+adminmegaqa@huma.com
+                  method: 3
+                  projectId: p1
+                  password: 12qw!@QW
+              Login from Web:
+                value:
+                  clientId: c3
+                  email: pratik.patel+revereqa@huma.com
+                  method: 3
+                  projectId: p1
+                  password: 12qw!@QW
+              Login from Android:
+                value:
+                  clientId: c2
+                  email: "{{email}}"
+                  method: 0
+                  projectId: p1
+                  confirmationCode: "{{enter confirmation code}}"
+              Login from iOS:
+                value:
+                  clientId: c1
+                  email: k111@yopmail.com
+                  method: 3
+                  projectId: p1
+                  password: Welcome@123
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/SignInResponse"
+        '400':
+          description: Bad Request - `100015` While passing email which is not verified
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                         * `100004` - FORBIDDEN_ID
+                         * `100015` - EMAIL_NOT_VERIFIED
+                    example: 100015
+                  message:
+                    type: string
+                    example: Email not verified
+        '403':
+          description: Forbidden - `100003` While passing invalid value to any object
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                          * `100001` - INVALID_PROJECT_ID
+                          * `100002` - INVALID_CLIENT_ID
+                          * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: 'Missing keys: email'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Error"
+  "/api/auth/v1beta/signup":
+    post:
+      tags:
+      - Auth
+      summary: Signup
+      description: " This API is used to register the new user from Web, iOS and Android.
+        Here activation code is mandatory for signup and it indicates the deployment
+        \n (More info can found [here](https://medopadteam.atlassian.net/wiki/spaces/HUM/pages/2520023095/DEV+and+QA+server+activation+codes))
+        \n\n User can signup using different method types. From mobile app when new
+        user sign up it will use method: 0 and via API it can use 0, 1, 2, and 3 \n
+        \ "
+      requestBody:
+        description: Signup request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/SignUpRequest"
+            examples:
+              Signup with email:
+                value:
+                  clientId: c2
+                  projectId: p1
+                  method: 0
+                  timezone: Europe/London
+                  email: "{{email}}"
+                  userAttributes:
+                    familyName: Test
+                    givenName: Test
+                    dob: '1993-11-29'
+                    gender: MALE
+                  validationData:
+                    activationCode: "{{enter activation code}}"
+              Signup with phoneNumber:
+                value:
+                  clientId: c1
+                  projectId: p1
+                  method: 1
+                  timezone: Europe/London
+                  phoneNumber: "{{phone number}}"
+                  userAttributes:
+                    familyName: Test
+                    givenName: Test
+                    dob: '1993-11-29'
+                    gender: MALE
+                  validationData:
+                    activationCode: "{{enter activation code}}"
+              Signup with email and password:
+                value:
+                  clientId: c1
+                  projectId: p1
+                  method: 2
+                  timezone: Europe/London
+                  email: "{{email}}"
+                  password: "{{enter password}}"
+                  userAttributes:
+                    familyName: Test
+                    givenName: Test
+                    dob: '1993-11-29'
+                    gender: MALE
+                  validationData:
+                    activationCode: "{{enter activation code}}"
+              Signup with Two factor authentication:
+                value:
+                  clientId: c3
+                  projectId: p1
+                  method: 3
+                  timezone: Europe/London
+                  email: "{{email}}"
+                  password: "{{enter password}}"
+                  userAttributes:
+                    familyName: Test
+                    givenName: Test
+                    dob: '1993-11-29'
+                    gender: MALE
+                  validationData:
+                    activationCode: "{{enter activation code}}"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/SignUpResponse"
+        '400':
+          description: Bad Request - `100010` User already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                         * `100004` - FORBIDDEN_ID
+                         * `100010` - DUPLICATED_USER_ID
+                    example: 100010
+                  message:
+                    type: string
+                    example: User already exists
+        '403':
+          description: Forbidden - `100003` While passing invalid value to any object
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: 'Missing keys: email'
+  "/api/auth/v1beta/sendverificationtoken":
+    post:
+      tags:
+      - Auth
+      summary: Send verification token
+      description: " This API is used to send verification token to the specified
+        email or phone number "
+      requestBody:
+        description: Send verification token request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/SendVerificationTokenRequest"
+            examples:
+              Send verification token to email:
+                value:
+                  clientId: c2
+                  projectId: p1
+                  method: 0
+                  email: "{{email}}"
+                  language: en
+              Send verification token to phoneNumber:
+                value:
+                  clientId: c1
+                  projectId: p1
+                  method: 1
+                  phoneNumber: "+441700000000"
+                  language: en
+              Send verification token with method 2:
+                value:
+                  clientId: c1
+                  projectId: p1
+                  method: 2
+                  email: "{{email}}"
+                  language: en
+              Send verification token to Web:
+                value:
+                  clientId: c3
+                  projectId: p1
+                  method: 3
+                  language: en
+                  refreshToken: "{{refresh token}}"
+      responses:
+        '200':
+          description: Verification token sent to the specified email or phone number
+            successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/SendVerificationTokenResponse"
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                    example: 100001
+                  message:
+                    type: string
+                    example: Invalid project id
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100006` - UNAUTHORIZED
+                    example: 100006
+                  message:
+                    type: string
+                    example: Unauthorized User
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID CLIENT ID
+                         * `100003` - INVALID_REQUEST
+                    example: 100002
+                  message:
+                    type: string
+                    example: Invalid client id
+  "/api/auth/v1beta/authprofile":
+    post:
+      tags:
+      - Auth
+      summary: Auth profile
+      description: " It will return the user id from the user's authentication token "
+      requestBody:
+        description: Auth profile request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/AuthProfileRequest"
+            examples:
+              Return user id for specified authentication token:
+                value:
+                  authToken: "{{authentication token}}"
+      responses:
+        '200':
+          description: Return user id(uid) for the specified authentication token
+            successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/AuthProfileResponse"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN EXPIRED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Field [AuthProfileRequestObject.authToken] with value
+                      [] has error [()]
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: string
+                description: 'HTML code would be generated for 500 Internal Server
+                  Error
+
+                  '
+                example: |
+                  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+                            <title>500 Internal Server Error</title>
+                            <h1>Internal Server Error</h1>
+                            <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  "/api/auth/v1beta/refreshtoken":
+    post:
+      tags:
+      - Auth
+      summary: Refresh token
+      description: " Using this API we can refresh the Authentication token "
+      requestBody:
+        description: New refresh token request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RefreshTokenRequest"
+            examples:
+              Refresh the authenticatiom token with the refresh token:
+                value:
+                  email: k111@yopmail.com
+                  password: Welcome@123
+                  refreshToken: "{{refresh token}}"
+      responses:
+        '200':
+          description: New refresh token is generated successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/RefreshTokenResponse"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10002` - WRONG_TOKEN
+                    example: 10002
+                  message:
+                    type: string
+                    example: Wrong Token
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID_REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Field [RefreshTokenRequestObject.refreshToken] is mandatory
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: string
+                description: 'HTML code would be generated for 500 Internal Server
+                  Error
+
+                  '
+                example: |
+                  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+                            <title>500 Internal Server Error</title>
+                            <h1>Internal Server Error</h1>
+                            <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  "/api/auth/v1beta/signout":
+    post:
+      summary: Signout
+      description: " It will sign out the user (Web, Android and iOS) "
+      tags:
+      - Auth
+      requestBody:
+        description: Signout request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/SignOutRequest"
+            examples:
+              Sign out the user:
+                value:
+                  userId: "{{userId}}"
+      responses:
+        '200':
+          description: Signed out the user successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/SignOutResponse"
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                         * `100014` - USER ALREADY SIGNED OUT
+                    example: 100014
+                  message:
+                    type: string
+                    example: User is already signed out
+  "/api/auth/v1beta/set-auth-attributes":
+    post:
+      tags:
+      - Auth
+      summary: Set auth attributes
+      description: " This API is used to set authentication attributes for the specific
+        user "
+      requestBody:
+        description: Set auth attributes request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/SetAuthAttributesRequest"
+            examples:
+              Set authentication attribute with email and authentication token:
+                value:
+                  email: "{{email}}"
+                  authToken: "{{authentication token}}"
+                  clientId: c2
+                  projectId: p1
+              Set authentication attribute with phoneNumber and authentication token:
+                value:
+                  phoneNumber: "{{phone number}}"
+                  authToken: "{{authentication token}}"
+                  clientId: c2
+                  projectId: p1
+              Set authentication attribute with mfaEnabled and authentication token:
+                value:
+                  mfaEnabled: true
+                  authToken: "{{authentication token}}"
+                  clientId: c2
+                  projectId: p1
+              Set authentication attribute with password and authentication token for new user email:
+                value:
+                  password: 12qw!@QW
+                  email: "{{email}}"
+                  authToken: "{{authentication token}}"
+                  clientId: c2
+                  projectId: p1
+              Set all authentication attributes with authentication token:
+                value:
+                  email: "{{email}}"
+                  phoneNumber: "{{phone number}}"
+                  password: 12qw!@QW
+                  mfaEnabled: true
+                  authToken: "{{authentication token}}"
+                  clientId: c2
+                  projectId: p1
+      responses:
+        '200':
+          description: Set auth attributes successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/SetAuthAttributesResponse"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100024` - EMAIL_ALREADY_SET
+                         * `100025` - PHONE_NUMBER_ALREADY_SET
+                         * `100026` - PASSWORD_ALREADY_SET
+                         * `100043` - MFA_REQUIRED
+                    example: 100024
+                  message:
+                    type: string
+                    example: Email already set
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID CLIENT ID
+                         * `100003` - INVALID_REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: At least one of email,phoneNumber,password,mfaEnabled
+                      should be present
+  "/api/auth/v1beta/confirm":
+    post:
+      tags:
+      - Auth
+      summary: Confirm email address/phone number
+      description: " This API will confirm and verify the new valid user. It will
+        use the `confirmationCode` received on user email address/phone number to
+        verify the new user "
+      requestBody:
+        description: Confirm using confirmation code and email address/phone number
+          request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/ConfirmationRequest"
+            examples:
+              Confirm user with email and confirmation code:
+                value:
+                  clientId: c1
+                  projectId: p1
+                  confirmationCode: "{{enter confirmation code}}"
+                  email: "{{email}}"
+              Confirm user with phoneNumber and confirmation code:
+                value:
+                  clientId: c2
+                  projectId: p1
+                  confirmationCode: "{{enter confirmation code}}"
+                  phoneNumber: "{{phone number}}"
+              Confirm user with phoneNumber, email and confirmation code:
+                value:
+                  clientId: c3
+                  projectId: p1
+                  confirmationCode: "{{enter confirmation code}}"
+                  phoneNumber: "{{phone number}}"
+                  email: "{{email}}"
+      responses:
+        '200':
+          description: User confirmation done successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ConfirmationResponse"
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                         * `100030` - PHONE_NUMBER_ALREADY_VERIFIED
+                         * `100031` - EMAIL_NUMBER_ALREADY_VERIFIED
+                    example: 100031
+                  message:
+                    type: string
+                    example: Email already verified
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100006` - UNAUTHORIZED
+                    example: 100006
+                  message:
+                    type: string
+                    example: Unauthorized User
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100002` - INVALID CLIENT ID
+                         * `100003` - INVALID REQUEST
+                    example: 100002
+                  message:
+                    type: string
+                    example: Invalid client id
+  "/api/auth/v1beta/password-reset":
+    post:
+      tags:
+      - Auth
+      summary: Reset password
+      description: " This API is used to reset password from the user email \n\n API:
+        `/request-password-reset` will generate code which can be consumed by this
+        API to reset password "
+      requestBody:
+        description: Reset password request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/ResetPasswordRequest"
+            examples:
+              Reset password from email:
+                value:
+                  code: "{{enter code}}"
+                  clientId: c2
+                  projectId: p1
+                  email: "{{email}}"
+                  newPassword: "{{enter new password}}"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ResetPasswordResponse"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                    example: 100001
+                  message:
+                    type: string
+                    example: Invalid project id
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100006` - UNAUTHORIZED
+                         * `100016` - INVALID EMAIL CONFIRMATION CODE
+                    example: 100016
+                  message:
+                    type: string
+                    example: Invalid email confirmation code
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100002` - INVALID CLIENT ID
+                         * `100003` - INVALID REQUEST
+                    example: 100002
+                  message:
+                    type: string
+                    example: Invalid client id
+  "/api/auth/v1beta/user/{user_id}/token":
+    post:
+      tags:
+      - Auth
+      summary: Generate auth token
+      description: " This API is used for generating auth token based on the valid
+        user_id"
+      parameters:
+      - description: User ID for which the auth token will be generated for
+        in: path
+        name: user_id
+        required: true
+        content:
+          application/json:
+            examples:
+              Check generate authToken with valid user_id:
+                value:
+                  user_id: 6016a26eb2d2e6b0bdb3f279
       responses:
         '201':
-          description: Subscription added
+          description: When auth token generated successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/GenerateAuthTokenResponse"
+        '400':
+          description: Bad Request
           content:
             application/json:
               schema:
                 type: object
+                required:
+                - code
+                - message
                 properties:
-                  subscriptionId:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                         * `100004` - FORBIDDEN_ID
+                    example: 100003
+                  message:
                     type: string
-                    example: AAA-123-BBB-456
-      callbacks:
-        orderInProgress:
-          '{$request.body#/callbackUrl}?event={$request.body#/eventName}':
-            servers:
-              - url: //callback-url.path-level/v1
-                description: Path level server 1
-              - url: //callback-url.path-level/v2
-                description: Path level server 2
-            post:
-              summary: Order in Progress (Summary)
-              description: A callback triggered every time an Order is updated status to "inProgress" (Description)
-              externalDocs:
-                description: Find out more
-                url: 'https://more-details.com/demo'
-              requestBody:
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        orderId:
-                          type: string
-                          example: '123'
-                        timestamp:
-                          type: string
-                          format: date-time
-                          example: '2018-10-19T16:46:45Z'
-                        status:
-                          type: string
-                          example: 'inProgress'
-                  application/xml:
-                    schema:
-                      type: object
-                      properties:
-                        orderId:
-                          type: string
-                          example: '123'
-                    example: |
-                      <?xml version="1.0" encoding="UTF-8"?>
-                      <root>
-                        <orderId>123</orderId>
-                        <status>inProgress</status>
-                        <timestamp>2018-10-19T16:46:45Z</timestamp>
-                      </root>
-              responses:
-                '200':
-                  description: Callback successfully processed and no retries will be performed
-                  content:
-                    application/json:
-                      schema:
-                        type: object
-                        properties:
-                          someProp:
-                            type: string
-                            example: '123'
-                '299':
-                  description: Response for cancelling subscription
-                '500':
-                  description: Callback processing failed and retries will be performed
-              x-codeSamples:
-                - lang: 'C#'
-                  source: |
-                    PetStore.v1.Pet pet = new PetStore.v1.Pet();
-                    pet.setApiKey("your api key");
-                    pet.petType = PetStore.v1.Pet.TYPE_DOG;
-                    pet.name = "Rex";
-                    // set other fields
-                    PetStoreResponse response = pet.create();
-                    if (response.statusCode == HttpStatusCode.Created)
-                    {
-                      // Successfully created
-                    }
-                    else
-                    {
-                      // Something wrong -- check response for errors
-                      Console.WriteLine(response.getRawResponse());
-                    }
-                - lang: PHP
-                  source: |
-                    $form = new \PetStore\Entities\Pet();
-                    $form->setPetType("Dog");
-                    $form->setName("Rex");
-                    // set other fields
-                    try {
-                        $pet = $client->pets()->create($form);
-                    } catch (UnprocessableEntityException $e) {
-                        var_dump($e->getErrors());
-                    }
-            put:
-              description: Order in Progress (Only Description)
-              servers:
-                - url: //callback-url.operation-level/v1
-                  description: Operation level server 1 (Operation override)
-                - url: //callback-url.operation-level/v2
-                  description: Operation level server 2 (Operation override)
-              requestBody:
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        orderId:
-                          type: string
-                          example: '123'
-                        timestamp:
-                          type: string
-                          format: date-time
-                          example: '2018-10-19T16:46:45Z'
-                        status:
-                          type: string
-                          example: 'inProgress'
-                  application/xml:
-                    schema:
-                      type: object
-                      properties:
-                        orderId:
-                          type: string
-                          example: '123'
-                    example: |
-                      <?xml version="1.0" encoding="UTF-8"?>
-                      <root>
-                        <orderId>123</orderId>
-                        <status>inProgress</status>
-                        <timestamp>2018-10-19T16:46:45Z</timestamp>
-                      </root>
-              responses:
-                '200':
-                  description: Callback successfully processed and no retries will be performed
-                  content:
-                    application/json:
-                      schema:
-                        type: object
-                        properties:
-                          someProp:
-                            type: string
-                            example: '123'
-        orderShipped:
-          '{$request.body#/callbackUrl}?event={$request.body#/eventName}':
-            post:
-              description: |
-                Very long description
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-              requestBody:
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        orderId:
-                          type: string
-                          example: '123'
-                        timestamp:
-                          type: string
-                          format: date-time
-                          example: '2018-10-19T16:46:45Z'
-                        estimatedDeliveryDate:
-                          type: string
-                          format: date-time
-                          example: '2018-11-11T16:00:00Z'
-              responses:
-                '200':
-                  description: Callback successfully processed and no retries will be performed
-        orderDelivered:
-          'http://notificationServer.com?url={$request.body#/callbackUrl}&event={$request.body#/eventName}':
-            post:
-              deprecated: true
-              summary: Order delivered
-              description: A callback triggered every time an Order is delivered to the recipient
-              requestBody:
-                content:
-                  application/json:
-                    schema:
-                      type: object
-                      properties:
-                        orderId:
-                          type: string
-                          example: '123'
-                        timestamp:
-                          type: string
-                          format: date-time
-                          example: '2018-10-19T16:46:45Z'
-              responses:
-                '200':
-                  description: Callback successfully processed and no retries will be performed
-  /user:
-    post:
-      tags:
-        - user
-      summary: Create user
-      description: This can only be done by the logged in user.
-      operationId: createUser
-      responses:
-        default:
-          description: successful operation
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/User'
-        description: Created user object
-        required: true
-  '/user/{username}':
-    get:
-      tags:
-        - user
-      summary: Get user by user name
-      description: ''
-      operationId: getUserByName
-      parameters:
-        - name: username
-          in: path
-          description: 'The name that needs to be fetched. Use user1 for testing. '
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: successful operation
+                    example: Invalid request
+        '401':
+          description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
-            application/xml:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN_EXPIRED
+                         * `10002` - WRONG_TOKEN
+                         * `100006` - UNAUTHORIZED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden
+          content:
+            application/json:
               schema:
-                $ref: '#/components/schemas/User'
-        '400':
-          description: Invalid username supplied
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100002` - INVALID USER ID
+                         * `100003` - INVALID REQUEST
+                    example: 100002
+                  message:
+                    type: string
+                    example: Invalid user id
         '404':
-          description: User not found
-    put:
-      tags:
-        - user
-      summary: Updated user
-      description: This can only be done by the logged in user.
-      operationId: updateUser
-      parameters:
-        - name: username
-          in: path
-          description: name that need to be deleted
-          required: true
-          schema:
-            type: string
-      responses:
-        '400':
-          description: Invalid user supplied
-        '404':
-          description: User not found
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/User'
-        description: Updated user object
-        required: true
-    delete:
-      tags:
-        - user
-      summary: Delete user
-      description: This can only be done by the logged in user.
-      operationId: deleteUser
-      parameters:
-        - name: username
-          in: path
-          description: The name that needs to be deleted
-          required: true
-          schema:
-            type: string
-      responses:
-        '400':
-          description: Invalid username supplied
-        '404':
-          description: User not found
-  /user/createWithArray:
-    post:
-      tags:
-        - user
-      summary: Creates list of users with given input array
-      description: ''
-      operationId: createUsersWithArrayInput
-      responses:
-        default:
-          description: successful operation
-      requestBody:
-        $ref: '#/components/requestBodies/UserArray'
-  /user/createWithList:
-    post:
-      tags:
-        - user
-      summary: Creates list of users with given input array
-      description: ''
-      operationId: createUsersWithListInput
-      responses:
-        default:
-          description: successful operation
-      requestBody:
-        $ref: '#/components/requestBodies/UserArray'
-  /user/login:
-    get:
-      tags:
-        - user
-      summary: Logs user into the system
-      description: ''
-      operationId: loginUser
-      parameters:
-        - name: username
-          in: query
-          description: The user name for login
-          required: true
-          schema:
-            type: string
-        - name: password
-          in: query
-          description: The password for login in clear text
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: successful operation
-          headers:
-            X-Rate-Limit:
-              description: calls per hour allowed by the user
+          description: Not found
+          content:
+            application/json:
               schema:
-                type: integer
-                format: int32
-            X-Expires-After:
-              description: date in UTC when token expires
-              schema:
-                type: string
-                format: date-time
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `300011` - USER DOESN'T EXIST
+                    example: 300011
+                  message:
+                    type: string
+                    example: User doesn't exist
+        '500':
+          description: Internal server error
           content:
             application/json:
               schema:
                 type: string
-              examples:
-                response:
-                  value: OK
-            application/xml:
+                description: 'HTML code would be generated for 500 Internal Server
+                  Error
+
+                  '
+                example: |
+                  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+                            <title>500 Internal Server Error</title>
+                            <h1>Internal Server Error</h1>
+                            <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  "/api/auth/v1beta/request-password-reset":
+    post:
+      tags:
+      - Auth
+      summary: Request password reset
+      description: This API is used to request resetting the password
+      requestBody:
+        description: Request password reset
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RequestPasswordResetRequest"
+            examples:
+              Request password reset:
+                value:
+                  clientId: c2
+                  projectId: p1
+                  language: en
+                  email: "{{email}}"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/RequestPasswordResetResponse"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100001` - INVALID_PROJECT_ID
+                         * `100002` - INVALID_CLIENT_ID
+                         * `100003` - INVALID_REQUEST
+                         * `100004` - FORBIDDEN_ID
+                    example: 100001
+                  message:
+                    type: string
+                    example: Invalid project id
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN_EXPIRED
+                         * `10002` - WRONG_TOKEN
+                         * `100006` - UNAUTHORIZED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100002` - INVALID CLIENT ID
+                         * `100003` - INVALID REQUEST
+                    example: 100002
+                  message:
+                    type: string
+                    example: Invalid client id
+        '500':
+          description: Internal server error
+          content:
+            application/json:
               schema:
                 type: string
-              examples:
-                response:
-                  value:  <Message> OK </Message>
-            text/plain:
-              examples:
-                response:
-                  value:  OK
+                description: 'HTML code would be generated for 500 Internal Server
+                  Error
+
+                  '
+                example: |
+                  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+                            <title>500 Internal Server Error</title>
+                            <h1>Internal Server Error</h1>
+                            <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  "/api/extensions/v1beta/export/":
+    post:
+      tags:
+      - Export
+      summary: Export
+      description: "The users with any these roles can access the export API: `Admin`,
+        `OrganizationStaff`, `AccessController` and `Contributor`\n\n###### If you
+        are using End user authentication\n\n  1. **Sign in for clinician user:**\n
+        \     - API `/api/auth/{version}/signin` will return the `authToken` and `user_id`
+        in response.\n  2. **Get deploymentId:**\n      - Using the `Bearer {authToken}`
+        do call `/api/extensions/{version}/user/{user_id}/configuration` to get `deploymentId`\n
+        \ 3. **Export patients data in CSV/JSON format(for that clinician):**\n      -
+        For given `deploymentId` the data can be exported using `/api/extensions/{version}/export/`\n\n######
+        If you are using Hawk authentication\n\n  1. **Sign in Api Key and Api ID:**
+        \n        - Huma staffs provides you with Api credentials\n  2. **Get deploymentId:**\n
+        \       - Huma staffs provides you with necessary deployment ID(s)\n  3. **Export
+        patients data in CSV/JSON format:**\n        - For given `deploymentId` the
+        data can be exported using `/api/extensions/{version}/export/`\n"
+      requestBody:
+        description: Export request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/ExportRequest"
+            examples:
+              Single deployment with all modules (except step) and de-identified in JSON:
+                value:
+                  userExportProfile: false
+                  deIdentified: true
+                  excludedModuleNames:
+                  - Step
+                  binaryOption: NONE
+                  includeNullFields: false
+                  format: JSON
+                  singleFileResponse: true
+                  fromDate: '2021-07-15'
+                  toDate: '2021-08-12'
+                  deploymentId: "{{deploymentId}}"
+              Single deployment with all modules (except step) and identified in JSON:
+                value:
+                  userExportProfile: false
+                  deIdentified: false
+                  excludedModuleNames:
+                  - Step
+                  binaryOption: NONE
+                  includeNullFields: false
+                  format: JSON
+                  singleFileResponse: true
+                  fromDate: '2021-07-15'
+                  toDate: '2021-08-12'
+                  deploymentId: "{{deploymentId}}"
+              Single patient data excluding identifiable information for all modules and export to JSON format:
+                value:
+                  deIdentified: true
+                  format: JSON
+                  fromDate: '2021-07-08'
+                  toDate: '2021-07-25'
+                  deploymentId: "{{deploymentId}}"
+                  singleFileResponse: true
+                  userIds:
+                  - "{{userId}}"
+              Single patient data excluding identifiable information for specific modules and export to CSV & JSON both formats:
+                value:
+                  deIdentified: true
+                  format: JSON_CSV
+                  fromDate: '2021-07-08'
+                  toDate: '2021-07-28'
+                  moduleNames:
+                  - Questionnaire
+                  - RevereTest
+                  deploymentId: "{{deploymentId}}"
+                  userIds:
+                  - "{{userId}}"
+              Multiple patients data including identifiable information for all modules and export CSV format:
+                value:
+                  deIdentified: false
+                  format: CSV
+                  fromDate: '2021-07-08'
+                  toDate: '2021-07-25'
+                  deploymentId: "{{deploymentId}}"
+                  userIds:
+                  - "{{userId}}"
+                  - "{{userId}}"
+              Multiple patients data including identifiable information for selected module and export JSON format:
+                value:
+                  deIdentified: false
+                  format: JSON
+                  fromDate: '2021-07-08'
+                  toDate: '2021-07-25'
+                  deploymentId: "{{deploymentId}}"
+                  moduleNames:
+                  - Questionnaire
+                  userIds:
+                  - "{{userId}}"
+                  - "{{userId}}"
+              All patients data excluding identifiable information identifiable for all modules and export CSV & JSON both formats:
+                value:
+                  deIdentified: true
+                  format: JSON_CSV
+                  fromDate: '2021-07-08'
+                  toDate: '2021-07-25'
+                  deploymentId: "{{deploymentId}}"
+              Export patients data for specific deployment using base profile:
+                value:
+                  baseProfile: "{{enter created profile name}}"
+                  deploymentId: "{{deploymentId}}"
+              Export multiple patients data for specific deployment with all objects:
+                value:
+                  deIdentified: false
+                  format: JSON
+                  fromDate: '2021-07-08'
+                  toDate: '2021-07-25'
+                  binaryOption: NONE
+                  deploymentId: "{{deploymentId}}"
+                  exportBucket: hu-pp-qa-app-bucket
+                  includeNullFields: true
+                  includeUserMetaData: true
+                  layer: FLAT
+                  quantity: SINGLE
+                  questionnairePerName: true
+                  singleFileResponse: true
+                  splitMultipleChoice: true
+                  splitSymptoms: true
+                  translatePrimitives: true
+                  translationShortCodesObjectFormat: JSON
+                  view: USER
+                  useFlatStructure: false
+                  doTranslate: true
+                  moduleNames:
+                  - Questionnaire
+                  excludedModuleNames:
+                  - RevereTest
+                  userIds:
+                  - "{{userId}}"
+                  - "{{userId}}"
+              ? All deployments data excluding identifiable information identifiable
+                for all modules and export JSON format as an access controller (AC)
+              : value:
+                  deIdentified: true
+                  format: JSON
+                  fromDate: '2021-07-01'
+                  toDate: '2021-07-23'
+                  singleFileResponse: true
+                  deploymentIds:
+                  - "{{deploymentId}}"
+                  - "{{deploymentId}}"
+                  organizationId: "{{organizationId}}"
+              ? Multiple deployments data excluding identifiable information identifiable
+                for all modules and export CSV format as an access controller (AC)
+              : value:
+                  deIdentified: true
+                  format: CSV
+                  fromDate: '2021-07-01'
+                  toDate: '2021-07-23'
+                  singleFileResponse: true
+                  deploymentIds:
+                  - "{{deploymentId}}"
+                  - "{{deploymentId}}"
+                  organizationId: "{{organizationId}}"
+              Export multiple deployments data for specific organization with all objects:
+                value:
+                  deIdentified: true
+                  format: JSON
+                  fromDate: '2021-07-01'
+                  toDate: '2021-07-27'
+                  singleFileResponse: true
+                  binaryOption: NONE
+                  exportBucket: hu-pp-qa-app-bucket
+                  includeNullFields: true
+                  includeUserMetaData: true
+                  layer: FLAT
+                  quantity: SINGLE
+                  questionnairePerName: true
+                  splitMultipleChoice: true
+                  splitSymptoms: true
+                  translatePrimitives: true
+                  translationShortCodesObjectFormat: JSON
+                  useFlatStructure: true
+                  view: USER
+                  moduleNames:
+                  - BackgroundInformation
+                  - AZGroupKeyActionTrigger
+                  excludedModuleNames:
+                  - AZFurtherPregnancyKeyActionTrigger
+                  deploymentIds:
+                  - "{{deploymentId}}"
+                  - "{{deploymentId}}"
+                  organizationId: "{{organizationId}}"
+      responses:
+        '200':
+          description: Export data (zip archive of CSV/JSON)
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ExportResponse"
+        '401':
+          description: Unauthorized - `10001` While passing expired bearer token in
+            header
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN EXPIRED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden - `100003` While passing invalid value to any object
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Field [ExportUsersRequestObject.deIdentified] with value
+                      [false] is not type of [bool]
+        '404':
+          description: Not found - `100003` While export profile does not exist
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Export profile None does not exist
+  "/api/extensions/v1beta/export/profile":
+    post:
+      tags:
+      - Export
+      summary: Create export profile
+      description: " Using Export Profile API endpoint you can perform basic CRUD
+        operations against Export Profile data \n\n\nFor example, To export the data
+        using created export profile we can call below APIs: \n\n 1. **Create export
+        profile for patients(for that clinician)/deployments(for that organization)
+        data :** \n\n - For given `deploymentId/organizationId`, `content` and `name`
+        the export profile can be created using `/api/extensions/{version}/export/profile`
+        \n\n 2. **Export patients/deployments data in CSV/JSON format(for that clinician/organization)
+        by using created profile:** \n\n - For given `baseProfile` and `deploymentId/organizationId`
+        the data can be exported using `/api/extensions/{version}/export/` \n\n\n "
+      requestBody:
+        description: Create export profile request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/CreateExportProfileRequest"
+            examples:
+              Create profile for all patients data with Identifiable information:
+                value:
+                  name: "{{profile name}}"
+                  deploymentId: "{{deploymentId}}"
+                  content:
+                    fromDate: '2021-07-08'
+                    toDate: '2021-07-25'
+                    format: JSON
+                    deIdentified: false
+                    singleFileFormat: true
+              Create profile for multiple patients data without Identifiable information:
+                value:
+                  name: "{{profile name}}"
+                  deploymentId: "{{deploymentId}}"
+                  content:
+                    deIdentified: true
+                    format: JSON_CSV
+                    fromDate: '2021-07-08'
+                    toDate: '2021-07-25'
+                    userIds:
+                    - "{{userId}}"
+                    - "{{userId}}"
+              Create profile for all deployment data with single file format (JSON):
+                value:
+                  name: "{{profile name}}"
+                  organizationId: "{{organizationId}}"
+                  deploymentIds:
+                  - "{{deploymentId}}"
+                  - "{{deploymentId}}"
+                  content:
+                    deIdentified: true
+                    format: JSON
+                    fromDate: '2021-07-01'
+                    toDate: '2021-07-27'
+                    exportBucket: hu-pp-qa-app-bucket
+                    singleFileResponse: true
+              Create profile for single deployment data with nested layer:
+                value:
+                  name: "{{profile name}}"
+                  organizationId: "{{organizationId}}"
+                  deploymentIds:
+                  - "{{deploymentId}}"
+                  content:
+                    deIdentified: true
+                    format: JSON_CSV
+                    fromDate: '2021-07-08'
+                    toDate: '2021-07-15'
+                    layer: NESTED
+              Create profile for single patient data with including user metadata:
+                value:
+                  name: "{{profile name}}"
+                  deploymentId: "{{deploymentId}}"
+                  content:
+                    deIdentified: true
+                    format: JSON
+                    fromDate: '2021-07-08'
+                    toDate: '2021-07-25'
+                    includeUserMetaData: true
+                    userIds:
+                    - "{{userId}}"
+              Create profile for single patient data view like per date:
+                value:
+                  name: "{{profile name}}"
+                  deploymentId: "{{deploymentId}}"
+                  content:
+                    deIdentified: true
+                    format: JSON
+                    fromDate: '2021-07-08'
+                    toDate: '2021-07-25'
+                    view: DAY
+                    userIds:
+                    - "{{userId}}"
+              Create profile for multiple patients data of specific deployment with all objects:
+                value:
+                  name: "{{profile name}}"
+                  deploymentId: "{{deploymentId}}"
+                  content:
+                    fromDate: '2021-07-15'
+                    toDate: '2021-07-15'
+                    format: JSON
+                    binaryOption: NONE
+                    deIdentifyHashFields:
+                    - primitive.id
+                    - primitive.userId
+                    - primitive.submitterId
+                    deIdentifyRemoveFields:
+                    - primitive.aggregationPrecision
+                    excludeFields:
+                    - user.id
+                    - user.email
+                    includeFields:
+                    - user.language
+                    - user.timezone
+                    excludedModuleNames:
+                    - Journal
+                    moduleNames:
+                    - Questionnaire
+                    - Step
+                    - Symptom
+                    - Weight
+                    exportBucket: hu-pp-qa-app-bucket
+                    includeNullFields: true
+                    includeUserMetaData: true
+                    layer: FLAT
+                    quantity: SINGLE
+                    questionnairePerName: true
+                    splitMultipleChoice: true
+                    splitSymptoms: true
+                    translatePrimitives: true
+                    translationShortCodesObjectFormat: JSON
+                    view: USER
+                    deIdentified: false
+                    singleFileResponse: true
+                    useFlatStructure: true
+                    userIds:
+                    - "{{userId}}"
+                    - "{{userId}}"
+              Create profile for multiple deployments data of specific organization with all objects:
+                value:
+                  name: "{{profile name}}"
+                  deploymentIds:
+                  - "{{deploymentId}}"
+                  - "{{deploymentId}}"
+                  organizationId: "{{organizationId}}"
+                  content:
+                    deIdentified: true
+                    binaryOption: NONE
+                    exportBucket: hu-pp-qa-app-bucket
+                    format: JSON
+                    fromDate: '2021-07-01'
+                    toDate: '2021-07-27'
+                    singleFileResponse: true
+                    includeNullFields: true
+                    includeUserMetaData: true
+                    layer: FLAT
+                    quantity: SINGLE
+                    questionnairePerName: true
+                    splitMultipleChoice: true
+                    splitSymptoms: true
+                    translatePrimitives: true
+                    translationShortCodesObjectFormat: JSON
+                    useFlatStructure: true
+                    view: USER
+                    doTranslate: true
+                    moduleNames:
+                    - BackgroundInformation
+                    - AZGroupKeyActionTrigger
+                    excludedModuleNames:
+                    - AZFurtherPregnancyKeyActionTrigger
+                    deIdentifyHashFields:
+                    - primitive.id
+                    - primitive.userId
+                    - primitive.submitterId
+                    deIdentifyRemoveFields:
+                    - primitive.aggregationPrecision
+                    excludeFields:
+                    - user.id
+                    - user.email
+                    includeFields:
+                    - user.language
+                    - user.timezone
+      responses:
+        '201':
+          description: Created Export Profile successfully
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/CreateExportProfileResponse"
         '400':
-          description: Invalid username/password supplied
-  /user/logout:
+          description: Bad request - `900001` While passing already existed profile
+            name
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `900001` - DUPLICATE PROFILE NAME
+                    example: 900001
+                  message:
+                    type: string
+                    example: Profile with that name already exists.
+        '401':
+          description: Unauthorized - `10001` While passing expired bearer token in
+            header
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN EXPIRED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden - `100003` While passing invalid value to any object
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Field [ExportUsersRequestObject.deIdentified] with value
+                      [false] is not type of [bool]
+  "/api/extensions/v1beta/user/profiles":
+    post:
+      tags:
+      - User
+      summary: Retrieve profiles
+      description: " Using this API we can retrieve the User profiles from clinician
+        portal "
+      requestBody:
+        description: Retrieve profiles request
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RetrieveProfilesRequest"
+            examples:
+              Retrieve manager profiles:
+                value:
+                  role: Manager
+              Retrieve users profiles with all objects:
+                value:
+                  role: User
+                  limit: 10
+                  modules:
+                  - Journal
+                  nameContains: test
+                  patientDataOnly: true
+                  patientIdentifiersOnly: true
+                  skip: 0
+              Retrieve users profiles with limitation:
+                value:
+                  role: User
+                  limit: 10
+              Retrieve users profiles related specific module:
+                value:
+                  role: User
+                  modules:
+                  - Questionnaire
+              Retrieve contributor profiles filtered by name:
+                value:
+                  role: Contributor
+                  nameContains: "{{enter name}}"
+              Retrieve user profiles with only patient data:
+                value:
+                  role: User
+                  patientDataOnly: true
+              Retrieve user profiles with only patient identifiers:
+                value:
+                  role: User
+                  patientIdentifiersOnly: true
+      responses:
+        '200':
+          description: List of the user profiles
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/RetrieveProfilesResponse"
+        '401':
+          description: Unauthorized - `10001` While passing expired bearer token in
+            header
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN EXPIRED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '403':
+          description: Forbidden - `100003` While passing invalid value to any object
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `100003` - INVALID REQUEST
+                    example: 100003
+                  message:
+                    type: string
+                    example: Field [RetrieveProfilesRequestObject.role] with value
+                      [123] is not type of [str]
+  "/api/extensions/v1beta/user/{user_id}":
     get:
       tags:
-        - user
-      summary: Logs out current logged in user session
-      description: ''
-      operationId: logoutUser
+      - User
+      summary: Get user's profile
+      description: " This API is used to retrieve the data of the User profile data "
+      parameters:
+      - description: ID of the user profile belongs to
+        in: path
+        name: user_id
+        required: true
+        content:
+          application/json:
+            examples:
+              Retrieve user profile data with valid user_id:
+                value:
+                  user_id: 6114edb7fd6d13ba68b89ee2
       responses:
-        default:
-          description: successful operation
+        '200':
+          description: User profile data
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/UserProfileObject"
+        '401':
+          description: Unauthorized - `10001` While passing expired bearer token in
+            header
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN EXPIRED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '404':
+          description: Not found - `300011` while passing invalid userId
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `300011` - INVALID USER ID
+                    example: 300011
+                  message:
+                    type: string
+                    example: User Doesn't Exist.
+  "/api/extensions/v1beta/user/{user_id}/configuration":
+    get:
+      tags:
+      - User
+      summary: Get deployment
+      description: " Retrieve the details of the deployment requested by userId "
+      parameters:
+      - description: User ID to retrieve deployment for
+        in: path
+        name: user_id
+        required: true
+        content:
+          application/json:
+            examples:
+              Retrieve deployment information with valid user_id:
+                value:
+                  user_id: 60feb5b2ca94326929084e58
+      responses:
+        '200':
+          description: Deployment information requested by User ID
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/GetDeploymentByUserIdResponse"
+        '401':
+          description: Unauthorized - `10001` While passing expired bearer token in
+            header
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `10001` - TOKEN EXPIRED
+                    example: 10001
+                  message:
+                    type: string
+                    example: Token Expired
+        '404':
+          description: Not found - `300011` While passing invalid userId
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                    description: |
+                      Code type:
+                         * `300011` - INVALID USER ID
+                    example: 300011
+                  message:
+                    type: string
+                    example: User Doesn't Exist.
 components:
   schemas:
-    ApiResponse:
+    Primitive:
       type: object
+      required:
+      - deviceName
+      properties:
+        aggregationPrecision:
+          type: string
+        correlationStartDateTime:
+          type: string
+          format: date-time
+        deploymentId:
+          type: string
+          example: 5e84b0dab8dfa268b1180536
+        deviceDetails:
+          type: string
+        deviceName:
+          type: string
+          example: iOS
+        endDateTime:
+          type: string
+          format: date-time
+        isAggregated:
+          type: boolean
+        startDateTime:
+          type: string
+          format: date-time
+        submitterId:
+          type: string
+          example: 5e84b0dab8dfa268b1180536
+        tags:
+          type: object
+          properties: {}
+        tagsAuthorId:
+          type: string
+          example: 5e84b0dab8dfa268b1180536
+        type:
+          type: string
+          example: BloodPressure
+        version:
+          type: integer
+          example: 2
+    BloodPressurePrimitive:
+      allOf:
+      - "$ref": "#/components/schemas/Primitive"
+      - type: object
+        properties:
+          diastolicValue:
+            maximum: 130
+            minimum: 30
+            type: integer
+            example: 110
+          diastolicValueUnit:
+            type: string
+            default: mmHg
+          systolicValue:
+            maximum: 260
+            minimum: 60
+            type: integer
+            example: 70
+          systolicValueUnit:
+            type: string
+            default: mmHg
+          unitSi:
+            maxLength: 256
+            minLength: 1
+            type: string
+    BloodGlucosePrimitive:
+      allOf:
+      - "$ref": "#/components/schemas/Primitive"
+      - type: object
+        properties:
+          originalUnit:
+            type: string
+            example: mg/dL
+          originalValue:
+            type: number
+            format: float
+            example: 270.5
+          unitSi:
+            type: string
+          value:
+            maximum: 26
+            minimum: 1
+            type: number
+            format: float
+            example: 15.5
+          valueUnit:
+            type: string
+            default: mmol/L
+    QuestionnairePrimitive:
+      allOf:
+      - "$ref": "#/components/schemas/Primitive"
+      - type: object
+        properties:
+          answers:
+            type: array
+            items:
+              "$ref": "#/components/schemas/QuestionnaireAnswer"
+          appResult:
+            "$ref": "#/components/schemas/QuestionnaireAppResult"
+          isForManager:
+            type: boolean
+          questionnaireId:
+            type: string
+            example: 5e84b0dab8dfa268b1180536
+          questionnaireName:
+            type: string
+          skipped:
+            type: array
+            items:
+              "$ref": "#/components/schemas/QuestionnaireAnswer"
+          value:
+            type: number
+            format: float
+    QuestionnaireAnswer:
+      type: object
+      properties:
+        answerText:
+          type: string
+        answerValue:
+          type: object
+          properties: {}
+        format:
+          type: string
+          enum:
+          - NUMERIC
+          - TEXTCHOICE
+          - BOOLEAN
+          - DATE
+          - TEXT
+          - DURATION
+          - SCALE
+        id:
+          type: string
+        lowerBound:
+          type: integer
+        question:
+          type: string
+        questionId:
+          type: string
+          example: 5e84b0dab8dfa268b1180536
+        selectedChoices:
+          type: array
+          items:
+            type: string
+            example: 'Yes'
+        selectionCriteria:
+          type: string
+          enum:
+          - MULTIPLE
+          - SINGLE
+        upperBound:
+          type: integer
+    QuestionnaireAppResult:
+      type: object
+      properties:
+        appType:
+          type: string
+          enum:
+          - T_DISTRIBUTION
+          - GRADED_RESULT
+        values:
+          type: array
+          items:
+            "$ref": "#/components/schemas/QuestionnaireAppResultValue"
+    QuestionnaireAppResultValue:
+      type: object
+      properties:
+        label:
+          type: string
+        valueFloat:
+          type: number
+          format: float
+        valueType:
+          type: string
+          enum:
+          - VALUE_FLOAT
+          - STD_ERR_FLOAT
+    BMIPrimitive:
+      type: object
+      properties:
+        value:
+          type: number
+          format: float
+          example: 20.5
+        valueUnit:
+          type: string
+          default: kg/cm2
+    DDSPrimitive:
+      type: object
+      properties:
+        emotionalBurden:
+          maximum: 6
+          minimum: 1
+          type: number
+          format: float
+          example: 2.7
+        interpersonalDistress:
+          maximum: 6
+          minimum: 1
+          type: number
+          format: float
+          example: 2.1
+        physicianDistress:
+          maximum: 6
+          minimum: 1
+          type: number
+          format: float
+          example: 2.6
+        regimenDistress:
+          maximum: 6
+          minimum: 1
+          type: number
+          format: float
+          example: 2.2
+        totalDDS:
+          maximum: 6
+          minimum: 1
+          type: number
+          format: float
+          example: 2.5
+    JournalPrimitive:
+      type: object
+      properties:
+        value:
+          type: string
+          example: New note
+    PhotoPrimitive:
+      type: object
+      properties:
+        height:
+          type: number
+          example: 15.5
+        note:
+          type: string
+          example: Some note
+        s3Object:
+          "$ref": "#/components/schemas/S3Object"
+        s3Thumbnail:
+          "$ref": "#/components/schemas/S3Object"
+        width:
+          type: number
+          example: 15.5
+    S3Object:
+      type: object
+      properties:
+        bucket:
+          type: string
+        key:
+          type: string
+        region:
+          type: string
+    Error:
+      type: object
+      required:
+      - code
+      - message
       properties:
         code:
           type: integer
           format: int32
-        type:
-          type: string
         message:
           type: string
-    Cat:
-      description: A representation of a cat
-      allOf:
-        - $ref: '#/components/schemas/Pet'
-        - type: object
-          properties:
-            huntingSkill:
-              type: string
-              description: The measured skill for hunting
-              default: lazy
-              example: adventurous
-              enum:
-                - clueless
-                - lazy
-                - adventurous
-                - aggressive
-          required:
-            - huntingSkill
-    Category:
+    SignInRequest:
       type: object
       properties:
-        id:
-          description: Category ID
-          allOf:
-            - $ref: '#/components/schemas/Id'
-        name:
-          description: Category name
+        clientId:
           type: string
-          minLength: 1
-        sub:
-          description: Test Sub Category
-          type: object
-          properties:
-            prop1:
-              type: string
-              description: Dumb Property
-      xml:
-        name: Category
-    Dog:
-      description: A representation of a dog
-      allOf:
-        - $ref: '#/components/schemas/Pet'
-        - type: object
-          properties:
-            packSize:
-              type: integer
-              format: int32
-              description: The size of the pack the dog is from
-              default: 1
-              minimum: 1
-          required:
-            - packSize
-    HoneyBee:
-      description: A representation of a honey bee
-      allOf:
-        - $ref: '#/components/schemas/Pet'
-        - type: object
-          properties:
-            honeyPerDay:
-              type: number
-              description: Average amount of honey produced per day in ounces
-              example: 3.14
-              multipleOf: .01
-          required:
-            - honeyPerDay
-    Id:
-      type: integer
-      format: int64
-      readOnly: true
-    Order:
-      type: object
-      properties:
-        id:
-          description: Order ID
-          allOf:
-            - $ref: '#/components/schemas/Id'
-        petId:
-          description: Pet ID
-          allOf:
-            - $ref: '#/components/schemas/Id'
-        quantity:
-          type: integer
-          format: int32
-          minimum: 1
-          default: 1
-        shipDate:
-          description: Estimated ship date
+        confirmationCode:
           type: string
-          format: date-time
-        status:
+        deviceAgent:
           type: string
-          description: Order Status
-          enum:
-            - placed
-            - approved
-            - delivered
-        complete:
-          description: Indicates whenever order was completed or not
-          type: boolean
-          default: false
-          readOnly: true
-        requestId:
-          description: Unique Request Id
-          type: string
-          writeOnly: true
-      xml:
-        name: Order
-    Pet:
-      type: object
-      required:
-        - name
-        - photoUrls
-      discriminator:
-        propertyName: petType
-        mapping:
-          cat: '#/components/schemas/Cat'
-          dog: '#/components/schemas/Dog'
-          bee: '#/components/schemas/HoneyBee'
-      properties:
-        id:
-          externalDocs:
-            description: "Find more info here"
-            url: "https://example.com"
-          description: Pet ID
-          allOf:
-            - $ref: '#/components/schemas/Id'
-        category:
-          description: Categories this pet belongs to
-          allOf:
-            - $ref: '#/components/schemas/Category'
-        name:
-          description: The name given to a pet
-          type: string
-          example: Guru
-        photoUrls:
-          description: The list of URL to a cute photos featuring pet
-          type: array
-          maxItems: 20
-          xml:
-            name: photoUrl
-            wrapped: true
-          items:
-            type: string
-            format: url
-        friend:
-          allOf:
-            - $ref: '#/components/schemas/Pet'
-        tags:
-          description: Tags attached to the pet
-          type: array
-          minItems: 1
-          xml:
-            name: tag
-            wrapped: true
-          items:
-            $ref: '#/components/schemas/Tag'
-        status:
-          type: string
-          description: Pet status in the store
-          enum:
-            - available
-            - pending
-            - sold
-        petType:
-          description: Type of a pet
-          type: string
-      xml:
-        name: Pet
-    Tag:
-      type: object
-      properties:
-        id:
-          description: Tag ID
-          allOf:
-            - $ref: '#/components/schemas/Id'
-        name:
-          description: Tag name
-          type: string
-          minLength: 1
-      xml:
-        name: Tag
-    User:
-      type: object
-      properties:
-        id:
-          $ref: '#/components/schemas/Id'
-        pet:
-          oneOf:
-            - $ref: '#/components/schemas/Pet'
-            - $ref: '#/components/schemas/Tag'
-        username:
-          description: User supplied username
-          type: string
-          minLength: 4
-          example: John78
-        firstName:
-          description: User first name
-          type: string
-          minLength: 1
-          example: John
-        lastName:
-          description: User last name
-          type: string
-          minLength: 1
-          example: Smith
         email:
-          description: User email address
           type: string
-          format: email
-          example: john.smith@example.com
+        projectId:
+          type: string
         password:
           type: string
-          description: >-
-            User password, MUST contain a mix of upper and lower case letters,
-            as well as digits
-          format: password
-          minLength: 8
-          pattern: '/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/'
-          example: drowssaP123
-        phone:
-          description: User phone number in international format
+        method:
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          type: integer
+          description: |
+            method:
+               * `0` - Login with Email
+               * `1` - Login with Phone number
+               * `2` - Login with Email and password
+               * `3` - Login with two factor auth
+    SignInResponse:
+      type: object
+      properties:
+        authToken:
           type: string
-          pattern: '/^\+(?:[0-9]-?){6,14}[0-9]$/'
-          example: +1-202-555-0192
-        userStatus:
-          description: User status
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg3NTU4MDksIm5iZiI6MTYyODc1NTgwOSwianRpIjoiZGY5ODFkODUtNDMwNy00NGQ2LWI5NmEtMTNjYjQ2ZTdhOTkzIiwiZXhwIjoxNjI4NzU2NzA5LCJpZGVudGl0eSI6IjYxMTRjOTE0YmFmMGFlMTJhMDQ2YmY1NiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsImF1ZCI6InVybjptcCIsInVzZXJDbGFpbXMiOnsicHJvamVjdElkIjoicDEiLCJjbGllbnRJZCI6ImMxIiwibWV0aG9kIjoyLCJhdXRoU3RhZ2UiOjB9fQ.L1i-9k7KSd1Bh8UQYKJiy53lwpgX7bCMBrSrRofALnA
+        authTokenExpiresIn:
+          type: string
+          example: '900'
+        expiresIn:
+          type: string
+          example: '3887999.603985'
+        refreshToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg3NTU4MDksIm5iZiI6MTYyODc1NTgwOSwianRpIjoiNmY4MTNhMTktZjE5YS00MDY0LTkzMGUtYWU1NTIyNzdlOTM3IiwiZXhwIjoxNjMyNjQzODA5LCJpZGVudGl0eSI6IjYxMTRjOTE0YmFmMGFlMTJhMDQ2YmY1NiIsInR5cGUiOiJyZWZyZXNoIiwiYXVkIjoidXJuOm1wIiwidXNlckNsYWltcyI6eyJwcm9qZWN0SWQiOiJwMSIsImNsaWVudElkIjoiYzEiLCJtZXRob2QiOjIsImF1dGhTdGFnZSI6MH19.Am5jLm00bILE4bUvZLwLscTGQ74RPdf3Tl2SNHiWurE
+        uid:
+          type: string
+          example: 6114c914baf0ae12a046bf56
+    SignUpRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+          description: |
+            Client id type:
+               * `c1` - iOS client
+               * `c2` - Android client
+               * `c3` - Web client
+        projectId:
+          type: string
+          description: |
+            Project id type:
+               * `p1` - This projectId would be used by all the users
+        method:
           type: integer
           format: int32
-      xml:
-        name: User
-  requestBodies:
-    Pet:
-      content:
-        application/json:
-          schema:
-            allOf:
-              - description: My Pet
-                title: Pettie
-              - $ref: '#/components/schemas/Pet'
-        application/xml:
-          schema:
-            type: 'object'
-            properties:
-              name:
-                type: string
-                description: hooray
-      description: Pet object that needs to be added to the store
-      required: true
-    UserArray:
-      content:
-        application/json:
-          schema:
-            type: array
-            items:
-              $ref: '#/components/schemas/User'
-      description: List of user object
-      required: true
-  securitySchemes:
-    petstore_auth:
-      description: |
-        Get access to data while protecting your account credentials.
-        OAuth2 is also a safer and more secure way to give you access.
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: 'http://petstore.swagger.io/api/oauth/dialog'
-          scopes:
-            'write:pets': modify pets in your account
-            'read:pets': read your pets
-    api_key:
-      description: >
-        For this sample, you can use the api key `special-key` to test the
-        authorization filters.
-      type: apiKey
-      name: api_key
-      in: header
-  examples:
-    Order:
-      value:
-        quantity: 1
-        shipDate: '2018-10-19T16:46:45Z'
-        status: placed
-        complete: false
-x-webhooks:
-  newPet:
-    post:
-      summary: New pet
-      description: Information about a new pet in the systems
-      operationId: newPet
-      tags:
-        - pet
-      requestBody:
+          description: |
+            Method type:
+               * `0` - Email
+               * `1` - PhoneNumber
+               * `2` - Email and Password
+               * `3` - Two factor authentication
+        timezone:
+          type: string
+          description: 'timezone should be in valid format: `Europe/London`
+
+            '
+        userAttributes:
+          type: object
+          properties:
+            familyName:
+              type: string
+            givenName:
+              type: string
+            dob:
+              type: string
+            gender:
+              type: string
+        validationData:
+          type: object
+          properties:
+            activationCode:
+              type: string
+              description: 'Valid activationCode should be passed
+
+                '
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com`
+
+            '
+        phoneNumber:
+          type: string
+          description: 'phoneNumber should contain the country code as well, for ex:
+            `+911234567890`
+
+            '
+        password:
+          type: string
+    SignUpResponse:
+      type: object
+      required:
+      - uid
+      properties:
+        uid:
+          type: string
+          example: 60ee9353be7f884dfcb4e53c
+    CheckAuthAttributeRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+          description: |
+            Client id type:
+               * `c1` - iOS client
+               * `c2` - Android client
+               * `c3` - Web client
+        projectId:
+          type: string
+          description: |
+            Project id type:
+               * `p1` - This projectId would be used by all the users
+        tokenType:
+          type: integer
+          format: int32
+          description: |
+            Token type:
+               * `0` - Access type
+               * `1` - Invitation type
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com`
+
+            '
+        authToken:
+          type: string
+          description: 'Valid authToken should be passed
+
+            '
+        phoneNumber:
+          type: string
+          description: 'phoneNumber should contain the country code as well, for ex:
+            `+911234567890`
+
+            '
+    CheckAuthAttributeResponse:
+      type: object
+      properties:
+        eligibleForMFA:
+          type: boolean
+          example: false
+        email:
+          type: string
+          example: pratik.patel+12301208@huma.com
+        emailVerified:
+          type: boolean
+          example: true
+        mfaEnabled:
+          type: boolean
+          example: false
+        passwordSet:
+          type: boolean
+          example: false
+        phoneNumber:
+          type: string
+          example: "+917405522524"
+        phoneNumberVerified:
+          type: boolean
+          example: true
+    SendVerificationTokenRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+          description: |
+            Client id type:
+               * `c1` - iOS client
+               * `c2` - Android client
+               * `c3` - Web client
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com`
+
+            '
+        projectId:
+          type: string
+        phoneNumber:
+          type: string
+          description: 'phoneNumber should contain the country code as well, for ex:
+            `+911234567890`
+
+            '
+        language:
+          type: string
+        refreshToken:
+          type: string
+          description: refreshToken is mandatory when this API is being used from
+            the Web
+        method:
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          type: integer
+          description: |
+            method type:
+               * `0` - Email
+               * `1` - Phone number
+               * `2` - Email and password
+               * `3` - Two factor authentication
+    SendVerificationTokenResponse:
+      type: object
+      required:
+      - ok
+      properties:
+        ok:
+          type: boolean
+          example: true
+        to:
+          type: string
+          example: "**********523"
+    AuthProfileRequest:
+      type: object
+      required:
+      - authToken
+      properties:
+        authToken:
+          type: string
+          description: 'Valid authToken should be passed
+
+            '
+    AuthProfileResponse:
+      type: object
+      required:
+      - uid
+      properties:
+        uid:
+          type: string
+          example: 6016a26eb2d2e6b0bdb3f279
+    RefreshTokenRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com`
+
+            '
+        password:
+          type: string
+        refreshToken:
+          type: string
+          description: refreshToken should be valid for the specific user
+    RefreshTokenResponse:
+      type: object
+      properties:
+        authToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg3NTg5NTMsIm5iZiI6MTYyODc1ODk1MywianRpIjoiOTllODdhYzMtNGI1YS00NDFjLWJhMGYtMzcxZGQwOTY2ZTk1IiwiZXhwIjoxNjI4NzU5ODUzLCJpZGVudGl0eSI6IjYwZGVhMWM4OTAxNjk4NzFiODc5ODAxNyIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsImF1ZCI6InVybjptcCIsInVzZXJDbGFpbXMiOnsicHJvamVjdElkIjoicDEiLCJjbGllbnRJZCI6ImMxIiwibWV0aG9kIjozLCJhdXRoU3RhZ2UiOjEsImVtYWlsVmVyaWZpZWQiOnRydWV9fQ.9kW6LZ-kSSn41DKSZC8EmYKZ6HD_Yp0cElRPfcnmQR0
+        expiresIn:
+          type: integer
+          example: 900
+        refreshToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg3NTg3NDcsIm5iZiI6MTYyODc1ODc0NywianRpIjoiNDA3NTFhYzUtYjBlNS00NDY1LWI3OWUtYjJkNjUwOWViYjBjIiwiZXhwIjoxNjMyNjQ2NzQ3LCJpZGVudGl0eSI6IjYwZGVhMWM4OTAxNjk4NzFiODc5ODAxNyIsInR5cGUiOiJyZWZyZXNoIiwiYXVkIjoidXJuOm1wIiwidXNlckNsYWltcyI6eyJwcm9qZWN0SWQiOiJwMSIsImNsaWVudElkIjoiYzEiLCJtZXRob2QiOjMsImF1dGhTdGFnZSI6MX19.YUvujHCxUfJZNnt5lgTRUeGIf9yqvzOTRqJMtfjdkls
+        refreshTokenExpiresIn:
+          type: string
+          example: '3882041.411353'
+    SignOutRequest:
+      type: object
+      required:
+      - userId
+      properties:
+        userId:
+          type: string
+          example: 60ee9353be7f884dfcb4e53c
+          description: 'Sign out the user by userId
+
+            '
+    SignOutResponse:
+      type: object
+      required:
+      - id
+      properties:
+        id:
+          type: string
+          example: 60f666769c8cdc07f816100a
+    SetAuthAttributesRequest:
+      type: object
+      required:
+      - authToken
+      - clientId
+      - projectId
+      properties:
+        clientId:
+          type: string
+          description: |
+            Client id type:
+              * `c1` - iOS client
+              * `c2` - Android client
+              * `c3` - Web client
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com`
+
+            '
+        projectId:
+          type: string
+        phoneNumber:
+          type: string
+          description: 'phoneNumber should contain the country code as well, for ex:
+            `+911234567890`
+
+            '
+        authToken:
+          type: string
+          description: 'set auth attributes for the specific user by specified `authToken`
+
+            '
+        confirmationToken:
+          type: string
+        password:
+          type: string
+        mfaEnabled:
+          type: boolean
+          description: |
+            * `true` - eligible for MFA
+            * `false` - not eligible for MFA
+    SetAuthAttributesResponse:
+      type: object
+      required:
+      - uid
+      properties:
+        uid:
+          type: string
+          example: 6114c737e1ae5203a3060223
+    ConfirmationRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+          description: |
+            Client id type:
+               * `c1` - iOS client
+               * `c2` - Android client
+               * `c3` - Web client
+        projectId:
+          type: string
+        confirmationCode:
+          type: string
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com` for the
+            new user
+
+            '
+        phoneNumber:
+          type: string
+          description: 'phoneNumber should contain the country code as well, for ex:
+            `+911234567890` for the new user
+
+            '
+    ConfirmationResponse:
+      type: object
+      properties:
+        authToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg3NTU3ODksIm5iZiI6MTYyODc1NTc4OSwianRpIjoiMDBmNmZmMzQtMmY2Zi00YjAzLWIyYmQtODIxNmFkOTRkZjAzIiwiZXhwIjoxNjI4NzU2Njg5LCJpZGVudGl0eSI6IjYxMTRjOTE0YmFmMGFlMTJhMDQ2YmY1NiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsImF1ZCI6InVybjptcCIsInVzZXJDbGFpbXMiOnsicHJvamVjdElkIjoicDEiLCJjbGllbnRJZCI6ImMxIiwibWV0aG9kIjoyLCJhdXRoU3RhZ2UiOjB9fQ.muSm51dfTZP0Ti-lJU7tOkV2nRMdaSqNfZLIC0CY8g4
+        authTokenExpiresIn:
+          type: string
+          example: '900'
+        expiresIn:
+          type: string
+          example: '3882041.411353'
+        refreshToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2Mjg3NTU3ODksIm5iZiI6MTYyODc1NTc4OSwianRpIjoiOGM5NjM2OTQtZWNmNy00MjkwLTk0MTYtYWNiZjZjMGEzNGM4IiwiZXhwIjoxNjMyNjQzNzg5LCJpZGVudGl0eSI6IjYxMTRjOTE0YmFmMGFlMTJhMDQ2YmY1NiIsInR5cGUiOiJyZWZyZXNoIiwiYXVkIjoidXJuOm1wIiwidXNlckNsYWltcyI6eyJwcm9qZWN0SWQiOiJwMSIsImNsaWVudElkIjoiYzEiLCJtZXRob2QiOjIsImF1dGhTdGFnZSI6MH19.wKl7K6CvcMiD83VPqf5Nz9s8s-39JNnm6CTrqJq6wNc
+        uid:
+          type: string
+          example: 6114c914baf0ae12a046bf56
+    ResetPasswordRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+        projectId:
+          type: string
+        code:
+          type: string
+        email:
+          type: string
+        newPassword:
+          type: string
+    ResetPasswordResponse:
+      type: object
+      required:
+      - ok
+      properties:
+        ok:
+          type: boolean
+          example: true
+    GenerateAuthTokenResponse:
+      type: object
+      properties:
+        authId:
+          type: string
+          example: 6016a26eb2d2e6b0bdb3f279.1dcff68daf9bf1d5f1e04666
+        authKey:
+          type: string
+          example: 81f2422265848092c352bc87fb22230a57616028a8d8a61e95b645f7f6fe4ad6
+    RequestPasswordResetRequest:
+      type: object
+      properties:
+        clientId:
+          type: string
+          description: |
+            Client id type:
+               * `c1` - iOS client
+               * `c2` - Android client
+               * `c3` - Web client
+        projectId:
+          type: string
+          description: |
+            Project id type:
+               * `p1` - platform-play/openapi/v1beta/resources/auth/requestPasswordReset/requestPasswordResetRequest.yaml
+        email:
+          type: string
+          description: 'email should be in valid format: `test@example.com`
+
+            '
+        language:
+          type: string
+          description: 'language should be in valid format: `en`
+
+            '
+    RequestPasswordResetResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+          example: true
+    ExportRequest:
+      type: object
+      properties:
+        deIdentified:
+          type: boolean
+          default: false
+          description: |
+            Identified information type:
+               * `true` - excluding identified information
+               * `false` - including identified information
+        format:
+          type: string
+          enum:
+          - JSON
+          - CSV
+          - JSON_CSV
+          default: JSON
+          description: Exported files format
+        fromDate:
+          type: string
+          format: yyyy-mm-dd
+          description: Export data starting date `fromDate`
+        toDate:
+          type: string
+          format: yyyy-mm-dd
+          description: Export data ending date `toDate`
+        deploymentId:
+          type: string
+          description: Export data for specific `deploymentId`
+        deploymentIds:
+          type: array
+          items:
+            type: string
+          description: Export data from multiple deployments by its `deploymentIds`
+        userIds:
+          type: array
+          items:
+            type: string
+          description: Export data only for specific users specified by thier `id`
+        moduleNames:
+          type: array
+          description: Export only specific modules specific by module names
+          items:
+            type: string
+        excludedModuleNames:
+          type: array
+          description: Export all modules but not these
+          items:
+            type: string
+        includeUserMetaData:
+          type: boolean
+          default: true
+          description: |
+            User's meta data type:
+               * `true` - excluding user's meta data
+               * `false` - including user's meta data
+        includeNullFields:
+          type: boolean
+          default: true
+          description: |
+            * `true` - Include fields which have null values
+            * `false` - Remove fields which have null values
+        useFlatStructure:
+          type: boolean
+          description: |
+            * `true` - Will use flat structure.
+            * `false` - Will use hierarchical structure.
+          default: false
+        view:
+          type: string
+          default: USER
+          description: |
+            Export the data according to the selected view.
+              * `"USER"` - Per user (user data will be first on the CSV/JSON)
+              * `"DAY"` - Per date
+              * `"MODULE_CONFIG"` - Per module
+        binaryOption:
+          type: string
+          default: BINARY_INCLUDE
+          description: |
+            Binary options type:
+              * `"BINARY_INCLUDE"` - Include primitive's binaries
+              * `"SIGNED_URL"` - Generate signed urls to download primitive's binaries
+              * `"NONE"` - Keep as it is
+        layer:
+          type: string
+          default: NESTED
+          description: |
+            Export files based on below layer type:
+              * `"NESTED"` - Export files will be in the separate folders based on the view
+              * `"FLAT"` - Export files will be in one folder based on the view
+        quantity:
+          type: string
+          default: MULTIPLE
+          description: |
+            Export files based on below quantity type:
+              * `"MULTIPLE"` - Exported files will be in the separate files according to the module/day/user per file
+              * `"SINGLE"` - Exported files should be in one file (CSV does not support single file option)
+        questionnairePerName:
+          type: boolean
+          default: false
+          description: |
+            * `true` - Split questionnaire primitives into separate files as per their name
+            * `false` - Can not split questionnaire primitives into separate files as per their name
+        splitMultipleChoice:
+          type: boolean
+          default: false
+          description: |
+            * `true` - Split multiple questionnaire choices based on a module config
+            * `false` - Can not split multiple questionnaire choices based on a module config
+        splitSymptoms:
+          type: boolean
+          default: false
+          description: |
+            * `true` - Split symptoms in CSV format
+            * `false` - Can not split symptoms in CSV format
+        translatePrimitives:
+          type: boolean
+          default: false
+          description: |
+            * `true` - Translate primitive values into keywords based on provided CSV in export deployment config
+            * `false` - Can not translate primitive values into keywords based on provided CSV in export deployment config
+        singleFileResponse:
+          type: boolean
+          default: false
+          description: |
+            * `true` - Get response into single file format (CSV/JSON)
+            * `false` - Get response into multiple files
+        translationShortCodesObjectFormat:
+          type: string
+          enum:
+          - JSON
+          - CSV
+          - JSON_CSV
+          default: JSON
+          description: Translation Short Codes Object files format
+        doTranslate:
+          type: boolean
+        baseProfile:
+          type: string
+          description: Export data for created profile
+        organizationId:
+          type: string
+          description: Export data for specific organization by `organizationId`
+    ExportResponse:
+      type: object
+      additionalProperties:
+        type: object
+        additionalProperties:
+          type: array
+          items:
+            anyOf:
+            - "$ref": "#/components/schemas/BloodPressurePrimitive"
+            - "$ref": "#/components/schemas/BloodGlucosePrimitive"
+            - "$ref": "#/components/schemas/QuestionnairePrimitive"
+            - "$ref": "#/components/schemas/JournalPrimitive"
+            - "$ref": "#/components/schemas/PhotoPrimitive"
+            - "$ref": "#/components/schemas/BMIPrimitive"
+            - "$ref": "#/components/schemas/DDSPrimitive"
+      example:
+        BloodPressure:
+          BloodPressure:
+          - id: 0a4bb54aa61b9130dc60f0e81f85c45c3a7649c23e649a0559382784c3377f87
+            userId: 7d7f29bc7bf67f9cd931350b85cb8650d9295248ab5986710e1e2e5d03d5bc71
+            moduleId: BloodPressure
+            moduleConfigId: 5f7258e729e61eb9f9b8397a
+            deploymentId: 5f72588029e61eb9f9b83979
+            version: 0
+            deviceName: Android
+            isAggregated: false
+            startDateTime: '2021-07-15T08:03:31.000000Z'
+            createDateTime: '2021-07-15T08:03:33.921000Z'
+            submitterId: 7d7f29bc7bf67f9cd931350b85cb8650d9295248ab5986710e1e2e5d03d5bc71
+            client:
+              product: Huma-Demo
+              version: 1.10.0
+              software_name: Android
+              software_version: 25 (7.1.1)
+              bundle_id: com.huma.humaapp.demo
+              build: '8508'
+              hardware: motorola Moto E (4) Plus
+            server:
+              hostUrl: demoapi.humaapp.io
+              server: 1.10.0
+              api: V1
+            diastolicValue: 68
+            systolicValue: 120
+            diastolicValueUnit: mmHg
+            systolicValueUnit: mmHg
+            _cls: BloodPressure
+            user:
+              id: 7d7f29bc7bf67f9cd931350b85cb8650d9295248ab5986710e1e2e5d03d5bc71
+              updateDateTime: '2021-10-22T12:01:28.023000Z'
+              createDateTime: '2021-07-14T14:38:05.185000Z'
+              height: 168
+              extraCustomFields: {}
+              timezone: Europe/London
+              enrollmentId: 18
+              language: en
+              stats:
+                taskCompliance: {}
+              consent:
+                id: c7a71c9d389d5843849b69b0051bfec26bdf9ee98eb231aa11234c5c00e27c49
+                userId: 631dcb9cadeb648a38997466b180ad6af4e962459f9523c39bbe0fd0d37a992b
+                consentId: 5f7258f329e61eb9f9b8397e
+                revision: 4
+                sharingOption: 0
+                createDateTime: '2021-07-14T15:00:55.389000Z'
+                agreement: true
+                deploymentId: 5f72588029e61eb9f9b83979
+    CreateExportProfileRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the export profile
+        deploymentId:
+          type: string
+          description: Export data for specific `deploymentId`
+        organizationId:
+          type: string
+          description: Export data for specific organization by `organizationId`
+        deploymentIds:
+          type: array
+          items:
+            type: string
+          description: Export data from multiple deployments by its `deploymentIds`
         content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Pet"
-      responses:
-        "200":
-          description: Return a 200 status to indicate that the data was received successfully
+          type: object
+          properties:
+            deIdentified:
+              type: boolean
+              description: |
+                Identified information type:
+                   * `true` - excluding identified information
+                   * `false` - including identified information
+            format:
+              type: string
+              enum:
+              - JSON
+              - CSV
+              - JSON_CSV
+              default: JSON
+              description: Exported files format
+            fromDate:
+              type: string
+              format: yyyy-mm-dd
+              description: Export data starting date `fromDate`
+            toDate:
+              type: string
+              format: yyyy-mm-dd
+              description: Export data ending date `toDate`
+            exportBucket:
+              type: string
+              description: Export data for specific `bucket`
+            userIds:
+              type: array
+              items:
+                type: string
+              description: Export data only for specific users specified by thier
+                `id`
+            moduleNames:
+              type: array
+              description: Export only specific modules specific by module names
+              items:
+                type: string
+            excludedModuleNames:
+              type: array
+              description: Export all modules but not these
+              items:
+                type: string
+            includeFields:
+              type: array
+              description: If these fields are set, then only they will be part of
+                export data
+              items:
+                type: string
+            excludeFields:
+              type: array
+              description: Fields which will always removed from export data
+              items:
+                type: string
+            deIdentifyHashFields:
+              type: array
+              description: Fields which will be hashed when exporting with `"de-identify"`
+                option
+              items:
+                type: string
+            deIdentifyRemoveFields:
+              type: array
+              description: Fields which will be removed when exporting with `"de-identify"`
+                option
+              items:
+                type: string
+            includeUserMetaData:
+              type: boolean
+              default: true
+              description: |
+                User's meta data type:
+                    * `true` - excluding user's meta data
+                    * `false` - including user's meta data
+            includeNullFields:
+              type: boolean
+              default: true
+              description: |
+                * `true` - Include fields which have null values
+                * `false` - Remove fields which have null values
+            useFlatStructure:
+              type: boolean
+              description: |
+                * `true` - Will use flat structure.
+                * `false` - Will use hierarchical structure.
+              default: false
+            view:
+              type: string
+              default: USER
+              description: |
+                Export the data according to the selected view.
+                  * `"USER"` - Per user (user data will be first on the CSV/JSON)
+                  * `"DAY"` - Per date
+                  * `"MODULE_CONFIG"` - Per module
+            binaryOption:
+              type: string
+              default: BINARY_INCLUDE
+              description: |
+                Binary options type:
+                  * `"BINARY_INCLUDE"` - Include primitive's binaries
+                  * `"SIGNED_URL"` - Generate signed urls to download primitive's binaries
+                  * `"NONE"` - Keep as it is
+            layer:
+              type: string
+              default: NESTED
+              description: |
+                Export files based on below layer type:
+                  * `"NESTED"` - Export files will be in the separate folders based on the view
+                  * `"FLAT"` - Export files will be in one folder based on the view
+            quantity:
+              type: string
+              default: MULTIPLE
+              description: |
+                Export files based on below quantity type:
+                  * `"MULTIPLE"` - Exported files will be in the separate files according to the module/day/user per file
+                  * `"SINGLE"` - Exported files should be in one file (CSV does not support single file option)
+            questionnairePerName:
+              type: boolean
+              default: false
+              description: |
+                * `true` - Split questionnaire primitives into separate files as per their name
+                * `false` - Can not split questionnaire primitives into separate files as per their name
+            splitMultipleChoice:
+              type: boolean
+              default: false
+              description: |
+                * `true` - Split multiple questionnaire choices based on a module config
+                * `false` - Can not split multiple questionnaire choices based on a module config
+            splitSymptoms:
+              type: boolean
+              default: false
+              description: |
+                * `true` - Split symptoms in CSV format
+                * `false` - Can not split symptoms in CSV format
+            translatePrimitives:
+              type: boolean
+              default: false
+              description: |
+                * `true` - Translate primitive values into keywords based on provided csv in export deployment config
+                * `false` - Can not translate primitive values into keywords based on provided csv in export deployment config
+            singleFileResponse:
+              type: boolean
+              default: false
+              description: |
+                * `true` - Get response into single file format (CSV/JSON)
+                * `false` - Get response into multiple files
+            translationShortCodesObjectFormat:
+              type: string
+              enum:
+              - JSON
+              - CSV
+              - JSON_CSV
+              default: JSON
+              description: Translation Short Codes Object files format
+    CreateExportProfileResponse:
+      type: object
+      required:
+      - id
+      properties:
+        id:
+          type: string
+          example: 60fa5ce3ee36446d38825f11
+    RetrieveProfilesRequest:
+      type: object
+      properties:
+        limit:
+          type: integer
+          example: 10
+        modules:
+          type: array
+          items:
+            type: string
+            example: Journal
+        nameContains:
+          type: string
+          example: test
+        patientDataOnly:
+          description: To show only patient data
+          type: boolean
+        patientIdentifiersOnly:
+          description: To show only patient identifiers
+          type: boolean
+        role:
+          type: string
+          enum:
+          - User
+          - Manager
+          - Contributor
+          example: User
+        skip:
+          type: integer
+          example: 0
+    RetrieveProfilesResponse:
+      type: array
+      items:
+        "$ref": "#/components/schemas/UserProfileObject"
+    UserProfileObject:
+      type: object
+      properties:
+        additionalContactDetails:
+          type: object
+          properties:
+            emergencyContactName:
+              type: string
+              example: Test
+            emergencyContactNumber:
+              type: string
+              example: "+37529 775-88-44"
+            regularContactName:
+              type: string
+              example: Test
+            regularContactNumber:
+              type: string
+              example: "+37529 887-63-55"
+        assingedManagers:
+          type: array
+          items:
+            type: string
+          example:
+          - 5f9c321a7e985e9dd3187915
+          - 5f8d4da038077f776c6e4afd
+          - 5fae8c4fc7536835f33c0db7
+        bloodGroup:
+          type: string
+          example: AB_POSITIVE
+        createDateTime:
+          type: string
+          example: '2020-07-29T21:06:44.038000Z'
+        dateOfBirth:
+          type: string
+          example: '1976-03-15'
+        email:
+          type: string
+          example: alexander.burtsev+13@huma.com
+        enrollmentId:
+          type: integer
+          example: 84
+        ethnicity:
+          type: string
+          example: WHITE
+        extraCustomFields:
+          type: object
+          properties:
+            someCustomField:
+              type: string
+              example: '654212'
+        familyName:
+          type: string
+          example: Test
+        finishedOnboarding:
+          type: boolean
+          example: true
+        gender:
+          type: string
+          example: MALE
+        givenName:
+          type: string
+          example: Test
+        height:
+          type: integer
+          example: 180
+        id:
+          type: string
+          example: 5f897b0f38077f776c6e4621
+        language:
+          type: string
+          example: en
+        latestModuleResults:
+          type: object
+          properties:
+            Journal:
+              type: object
+              properties:
+                createDateTime:
+                  type: string
+                  example: '2021-02-06T22:56:44.455000Z'
+                deploymentId:
+                  type: string
+                  example: 5f21e1d605f94e9073a8c964
+                deviceName:
+                  type: string
+                  example: Android
+                id:
+                  type: string
+                  example: 601f1eac2c218e03608df42b
+                isAggregated:
+                  type: boolean
+                  example: false
+                moduleConfigId:
+                  type: string
+                  example: 5f68a279fdd2ba434096d806
+                moduleId:
+                  type: string
+                  example: Journal
+                startDateTime:
+                  type: string
+                  example: '2021-02-06T22:56:42.651000Z'
+                submitterId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                userId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                value:
+                  type: string
+                  example: "test journal to write something \n\ntest journal to write
+                    something\n"
+                version:
+                  type: integer
+                  example: 0
+            Weight:
+              type: object
+              properties:
+                createDateTime:
+                  type: string
+                  example: 22021-04-20T07:26:28.289000Z
+                deploymentId:
+                  type: string
+                  example: 5f21e1d605f94e9073a8c964
+                deviceName:
+                  type: string
+                  example: Android
+                id:
+                  type: string
+                  example: 607e822430110a59eff209ae
+                isAggregated:
+                  type: boolean
+                  example: false
+                moduleConfigId:
+                  type: string
+                  example: 5f21e1e272760aedcd9ada98
+                moduleId:
+                  type: string
+                  example: Weight
+                originalUnit:
+                  type: string
+                  example: St and lbs
+                originalValue:
+                  type: number
+                  format: float
+                  example: 16.285714285714285
+                startDateTime:
+                  type: string
+                  example: '2021-04-20T07:26:28.000000Z'
+                submitterId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                userId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                value:
+                  type: number
+                  format: float
+                  example: 103.41900857142856
+                valueUnit:
+                  type: string
+                  example: kg
+                version:
+                  type: integer
+                  example: 1
+            Photo:
+              type: object
+              properties:
+                createDateTime:
+                  type: string
+                  example: '2020-12-10T16:32:39.120000Z'
+                deploymentId:
+                  type: string
+                  example: 5f21e1d605f94e9073a8c964
+                deviceName:
+                  type: string
+                  example: Android
+                id:
+                  type: string
+                  example: 5fd24da78b51bd583092b1eb
+                isAggregated:
+                  type: boolean
+                  example: false
+                moduleConfigId:
+                  type: string
+                  example: 5f68a27cfdd2ba434096d807
+                moduleId:
+                  type: string
+                  example: Photo
+                note:
+                  type: string
+                  example: Landscape
+                s3Object:
+                  type: object
+                  properties:
+                    bucket:
+                      type: string
+                      example: hu-pp-qa-app-bucket
+                    key:
+                      type: string
+                      example: user/5f897b0f38077f776c6e4621/Photo/A63C3579-EEA7-47C8-A3B5-12281DC65138.jpeg
+                    region:
+                      type: string
+                      example: eu
+                s3Thumbnail:
+                  type: object
+                  properties:
+                    bucket:
+                      type: string
+                      example: hu-pp-qa-app-bucket
+                    key:
+                      type: string
+                      example: user/5f897b0f38077f776c6e4621/Photo/A63C3579-EEA7-47C8-A3B5-12281DC65138-thumbnail.jpeg
+                    region:
+                      type: string
+                      example: eu
+                startDateTime:
+                  type: string
+                  example: '2020-11-17T09:17:55.857000Z'
+                submitterId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                userId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                version:
+                  type: integer
+                  example: 0
+            Step:
+              type: object
+              properties:
+                createDateTime:
+                  type: string
+                  example: '2021-06-23T06:50:48.734000Z'
+                deploymentId:
+                  type: string
+                  example: 5f21e1d605f94e9073a8c964
+                deviceName:
+                  type: string
+                  example: Android
+                id:
+                  type: string
+                  example: 60d2d9c8523d23c4459f5526
+                isAggregated:
+                  type: boolean
+                  example: false
+                moduleConfigId:
+                  type: string
+                  example: 5f68a27fdfd88db0d7219638
+                moduleId:
+                  type: string
+                  example: Step
+                startDateTime:
+                  type: string
+                  example: '2021-06-16T09:00:00.000000Z'
+                submitterId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                userId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                value:
+                  type: integer
+                  example: 45
+                version:
+                  type: integer
+                  example: 0
+            Symptom:
+              type: object
+              properties:
+                complexValues:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        example: Persistent cough
+                      severity:
+                        type: integer
+                        example: 2
+                createDateTime:
+                  type: string
+                  example: '2021-02-09T08:45:05.445000Z'
+                deploymentId:
+                  type: string
+                  example: 5f21e1d605f94e9073a8c964
+                deviceName:
+                  type: string
+                  example: Android
+                id:
+                  type: string
+                  example: 60224b9122e70015099bed7a
+                isAggregated:
+                  type: boolean
+                  example: false
+                moduleConfigId:
+                  type: string
+                  example: 5f21e1e272760aedcd9ada97
+                moduleId:
+                  type: string
+                  example: Symptom
+                startDateTime:
+                  type: string
+                  example: '2021-02-09T08:45:05.038000Z'
+                submitterId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                userId:
+                  type: string
+                  example: 5f897b0f38077f776c6e4621
+                version:
+                  type: integer
+                  example: 0
+        nhsId:
+          type: string
+          example: '1203001203'
+        preferredUnits:
+          type: object
+          properties:
+            BloodGlucose:
+              type: string
+              example: mg/dL
+            Temperature:
+              type: string
+              example: oF
+            Weight:
+              type: string
+              example: St and lbs
+        ragThresholds:
+          type: object
+          properties:
+            5f21e1e205f94e9073a8c96a:
+              type: object
+              properties:
+                HeartRate:
+                  type: object
+                  properties:
+                    value:
+                      type: object
+                      properties:
+                        color:
+                          type: string
+                          example: "#CBEBF0"
+                        direction:
+                          type: string
+                          example: DECREASED
+            5f21e1e205f94e9073a8c96b:
+              type: object
+              properties:
+                Temperature:
+                  type: object
+                  properties:
+                    value:
+                      type: object
+                      properties:
+                        color:
+                          type: string
+                          example: "#CBEBF0"
+                        direction:
+                          type: string
+                          example: DECREASED
+        recentModuleResults:
+          type: object
+          properties:
+            5f21e1e205f94e9073a8c969:
+              type: array
+              items:
+                type: object
+                properties:
+                  Questionnaire:
+                    type: object
+                    properties:
+                      answers:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            answerText:
+                              type: string
+                              example: '78'
+                            question:
+                              type: string
+                              example: In the last month, how frequently did you complete
+                                your scheduled medication and supplements routine?
+                            questionId:
+                              type: string
+                              example: 7c50c7d5-6f4e-4c0b-aeaf-c266eafd056e
+                      createDateTime:
+                        type: string
+                        example: '2020-11-21T06:23:47.189000Z'
+                      deploymentId:
+                        type: string
+                        example: 5f21e1d605f94e9073a8c964
+                      deviceName:
+                        type: string
+                        example: Android
+                      id:
+                        type: string
+                        example: 5fb8b273e9d3e30f308edfed
+                      isAggregated:
+                        type: boolean
+                        example: false
+                      moduleConfigId:
+                        type: string
+                        example: 5f21e1e205f94e9073a8c969
+                      moduleId:
+                        type: string
+                        example: MedicationTracker
+                      questionnaireId:
+                        type: string
+                        example: 1e67dd23-d1e5-465f-95a0-ef1dadb15428
+                      questionnaireName:
+                        type: string
+                        example: Medication and Supplement Tracker
+                      startDateTime:
+                        type: string
+                        example: '2020-11-21T06:23:47.103000Z'
+                      submitterId:
+                        type: string
+                        example: 5f897b0f38077f776c6e4621
+                      userId:
+                        type: string
+                        example: 5f897b0f38077f776c6e4621
+                      value:
+                        type: integer
+                        example: 78
+                      version:
+                        type: integer
+                        example: 0
+        roles:
+          type: array
+          items:
+            type: object
+            properties:
+              resource:
+                type: string
+                example: deployment/5f21e1d605f94e9073a8c964
+              roleId:
+                type: string
+                example: User
+              userType:
+                type: string
+                example: User
+        stats:
+          type: object
+          properties:
+            taskCompliance:
+              type: object
+              properties:
+                current:
+                  type: integer
+                  example: 1
+                due:
+                  type: integer
+                  example: 0
+                total:
+                  type: integer
+                  example: 55
+                updateDateTime:
+                  type: string
+                  example: '2021-08-31T07:06:06.045000Z'
+        status:
+          type: object
+          properties:
+            5f21e1e205f94e9073a8c969:
+              type: object
+              properties:
+                Questionnaire:
+                  type: object
+                  properties:
+                    seen:
+                      type: boolean
+                      example: true
+        surgeryDateTime:
+          type: string
+          example: '2020-12-11'
+        tags:
+          type: object
+          properties:
+            continueMonitoring:
+              type: string
+              example: 'true'
+        tagsAuthorId:
+          type: string
+          example: 5f8d4da038077f776c6e4afd
+        timezone:
+          type: string
+          example: Europe/Minsk
+        updateDateTime:
+          type: string
+          example: '2021-08-31T07:06:06.045000Z'
+    DataOfUserProfileResponse:
+      "$ref": "#/components/schemas/UserProfileObject"
+    GetDeploymentByUserIdResponse:
+      type: object
+      properties:
+        color:
+          type: string
+          example: '0x007AFF'
+        consent:
+          type: object
+          properties:
+            createDateTime:
+              type: string
+              example: '2021-03-12T15:26:38.589000Z'
+            id:
+              type: string
+              example: 5eff308d1afbc05f76099f15
+            instituteFullName:
+              type: string
+            instituteTextDetails:
+              type: string
+            revision:
+              type: integer
+              example: 5
+            sections:
+              type: array
+              items:
+                anyOf:
+                - type: object
+                  properties:
+                    details:
+                      type: string
+                      example: We recognise the importance of processing and protecting
+                        your personal and health information responsibly and securely.
+                        For further information on how Huma process your personal
+                        information, please refer to <a href="https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma_App_Privacy_Notice_General_V1_2020.pdf">Privacy
+                        Policy</a>.
+                    title:
+                      type: string
+                      example: Your data
+                    type:
+                      type: string
+                      example: DATA_GATHERING
+                - type: object
+                  properties:
+                    options:
+                      type: array
+                      items:
+                        anyOf:
+                        - type: object
+                          properties:
+                            order:
+                              type: integer
+                              example: 0
+                            text:
+                              type: string
+                              example: I understand that Huma will process my personal
+                                health data, including health information, as described
+                                in the <a href="https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma_App_Privacy_Notice_General_V1_2020.pdf">Privacy
+                                Policy</a>.
+                            type:
+                              type: integer
+                              example: 0
+                        - type: object
+                          properties:
+                            order:
+                              type: integer
+                              example: 1
+                            text:
+                              type: string
+                              example: I agree to the <a href="https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma%20(Medopad)_EULA_May_2020.pdf">Terms
+                                & Conditions</a>
+                            type:
+                              type: integer
+                              example: 1
+                    title:
+                      type: string
+                      example: Agreement
+                    type:
+                      type: string
+                      example: AGREEMENT
+                - type: object
+                  properties:
+                    details:
+                      type: string
+                      example: As part of this programme, you may be contacted to
+                        provide feedback on your experiences either using the HUMA
+                        app or being part of the remote patient monitoring programme.
+                    title:
+                      type: string
+                      example: Feedback
+                    type:
+                      type: string
+                      example: FEEDBACK
+        consentNeeded:
+          type: boolean
+          example: true
+        createDateTime:
+          type: string
+          example: '2020-07-03T13:19:56.012000Z'
+        deploymentId:
+          type: string
+          example: 5eff307c1afbc05f76099f14
+        eConsentNeeded:
+          type: boolean
+          example: false
+        enrollmentCounter:
+          type: integer
+          example: 320
+        eulaUrl:
+          type: string
+          example: https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma%20(Medopad)_EULA_May_2020.pdf
+        features:
+          type: object
+          properties:
+            appMenu:
+              type: array
+              items:
+                type: string
+              example:
+              - CARE_PLAN
+              - KEY_ACTIONS
+              - LEARN
+              - PROFILE
+            appointment:
+              type: boolean
+              example: true
+            carePlanDailyAdherence:
+              type: boolean
+              example: true
+            healthDeviceIntegration:
+              type: boolean
+              example: true
+            offBoarding:
+              type: boolean
+              example: false
+            personalDocuments:
+              type: boolean
+              example: false
+            proxy:
+              type: boolean
+              example: false
+        icon:
+          type: object
+          properties:
+            bucket:
+              type: string
+              example: hu-pp-qa-app-bucket
+            key:
+              type: string
+              example: deployment/5eff307c1afbc05f76099f14/huma_logo.png
+            region:
+              type: string
+              example: eu
+        isOffBoarded:
+          type: boolean
+          example: false
+        keyActions:
+          type: array
+          items:
+            type: object
+            properties:
+              createDateTime:
+                type: string
+                example: '2020-07-29T20:54:48.849000Z'
+              deltaFromTriggerTime:
+                type: string
+                example: PT0M
+              description:
+                type: string
+                example: You have a new activity for the DeTAP study. Please complete
+                  as soon as you are able to.
+              durationFromTrigger:
+                type: string
+                example: P24W6D
+              durationIso:
+                type: string
+                example: P24WT10H0M
+              id:
+                type: string
+                example: 5f21e21872760aedcd9ada9f
+              instanceExpiresIn:
+                type: string
+                example: P1W
+              moduleConfigId:
+                type: string
+                example: 5f21e1e205f94e9073a8c966
+              moduleId:
+                type: string
+                example: Questionnaire
+              notifyEvery:
+                type: string
+                example: P3D
+              numberOfNotifications:
+                type: integer
+                example: 2
+              title:
+                type: string
+                example: PAM Questionnaire
+              trigger:
+                type: string
+                example: SIGN_UP
+              type:
+                type: string
+                example: MODULE
+              updateDateTime:
+                type: string
+                example: '2020-07-29T20:54:48.849000Z'
+        keyActionsEnabled:
+          type: boolean
+          example: true
+        language:
+          type: string
+          example: en
+        learn:
+          type: object
+          properties:
+            createDateTime:
+              type: string
+              example: '2020-07-03T13:19:56.012000Z'
+            id:
+              type: string
+              example: 5eff307c1afbc05f76099f13
+            updateDateTime:
+              type: string
+              example: '2020-07-03T13:19:56.012000Z'
+        moduleConfigs:
+          type: array
+          items:
+            type: object
+            properties:
+              about:
+                type: string
+                example: For this activity, you’ll be asked to listen to a list of
+                  words that will be read out loud to you. You’ll then say back as
+                  many words as you can remember, speaking clearly into your phone’s
+                  microphone. This cycle will be repeated several times. You will
+                  be provided with step-by-step instructions throughout the activity.
+                  The test is meant to be difficult and do not be alarmed if you cannot
+                  complete the full task.<br><br>This app is for research purposes
+                  only. It is not a medical device and will not provide you with any
+                  medical information. Using this app does not impact your care and
+                  should not be substituted for clinical care. If you have any concerns
+                  after participating in this research, please contact your GP.
+              configBody:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: f4c2f219-e0c5-462f-afc3-e8955cb2dae8
+                  isForManager:
+                    type: boolean
+                    example: false
+                  isOnboarding:
+                    type: boolean
+                    example: true
+                  name:
+                    type: string
+                    example: Baseline Questionnaire
+                  pages:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        items:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              description:
+                                type: string
+                              format:
+                                type: string
+                                example: TEXT
+                              id:
+                                type: string
+                                example: 87c64b87-657b-4cb2-9f49-83573fb0605c
+                              logic:
+                                type: object
+                                properties:
+                                  isEnabled:
+                                    type: boolean
+                                    example: false
+                              order:
+                                type: integer
+                                example: 1
+                              required:
+                                type: boolean
+                                example: true
+                              text:
+                                type: string
+                                example: Please enter your Subject ID
+                        order:
+                          type: integer
+                          example: 1
+                        type:
+                          type: string
+                          example: QUESTION
+                  publisherName:
+                    type: string
+                    example: NX
+                  submissionPage:
+                    type: object
+                    properties:
+                      buttonText:
+                        type: string
+                        example: Submit
+                      description:
+                        type: string
+                        example: Scroll up to change any of your answers. Changing
+                          answers may add new questions.
+                      id:
+                        type: string
+                        example: 21a1cd2d-ad31-411f-8c4a-4531dcb3774f
+                      order:
+                        type: integer
+                        example: 2
+                      text:
+                        type: string
+                        example: You've completed the questionnaire
+                      type:
+                        type: string
+                        example: SUBMISSION
+              createDateTime:
+                type: string
+                example: '2020-09-16T20:09:53.196000Z'
+              id:
+                type: string
+                example: 5f6271110ac012c5c2100b55
+              moduleId:
+                type: string
+                example: Questionnaire
+              moduleName:
+                type: string
+              order:
+                type: integer
+                example: 8
+              ragThresholds:
+                type: object
+                properties:
+                  5f21e1e205f94e9073a8c96a:
+                    type: object
+                    properties:
+                      HeartRate:
+                        type: object
+                        properties:
+                          value:
+                            type: object
+                            properties:
+                              color:
+                                type: string
+                                example: "#CBEBF0"
+                              direction:
+                                type: string
+                                example: DECREASED
+              schedule:
+                type: object
+                properties:
+                  friendlyText:
+                    type: string
+                    example: friendlyText
+                  timesOfDay:
+                    type: array
+                  timesPerDuration:
+                    type: integer
+                    example: 0
+              status:
+                type: string
+                example: ENABLED
+              updateDateTime:
+                type: string
+                example: '2020-09-21T12:33:34.461000Z'
+              version:
+                type: integer
+                example: 0
+        name:
+          type: string
+          example: Revere Deployment
+        privacyPolicyUrl:
+          type: string
+          example: https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma_App_Privacy_Notice_General_V1_2020.pdf
+        stats:
+          type: object
+          properties:
+            completedCount:
+              type: object
+              properties:
+                unit:
+                  type: string
+                value:
+                  type: integer
+                  example: 0
+            completedTask:
+              type: object
+              properties:
+                unit:
+                  type: string
+                  example: "%"
+                value:
+                  type: integer
+                  example: 0
+            consentedCount:
+              type: object
+              properties:
+                unit:
+                  type: string
+                value:
+                  type: integer
+                  example: 520
+            enrolledCount:
+              type: object
+              properties:
+                unit:
+                  type: string
+                value:
+                  type: integer
+                  example: 243
+            updateDateTime:
+              type: string
+              example: Fri, 03 Sep 2021 07:00:45 GMT
+        status:
+          type: string
+          example: DEPLOYED
+        termAndConditionUrl:
+          type: string
+          example: https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma%20(Medopad)_EULA_May_2020.pdf
+        updateDateTime:
+          type: string
+          example: '2021-08-25T10:01:22.126000Z'
+        userActivationCode:
+          type: string
+          example: '34106508'
+        version:
+          type: integer
+          example: 0
