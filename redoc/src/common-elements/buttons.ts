@@ -34,3 +34,41 @@ export const RightPanelButton = styled.button`
           outline: auto;
         }
 `;
+
+export const ButtonAuthorize = styled.button`
+      padding: 20px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      text-align: center;
+      outline: none !important;
+      border: 1px solid ${({ theme }) => theme.colors.secondary.main};
+      border-radius: 25px;
+      min-width: 60px;
+      font-size: 1rem;
+      font-weight: 400;
+      width: 100%;
+      color: ${({ theme }) => theme.colors.secondary.contrastText};
+      background: ${({ theme }) => theme.colors.secondary.main};
+      transition: all 300ms ease;
+
+      &:hover {
+        background-color: transparent;
+        color: ${({ theme }) => theme.colors.secondary.main};
+      }
+
+      &[disabled] {
+        pointer-events: none;
+        opacity: 0.7;
+      }
+
+      &.primary {
+        background: ${({ theme }) => theme.typography.code.backgroundColor};
+      }
+     
+      &:focus, &:active {
+          outline: auto;
+        }
+`;

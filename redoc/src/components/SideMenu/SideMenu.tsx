@@ -4,26 +4,39 @@ import * as React from 'react';
 import { IMenuItem, MenuStore } from '../../services/MenuStore';
 import { OptionsContext } from '../OptionsProvider';
 import { MenuItems } from './MenuItems';
-
+import { RowAuthorize } from "../../common-elements/fields-layout";
+import { ButtonAuthorize } from "../../common-elements/buttons";
 import { PerfectScrollbarWrap } from '../../common-elements/perfect-scrollbar';
+import { l } from '../../services/Labels';
+import { IconLock } from '../../common-elements';
 
 @observer
-export class SideMenu extends React.Component<{ menu: MenuStore; className?: string }> {
+
+export class SideMenu extends React.Component<{ menu: MenuStore; className?: string; onModalShow?: () => void }> {
   static contextType = OptionsContext;
   private _updateScroll?: () => void;
 
   render() {
     const store = this.props.menu;
+    const {onModalShow} = this.props
+    
     return (
-      <PerfectScrollbarWrap
-        updateFn={this.saveScrollUpdate}
-        className={this.props.className}
-        options={{
-          wheelPropagation: false,
-        }}
-      >
-        <MenuItems items={store.items} onActivate={this.activate} root={true} />
-      </PerfectScrollbarWrap>
+      <>
+        <RowAuthorize>
+          <IconLock style={{ marginRight: "1rem" }} />
+          <ButtonAuthorize onClick={onModalShow}>{l("authorize")}</ButtonAuthorize>
+        </RowAuthorize>
+        <PerfectScrollbarWrap
+          updateFn={this.saveScrollUpdate}
+          className={this.props.className}
+          options={{
+            wheelPropagation: false,
+          }}
+        >
+          <MenuItems items={store.items} onActivate={this.activate} root={true} />
+        </PerfectScrollbarWrap>
+      </>
+
     );
   }
 

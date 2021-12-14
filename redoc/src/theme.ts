@@ -19,6 +19,12 @@ const defaultTheme: ThemeInterface = {
       dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       contrastText: ({ colors }) => readableColor(colors.primary.main),
     },
+    secondary: {
+      main: '#424347',
+      light: ({ colors }) => lighten(colors.tonalOffset, colors.secondary.main),
+      dark: ({ colors }) => darken(colors.tonalOffset, colors.secondary.main),
+      contrastText: "#ffffff",
+    },
     success: {
       main: '#1d8127',
       light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.success.main),
@@ -40,14 +46,19 @@ const defaultTheme: ThemeInterface = {
     gray: {
       50: '#FAFAFA',
       100: '#F5F5F5',
+      200: '#ebebeb',
     },
     text: {
       primary: '#424347',
       secondary: ({ colors }) => lighten(colors.tonalOffset, colors.text.primary),
+      grey: "#6A6D72",
     },
     border: {
       dark: 'rgba(0,0,0, 0.1)',
       light: '#ffffff',
+    },
+    light: {
+      main: "#ffffff",
     },
     responses: {
       success: {
@@ -240,12 +251,14 @@ export interface ResolvedThemeInterface {
   colors: {
     tonalOffset: number;
     primary: ColorSetting;
+    secondary: ColorSetting;
     success: ColorSetting;
     warning: ColorSetting;
     error: ColorSetting;
     gray: {
       50: string;
       100: string;
+      200: string;
     };
     border: {
       light: string;
@@ -254,6 +267,7 @@ export interface ResolvedThemeInterface {
     text: {
       primary: string;
       secondary: string;
+      grey: string;
     };
     responses: {
       success: HTTPResponseColos;
@@ -272,6 +286,9 @@ export interface ResolvedThemeInterface {
       link: string;
       head: string;
     };
+    light: {
+      main: string;
+    }
   };
   schema: {
     linesColor: string;

@@ -202,3 +202,10 @@ export const ExecuteRequest = styled.div`
   background-color: ${({ theme }) => theme.rightPanelInner.backgroundColor};
   padding: 20px;
 `; 
+
+export const RowAuthorize = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 1.6rem ${({ theme }) => theme.spacing.unit * 4}px;
+  border-bottom: ${({ theme }) => theme.colors.gray[200]};
+`;

@@ -6,7 +6,6 @@ import { OptionsProvider } from '../OptionsProvider';
 
 import { AppStore } from '../../services';
 import { ApiInfo } from '../ApiInfo/';
-import { ApiLogo } from '../ApiLogo/ApiLogo';
 import { ContentItems } from '../ContentItems/ContentItems';
 import { SideMenu } from '../SideMenu/SideMenu';
 import { StickyResponsiveSidebar } from '../StickySidebar/StickyResponsiveSidebar';
@@ -14,12 +13,19 @@ import { ApiContentWrap, BackgroundStub, RedocWrap } from './styled.elements';
 
 import { SearchBox } from '../SearchBox/SearchBox';
 import { StoreProvider } from '../StoreBuilder';
+import Modal from '../Modal/Modal';
+import { l } from '../../services/Labels';
 
 export interface RedocProps {
   store: AppStore;
 }
 
 export class Redoc extends React.Component<RedocProps> {
+
+  state = {
+    showAuthorization: false,
+  };
+
   static propTypes = {
     store: PropTypes.instanceOf(AppStore).isRequired,
   };
@@ -32,18 +38,23 @@ export class Redoc extends React.Component<RedocProps> {
     this.props.store.dispose();
   }
 
+  onModalShow = () => {
+    this.setState({showAuthorization:true})
+  }
+
   render() {
+
     const {
-      store: { spec, menu, options, search, marker },
+      store: { menu, options, search, marker },
     } = this.props;
     const store = this.props.store;
+
     return (
       <ThemeProvider theme={options.theme}>
         <StoreProvider value={store}>
           <OptionsProvider value={options}>
             <RedocWrap className="redoc-wrap">
               <StickyResponsiveSidebar menu={menu} className="menu-content">
-                <ApiLogo info={spec.info} />
                 {(!options.disableSearch && (
                   <SearchBox
                     search={search!}
@@ -53,13 +64,14 @@ export class Redoc extends React.Component<RedocProps> {
                   />
                 )) ||
                   null}
-                <SideMenu menu={menu} />
+                <SideMenu onModalShow={this.onModalShow} menu={menu} />
               </StickyResponsiveSidebar>
               <ApiContentWrap className="api-content">
                 <ApiInfo store={store} />
                 <ContentItems items={menu.items as any} />
               </ApiContentWrap>
               <BackgroundStub />
+              <Modal onClose={()=>this.setState({showAuthorization:false})} title={l("authorization")} show={this.state.showAuthorization} />
             </RedocWrap>
           </OptionsProvider>
         </StoreProvider>

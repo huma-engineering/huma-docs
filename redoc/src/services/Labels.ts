@@ -21,6 +21,8 @@ export interface LabelsConfig {
   execute: string;
   backToSamples: string;
   responseServer: string;
+  authorize: string;
+  authorization: string;
 }
 
 export type LabelsConfigRaw = Partial<LabelsConfig>;
@@ -47,7 +49,9 @@ const labels: LabelsConfig = {
   tryItOut: 'Try it out',
   execute: "Execute",
   backToSamples: "Back to samples",
-  responseServer: "Server response"
+  responseServer: "Server response",
+  authorize: "Authorize",
+  authorization: "Authorization"
 };
 
 export function setRedocLabels(_labels?: LabelsConfigRaw) {
