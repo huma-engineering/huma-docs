@@ -38,11 +38,6 @@ export const Tabs = styled(ReactTabs)`
         }
       }
 
-      &:only-child {
-        flex: none;
-        min-width: 100px;
-      }
-
       &.tab-success {
         color: ${props => props.theme.colors.responses.success.tabTextColor};
       }

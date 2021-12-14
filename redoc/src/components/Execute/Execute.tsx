@@ -6,6 +6,8 @@ import { getPlayloadSample } from '../../services';
 import { PayloadCode } from '../PayloadSamples/PayloadCode';
 import SwaggerClient from 'swagger-client';
 import Hawk from 'hawk';
+import { ResponseServer } from '../ResponseServer/ResponseServer';
+import {LoadingSimple} from "../Loading/LoadingSimple";
 
 interface componentInterface {
   operation: any;
@@ -19,6 +21,8 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
   const [value, setValue] = useState("")
   const samples = getPlayloadSample(codeSamples)
   const [server, setServer] = useState(operation.servers[0].url)
+  const [response, setResponse] = useState({})
+  const [isFetching, setIsFetching] = useState(false)
 
   const onChange = (e) => {
     setValue(e)
@@ -26,7 +30,8 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
 
   const onExecute = () => {
 
-    console.log(operation)
+    setResponse({})
+    setIsFetching(true)
 
     const credentials = {
       id: '617192207e1f9620307642aa.8f495502f70a375d919fcc6e',
@@ -34,7 +39,7 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
       algorithm: 'sha256'
     }
 
-    const mehtod = "POST"
+    const mehtod = operation.httpVerb
 
     const { header } = Hawk.client.header(`
     ${server}${operation.path ? operation.path : ''}`,
@@ -50,15 +55,17 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
       mode: 'cors',
       method: mehtod,
       body: value,
+      responseInterceptor: (r) => { 
+        setResponse(r)
+        setIsFetching(false)
+       },
       headers: {
         'Content-Type': 'application/json',
         'Authorization': header
       },
     };
 
-    SwaggerClient.http(request).then((reposnse) => {
-      console.log(reposnse)
-    });
+    SwaggerClient.http(request)
   }
 
   const onChangeServer = (server) => {
@@ -106,10 +113,13 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
         <RightPanelButton
           onClick={onExecute}
           className='primary'
+          disabled={isFetching}
           style={{ width: "calc(50% - 10px)" }}>
+            {(isFetching) && <LoadingSimple color="#ffffff"/>}
           {l('execute')}
         </RightPanelButton>
       </RowExecute>}
+      {Object.keys(response).length > 0 && <ResponseServer response={response} />}
     </div>
   );
 }
