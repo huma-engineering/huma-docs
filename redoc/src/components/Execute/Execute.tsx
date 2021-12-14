@@ -8,6 +8,7 @@ import SwaggerClient from 'swagger-client';
 import Hawk from 'hawk';
 import { ResponseServer } from '../ResponseServer/ResponseServer';
 import {LoadingSimple} from "../Loading/LoadingSimple";
+import PathParameters from "../PathParameters/PathParameters";
 
 interface componentInterface {
   operation: any;
@@ -72,6 +73,10 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
     setServer(server)
   }
 
+  const isParameters = () => {
+    return operation.operationSpec.parameters?.length > 0
+  }
+
   return (
     <div>
       {(isTry && codeSamples) &&
@@ -85,6 +90,7 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
               onChangeServer={onChangeServer}
             />
           }
+          {isParameters() && <PathParameters operationSpec={operation.operationSpec} />}
         </ExecuteRequest>
       }
       {!isTry && <RowExecute>
@@ -92,6 +98,7 @@ const Execute: FunctionComponent<componentInterface> = ({ operation, onTogle }) 
           onClick={
             () => {
               setIsTry(true);
+              console.log(operation)
               onTogle(false);
             }}
         >

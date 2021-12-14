@@ -52,6 +52,7 @@ const defaultTheme: ThemeInterface = {
       primary: '#424347',
       secondary: ({ colors }) => lighten(colors.tonalOffset, colors.text.primary),
       grey: "#6A6D72",
+      error: "#ff491c"
     },
     border: {
       dark: 'rgba(0,0,0, 0.1)',
@@ -268,6 +269,7 @@ export interface ResolvedThemeInterface {
       primary: string;
       secondary: string;
       grey: string;
+      error: string;
     };
     responses: {
       success: HTTPResponseColos;

@@ -50,11 +50,6 @@ html[data-theme='dark'] .redocusaurus h2 > a:nth-child(1)::before {
   border-right: 1px solid var(--ifm-toc-border-color);
 }
 
-/* Hide Logo as already in navbar*/
-.redocusaurus .menu-content div:first-child {
-  display: none;
-}
-
 .redocusaurus .operation-type {
   margin-top: 6px;
   font-size: 8px;
