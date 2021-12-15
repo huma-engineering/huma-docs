@@ -43,7 +43,7 @@ const PathParameters: FunctionComponent<componentInterface> = ({ data, onChange,
       <InputLabel>{name} <span>({renderType()})</span> <span>({fieldType})</span> {required ? <span className='required'>* {l('required')}</span> : ""}</InputLabel>
       <InputDescription>{description}</InputDescription>
       {isNotSingle() ?
-        <Select multiple>
+        <Select name={`${name}_${fieldType}`} multiple>
           {schema.items.enum.map((item, i) => (
             <Option key={`op-${i}`}>{item}</Option>
           ))}
@@ -51,7 +51,7 @@ const PathParameters: FunctionComponent<componentInterface> = ({ data, onChange,
         :
         <Input
           {...getType()}
-          name={name}
+          name={`${name}_${fieldType}`}
           placeholder={name}
           onChange={onInputChange}
         />

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react';
-import { l } from '../../services/Labels';
 import Input from "./Input"
 
 
 interface componentInterface {
   operationSpec: any;
   onChange?: () => void;
+  onFormInit?: (e:HTMLFormElement) => void;
 }
 
-const PathParameters: FunctionComponent<componentInterface> = ({ operationSpec, onChange }) => {
+const PathParameters: FunctionComponent<componentInterface> = ({ operationSpec, onChange, onFormInit }) => {
 
   const { parameters } = operationSpec
   const content = operationSpec.requestBody?.content ? operationSpec.requestBody?.content : null
@@ -37,12 +37,12 @@ const PathParameters: FunctionComponent<componentInterface> = ({ operationSpec, 
   }
 
   return (
-    <div>
+    <form action="" ref={onFormInit}>
       {parameters.map((parameter, i)=>(
-        <Input fieldType={l("path")} onChange={onInputChange} key={`ik-${i}`} data={parameter} />
+        <Input fieldType={parameter.in} onChange={onInputChange} key={`ik-${i}`} data={parameter} />
       ))}
       {content && renderRequestBody()}
-    </div>
+    </form>
   );
 }
 

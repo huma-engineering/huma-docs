@@ -10,6 +10,15 @@ interface componentInterface {
 
 export const ResponseServer: FunctionComponent<componentInterface> = ({ response }) => {
 
+  const IsJsonString = (str) => {
+    try {
+      JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }
+
   return (
     (response?.data ?
       <div>
@@ -23,16 +32,18 @@ export const ResponseServer: FunctionComponent<componentInterface> = ({ response
           </TabList>
           <TabPanel key={response.status}>
             <div>
-              <PayloadServer content={{
-                examples: {
-                  // @ts-ignore: Unreachable code error
-                  default: {
-                    mime: "application/json",
-                    value: JSON.parse(response.data!)
-                  }
-                },
-                name: "application/json",
-              }} />
+              {typeof response.data === "string" &&
+                <PayloadServer content={{
+                  examples: {
+                    // @ts-ignore: Unreachable code error
+                    default: {
+                      mime: "application/json",
+                      value: IsJsonString(response.data!) ? JSON.parse(response.data!) : ""
+                    }
+                  },
+                  name: "application/json",
+                }} />
+              }
             </div>
           </TabPanel>
         </Tabs>
