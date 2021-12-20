@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import useThemeContext from '@theme/hooks/useThemeContext';
-import { Redoc as RedocComponent, RedocStandalone, AppStore } from '../../../redoc';
+import { Redoc as RedocComponent, RedocStandalone, AppStore } from 'huma-redoc';
 import { RedocProps as Props, GlobalData } from '../../types/common';
 import './styles.css';
 
