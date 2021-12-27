@@ -112,7 +112,7 @@ module.exports = {
         specs: [{
           id: 'api-platformplay',
           routePath: 'api-platformplay',
-          spec: 'api-platformplay/documentations.json',
+          spec: 'api-platformplay/documentations-huma.json',
         }],
       }
     ]
