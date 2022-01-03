@@ -8,7 +8,7 @@ This website is using our [Github Package](https://github.com/huma-engineering/h
 
 ### Authenticate to GitHub Packages.
 
-To authenticate by adding your personal access token to your `~/.npmrc` file, edit the `~/.npmrc` file for your project to include the following 2 lines, replacing `GITHUB_TOKEN` with your personal access token. Create a new `~/.npmrc` file if one doesn't exist.
+To authenticate by adding your personal access token to your `.npmrc` file, edit the `.npmrc` file for your project to include the following 2 lines, replacing `GITHUB_TOKEN` with your personal access token. Create a new `.npmrc` file if one doesn't exist.
 
 ```
 //npm.pkg.github.com/:_authToken=GITHUB_TOKEN
