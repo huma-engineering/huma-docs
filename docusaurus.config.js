@@ -86,12 +86,6 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        // docs: {
-        //   path: 'portal',
-        //   routeBasePath: 'portal',
-        //   sidebarPath: require.resolve('./sidebarsPortal.js'),
-        //   editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
-        // },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.

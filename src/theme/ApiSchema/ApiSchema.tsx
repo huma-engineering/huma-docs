@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
 import {
-  usePluginData,
   useAllPluginInstancesData,
 } from '@docusaurus/useGlobalData';
 import useThemeContext from '@theme/hooks/useThemeContext';
 import clsx from 'clsx';
 import { ThemeProvider } from 'styled-components';
 import { SchemaDefinition, AppStore } from 'redoc';
-import { ApiSchemaProps as Props, GlobalData, Spec } from '../../types/common';
+import { ApiSchemaProps as Props, Spec } from '../../types/common';
+import {lightTheme, darkTheme, redocOptions} from "../Redoc/redocData";
 import '../Redoc/styles.css';
 import './styles.css';
 
@@ -19,9 +19,6 @@ const ApiSchema: React.FC<Props> = ({
 }: Props): JSX.Element => {
   const { isDarkTheme } = useThemeContext();
   const allData = useAllPluginInstancesData<Spec>('docusaurus-plugin-redoc');
-  const { lightTheme, darkTheme, redocOptions } = usePluginData<GlobalData>(
-    'docusaurus-theme-redoc',
-  );
   const theme = isDarkTheme ? darkTheme : lightTheme;
 
   const store = useMemo(() => {

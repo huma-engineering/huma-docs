@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import { usePluginData } from '@docusaurus/useGlobalData';
 import useThemeContext from '@theme/hooks/useThemeContext';
 import { Redoc as RedocComponent, RedocStandalone, AppStore } from '@huma-engineering/huma-redoc';
-import { RedocProps as Props, GlobalData } from '../../types/common';
-import './styles.css';
+import { RedocProps as Props } from '../../types/common';
+import {lightTheme, darkTheme, redocOptions} from "./redocData";
 
+import './styles.css';
 
 /*!
  * Redocusaurus
@@ -14,9 +14,7 @@ import './styles.css';
  */
 function Redoc(props: Props): JSX.Element {
   const { isDarkTheme } = useThemeContext();
-  const { lightTheme, darkTheme, redocOptions } = usePluginData<GlobalData>(
-    'docusaurus-theme-redoc',
-  );
+
   const theme = isDarkTheme ? darkTheme : lightTheme;
   const { spec, specUrl } = props;
   const store = useMemo(() => {
