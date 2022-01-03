@@ -9,7 +9,6 @@
 .cache-loader
 
 # Misc
-.npmrc
 .DS_Store
 .env.local
 .env.development.local
