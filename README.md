@@ -8,11 +8,21 @@ This website is using our [Github Package](https://github.com/huma-engineering/h
 
 ### Authenticate to GitHub Packages.
 
+You need an access token to publish, install, and delete packages.
+
+You can use a personal access token (PAT) to authenticate to GitHub Packages or the GitHub API. When you create a personal access token, you can assign the token different scopes depending on your needs. For more information about packages-related scopes for a PAT, see [About permissions for GitHub Packages](https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages#about-scopes-and-permissions-for-package-registries).
+
 To authenticate by adding your personal access token to your `.npmrc` file, edit the `.npmrc` file for your project to include the following 2 lines, replacing `GITHUB_TOKEN` with your personal access token. Create a new `.npmrc` file if one doesn't exist.
 
 ```
 //npm.pkg.github.com/:_authToken=GITHUB_TOKEN
 @huma-engineering:registry=https://npm.pkg.github.com
+```
+
+Otherwise, You can add the environment variable to your current bash or terminal.
+
+```
+export GITHUB_TOKEN=blabla
 ```
 
 ### Install the packages
@@ -28,6 +38,51 @@ yarn start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+## Additionally used plugins:
+
+- [docusaurus-lunr-search](https://github.com/lelouch77/docusaurus-lunr-search)
+Offline Search for Docusaurus V2
+- [huma-redoc](https://github.com/huma-engineering/huma-redoc)
+Tool for generating documentation from OpenAPI (fka Swagger) definitions
+- [redocusaurus](https://github.com/rohit-gohri/redocusaurus)
+A content plugin that creates pages from your OpenAPI files or URLs and rendered using the Redoc component from the theme.
+
+### docusaurus-lunr-search
+
+Docusaurus search information can only be generated from a production build. Local development is currently not supported. 
+
+### redocusaurus
+
+The multiple specifications can be added to the docusaurus.config.js:
+
+```js
+// docusaurus.config.js
+   module.exports = {
+     // ...
+     presets: [
+        // ...
+        [
+        'redocusaurus',
+            {
+            specs: [{
+                    id: 'api-platformplay',
+                    routePath: 'api-platformplay',
+                    spec: 'api-platformplay/documentations.json',
+                }],
+            }
+        ]
+        // ...
+     ]
+     // ...
+};
+```
+
+## Theme Components
+This section includes a list of important theme components:
+
+### Redoc
+RedocStandalone with dark mode support, matching docusaurus classic theme. This component is used to share props from the docusaurus theme to the redoc.
 
 ## Build
 
