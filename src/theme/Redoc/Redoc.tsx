@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import useThemeContext from '@theme/hooks/useThemeContext';
 import { Redoc as RedocComponent, RedocStandalone, AppStore } from '@huma-engineering/huma-redoc';
 import { RedocProps as Props } from '../../types/common';
@@ -25,6 +25,15 @@ function Redoc(props: Props): JSX.Element {
       theme,
     });
   }, [spec, specUrl, redocOptions, theme]);
+
+  useEffect(()=>{
+    const menu = document.querySelector<HTMLElement>(".redocusaurus .menu-content")
+    const nav = document.querySelector<HTMLElement>("nav.navbar")
+
+    menu.style.top = `${nav.offsetHeight}px`
+    menu.style.height = `calc(100vh - ${nav.offsetHeight})`
+
+  }, [])
 
   return (
     <div className="redocusaurus">
