@@ -282,10 +282,6 @@ html[data-theme="dark"] {
   filter: var(--ifm-menu-link-sublist-icon-filter);
 }
 
-.navbar__search {
-  padding-right: 1rem;
-}
-
 .dropdown--right .navbar__link {
   border: 1px solid var(--ifm-color-text);
   border-radius: 50px;

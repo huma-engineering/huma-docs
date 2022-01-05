@@ -250,6 +250,10 @@ function Navbar() {
           ))}
         </div>
         <div className="navbar__items navbar__items--right">
+          {!hasSearchNavbarItem && <SearchBar />}
+          {rightItems.map((item, i) => (
+            item.type != "docsVersionDropdown" && <NavbarItem {...item} key={i} />
+          ))}
           {!colorModeToggle.disabled && (
             <Toggle
               className={styles.toggle}
@@ -257,10 +261,6 @@ function Navbar() {
               onChange={colorModeToggle.toggle}
             />
           )}
-          {rightItems.map((item, i) => (
-            item.type != "docsVersionDropdown" && <NavbarItem {...item} key={i} />
-          ))}
-          {!hasSearchNavbarItem && <SearchBar />}
         </div>
       </div>
 
