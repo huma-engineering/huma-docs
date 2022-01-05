@@ -12,6 +12,7 @@ import {
   MobileSecondaryMenuFiller,
   ThemeClassNames,
   useScrollPosition,
+  useLocalPathname
 } from '@docusaurus/theme-common';
 import useWindowSize from '@theme/hooks/useWindowSize';
 import Logo from '@theme/Logo';
@@ -67,6 +68,8 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
 
   } = useThemeConfig();
 
+  const localPathname = useLocalPathname();
+
   return (
     <div
       className={clsx(styles.sidebar, {
@@ -76,7 +79,7 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
 
       {items.map((item, i) => (
-        item.type == "docsVersionDropdown" && (window.location.href.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+        item.type == "docsVersionDropdown" && (localPathname.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
       ))}
       <nav
         className={clsx('menu thin-scrollbar', styles.menu, {
@@ -94,11 +97,12 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
 const DocSidebarMobileSecondaryMenu = ({ toggleSidebar, sidebar, path }) => {
 
   const {navbar: { items }} = useThemeConfig();
+  const localPathname = useLocalPathname();
 
   return (
     <>
       {items.map((item, i) => (
-        item.type == "docsVersionDropdown" && (window.location.href.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+        item.type == "docsVersionDropdown" && (localPathname.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
       ))}
       <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list')}>
         <DocSidebarItems
