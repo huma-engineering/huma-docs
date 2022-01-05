@@ -95,6 +95,7 @@ module.exports = {
         pages: {
           path: 'src/pages',
         },
+        docs: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -119,7 +120,6 @@ module.exports = {
         id: 'platformplay',
         path: 'platformplay',
         routeBasePath: 'platformplay',
-        sidebarPath: require.resolve('./sidebarsPortal.js'),
         editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
       },
     ],
@@ -129,7 +129,6 @@ module.exports = {
         id: 'api-integration',
         path: 'api-integration',
         routeBasePath: 'api-integration',
-        sidebarPath: require.resolve('./sidebarsApiIntegration.js'),
       },
     ],
     [
@@ -138,7 +137,6 @@ module.exports = {
         id: 'sdk',
         path: 'sdk',
         routeBasePath: 'sdk',
-        sidebarPath: require.resolve('./sidebarsSdk.js'),
       },
     ],
   ],
