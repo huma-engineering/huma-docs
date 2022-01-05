@@ -41,6 +41,8 @@ function DropdownNavbarItemDesktop({items, position, className, ...props}) {
   const dropdownRef = useRef(null);
   const dropdownMenuRef = useRef(null);
   const [showDropdown, setShowDropdown] = useState(false);
+  const localPathname = useLocalPathname();
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!dropdownRef.current || dropdownRef.current.contains(event.target)) {
@@ -57,12 +59,18 @@ function DropdownNavbarItemDesktop({items, position, className, ...props}) {
       document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [dropdownRef]);
+
+  const isHasActivePaths = () => {
+    return items.some(item => localPathname.indexOf(`/${item.docsPluginId}`) != -1)
+  }
+
   return (
     <div
       ref={dropdownRef}
       className={clsx('navbar__item', 'dropdown', 'dropdown--hoverable', {
         'dropdown--right': position === 'right',
         'dropdown--show': showDropdown,
+        'navbar__item--active': isHasActivePaths()
       })}>
       <NavLink
         className={clsx('navbar__link', className)}
