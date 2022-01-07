@@ -78,6 +78,36 @@ The multiple specifications can be added to the docusaurus.config.js:
 };
 ```
 
+## Versions
+
+### Our current versioned instances:
+
+- platformplay
+- sdk
+
+### Versioned paths
+
+Each plugin instance will store versioned docs in a distinct folder.
+
+- `website/[pluginId]_versions.json`
+- `website/[pluginId]_versioned_docs`
+
+The instance paths will be simpler, and retro-compatible with a single-instance setup.
+
+### Tagging new versions
+
+Each plugin instance will have its own cli command to tag a new version. They will be displayed if you run:
+
+```bash npm2yarn
+yarn docusaurus -- --help
+```
+
+To version platformplay docs plugin instance:
+
+```bash npm2yarn
+yarn docusaurus docs:version:platformplay 1.16.0
+```
+
 ## Theme Components
 This section includes a list of important theme components:
 

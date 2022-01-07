@@ -113,7 +113,11 @@ module.exports = {
     ]
   ],
   plugins: [
-    require.resolve('docusaurus-lunr-search'),
+    [
+      require.resolve('docusaurus-lunr-search'), {
+        languages: ['en', 'fr']
+      }
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {

@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useRef, useCallback, useState } from "react";
+import React, { useRef, useCallback, useState, useEffect } from "react";
 import classnames from "classnames";
 import { useHistory } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -17,6 +17,7 @@ const Search = props => {
   const history = useHistory();
   const { siteConfig = {}, isClient = false} = useDocusaurusContext();
   const { baseUrl } = siteConfig;
+  const [maxWidth, setMaxWidth] = useState(300);
   const initAlgolia = (searchDocs, searchIndex, DocSearch) => {
       new DocSearch({
         searchDocs,
@@ -37,6 +38,12 @@ const Search = props => {
         }
       });
   };
+
+  useEffect(()=>{
+    if (typeof window === 'object' || typeof window !== 'undefined') {
+      setMaxWidth(window.innerWidth > 500 ? 300 : 200)
+    }
+  }, [])
 
   const pluginData = usePluginData('docusaurus-lunr-search');
   const getSearchDoc = () =>
@@ -73,10 +80,30 @@ const Search = props => {
         searchBarRef.current.focus();
       }
 
+      if (typeof window === 'object' || typeof window !== 'undefined') {
+        const w = window.innerWidth > 500 ? 300 : 200;
+        const searchPosition = searchBarRef.current.getBoundingClientRect().x;
+        const logo = document.querySelector(".navbar__brand").getBoundingClientRect()
+        const logoW = logo.x + logo.width + 16;
+        const dropDown = document.querySelector(".ds-dropdown-menu");
+        const width = w + (searchPosition - logoW);
+
+        if(dropDown) {
+          dropDown.style.width = `${width}px`
+          dropDown.style.left = `-${width - w}px`
+        }
+
+        setMaxWidth(width)
+      }
+
       props.handleSearchBarToggle && props.handleSearchBarToggle(!props.isSearchBarExpanded);
     },
     [props.isSearchBarExpanded]
   );
+
+  const onBlur = () => {
+    setMaxWidth(300)
+  }
 
   if (isClient) {
     loadAlgolia();
@@ -97,7 +124,7 @@ const Search = props => {
       <input
         id="search_input_react"
         type="search"
-        placeholder={indexReady ? 'Search' : 'Loading...'}
+        placeholder={'Search'}
         aria-label="Search"
         className={classnames(
           "navbar__search-input",
@@ -107,8 +134,9 @@ const Search = props => {
         onClick={loadAlgolia}
         onMouseOver={loadAlgolia}
         onFocus={toggleSearchIconClick}
-        onBlur={toggleSearchIconClick}
+        onBlur={(e)=>{toggleSearchIconClick(e); onBlur(e)}}
         ref={searchBarRef}
+        style={{maxWidth:`${maxWidth}px`}}
         disabled={!indexReady}
       />
     </div>

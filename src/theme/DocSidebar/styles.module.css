@@ -33,7 +33,7 @@
 
 @media (max-width: 997px) {
   .sidebarVersion {
-    padding: 1rem 0;
+    padding: 1rem var(--ifm-spacing-horizontal);
   }
   .sidebarVersion :global(.navbar__item.dropdown) {
     display: block;

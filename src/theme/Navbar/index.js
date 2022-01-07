@@ -229,6 +229,11 @@ function Navbar() {
       })}>
       <div className="navbar__inner">
         <div className="navbar__items">
+          <Logo
+            className="navbar__brand"
+            imageClassName="navbar__logo"
+            titleClassName="navbar__title"
+          />
           {(items?.length > 0 || activeDocPlugin) && (
             <button
               aria-label="Navigation bar toggle"
@@ -240,11 +245,6 @@ function Navbar() {
               <IconMenu />
             </button>
           )}
-          <Logo
-            className="navbar__brand"
-            imageClassName="navbar__logo"
-            titleClassName="navbar__title"
-          />
           {leftItems.map((item, i) => (
             <NavbarItem {...item} key={i} />
           ))}
