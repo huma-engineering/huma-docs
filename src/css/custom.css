@@ -172,10 +172,6 @@ html[data-theme="dark"] {
   font-size: 1.375rem;
 }
 
-.menu {
-  overflow: visible;
-}
-
 .search-bar {
   border-radius: 0.875rem;
   height: 2.5rem;
