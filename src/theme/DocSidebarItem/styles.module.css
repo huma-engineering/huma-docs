@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.menuLink::before {
+/* .menuLink::before {
   content: '';
   width: 6px;
   height: 9px;
@@ -23,7 +23,7 @@
   background-size: 100%;
   filter: var(--ifm-menu-link-sublist-icon-filter);
   transition: transform 300ms ease;
-}
+} */
 
 .menuLink::after {
   content: "";

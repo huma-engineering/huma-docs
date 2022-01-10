@@ -15,33 +15,33 @@ const Search = props => {
   const searchBarRef = useRef(null);
   const [indexReady, setIndexReady] = useState(false);
   const history = useHistory();
-  const { siteConfig = {}, isClient = false} = useDocusaurusContext();
+  const { siteConfig = {}, isClient = false } = useDocusaurusContext();
   const { baseUrl } = siteConfig;
   const [maxWidth, setMaxWidth] = useState(300);
   const initAlgolia = (searchDocs, searchIndex, DocSearch) => {
-      new DocSearch({
-        searchDocs,
-        searchIndex,
-        inputSelector: "#search_input_react",
-        // Override algolia's default selection event, allowing us to do client-side
-        // navigation and avoiding a full page refresh.
-        handleSelected: (_input, _event, suggestion) => {
-          const url = baseUrl + suggestion.url;
-          // Use an anchor tag to parse the absolute url into a relative url
-          // Alternatively, we can use new URL(suggestion.url) but its not supported in IE
-          const a = document.createElement("a");
-          a.href = url;
-          // Algolia use closest parent element id #__docusaurus when a h1 page title does not have an id
-          // So, we can safely remove it. See https://github.com/facebook/docusaurus/issues/1828 for more details.
+    new DocSearch({
+      searchDocs,
+      searchIndex,
+      inputSelector: "#search_input_react",
+      // Override algolia's default selection event, allowing us to do client-side
+      // navigation and avoiding a full page refresh.
+      handleSelected: (_input, _event, suggestion) => {
+        const url = baseUrl + suggestion.url;
+        // Use an anchor tag to parse the absolute url into a relative url
+        // Alternatively, we can use new URL(suggestion.url) but its not supported in IE
+        const a = document.createElement("a");
+        a.href = url;
+        // Algolia use closest parent element id #__docusaurus when a h1 page title does not have an id
+        // So, we can safely remove it. See https://github.com/facebook/docusaurus/issues/1828 for more details.
 
-          history.push(url);
-        }
-      });
+        history.push(url);
+      }
+    });
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     if (typeof window === 'object' || typeof window !== 'undefined') {
-      setMaxWidth(window.innerWidth > 500 ? 300 : 200)
+      setMaxWidth(window.innerWidth > 1100 ? 300 : 200)
     }
   }, [])
 
@@ -64,7 +64,7 @@ const Search = props => {
         import("./lib/DocSearch"),
         import("./algolia.css")
       ]).then(([searchDocs, searchIndex, { default: DocSearch }]) => {
-        if( searchDocs.length === 0) {
+        if (searchDocs.length === 0) {
           return;
         }
         initAlgolia(searchDocs, searchIndex, DocSearch);
@@ -81,14 +81,20 @@ const Search = props => {
       }
 
       if (typeof window === 'object' || typeof window !== 'undefined') {
-        const w = window.innerWidth > 500 ? 300 : 200;
+        const w = window.innerWidth > 1100 ? 300 : 200;
         const searchPosition = searchBarRef.current.getBoundingClientRect().x;
         const logo = document.querySelector(".navbar__brand").getBoundingClientRect()
         const logoW = logo.x + logo.width + 16;
         const dropDown = document.querySelector(".ds-dropdown-menu");
-        const width = w + (searchPosition - logoW);
+        let width = 0;
 
-        if(dropDown) {
+        if(window.innerWidth > 1100) {
+          width = window.innerWidth / 2 - (window.innerWidth - searchPosition) + w;
+        }else {
+          width = w + (searchPosition - logoW);
+        }
+
+        if (dropDown) {
           dropDown.style.width = `${width}px`
           dropDown.style.left = `-${width - w}px`
         }
@@ -102,7 +108,10 @@ const Search = props => {
   );
 
   const onBlur = () => {
-    setMaxWidth(300)
+    if (typeof window === 'object' || typeof window !== 'undefined') {
+      const w = window.innerWidth > 1100 ? 300 : 200;
+      setMaxWidth(w)
+    }
   }
 
   if (isClient) {
@@ -134,9 +143,9 @@ const Search = props => {
         onClick={loadAlgolia}
         onMouseOver={loadAlgolia}
         onFocus={toggleSearchIconClick}
-        onBlur={(e)=>{toggleSearchIconClick(e); onBlur(e)}}
+        onBlur={(e) => { toggleSearchIconClick(e); onBlur(e) }}
         ref={searchBarRef}
-        style={{maxWidth:`${maxWidth}px`}}
+        style={{ maxWidth: `${maxWidth}px` }}
         disabled={!indexReady}
       />
     </div>
