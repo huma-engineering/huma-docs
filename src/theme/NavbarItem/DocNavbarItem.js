@@ -10,7 +10,7 @@ import {useLatestVersion, useActiveDocContext} from '@theme/hooks/useDocs';
 import clsx from 'clsx';
 import {getInfimaActiveClassName} from './index';
 import {useDocsPreferredVersion} from '@docusaurus/theme-common';
-import {uniq} from '@docusaurus/utils-common';
+import {uniq} from '@docusaurus/theme-common';
 
 function getDocInVersions(versions, docId) {
   const allDocs = versions.flatMap((version) => version.docs);

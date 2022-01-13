@@ -416,7 +416,14 @@ html[data-theme="dark"] {
   padding: var(--imf-container-padding) !important;
 }
 
+.container.padding-top--md.padding-bottom--lg {
+  padding: var(--imf-container-padding) !important;
+}
+
 @media (max-width: 997px) {
+  .container.padding-top--md.padding-bottom--lg {
+    padding: var(--ifm-spacing-horizontal) !important;
+  }
   .padding--large {
     padding: var(--ifm-spacing-horizontal) !important;
   }

@@ -4,28 +4,49 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React, {useState, useCallback} from 'react';
+
+import React, {ReactNode, useState, useCallback} from 'react';
 import {MDXProvider} from '@mdx-js/react';
+
 import renderRoutes from '@docusaurus/renderRoutes';
+import type {PropVersionMetadata} from '@docusaurus/plugin-content-docs';
 import Layout from '@theme/Layout';
 import DocSidebar from '@theme/DocSidebar';
 import MDXComponents from '@theme/MDXComponents';
 import NotFound from '@theme/NotFound';
+import type {DocumentRoute} from '@theme/DocItem';
+import type {Props} from '@theme/DocPage';
 import IconArrow from '@theme/IconArrow';
 import BackToTopButton from '@theme/BackToTopButton';
 import {matchPath} from '@docusaurus/router';
 import {translate} from '@docusaurus/Translate';
+
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import {ThemeClassNames, docVersionSearchTag} from '@docusaurus/theme-common';
+import {
+  ThemeClassNames,
+  docVersionSearchTag,
+  DocsSidebarProvider,
+  useDocsSidebar,
+  DocsVersionProvider,
+} from '@docusaurus/theme-common';
 import Head from '@docusaurus/Head';
 
-function DocPageContent({currentDocRoute, versionMetadata, children}) {
+type DocPageContentProps = {
+  readonly currentDocRoute: DocumentRoute;
+  readonly versionMetadata: PropVersionMetadata;
+  readonly children: ReactNode;
+  readonly sidebarName: string | undefined;
+};
+
+function DocPageContent({
+  currentDocRoute,
+  versionMetadata,
+  children,
+  sidebarName,
+}: DocPageContentProps): JSX.Element {
+  const sidebar = useDocsSidebar();
   const {pluginId, version} = versionMetadata;
-  const sidebarName = currentDocRoute.sidebar;
-  const sidebar = sidebarName
-    ? versionMetadata.docsSidebars[sidebarName]
-    : undefined;
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
@@ -35,11 +56,12 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
 
     setHiddenSidebarContainer((value) => !value);
   }, [hiddenSidebar]);
+
   return (
     <Layout
       wrapperClassName={ThemeClassNames.wrapper.docsPages}
       pageClassName={ThemeClassNames.page.docsDocPage}
-      searchMetadatas={{
+      searchMetadata={{
         version,
         tag: docVersionSearchTag(pluginId, version),
       }}>
@@ -105,7 +127,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
           })}>
           <div
             className={clsx(
-              'container padding--large',
+              'container padding-top--md padding-bottom--lg',
               styles.docItemWrapper,
               {
                 [styles.docItemWrapperEnhanced]: hiddenSidebarContainer,
@@ -119,7 +141,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
   );
 }
 
-function DocPage(props) {
+function DocPage(props: Props): JSX.Element {
   const {
     route: {routes: docRoutes},
     versionMetadata,
@@ -128,10 +150,16 @@ function DocPage(props) {
   const currentDocRoute = docRoutes.find((docRoute) =>
     matchPath(location.pathname, docRoute),
   );
-
   if (!currentDocRoute) {
     return <NotFound />;
   }
+
+  // For now, the sidebarName is added as route config: not ideal!
+  const sidebarName = currentDocRoute.sidebar;
+
+  const sidebar = sidebarName
+    ? versionMetadata.docsSidebars[sidebarName]
+    : null;
 
   return (
     <>
@@ -139,13 +167,16 @@ function DocPage(props) {
         {/* TODO we should add a core addRoute({htmlClassName}) generic plugin option */}
         <html className={versionMetadata.className} />
       </Head>
-      <DocPageContent
-        currentDocRoute={currentDocRoute}
-        versionMetadata={versionMetadata}>
-        {renderRoutes(docRoutes, {
-          versionMetadata,
-        })}
-      </DocPageContent>
+      <DocsVersionProvider version={versionMetadata}>
+        <DocsSidebarProvider sidebar={sidebar}>
+          <DocPageContent
+            currentDocRoute={currentDocRoute}
+            versionMetadata={versionMetadata}
+            sidebarName={sidebarName}>
+            {renderRoutes(docRoutes, {versionMetadata})}
+          </DocPageContent>
+        </DocsSidebarProvider>
+      </DocsVersionProvider>
     </>
   );
 }

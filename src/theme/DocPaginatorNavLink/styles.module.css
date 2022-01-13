@@ -55,3 +55,7 @@
   color: var(--ifm-color-text);
   font-size: 1rem;
 }
+
+.paginationLink :global(.pagination-nav__label)::after, .paginationLink :global(.pagination-nav__label)::before {
+  display: none;
+}

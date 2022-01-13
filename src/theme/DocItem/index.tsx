@@ -4,22 +4,25 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+
 import React from 'react';
 import clsx from 'clsx';
 import useWindowSize from '@theme/hooks/useWindowSize';
 import DocPaginator from '@theme/DocPaginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
+import DocVersionBadge from '@theme/DocVersionBadge';
 import Seo from '@theme/Seo';
+import type { Props } from '@theme/DocItem';
 import DocItemFooter from '@theme/DocItemFooter';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import TOC from '@theme/TOC';
 import TOCCollapsible from '@theme/TOCCollapsible';
 import { MainHeading } from '@theme/Heading';
 import styles from './styles.module.css';
 import { ThemeClassNames } from '@docusaurus/theme-common';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function DocItem(props) {
-  const { content: DocContent, versionMetadata } = props;
+export default function DocItem(props: Props): JSX.Element {
+  const { content: DocContent } = props;
   const { metadata, frontMatter } = DocContent;
   const {
     image,
@@ -28,50 +31,39 @@ export default function DocItem(props) {
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
     toc_max_heading_level: tocMaxHeadingLevel,
-    authors
   } = frontMatter;
-  const { description, title } = metadata; // We only add a title if:
+  const { description, title } = metadata;
+
+  // We only add a title if:
   // - user asks to hide it with frontmatter
   // - the markdown content does not already contain a top-level h1 heading
-
-  const {siteConfig} = useDocusaurusContext();
-  const authorLookup = siteConfig.customFields.authors;
-
   const shouldAddTitle =
     !hideTitle && typeof DocContent.contentTitle === 'undefined';
+
   const windowSize = useWindowSize();
+
   const canRenderTOC =
     !hideTableOfContents && DocContent.toc && DocContent.toc.length > 0;
+
   const renderTocDesktop =
     canRenderTOC && (windowSize === 'desktop' || windowSize === 'ssr');
+
+  const { siteConfig } = useDocusaurusContext();
+  const authorLookup = siteConfig.customFields.authors;
+
   return (
     <>
-      <Seo
-        {...{
-          title,
-          description,
-          keywords,
-          image,
-        }}
-      />
+      <Seo {...{ title, description, keywords, image }} />
 
       <div className="row">
         <div
           className={clsx('col', {
             [styles.docItemCol]: !hideTableOfContents,
           })}>
-          <DocVersionBanner versionMetadata={versionMetadata} />
+          <DocVersionBanner />
           <div className={styles.docItemContainer}>
             <article>
-              {versionMetadata.badge && (
-                <span
-                  className={clsx(
-                    ThemeClassNames.docs.docVersionBadge,
-                    'badge badge--secondary',
-                  )}>
-                  Version: {versionMetadata.label}
-                </span>
-              )}
+              <DocVersionBadge />
 
               {canRenderTOC && (
                 <TOCCollapsible
@@ -108,7 +100,7 @@ export default function DocItem(props) {
               <DocItemFooter {...props} />
             </article>
 
-            <DocPaginator metadata={metadata} />
+            <DocPaginator previous={metadata.previous} next={metadata.next} />
           </div>
         </div>
         {renderTocDesktop && (
