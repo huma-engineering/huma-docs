@@ -34,26 +34,8 @@ module.exports = {
           items: [
             {
               type: 'doc',
-              label: 'Platform play',
-              docsPluginId: 'platformplay',
-              docId: 'intro',
-            },
-          ],
-        },
-        {
-          type: 'dropdown',
-          position: 'left',
-          label: 'API',
-          items: [
-            {
-              label: 'Platform Play',
-              to: "api-platformplay",
-              docsPluginId: 'api-platformplay',
-            },
-            {
-              type: 'doc',
-              label: 'Integration',
-              docsPluginId: 'api-integration',
+              label: 'Data collection',
+              docsPluginId: 'data-collection',
               docId: 'intro',
             },
           ],
@@ -66,8 +48,26 @@ module.exports = {
           docId: 'intro',
         },
         {
+          type: 'dropdown',
+          position: 'left',
+          label: 'API',
+          items: [
+            {
+              label: 'Data collection',
+              to: "api-data-collection",
+              docsPluginId: 'api-data-collection',
+            },
+            {
+              type: 'doc',
+              label: 'Integration',
+              docsPluginId: 'api-integration',
+              docId: 'intro',
+            },
+          ],
+        },
+        {
           type: 'docsVersionDropdown',
-          docsPluginId: 'platformplay',
+          docsPluginId: 'data-collection',
           position: 'right',
         },
         {
@@ -105,9 +105,9 @@ module.exports = {
       'redocusaurus',
       {
         specs: [{
-          id: 'api-platformplay',
-          routePath: 'api-platformplay',
-          spec: 'api-platformplay/documentations-huma.json',
+          id: 'api-data-collection',
+          routePath: 'api-data-collection',
+          spec: 'api-data-collection/documentations-huma.json',
         }],
       }
     ]
@@ -121,9 +121,9 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'platformplay',
-        path: 'platformplay',
-        routeBasePath: 'platformplay',
+        id: 'data-collection',
+        path: 'data-collection',
+        routeBasePath: 'data-collection',
         editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
       },
     ],
