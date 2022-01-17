@@ -12,6 +12,8 @@ const DOCUSAURUS = {
     primaryText: '#f5f6f7',
     secondaryText: 'rgba(255, 255, 255, 1)',
     backgroundColor: 'rgb(24, 25, 26)',
+    innerDark: "#424347",
+    innderLight: "#636363",
   },
 };
 
@@ -55,15 +57,28 @@ const DARK_THEME_OPTIONS = {
     text: {
       primary: DOCUSAURUS.dark.primaryText,
       secondary: DOCUSAURUS.dark.secondaryText,
+      grey: DOCUSAURUS.dark.primaryText,
     },
     gray: {
-      50: '#FAFAFA',
+      50: '#787878',
       100: '#F5F5F5',
     },
     border: {
       dark: '#ffffff',
       light: 'rgba(0,0,0, 0.1)',
     },
+    light: {
+      main: DOCUSAURUS.dark.innderLight
+    },
+    secondary: {
+      main: DOCUSAURUS.dark.primaryText,
+      contrastText: DOCUSAURUS.dark.innerDark,
+    }
+  },
+  typography: {
+    code: {
+      color: DOCUSAURUS.dark.innerDark,
+    }
   },
   schema: {
     nestedBackground: DOCUSAURUS.dark.backgroundColor,
@@ -76,6 +91,10 @@ const DARK_THEME_OPTIONS = {
     arrow: {
       color: DOCUSAURUS.dark.primaryText,
     },
+  },
+  modal: {
+    backgroundColor: DOCUSAURUS.dark.innerDark,
+    titleColor: DOCUSAURUS.dark.primaryText,
   },
 };
 

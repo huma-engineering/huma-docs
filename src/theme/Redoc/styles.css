@@ -4,12 +4,12 @@
 
 /* ------ Headings Overrides ------- */
 
-.redocusaurus h1 {
+.redocusaurus h1,
+.redocusaurus h2 {
   font-family: var(--ifm-font-family-secondary);
   color: var(--ifm-font-color-base);
 }
 
-.redocusaurus h2,
 .redocusaurus h3,
 .redocusaurus h4 {
   color: var(--ifm-font-color-base);

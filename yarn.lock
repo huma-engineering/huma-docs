@@ -1592,10 +1592,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@huma-engineering/huma-redoc@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.pkg.github.com/download/@huma-engineering/huma-redoc/1.0.3/97843f2fac1fca6c94d48ff86dfd0cdafd1237adf30b9b105e2d0b194e4fc8e0"
-  integrity sha512-nrPhIpXzSACdvuRjpBlD4xGnny4Bws7Z2L9DIy++XSAgNUPehzqULbXdt0IJVzJjpExKJZKN2V020gR4hGOHFg==
+"@huma-engineering/huma-redoc@^1.0.5":
+  version "1.0.5"
+  resolved "https://npm.pkg.github.com/download/@huma-engineering/huma-redoc/1.0.5/0b52d7451b85efa61f11645af345b6253d927bd999b8af0a04b407e1d28e0935"
+  integrity sha512-ED9qdguXwlkXelEkt1wwbQyxwn1FsItH3Oxch0QPO6zreCBlGhaTK+Mvv/+pNh/CME8vRbOVbkpdmhWB31ZvRw==
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@redocly/openapi-core" "^1.0.0-beta.54"
@@ -4482,7 +4482,7 @@ fs.realpath@^1.0.0:
 
 fsevents@~2.3.2:
   version "2.3.2"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.1:
@@ -7252,7 +7252,7 @@ react-base16-styling@^0.6.0:
 
 react-dev-utils@12.0.0-next.47:
   version "12.0.0-next.47"
-  resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-12.0.0-next.47.tgz"
+  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-12.0.0-next.47.tgz#e55c31a05eb30cfd69ca516e8b87d61724e880fb"
   integrity sha512-PsE71vP15TZMmp/RZKOJC4fYD5Pvt0+wCoyG3QHclto0d4FyIJI78xGRICOOThZFROqgXYlZP6ddmeybm+jO4w==
   dependencies:
     "@babel/code-frame" "^7.10.4"
@@ -7291,7 +7291,7 @@ react-dom@^17.0.1:
 
 react-error-overlay@7.0.0-next.54+1465357b:
   version "7.0.0-next.54"
-  resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-7.0.0-next.54.tgz"
+  resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-7.0.0-next.54.tgz#c1eb5ab86aee15e9552e6d97897b08f2bd06d140"
   integrity sha512-b96CiTnZahXPDNH9MKplvt5+jD+BkxDw7q5R3jnkUXze/ux1pLv32BBZmlj0OfCUeMqyz4sAmF+0ccJGVMlpXw==
 
 react-error-overlay@^6.0.9:

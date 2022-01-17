@@ -108,7 +108,7 @@ module.exports = {
           id: 'api-data-collection',
           routePath: 'api-data-collection',
           spec: 'api-data-collection/documentations-huma.json',
-        }],
+        }]
       }
     ]
   ],
