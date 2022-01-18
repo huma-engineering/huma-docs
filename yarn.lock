@@ -1592,10 +1592,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@huma-engineering/huma-redoc@^1.0.6":
-  version "1.0.6"
-  resolved "https://npm.pkg.github.com/download/@huma-engineering/huma-redoc/1.0.6/c1a9f5abd4e4661b9d0c3181dffe3957a15488aece1489a8591b98b46fa836b3#ab4ac8109002ccdb7a0637fa47f5eb6c213f794b"
-  integrity sha512-iq4leMt5xRxcefnY8zgs8KKurJ7DEmeLp9LCGuwLgjvR8uRZXX0gBfX0LNqzO+MTXY6LSwm9W53M8kmtPw50Sg==
+"@huma-engineering/huma-redoc@^1.0.7":
+  version "1.0.7"
+  resolved "https://npm.pkg.github.com/download/@huma-engineering/huma-redoc/1.0.7/da91e477ff781f47494add39cb025225e97edbf1c71264c04593141df5bc76a3#04f8928dd5f9087897515ef5cb475455f21dacad"
+  integrity sha512-+/BOlogFeb5ECqis0JfI2il0M2mGjO+bCqpRmeayd+YW6oTY5rZF3AP1NVIpE9ij1J0T91ZyP9vV70kAYQYP9g==
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@redocly/openapi-core" "^1.0.0-beta.54"
