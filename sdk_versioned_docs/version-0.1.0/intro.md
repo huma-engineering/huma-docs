@@ -7,12 +7,13 @@ Huma SDK is a set of software tools that developers can use to build or enhance 
 
 ## SDK Libraries
 
-- [Huma Authentication](Authentication/iOS)
-- [Huma Charts](Charts/iOS)
-- [Huma Object Storage](Object%20Storage/iOS)
-- [Huma Coordinator (iOS only)](Coordinator/iOS)
-- [Huma UI](UI/iOS)
-- [Huma Utilities](Utilites/iOS)
+- [Authentication](Authentication/iOS)
+- [Charts](Charts/iOS)
+- [Coordinator (iOS only)](Coordinator/iOS)
+- [Device Kit (mobile only)](Device%20Kit/iOS)
+- [Object Storage](Object%20Storage/iOS)
+- [UI](UI/iOS)
+- [Utilities](Utilites/iOS)
 
 
 
