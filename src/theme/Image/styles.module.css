@@ -1,0 +1,7 @@
+.img {
+  max-width: 100%;
+} 
+
+.imgBorder {
+  border: 1px solid var(--ifm-color-dark);
+}
