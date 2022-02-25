@@ -13,7 +13,7 @@ module.exports = {
     authors: {
       team: {
         name: 'Huma team',
-        link: 'https://twitter.com/huma',
+        link: 'https://twitter.com/humaforhealth',
         title: 'Developer, Manager',
         image: 'sample-profile-img.jpg'
       }
@@ -41,13 +41,6 @@ module.exports = {
           ],
         },
         {
-          type: 'doc',
-          position: 'left',
-          label: 'SDK',
-          docsPluginId: 'sdk',
-          docId: 'intro',
-        },
-        {
           type: 'dropdown',
           position: 'left',
           label: 'API',
@@ -66,17 +59,24 @@ module.exports = {
           ],
         },
         {
+          type: 'doc',
+          position: 'left',
+          label: 'SDK',
+          docsPluginId: 'sdk',
+          docId: 'intro',
+        },
+        {
           type: 'docsVersionDropdown',
           docsPluginId: 'data-collection',
           position: 'right',
         },
         {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'sdk',
+          type: 'localeDropdown',
           position: 'right',
         },
         {
-          type: 'localeDropdown',
+          type: 'docsVersionDropdown',
+          docsPluginId: 'sdk',
           position: 'right',
         },
       ],
@@ -118,7 +118,7 @@ module.exports = {
         id: 'data-collection',
         path: 'data-collection',
         routeBasePath: 'data-collection',
-        editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
+        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
     [
