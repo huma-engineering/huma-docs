@@ -66,11 +66,6 @@ module.exports = {
           docId: 'intro',
         },
         {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'data-collection',
-          position: 'right',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
