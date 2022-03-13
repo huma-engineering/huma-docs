@@ -36,7 +36,7 @@ module.exports = {
               type: 'doc',
               label: 'Data collection',
               docsPluginId: 'data-collection',
-              docId: 'intro',
+              docId: 'overview',
             },
           ],
         },
