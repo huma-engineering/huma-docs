@@ -1,14 +1,13 @@
 .ri-container {
     border: 1px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ifm-global-radius);
+    padding: 15px;
     display: block;
-    padding: 0.75rem;
     margin-bottom: 1rem;
 }
 
 .ri-description-short {
     display: flex;
-
 }
 
 .ri-detail {
