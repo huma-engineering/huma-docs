@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - env:
-        GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_RO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_RO_TOKEN }}
         run: make build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
