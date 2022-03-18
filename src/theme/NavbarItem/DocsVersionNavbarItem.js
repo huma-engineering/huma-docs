@@ -6,7 +6,10 @@
  */
 import React from 'react';
 import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
-import {useActiveVersion, useLatestVersion} from '@theme/hooks/useDocs';
+import {
+  useActiveVersion,
+  useLatestVersion,
+} from '@docusaurus/plugin-content-docs/client';
 import {useDocsPreferredVersion} from '@docusaurus/theme-common';
 
 const getVersionMainDoc = (version) =>
