@@ -12,9 +12,9 @@ import {
   MobileSecondaryMenuFiller,
   ThemeClassNames,
   useScrollPosition,
-  useLocalPathname
+  useLocalPathname,
+  useWindowSize
 } from '@docusaurus/theme-common';
-import useWindowSize from '@theme/hooks/useWindowSize';
 import Logo from '@theme/Logo';
 import IconArrow from '@theme/IconArrow';
 import { translate } from '@docusaurus/Translate';

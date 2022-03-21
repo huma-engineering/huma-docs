@@ -6,7 +6,10 @@
  */
 import React from 'react';
 import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
-import {useLatestVersion, useActiveDocContext} from '@theme/hooks/useDocs';
+import {
+  useLatestVersion,
+  useActiveDocContext,
+} from '@docusaurus/plugin-content-docs/client';
 import clsx from 'clsx';
 import {getInfimaActiveClassName} from './index';
 import {useDocsPreferredVersion} from '@docusaurus/theme-common';

@@ -1,5 +1,5 @@
 import React, { useMemo, useEffect } from 'react';
-import useThemeContext from '@theme/hooks/useThemeContext';
+import {useColorMode} from '@docusaurus/theme-common';
 import { Redoc as RedocComponent, RedocStandalone, AppStore } from '@huma-engineering/huma-redoc';
 import { RedocProps as Props } from '../../types/common';
 import {lightTheme, darkTheme, redocOptions} from "./redocData";
@@ -13,7 +13,7 @@ import './styles.css';
  * Released under the MIT License
  */
 function Redoc(props: Props): JSX.Element {
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme } = useColorMode();
 
   const theme = isDarkTheme ? darkTheme : lightTheme;
   const { spec, specUrl } = props;
