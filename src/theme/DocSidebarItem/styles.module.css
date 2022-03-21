@@ -9,22 +9,6 @@
   position: relative;
 }
 
-/* .menuLink::before {
-  content: '';
-  width: 6px;
-  height: 9px;
-  position: absolute;
-  right: -4px;
-  top: calc(50% - 4.5px);
-  transform-origin: center left;
-  transform: scaleX(0) rotate(-180deg);
-  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='5px' height='7.6px' viewBox='0 0 5 7.6' style='enable-background:new 0 0 5 7.6;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23424347;%7D%0A%3C/style%3E%3Cpath class='st0' d='M0,7.6l5-3.8L0,0V7.6z'/%3E%3C/svg%3E");
-  background-position: center center;
-  background-size: 100%;
-  filter: var(--ifm-menu-link-sublist-icon-filter);
-  transition: transform 300ms ease;
-} */
-
 .menuLink::after {
   content: "";
   width: 2px;
@@ -37,7 +21,7 @@
   transition: opacity 600ms ease;
 }
 
-.menuLink:global(.menu__link--active)::after {
+.menuLink:global(.menu__link--active)::after, .menuLink:global(.menu__list-item-collapsible--active)::after {
   opacity: 1;
 }
 
@@ -55,7 +39,14 @@
 }
 
 @media (max-width: 997px) {
-  .menuLink::after, .menuLink::before {
+  .menuLink::after,
+  .menuLink::before {
     display: none;
+  }
+}
+
+@media (min-width: 997px) {
+  .menuHtmlItem {
+    padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
   }
 }
