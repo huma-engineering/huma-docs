@@ -20,6 +20,7 @@ module.exports = {
     }
   },
   themeConfig: {
+    autoCollapseSidebarCategories: true,
     navbar: {
       title: '',
       logo: {

@@ -121,6 +121,7 @@
   --ifm-navbar-padding-vertical-extra: 3rem;
   --ifm-navbar-padding-vertical-extra-mobile: 22px;
   --imf-container-padding: 40px;
+  --ifm-menu-link-padding-horizontal: 14px;
 }
 
 html[data-theme="dark"] {

@@ -4,29 +4,32 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React, { useState } from 'react';
+
+import React, {useState} from 'react';
 import clsx from 'clsx';
 import {
   useThemeConfig,
   useAnnouncementBar,
   MobileSecondaryMenuFiller,
+  type MobileSecondaryMenuComponent,
   ThemeClassNames,
   useScrollPosition,
-  useLocalPathname,
-  useWindowSize
+  useWindowSize,
 } from '@docusaurus/theme-common';
 import Logo from '@theme/Logo';
 import IconArrow from '@theme/IconArrow';
-import { translate } from '@docusaurus/Translate';
-import { DocSidebarItems } from '@theme/DocSidebarItem';
-import NavbarItem from '@theme/NavbarItem';
+import {translate} from '@docusaurus/Translate';
+import DocSidebarItems from '@theme/DocSidebarItems';
+import type {Props} from '@theme/DocSidebar';
+
 import styles from './styles.module.css';
 
 function useShowAnnouncementBar() {
-  const { isActive } = useAnnouncementBar();
+  const {isActive} = useAnnouncementBar();
   const [showAnnouncementBar, setShowAnnouncementBar] = useState(isActive);
+
   useScrollPosition(
-    ({ scrollY }) => {
+    ({scrollY}) => {
       if (isActive) {
         setShowAnnouncementBar(scrollY === 0);
       }
@@ -36,7 +39,7 @@ function useShowAnnouncementBar() {
   return isActive && showAnnouncementBar;
 }
 
-function HideableSidebarButton({ onClick }) {
+function HideableSidebarButton({onClick}: {onClick: React.MouseEventHandler}) {
   return (
     <button
       type="button"
@@ -60,15 +63,12 @@ function HideableSidebarButton({ onClick }) {
   );
 }
 
-function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
+function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}: Props) {
   const showAnnouncementBar = useShowAnnouncementBar();
   const {
-    navbar: { hideOnScroll, items },
+    navbar: {hideOnScroll},
     hideableSidebar,
-
   } = useThemeConfig();
-
-  const localPathname = useLocalPathname();
 
   return (
     <div
@@ -77,10 +77,6 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
         [styles.sidebarHidden]: isHidden,
       })}>
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
-
-      {items.map((item, i) => (
-        item.type == "docsVersionDropdown" && (localPathname.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
-      ))}
       <nav
         className={clsx('menu thin-scrollbar', styles.menu, {
           [styles.menuWithAnnouncementBar]: showAnnouncementBar,
@@ -94,29 +90,31 @@ function DocSidebarDesktop({ path, sidebar, onCollapse, isHidden }) {
   );
 }
 
-const DocSidebarMobileSecondaryMenu = ({ toggleSidebar, sidebar, path }) => {
+// eslint-disable-next-line react/function-component-definition
+const DocSidebarMobileSecondaryMenu: MobileSecondaryMenuComponent<Props> = ({
+  toggleSidebar,
+  sidebar,
+  path,
+}) => (
+  <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list')}>
+    <DocSidebarItems
+      items={sidebar}
+      activePath={path}
+      onItemClick={(item) => {
+        // Mobile sidebar should only be closed if the category has a link
+        if (item.type === 'category' && item.href) {
+          toggleSidebar();
+        }
+        if (item.type === 'link') {
+          toggleSidebar();
+        }
+      }}
+      level={1}
+    />
+  </ul>
+);
 
-  const {navbar: { items }} = useThemeConfig();
-  const localPathname = useLocalPathname();
-
-  return (
-    <>
-      {items.map((item, i) => (
-        item.type == "docsVersionDropdown" && (localPathname.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
-      ))}
-      <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, 'menu__list')}>
-        <DocSidebarItems
-          items={sidebar}
-          activePath={path}
-          onItemClick={() => toggleSidebar()}
-          level={1}
-        />
-      </ul>
-    </>
-  );
-};
-
-function DocSidebarMobile(props) {
+function DocSidebarMobile(props: Props) {
   return (
     <MobileSecondaryMenuFiller
       component={DocSidebarMobileSecondaryMenu}
@@ -127,13 +125,17 @@ function DocSidebarMobile(props) {
 
 const DocSidebarDesktopMemo = React.memo(DocSidebarDesktop);
 const DocSidebarMobileMemo = React.memo(DocSidebarMobile);
-export default function DocSidebar(props) {
-  const windowSize = useWindowSize(); // Desktop sidebar visible on hydration: need SSR rendering
 
+export default function DocSidebar(props: Props): JSX.Element {
+  const windowSize = useWindowSize();
+
+  // Desktop sidebar visible on hydration: need SSR rendering
   const shouldRenderSidebarDesktop =
-    windowSize === 'desktop' || windowSize === 'ssr'; // Mobile sidebar not visible on hydration: can avoid SSR rendering
+    windowSize === 'desktop' || windowSize === 'ssr';
 
+  // Mobile sidebar not visible on hydration: can avoid SSR rendering
   const shouldRenderSidebarMobile = windowSize === 'mobile';
+
   return (
     <>
       {shouldRenderSidebarDesktop && <DocSidebarDesktopMemo {...props} />}
