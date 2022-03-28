@@ -452,3 +452,7 @@ html[data-theme="dark"] {
     padding-right: var(--ifm-spacing-horizontal);
   }
 }
+
+.pb-2 {
+  padding-bottom: 2rem !important;
+}
