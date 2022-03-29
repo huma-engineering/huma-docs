@@ -7,50 +7,7 @@ title: Clinical Portal
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
-import CardList from '@theme/CardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-export const filters = [
-  {key: 'region', label: 'Regions'},
-  {key: 'industry', label: 'Industries'},
-  {key: 'area', label: 'Focus area'},
-]
-
-export const list = [
-  {
-    type: 'link', 
-    label: 'Label 1',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    img: require('../assets/thumb.png').default,
-    href: '/data-collection/clinicanportal/setup_account',
-    filters: {region: ['USA', 'Asia', 'Europe'], industry: ['Education'], area: ['Privacy']},
-  },
-  {
-    type: 'link', 
-    label: 'Label 2',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply",
-    img: require('../assets/thumb.png').default,
-    href: '/data-collection/clinicanportal/setup_account',
-    filters: {region: ['USA'], industry: ['Financial'], area: ['Quality']},
-  },
-  {
-    type: 'link', 
-    label: 'Label 3',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    img: require('../assets/thumb.png').default,
-    href: '/data-collection/clinicanportal/setup_account',
-    filters: {region: ['Asia'], industry: ['Financial'], area: ['Privacy', 'Quality']},
-  },
-  {
-    type: 'link', 
-    label: 'Label 4',
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    img: require('../assets/thumb.png').default,
-    href: '/data-collection/clinicanportal/setup_account',
-    filters: {region: ['Asia'], industry: ['Financial'], area: ['Privacy']},
-  }
-]
-
 <DocCardList items={useCurrentSidebarCategory().items}/>
-<CardList items={list} filters={filters} cols={3} learnMore/>
 ```
