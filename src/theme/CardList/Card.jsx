@@ -8,7 +8,7 @@ import { translate } from '@docusaurus/Translate';
 
 function CardContainer({ href, children }) {
   const className = clsx(
-    'card margin-bottom--lg',
+    'card',
     styles.cardContainer,
     href && styles.cardContainerLink,
   );
@@ -22,10 +22,10 @@ function CardContainer({ href, children }) {
 }
 
 
-function CardLayout({ href, img, title, description, learnMore }) {
+function CardLayout({ href, label, title, description, learnMore }) {
   return (
     <CardContainer href={href}>
-      <div className={styles.cardImg} style={{ backgroundImage: `url(${img})` }}></div>
+      <div className={styles.cardImg} style={{ backgroundImage: `url(/img/circle.svg)` }}><div dangerouslySetInnerHTML={{ __html: label }}></div></div>
       <div className={`${styles.cardInner}`}>
         <div>
           <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
@@ -39,8 +39,8 @@ function CardLayout({ href, img, title, description, learnMore }) {
         </div>
         {(learnMore && href) && <Link className={`${styles.cardLearnMore}`}>{translate(
           {
-            message: 'Learn more',
-            id: 'theme.docs.Card.learnMore',
+            message: 'Read more',
+            id: 'theme.docs.Card.readMore',
           })}
         </Link>
         }
@@ -75,6 +75,7 @@ function CardLink({ item, learnMore }) {
       href={item.href}
       img={item.img}
       title={item.label}
+      label={item.label2}
       description={item?.description}
       learnMore={learnMore}
     />

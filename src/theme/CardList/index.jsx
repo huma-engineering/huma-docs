@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
-import Select from 'react-select';
+import Select from '../../components/Select'
 import { translate } from '@docusaurus/Translate';
 import styles from './styles.module.css';
 
