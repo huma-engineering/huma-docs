@@ -1,0 +1,38 @@
+---
+sidebar_position: 2
+---
+
+# Compliance centre
+
+To help you with compliance and reporting, we share information, best practices, and easy access to documentation. Our products regularly undergo independent verification of security, privacy, and compliance controls, achieving certifications against global standards to earn your trust. We're constantly working to expand our coverage.
+
+This site contains information about our certifications and compliance standards it satisfies as well as general information about certain region or sector-specific regulations.
+
+```mdx-code-block
+import CardList from '@theme/CardList';
+
+export const filters = [
+  {key: 'region', label: 'Regions'},
+  {key: 'industry', label: 'Industries'},
+  {key: 'area', label: 'Focus area'},
+]
+
+export const list = [
+  {
+    type: 'link',
+    label: 'ISO/IEC 27001',
+    label2: 'ISO/IEC 27001',
+    href: '/trust-security/compliance/iso27001', 
+    filters: {region: ['UK', 'US','All regions'], industry: ['Healthcare', 'Life sciences'], area: ['Security']},
+  },
+  {
+    type: 'link',
+    label: 'ISO/IEC 13485',
+    label2: 'ISO/IEC 13485',
+    href: '/trust-security/compliance/iso13485', 
+    filters: {region: ['UK', 'All regions'], industry: ['Healthcare'], area: ['Risk management']},
+  },
+]
+
+<CardList items={list} filters={filters} cols={3} learnMore/>
+```

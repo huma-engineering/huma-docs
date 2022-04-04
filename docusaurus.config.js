@@ -21,6 +21,10 @@ module.exports = {
   },
   themeConfig: {
     autoCollapseSidebarCategories: true,
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+    },
     navbar: {
       title: '',
       logo: {
@@ -31,7 +35,7 @@ module.exports = {
         {
           type: 'dropdown',
           position: 'left',
-          label: 'Docs',
+          label: 'Product documentation',
           items: [
             {
               type: 'doc',
@@ -67,6 +71,19 @@ module.exports = {
           docId: 'intro',
         },
         {
+          type: 'dropdown',
+          position: 'left',
+          label: 'Resources',
+          items: [
+            {
+              type: 'doc',
+              label: 'Trust & Security',
+              docsPluginId: 'trust-security',
+              docId: 'index',
+            },
+          ],
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -74,6 +91,12 @@ module.exports = {
           type: 'docsVersionDropdown',
           docsPluginId: 'sdk',
           position: 'right',
+        },
+        {
+          href: 'https://github.com/huma-engineering/huma-docs',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -131,6 +154,15 @@ module.exports = {
         id: 'sdk',
         path: 'sdk',
         routeBasePath: 'sdk',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'trust-security',
+        path: 'trust-security',
+        routeBasePath: 'trust-security',
+        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
   ],
