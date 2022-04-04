@@ -77,8 +77,8 @@ module.exports = {
           items: [
             {
               type: 'doc',
-              label: 'Compliance centre',
-              docsPluginId: 'compliance-centre',
+              label: 'Trust & Security',
+              docsPluginId: 'trust-security',
               docId: 'index',
             },
           ],
@@ -93,7 +93,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/huma-engineering',
+          href: 'https://github.com/huma-engineering/huma-docs',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -159,9 +159,9 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'compliance-centre',
-        path: 'compliance-centre',
-        routeBasePath: 'compliance-centre',
+        id: 'trust-security',
+        path: 'trust-security',
+        routeBasePath: 'trust-security',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
