@@ -6,7 +6,7 @@ name: Deploy to Firebase Hosting on PR comment
 
 jobs:
   build_and_preview:
-    if: ${{ contains(github.event.comment.html_url, '/pull/') contains(github.event.comment.body, '/deploy-pr-preview') }}
+    if: ${{ contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/deploy-pr-preview') }}
     runs-on: ubuntu-latest
     environment: pr-preview
     steps:
