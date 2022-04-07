@@ -1,6 +1,7 @@
 name: Deploy to Firebase Hosting on PR comment
 
-on:  
+on:
+  pull_request: 
   issue_comment:
     types: [created]
 
