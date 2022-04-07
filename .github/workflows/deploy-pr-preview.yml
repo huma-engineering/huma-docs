@@ -8,7 +8,7 @@ jobs:
   build_and_preview:
     if: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
-    #environment: pr-preview
+    environment: pr-preview
     steps:
       - uses: actions/checkout@v2
       - env:
