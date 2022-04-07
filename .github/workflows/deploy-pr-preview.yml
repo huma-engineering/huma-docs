@@ -1,19 +1,21 @@
-name: Deploy to Firebase Hosting on PR comment
+name: Deploy to Firebase Hosting on PR
 
-'on': 
-  issue_comment:
-    types: [created]
+on: pull_request
+
+# => in case later, somebody is interested in deploying by comment
+  # issue_comment:
+  #   types: [created]
+  # if: ${{ contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/deploy-pr-preview') }}
 
 jobs:
   build_and_preview:
-    if: ${{ contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/deploy-pr-preview') }}
     runs-on: ubuntu-latest
     environment: pr-preview
     steps:
       - uses: actions/checkout@v2
       - env:
           GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_RO_TOKEN }}
-        run: echo 'test' #yarn && make build
+        run: yarn && make build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
