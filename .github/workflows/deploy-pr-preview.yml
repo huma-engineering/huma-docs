@@ -1,13 +1,12 @@
 name: Deploy to Firebase Hosting on PR comment
 
-on:
-  pull_request: 
-  issue_comment:
-    types: [created]
+on: pull_request: 
+#   issue_comment:
+#     types: [created]
 
 jobs:
   build_and_preview:
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.issue.pull_request != '' && contains(github.event.comment.body, '/deploy-pr-preview') }}
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     #environment: pr-preview
     steps:
