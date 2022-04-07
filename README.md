@@ -2,6 +2,17 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+## Project layout
+
+Each site has one or two [code owner](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners). Please find owner list [here](.github/CODEOWNERS).
+
+## Running localy
+
+1. Generate a github token with read permission to github packages.
+2. Export as an environment variable: `$ export GITHUB_TOKEN=<generated token>`
+3. Run `yarn && yarn start`
+4. Docusarus supports auto reload, but sometimes repeating step 3 is necessary.
+
 ## Installation
 
 This website is using our [Github Package](https://github.com/huma-engineering/huma-redoc) for OpenAPI Integration. To install our Github Package, You need to add the `.npmrc` file to your project so that all requests to install packages will go through GitHub Packages.
