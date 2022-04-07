@@ -72,9 +72,9 @@ The multiple specifications can be added to the docusaurus.config.js:
         'redocusaurus',
             {
             specs: [{
-                    id: 'api-platformplay',
-                    routePath: 'api-platformplay',
-                    spec: 'api-platformplay/documentations.json',
+                    id: 'api-data-collection',
+                    routePath: 'api-data-collection',
+                    spec: 'api-data-collection/documentations.json',
                 }],
             }
         ]
@@ -107,10 +107,10 @@ Each plugin instance will have its own cli command to tag a new version. They wi
 yarn docusaurus -- --help
 ```
 
-To version platformplay docs plugin instance:
+To version sdk docs plugin instance:
 
 ```bash npm2yarn
-yarn docusaurus docs:version:platformplay 1.16.0
+yarn docusaurus docs:version:sdk 1.16.0
 ```
 
 ## Theme Components
