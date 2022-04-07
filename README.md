@@ -37,6 +37,12 @@ yarn install
 yarn start
 ```
 
+or 
+
+```
+make serve
+```
+
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Additionally used plugins:
@@ -82,7 +88,6 @@ The multiple specifications can be added to the docusaurus.config.js:
 
 ### Our current versioned instances:
 
-- platformplay
 - sdk
 
 ### Versioned paths
