@@ -2,7 +2,7 @@
   "hosting": [
     {
       "site": "huma-docs",
-      "public": "testbuild",
+      "public": "build",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -11,7 +11,7 @@
     },
     {
       "site": "huma-docs-preview",
-      "public": "testbuild",
+      "public": "build",
       "ignore": [
         "firebase.json",
         "**/.*",
