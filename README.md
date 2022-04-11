@@ -2,6 +2,11 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+## Environments
+
+- Live Preview: https://huma-docs-preview.web.app/
+- Live View: @TBD
+
 ## Project layout
 
 Each site has one or two [code owner](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners). Please find owner list [here](.github/CODEOWNERS).
