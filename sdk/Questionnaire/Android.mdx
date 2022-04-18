@@ -1,0 +1,166 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that implements questionnaire flow
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+1. Register activity result launcher:
+```kotlin
+ private val questionnaireLauncher = QuestionnaireActivity.registerForResult(this) { 
+    it.ifOk { questionnaireViewData -> }
+    it.ifError { errorCode -> }
+ }
+```
+2. Start questionnaire activity:
+```kotlin
+questionnaireLauncher.launch(QuestionnaireActivity.getLauncherIntent(
+        context = this,
+        getQuestionnaireParams = GetQuestionnaireParams.QuestionnaireId("id"), // will use QuestionnaireSourceRepository
+        // or GetQuestionnaireParams.QuestionnaireForm(TestForm.get()),
+        title = "Title",
+        useBackButton = true,
+        welcomeBundle = WelcomeBundle(
+            R.drawable.ic_baseline_image_24,
+            R.string.welcome_to_huma,
+            R.string.common_action_next,
+            R.string.welcome_to_huma,
+            true,
+        WelcomeBundle.BackNavigation.DeviceBackButton
+    )
+))
+```
+
+### Customization
+
+* **QuestionnaireSourceRepository** - questionnaire source provider, returns proper `ItemSource` 
+* **RegisterQuestionParams** - used to extend questionnaires with custom questions
+```kotlin
+data class RegisterQuestionParams(
+    val questionType: QuestionType, // defines question type
+    val identifyViewDataDelegate: (QuestionnaireStepViewData) -> Boolean, // determines whether view data belongs is of this question type
+    val createViewHolderDelegate: CreateViewHolderDelegate, // used to create a view holder
+    val pageToViewDataConverter: (
+        FormPage, FormPageToQuestionnaireStepViewDataConverter.LoopFormData?
+    ) -> QuestionnaireStepViewData // converts FormPage to QuestionnaireStepViewData
+)
+
+typealias CreateViewHolderDelegate = (
+    parent: ViewGroup,
+    editQuestionListener: (question: QuestionViewData<*>) -> Unit,
+    answerChangeListener: () -> Unit,
+    launchFlowListener: (LaunchFlowParams) -> Unit,
+    orientation: Int
+) -> QuestionViewHolder
+```
+* **CommonValidator** - defines default questions validation, which is used unless custom `AnswerValidation` is provided (such as validating `lowerBound`, `upperBound` in `NumberQuestionViewData`: 
+
+`fun isValid(question: QuestionViewData<*>): Boolean`
+
+### Preferred units
+
+You can declare a question answer converter which will transform it into a proper `QuestionAnswerViewData` for a default measurement unit, see:  
+```kotlin
+HumaQuestionnaireManager.getInstance().setQuestionAnswerConverter(/*..*/)`
+```
+
+Preferred unit page builder extension function sample:
+
+```kotlin
+fun Pages.height(
+    preferredUnitsContainer: PreferredUnitsContainer,
+    pageId: String,
+    titleStringResId: Int = R.string.onboarding_questionnaire_height,
+    minHeightInCm: Int = MIN_HEIGHT_CM,
+    maxHeightInCm: Int = MAX_HEIGHT_CM
+) {
+    val manager = HumaQuestionnaireManager.getInstance()
+    val unitType = HeightMeasurementUnitType()
+    val defaultUnit = unitType.getDefaultUnit()
+    when (val unit = preferredUnitsContainer.getPreferredUnit(unitType)) {
+        HeightMeasurementUnit.Cm -> {
+            numeric { /*..*/ }
+            manager.setQuestionAnswerConverter(pageId) { answerViewData ->
+                answerViewData as NumberQuestionAnswerViewData
+                val convertedValue = unitType.convert(answerViewData.value, from = unit, to = defaultUnit)
+                NumberQuestionAnswerViewData(convertedValue)
+            }
+        }
+        HeightMeasurementUnit.FtIn -> {
+            twoPickerChoice { /*..*/ }
+            manager.setQuestionAnswerConverter(pageId) { answerViewData ->
+                answerViewData as TwoPickerSelectionQuestionAnswerViewData
+                val feet = FtAndInches.fromPair(answerViewData.value).toFeet()
+                val convertedValue = unitType.convert(feet, from = unit, to = defaultUnit)
+                NumberQuestionAnswerViewData(convertedValue)
+            }
+        }
+    }
+}
+```
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:questionnaire:<latest-version>")
+```
+2. Initialize `HumaQuestionnaireManager` in your Application class:
+```kotlin
+HumaQuestionnaireManager.init(
+   questionnaireSourceRepository: QuestionnaireSourceRepository,
+   questions: List<RegisterQuestionParams> = emptyList(),
+   commonValidator: CommonValidator? = null
+)
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+**Questionnaire** — component which is made of pages (steps) and used for gathering certain user data (such as pregnancy status, quality of life etc.). 
+
+**Questionnaire page** — one of steps in questionnaire which can be either a question or an info page. The last page is called a **submission page**. 
+
+**Form** — app component which is used to define a questionnaire using `FormBuilder` extension functions.
+
+**ItemSource** - app component which manages the questionnaire flow (determining proper next question, validating defined `Rule` and `Condition` etc).
+
+# Notes and guidelines
+
+### Question answers
+
+To get a proper **question answer**, make sure you're using `getAnswerForSubmission()` function which applies required conversions if any (`answer` property contains the original answer)
+
+### Questionnaire pages
+
+There is different **types of pages** such as info, text, numeric, date etc. See the subclasses of `BasePage`. Pages share common fields such as `id`, `isRequired` etc. Avoid using these classes directly, instead use `PageBuilder` extension functions.
+
+Pages can contain **branching logic** which changes further questionnaire flow (jumps to proper questions) depending on your answers. Use `LogicBuilder` and `LogicExt` extensions functions to add branching logic. 
+
+Pages can contain **looping logic** for cases when we need to repeat the same question multiple times. Use `LoopBuilder` extension functions to add looping logic.
+
+Pages can contain **validation** which is defined by `AnswerValidation` subclasses. Use `ValidationBuilder` to add validation. See how `ValidationStatus` can be handled for the best UX in `TextQuestionViewHolder`.
+
+
+If you want to declare a **submission page** you can either use `SubmissionPage` or set `isSubmissionpage` to `true`. The latter is useful when you want to finish a questionnaire from a custom page type
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+Changelog
+</TabItem>
+</Tabs>
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+
+ ### Dependencies
+- [Utilities](../Utilities/Android)

@@ -7,23 +7,50 @@ import TabItem from '@theme/TabItem';
 
 
 # Android
-Library that provides a set of Storage components and flows required to build new products.
+Library that encapsulates remote storage operations to upload/download files
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+Uploading a file:
+```kotlin
+HumaObjectStorageManager.getInstance().uploadFile(
+            filepath, // file path
+            uploadProgress, // MutableLiveData<Int>, will consume 0-100 progress percentage values
+            { s3Object -> /*file uploaded successfully*/ },
+            { error -> /*failed to upload the file*/ }
+)
+```
+Getting file download url:
+```kotlin
+HumaObjectStorageManager.getInstance().getDownloadUrl(
+            s3ObjectKey,
+            s3ObjectBucket,
+            { url -> /*download url is ready*/ },
+            { error -> /*failed to get download url*/ }
+)
+```
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:object-storage:<latest-version>")
+```
+2. Initialize `HumaUtilsManager` and `HumaObjectStoreManager` in your Application class:
+```kotlin
+HumaUtilsManager.init(/*..*/)
+HumaObjectStorageManager.init(/*..*/)
+```
+
 </TabItem>
 <TabItem value="readme" label="Readme" default>
   Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
 </TabItem>
 <TabItem value="changelog" label="Changelog">
-
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
-  
+  Changelog  
 </TabItem>
 </Tabs>
 
@@ -31,5 +58,4 @@ Library that provides a set of Storage components and flows required to build ne
 [API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
 
  ### Dependencies
-- Dependency A
-- Dependency B
+- [Utilities](../Utilities/Android)
