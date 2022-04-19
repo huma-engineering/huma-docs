@@ -6,23 +6,225 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
+
 # Android
 Library that provides base layer of support for huma modules in application. It creates an abstraction layer that defindes structure of a module. Provides storage for modules. Contain default behaviours.
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+### **How to create a module**
+
+  To create new module you need to override `Module` interface. Then register it in `HumaModuleKitManaget` via this function:
+
+  ```kt
+    HumaModuleKitManager.registerModule(moduleConfigId: String, module: Module)
+  ```
+
+  Where `moduleConfigId` is unique id of a module.
+
+  If you want to register several modules in one batch you can use:
+
+  ```kt
+    HumaModuleKitManager.registerModules(vararg modules: Pair<ModuleConfigId, Module>)
+  ```
+
+  *Module Kit* has base abstract implementaion of `Module` - `BaseModule`. It provides basic configuration for a module. It's _recomended_ to use it as base class for all modules.
+
+  #### **How to get instance of a module**
+
+  After you created a module and register it you can get it instance by `moduleConfigId` or get a list of all registered modules.
+
+  ***By Id***
+  ```kt
+    HumaModuleKitManager.provideModule(moduleConfigId: String)
+  ```
+
+  ***List of modules***
+  ```kt
+    HumaModuleKitManager.modules
+  ```
+
+  #### **How to clear modules cache**
+
+  To clear modules cache you can use this function:
+  ```kt
+    HumaModuleKitManager.clearModuleCache()
+  ```
+
+  After it you need to register required modules from scratch.
+
+  ### Module Types
+
+  Module types can inherent several behaviours 
+  * **ModuleWithDetails** - specify that module has details page
+  * **ModuleWithInput** - specify that module has input screen
+  
+  So if you want to have a module with details and input screen your configuration should look like this:
+
+```kt
+    lass YourModule: Module, ModuleWithDetails, ModuleWithInput
+
+    //Module can be replaced with BaseModule for convenience
+  ```
+#### Module With Details
+  For this type of module we have default behaviour that can be added to module configuration. It can be created via extenstion:
+
+```kt
+    private val detailsDelegate by defaultDetailsDelegate(moduleConfigId)
+
+    override val sections: List<Section> = listOf(...)
+
+    override fun openDetails(context: Context) {
+        detailsDelegate.openDetails(context)
+    }
+  ```
+
+Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections) will be rendered. It also checks if this module extetends from `ModuleWithInput` input button will be rendered.
+
+#### Module With Input
+  For this type of module we have default behaviour that can be added to module configuration. It can be created via extenstion:
+  ```kt
+    private val inputDelegate by defaultInputDelegate()
+
+    override val input: List<ModuleInputField>
+        get() = listOf(
+            dateField(),
+            timeField(),
+            //other fields
+        )
+
+    override fun openInput(context: Context, onSubmit: (ModuleInputResult) -> Unit) {
+        inputDelegate.openInput(context, onSubmit)
+    }
+
+  ```
+  Where `openInput` will open `ModuleInputActivity` where [input fields](#input-field) will be rendered. The result of input will be send to `onModuleInputSubmit` funtion. **Module Kit** has default delegate for storing data. It can be created via extension:
+
+  ```kt
+    /**
+     * This extention will create a post request to BE and will store primitive 
+     * to data base without fetching results from BE. 
+     * It used for modules where there is no calculation happening on BE side.
+     */
+    private val postDelegate by defaultPostDelegate(
+        ValueToPrimitiveConverter(),
+        PrimitiveToEntityConverter(),
+        moduleId,
+        moduleConfigId
+    )
+
+    /**
+      * **Alternalive**
+      * This extention will create a post request to BE and will store 
+      * primitive to data base without fetching results from BE. 
+      * It used for modules where we cannot calculate how BE will process our request. 
+      * Usually refresh job will be populated with refresh call for specified module.
+      */
+    private val postDelegate by defaultPostDelegateWithCustomRefresher(
+        ValueToPrimitiveConverter(),
+        moduleId,
+        moduleConfigId
+    ){
+      //refresh job
+    }
+
+    override fun onModuleInputSubmit(result: ModuleInputResult) {
+        postDelegate.postValue(result.values)
+    }
+  ```
+
+### Sections
+
+  Section represents a block of info on Module Details screen. To create new section you need to extend your class with `Section` interface.
+
+  ```kt
+    class YourSection : Section {
+
+      override fun render(context: Context): View {
+          return ViewToRender(context)
+      }
+    }
+  ```
+  **Module Kit** provides predefined sections that are ready to use:
+  * Schedule - for rendering schedule
+  * Reminders - allows to set reminders
+  * Chart - adds [Huma Charts](/sdk/next/Charts/Android) support. Used to rendred module data. Chart section require extra configuration. You need to provide data source that extends `ChartDataProvider`
+  * About - for rendering info about module
+  * Learn - adds a carousel of web articles
+  
+### Input field
+  Input fields that used in default input delegate should be created with `ModuleInputField` class. Module Kit provides `dateField()` and `timeField` fields via extentions. 
+
+  This is an exampe how to create new field:
+  ```kt
+    ModuleInputField(
+      placeholder = R.string.module_title,
+      inputConfig = ModuleInputField.InputConfig.SingleDefaultUnit.create(
+          inputType = TextInputType.Integer,
+          inputRange = InputRangeConfig(
+              min = MIN_VALUE,
+              max = MAX_VALUE
+          ),
+          unit = unitTitle
+      )
+    )
+  ```
+### Module Card
+  Every module that is extended from `BaseModule` is able to render card. `Module` interface also defines `moduleCard` field, but it do not contain any specific implementation. To make `ModuleCardView` work, `BaseModule` requires to provide `CardConfig` in child class.
+
+  ```kt
+    override val moduleCardConfig: CardConfig
+        get() = CardConfig(
+            title = moduleName,
+            addButtonText = inputButtonText,
+            cardData = { LiveData(CardData()) }
+        )
+  ```
+### Module Input Callback Factory
+  Callback factory is designed to create Promise-like callback for input screens. As we cannot directly access activity where we need to get results of input screen we send it via factory. You can inject it in you module via custom Koin Context `HumaSdkKoinComponent`. You can register callback and get UUID of callback.
+
+  ```kt
+    //register callback
+    val uuid = moduleInputCallbackFactory.registerCallback { ModuleInputResult -> 
+        //callback
+    }
+
+    //notify callback (one time only) 
+    moduleInputCallbackFactory.notify(moduleInputResult: ModuleInputResult)
+  ```
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
+
+  1. Add the dependency in your local build.gradle file:
+
+  ```kt
+  implementation("com.huma.sdk:module-kit:latest-version")
+  ```
+
+  2. `HumaModuleKitManager` require dependencies to be initialized before it in `Application` class
+
+  ```kt
+  HumaUtilsManager.init(/*..*/)
+  HumaUiManager.init(/*..*/)
+  HumaSharedManager.init(/*..*/)
+  HumaCachingManager.init(/*..*/)
+  HumaModuleKitManager.init(/*..*/)
+  ```
+
 </TabItem>
 <TabItem value="readme" label="Readme" default>
   Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
 </TabItem>
 <TabItem value="changelog" label="Changelog">
 
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
+**[0.1.29]**
+
+  - [#58](https://github.com/huma-engineering/huma-android-sdk/pull/58) Pref. units for module details (card data); unit tests; fixed bugs
+  - [#55](https://github.com/huma-engineering/huma-android-sdk/pull/55) Preferred units support for module kit
+  - [#34](https://github.com/huma-engineering/huma-android-sdk/pull/34) Huma Module Kit Core
   
 </TabItem>
 </Tabs>
@@ -31,5 +233,7 @@ Library that provides base layer of support for huma modules in application. It 
 [API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
 
  ### Dependencies
-- Dependency A
-- Dependency B
+- [Huma Utils](/sdk/next/Utilites/Android)
+- [Huma UI](/sdk/next/UI/Android)
+- [Huma Shared](/sdk/next/Shared/Android)
+- [Huma Caching](/sdk/next/Caching/Android)
