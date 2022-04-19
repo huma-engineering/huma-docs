@@ -41,7 +41,10 @@ questionnaireLauncher.launch(QuestionnaireActivity.getLauncherIntent(
 
 ### Customization
 
-* **QuestionnaireSourceRepository** - questionnaire source provider, returns proper `ItemSource` 
+* **QuestionnaireSourceRepository** - questionnaire source provider, returns proper `ItemSource`. To add:
+```kotlin
+HumaQuestionnaireManager.getInstance().addQuestionnaireSource(questionnaireId: String, source: ItemSource)
+```
 * **RegisterQuestionParams** - used to extend questionnaires with custom questions
 ```kotlin
 data class RegisterQuestionParams(
@@ -117,7 +120,6 @@ implementation("com.huma.sdk:questionnaire:<latest-version>")
 2. Initialize `HumaQuestionnaireManager` in your Application class:
 ```kotlin
 HumaQuestionnaireManager.init(
-   questionnaireSourceRepository: QuestionnaireSourceRepository,
    questions: List<RegisterQuestionParams> = emptyList(),
    commonValidator: CommonValidator? = null
 )
