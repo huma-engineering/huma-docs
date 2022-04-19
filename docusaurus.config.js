@@ -35,13 +35,31 @@ module.exports = {
         {
           type: 'dropdown',
           position: 'left',
-          label: 'Product documentation',
+          label: 'Products ',
           items: [
             {
               type: 'doc',
-              label: 'Data collection',
-              docsPluginId: 'data-collection',
-              docId: 'overview',
+              label: 'Platform',
+              docsPluginId: 'huma-apps',
+              docId: 'huma-platform/index',
+            },
+            {
+              type: 'doc',
+              label: 'Modules',
+              docsPluginId: 'huma-apps',
+              docId: 'modules/index',
+            },
+            {
+              type: 'doc',
+              label: 'ePROS / Licensed Questionnaires',
+              docsPluginId: 'huma-apps',
+              docId: 'ePROS/index',
+            },
+            {
+              type: 'doc',
+              label: 'Features',
+              docsPluginId: 'huma-apps',
+              docId: 'features/index',
             },
           ],
         },
@@ -134,9 +152,9 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'data-collection',
-        path: 'data-collection',
-        routeBasePath: 'data-collection',
+        id: 'huma-apps',
+        path: 'huma-apps',
+        routeBasePath: 'huma-apps',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
