@@ -11,7 +11,9 @@ Library that provides a set of Authentication screens and flows required to buil
 
 ### Getting Started
 <Tabs>
-<TabItem value="example_ui" label="Example UI" default>
+<TabItem value="example" label="Example">
+<Tabs>
+<TabItem value="ui" label="UI" default>
 
 To start auth flow you need to register callback in `onCreate` of caller activity.
 
@@ -27,7 +29,7 @@ To start UI flow you need to call:
  }
 ```
 </TabItem>
-<TabItem value="example_manual" label="Example Manual">
+<TabItem value="manual" label="Manual">
 
 First step for the manual authenitification should be getting current status of the user.
 
@@ -155,6 +157,7 @@ HumaAuthManager.getInstance().isSignedIn() { boolean ->
 }
 ```
 </TabItem>
+ </Tabs>
 <TabItem value="installing" label="Installing">
 
   1. Add the dependency in your local build.gradle file:
