@@ -5,10 +5,8 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
-
 # Android
-Library that provides base layer of support for huma modules in application. It creates an abstraction layer that defindes structure of a module. Provides storage for modules. Contain default behaviours.
+A library that provides a base layer of support for huma modules in the application. It creates an abstraction layer that defines the structure of a module. Provides storage for modules. Contain default behaviors.
 
 ### Getting Started
 <Tabs>
@@ -16,13 +14,13 @@ Library that provides base layer of support for huma modules in application. It 
 
 ### **How to create a module**
 
-  To create new module you need to override `Module` interface. Then register it in `HumaModuleKitManaget` via this function:
+  To create a new module you need to override `Module` interface. Then register it in `HumaModuleKitManaget` via this function:
 
   ```kt
     HumaModuleKitManager.registerModule(moduleConfigId: String, module: Module)
   ```
 
-  Where `moduleConfigId` is unique id of a module.
+  Where `moduleConfigId` is the unique id of a module.
 
   If you want to register several modules in one batch you can use:
 
@@ -30,9 +28,9 @@ Library that provides base layer of support for huma modules in application. It 
     HumaModuleKitManager.registerModules(vararg modules: Pair<ModuleConfigId, Module>)
   ```
 
-  *Module Kit* has base abstract implementaion of `Module` - `BaseModule`. It provides basic configuration for a module. It's _recomended_ to use it as base class for all modules.
+  *Module Kit* has the base abstract implementation of `Module` - `BaseModule`. It provides a basic configuration for a module. It's _recomended_ to use it as a base class for all modules.
 
-  #### **How to get instance of a module**
+  #### **How to get the instance of a module**
 
   After you created a module and register it you can get it instance by `moduleConfigId` or get a list of all registered modules.
 
@@ -53,38 +51,39 @@ Library that provides base layer of support for huma modules in application. It 
     HumaModuleKitManager.clearModuleCache()
   ```
 
-  After it you need to register required modules from scratch.
+  After it, you need to register the required modules from scratch.
 
-  ### Module Types
+### Module Types
 
-  Module types can inherent several behaviours 
-  * **ModuleWithDetails** - specify that module has details page
-  * **ModuleWithInput** - specify that module has input screen
+Module types can inherent several behaviours 
+* **ModuleWithDetails** - specify that module has details page
+* **ModuleWithInput** - specify that module has input screen
   
-  So if you want to have a module with details and input screen your configuration should look like this:
+So if you want to have a module with details and an input screen your configuration should look like this:
 
 ```kt
-    lass YourModule: Module, ModuleWithDetails, ModuleWithInput
+  lass YourModule: Module, ModuleWithDetails, ModuleWithInput
 
-    //Module can be replaced with BaseModule for convenience
+  //Module can be replaced with BaseModule for convenience
   ```
 #### Module With Details
-  For this type of module we have default behaviour that can be added to module configuration. It can be created via extenstion:
+
+For this type of module, we have default behavior that can be added to the module configuration. It can be created via extension:
 
 ```kt
-    private val detailsDelegate by defaultDetailsDelegate(moduleConfigId)
+  private val detailsDelegate by defaultDetailsDelegate(moduleConfigId)
 
-    override val sections: List<Section> = listOf(...)
+  override val sections: List<Section> = listOf(...)
 
-    override fun openDetails(context: Context) {
-        detailsDelegate.openDetails(context)
-    }
+  override fun openDetails(context: Context) {
+    detailsDelegate.openDetails(context)
+  }
   ```
 
 Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections) will be rendered. It also checks if this module extetends from `ModuleWithInput` input button will be rendered.
 
 #### Module With Input
-  For this type of module we have default behaviour that can be added to module configuration. It can be created via extenstion:
+  For this type of module, we have default behavior that can be added to the module configuration. It can be created via extension:
   ```kt
     private val inputDelegate by defaultInputDelegate()
 
@@ -104,9 +103,9 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
 
   ```kt
     /**
-     * This extention will create a post request to BE and will store primitive 
-     * to data base without fetching results from BE. 
-     * It used for modules where there is no calculation happening on BE side.
+     * This extension will create a post request to BE and will store primitive 
+     * to database without fetching results from BE. 
+     * It is used for modules where there is no calculation happening on BE side.
      */
     private val postDelegate by defaultPostDelegate(
         ValueToPrimitiveConverter(),
@@ -116,11 +115,11 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
     )
 
     /**
-      * **Alternalive**
-      * This extention will create a post request to BE and will store 
-      * primitive to data base without fetching results from BE. 
-      * It used for modules where we cannot calculate how BE will process our request. 
-      * Usually refresh job will be populated with refresh call for specified module.
+      * **Alternative**
+      * This extension will create a post request to BE and will store 
+      * primitive to a database without fetching results from BE. 
+      * It is used for modules where we cannot calculate how BE will process our request. 
+      * Usually refresh job will be populated with a refresh call for a specified module.
       */
     private val postDelegate by defaultPostDelegateWithCustomRefresher(
         ValueToPrimitiveConverter(),
@@ -137,7 +136,7 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
 
 ### Sections
 
-  Section represents a block of info on Module Details screen. To create new section you need to extend your class with `Section` interface.
+The section represents a block of info on the Module Details screen. To create a new section you need to extend your class with the `Section` interface.
 
   ```kt
     class YourSection : Section {
@@ -149,15 +148,15 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
   ```
   **Module Kit** provides predefined sections that are ready to use:
   * Schedule - for rendering schedule
-  * Reminders - allows to set reminders
-  * Chart - adds [Huma Charts](/sdk/next/Charts/Android) support. Used to rendred module data. Chart section require extra configuration. You need to provide data source that extends `ChartDataProvider`
-  * About - for rendering info about module
+  * Reminders - allows setting reminders
+  * Chart - adds [Huma Charts](/sdk/next/Charts/Android) support. Used to render module data. The chart section requires extra configuration. You need to provide a data source that extends `ChartDataProvider`
+  * About - for rendering info about the module
   * Learn - adds a carousel of web articles
   
 ### Input field
-  Input fields that used in default input delegate should be created with `ModuleInputField` class. Module Kit provides `dateField()` and `timeField` fields via extentions. 
+  Input fields that are used in the default input delegate should be created with the `ModuleInputField` class. Module Kit provides `dateField()` and `timeField()` fields via extensions. 
 
-  This is an exampe how to create new field:
+  This is an example of how to create a new field:
   ```kt
     ModuleInputField(
       placeholder = R.string.module_title,
@@ -172,7 +171,7 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
     )
   ```
 ### Module Card
-  Every module that is extended from `BaseModule` is able to render card. `Module` interface also defines `moduleCard` field, but it do not contain any specific implementation. To make `ModuleCardView` work, `BaseModule` requires to provide `CardConfig` in child class.
+  Every module that is extended from `BaseModule` can render a card. `Module` interface also defines the `moduleCard` field, but it does not contain any specific implementation. To make `ModuleCardView` work, `BaseModule` requires to provide `CardConfig` in child class.
 
   ```kt
     override val moduleCardConfig: CardConfig
@@ -183,7 +182,7 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
         )
   ```
 ### Module Input Callback Factory
-  Callback factory is designed to create Promise-like callback for input screens. As we cannot directly access activity where we need to get results of input screen we send it via factory. You can inject it in you module via custom Koin Context `HumaSdkKoinComponent`. You can register callback and get UUID of callback.
+The callback factory is designed to create a Promise-like callback for input screens. As we cannot directly access activity where we need to get results of input screen we send it via factory. You can inject it into your module via custom Koin Context `HumaSdkKoinComponent`. You can register a callback and get the UUID of the callback.
 
   ```kt
     //register callback
@@ -204,7 +203,7 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
   implementation("com.huma.sdk:module-kit:latest-version")
   ```
 
-  2. `HumaModuleKitManager` require dependencies to be initialized before it in `Application` class
+  2. `HumaModuleKitManager` require dependencies to be initialized before it in the `Application` class
 
   ```kt
   HumaUtilsManager.init(/*..*/)
@@ -216,7 +215,19 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
 
 </TabItem>
 <TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
+
+This module is dedicated to creating a base support layer for module configuration feature of **Huma Platform**.
+
+**Module** - Configuration class that specifies how the app should behave for a specific huma module.
+
+**Module Card** - Card that is used in view where several modules are presented
+
+**Section** - Part of Module Detail screen that renders data from the module configuration or stored data.
+
+**Module Details Screen** - Screen that renders sections
+
+**Module Input Screen** - Screen that takes input from the user for the specified module
+
 </TabItem>
 <TabItem value="changelog" label="Changelog">
 
