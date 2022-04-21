@@ -89,8 +89,15 @@ Where `openDetails` will open `ModuleDetailsActivity` where [sections](#sections
 
     override val input: List<ModuleInputField>
         get() = listOf(
-            dateField(),
-            timeField(),
+            ModuleInputField(
+              placeholder = R.string.module_common_input_date,
+              inputConfig = ModuleInputField.InputConfig.SingleDefaultUnit.create(
+              TextInputType.Date(null, Instant.now())
+            ),
+            ModuleInputField(
+              placeholder = R.string.module_common_input_time,
+                inputConfig = ModuleInputField.InputConfig.SingleDefaultUnit.create(TextInputType.Time)
+            ),
             //other fields
         )
 
@@ -154,7 +161,7 @@ The section represents a block of info on the Module Details screen. To create a
   * Learn - adds a carousel of web articles
   
 ### Input field
-  Input fields that are used in the default input delegate should be created with the `ModuleInputField` class. Module Kit provides `dateField()` and `timeField()` fields via extensions. 
+  Input fields that are used in the default input delegate should be created with the `ModuleInputField` class.
 
   This is an example of how to create a new field:
   ```kt
@@ -197,21 +204,21 @@ The callback factory is designed to create a Promise-like callback for input scr
 </TabItem>
 <TabItem value="installing" label="Installing">
 
-  1. Add the dependency in your local build.gradle file:
+1. Add the dependency in your local build.gradle file:
 
-  ```kt
-  implementation("com.huma.sdk:module-kit:latest-version")
-  ```
+```kt
+implementation("com.huma.sdk:module-kit:latest-version")
+```
 
-  2. `HumaModuleKitManager` require dependencies to be initialized before it in the `Application` class
+2. `HumaModuleKitManager` require dependencies to be initialized before it in the `Application` class
 
-  ```kt
-  HumaUtilsManager.init(/*..*/)
-  HumaUiManager.init(/*..*/)
-  HumaSharedManager.init(/*..*/)
-  HumaCachingManager.init(/*..*/)
-  HumaModuleKitManager.init(/*..*/)
-  ```
+```kt
+HumaUtilsManager.init(/*..*/)
+HumaUiManager.init(/*..*/)
+HumaSharedManager.init(/*..*/)
+HumaCachingManager.init(/*..*/)
+HumaModuleKitManager.init(/*..*/)
+```
 
 </TabItem>
 <TabItem value="readme" label="Readme" default>
@@ -241,7 +248,7 @@ This module is dedicated to creating a base support layer for module configurati
 </Tabs>
 
  ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
 
  ### Dependencies
 - [Huma Utils](./../Utilites/Android)
@@ -249,3 +256,4 @@ This module is dedicated to creating a base support layer for module configurati
 - [Huma Shared](./../Shared/Android)
 - [Huma Caching](./../Caching/Android)
 - [Huma Charts](./../Charts/Android)
+- [Huma Preferred Units](./../Preferred%20Units/Android)
