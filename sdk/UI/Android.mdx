@@ -13,7 +13,7 @@ Library that provides a set of UI elements to build new products.
 <Tabs>
 <TabItem value="example" label="Example" default>
 
-### Customization
+### **Customization**
 
 HumaUI module defines styler with common attributes which should be used to styling views and components in the application.
 All the UI components support styling/themes by conforming to the `Styler` interface.
@@ -63,10 +63,39 @@ internal class AboutSectionView @JvmOverloads constructor(
 }
 ```
 
+### **ThankYouActivity**
+
+Example of using `ThankYouActivity`:
+
+```kotlin
+...
+startActivity(
+    ThankYouActivity.getLauncherIntent(
+        context,
+        "message for activity subtitle"
+    )
+)
+...
+```
+
+### **VideoPlayerActivity**
+
+Example of using `VideoPlayerActivity`:
+
+```kotlin
+startActivity(
+    VideoPlayerActivity.getLauncherIntent(
+        context,
+        videoFileUri
+    )
+)
+```
+
 ### **Button**
 
-Example of adding `Button`.  
-In the layout:
+Example of using `Button`.  
+
+1. Add component in the layout:
 
 ```xml
 <com.huma.sdk.ui.basiccomponent.control.button.Button
@@ -91,7 +120,7 @@ In the layout:
 | btn_style         | primary (default), secondary, destructive, destructive_outline |
 | btn_size          | large (default), small |
 
-In code: 
+2. Set button params in code: 
 
 ```kotlin
 button.apply {
@@ -100,9 +129,9 @@ button.apply {
  isEnabled = true
  drawableStart = AppCompatResources.getDrawable(context, R.drawable.ic_add_24dp)
  drawableEnd = AppCompatResources.getDrawable(context, R.drawable.ic_add_24dp)
- drawableTintStyle = 0
- style = 1
- size = 0
+ drawableTintStyle = Button.DRAWABLE_TINT_MODE_NONE
+ style = Button.STYLE_SECONDARY
+ size = Button.SIZE_LARGE
  showLoading()
  hideLoading()
  setOnClickListener {
@@ -115,23 +144,32 @@ Button allows to display loading progress bar. To manage this state you can call
 
 ### **ChoiceInputView**
 
-Example of using `ChoiceInputView`
+Example of using `ChoiceInputView`.
 
-1. Add component in code:
+1. Add component in the layout:
+
+```xml 
+<com.huma.sdk.ui.basiccomponent.control.choice_input_view.ChoiceInputView
+      android:id="@+id/choiceInputView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+```
+
+2. Set text to choice buttons in code:
 
 ```kotlin
-val choiceInputView = ChoiceInputView(it).apply {
+choiceInputView.apply {
     firstStateText = "Sign in with Email"
     secondStateText = "Sign in with Phone"
 }
 ```
 
-2. You can get index of checked button:
+3. You can get index of checked button:
 
 ```kotlin
 choiceInputView.getCheckedRadioButtonIndex()
 ```
-3. Use `setCheckedChangeListener` for handle event of changing checked button:
+4. Use `setCheckedChangeListener` for handle event of changing checked button:
 
 ```kotlin
 setCheckedChangeListener { index ->
@@ -143,12 +181,19 @@ setCheckedChangeListener { index ->
 ```
 ### **CodeInputLayout**
 
-Example of using `CodeInputLayout`
+Example of using `CodeInputLayout`.
 
-1. Add component in code and set event listeners
+1. Add component in the layout:
+```xml
+<com.huma.sdk.ui.basiccomponent.control.code_input_layout.CodeInputLayout
+      android:id="@+id/codeInputLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+```
+2. Set event listeners in code:
 
 ```kotlin
-val codeInputLayout = CodeInputLayout(context).apply {
+codeInputLayout.apply {
     codeInputLayout.onCodeFilledListener = {
         // Handle entered full code from six digits
     }
@@ -158,7 +203,7 @@ val codeInputLayout = CodeInputLayout(context).apply {
 }
 ```
 
-2. `CodeInputLayout` allows to show an error message if entered code was not valid.
+3. `CodeInputLayout` allows to show an error message if entered code was not valid.
 
 ```kotlin
 codeInputLayout.setEerror("error message")
@@ -184,7 +229,7 @@ In the layout:
 
 Example of adding `ValidatableEditText`.  
 
-In the layout:  
+1. Add component in the layout:  
 
 ```xml
 <com.huma.sdk.ui.basiccomponent.control.input_view.validatable_edit_text.ValidatableEditText
@@ -193,7 +238,7 @@ In the layout:
       android:layout_height="wrap_content" />
 ```
 
-For configuration `ValidatableEditText` component you can pass an instance of `ValidatableEditTextState` class with params like input type, placeholder, initial values and pass it to `setData()` function:
+2. For configuration `ValidatableEditText` component you can pass an instance of `ValidatableEditTextState` class with params like input type, placeholder, initial values and pass it to `setData()` function:
 
 ```kotlin
 validatableEditText.setData(
@@ -204,11 +249,35 @@ validatableEditText.setData(
 )
 ```
 
+### **LabeledSeekbarView**
+
+`LabeledSeekbarView` component is used in `Symptom` module.
+Example of using `LabeledSeekbarView`.
+
+1. Add component in the layout:
+
+```xml
+<com.huma.sdk.module.impl.symptom.input.view.labeledseekbar.LabeledSeekbarView
+      android:id="@+id/labeledSeekbar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+```
+
+2. Use `Symptom` class to pass data to `LabeledSeekbarView` component:
+
+```kotlin
+val scale  = Scale("severe", 3)
+val symptom = Symptom("symptom name", listOf(scale))
+labeledSeekbar.setData(symptom)
+```
+
+3. You can get severity index of the symptom called `getSeverityIndex()` function.
+
 ### **MobileInputLayout**  
 
-Example of adding `MobileInputLayout`  
+Example of adding `MobileInputLayout`.
 
-In the layout:  
+1. Add component in the layout:  
 
 ```xml
 <com.huma.sdk.ui.basiccomponent.control.mobile_input_layout.MobileInputLayout
@@ -217,7 +286,7 @@ In the layout:
       android:layout_height="wrap_content" />
 ```
 
-Adding change listener for input phone number in code: 
+2. Add change listener for input phone number in code: 
 
 ```kotlin
 mobileInputLayout.phoneNumberChangedListener { isValidPhone ->
@@ -234,7 +303,7 @@ mobileInputLayout.phoneNumberChangedListener { isValidPhone ->
 ### **VerticalSeekBar**
 
 Example of using `VerticalSeekBar`. 
-To dispaly SeekBar as vertical you should put it in wrapper `VerticalSeekBarWrapper`. 
+To dispaly SeekBar as vertical you should put it in the wrapper `VerticalSeekBarWrapper`. 
 
 1. Added `VerticalSeekBar` view in the layout:
 
@@ -268,6 +337,7 @@ To dispaly SeekBar as vertical you should put it in wrapper `VerticalSeekBarWrap
 | seekBarRotation | CW90 - 90 degree rotation, CW270 - 270 degree rotation |
 
 2. Configuration `VerticalSeekBar` in code:
+
 ```kotlin
 val verticalSeekBar = layoutInflater.inflate(R.layout.item_seek_bar, null)
 (verticalSeekBar as VerticalSeekBar).apply {
@@ -283,24 +353,31 @@ verticalSeekBarWrapper.apply {
 
 ### **SignatureView**
 
-Example of configuration `SignatureView` in code.
+Example of using `SignatureView` component.
 
-1. Create `SignatureView` componennt and set callbacks:
+1. Add component in the layout: 
+
+```xml
+<com.huma.sdk.ui.basiccomponent.control.signatureview.SignatureView
+      android:id="@+id/signatureView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+```
+2. Set callbacks: 
 
 ```kotlin
-val signatureView = SignatureView(context)
-    signatureView.setCallbacks(object : SignatureCallbacks {
-        override fun onSignatureCleared() {
-            // Respond to clear signature view
-        }
+signatureView.setCallbacks(object : SignatureCallbacks {
+    override fun onSignatureCleared() {
+        // Respond to clear signature view
+    }
 
-        override fun onSignatureStarted() {
-            // Respond to start drawing
-        }
-    })
+    override fun onSignatureStarted() {
+        // Respond to start drawing
+    }
+})
 ```
 
-2. Set `SignatureView` layout params:
+3. Set `SignatureView` layout params:
 
 ```kotlin
 signatureView.layoutParams =
@@ -312,7 +389,7 @@ signatureView.setPaddingRelative(0, 0, 0, 10)
 signatureView.setBackgroundResource(R.drawable.border_signature_view)
 ```
 
-3. Create container view for `SignatureView` component: 
+4. Create container view for `SignatureView` component: 
 ```kotlin
 val rlSignatureContainer = RelativeLayout(this)
 rlSignatureContainer.layoutParams =
@@ -323,7 +400,7 @@ rlSignatureContainer.layoutParams =
 rlSignatureContainer.addView(signatureView)
 ```
 
-4. Call `clearSignature()` function to clear `SignatureView`:
+5. Call `clearSignature()` function to clear `SignatureView`:
 
 ```kotlin
 signatureView.clearSignature()
@@ -333,7 +410,7 @@ signatureView.clearSignature()
 
 Example of creating `TagView`:  
 
-1. Add container named `TagGroupView`, it could be added from layout:
+1. Add container named `TagGroupView` in the layout:
 
 ```xml
 <com.huma.sdk.ui.basiccomponent.control.tagview.TagGroupView
@@ -397,6 +474,7 @@ Example of adding `RoundImageView` in the Layout:
 ### **TextInputView**
 
 Example of adding `TextInputView`.  
+
 In the layout:
 
 ```xml
@@ -436,6 +514,7 @@ TextInputView(it).apply {
 ### **BaseTextView**
 
 Example of adding `BaseTextView`.  
+
 In the layout:
 
 ```xml
@@ -462,7 +541,8 @@ bastTextView.text = "base text view"
 
 ### **DueTextView**
 
-Example of using `DueTextView`.  
+Example of using `DueTextView`. 
+
 1. Add component in the layout:
 
 ```xml
@@ -475,7 +555,8 @@ Example of using `DueTextView`.
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/valueUnitView" />
 ```
-2. Set data to this component. Create instance of `DueState` class and pass text and dueState params there.  
+2. Set data to this component. Create instance of `DueState` class and pass text and due state params there.  
+
 In code:
 
 ```kotlin
@@ -491,6 +572,7 @@ dueTextView.apply {
 ### **HeaderView**
 
 Example of using `HeaderView` component.  
+
 1. Add component in the layout:
 
 ```xml
@@ -499,8 +581,9 @@ Example of using `HeaderView` component.
       android:layout_width="match_parent"
       android:layout_height="wrap_content" />
 ```
-2. Create instance of `HeaderState` class and pass title, subtitle and headerType values there. 
+2. Create instance of `HeaderState` class and pass title, subtitle and header type values there. 
 Then pass that instance to `setData()` function of `HeaderView` component.
+
 In code:
 
 ```kotlin
@@ -522,6 +605,7 @@ headerView.setData(
 ### **TopBarView**
 
 Example of using `TopBarView` component.  
+
 1. Add component in the layout:
 
 ```xml
@@ -531,8 +615,9 @@ Example of using `TopBarView` component.
       android:layout_height="wrap_content" />
 ```
 
-2. To set data to `TopBarView` create instance of `TopBarState` class and pass title, initial progress value and barType value.
+2. To set data to `TopBarView` create instance of `TopBarState` class and pass title, initial progress value and bar type value.
 Then pass that instance to `setData()` function of `TopBarView` component.  
+
 In code:
 
 ```kotlin
@@ -548,7 +633,8 @@ topBarView.setData(
 3. Call function `updateProgress()` to update state of progress bar:
 
 ```kotlin
-topBarView.updateProgress(78)
+val currentProgressState = 78
+topBarView.updateProgress(currentProgressState)
 ```
 
 4. You can invoke some action by tap on close icon:
@@ -579,6 +665,7 @@ Example of using `RiskScoreLevelTextView` component.
 ```
 
 2. Create instance of `RiskScoreLevelState` class and set risk score level value using `setLevel()` function.  
+
 In code:
 
 ```kotlin
@@ -596,6 +683,7 @@ riskScoreLevelTextView.setLevel(
 ### **SeenTextView**
 
 Example of using `SeenTextView` component.  
+
 1. Add component in the layout:  
 
 ```xml
@@ -606,15 +694,45 @@ Example of using `SeenTextView` component.
 ```
 
 2. Create instance of `SeenState` with boolean flag to set visibility of `SeenTextView`.  
+
 In code:
 
 ```kotlin 
 seenTextView.setData(SeenState(true))
 ```
 
+### **SelectableTextView**
+
+`SelectableTextView` component is used in `Symptom` module.
+Example of using `SelectableTextView` component.
+
+1. Add component in code:
+
+```kotlin
+val selectableTextView = SelectableTextView(context)
+```
+
+2. Set data to the component using `Scale`, `SymptomResult` and `SelectableTextViewState` classes:
+
+```kotlin
+val scale = Scale("mild", 1)
+val symptomResult = SymptomResult("symptom name", scale)
+
+selectableTextView.setData(SelectableTextViewState(symptomResult))
+```
+
+3. Set selector change listener:
+
+```kotlin
+selectableTextView.onSelectionChanged = {
+    // Respond to check or uncheck selector
+}
+```
+
 ### **ValueUnitTextView**
 
-Example of using `ValueUnitTextView` component.  
+Example of using `ValueUnitTextView` component.
+
 1. Add component in the layout:
 
 ```xml
@@ -624,7 +742,8 @@ Example of using `ValueUnitTextView` component.
       android:layout_height="wrap_content" />
 ```
 
-2. Create instnace of `ValueUnitState` class to set value and unit data.  
+2. Create instnace of `ValueUnitState` class to set value and unit data.
+
 In code:
 
 ```kotlin
@@ -635,18 +754,16 @@ alueUnitView.setData(ValueUnitState("value", "unit"))
 
 Example of using `CarePlanGroup` component.  
 
-1. Add component in code:
+1. Add component in the layout:
 
-```kotlin
-val carePlanGrop = CarePlanGroupItem(context).apply {
-    layoutParams = ViewGroup.LayoutParams(
-        ViewGroup.LayoutParams.MATCH_PARENT,
-        ViewGroup.LayoutParams.WRAP_CONTENT
-    )
-}
+```xml
+<com.huma.sdk.ui.basiccomponent.widget.careplangroup.CarePlanGroupItem
+      android:id="@+id/carePlanGroupItem"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
 ```
 
-2. Create instance of `CarePlanGroupItemState` class to set moduleName and frequency values:
+2. Create instance of `CarePlanGroupItemState` class to set module name and frequency values:
 
 ```kotlin
 carePlanGrop.setData(
@@ -659,7 +776,7 @@ carePlanGrop.setData(
 
 ### **InteractiveInfoView**
 
-Example of using `InteractiveInfoView`
+Example of using `InteractiveInfoView` component.
 
 1. Add component in the layout:
 
@@ -671,6 +788,7 @@ Example of using `InteractiveInfoView`
 ```
 
 2. To set params for `InteractiveInfoView` you can create instance of `InteractiveInfoViewData` class and set params there.  
+
 In code:
 
 ```kotlin
@@ -686,7 +804,7 @@ interactiveInfoView.setData(
 
 You can check `InteractiveInfoViewData` class to see all list of params which could be applied to `InteractiveInfoView` component. 
 
-3. `InteractiveInfoView` contains `InteractionListener` interface which allow to handle interactions with view.
+3. `InteractiveInfoView` contains `InteractionListener` interface which allow to handle interactions between this component and parent view.
 
 **Custom Attributes**
 
@@ -698,10 +816,12 @@ You can check `InteractiveInfoViewData` class to see all list of params which co
 <TabItem value="installing" label="Installing">
 
 1. Add the dependency in your local build.gradle file:
+
 ```kotlin
 implementation("com.huma.sdk:ui:<latest-version>")
 ```
 2. Initialize `HumaUiManager` in your Application class:
+
 ```kotlin
 HumaUiManager.init(
   utilsManager: HumaUtilsManager,
@@ -713,59 +833,40 @@ HumaUiManager.init(
 </TabItem>
 <TabItem value="readme" label="Readme" default>
 
-  HumaUI module constist a list of the basic UI components for the Huma SDK. These components can be used for building customizable pages/screens.
-  * `Button` Base class for cerating button view. 
-  * `CodeInputLayout` Class for digit code input.
-  * `ValidatableEditText` - Class for input with configurable input types and validation options.
-  * `LabeledSeekbarView` - Seekbar with spectre labels.
-  * MobileInputLayout - Mobile phone input view with embedded country picker.
-  * VerticalSeekBar - Basic Vertical seekbar.
-  * SignatureView - View with finger draw support for user signature input.
-  * TagGroupView - View container for tags.
-    * TagView - Tag view used in TagGroupView.
-  * ReminderTimePicker - Basic time picker view.
-  * RoundImageView - ImageView with additional option for corner rounding.
-  * TextInputView - InputView for any input from user text or numeric.
-  * BaseTextView - Base class for labels.
-  * DueTextView - Label for due dates.
-  * HeaderView - Label for header specific views.
-  * TopBarView - View for topbar with support for back button and title.
-  * RiskScoreLevelTextView - View for risk score for Shield deployment.
-  * SeenTextView - Label with seen mark.
-  * SelectableTextView - TextView with checkmark.
-  * ValueUnitTextView - View that renders ValueUnitState obj.
-  * CarePlanGroupItem - ListItem for care plan group page.
-  * InteractiveInfoView - View that can show web content.
+**Styler** - object which contains set of attributes for styling in application.
 
-#### **Button**
+**ThankYouActivity** - activity which can be used to indicates successful completion of any data filling operation.
 
-Supports set of styles:
+**VideoPlayerActivity** - activity which contains ExoPlayer view for video playback.
 
-Also button support two types of size - Large and Small.
+**UI Componentns** - HumaUI module constist a list of the basic UI components for the Huma SDK. These components can be used for building customizable pages/screens.  
 
-### **CodeInputLayout**
+List of available basic UI components:
 
-Component allows to enter digit code. Contains six `EdtitText` fields and could be used to entering of verification code. Contains a label to show an error message.
-
-### **ValidatableEditText**
-
-Contains set of input data types:
-
-* `String` - normal text input type
-* `Integer` - integer values only
-* `Decimal` - decimal values
-* `Time` - allows select time from time picker
-* `Date` - allows select date (up to the present day inclusive) from date picker
-* `Phone` - phone number with validation amount of entered numbers
-* `Email` - email address with validation of email format
-* `Password` - for entering a password with mask, no visible for user
-* `Name` - input type for entering username, allows to enter letters, dash and blanks
-* `Copy` - defines no editable, read-only field, with ability to copy content by tap on it
-* `None` - defines no editable, read-only field
-* `SingleSelection` - input type with ability to select one item from the list
-* `IntegerPicker` - one or pair of integer pickers
-
-### **LabeledSeekbarView**
+  * Button - allow users to take actions, and make choices, with a single tap. 
+  * ChoiceInputView - component defines visual toggle between two mutually exclusive states.
+  * CodeInputLayout - component for entering digit codes.
+  * ValidatableEditText - component for input with configurable input types and validation options.
+  * LabeledSeekbarView - component defines horizontal draggable thumb. The user can touch the thumb and drag left or right to set the current progress level.
+  * MobileInputLayout - mobile phone input view with embedded country picker.
+  * VerticalSeekBar - component defines vertical draggable thumb. The user can touch the thumb and drag up or down to set the current progress level.
+    * VerticalSeekBarWrapper - container for VerticalSeekBar.
+  * SignatureView - component used for drawing signatures.
+  * TagView - tag view used in `TagGroupView`.
+    * TagGroupView - view container for tags.
+  * ReminderTimePicker - basic time picker component.
+  * RoundImageView - `ImageView` with additional option for corner rounding.
+  * TextInputView - `InputView` for any input from user text or numeric.
+  * BaseTextView - base class for labels.
+  * DueTextView - label for due dates.
+  * HeaderView - label for header specific views.
+  * TopBarView - view for topbar with support for back button and title.
+  * RiskScoreLevelTextView - view to show score level of risk with specific style for each type of risk.
+  * SeenTextView - label with seen mark.
+  * SelectableTextView - `TextView` with checkmark.
+  * ValueUnitTextView - label which should show value and units data.
+  * CarePlanGroupItem - view which contains info with recommendations of activities to be completed and their frequencies. Used on care plan group page.
+  * InteractiveInfoView - view that can show web content.
 
 </TabItem>
 <TabItem value="changelog" label="Changelog">
