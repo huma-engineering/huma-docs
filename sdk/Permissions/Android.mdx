@@ -1,0 +1,167 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that provides a set of rules for requesting Permissions of restricted data and actions required to use application functionality.
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+Examples of using API for asking runtime permissions.  
+
+1. Register permission result launcher for your activity:
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    HumaPermissionsManager.getInstance().registerPermissionResult(this)
+}
+```
+
+2. Call function with permission which you need. For example requesting `Camera` permission:
+
+```kotlin
+HumaPermissionsManager.getInstance()
+    .requestCameraPermission { isPermissionGranted ->      
+        if (isPermissionGranted) {
+            // Handle permission granted result
+        } else {
+            // Handle permission denied result
+        }
+    }
+```
+
+You can set custom description of requested permission. That description will be displayed on the `PermissionActivity`.
+
+```kotlin
+HumaPermissionsManager.getInstance()
+    .requestCameraPermission(
+        descriptionTitle = "Title with custom description of Camera permission",
+        descriptionSubtitle = "Subtitle with custom description of Camera permission"
+    ) { isPermissionGranted ->      
+        if (isPermissionGranted) {
+            // Handle permission granted result
+        } else {
+            // Handle permission denied result
+        }
+    }
+```
+
+Example of requesting `Location` permission: 
+
+```kotlin
+HumaPermissionsManager.getInstance().requestLocationPermission {
+    when (it) {
+        true -> // Handle permission granted result
+        else -> // Handle permission denied result
+    }
+}
+```
+
+Example of requesting `Microphone` permission
+
+```kotlin
+HumaPermissionsManager.getInstance().requestMicrophonePermission {
+    when (it) {
+        true -> // Handle permission granted result
+        else -> // Handle permission denied result
+    }
+}
+```
+
+Example of requesting `WriteExternalStorage` permission
+
+```kotlin
+HumaPermissionsManager.getInstance().requestWriteExternalStoragePermission {
+    when (it) {
+        true -> // Handle permission granted result
+        else -> // Handle permission denied result
+    }
+}
+```
+
+Example of requesting `ActivityRecognition` permission
+
+```kotlin
+HumaPermissionsManager.getInstance().requestActivityRecognitionPermission {
+    when (it) {
+        true -> // Handle permission granted result
+        else -> // Handle permission denied result
+    }
+}
+```
+
+To get other permissions apart from above you can use `requestCustomPermission` function. In that case you need to specify an identifier of requested permission and add a description. Example of requesting `ReadCalendar` permission:
+
+```kotlin
+HumaPermissionsManager.getInstance()
+    .requestCustomPermission(
+        permissionName = Manifest.permission.READ_CALENDAR, // permission identifier
+        activityTitle = "ReadCalendar", // title for PermissionActivity
+        descriptionTitle = "Title with description of ReadCalendar permission",
+        descriptionSubtitle = "Subtitle with description of ReadCalendar permission"
+    ) { isPermissionGranted ->
+          if (isPermissionGranted) {
+              // Handle permission granted result
+          } else {
+              // Handle permission denied result
+          }
+    }
+```
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+
+```kotlin
+implementation("com.huma.sdk:permissions:<latest-version>")
+```
+
+2. Initialize `HumaPermissionsManager` in your Application class:
+
+```kotlin
+HumaPermissionsManager.init()
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+Huma Permissions module implements convenient interface for requesting runtime permissions.
+It defines API for providing set of permissions:
+
+  **Camera** - required to be able to access the camera device.
+
+  **Location** - allows an app to access precise location.
+
+  **Microphone** - allows an application to record audio.
+
+  **WriteExternalStorage** - allows an application to read and write to external storage
+
+  **ActivityRecognition** - allows an application to recognize physical activity.
+
+Also Permissions module allows to request other runtime permissions apart from this list. 
+For that you can call `requestCustomPermission` function with `permissionName` param - identifier of requested permission.  
+
+There is also defines `PermissionActivity` to show user detailed description about requested permission.
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+  Changelog
+  
+</TabItem>
+</Tabs>
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+
+ ### Dependencies
+- Dependency A
+- Dependency B
