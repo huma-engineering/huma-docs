@@ -1,0 +1,83 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that implements onboarding flow
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+1. Initialize HumaOnboardingManager with a list of steps
+```kotlin
+HumaOnboardingManager.init(
+   onboardingSteps: List<OnboardingStep>
+)
+```
+2. Start OnboardingActivity
+```kotlin
+startActivity(OnboardingActivity.getIntent(context))
+```
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:onboarding:<latest-version>")
+```
+2. Initialize `HumaOnboardingManager` in your Application class:
+```kotlin
+HumaOnboardingManager.init(
+   onboardingSteps: List<OnboardingStep>
+)
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+**OnboardingStep** - interface that onboarding flow step is required to implement. 
+A list of steps is provided during initialization (note that order is important, conditions are checked sequentially):
+
+```kotlin
+HumaOnboardingManager.init(listOf(
+            object : OnboardingStep {
+                // will be shown if this condition passes
+                override fun shouldBeShown(params: OnboardingStepParams): Boolean {
+                    // params contains deployment, prefs manager and user instance to determine whether step should be shown
+                    return true
+                }
+
+                // used to launch the step
+                override fun getActivityIntent(context: Context): Intent {
+                    return PreferredUnitsActivity.getLauncherIntent(
+                        context,
+                        PreferredUnitsActivity.Params.OnboardingMode
+                    )
+                }
+
+                // used for logging purposes
+                override fun getAnalyticsName() = "step name"
+            }
+        ))
+```
+
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+Changelog
+</TabItem>
+</Tabs>
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+ ### Dependencies
+- [Huma Utils](../Utilities/Android)
+- [Huma UI](../UI/Android)
+- [Huma Shared](../Shared/Android)
