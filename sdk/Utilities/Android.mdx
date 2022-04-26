@@ -7,29 +7,117 @@ import TabItem from '@theme/TabItem';
 
 
 # Android
-Library that provides a set of Utilities required to build new products.
+Huma Utils SDK is the core library for other SDK components. It provides access to core features like networking, notification handling and shared preferences
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+**Networking**
+
+SDK uses [OkHttp](https://square.github.io/okhttp/) and [Retrofit](https://square.github.io/retrofit/) for networking. You can use the instance of Retrofit to create your API interface. SDK allows registering your [interceptor](https://square.github.io/okhttp/interceptors/) or authenticator 
+
+```
+//returns instance of NetworkManager
+HumaUtilsManager.network 
+
+//returns instance of RegionManager of NetworkManager
+HumaUtilsManager.network.regionManager 
+
+//returns instance of default Retrofit client
+HumaUtilsManager.network.retrofit 
+
+//returns instance of uploading Retrofit client
+HumaUtilsManager.network.uploadRetrofit 
+
+//register list of interceptors that will be injected to OkHttp client
+HumaUtilsManager.network.registerInterceptor(vararg interceptor: Interceptor) 
+
+//register list of authenticators that will be injected to OkHttp client
+HumaUtilsManager.network.registerAuthenticator(vararg authenticator: Authenticator) 
+```
+
+**Preferences**
+
+`PreferencesManager` exposes `baseUrlPreferencesManager` where the actual target is stored URL for `NetworkManager`. It contains method to obtain and store values in SharedPreferences with modifiers.
+
+```
+enum class SharedPrefType {
+    DEFAULT,
+    ENCRYPTED,
+    IMMUTABLE
+}
+
+//Saves value by provided key and pref type.
+HumaUtilsManager.preferences.set(key: String, value: Any?, type: SharedPrefType = DEFAULT)
+
+//Returns value by provided key and pref type. Uses default value if not found in storage.
+HumaUtilsManager.preferences.get(key: String, default: T, type: SharedPrefType)
+
+//Clears shared preferences. MFA preferences won't be cleared by default
+HumaUtilsManager.preferences.clear(isClearMFAPref: Boolean = false)
+```
+
+Shared preferences can be set to fields with delegates:
+```
+BooleanStorage - for storing boolean values
+FloatStorage - for storing float values
+IntStorage - for storing integer values
+LongStorage - for storing long values
+SetStorage - for storing set of strings values
+StringStorage - for storing string values
+AnyStorage - for storing complex objects (they will be serialized to json and back)
+```
+
+Or you can use the inline function to set it to the field directly:
+```
+var uid: String by pref(UID, "") //default shared preferences field with key == UID
+var uid: String by encryptedPref(UID, "") //encrypted shared preferences field with key == UID
+var uid: String by immutablePref(UID, "") //immutable shared preferences field with key == UID
+```
+
+**Notifications**
+
+`NotificationManager` allows registering new notification types and processing them via `PushNotificationHandler`. Also `NotificationManager` requires to provide auth state via `AuthStateProvider` as it has auto signoff on logout. If you using [Huma Auth SDK](/sdk/Authentication/Android) it will register `AuthStateProvider` internally.
+
+```
+//register PushNotificationHandler
+HumaUtilsManager.preferences.registerPushNotificationHandler(vararg handler: PushNotificationHandler)
+
+//register AuthStateProvider
+HumaUtilsManager.preferences.registerAuthStateProvider(authStateProvider: AuthStateProvider)
+```
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
-</TabItem>
-<TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
-</TabItem>
-<TabItem value="changelog" label="Changelog">
 
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
-  
+  1. Add the dependency in your local build.gradle file:
+
+  ```
+  implementation("com.huma.sdk:utils:latest-version")
+  ```
+
+  2. Initialize `HumaUtilsManager` in your `Application` class:
+  ```
+  HumaUtilsManager.init(/*..*/)
+  ```
+
 </TabItem>
-</Tabs>
+<TabItem value="readme" label="Readme">
+
+ **HumaUtilsManager** - main point of interaction with library
+
+ ***Network*** - manager for network configuration
+
+ ***Notification*** - manager for notification configuration
+
+ ***Preferences*** - manager for huma prefered storage configuration
 
  ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
 
- ### Dependencies
-- Dependency A
-- Dependency B
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+ 
+</TabItem>
+</Tabs>
