@@ -15,7 +15,7 @@ Huma Utils SDK is the core library for other SDK components. It provides access 
 
 **Networking**
 
-SDK use [OkHttp](https://square.github.io/okhttp/) and [Retrofit](https://square.github.io/retrofit/) for networking. You can use the instance of Retrofit to create your API interface. SDK allows registering your [interceptor](https://square.github.io/okhttp/interceptors/) or authenticator 
+SDK uses [OkHttp](https://square.github.io/okhttp/) and [Retrofit](https://square.github.io/retrofit/) for networking. You can use the instance of Retrofit to create your API interface. SDK allows registering your [interceptor](https://square.github.io/okhttp/interceptors/) or authenticator 
 
 ```
 //returns instance of NetworkManager
@@ -39,7 +39,7 @@ HumaUtilsManager.network.registerAuthenticator(vararg authenticator: Authenticat
 
 **Preferences**
 
-`PreferencesManager` exposes `baseUrlPreferencesManager` where stored actual target URL for `NetworkManager`. It contains method to obtain and store values in SharedPreferences with modifiers.
+`PreferencesManager` exposes `baseUrlPreferencesManager` where the actual target is stored URL for `NetworkManager`. It contains method to obtain and store values in SharedPreferences with modifiers.
 
 ```
 enum class SharedPrefType {
