@@ -12,7 +12,7 @@ Huma SDK is a set of software tools that developers can use to build or enhance 
 - [Coordinator (iOS only)](Coordinator/iOS)
 - [Device Kit (mobile only)](Device%20Kit/iOS)
 - [Object Storage](Object%20Storage/iOS)
-- [Shared](Shared/iOS)
+- [Shared Models](Shared%20Models/iOS)
 - [UI](UI/iOS)
 - [Utilities](Utilites/iOS)
 
