@@ -1,0 +1,339 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Android
+The library provides a set of base classes, extensions and data structures to make integration to Huma platform easy.
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+### **How to use Huma Modules**
+
+**Huma Modules** can be used without any additional work. It contains the default module package. Check Readme to get the list.
+
+To add a new module to **Huma Modules** check [Huma Module Kit](./../Module%20Kit/Android#how-to-create-a-module) example on how to do that.
+
+Huma Modules adds to Huma Module Kit an additional level of integration into **Huma Platform**. It adds a **Modules Processor** to process configuration to generate module instance from it.
+
+To start working with **Huma Models** you need to create `Module` and `Processor` for it.
+
+```kt
+class YourProcessor(
+    private val context: Context,
+    private val scheduleConverter: ScheduleConverter,
+    private val aboutConverter: AboutConverter,
+    private val deviceName: String
+) : ImportModuleProcessor(
+    moduleId = YourModule.MODULE_ID,
+    primitive = YourPrimitiveCreate::class.java,
+    primitiveResultToEntityMappers = YourRetrievePrimitiveResponseMapper().asList()
+) {
+    override fun processConfig(moduleConfig: List<ModuleConfig>): List<Pair<ModuleConfigId, Module>> {
+        return moduleConfig.filter { it.moduleId == YourModule.MODULE_ID }
+            .mapNotNull { config ->
+                val moduleId = config.id ?: return@mapNotNull null
+                val scheduleData = config.schedule?.let { scheduleConverter.invoke(it) }
+                val aboutData = aboutConverter.invoke(config)
+                registerModuleConfigId(moduleId)
+                moduleId to YourModule(
+                    context = context,
+                    order = config.order ?: Int.MAX_VALUE,
+                    version = config.version,
+                    deviceName = deviceName,
+                    deploymentId = DeploymentStorage.deploymentId,
+                    moduleConfigId = moduleId,
+                    scheduleData = scheduleData,
+                    aboutData = aboutData,
+                    learnArticleIds = config.learnArticleIds ?: emptyList()
+                )
+            }
+    }
+}
+```
+After you created the processor you need to register it in `HumaModuleManager`:
+```kt 
+HumaModuleManager.registerImportProcessor(processor: YourProcessor)
+```
+
+When the processor is registered you can call `refreshModules()` to fetch the config and fill your module with data and `refreshData()` to get data for each module.
+
+
+```kt
+HumaModuleManager.refreshModules() //call to refresh modules
+
+HumaModuleManager.refreshData(vararg moduleId: String?) //call to refresh modules data
+```
+`moduleId` - is optional, if you set it then only this module gets data refresh, if not, all modules will be refreshed.
+
+### **How to render modules list**
+
+***Huma Modules*** provides `ModuleListView` that can show module cards and refresh data.
+```xml
+<com.huma.sdk.module.view.ModuleListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshOnCreate="everyTime"
+        app:swipeToRefresh="true"
+        app:refreshOnlyDataOnSwipe="true" />
+```
+| Attribute | Value |
+|---|---|
+| `app:refreshOnCreate` | How modules and data is refreshed on create |
+| `app:swipeToRefresh` | Is swipe to refresh enabled |
+| `app:refreshOnlyDataOnSwipe` | How swipe to refresh behaves |
+
+```kt
+moduleListView.refreshOnlyDataOnSwipe = true
+moduleListView.swipeToRefresh = true
+moduleListView.refresh()  //refresh modules and data
+moduleListView.refreshData()  //refresh only data
+```
+
+### **Useful additions**
+
+**Huma Modules** provides several helper classes to reduce boilerplate code in some core cases.
+
+#### **Converters**
+
+**AboutConverter**
+
+`AboutConverter` converts `ModuleConfig` object to `AboutData` that's used in `AboutSection`
+
+```kt
+val aboutData = AboutConverter(context).invoke(moduleConfig)
+```
+
+**ScheduleConverter**
+
+`ScheduleConverter` converts `ModuleSchedule` object to `ScheduleData` that's used in `ScheduleSection`
+
+```kt
+val scheduleData = ScheduleConverter().invoke(moduleConfig.schedule)
+```
+
+#### **Extensions**
+
+**ModuleInputField**
+
+`dateField()` - date field
+`timeField()` - time field
+
+**SingleDefaultUnit**
+
+`litersUnit()` - liter units
+`percentUnit()` - percent units
+`litersPerMinUnit()` - liter per minute (L/min) units
+`pressureUnit()` - pressure (mmHg) units
+`emptyUnit()` - empty units
+`rpmUnit()` - rpm units
+`bpmUnit()` - bpm units
+
+**Form**
+
+`Any.asForm()` - converts any object to form. Used for modules where configBody is form
+
+**PostInputDelegateImpl**
+
+Alternative to `defaultPostDelegateWithCustomRefresher` where refresher using `HumaModuleManager.refreshData(moduleId)`
+```kt
+ModuleWithInput.defaultPostDelegateWithDefaultRefresher(
+    converter: Converter<List<Value<*>>, List<T>>,
+    moduleId: String,
+    moduleConfigId: String,
+)
+```
+
+**ModuleFilledStatusDelegate**
+
+Checks whether is module has data or not.
+
+```kt
+val filledStatusDelegate = BaseModule.filledStatusDispatcher()
+
+filledStatusDelegate.isFilled() //true if filled
+```
+
+**ModuleCardView**
+
+`EntriesCount` - creates `LiveData<CardData>` that returns size of entries.
+```kt
+override val moduleCardConfig: CardConfig
+        get() = CardConfig(
+            title = moduleName,
+            addButtonText = inputButtonText,
+            cardData = entriesCount(scheduleData)
+        )
+```
+
+`LatestValue` - creates `LiveData<CardData>` that returns last entry.
+```kt
+override val moduleCardConfig: CardConfig
+        get() = CardConfig(
+            title = moduleName,
+            addButtonText = inputButtonText,
+            cardData = lastEntry(scheduleData) { result, _ ->
+                Value.Simple(
+                    (result as RetrievePrimitiveResponse).value
+                )
+            },
+        )
+```
+
+**ChartSection**
+
+`LineChartDataProvider` - chart data provider for drawing line chart
+```kt
+ChartSection(
+    lineChartData(PrimitiveResultToLineChartData()),
+)
+```
+
+`BarChartDataProvider` - chart data provider for drawing bar chart
+```kt
+ChartSection(
+    barChartData(PrimitiveResultToLineChartData()),
+)
+```
+
+**QuestionnaireModuleInputDelegate**
+
+Some modules are required to fill questionnaire instad of raw values. To do that use `questionnaireModuleInputDelegate` instead of `defaultModuleInputDelegate`.
+```kt
+private val inputDelegate by questionnaireModuleInputDelegate(form: Form)
+```
+Output of this input delegate is `QuestionnaireValue(questionnaireViewData: QuestionnaireViewData)`
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+  
+1. Add the dependency in your local build.gradle file:
+
+```kt
+implementation("com.huma.sdk:module:latest-version")
+```
+
+2. `HumaModuleManager` require dependencies to be initialized before it in the `Application` class
+
+```kt
+HumaUtilsManager.init(/*..*/)
+HumaUiManager.init(/*..*/)
+HumaSharedManager.init(/*..*/)
+HumaCachingManager.init(/*..*/)
+HumaModuleKitManager.init(/*..*/)
+HumaObjectStorageManager.init(/*..*/)
+HumaPermissionsManager.init(/*..*/)
+HumaPreferredUnitsManager.init()
+
+val questionnaireManager = HumaQuestionnaireManager.init(/*..*/)
+
+HumaModuleManager.init(questionnaireManager)  
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme">
+
+**Processor** - the class that is dedicated to processing `ModuleConfig` and outputting instance of `Module`
+
+**Supported modules:**
+* BloodGlucose
+* BloodPressure
+* BMI
+* BodyMeasurement
+* Breathlessness
+* Covid19DailyCheckIn
+* Covid19RiskScore
+* CVDRiskScore
+* DailyCheckIn
+* DiabetesDistressScore
+* FJSHip
+* FJSKnee
+* GeneralAnxietyDisorder
+* HighFrequencyHeartRate
+* Journal
+* KCCQ
+* KOOS
+* Medications
+* MedicationTracker
+* NORFOLK
+* OxygenSaturation
+* PeakFlow
+* Photo
+* PulseOximetry
+* Questionnaire
+* RespiratoryRate
+* RestingHeartRate
+* RestingBreathingRate
+* SF36
+* Symptom
+* Temperature
+* Weight
+    
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+ ### Dependencies
+- [Huma Utils](./../Utilites/Android)
+- [Huma UI](./../UI/Android)
+- [Huma Shared Models](./../Shared%20Models/Android)
+- [Huma Caching](./../Caching/Android)
+- [Huma Charts](./../Charts/Android)
+- [Huma Module Kit](./../Module%20Kit/Android)
+- [Huma Object Storage](./../Object%20Storage/Android)
+- [Huma Permissions](./../Permissions/Android)
+- [Huma Preferred Units](./../Preferred%20Units/Android)
+- [Huma Questionnaire](./../Questionnaire/Android)
+  
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+**[0.1.29]**
+
+  - [#195](https://github.com/huma-engineering/huma-android-sdk/pull/71) Weight module added
+  - [#118](https://github.com/huma-engineering/huma-android-sdk/pull/78) Created Body Measurement module
+  - [#115](https://github.com/huma-engineering/huma-android-sdk/pull/72) Added Temperature module
+  - [#114](https://github.com/huma-engineering/huma-android-sdk/pull/109) Added Symptom module. Added documentation for Symptom module
+  - [#110](https://github.com/huma-engineering/huma-android-sdk/pull/73) Added Resting Heart Rate module
+  - [#109](https://github.com/huma-engineering/huma-android-sdk/pull/70) Created Respiration Rate module
+  - [#107](https://github.com/huma-engineering/huma-android-sdk/pull/81) Added Pulse Oximetry module
+  - [#106](https://github.com/huma-engineering/huma-android-sdk/pull/83) Added Peak Flow module
+  - [#105](https://github.com/huma-engineering/huma-android-sdk/pull/69) Created Oxygen Saturation module
+  - [#104](https://github.com/huma-engineering/huma-android-sdk/pull/94) Medications module; questionnaire module refactoring; improvements
+  - [#103](https://github.com/huma-engineering/huma-android-sdk/pull/118) Medication tracker module + refactoring
+  - [#102](https://github.com/huma-engineering/huma-android-sdk/pull/68) Added Diabetes Distress Score
+  - [#101](https://github.com/huma-engineering/huma-android-sdk/pull/195) Added Daily Check In module. Fixed titles of History section view. Inactive “No entries added yet” button
+  - [#100](https://github.com/huma-engineering/huma-android-sdk/pull/79) Added Breathlessness module
+  - [#96](https://github.com/huma-engineering/huma-android-sdk/pull/86) Added Daily Check In module. Fixed titles of History section view. Inactive “No entries added yet” button
+  - [#94](https://github.com/huma-engineering/huma-android-sdk/pull/84) Added BMI module
+  - [#92](https://github.com/huma-engineering/huma-android-sdk/pull/66) Hsdk 886
+  - [#91](https://github.com/huma-engineering/huma-android-sdk/pull/67) Hsdk 886
+  - [#90](https://github.com/huma-engineering/huma-android-sdk/pull/64) BloodGlucose module, Chart Details Screen
+  - [#86](https://github.com/huma-engineering/huma-android-sdk/pull/54) Journal Unit Tests
+  - [#84](https://github.com/huma-engineering/huma-android-sdk/pull/50) Created Photo module
+  - [#83](https://github.com/huma-engineering/huma-android-sdk/pull/43) hsdk 684
+  - [#81](https://github.com/huma-engineering/huma-android-sdk/pull/44) refactor interface hierarchy
+  - [#79](https://github.com/huma-engineering/huma-android-sdk/pull/47) hsdk 684
+  - [#78](https://github.com/huma-engineering/huma-android-sdk/pull/48) hsdk 684
+  - [#73](https://github.com/huma-engineering/huma-android-sdk/pull/51) Core and Journal
+  - [#72](https://github.com/huma-engineering/huma-android-sdk/pull/115) Added Module List View
+  - [#71](https://github.com/huma-engineering/huma-android-sdk/pull/114) Added CVDRiskScore module support
+  - [#70](https://github.com/huma-engineering/huma-android-sdk/pull/106) Added KCCQ module support
+  - [#69](https://github.com/huma-engineering/huma-android-sdk/pull/105) Added KOOS module support
+  - [#68](https://github.com/huma-engineering/huma-android-sdk/pull/104) Added Norfolk module support
+  - [#67](https://github.com/huma-engineering/huma-android-sdk/pull/103) Added SF36 module support
+  - [#66](https://github.com/huma-engineering/huma-android-sdk/pull/102) Added FJSKnee support
+  - [#64](https://github.com/huma-engineering/huma-android-sdk/pull/101) Added FJSHip module support
+  - [#54](https://github.com/huma-engineering/huma-android-sdk/pull/91) Added Resting Breathing Rate module
+  - [#51](https://github.com/huma-engineering/huma-android-sdk/pull/96) Added Questionnaire module
+  - [#50](https://github.com/huma-engineering/huma-android-sdk/pull/92) Added High Frequency Heart Rate
+  - [#48](https://github.com/huma-engineering/huma-android-sdk/pull/90) Added General Anxiety Disorder module
+  - [#47](https://github.com/huma-engineering/huma-android-sdk/pull/110) Added Covid 19 Risk Score module support
+  - [#44](https://github.com/huma-engineering/huma-android-sdk/pull/107) Added Covid19DailyCheckIn module support
+  - [#43](https://github.com/huma-engineering/huma-android-sdk/pull/100) Added CalculatedQuestionnaire support
+  
+</TabItem>
+</Tabs>

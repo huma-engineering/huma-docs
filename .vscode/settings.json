@@ -1,0 +1,20 @@
+{
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/sdk/Modules/Android.mdx"
+            ],
+            "config": {
+                "audience": "knowledgeable",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "neutral"
+                ],
+                "goals": [
+                    "describe"
+                ]
+            }
+        }
+    ]
+}
