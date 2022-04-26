@@ -1,0 +1,60 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that contains set of shared data structures
+
+### Getting Started
+<Tabs>
+<TabItem value="installing" label="Installing">
+
+  1. Add the dependency in your local build.gradle file:
+
+  ```
+  implementation("com.huma.sdk:shared:latest-version")
+  ```
+
+  2. `HumaSharedManager` require dependencies to be initialized before it in `Application` class
+
+  ```kotlin
+  HumaUtilsManager.init(/*..*/)
+  HumaCachingManager.init(/*..*/)
+  HumaSharedManager.init(/*..*/)
+  ```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+  **For internal use only**
+
+  This library is not intended to provide access to any functionality to the end developer
+
+  Contains list on *API's*, repos and data classes
+
+  * DeploymentApi 
+  * DeploymentModel
+  * UserProfileApi
+  * UserProfileModel
+  * UserProfileToUserConverer
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+ ### Dependencies
+- [Huma Utils](./../Utilites/Android)
+- [Huma Caching](./../Caching/Android)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+ **[0.1.29]**
+ 
+  - [#45](https://github.com/huma-engineering/huma-android-sdk/pull/45) Refactor common classes to shared module
+  
+</TabItem>
+</Tabs>
