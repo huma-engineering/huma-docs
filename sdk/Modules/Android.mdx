@@ -102,7 +102,7 @@ moduleListView.refreshData()  //refresh only data
 
 **AboutConverter**
 
-`AboutConverter` converts `ModuleConfig` object to `AboutData` that used in `AboutSection`
+`AboutConverter` converts `ModuleConfig` object to `AboutData` that's used in `AboutSection`
 
 ```kt
 val aboutData = AboutConverter(context).invoke(moduleConfig)
@@ -110,7 +110,7 @@ val aboutData = AboutConverter(context).invoke(moduleConfig)
 
 **ScheduleConverter**
 
-`ScheduleConverter` converts `ModuleSchedule` object to `ScheduleData` that used in `ScheduleSection`
+`ScheduleConverter` converts `ModuleSchedule` object to `ScheduleData` that's used in `ScheduleSection`
 
 ```kt
 val scheduleData = ScheduleConverter().invoke(moduleConfig.schedule)
@@ -202,7 +202,7 @@ ChartSection(
 
 **QuestionnaireModuleInputDelegate**
 
-Some modules required to fill questionnaire instad of raw values. To do that use `questionnaireModuleInputDelegate` instead of `defaultModuleInputDelegate`.
+Some modules are required to fill questionnaire instad of raw values. To do that use `questionnaireModuleInputDelegate` instead of `defaultModuleInputDelegate`.
 ```kt
 private val inputDelegate by questionnaireModuleInputDelegate(form: Form)
 ```
