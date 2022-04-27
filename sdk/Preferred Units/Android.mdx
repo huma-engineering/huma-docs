@@ -1,0 +1,100 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that implements preferred units
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+* Start preferred units activity:
+```kotlin
+startActivity(HumaPreferredUnitsManager.getInstance().getPreferredUnitsActivityLauncherIntent(
+    context = this,
+    params = PreferredUnitsActivity.Params.OnboardingMode // intro screen, pref units screen
+    // params = PreferredUnitsActivity.Params.DefaultMode(isReadOnly = false) // no intro screen, pref units screen
+))
+
+```
+
+* Get preferred units:
+```kotlin
+HumaPreferredUnitsManager.getInstance().getPreferredUnits(
+    onPreferredUnitsReady = { units: PreferredUnitsContainer -> /*..*/ },
+    onFailure = { error: Error -> /*..*/ }
+)
+```
+
+* Get preferred unit selection view data:
+```kotlin
+HumaPreferredUnitsManager.getInstance().getPreferredUnitsSelectionViewData(
+    onViewDataReady = { viewData: List<PreferredUnitSelectionViewData> -> /*..*/ },
+    onFailure = { error: Error -> /*..*/ }
+)
+```
+
+* Set preferred units:
+```kotlin
+HumaPreferredUnitsManager.getInstance().setPreferredUnits(
+    preferredUnits = listOf<PreferredUnitInfo>(),
+    onSuccess = { units: PreferredUnitsContainer -> /*..*/ },
+    onFailure = { error: Error -> /*..*/ }
+)
+```
+
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:preferred-units:<latest-version>")
+```
+2. Initialize `HumaPreferredUnitsManager` in your Application class:
+```kotlin
+HumaPreferredUnitsManager.init(
+   preferredUnitsConfig: PreferredUnitsConfig? = null
+)
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+### Customization
+
+During `HumaPreferredUnitsManager` initialization you can pass a `PreferredUnitsConfig` instance containing a list of enabled measurement unit types. All default measurement unit types are `open class` so that you can override its methods if needed.
+
+### Conversion
+
+`MeasurementUnitType<*>` classes have all required methods to convert the units. There's functions to get `MeasurementUnitType<*>` or `MeasurementUnit` from string id value - check `com.huma.sdk.preferred_units.utils.ExtensionsKt`
+
+### Displaying data
+
+The library handles simple (100 cm) and composite (4 ft 0 in) values and units. To simplify the process `UnitDisplayData` (which you can get for every `MeasurementUnit`) takes `Value` as input and produces `ValueAndUnit` as output. 
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+ ### Dependencies
+- [Huma Utils](../Utilities/Android)
+- [Huma UI](../UI/Android)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+**[0.1.29]**
+
+  - [#77](https://github.com/huma-engineering/huma-android-sdk/pull/77) Added PreferredUnitsRepositoryImpl test case
+  - [#74](https://github.com/huma-engineering/huma-android-sdk/pull/74) Preferred units support in questionnaires; pref. units fixes
+  - [#58](https://github.com/huma-engineering/huma-android-sdk/pull/58) Pref. units for module details (card data); unit tests; fixed bugs
+  - [#55](https://github.com/huma-engineering/huma-android-sdk/pull/55) Preferred units support for module kit
+  - [#34](https://github.com/huma-engineering/huma-android-sdk/pull/49) Preferred units - logic, storage, ui flow, unit tests, documentation
+  
+</TabItem>
+</Tabs>
