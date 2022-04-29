@@ -2,6 +2,22 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+## Environments
+
+- Live Preview: https://huma-docs-preview.web.app/
+- Live View: @TBD
+
+## Project layout
+
+Each site has one or two [code owner](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners). Please find owner list [here](.github/CODEOWNERS).
+
+## Running localy
+
+1. Generate a github token with read permission to github packages.
+2. Export as an environment variable: `$ export GITHUB_TOKEN=<generated token>`
+3. Run `yarn && yarn start`
+4. Docusarus supports auto reload, but sometimes repeating step 3 is necessary.
+
 ## Installation
 
 This website is using our [Github Package](https://github.com/huma-engineering/huma-redoc) for OpenAPI Integration. To install our Github Package, You need to add the `.npmrc` file to your project so that all requests to install packages will go through GitHub Packages.
@@ -37,6 +53,12 @@ yarn install
 yarn start
 ```
 
+or 
+
+```
+make serve
+```
+
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Additionally used plugins:
@@ -66,9 +88,9 @@ The multiple specifications can be added to the docusaurus.config.js:
         'redocusaurus',
             {
             specs: [{
-                    id: 'api-platformplay',
-                    routePath: 'api-platformplay',
-                    spec: 'api-platformplay/documentations.json',
+                    id: 'api-data-collection',
+                    routePath: 'api-data-collection',
+                    spec: 'api-data-collection/documentations.json',
                 }],
             }
         ]
@@ -82,7 +104,6 @@ The multiple specifications can be added to the docusaurus.config.js:
 
 ### Our current versioned instances:
 
-- platformplay
 - sdk
 
 ### Versioned paths
@@ -102,10 +123,10 @@ Each plugin instance will have its own cli command to tag a new version. They wi
 yarn docusaurus -- --help
 ```
 
-To version platformplay docs plugin instance:
+To version sdk docs plugin instance:
 
 ```bash npm2yarn
-yarn docusaurus docs:version:platformplay 1.16.0
+yarn docusaurus docs:version:sdk 1.16.0
 ```
 
 ## Theme Components

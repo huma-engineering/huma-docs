@@ -9,6 +9,34 @@
   --collapse-button-bg-color-dark: #2e333a;
 }
 
+.sidebarVersion {
+  padding: var(--ifm-menu-link-padding-horizontal) var(--ifm-menu-link-padding-horizontal);
+  border-bottom: 1px solid var(--ifm-color-dark);
+}
+
+.sidebarVersion :global(.dropdown) {
+  width: 100%;
+  padding: 0;
+}
+
+.sidebarVersion :global(.dropdown) :global(.navbar__link) {
+  width: 100%;
+}
+
+.sidebarVersion :global(.dropdown__menu) {
+  width: 100%;
+}
+
+@media (max-width: 997px) {
+  .sidebarVersion {
+    padding: 1rem var(--ifm-spacing-horizontal);
+  }
+  .sidebarVersion :global(.navbar__item.dropdown) {
+    display: block;
+  }
+}
+
+
 @media (min-width: 997px) {
   .sidebar {
     display: flex;

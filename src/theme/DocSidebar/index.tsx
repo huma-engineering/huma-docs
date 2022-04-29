@@ -15,12 +15,14 @@ import {
   ThemeClassNames,
   useScrollPosition,
   useWindowSize,
+  useLocalPathname
 } from '@docusaurus/theme-common';
 import Logo from '@theme/Logo';
 import IconArrow from '@theme/IconArrow';
 import {translate} from '@docusaurus/Translate';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import type {Props} from '@theme/DocSidebar';
+import NavbarItem from '@theme/NavbarItem';
 
 import styles from './styles.module.css';
 
@@ -66,9 +68,11 @@ function HideableSidebarButton({onClick}: {onClick: React.MouseEventHandler}) {
 function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}: Props) {
   const showAnnouncementBar = useShowAnnouncementBar();
   const {
-    navbar: {hideOnScroll},
+    navbar: {hideOnScroll, items},
     hideableSidebar,
   } = useThemeConfig();
+
+  const localPathname = useLocalPathname();
 
   return (
     <div
@@ -77,6 +81,9 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}: Props) {
         [styles.sidebarHidden]: isHidden,
       })}>
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
+      {items.map((item, i) => (
+        item.type == "docsVersionDropdown" && (localPathname.includes(`/${item.docsPluginId}`) && <div className={styles.sidebarVersion}><NavbarItem {...item} key={i} /></div>)
+      ))}
       <nav
         className={clsx('menu thin-scrollbar', styles.menu, {
           [styles.menuWithAnnouncementBar]: showAnnouncementBar,

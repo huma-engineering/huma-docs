@@ -25,7 +25,10 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-select": "^5.2.2",
     "redocusaurus": "^0.5.0",
+    "smooth-scrollbar": "^8.7.4",
+    "smooth-scrollbar-react": "^2.3.0",
     "url-loader": "^4.1.1"
   },
   "browserslist": {
