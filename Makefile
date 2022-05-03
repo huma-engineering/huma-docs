@@ -5,17 +5,21 @@ endif
 SHELL:=/bin/bash
 
 
-.PHONY: build
-serve:
+.PHONY: serve
+serve: build
 	@yarn start
 
 .PHONY: build
 build:
 	@yarn build
 
-.PHONY: build
-deploy:
+.PHONY: deploy
+deploy-live: 
 	@firebase deploy --only hosting:huma-docs
+
+.PHONY: deploy
+deploy-preview: 
+	@firebase deploy --only hosting:huma-docs-preview
 
 .PHONY: build
 common/git-info:
