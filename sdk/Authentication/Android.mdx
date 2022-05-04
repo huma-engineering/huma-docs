@@ -12,24 +12,197 @@ Library that provides a set of Authentication screens and flows required to buil
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+   This libarary provides two options for authentication flow **UI** and **Manual**
+
+<Tabs>
+   <TabItem value="ui" label="UI" default>
+      To start auth flow you need to register callback in `onCreate` of caller activity.
+
+``` java
+HumaAuthManager.getInstance().registerAuthResult(this)
+```
+
+To start UI flow you need to call:
+
+``` kotlin
+ HumaAuthManager.getInstance().openAuthUI {
+    // this callback will be called when user is signed in
+ }
+```
+
+   </TabItem>
+<TabItem value="manual" label="Manual">
+
+First step for the manual authenitification should be getting current status of the user.
+
+**Get current user auth status**
+
+```kotlin
+HumaAuthManager.getInstance().getAuthStep { step ->
+            when (step) {
+                AuthStep.SIGN_UP_AND_SIGN_IN -> {
+                    //ready to be signed it
+                }
+                AuthStep.SIGN_UP_MFA -> {
+                    //need to continue registration flow with enter phone step HumaAuthManager.getInstance().setPhone(email,phone)
+                }
+                AuthStep.HOME -> {
+                    //user is signed in
+                }
+            }
+        }
+```
+
+**Get available regions**
+
+```kotlin
+HumaAuthManager.getInstance().regions { regions ->
+   //selected region must be set to HumaAuthManager.getInstance.setRegion(region)
+}
+```
+
+**Set region**
+
+```kotlin
+HumaAuthManager.getInstance().setRegion(region)
+```
+
+**Validate activation code**
+
+```kotlin
+HumaAuthManager.getInstance().verifyActivationCode(code) { boolean ->
+   //if true then code is valid
+}
+```
+
+**Start sign up process**
+
+```kotlin
+HumaAuthManager.getInstance().signUp(email, activationCode) { status, error ->
+   //if status is true, verification code will be send on entered email
+}
+```
+
+**Start sign in process**
+
+```kotlin
+HumaAuthManager.getInstance().signIn(email) { signInStatus, error ->
+   //if signInStatus is SignInStatus.EMAIL_VERIFICATION_REQUIRED then should verify your email
+   //if signInStatus is SignInStatus.ENTER_PASSWORD then you should enter password
+}
+```
+
+**Verify email**
+
+```kotlin
+HumaAuthManager.getInstance().verifyEmail(email, code) { signInStatus, error ->
+   //if signInStatus is SignInStatus.SET_PASSWORD then you need to set password for user
+}
+```
+
+**Set Email**
+
+```kotlin
+HumaAuthManager.getInstance().setPassword(email, password) { signInStatus, error ->
+   //if signInStatus is SignInStatus.SIGNED_IN then you are signed in
+   //if signInStatus is SignInStatus.MFA_REQUIRED then you need enter mfa code that was send to your phone
+   //if signInStatus is SignInStatus.PHONE_VERIFICATION_REQUIRED then you need to set your phone
+}
+```
+
+**MFA**
+
+```kotlin
+HumaAuthManager.getInstance().confirmMfa(code) { signInStatus, error ->
+   //if signInStatus is SignInStatus.SIGNED_IN then you are signed in
+}
+```
+
+**Set phone**
+
+```kotlin
+HumaAuthManager.getInstance().setPhone(email, phone) { send, error ->
+   //if send is true then code to validate account is set
+}
+```
+
+**Verify phone**
+
+```kotlin
+HumaAuthManager.getInstance().verifyPhone(email, phone, code) { signInStatus, error ->
+   //if signInStatus is SignInStatus.SIGNED_IN then you are signed in
+}
+```
+
+**Enter password**
+
+```kotlin
+HumaAuthManager.getInstance().enterPassword(email, password) { signInStatus, error ->
+   //if signInStatus is SignInStatus.SIGNED_IN then you are signed in
+   //if signInStatus is SignInStatus.MFA_REQUIRED then you are required to enter mfa
+}
+```
+
+**Forgot password**
+
+```kotlin
+HumaAuthManager.getInstance().forgotPassword(email) { boolean, error ->
+   //if boolean is true then reset link is send
+}
+```
+
+**Is user signed in**
+
+```kotlin
+HumaAuthManager.getInstance().isSignedIn() { boolean ->
+   //if boolean is true then user is signed in
+}
+```
+</TabItem>
+</Tabs>
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
+
+  1. Add the dependency in your local build.gradle file:
+  
+  ```
+  implementation("com.huma.sdk:auth:latest-version")
+  ```
+
+  2. `HumaAuthManager` require dependencies to be initialized before it in `Application` class
+
+  ```kotlin
+  HumaUtilsManager.init(/*..*/)
+  HumaUiManager.init(/*..*/)
+  HumaSharedManager.init(/*..*/)
+  HumaCachingManager.init(/*..*/)
+  HumaAuthManager.init(/*..*/)
+  ```
+
 </TabItem>
-<TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
+<TabItem value="readme" label="Readme">
+
+**HumaAuthManager** - main class to interact with durning library usage
+
+**Authentication** - library provides two types on authentication flows.
+  1. ***UI*** - where users will be presented with prebuild interface for SignIn/SignUp
+  2. ***Manual*** - where library user required to build ui to interact wih manager
+
+   
+### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+### Dependencies
+- [Huma Utils](../Utilities/Android.mdx)
+- [Huma UI](../UI/Android.mdx)
+
 </TabItem>
 <TabItem value="changelog" label="Changelog">
 
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
+ **[0.1.29]**
+ 
+  - [#5](https://github.com/huma-engineering/huma-android-sdk/pull/5) Added manual and UI flow for authentication
   
 </TabItem>
 </Tabs>
-
- ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
-
- ### Dependencies
-- Dependency A
-- Dependency B

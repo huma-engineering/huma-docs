@@ -6,3 +6,7 @@
 
 # trust-security owner
 /trust-security @harrison-huma
+
+# sdk owners
+/sdk @jaygajjar-huma @fernandod-huma
+/sdk_versioned_docs @jaygajjar-huma @fernandod-huma

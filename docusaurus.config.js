@@ -118,6 +118,9 @@ module.exports = {
         },
       ],
     },
+    prism: {
+      additionalLanguages: ['kotlin']
+    }
   },
   presets: [
     [
