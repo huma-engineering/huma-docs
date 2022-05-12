@@ -7,15 +7,176 @@ import TabItem from '@theme/TabItem';
 
 
 # iOS
-Library that provides a set of Utilities required to build new products.
+HumaModuleKit is a library that contains an engine for building **Modules**. Note that it doesn't include any **Module** implementations.
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+### **How to create a module**
+1. First of all, you need to create a module. Simply put, a **Module** describes a task that can be performed by a user, usually for an unlimited number of times. 
+
+  A Module has three main responsibilities:
+    - render itself on a **Module Card** (required);
+    - display an **Input** flow (optional);
+    - display a **Detail** flow (optional).
+  
+  A Module can also display any other flows.
+
+2. To create a module, ultimately, you have to conform to `protocol AnyModule`. If your module supports Detail flow, you must conform to `protocol AnyModuleWithDetail`. 
+
+  The framework also includes default **abstract classes** to make your life easier: 
+    - `class Module`. This class implements most of the logic for rendering a Module on a Module Card and building the default Detail page. 
+    All you have to do is override a few methods.
+    - `class ModuleWithDefaultInput: Module`. This class extends `class Module` by adding additional logic to display the default Input page.
+    
+  The **HumaModules** framework contains several default module implementations. 
+  Here's a snippet from `class WaistModule`, which you can use as an example for creating your modules:
+
+```swift
+import HumaModuleKit
+
+/// Allows users to submit waist readings and view previous data.
+public final class WaistModule: ModuleWithDefaultInput<DoublePrimitives.Waist.InputTransformer> {
+
+    /// Title of a module to display on List and Detail if `config` doesn't contain a name.
+    public override class var defaultDisplayName: String { Strings.moduleWaistTitle }
+    /// Name of a module to display on analytics tracking.
+    public override class var analyticsName: String { "Waist" }
+
+    /// Is used to populate the default detail screen.
+    public override var detailConfig: DetailConfig {
+        makeDetailConfig(sections: makeDetailSections(), actions: [makeDetailAction()])
+    }
+
+    /// Is used to populate the input view.
+    public override var inputViewModel: ModuleInputViewModel {
+        makeInputViewModel(
+            subheading: Strings.moduleWaistInputSubtitle,
+            unit: unit.displayName,
+            inputType: .floatNumber,
+            validator: Self.validateInput
+        )
+    }
+
+    /// Used to create the renderer for Module List.
+    /// - Parameter config: External configuration for the renderer.
+    /// - Returns: Created a standard renderer for displaying result count, and, optionally, a chart preview.
+    public override func makeStandardRenderer(config: ModuleRenderingMode.StandardConfig) -> AnyModuleStandardRenderer {
+        makeStandardRenderer(
+            primitiveType: Primitive.self,
+            config: config,
+            valueFormatter: .default(unit: unit, range: .zero),
+            chartConverter: .line
+        )
+    }
+}
+```
+
+### **How to display modules**
+
+Now that you have implemented the required modules, it's time to try them in action 🚀.
+
+1. Start by creating an enumeration with identifiers for all required modules. Your `enum` should have a raw value type of `String` and conform to `ModuleIdentifiable`. 
+The raw values must match the module identifiers in your **Configuration**.
+```swift
+import HumaModuleKit
+
+/// Enumerates all modules supported by the Sample App.
+enum ModuleID: String, ModuleIdentifiable {
+    
+    // Declare all module identifiers here
+    
+    case waist = "Waist"
+    case temperature = "Temperature"
+    case questionnaire = "Questionnaire"
+
+    // Return types of the module classes here
+    func moduleType(for config: GroupedModuleConfig) -> AnyModule.Type {
+        switch self {
+        case .waist:
+            return WaistModule.self
+        case .temperature:
+            return TemperatureModule.self
+        case .questionnaire:
+            return QuestionnaireModule.self
+        }
+    }
+
+    func supportsGrouping(for config: ModuleConfig) -> Bool {
+        self == .questionnaire
+    }
+}
+```
+  
+2. Implement `protocol AnyModuleTypeRepository` to let the framework know about the modules and their identifiers. 
+Register this and other dependencies in your app's container:
+
+```swift
+struct DependencyContainer {
+    var resolver: Resolver {
+        let repository = ModuleTypeRepository()
+        return Container()
+            .register(AnyModuleTypeRepository.self, instance: repository)
+        }
+    }
+}
+```
+
+You can find the complete list of dependencies on the **Installing** tab.
+
+**Hint.** A module can resolve any dependency, including module-specific ones. So if your module requires custom dependencies, don't forget to register them.
+
+3. Instantiate `class ModulesCoordinator` and attach it to a parent coordinator. That's all. Enjoy your modules!
+
+```swift
+final class TabBarCoordinator: BaseCoordinator {
+    
+    let container = DependencyContainer()
+    
+    override func start(animated: Bool) -> Completable? {
+        fatalError("TODO")
+    }
+    
+    private func openModulesTab() {
+        let child = ModulesCoordinator(navigator: navigator, resolver: container.resolver, listOptions: .init())
+        addChild(child)
+    }
+}
+```
+
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
+
+### **Registering dependencies**
+
+1. Add the dependency to your project. **TODO: describe how to install the library via a package manager**
+2. You pass dependencies to the classes of this library using `Resolver`. On the client-side, implement the following protocols and register them in your dependency container:
+    - `AnyAnalytics`
+    - `AnyUserObserveRepository`
+    - `AnyModuleResultObserveRepository`
+    - `AnyModuleTypeRepository`
+    - `AnyReminderRepository`
+    - `AnyConfigurationRepository`
+    - `AnyFileRepository`
+    - `AnyModuleResultSubmitRepository`
+
+  To see more info about registering the dependencies for Huma SDK libraries, tap here. **TODO: add page and link it here**.
+ 3. You can specify custom dependencies for specific modules.
+
+```swift
+struct DependencyContainer {
+    var resolver: Resolver {
+        let repository = CustomRepository()
+        return Container()
+            .register(AnyCustomRepository.self, name: "YourModuleType", instance: repository)
+            
+        }
+    }
+}
+```
+
 </TabItem>
 <TabItem value="readme" label="Readme" default>
   Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
@@ -28,8 +189,4 @@ Library that provides a set of Utilities required to build new products.
 </Tabs>
 
  ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
-
- ### Dependencies
-- Dependency A
-- Dependency B
+[API Reference](https://github.com/huma-engineering/huma-ios-sdk/releases)
