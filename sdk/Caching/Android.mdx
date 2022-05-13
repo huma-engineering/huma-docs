@@ -7,71 +7,10 @@ import TabItem from '@theme/TabItem';
 
 
 # Android
-Library that provides a set of components required to interact with local database.
+Library that provides an internal caching layer.
 
 ### Getting Started
 <Tabs>
-<TabItem value="example" label="Example" default>
-
-Example definition of the UserEntry class:  
-
-```kotlin
-@Entity(tableName = UserEntity.TABLE_NAME)
-data class UserEntity(
-    @PrimaryKey
-    var id: String = "",
-    var givenName: String? = null,
-    var familyName: String? = null,
-    var avatar: String? = "", // some placeholder image
-    var phone: String? = null,
-    var email: String? = null,
-    var timezone: String? = null,
-    var birthday: Long? = null,
-    var height: String? = null
-    ...
-
-) {
-    companion object {
-        const val TABLE_NAME = "user"
-    }
-}   
-```
-
-Example definition of the UserDao class:
-
-```kotlin
-@Dao
-abstract class UserDao : BaseDao<UserEntity> {
-  
-  //Defines public api for getting first entry of UserEntity
-  fun getFirstResult(): Result<UserEntity?, Error> {
-        return try {
-            Ok(getFirst())
-        } catch (t: Throwable) {
-            Err(Error.Unknown(t))
-        }
-    }
-
-  //Get first entry from the UserEntity table in a database
-  @Query("SELECT * FROM ${UserEntity.TABLE_NAME} LIMIT 1")
-  abstract override fun getFirst(): UserEntity?
-}
-```
-
-Example definition of the UserMapper class:
-```kotlin
-class UserMapper : BaseMapper<User, UserEntity> {
-    override fun into(source: User): UserEntity {
-        return source.toUserEntity()
-    }
-
-    override fun from(entity: UserEntity?): User? {
-        return entity?.toUser()
-    }
-}
-```
-
-</TabItem>
 <TabItem value="installing" label="Installing">
 
 1. Add the dependency in your local build.gradle file:
@@ -91,12 +30,8 @@ HumaCachingManager is a provider of an interfaces for interaction with local dat
 HumaCachingManager module encapsulates logic of creating instance of `Humadatabase` inheritanced from `RoomDatabase` and defines interfaces for creating DAOs classes and entities converters.  
 There are major components for interaction with database using HumaCachingManager:
 * Data entity - class that represents tables in a database.
-* Data access object (DAO) - class inherited from `BaseDao` class and provides methods that your app can use to query, update, insert, and delete data in the database.
-* Data object mapper - class inherited from `BaseMapper` class and defines methods to convert appropriate app's data class to your data entity class.  
-
-**BaseDao** - defines methods for executing CRUD operations with data in the database.
-
-**BaseMapper** - defines methods to convert from app's data object to database entities and back.
+* Data access object (DAO) - class provides methods for executing CRUD operations with data in the database.
+* Data object mapper - class defines methods to convert appropriate app's data class to data entity class.  
 
  ### Documentation
 [API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
