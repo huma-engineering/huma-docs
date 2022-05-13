@@ -13,13 +13,39 @@ Library that implements onboarding flow
 <Tabs>
 <TabItem value="example" label="Example" default>
 
-1. Initialize HumaOnboardingManager with a list of steps
+1. Define onboarding steps
+```kotlin
+class GetStartedOnboardingStep : OnboardingStep {
+
+    private fun shouldBeShown(params: OnboardingStepParams): Boolean {
+        return params.preferencesManager.isGetStartedCompleted.not()
+    }
+
+    override suspend fun getActivityIntent(
+        context: Context,
+        params: OnboardingStepParams,
+    ): Intent? {
+        if (!shouldBeShown(params)) {
+            return null
+        }
+
+        return GetStartedActivity.getLauncherIntent(context)
+    }
+
+    override fun getAnalyticsName() = "Get started"
+}
+```
+
+2. Initialize HumaOnboardingManager:
 ```kotlin
 HumaOnboardingManager.init(
-   onboardingSteps: List<OnboardingStep>
+    // list of onboarding steps
+   onboardingSteps = listOf(GetStartedOnboardingStep()),
+   // if true - onboarding will consist of [onboardingSteps], if false - onboarding will consist of default steps (described in readme) + [onboardingSteps] 
+   overrideDefault = true
 )
 ```
-2. Start OnboardingActivity
+3. Start OnboardingActivity:
 ```kotlin
 startActivity(OnboardingActivity.getIntent(context))
 ```
@@ -33,44 +59,54 @@ implementation("com.huma.sdk:onboarding:<latest-version>")
 ```
 2. Initialize `HumaOnboardingManager` in your Application class:
 ```kotlin
-HumaOnboardingManager.init(
-   onboardingSteps: List<OnboardingStep>
-)
+HumaOnboardingManager.init(/*..*/)
 ```
 
 </TabItem>
 <TabItem value="readme" label="Readme" default>
 
+## Basics
+
+**Onboarding flow** - a consequent flow of screens launched before going to the main screen (usually once - after signing in).
+
 **OnboardingStep** - interface that onboarding flow step is required to implement. 
+
+**OnboardingStepParams** - data class that contains useful instances that may be required for a step.
+
+## Customization
+
 A list of steps is provided during initialization (note that order is important, conditions are checked sequentially):
 
 ```kotlin
-HumaOnboardingManager.init(listOf(
-            object : OnboardingStep {
-                // will be shown if this condition passes
-                override fun shouldBeShown(params: OnboardingStepParams): Boolean {
-                    // params contains deployment, prefs manager and user instance to determine whether step should be shown
-                    return true
-                }
-
-                // used to launch the step
-                override fun getActivityIntent(context: Context): Intent {
-                    return PreferredUnitsActivity.getLauncherIntent(
-                        context,
-                        PreferredUnitsActivity.Params.OnboardingMode
-                    )
-                }
-
-                // used for logging purposes
-                override fun getAnalyticsName() = "step name"
-            }
-        ))
+HumaOnboardingManager.init(onboardingSteps = listOf(FirstStep(), SecondStep()))
 ```
+
+`overrideDefault` - if true - onboarding will consist of [onboardingSteps], if false - onboarding will consist of default steps + [onboardingSteps] 
+
+```kotlin
+HumaOnboardingManager.init(onboardingSteps = listOf(), overrideDefault = false)
+```
+
+## Default steps
+
+* OnboardingQuestionnaireOnboardingStep - baseline questionnaire - opens questionnaires that are marked as `isOnboarding=true`
+* ProfileQuestionnaireOnboadingStep - questionnaire used to fill user profile data
+* PreferredUnitsOnboardingStep - preferred units setup
 
 
 </TabItem>
 <TabItem value="changelog" label="Changelog">
-Changelog
+
+**[0.2.1]**
+
+  - [#142](https://github.com/huma-engineering/huma-android-sdk/pull/142) Profile questionnaire unit tests; onboarding module improvements
+  - [#141](https://github.com/huma-engineering/huma-android-sdk/pull/141) Added E-Consent Onboarding module
+  - [#137](https://github.com/huma-engineering/huma-android-sdk/pull/137) Onboarding profile questionnaire; fixes, onboarding/questionnaire improvements
+  - [#136](https://github.com/huma-engineering/huma-android-sdk/pull/136) Added onboarding Consent module
+  - [#134](https://github.com/huma-engineering/huma-android-sdk/pull/134) Added Onboarding Questionnaire
+  - [#129](https://github.com/huma-engineering/huma-android-sdk/pull/129) Added Identity Verification
+  - [#127](https://github.com/huma-engineering/huma-android-sdk/pull/127) Huma Onboarding core, onboarding preferred units setup
+
 </TabItem>
 </Tabs>
 
