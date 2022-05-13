@@ -1,0 +1,55 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma/questionnaire
+```
+
+yarn:
+```bash
+yarn add @huma/questionnaire
+```
+
+## Project Setup
+
+Once dependency installed we are able to use `HumaQuestionnaireModule` to add authentication pages from the SDK. 
+
+```typescript
+import { HumaQuestionnaireModule } from '@huma/questionnaire';
+
+@NgModule({
+  imports: [ HumaQuestionnaireModule ]
+})
+export class AppModule {}
+```
+
+Questionnaire library contains 3 different modules:
+
+- `core` - Used to contain base components that is used by all other modules from questionnaire library, for example, question controls.
+- `builder` - Used to contain builder related components. Such components used to create questionnaire builder (environment to construct own questionnaires).
+- `renderer`- Used to contain renderer related components to display questionnaire answers. This includes questionnaire page, answers history and submissions.
+
+All those modules can be imported separately:
+
+```typescript
+import { 
+  HumaQuestionnaireCoreModule,
+  HumaQuestionnaireBuilderModule,
+  HumaQuestionnaireRendererModule
+} from '@huma/questionnaire';
+
+@NgModule({
+  imports: [ 
+    HumaQuestionnaireCoreModule,
+    HumaQuestionnaireBuilderModule,
+    HumaQuestionnaireRendererModule 
+  ]
+})
+export class AppModule {}
+```
