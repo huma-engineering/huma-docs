@@ -7,29 +7,316 @@ import TabItem from '@theme/TabItem';
 
 
 # iOS
-Library that provides a set of Utilities required to build new products.
+**HumaUtils** is a core library that provides a set of utilities for other libraries and applications.
+
+We can categorize the utilities provided by the library into the following groups:
+
+  - networking tools;
+  - dependency injection;
+  - analytics;
+  - common protocols;
+  - extensions to standard types from Foundation and UIKit.
+
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+### Networking tools
+The library provides a set of tools for making HTTP requests.
+The core class that you would use for making API calls is `RequestDispatcher`. 
+It's an advanced wrapper for `URLSession` which allows you to customize its behaviour by providing your own logic for:
+
+  - adapting requests;
+  - intercepting errors;
+  - retrying failed requests;
+  - preventing duplicate requests from running simultaneously;
+  - parsing failure payloads.
+
+#### Using `RequestDispatcher`
+
+When initializing the class, you can provide custom implementation of `AnyURLSession`. By default, `HumaURLSession` is used; it attaches a set of standard headers to each HTTP request:
+  - "Accept-Encoding";
+  - "Accept-Language";
+  - "User-Agent";
+  - "x-hu-user-agent";
+  - "x-hu-locale".
+
+For example:
+
+```swift
+    // 1. Create the instance
+    let dispatcher = RequestDispatcher()
+    
+    // optionally, specify custom session
+    // let dispatcher = RequestDispatcher(session: MyURLSession())
+    
+    // 2. Configure custom behavior
+    dispatcher.adapter = MyRequestAdapter()
+    dispatcher.retrier = MyRequestRetrier()
+    dispatcher.duplicatePreventor = MyRequestDuplicatePreventor()
+    dispatcher.errorInterceptor = MyRequestErrorIntercepto()
+    dispatcher.errorParser = MyRequestErrorParser()
+    
+    // 3. Make requests
+    
+    let request = URLRequest(url: "google.com", method: .get)
+    dispatcher.requestObject(request) { (response: Response<MyDecodableObject>) in
+        // here you can handle the response by switching on `response.result`
+    }
+    
+    // there are other methods in the dispatcher for making requests, for example:
+    let cancellable = dispatcher.request("google.com" as URL)
+    // you can cancel in-progress requests
+    cancellable?.cancel()
+```
+
+#### Building requests
+The library provides another API to simplify your job of defining endpoints and building `URLRequest` instances. See `AnyEndpoint` and `EndpointBuilder`.
+
+Below is a classic example of using an enumeration to define endpoints for your app:
+
+```swift
+// 1. Define your endpoints by conforming to `AnyEndpoint`. It doesn't necessarily has to be an enum.
+
+enum MyEndpoint: AnyEndpoint {
+    
+    struct UserParameters: Encodable {
+        let lastName: String
+    }
+    
+    case getUser
+    case updateUser(parameters: UserParameters)
+    
+    // [REQUIRED] specify endpoint-specific path (without base URL)
+    var path: String {
+        switch self {
+        case .getUser, .updateUser:
+            return "/api/v1/user"
+        }
+    }
+    
+    // [OPTIONAL] specify endpoint-specific HTTP method; default is "GET"
+    var method: HTTPMethod {
+        switch self {
+        case .getUser:
+            return .get
+        case .updateUser:
+            return .post
+        }
+    }
+    
+    // [OPTIONAL] specify extra endpoint-specific headers, if needed
+    var extraHeaders: HTTPHeaders {
+        [:]
+    }
+    
+    // [OPTIONAL] specify endpoint-specific query parameters, if needed
+    var queryParameters: QueryParameters? {
+        nil
+    }
+    
+    // [OPTIONAL] specify endpoint-specific body
+    var body: HTTPBody? {
+        switch self {
+        case .getUser:
+            return nil
+        case let .updateUser(parameters):
+            return .json(parameters)
+        }
+    }
+    
+    // [OPTIONAL] specify endpoint-specific decoder
+    var decoder: JSONDecoder {
+        .init()
+    }
+    
+    // [OPTIONAL] specify endpoint-specific timeout duration
+    var timeoutInterval: TimeInterval? {
+        nil
+    }
+}
+
+// 2. Initialize `EndpointBuilder`
+
+let endpoint = MyEndpoint.getUser
+let builder = EndpointBuilder(baseURL: "https://devapi.humaapp.io", endpoint: endpoint)
+
+// 3. Make request
+
+dispatcher.request(builder)
+```
+
+### Dependency injection
+The library provides an API for dependency injection. See `Resolver` and `Container`.
+
+#### Registering dependencies
+
+```swift
+// Interfaces of your dependencies
+
+protocol MyServiceA {}
+
+protocol MyServiceB {}
+
+// Implementations
+
+final class ServiceA: MyServiceA { }
+
+final class ServiceA2: MyServiceA { }
+
+final class ServiceB: MyServiceB {
+    init(resolver: Resolver) {
+        
+    }
+}
+
+// Register dependencies in `Container`
+
+struct DependencyContainer {
+    // You will be using this to resolve your dependencies everywhere in the app.
+    let resolver: Resolver = {
+        let container = Container()
+        // register a single instance
+            .register(MyServiceA.self, instance: ServiceA())
+        // register a single instance using name
+            .register(MyServiceA.self, name: "customName", instance: ServiceA2())
+        // register a factory (closure)
+            .register(MyServiceB.self) { ServiceB(resolver: $0) }
+    }()
+}
+```
+
+#### Resolving dependencies
+
+```swift
+// Your class that requires dependencies
+final class MyPresenter: AnyPresenter {
+
+    private let resolver: Resolver
+    
+    private var serviceA: MyServiceA { resolver.resolve() }
+    private var serviceB: MyServiceB { resolver.resolve() }
+    
+    init(resolver: Resolver) {
+        self.resolver = resolver
+    }
+    
+    func didLoadView() {
+        // you can use the resolved dependencies (`serviceA` and `serviceB` inside your class)
+    }
+}
+
+class MyApp {
+    let dependencyContainer = DependencyContainer()
+    
+    func makePresenter() {
+        let presenter = MyPresenter(resolver: dependencyContainer.resolver)
+    }
+}
+```
+
+### Analytics
+
+The library contains tools for analytics tracking. See the `Analytics` namespace.
+
+First, you have to implement an engine by conforming to `AnyAnalyticsEngine`.
+
+```swift
+final class MyAnalyticsEngine: AnyAnalyticsEngine {
+    func track(_ event: String, properties: Analytics.Properties?) {
+        // track events using your tracking provider
+    }
+    
+    func identify(_ userID: String?, traits: Analytics.UserTraits?) {
+        // identify user using your tracking provider
+    }
+    
+    func reset(completion: VoidCompletion?) {
+        // reset cached user state if needed
+    }
+    
+    func getAnonymousId() -> String {
+        // return id for tracking analytics when not authorized
+    }
+}
+```
+
+Then initialize the tracker with your engine:
+
+```swift
+let tracker = Analytics.Tracker(engine: MyAnalyticsEngine())
+```
+
+Now, define your events. To declare an event you should conform to `AnyAnalyticsEvent`. Or, you could create a subclass or use the following base classes directly:
+  - `Analytics.Event`
+  - `Analytics.KeyedEvent`
+  - `Analytics.WrapperEvent`
+
+For example:
+```swift
+struct ModuleEvent: AnyAnalyticsEvent {
+    var name: String { "open_module" }
+    
+    var properties: [String : String] {
+        ["module_id": moduleID]
+    }
+    
+    private let moduleID: String
+    
+    init(moduleID: String) {
+        self.moduleID = moduleID
+    }
+}
+
+// This event will include default properties from the base class
+final class UserEvent: Analytics.Event {
+    
+}
+```
+
+Now you can track your events using the tracker.
+
+```swift
+// identify user upon sign in
+tracker.identifyUser(userID: "my_user_id", traits: ["name": "John"])
+
+tracker.track(ModuleEvent(moduleID: "Weight"))
+tracker.track(UserEvent())
+```
+
+### Common Protocols
+
+The library includes common protocols that are used in other libraries and you can use for your own needs. 
+Examples include `Cancellable`, `Successable`, `Completable`, and `AnyPresenter. 
+
+### Extensions and other utilities
+
+The library includes a lot of extensions for different structs and classes from Foundation and UIKit.
+For example, there a methods to simplify registering and dequeuing cells from `UITableView` and `UICollectionView`.
+
+```
+let tableView = UITableView()
+class MyCell: UITableViewCell { }
+
+tableView.register(MyCell.self)
+let cell: MyCell = tableView.dequeueReusableCell() 
+```
+
+There are also helpful utility structs, clases, and property wrappers for different needs such as `KeyChainStorage`, `ImagesCache`, `MultiCastDelegate`, `Debouncer`, `FileLoader`, etc.
+I would also like to bring to your attention `SafelyDecoded` and `Preference` property wrappers.
+
+HumaUtils includes a lot more helpful stuff so I encourage you to navigate through all its files so you don't end up reinventing the wheel. ;)
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
-</TabItem>
-<TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
+
+  1. Add the dependency to your project. **TODO: describe how to install the library via a package manager**
+
 </TabItem>
 <TabItem value="changelog" label="Changelog">
-
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
-  
 </TabItem>
 </Tabs>
 
  ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
-
- ### Dependencies
-- Dependency A
-- Dependency B
+[API Reference](https://github.com/huma-engineering/huma-ios-sdk/releases)
