@@ -7,29 +7,155 @@ import TabItem from '@theme/TabItem';
 
 
 # iOS
-Library that provides a set of Coordinator utilities required to build new products.
+**HumaCoordinator** is a library that implements the Coordinator pattern and is used in other libraries.
+
+The Coordinator pattern is designed to allow you to easily create **reusable flows** in your app.
+
+A Coordinator instance is responsible for:
+  - creating View Controllers and Child Coordinators (sub-flows)
+  - managing the lifecycle of View Controllers and Child Coordinators
+  - performing navigation between View Controllers and Child Coordinators.
+You can find more informatioi
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+### Protocols
+  1. The `AnyCoordinator` protocol defines an interface for a Coordinator; all Coordinator implementations must conform to it.
+  2. The `AnyNavigator` protocol defines methods to control navigation between view controllers. The `NavigationControler` class conforms to it out of the box.
+  3. The `AnyCoordinatorAssembly` protocol defines an interface for Coordinator builders.
+  4. The `ModalContainerCoordinatorEmbeddable` protocol defines an interface for Coordinators that can be embedded in a `ModalContainerCoordinator`.
+
+### Base classes
+#### 1. `BaseCoordinator`
+  - The `BaseCoordinator` class implements `AnyCoordinator` and is the abstract base class for Coordinators. 
+  - It does all the heavy lifting of `AnyCoordinator` implementation and provides a set of helpful methods (see the code documentation).
+  - It is **strongly recommended** to use this class as a base for your Coordinator classes.
+
+  See the example below on how to create your coordinator. Pay attention to the comments about **memory magagement**.
+
+```swift
+  
+import HumaUtils
+import HumaUI
+import HumaCoordinator
+
+final class InitialViewController: ViewController {
+    let onNext = VoidEvent()
+}
+
+final class RootCoordinator: BaseCoordinator {
+    // 1. you must override the start method
+    override func start(animated: Bool) -> Completable? {
+        let controller = makeInitialViewController()
+        setRoot(controller)
+        // 2. when this view controller is closed, the coordinator will deinitialize.
+        return controller
+    }
+    
+    private func makeInitialViewController() -> UIViewController {
+        let controller = InitialViewController()
+        controller.onNext.addObserver(self) {
+            $0.startChildCoordinator()
+        }
+        return controller
+    }
+    
+    private func startChildCoordinator() {
+        let child = ChildCoordinator(navigator: navigator)
+        // 3. this will retain and start the child coordinator
+        addChild(child)
+    }
+}
+
+final class ChildCoordinator: BaseCoordinator {
+    // 1. to handle deinitalization manually, use `CustomCompletable`.
+    let customCompletable = CustomCompletable()
+    
+    // 2. you must override the start method
+    override func start(animated: Bool) -> Completable? {
+        // present your view controller
+        // 3. return the Completable token
+        customCompletable
+    }
+    
+    private func handleFinish() {
+        // 4. complete the coordinator when needed
+        customCompletable.complete()
+    }
+}
+
+  ```
+
+#### 2. `ContainerCoordinator`
+Use `ContainerCoordinator` to wrap a View Controller into a Coordinator.
+
+```swift
+let viewController = ViewController()
+let child = ContainerCoordinator(rootController: viewController, navigator: navigator)
+addChild(child)
+```
+
+#### 3. `ModalContainerCoordinator`
+Use `ModalContainerCoordinator` to present a flow **modally**.
+
+```swift
+// 1. The coordinator that you want to present modally must conform to `ModalContainerCoordinatorEmbeddable`
+final class MyFlowCoordinator: BaseCoordinator, ModalContainerCoordinatorEmbeddable {
+    
+    // 2. use this event to update the value of Modal Container's progress bar
+    let onProgress = TriggeredEvent<TopBar.Progress>()
+    
+    // 3. use this event to update the title of the Modal Container
+    let onTitleChange = TriggeredEvent<CoordinatorTitle>()
+    
+    // 4. use this event to hide or show the Modal Container's top bar
+    let onHideTopBar = TriggeredEvent<Bool>()
+    
+    override func start(animated: Bool) -> Completable? {
+        fatalError("TODO")
+    }
+}
+
+final class RootCoordinator: BaseCoordinator {
+    private let completable = CustomCompletable()
+    
+    override func start(animated: Bool) -> Completable? {
+        completable
+    }
+    
+    func presentModalFlow() {
+        // 1. Create ModalContainerCoordinator
+        let modalContainerCoordinator = ModalContainerCoordinator(
+            navigator: navigator,
+            topBarMode: .custom(options: .all),
+            title: "top bar title",
+            showsProgressBar: true,
+            childAssembly: { navigator in
+                let flowCoordinator = MyFlowCoordinator(navigator: navigator)
+                return flowCoordinator
+            }
+        )
+        addChild(modalContainerCoordinator)
+    }
+}
+```
+
+**Note.** The HumaCoordinator library uses **method swizzling** in order to conform `UIViewController` to `Completable`. 
+The swizzling is set up automatically when you create a first instance of `BaseCoordinator`.
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
-</TabItem>
-<TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
-</TabItem>
-<TabItem value="changelog" label="Changelog">
 
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
+  1. Add the dependency to your project. **TODO: describe how to install the library via a package manager**
   
 </TabItem>
 </Tabs>
 
  ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+[API Reference](https://github.com/huma-engineering/huma-ios-sdk/releases)
 
  ### Dependencies
-- Dependency A
-- Dependency B
+- [HumaUtils](/sdk/next/Utilities/iOS)
+- [HumaUI](sdk/next/UI/iOS)
