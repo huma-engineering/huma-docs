@@ -7,29 +7,52 @@ import TabItem from '@theme/TabItem';
 
 
 # iOS
-Library that provides a set of shared structures to build new products.
+**HumaModel** is a core library that provides a set of data structures and repository interfaces for working with them.
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+We can split the models into the following categories:
+
+### Common
+  - `RepositoryError` is used to describe failures in repository callbacks.
+  - `RepositoryResult` represents a result of a repository callback.
+  - `RepositoryCompletion` represents a repository callback.
+
+
+#### User
+  - The `AnyUser` protocol defines all needed user properties and is used in other libraries. You can use the built-in `User` struct or create your own implementation.
+  - To work with the user models, you have to implement the following protocols: `AnyUserSessionRepository`, `AnyUserObserveRepository`, and `AnyUserUpdateRepository`.
+
+#### Modules
+  - The `AnyPrimitive` protocol describes a value of a module result.
+  - The `ModuleResult` struct represents a generic result of a module.
+  - To work with module results, you have to implement the following protocols: `AnyModuleResultObserveRepository` and `AnyModuleResultSubmitRepository`.
+
+
+#### Configuration
+  - The `AnyConfiguration` protocol describes all parameters of a configuration used in the other libraries. 
+  Some of the parameters are custom struct types; you can read the documentation in the code.
+  - To work with configuration, you have to implement the following protocols: `AnyConfiguration` and `AnyConfigurationRepository`.
+
+#### Storage
+  The `FileObject` struct contains the location details of a file and is used to upload or download the files.
+  - To work with storage operations, you have to implement `AnyFileRepository`.
+
+#### Analytics
+  - The library includes an extension to `AnyAnalytics` from **HumaUtils** that allows you to identify analytics with the `AnyUser` model.
+
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
-</TabItem>
-<TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
-</TabItem>
-<TabItem value="changelog" label="Changelog">
 
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
-  
+  1. Add the dependency to your project. **TODO: describe how to install the library via a package manager**
+
 </TabItem>
 </Tabs>
 
- ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+### Documentation
+[API Reference](https://github.com/huma-engineering/huma-ios-sdk/releases)
 
- ### Dependencies
-- Dependency A
-- Dependency B
+### Dependencies
+  - [HumaUtils](/sdk/next/Utilities/iOS)
