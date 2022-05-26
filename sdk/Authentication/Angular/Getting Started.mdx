@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma/auth
+```
+
+yarn:
+```bash
+yarn add @huma/auth
+```
+
+## Project Setup
+
+Once dependency installed we are able to use `HumaAuthModule` to add authentication pages from the SDK. 
+`AuthenticationModule` includes own routing rules, that are going to be used as part of the Angular router with pre-build authentication components.
+In case if you would like to change the UI of the authentication but keet the same flow or API requests - you may skip importing the `AuthenticationModule` router.
+To provide proper auth configuration `forRoot()` method should be used as folowing:
+
+```typescript
+import { HumaAuthModule } from '@huma/auth';
+...
+
+const AUTH_APP_CONFIG: AuthConfig = {
+  clientId: 'c3',
+  projectId: 'p1',
+  countryCodes: countryCodes,
+  rootUrl: '/auth',
+  afterLoginRedirectionUrl: '/welcome',
+  signUpType: 'invite',
+  defaultLoginMethod: DefaultLoginMethodEnum.EMAIL,
+  allowedLoginMethods: [
+    DefaultLoginMethodEnum.EMAIL,
+    DefaultLoginMethodEnum.PHONE,
+  ],
+  multiCountrySelect: true,
+  eulaUrl: '',
+  privacyUrl: '',
+  countryCode: 'GB',
+  loginProcessRestartInMins: 10,
+  siteName: 'Huma',
+  apiBaseUrl: 'https://qaapi.humaapp.io',
+  localStoragePrefix: 'huma',
+  siteDomain: '',
+  siteTitle: 'Huma',
+}
+
+@NgModule({
+  imports: [
+    HumaAuthModule.forRoot(AUTH_APP_CONFIG),
+    RouterModule.forRoot([
+      {
+        path: 'auth',
+        loadChildren: () =>
+          import('huma-auth').then((m) => {
+            return m.AuthenticationModule;
+          }),
+      }
+    ])
+  ]
+})
+export class AppModule {}
+```
+
+## Configuration
+
+All configuration fields are described by the `AuthConfig` interface.
+The most important fields are:
+
+- `clientId` - provides client identifier to the backend
+- `projectId` - provides project identifier to the backend
+- `apiBaseUrl` - backend host url, used to build the enpdoints 
+- `rootUrl` - local url which is used to host the authentication pages
+- `afterLoginRedirectionUrl` - local project url that should be used to navigate after successful login 

@@ -1,0 +1,171 @@
+---
+sidebar_position: 2
+---
+
+### Install Dependency 
+
+First thing is to install huma package into the project. To do that we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma/modules
+```
+
+yarn:
+```bash
+yarn add @huma/modules
+```
+
+
+### Project Setup
+
+Once dependency installed we need to setup project modules. There are multiple options to do that.
+If it is expected to install all package modules, we can import full `HumaUtilsModule` package. Here is an example:
+
+```typescript
+import { HumaModulesModule } from '@huma/modules';
+...
+
+@NgModule({
+  imports: [ HumaModulesModule ]
+})
+export class AppModule {}
+```
+
+To import only specific modules from library, you can export required module separately:
+
+```typescript
+import { 
+    BaseModuleModule,
+    StepModule,
+    StepWeeklyModule,
+    PeakFlowModule,
+    BloodGlucoseModule,
+    TemperatureModule,
+    WeightModule,
+    OxygenSaturationModule,
+    DiabetesDistressedScoreModule,
+    BreathlessnessModule,
+    BloodPressureModule,
+    RestingHeartRateModule,
+    MedicationsModule,
+    MedicationTrackerModule,
+    HeartRateModule,
+    KccqModule,
+    JournalModule,
+    OxfordHipScoreModule,
+    FjsHipScoreModule,
+    EcgHealthKitModule,
+    WeightBMIModule,
+    RespiratoryRateModule,
+    NorfolkQolDnModule,
+    PhotoModule,
+    OxfordKneeScoreModule,
+    DailyCheckInModule,
+    HeartRateWithHrvModule,
+    QuestionnaireModule,
+    DepressionLevelPhq8Module,
+    AnxietyLevelGad7Module,
+    HighFrequencyHeartRateModule,
+    KoosWomacModule,
+    WaistToHeightModule,
+    BreathingModule,
+    BodyMeasurementModule,
+    AdditionalQolModule,
+    PulseOximetryModule,
+    RestingBreathingRateModule,
+    SymptomsModule,
+} from '@huma/modules';
+...
+
+@NgModule({
+  imports: [ 
+    BaseModuleModule,
+    StepModule,
+    StepWeeklyModule,
+    PeakFlowModule,
+    BloodGlucoseModule,
+    TemperatureModule,
+    WeightModule,
+    OxygenSaturationModule,
+    DiabetesDistressedScoreModule,
+    BreathlessnessModule,
+    BloodPressureModule,
+    RestingHeartRateModule,
+    MedicationsModule,
+    MedicationTrackerModule,
+    HeartRateModule,
+    KccqModule,
+    JournalModule,
+    OxfordHipScoreModule,
+    FjsHipScoreModule,
+    EcgHealthKitModule,
+    WeightBMIModule,
+    RespiratoryRateModule,
+    NorfolkQolDnModule,
+    PhotoModule,
+    OxfordKneeScoreModule,
+    DailyCheckInModule,
+    HeartRateWithHrvModule,
+    QuestionnaireModule,
+    DepressionLevelPhq8Module,
+    AnxietyLevelGad7Module,
+    HighFrequencyHeartRateModule,
+    KoosWomacModule,
+    WaistToHeightModule,
+    BreathingModule,
+    BodyMeasurementModule,
+    AdditionalQolModule,
+    PulseOximetryModule,
+    RestingBreathingRateModule,
+    SymptomsModule,
+  ]
+})
+export class AppModule {}
+```
+
+### Supported Modules
+
+List of available modules:
+- Additional Quality of Life
+- ECG Health Kit
+- Norfolk Quality of Life DN
+- Resting Heart Rate
+- Anxiety Level GAD-7
+- FJS Hip Score
+- Oxford Hip Score
+- Step
+- Blood Glucose
+- Heart Rate
+- Oxford Knee Score
+- Step (weekly)
+- Blood Pressure
+- Heart Rate with HRV
+- Oxygen Saturation
+- Symptoms
+- Body Measurement
+- High Frequency Heart Rate       
+- Peak Flow
+- Temperature
+- Breathing
+- Journal
+- Photo
+- Waist to height
+- Breathlessness
+- KCCQ
+- Pulse Oximetry
+- Weight
+- Daily Check-In
+- KOOS & Womac
+- Questionnaire
+- Weight & BMI
+- Depression Level PHQ-8
+- Medication Tracker
+- Respiratory Rate
+- Diabetes Distressed Score       
+- Medications
+- Resting Breathing Rate
+
+In case if new module needs to be created, there is a multiple modules that may help you with this:
+- `BaseModuleModule` - used to define basic module behaviors for all three views of the module. This module used to be an origin for all modules.
+- `HumaModulesCoreModule` - used to contain all generic UI parts of the modules such as charts, questionnaires, joruanl, list views, tags, etc. that are used to define functionality of the module.

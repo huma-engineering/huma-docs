@@ -1,0 +1,246 @@
+---
+sidebar_position: 3
+---
+
+## Components
+
+HumaCharts contains multiple chart components that can be used to provide some default chart views used by Huma projects:
+
+- Overview
+  - Line Chart
+  - Candle Chart
+- Detail View
+  - Line Chart
+  - Candle Chart
+  - Compare Charts 
+
+Here are some of an examples of HumaCharts usage.
+
+## Overview
+
+### Line Charts
+
+The very basic data that should be provided for overview chart is `containerId` and `data` array.
+
+```html
+<huma-line-chart-overview
+  containerId="huma-line-container-1"
+  [data]="chartData">
+</huma-line-chart-overview>
+```
+
+`containerId` - is unique string for chart to specify HTML Element identifier that should be assigned for chart container.
+`data` - represents any array of objects that should be rendered by the chart
+
+By default data model expects `value` and `startDateTime` fields to be present on the data object to define value and date properties for each point on the chart. Example of data:
+
+```typescript
+const data: ChartData[] = [
+  { value: 1, startDateTime: new Date() },
+  { value: 2, startDateTime: new Date() },
+  { value: 3, startDateTime: new Date() },
+]
+```
+
+To provide custom data structure, there is a possibility to override those properties:
+
+```html {4-5}
+<huma-line-chart-overview
+  containerId="huma-line-container-1"
+  [data]="chartData"
+  dataDateKey="date"
+  [dataValueKey]="['pointValue']">
+</huma-line-chart-overview>
+```
+
+In this example `dataDateKey` and `dataValueKey` attributes of the component used to override default data structure properties. So it becomes possible to provide `date` and `pointValue` properties
+to define points on chart.
+
+Also `dataValueKey` gives an ability to define Multi-line chart. 
+It is possible to provide multiple values `dataValueKey` which is going to be used to create multiple lines on single chart view
+base on the same data collection.
+
+```html {5}
+<huma-line-chart-overview
+  containerId="huma-line-container-1"
+  [data]="chartData"
+  dataDateKey="date"
+  [dataValueKey]="['firstLineValue', 'secondLineValue']">
+</huma-line-chart-overview>
+```
+
+### Candle Charts
+
+Candle chart structure is completely the same as line chart. The only difference is the way how data value keys is defined.
+
+```html
+<huma-candle-chart-overview
+  containerId="huma-container-candle-1"
+  [data]="chartData">
+</huma-candle-chart-overview>
+```
+
+By default `dataValueKey` expects `open` and `close` data properties to define chart points value. 
+To override this value, new array should be provided:
+
+```html {4}
+<huma-candle-chart-overview
+  containerId="huma-container-candle-1"
+  [data]="chartData"
+  [dataValueKey]="['value_1', 'value_2']">
+</huma-candle-chart-overview>
+```
+
+## Detail View
+
+### Line Chart
+
+The other type of line charts is detail view chart. This one has similar structure as overview, but provides much more options for making chart customization.
+To define detail view chart it is enough to add chart component to your template:
+
+```html 
+<huma-line-chart-detailed-view
+  containerId="huma-line-container-4"
+  [data]="chartData">
+</huma-line-chart-detailed-view>
+```
+
+### Candle Chart
+
+Detail view template is exactly the same as line chart detail view:
+
+```html
+<huma-candle-chart-detailed-view
+  containerId="huma-container-candle-2"
+  [data]="chartData">
+</huma-candle-chart-detailed-view>
+```
+
+For more chart customizations read **Customization** part of this guide.
+
+### Compare Charts
+
+Compare chart is a combination of Line and Candle charts, which is used to compare different charts within the single view.
+
+```html
+<huma-compare-chart-detailed-view
+  containerId="huma-compare-container-1"
+  [data]="chartData"
+  [dataValueKey]="['value_one', 'value_two']">
+</huma-compare-chart-detailed-view>
+```
+
+## Customization
+
+### Tooltip
+
+All charts has some common fields for customization chart behavior. On of the fields is `tooltipEnabled` which is used to identify once tooltip should be visible for chart series.
+Example:
+
+```html {4}
+<huma-line-chart-overview
+  containerId="huma-line-container-1"
+  [data]="chartData"
+  [tooltipEnabled]="false">
+</huma-line-chart-overview>
+```
+
+To provide custom CSS into chart's tooltip, you may be able to add `tooltipCustomClass` property with CSS class name:
+
+```html {4}
+<huma-line-chart-overview
+  containerId="huma-line-container-1"
+  [data]="chartData"
+  tooltipCustomClass="tooltip-class">
+</huma-line-chart-overview>
+```
+
+As well as simple style customization, tooltip content is also possible to customize within a multiple fields:
+
+- `tooltipCustomHeader` - used only by Detail View charts (overview chart does not have header)
+- `tooltipCustomBody` - used by all chart types, provides an ability to replace main value format
+- `tooltipCustomBodyType`- used by all chart types, provides an ability to replace value unit format
+- `tooltipCustomDate` - used by all charts, provides an ability to replace date string format
+- `tooltipCustomTemplate` - overrides all fields above, gives an ability to define custom HTML template for chart tooltip
+
+All fields support AMcharts4 built-in [text formatter](https://www.amcharts.com/docs/v4/concepts/formatters/formatting-strings/) 
+so it becomes possible to define dynamic data, such as value field, date, etc. based on data model.
+
+Here is an example of custom tooltip:
+
+```html {4}
+<huma-line-chart-overview
+  containerId="huma-line-container-1"
+  [data]="chartData"
+  tooltipCustomTemplate="<div>Value: {value}</div><div>{unit}</div>">
+</huma-line-chart-overview>
+```
+
+### Cursor
+
+Cursor used by detailed chart view to render navigation lines under your cursor. This is used to manage zoom-in feature with mouse instead of scrollbar.
+
+Example:
+
+```html {4}
+<huma-compare-chart-detailed-view
+  containerId="huma-compare-container-3"
+  [data]="chartData"
+  [cursorEnabled]="true">
+</huma-compare-chart-detailed-view>
+```
+
+### Background Ranges
+
+Background ranges feature is used to provide colored chart background based on range of values. 
+All ranges specific field is described by `ChartBackgroundRange` interface, which includes: `color`, `min` and `max` values.
+
+- `color` - HEX-code or RGBA CSS string of the required color (example `#FFFFFF`)
+- `min` - min axis value of the current range (optional, if no minimal value - `0` will be used)
+- `max` - max axis value of the current range (optional, if no maximum value - `Infinite` will be used)
+
+Example of background range implementation:
+
+```html {4}
+<huma-compare-chart-detailed-view
+  containerId="huma-compare-container-3"
+  [data]="chartData"
+  [backgroundRanges]="backgroundRanges">
+</huma-compare-chart-detailed-view>
+```
+```typescript
+backgroundRanges: ChartBackgroundRange[] = [
+  { color: '#FFF', max: 10 },
+  { color: '#FF0', min: 10, max: 30 },
+  { color: '#F0F', min: 30 },
+]
+```
+
+:::info
+Background ranges can be applied to any **detail view** chart (line, candle, compare).
+:::
+
+### Scrollbar
+
+Scrollbar is used by detail view to navigate trough the chart timeline or zoom-in/out feature.
+Folowing fields defines configuration for the chart scrollbar: 
+
+- `scrollbarXEnabled` - flat used to enable X axis scrollbar (`true` by default)
+- `scrollbarYEnabled` - flag used to enable Y axis scrollbar (`false` by default)
+- `scrollbarXPreview` - flag used to define if chart preview should be displayed by scrollbar (`false` by default, can be applied only when `scrollbarXEnabled` is `true`)
+
+Example:
+
+```html {4-6}
+<huma-compare-chart-detailed-view
+  containerId="huma-compare-container-3"
+  [data]="chartData"
+  [scrollbarXEnabled]="true"
+  [scrollbarYEnabled]="false"
+  [scrollbarXPreview]="true">
+</huma-compare-chart-detailed-view>
+```
+
+:::info
+Scrollbar can be configured by any **detail view** chart (line, candle, compare).
+:::

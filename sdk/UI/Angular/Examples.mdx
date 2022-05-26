@@ -1,0 +1,89 @@
+---
+sidebar_position: 3
+---
+
+## Components
+
+Currently HumaUI library implements folowing list of UI modules:
+- `HumaButtonModule`
+- `HumaTagModule`
+- `HumaCardModule`
+- `HumaSkeletonModule`
+- `HumaTableModule`
+- `HumaModalModule`
+- `HumaIconModule`
+- `HumaRadioButtonModule`
+- `HumaInputModule`
+- `HumaFormModule`
+- `HumaCheckboxModule`
+- `HumaDateModule`
+- `HumaToolTipModule`
+- `HumaSwitchModule`
+- `HumaSelectModule`
+- `HumaLoaderModule`
+- `HumaAlertModule`
+- `HumaSliderModule`
+- `HumaDropdownModule`
+- `HumaTabsModule`
+- `HumaNotificationModule`
+- `HumaFilterModule`
+- `HumaTextareaModule`
+- `HumaEmptyStateModule`
+- `HumaPopoverModule`
+- `HumaCollapseModule`
+- `HumaInputGroupModule`
+- `HumaTimePickerModule`
+- `HumaStepperModule`
+- `HumaDividerModule`
+- `HumaLogoModule`
+
+## Code Samples
+
+Here are some of an examples of HumaUI usage.
+
+### Modules import 
+
+All of this modules can be imported as `HumaUiModule` at once, or separately by its name.
+
+```typescript
+import { HumaButtonModule } from '@huma/ui';
+...
+
+@NgModule({
+  imports: [HumaButtonModule]
+})
+export class AppModule {}
+```
+
+### Components
+
+Lets have a look on component usage based on `HumaButtonModule`. To reuse button component we need to import UI module into the Angular application.
+Once we have module imported, any component template can be updated to use HumaUI components. 
+
+```html
+<huma-button type="primary">Button</huma-button>
+```
+
+### Notifications
+
+Here is an example how to use notifications provided by `HumaNotificationModule`. Once we have this module imported into the application - we need to make sure
+global notification styles imported. 
+
+```less
+@import "@huma/ui/themes/default/notification.less";
+```
+
+After that it is possible to inject `NotificationService` into any application component or service.
+
+```typescript
+constructor(private notification: NotificationService) {}
+```
+
+Once service injected, we can call any required methods that should be displayed for user:
+
+```typescript
+this.notification.success(
+  'Success Message',
+  'This is the content of the notification.'
+);
+```
