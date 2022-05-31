@@ -16,3 +16,4 @@ Huma SDK is a set of software tools that developers can use to build or enhance 
 - [Object Storage](Object%20Storage/iOS)
 - [Shared Models](Shared%20Models/iOS)
 - [UI](UI/iOS)
+- [Google Fit (Android Only)](Google%20Fit/Android)
