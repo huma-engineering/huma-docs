@@ -19,6 +19,6 @@ From within the module, Patients can view their progress in a graph, changing to
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the BMI & Weight column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the BMI & Weight column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing BMI in the Clinician Portal](./assets/cp-patient-list-bmi.png)
