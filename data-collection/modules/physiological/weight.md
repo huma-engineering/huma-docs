@@ -5,7 +5,8 @@ title: Weight
 
 ** Helping Patients manage their Weight  **
 
-It is critical to maintain a healthy weight for good health, as it can lower the risk of many conditions and ailments. With a simple and accessible measurement, the Weight module will inform Care Teams to gather insights and provide feedback if needed.
+It is critical to maintaining a healthy weight for good health, as it can lower the risk of many conditions and ailments. With a simple and accessible measurement, the Weight module will inform Care Teams to gather insights and provide feedback if needed.
+
 
 ## How is works
 
@@ -21,7 +22,7 @@ From within the module, Patients can view their progress in a graph and press â€
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the Weight column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Weight column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing weight in the Clinician Portal](./assets/cp-patient-list-weight.png)
 

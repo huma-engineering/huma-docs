@@ -22,7 +22,7 @@ In the Huma App, Patients can select the Heart Rate module and by pressing the �
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
 ### Clinicians
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the Heart Rate column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Heart Rate column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![View patient heart rate in the Clinician Portal](./assets/cp-patient-list-heart-rate.png)
 

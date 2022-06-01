@@ -3,9 +3,9 @@ sidebar_position: 1
 title: Blood Glucose
 ---
 
-** Helping diabetics manage their condition. **
+** Monitor Blood Glucose **
 
-For people who suffer from, or susceptible to, High blood sugar (hyperglycaemia) are at risk of life-threatening complications and damage to parts of the body such as the eyes, kidneys and blood vessels. The Blood Glucose Module in Huma will record the values obtained via a Blood Glucose Monitor so Care Teams can assess whether you are in the normal range of 3.9-7.2 mmol/L.
+For many people, regular blood glucose monitoring is an important part of managing conditions like Diabetes. In order to help Patients make a good decisions about their health, the Blood Glucose module will record results and be made available to their Care Teams.
 
 ## How it works
 
@@ -21,7 +21,7 @@ From within the module, Patients can view their progress in a graph and press â€
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/)Clinicians can view a table of Patients, from which the Blood Glucose column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Blood Glucose column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![View blood glucose from the Patient List](./assets/cp-patient-list-blood-glucose.png)
 

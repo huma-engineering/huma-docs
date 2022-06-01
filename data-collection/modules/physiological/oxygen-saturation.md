@@ -1,11 +1,11 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 title: Oxygen Saturation
 ---
 
-** Ensuring the body’s organ are getting oxygen to function properly **
+** Ensuring the body’s organs are getting oxygen to function properly **
 
-The patient’s blood oxygen level is the measurement of the percentage of oxygen in the blood. A normal level is typically between 95-100%. Individuals with a resting stable oxygen saturation of 92% or less should be referred for a blood gas assessment to see if oxygen therapy is appropriate, as per BLF Guidance. If the oxygen level is 92% or below emergency services are to be contacted immediately.
+The patient’s blood oxygen level is the measurement of the percentage of oxygen in the blood. The Oxygen Saturation module allows Patients to monitor their blood oxygen level and is made available to Care Teams so that they can assess that the body is functioning properly.
 
 ## How it works
 
@@ -21,6 +21,6 @@ From within the module, Patients can view their progress in a graph and press �
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the SPO2 column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the SPO2 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing oxygen saturation in the clinician portal](./assets/cp-patient-list-oxygen-saturation.png)

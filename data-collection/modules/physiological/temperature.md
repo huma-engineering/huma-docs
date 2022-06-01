@@ -21,7 +21,7 @@ From within the module, Patients can view their progress in a graph and press â€
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the Temp column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Temp column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing patient's temperature in the Huma App](./assets/cp-patient-list-temperature.png)
 

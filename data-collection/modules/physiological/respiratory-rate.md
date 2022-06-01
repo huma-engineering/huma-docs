@@ -3,7 +3,8 @@ sidebar_position: 9
 title: Respiratory Rate
 ---
 
-A Patient’s Respiratory Rate is a vital measurement that can be used to help in the health care for conditions such as asthma, anxiety, pneumonia, lung disease, etc. It is expressed as the number of breaths that are taken per minute and a nominal value is 12-18 breaths/min. 
+A Patient’s Respiratory Rate is a vital measurement that can be used to help in the health care for conditions. This simple measurement can be recorded in the Respiratory Rate module and used with Care Teams to ensure the best advice is given for the health care of the Patient.
+
 ## How it works
 
 ### Patients
@@ -15,7 +16,7 @@ From within the module, Patients can view their progress in a graph and press �
 
 ### Clinician
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the Respiratory Rate column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Respiratory Rate column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing a Patient's respiratory rate in the Clinician Portal](./assets/cp-patient-list-respiratory-rate.png)
 

@@ -18,7 +18,7 @@ From within the module, Patients can view their progress in a graph and press â€
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the ECG column will display the last recorded reading as one of the following results:
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the ECG column will display the last recorded reading as one of the following results:
 
 - Sinus rhythm
 - Atrial fibrillation
@@ -26,7 +26,7 @@ In the Clinician Portal, on the [Patient List](/data-collection/features/navigat
 - Inconclusive low heart rate
 - Undetermined
 
-With that it will be indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity
+With that it will be indicated as a Red Amber Green indicator to inform severity
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Glucose module all historic data can be displayed as a graph or a table of results.
 
 ![Patient Summary of ECG results](./assets/cp-patient-summary-ecg.png)

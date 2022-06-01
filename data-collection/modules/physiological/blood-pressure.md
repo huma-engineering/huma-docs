@@ -5,9 +5,8 @@ title: Blood Pressure
 
 ** Tracking Blood Pressure to lower risk. **
 
-Maintaining a normal blood pressure, considered to be between 90/60mmHg and 120/80mmHg, is important to avoid risk of serious problems such as heart attacks and strokes. High blood pressure can go unnoticed and therefore Huma provides this module to record and track your result to help improve your health.
+Maintaining normal blood pressure is important for a healthy heart and body. Untreated, high blood pressure can lead to health conditions. Therefore, the Blood Pressure module is used by Patients to record the result and shared them with Care Teams so that they can work together to help keep their blood pressure within normal limits.
 
-The Blood Pressure Module records values that will give your Care Team the data needed about our health which can be used for insights and inform your care.
 
 ## How it works
 
@@ -27,7 +26,7 @@ From within the module, Patients can view their progress in a graph and press â€
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/) Clinicians can view a table of Patients, from which the Blood Pressure column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Blood Pressure column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing Blood Pressure from the Clinician Portal](./assets/cp-patient-list-blood-pressure.png)
 

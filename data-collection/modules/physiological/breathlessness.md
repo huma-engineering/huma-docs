@@ -22,7 +22,7 @@ To view historic answers, Patients can see a table of them by pressing “Previo
 
 ### Clinicians
 
-In the Clinician Portal, on the [Patient List](/data-collection/features/navigation/portal/patient-list/)Clinicians can view a table of Patients, from which the Breathlessness column will display the last recorded reading indicated as a [Red Amber Green](/data-collection/features/flags-and-rag/) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Breathlessness column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing Patient data in the Clinician Portal](./assets/cp-patient-list-breathlessness.png)
 
