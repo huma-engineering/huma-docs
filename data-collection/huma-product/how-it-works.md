@@ -5,7 +5,7 @@ title: How it works
 
 ** Connecting Patients and their data to Care Teams to make good health care decisions, and Participants to Research Teams to further Clinical Trials. **
 
-Huma provides the means for data to get to Care Team and Research Teams from people who are monitoring aspects of themselves for health care and clinical trials. 
+Huma provides the means for data to get to Care Teams and Research Teams from people who are monitoring aspects of themselves for health care and clinical trials. 
 
 ### Patients
 
