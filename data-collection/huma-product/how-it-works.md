@@ -3,9 +3,9 @@ sidebar_position: 1
 title: How it works
 ---
 
-** Connecting Patients and their data to Care Teams to make good health care decisions, and Participants to Site Investigators to further Clinical Trials. **
+** Connecting Patients and their data to Care Teams to make good health care decisions, and Participants to Research Teams to further Clinical Trials. **
 
-Huma provides the means for data to get to Care Team and Site Investigators from people who are monitoring aspects of themselves for health care and clinical trials. 
+Huma provides the means for data to get to Care Team and Research Teams from people who are monitoring aspects of themselves for health care and clinical trials. 
 
 ### Patients
 
@@ -17,7 +17,7 @@ All data is submitted via the Huma App through the modules and questionnaires ma
 
 ### Clinicians
 
-Huma provides the Clinician Portal for Care Teams to prioritise and therefore direct attention to the people who need it most. Site Investigators can use it to look for the insight they need for the furthering of their Decentralised Clinical Trial. 
+Huma provides the Clinician Portal for Care Teams to prioritise and therefore direct attention to the people who need it most. Research Teams can use it to look for the insight they need for the furthering of their Decentralised Clinical Trial. 
 
 The Clinician Portal starts with the Patient List where all patients can be viewed and filtered on the data provided via modules. Clicking into a Patient and a module gives the user various views to gain insight into that person.
 
@@ -25,8 +25,8 @@ In addition, the ability for Clinicians to communicate with Patients through tex
 
 ### Administrators
 
-When a Healthcare Institute adopts Huma, a team of Administrators are onboarded into the Admin Portal. To start, they can create Organisations that represent a collective of Patients or Clinical application, e.g. Diabetes. 
+When a Healthcare Institute or Study decides to use Huma to collect data remotely from patients, Huma Administrators will start configuring their Organisation and Deployments in the Admin Portal. To start, they can create Organisations representing the Hospital or Study, and Deployments that represent a cohort of Patients or Clinical application, e.g. Diabetes.
 
-Here they can invite their Care Teams so they can use the Clinician Portal, and activate the modules and questionnaires that will be made available to Patients. 
+From the Admin portal, they can activate the modules and questionnaires that will be made available to Patients, and can invite the Care and Research Teams so they can use the Clinician Portal to view the data entered by Patients. 
 
 Also, the Administrator can add for the Patients relevant articles, onboarding steps, and actions to complete, e.g. read an article, submit data to a module.

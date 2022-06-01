@@ -9,11 +9,9 @@ Feedback from Patients is a key part of being able to offer the healthcare neede
 
 ## How it works
 
-In the platform, Huma provides the necessary tools to create patient-reported outcomes (ePRO) questionnaires and request for Patients to submit data against them via the app during the course of their remote care and study. Existing ePROs mentioned in the Knowledge Base can be toggled on for each deployment via Admin portal. In doing so, these ePROs would be available for patients to enter data against in the App and for clinicians to review the data on the web portal. 
+Patient Reported Outcome Measures (PROs/PROMs) are licensed and validated questionnaires that patients fill out to evaluate how they feel. Usually scored, they provide a measure of success in the treatment provided by the care team. Feedback from Patients is a key part of being able to improve the care provided by the Care team. Huma, therefore, provides a feature to build and collect ePROs/ePROM answers from patients, score them and present them efficiently to the Healthcare Professionals to make better informed decisions.
 
 ![Add a questionnaire](./assets/ap-add-questionnaire.png)
-
-### ePROS
 
 The licensed questionnaires that Huma pushes out in-app, are formed in a UX that will make the feedback easy to give, but extend the reach of people which can aid with the perspective of treatment overall. Clinicians can review the data submitted by patients on the portal following the patient's submission.
 
