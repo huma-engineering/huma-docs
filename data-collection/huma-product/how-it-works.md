@@ -13,7 +13,7 @@ The information provided in two forms:
 - Modules: Quantifiable data for the means of numeric assessment e.g. Heart Rate
 - Questionnaires: Subjective feedback to inform how the person feels
 
-All data is submitted via the Huma App through the modules and questionnaires made available by the Healthcare Institution’s Administrators. Included in all modules is the ability to submit data, view historic results, set a daily, weekly, and monthly reminder, and a guide on how to use it.
+All data is submitted via the Huma App through the modules and questionnaires made available by the Huma Administrators. Included in all modules is the ability to submit data, view historic results, set a daily, weekly, and monthly reminder, and a guide on how to use it.
 
 ### Clinicians
 
