@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 title: Diabetes/Diabetic polyneuropathy
 ---
 
@@ -8,6 +8,7 @@ Diabetic neuropathy is a condition that can cause issues all over the body. Nerv
 ## How it works
 
 The questionnaires ask subjective questions that help assess the Diabetic Polyneuropathy of the Patient in focused areas. Patients answer in a manner that expresses how they feel to prompts. That data is shared with Care Teams in the Clinician Portal where they can look for trends and responses that might require prioritisation.
+
 
 
 
