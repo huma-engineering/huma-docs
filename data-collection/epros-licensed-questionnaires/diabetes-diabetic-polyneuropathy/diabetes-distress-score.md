@@ -25,7 +25,7 @@ From within the module, Patients can view their progress in a graph and press â€
 
 ## Clinician
 
-In the Clinician Portal, on the [Patient List](./navigation/portal/patient-list) Clinicians can view a table of Patients, from which the Diabetes Distress Score column will display the last recorded reading indicated as a [Red Amber Green](./flags-rag) indicator to inform severity. 
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Diabetes Distress Score column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Clinician view of Diabetes Distress Score](./assets/cp-diabetes-distress-score.png)
 
