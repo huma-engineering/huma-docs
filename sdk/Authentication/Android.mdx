@@ -159,6 +159,25 @@ HumaAuthManager.getInstance().isSignedIn() { boolean ->
    //if boolean is true then user is signed in
 }
 ```
+
+**Logout**
+
+```kotlin
+HumaAuthManager.getInstance().logout(LogoutType){ //LogoutType is optional
+   //on logout complete
+}
+```
+
+</TabItem>
+<TabItem value="listeners" label="Listeners">
+
+**Listen for sign out event**
+```kotlin
+HumaAuthManager.getInstance().registerLogoutListener { type: LogoutType ->
+   //type defines what caused logout
+}
+```
+
 </TabItem>
 </Tabs>
 </TabItem>
