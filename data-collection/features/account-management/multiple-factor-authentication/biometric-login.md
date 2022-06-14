@@ -13,4 +13,6 @@ Now users can authenticate with the biometrics available on their devices — el
 
 Biometrics are switched on in the Huma App, from the Profile page under Account, and by toggling “Two-step verification”, from here Patients will be prompted to add a Biometric log in relative to the device being used.
 
+![Lock app when not in use](./assets/two-factor-authentication.png)
+
 New Patients will be prompted to add Biometric login whilst signing up if the Health Care provider has enabled it as mandatory.

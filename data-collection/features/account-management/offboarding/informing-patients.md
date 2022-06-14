@@ -10,3 +10,5 @@ Patients require confidence in using the platform so they feel comfortable with 
 ## How it works
 
 When a Patient is off-boarded, they are informed at the end of monitoring with a list of possible reasons why this has happened. This will reassure them that this is a standard process and helps with providing context and confidence.
+
+![Offboarding Patient in Huma App](./assets/offboarding.png)

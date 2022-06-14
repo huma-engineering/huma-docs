@@ -23,7 +23,7 @@ As a study comes to an end Huma will automatically take the Participants through
 
 Configuration in the Admin Portal of deployment are the conditions that lead to the off-boarding for Patients and Participants mentioned above.
 
-Patients not consenting, and Patients withdrawing from studies is determined from the configuration of the eConsent module.
+Patients not consenting, and Patients withdrawing from studies are determined by the configuration of the eConsent module.
 
 A Participant meeting the requirements for a study is subject to the configuration of the Pre-screening module. 
 

@@ -13,6 +13,8 @@ The type of consent also varies based on the user type being a clinical trial pa
 
 From the Admin Portal, the Helper agreement can be added from a Deployment, selecting Onboarding and clicking on “Consent” or “Legitimate Interest”.
 
+![Adding consent and legimate interest in the Admin Portal](./assets/ap-consent-legitimate-interest.png)
+
 ### Patients
 
 When going through onboarding, Patients will start at account activation, be taken through agree to terms and conditions and finally asked to consent with a signature and Huma will generate an electronic informed consent (eIC) PDF.
