@@ -17,6 +17,10 @@ In the Huma App, Patients will update detail in the onboarding flow by going to 
 
 In the Clinician Portal, the Patient summary can be viewed by clicking on a particular patient in the Patient List and the profile icon. On this page, data can be viewed and edited by clicking the pencil icon. From here, Care Teams can also add to Personal Documents.
 
+![Patient Summary in Clinician Portal](./assets/cp-patient-summary.gif)
+
 ## Administrators
 
 From the Admin Portal, the fields to be available in Patient Summary can be configured in a chosen Deployment, and by clicking on Profile. On this screen, Administrators can select the common information, additional IDs, additional contact information, gender options, and set which are to be asked during onboarding. Gender options can be chosen and custom fields can be set. 
+
+![Managing Patient Fields in Admin Portal](./assets/ap-patient-fields.gif)

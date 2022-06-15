@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-title: Navigation
+sidebar_position: 1
+title: Multi-deployment
 ---
 
 Huma takes a holistic approach to the Patients healthcare journey. As they move between various Care Teams, it is important the Patient data moves with them. An example of this is a Patient being escalated from a GP to a Consultant. 

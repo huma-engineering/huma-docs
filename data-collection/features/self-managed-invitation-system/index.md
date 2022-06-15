@@ -1,14 +1,12 @@
 ---
-sidebar_position: 4
-title: Features
+sidebar_position: 2
+title: Self-managed Invitation System
 ---
 
-** The Huma Experience **
+** The Huma platform endeavours to be the tool needed for Care Teams to connect to their Patients that is simple, easy, and accessible to all. **
 
-The features Huma provides helps Care Teams and Research Team leverage on delivering care and conducting research remotely. They also give patients control and ownership of all data and information provided. Included are the ability to accept and reject evolving consent, data flagging capability to highlight critical data and be able to send one-way messages to patients/participants.
+The first step of the journey of a Patient in Huma is to invite them to the platform so that they can be onboarded and therefore supply the data needed for their care. The Invitational System is one that empowers Clinicians to manage the entire Patient journey and therefore is self-managed. Huma endeavours to deliver a product that makes this process intuitive so that the technology does not stand in the way of care.
 
-## How it works
+### How it works
 
-Huma provides a collection of features that provide everything needed for the healthcare and research journey in the Huma App for Patients and Participants, Clinician Portal for Care Teams and Research Teams, and Admin Portal for internal Huma Administrators to manage users, modules and features.
-
-In this section, we will go through the various features and functionalities and inform you of everything you need to know.
+We make inviting a Patient to the platform straightforward, by being able to send them a unique email invitation, or by creating a general invitation link to be sent via any messaging platform they are most familiar with.

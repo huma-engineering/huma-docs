@@ -10,11 +10,14 @@ When it comes to Clinicians’ time, it is important to recognise that administr
 ## How it works
 
 In Huma, you can sort lists more intentionally and align them with the task at hand. Through this, the Clinician who is in a mode of prioritising tasks can use the app in line with the work being carried out. The sorting is as follows:
-Patients: 
-All patients
-My Patients
-Off Boarded patients
-Pending Patient Invitations 
-Staff:
-All staff members
-Pending Staff invitations
+
+- Patients: 
+    - All patients
+    - My Patients
+    - Off Boarded patients
+    - Pending Patient Invitations 
+- Staff:
+    - All staff members
+    - Pending Staff invitations
+
+![Filtering using groups in Clinician Portal](./assets/cp-filtering-by-groups.png)

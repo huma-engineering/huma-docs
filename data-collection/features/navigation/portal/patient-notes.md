@@ -10,3 +10,5 @@ Once a Patient’s data has been viewed, Care Teams can make decisions and prior
 ### Clinicians
 
 From the Clinician Portal and on Patient module details, notes can be added by clicking the “Add note / Resolve Flags” button in the top right. From the modal, Care Teams can review new entries in modules for that particular Patient and resolve any flags, and here notes can be entered.
+
+![Patient Notes in Clinician Portal](./assets/cp-patient-notes.png)

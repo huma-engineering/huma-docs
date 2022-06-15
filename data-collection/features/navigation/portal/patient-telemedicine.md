@@ -13,6 +13,8 @@ From the Clinician Portal, Care Teams can select a Patient from the Patient List
 
 To enable calls, make sure your browser settings allow camera and microphone use.
 
+![Making an Appointment in the Clinician Portal](./assets/cp-telemedicine.gif)
+
 ### Patients
 
 When an appointment is scheduled Patient will receive a notification to accept the date and time. When a Clinician joins the call it will ring the Patients phone just like any other incoming call.

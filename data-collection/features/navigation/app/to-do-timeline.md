@@ -12,3 +12,5 @@ As Care Teams require data and feedback from Patients, Clinicians can create an 
 ### Patients 
 
 When Patients log into the Huma App they are taken to the To-do/Timeline screen, where they can see at which exact time they are expected to complete a certain item. Appointments are displayed here either to confirm or upcoming, display the date and time on request. 
+
+![To-do in Huma App](./assets/to-do.png)
