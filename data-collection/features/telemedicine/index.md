@@ -10,4 +10,3 @@ As Huma delivers the Hospital at Home experience to Patients over the world, the
 ## How it works
 
 Huma presents a suite of features to aid the healthcare journey with, booking appointments, video calling and messaging. 
-

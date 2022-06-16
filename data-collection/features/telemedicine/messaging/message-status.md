@@ -10,3 +10,5 @@ Huma aims to aid the decision-making process of the Care Team. With that, in the
 ## How it works
 
 In the messages table for a Patient is a ‘status’ column which will either show ‘Sent’, ‘Delivered’, or ‘Read’. This will inform Clinicians if their points of action have been read and they now will be able to follow up through other means if a Patient has not received or read their communications.
+
+![Message status in the Clinician Portal](./assets/cp-messaging-status.png)

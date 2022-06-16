@@ -11,10 +11,19 @@ Care Team can schedule appointments from the Clinician Portal for a Patient, whi
 
 ### Clinicians
 
-From the Clinician Portal, Care Teams can select a Patient from the Patient List and click on the phone to view the Telemedicine screen. Here clicking “Schedule an appointment” will prompt the users to add a date and time to enter an appointment. When that time has reached the appointment the table will show a “Join Call” button and will start the call in the browser when clicked.
+From the Clinician Portal, Care Teams can select a Patient from the Patient List and click on the phone to view the Telemedicine screen. Here clicking “Schedule an appointment” will prompt the users to add a date and time to enter an appointment. 
+
+![Making an Appointment in the CLinician Portal](./assets/cp-telemedicine.gif)
+
+When that time has reached the appointment the table will show a “Join Call” button and will start the call in the browser when clicked.
 
 To enable calls, make sure your browser settings allow camera and microphone use.
 
 ### Patients
 
-When an appointment is scheduled Patient will receive a notification to accept the date and time. When a Clinician joins the call it will ring the Patients phone just like any other incoming call.
+When an appointment is scheduled Patient will receive a notification to accept the date and time. Appointment can also be managed from the Huma App, in Profile and Appointments.
+
+![Managing appointments in the Huma App](./assets/appointment.gif)
+
+When a Clinician joins the call it will ring the Patients phone just like any other incoming call.
+
