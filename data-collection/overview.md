@@ -1,13 +1,18 @@
 ---
 sidebar_position: 1
+title: Welcome
 ---
 
-# Overview
-Our data collection product helps clinicians / site managers to collect health data.
-
-### Hospital at home
-Our 'hospital at home' technology collects real-world patient data remotely. It connects patients and clinical teams, enables greater access to care from any location and improves efficiency for clinicians.
-
-
 ### Generating data and insights in Life Sciences
-Huma's virtual solutions support the remote collection of patient-generated data through phases of clinical development, post-approval research, real-world monitoring, and development of digital biomarkers, and companion products. Our platform provides remote patient data capture including e-consent, ePRO collection, biometric capture, data ingestion from wearables, use of digital endpoints, and telemedicine visits.
+
+The aim is to explain how each component works and assists in the adoption of the product for all personas involved. This is achieved through various applications on both web and mobile, in combination with web-based portals for Care Teams and Research Teams.
+
+## Personas
+
+This Knowledge Base is for:
+
+- **Administrators**: Internal Huma users who will build and configure the Healthcare or Research Institute's organisations and deployments
+- **Clinicians**: The people in the Care Teams who will use Huma to view and assess Patients.
+- **Patients**: Individuals who will be submitting their data for assessment and feedback.
+- **Research Teams**: Leaders of Clinical Trials who are ingressing data to aid their studies.
+- **Participants**: Individuals involved in a Clinical Trial who supply their data.
