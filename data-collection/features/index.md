@@ -2,10 +2,9 @@
 sidebar_position: 4
 title: Features
 ---
-
 ** The Huma Experience **
 
-The features Huma provides helps Care Teams and Research Team leverage on delivering care and conducting research remotely. They also give patients control and ownership of all data and information provided. Included are the ability to accept and reject evolving consent, data flagging capability to highlight critical data and be able to send one-way messages to patients/participants.
+The features Huma provide help Care Teams and Research Team leverage on delivering care and conducting research remotely. They also give patients control and ownership of all data and information provided. Included are the ability to accept and reject evolving consent, data flagging capability to highlight critical data and the ability to send one-way messages to patients/participants.
 
 ## How it works
 

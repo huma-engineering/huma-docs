@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Appointment video calls 
 ---
 
-Patients being able to directly communicate with Care Teams is an essential part of delivering health care, and being face-to-face help provide a connection that is empathetic and attentive. Therefore Huma provides Appointment video calls to create that connection to gather the information needed from Patients and deliver insight and feedback.
+Patients being able to directly communicate with Care Teams are an essential part of delivering health care, and being face-to-face help provide a connection that is empathetic and attentive. Therefore Huma provides Appointment video calls to create that connection to gather the information needed from Patients and deliver insight and feedback.
 
 ## How it works
 
@@ -21,7 +21,7 @@ To enable calls, make sure your browser settings allow camera and microphone use
 
 ### Patients
 
-When an appointment is scheduled Patient will receive a notification to accept the date and time. Appointment can also be managed from the Huma App, in Profile and Appointments.
+When an appointment is scheduled Patient will receive a notification to accept the date and time. Appointments can also be managed from the Huma App, in Profile and Appointments.
 
 ![Managing appointments in the Huma App](./assets/appointment.gif)
 

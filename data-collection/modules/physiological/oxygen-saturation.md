@@ -15,7 +15,7 @@ Patients will measure their Oxygen Saturation using a Pulse Oximeter, and enter 
 
 In the Huma App, Patients can select the Oxygen Saturation module and by pressing the “Add” button can enter a value as a percentage with the time and date automatically added as now, but editable. 
 
-![Adding a value of Oxygen Saturation in the Huma App](./assets/cp-patient-list-oxygen-saturation.png)
+![Adding a value of Oxygen Saturation in the Huma App](./assets/oxygen-saturation.gif)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 

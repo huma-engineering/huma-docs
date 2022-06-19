@@ -17,7 +17,7 @@ Patients can measure their Heart Rate using a fitness tracker, smartphone with r
 
 In the Huma App, Patients can select the Heart Rate module and by pressing the “Add” button can enter a value in bpm (beats per minute) with the time and date automatically added as now, but editable. 
 
-![Adding heart rate to the Huma App](./assets/cp-patient-list-heart-rate.png)
+![Adding heart rate to the Huma App](./assets/heart-rate.gif)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
