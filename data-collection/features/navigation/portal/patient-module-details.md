@@ -13,7 +13,7 @@ As Patients enter data and information into modules and questionnaires, the most
 
 ## Clinicians
 
-From the Patient List in the Clinician Portal, select a Patient will display the Patient Module Details, with a grid of the activated modules with visual representations of the data, the last recorded result and RAG indicator to indicate severity.
+From the Patient List in the Clinician Portal, selecting a Patient will display the Patient Module Details, with a grid of the activated modules with visual representations of the data, the last recorded result and an RAG indicator to indicate severity.
 
 When you click on the module or questionnaire you will be taken to the individual results of the patient’s entries.
 

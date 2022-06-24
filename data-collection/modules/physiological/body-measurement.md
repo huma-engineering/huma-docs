@@ -25,7 +25,9 @@ Visceral fat measures the fat in and around the midsection, which plays an impor
 Total body fat is a measure of how much of your body mass is made up of essential body fat and storage body fat. These are essential for body function and too much or too little can cause health problems. A balanced diet and regular exercise can help maintain the optimum level. This measurement is collected by scanning the body using the camera on the Patient’s phone.
 
 ### Patients
-In the Huma app, Patients can select the Body Measurements module, and by pressing “Add” they can enter their waist and hip measurements in cm (centimetres).
+In the Huma app, when onboarding, the questionnaire will prompt the Patient to complete fields relevant to this module, and in this case, the module will utilise height, weight, age, and gender in Body Measurements.
+
+Patients can then select the Body Measurements module, and by pressing “Add” they can enter their waist and hip measurements in cm (centimetres).
 
 ![Adding data to body measurements](./assets/body-measurements.gif)
 

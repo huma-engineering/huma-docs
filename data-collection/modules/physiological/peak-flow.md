@@ -11,7 +11,7 @@ Peak flow is a measurement of how quickly you can blow air out for your lungs, a
 
 Patients will measure their Peak Flow using a Peak Flow meter, and enter into the Huma App. From there, Clinicians can view new and historic results in the Clinician Portal and be informed on severity. 
 
-### Clinicians
+### Patients
 
 In the Huma App, Patients can select the Peak Flow module and by pressing the “Add” button can enter a value as L/min (litres per minute), with the time and date automatically added as now, but editable. The peak flow result will take into account your gender, age and height before showing your calculated result as a percentage
 

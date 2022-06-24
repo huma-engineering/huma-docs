@@ -11,7 +11,14 @@ Recording this information is an easy and effective way for a Care Team to gauge
 
 ## How it works
 
-Patients can measure their Heart Rate using a fitness tracker, smartphone with relevant functionality, smart watch, or counting the pulse in the wrist in one minute. From there, Clinicians can view new and historic results in the Clinician Portal and be informed on severity.  
+Patients can collect their Heart Rate by any of the 3 sources below:
+
+- connecting the Huma to their Apple Health or Google Fit app
+- manually inputing
+- resting their index finger over their smartphone cameras
+The smartphone camera Heart Rate collection also gives a Heart Rate Variability and a Classification reading. The Administrator can configure which readings and sources (maximum 2 sources per deployment) the deployment needs for their delivery of care or research.
+
+From there, Clinicians can view new and historic results in the Clinician Portal and be informed on severity.
 
 ### Patients
 

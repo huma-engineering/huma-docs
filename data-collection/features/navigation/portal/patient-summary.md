@@ -21,6 +21,8 @@ In the Clinician Portal, the Patient summary can be viewed by clicking on a part
 
 ## Administrators
 
-From the Admin Portal, the fields to be available in Patient Summary can be configured in a chosen Deployment, and by clicking on Profile. On this screen, Administrators can select the common information, additional IDs, additional contact information, gender options, and set which are to be asked during onboarding. Gender options can be chosen and custom fields can be set. 
+From the Admin Portal, the fields to be available in Patient Summary can be configured in a chosen Deployment, and by clicking on Profile. On this screen, Administrators can enable fields to be presented to the Patient, create custom fields, make any of them manditory, and change the order of them. 
 
 ![Managing Patient Fields in Admin Portal](./assets/ap-patient-fields.gif)
+
+Certain fields are required in modules, such as height in BMI, and will appeared grey out when that module is added into the deployment.
