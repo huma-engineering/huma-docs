@@ -11,7 +11,7 @@ The aim is to explain how each component works and assists in the adoption of th
 
 This Knowledge Base is for:
 
-- **Administrators**: Internal Huma users who will build and configure the Healthcare or Research Institute's organisations and deployments
+- **Administrators**: Internal Huma users who will build and configure the Healthcare or Research Institute's organisations and deployments.
 - **Clinicians**: The people in the Care Teams who will use Huma to view and assess Patients.
 - **Patients**: Individuals who will be submitting their data for assessment and feedback.
 - **Research Teams**: Leaders of Clinical Trials who are ingressing data to aid their studies.
