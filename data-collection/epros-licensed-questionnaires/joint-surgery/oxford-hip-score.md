@@ -3,6 +3,7 @@
 sidebar_position: 7
 title: Oxford Hip Score
 ---
+
 After Patients receive treatment it is important to know how successful that treatment is and if additional steps need to be taken. Huma provides the Oxford Hip Score to assess the function and pain after total knee replacement. The information is available to Care Teams so they can initiate the post-surgery care.
 
 ## How it works
