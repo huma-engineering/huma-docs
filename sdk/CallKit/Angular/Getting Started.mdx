@@ -1,0 +1,46 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma/call-kit
+```
+
+yarn:
+```bash
+yarn add @huma/call-kit
+```
+
+## Project Setup
+
+Once dependency installed we are able to use `HumaCallKitModule` to add call kit modals from the SDK.
+To provide proper configuration `forRoot()` method should be used as folowing:
+
+```typescript
+import { HumaCallKitModule, CallKitConfig } from '@huma/call-kit';
+...
+const CALL_KIT_CONFIG: CallKitConfig = {
+  apiBaseUrl: 'https://qaapi.humaapp.io',
+  authorizationKey: 'authorization',
+  authorizationPrefix: 'Bearer',
+};
+@NgModule({
+  imports: [
+    HumaCallKitModule.forRoot(CALL_KIT_CONFIG),
+  ]
+})
+export class AppModule {}
+```
+
+## Configuration
+
+All configuration fields are described by the `CallKitConfig` interface.
+
+- `apiBaseUrl` - backend host url, used to build the enpdoints
+- `authorizationKey` - authorization key too send in header for auth
+- `authorizationPrefix` - used to define prefix for auth

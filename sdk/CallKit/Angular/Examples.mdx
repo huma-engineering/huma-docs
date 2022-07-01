@@ -1,0 +1,101 @@
+---
+sidebar_position: 3
+---
+
+## Components
+Huma Call kit using call modal to initiate process for calling,
+And that call modal is using default widget view in it to provide user interaction with call component.
+
+- Overview
+- Setup
+- Usage
+
+## Overview
+
+This call feature is using some child components which are mention below
+
+- `TelemedDefaultWidgetViewComponent` - Main interaction component.
+- `CallAvatarComponent` - To Display user avatar.
+- `CallControlsComponent` - Provide button to Handle camera, mic, call-cancel events.
+- `CallModalComponent` - To Open modal to initiate call.
+- `CallSelfPreviewComponent` - Display self preview until camera capturing data package.
+- `CallTimerComponent` - Display timer on call.
+
+
+## Setup
+
+Call kit module come with the predefined configuration.
+
+If you want to change it's configuration, You need to provide `forRoot()` method as folowing:
+
+```typescript
+import { HumaCallKitModule, CallKitConfig } from '@huma/call-kit';
+...
+const CALL_KIT_CONFIG: CallKitConfig = {
+  apiBaseUrl: 'https://qaapi.humaapp.io',
+  authorizationKey: 'authorization',
+  authorizationPrefix: 'Bearer',
+};
+@NgModule({
+  imports: [
+    ...
+    HumaCallKitModule.forRoot(CALL_KIT_CONFIG),
+  ]
+})
+export class AppModule {}
+```
+
+## Usage
+
+You need to define basic details to initiate this process. Or you can simply set them statically.
+
+```typescript
+import { CallKitConfigService } from '@huma/call-kit';
+...
+
+@Component({
+  selector: 'app-telemed-call-playground',
+  templateUrl: './telemed-call-playground.component.html',
+  styleUrls: ['./telemed-call-playground.component.less'],
+})
+export class TelemedCallPlaygroundComponent implements OnInit {
+
+  // using config service to init process
+  constructor(private callKitConfigService: CallKitConfigService) {}
+
+  // Define title(user name)
+  title = 'Barry allen';
+
+  // Define call button text
+  callButtonText = 'Call';
+
+  // Define manager id
+  managerId = 'MANAGER_ID_WHO_IS_CALLING';
+
+  // Define user id
+  userId = 'USER_ID_WHOM_TO_CALL';
+
+  // Define auth token
+  authToken = 'AUTH_TOKEN_OF_LOGGED_IN_USER';
+
+  // Component on init hook
+  ngOnInit(): void {
+    this.callKitConfigService.init(this.authToken);
+  }
+}
+```
+
+The very basic data that should be provided to initiate call `managerId` and `userId`.
+
+```html
+  <huma-telemed-call
+    [title]="title"
+    [callButtonText]="callButtonText"
+    [managerId]="managerId"
+    [userId]="userId"
+  ></huma-telemed-call>
+```
+
+`managerId` - is unique string id of manager who is currently logged in and initiate call process.
+
+`userId` - is unique string id of user/patient to call
