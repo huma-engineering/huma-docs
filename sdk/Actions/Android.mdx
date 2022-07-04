@@ -79,14 +79,21 @@ Then register your processor in the `HumaTrackManager`:
 HumaTrackManager.registerImportProcessor(processor: YourProcessor)
 ```
 
-When the processor is registered you can call `refreshKeyActions()` to fetch the configuration and fill your key action with a data.
-
+When the processor is registered you can call `fetchKeyActions(datetimeRange: Pair<Instant, Instant>?)` to fetch the configuration and fill your key action with a data.
 
 ```kt
-HumaTrackManager.refreshKeyActions(datetimeRange: Pair<Instant, Instant>?) //call to refresh key actions
+HumaTrackManager.fetchKeyActions(datetimeRange: Pair<Instant, Instant>?) //call to fetch list of key actions
 ```
 
-`datetimeRange` - is optional and allow to fetch key actions in specific date time range.
+`datetimeRange` - is optional and allow to fetch key actions in specific date time range.  
+
+
+Call `reloadKeyActions()` function to reload a list of key action. It doesn't contain input parameters and use `datetimeRange` property which was set in 
+`fetchKeyActions()` function.
+
+```kt
+HumaTrackManager.reloadKeyActions() // call to refresh a list of key actions 
+```
 
 
 ### **Get the instance of a key action**
@@ -197,7 +204,14 @@ override fun action(context: Context) {
 
 ### **Rendering Key Actions Cards List**
 
-***Huma Track*** provides `KeyActionListView` that can show list of key actions cards and refresh it.
+***Huma Track*** module contains two screens to display key actions data.
+
+*Main* screen creates list of cards for **To do** and **Coming up** categories of key action. It contains a headers to group key action cards by apropriate categories.
+
+*Previous* screen contains a list of key actions that belong to **Submitted** and **Deprecated** categories. 
+You can navigate from *Main* to *Previous* screen by tap button *Show previous*
+
+To show and refresh *Main* screen with list of key actions cards ***Huma Track*** provides `KeyActionListView`.
 
 ```html
  <com.huma.sdk.track.display.view.KeyActionListView
