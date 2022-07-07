@@ -11,11 +11,11 @@ In the Huma App, the EQ-5D-5L questionnaire measures quality of life on a 5-leve
 
 ## Patient
 
-In the Huma App, Patients can select “Questionnaire” from the track screen. From there, they can select the EQ-5D-5L and answer the questions according to how they feel. Patients can see their past entries within ‘Previous entries’
+In the Huma App, Patients can select the EQ-5D-5L questionnaire and answer the questions according to how they feel. Patients can see their past entries within ‘Previous entries’
 
 ![Adding the EQ-5D-5L](./assets/eq-5d-5l.svg)
 
 ## Clinicians
-In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the EQ-5D-5L module will show the historic entries from the Patient.
+In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the EQ-5D-5L module will show the historic entries from the Patient. The index score from 1-5 will be displayed in the EQ-5D-5L module details screen, and from the Patient Summary a calculated 5 digit Health State can be viewed as the Primary Value of EQ-5D-5L.
 
 ![EQ-5D-5L in the Clinician Portal](./assets/cp-eq-5d-5l.svg)
