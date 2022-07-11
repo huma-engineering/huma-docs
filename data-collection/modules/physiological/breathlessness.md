@@ -26,4 +26,6 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 
 ![Viewing Patient data in the Clinician Portal](./assets/cp-patient-list-breathlessness.svg)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Pressure module all historic data can be displayed as a graph or a table of results.
+Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Breathlessness module all historic data can be displayed as a graph or a table of results.
+
+![Viewing Patient data in the Clinician Portal](./assets/cp-module-details-breathlessness.svg)

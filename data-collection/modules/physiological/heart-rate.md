@@ -34,3 +34,5 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 ![View patient heart rate in the Clinician Portal](./assets/cp-patient-list-heart-rate.svg)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Heart Rate module all historic data can be displayed as a graph or a table of results.
+
+![View patient heart rate in the Clinician Portal](./assets/cp-module-details-heart-rate.svg)

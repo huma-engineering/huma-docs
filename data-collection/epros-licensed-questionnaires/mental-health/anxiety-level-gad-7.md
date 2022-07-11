@@ -26,6 +26,9 @@ From within the module, Patients can view their progress in a graph and press â€
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Anxiety Level - GAD-7 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Anxiety Level - GAD-7 all historical data can be displayed as a graph or a table of results.
 
 ![Clinician view of Anxiety Level - GAD-7](./assets/cp-anxiety-level-gad-7.svg)
+
+Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Anxiety Level - GAD-7 all historical data can be displayed as a graph or a table of results.
+
+![Clinician view of Anxiety Level - GAD-7](./assets/cp-module-details-gad-7.svg)

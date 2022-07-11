@@ -22,3 +22,5 @@ From within the module, Patients can view previous entries and can also set a da
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Symptoms module will show the historic entries from the Patient.
 
 ![Symptoms in the Clinician Portal](./assets/cp-patient-list-symptoms.svg)
+
+![Symptoms in the Clinician Portal](./assets/cp-module-details-symptoms.svg)

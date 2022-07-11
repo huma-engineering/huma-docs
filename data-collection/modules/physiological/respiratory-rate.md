@@ -21,3 +21,5 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 ![Viewing a Patient's respiratory rate in the Clinician Portal](./assets/cp-patient-list-respiratory-rate.svg)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Respiratory Rate module all historic data can be displayed as a graph or a table of results.
+
+![Viewing a Patient's respiratory rate in the Clinician Portal](./assets/cp-module-details-respiratory-rate.svg)

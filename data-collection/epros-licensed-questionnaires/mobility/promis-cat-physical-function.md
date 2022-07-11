@@ -18,6 +18,8 @@ In the Huma App, Patients can select “Questionnaire” from the track screen. 
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the PROMIS CAT Physical Function column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
+![Clinician view of PROMIS CAT Physical Function](./assets/cp-promis-cat-physical-function.svg)
+
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting PROMIS CAT Physical Function all historical data can be displayed as a graph or a table of results.
 
-![Clinician view of PROMIS CAT Physical Function](./assets/cp-promis-cat-physical-function.svg)
+![Clinician view of PROMIS CAT Physical Function](./assets/cp-module-details-promis-cat.svg)

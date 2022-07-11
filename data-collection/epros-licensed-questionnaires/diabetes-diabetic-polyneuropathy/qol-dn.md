@@ -24,3 +24,5 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 ![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-norfolk-quality-of-life-score.svg)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting QOL-DN all historical data can be displayed as a graph or a table of results.
+
+![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-modules-details-norfolk-qol.svg)

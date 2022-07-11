@@ -22,3 +22,13 @@ From inside the Huma app, a Patient can accept, view, retract, and re-consent am
 In the Admin Portal, a new consent form can be created by navigating to the Deployment and then Onboarding. Here when you click “Add onboarding” there is the option for “E-Consent”.
 
 Once selected it will appear on the onboarding table. Click the edit button and fill in the details of the e-Consent, the documentation itself, and any questions that are necessary.
+
+## Withdrawing Consent
+
+** Participants in studies maintaining control over their data **
+
+As with any supply of data, consent and processes need to sit with the user and be delivered in a clear way. Participants can opt-out and maintain control over their data. The process and who to contact is unknown and can lead to a lack of confidence and control.
+
+Participants can easily withdraw their consent at any time from in the app itself, without having to search for it or contact a customer support representative. This gives control to the Patient when they need it, at any time.
+
+Navigate to Profile and Informed consent forms, when a consent form is selected then the option for “Withdraw your consent” is shown.

@@ -17,6 +17,16 @@ When joining a call, the browser will pop up a window. In the call window, click
 
 To enable calls, make sure your browser settings allow camera and microphone use.
 
+#### Missed Calls
+
+When a call on Huma does not complete, a reason is provided so that actions can be taken, e.g. try again, wait until later, attempt an alternative, etc. The options shown will be:
+
+- Call declined
+- No network detected
+- No answer
+
+To go with this a "missed call" notification will be presented to the Patient which will take them to the Book Appointment screen to complete the goals of communicated information that is needed.
+
 ### Patients
 
 Video calls are joined in the Huma App, and the Patient’s phone will ring when a Care Team member joins the call. Patients will have the option to “Accept” or “Reject” the call, once in the call the buttons to control will disappear after a short period of time and can be brought back by tapping the screen.

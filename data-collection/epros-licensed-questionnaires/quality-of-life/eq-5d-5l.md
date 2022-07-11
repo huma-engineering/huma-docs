@@ -19,3 +19,5 @@ In the Huma App, Patients can select the EQ-5D-5L questionnaire and answer the q
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the EQ-5D-5L module will show the historic entries from the Patient. The index score from 1-5 will be displayed in the EQ-5D-5L module details screen, and from the Patient Summary a calculated 5 digit Health State can be viewed as the Primary Value of EQ-5D-5L.
 
 ![EQ-5D-5L in the Clinician Portal](./assets/cp-eq-5d-5l.svg)
+
+![EQ-5D-5L in the Clinician Portal](./assets/cp-module-details-eq-5d-5l.svg)
