@@ -20,7 +20,7 @@ module.exports = {
     }
   },
   themeConfig: {
-    autoCollapseSidebarCategories: true,
+    autoCollapseSidebarCategories: false,
     colorMode: {
       defaultMode: 'light',
       disableSwitch: true,
