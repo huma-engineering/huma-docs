@@ -26,5 +26,3 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 ![Viewing patient's temperature in the Huma App](./assets/cp-patient-list-temperature.svg)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Glucose module all historic data can be displayed as a graph or a table of results.
-
-![Viewing patient's temperature in the Huma App](./assets/cp-module-details-temperature.svg)

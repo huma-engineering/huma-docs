@@ -20,9 +20,3 @@ From within the module, Patients can view their Medications added, as well as ch
 
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Medication module will show the historic entries from the Patient.
 
-![View medications in the Clinician Portal](./assets/cp-patient-details-medications.svg)
-
-By clicking on the module, all historic data can be displayed as a graph or a table of results.
-
-![View patient heart rate in the Clinician Portal](./assets/cp-module-details-medications.svg)
-

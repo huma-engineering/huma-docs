@@ -21,7 +21,7 @@ As Clinicians need to update and inform Patients, the one-way messaging system b
 
 From the Patient Summary in the Clinician Portal, clicking the 3 dots in the top right and clicking "Send message" will open the modal where a predetermined message can be sent, or a custom message if available.
 
-In the messages table for a Patient is a ‘status’ column which will either show ‘Sent’, ‘Delivered’, or ‘Read’. This will inform Clinicians if their points of action have been read and they now will be able to follow up through other means if a Patient has not received or read their communications.
+<!-- ![Sending a Message in the Clinician Portal](./assets/cp-messaging.gif) -->
 
 ## Patients
 

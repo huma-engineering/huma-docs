@@ -26,7 +26,3 @@ In addition, Patients can add additional medication in the same way as the Medic
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Medication Tracker module will show the historic entries from the Patient.
 
 ![Medication tracker in Clinician Portal](./assets/cp-patient-list-medication-tracker.svg)
-
-By clicking on the module, all historic data can be displayed as a graph or a table of results.
-
-![Medication tracker in Clinician Portal](./assets/cp-module-details-medication-tracker.svg)

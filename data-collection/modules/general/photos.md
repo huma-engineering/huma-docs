@@ -18,5 +18,3 @@ In the Huma App, Patients can select the Photo module and simply by clicking “
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Photos module will show the historic entries from the Patient. 
 
 ![Photos in the Clinician Portal](./assets/cp-patient-list-photos.svg)
-
-![Photos in the Clinician Portal](./assets/cp-module-details-photos.svg)

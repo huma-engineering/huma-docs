@@ -19,8 +19,6 @@ In the Huma App, Patients can select “Questionnaire” from the track screen. 
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the PROMIS CAT Pain Interference column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Clinician View of PROMIS CAT Pain Interference](../mobility/assets/cp-promis-cat-physical-function.svg)
-
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting PROMIS CAT Pain Interference all historical data can be displayed as a graph or a table of results.
 
-![Clinician View of PROMIS CAT Pain Interference](../mobility/assets/cp-module-details-promis-cat.svg)
+![Clinician View of PROMIS CAT Pain Interference](../mobility/assets/cp-promis-cat-physical-function.svg)

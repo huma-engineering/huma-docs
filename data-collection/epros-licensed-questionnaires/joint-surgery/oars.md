@@ -30,5 +30,3 @@ From within the module, Patients can view their progress in a graph and press â€
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Oxford Arthroplasty Early Recovery Score column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity.
 
 ![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-oars.svg)
-
-![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-module-details-oars.svg)

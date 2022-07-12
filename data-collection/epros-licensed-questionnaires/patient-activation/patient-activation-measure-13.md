@@ -19,8 +19,6 @@ In the Huma App, Patients can select “Questionnaire” from the track screen. 
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Anxiety Level - GAD-7 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Clinician View of Patient Activation Measure-13](./assets/cp-patient-activation-measure-13.svg)
-
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Anxiety Level - GAD-7 all historical data can be displayed as a graph or a table of results.
 
-![Clinician View of Patient Activation Measure-13](./assets/cp-module-details-pam-13.svg)
+![Clinician View of Patient Activation Measure-13](./assets/cp-patient-activation-measure-13.svg)

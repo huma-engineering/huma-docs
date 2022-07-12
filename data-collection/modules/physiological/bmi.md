@@ -22,7 +22,3 @@ From within the module, Patients can view their progress in a graph, changing to
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the BMI & Weight column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 ![Viewing BMI in the Clinician Portal](./assets/cp-patient-list-bmi.svg)
-
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Weight & BMI module all historic data can be displayed as a graph or a table of results.
-
-![Viewing BMI module details in the Clinician Portal](./assets/cp-module-details-bmi.svg)

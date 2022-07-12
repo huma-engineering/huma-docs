@@ -21,8 +21,6 @@ From within the module, Patients can view their progress in a graph and press â€
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the KOOS/WOMAC column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Clinician view of KOOS/WOMAC](./assets/cp-koos-womac.svg)
-
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting KOOS/WOMAC all historical data can be displayed as a graph or a table of results.
 
-![Clinician view of KOOS/WOMAC](./assets/cp-module-details-koos-womac.svg)
+![Clinician view of KOOS/WOMAC](./assets/cp-koos-womac.svg)

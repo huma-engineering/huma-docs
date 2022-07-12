@@ -30,5 +30,3 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 ![Clinician view of Diabetes Distress Score](./assets/cp-diabetes-distress-score.svg)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Diabetes Distress Scoreall historical data can be displayed as a graph or a table of results.
-
-![Clinician view of Diabetes Distress Score](./assets/cp-modules-details-diabetes-distress-score.svg)

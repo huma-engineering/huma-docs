@@ -26,10 +26,7 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 - Inconclusive low heart rate
 - Undetermined
 
-With that it will be indicated as a Red Amber Green indicator to inform severity. 
+With that it will be indicated as a Red Amber Green indicator to inform severity
+Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Glucose module all historic data can be displayed as a graph or a table of results.
 
 ![Patient Summary of ECG results](./assets/cp-patient-summary-ecg.svg)
-
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, By selecting the ECG module all historic data can be displayed as a graph or a table of results.
-
-![Patient Summary of ECG results](./assets/cp-module-details-ecg.svg)

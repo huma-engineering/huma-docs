@@ -15,6 +15,3 @@ From understanding the importance of giving the tools needed to deliver the best
 
 With this, a Clinician can see vital historical data at a glance, so that they can further assess a Patient and make better decisions for their healthcare. To add to that, the patient list can be sorted for flags to help with prioritisation and determine where urgency exists.
 
-## Customised RAG
-
-A Clinician can set what they think is appropriate as a threshold for a particular Patient. From the Patient profile screen, you can click “RAG Rating Configuration” and “Configure” on the records and set the values by changing the defaults already in place from onboarding.

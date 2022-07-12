@@ -21,5 +21,3 @@ To view historical entries, Patients can see a table of them by pressing “View
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Journal module will show the historic entries from the Patient.
 
 ![Journal in clinician portal](./assets/cp-patient-list-journal.svg)
-
-![Journal in clinician portal](./assets/cp-module-details-journal.svg)

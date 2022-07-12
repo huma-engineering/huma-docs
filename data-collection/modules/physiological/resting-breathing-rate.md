@@ -4,7 +4,6 @@ title: Resting Breathing Rate
 ---
 A Patient’s Respiratory Rate is a vital measurement that can be used to help in the health care for conditions. This simple measurement can be recorded in the Respiratory Rate module and used to help patients understand their health over time. 
 ## How it works
-
 ### Patients
 In the Huma App, Patients can select the Resting Breathing Rate modules and enter the number of breaths taken in the course of one minute. Measuring is best taken whilst sitting and can be counted for the number of times the chest or abdomen rises.
 

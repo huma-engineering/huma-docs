@@ -26,5 +26,3 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 ![View blood glucose from the Patient List](./assets/cp-patient-list-blood-glucose.svg)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Glucose module all historic data can be displayed as a graph or a table of results.
-
-![View blood glucose from the Module Detail](./assets/cp-module-details-blood-glucose.svg)
