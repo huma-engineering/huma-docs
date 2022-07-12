@@ -58,8 +58,6 @@ Patients are required to periodically authenticate with an additional mechanism 
 
 Patients can receive support in-app by connecting with one of the teams in a live chat, and gain access to support documentation.
 
-![Support in the Huma App](./assets/support.svg)
-
 #### Device Integration
 
 The Huma App can connect to Bluetooth-enabled devices to automatic take readings and input them into the relevant modules. The available device types are:
