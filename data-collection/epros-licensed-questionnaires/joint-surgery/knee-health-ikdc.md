@@ -13,7 +13,7 @@ The IKDC Questionnaire is a subjective scale that provides patients with an over
 
 In the Huma App, on the “Track” screen patients can select the Knee Health IKDC and by selecting “Add” can enter the Questionnaire and answer the question as best reflects themselves.
 
-![International Knee Documentation Committee in Huma App](./assets/knee-health-ikdc.svg)
+![International Knee Documentation Committee in Huma App](./assets/knee-health-ikdc.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -22,4 +22,4 @@ From within the module, Patients can view their progress in a graph and press �
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Knee Health IKDC column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 
-![Clinician view of International Knee Documentation Committee](./assets/cp-knee-health-ikdc.svg)
+![Clinician view of International Knee Documentation Committee](./assets/cp-patient-list-knee-health-ikdc.png)

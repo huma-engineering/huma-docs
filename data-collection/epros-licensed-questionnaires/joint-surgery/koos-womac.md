@@ -13,7 +13,7 @@ The KOOS/WOMAC Questionnaire allows Patients to express the functionality of the
 
 In the Huma App, Patients can select the Knee injury and Osteoarthritis Outcome Score from the “Track” screen. From here pressing “Add” will take them into the questionnaire where they can respond with how they feel.
 
-![KOOS/WOMAC in Huma App](./assets/koos-womac.svg)
+![KOOS/WOMAC in Huma App](./assets/koos-womac.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -21,8 +21,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the KOOS/WOMAC column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Clinician view of KOOS/WOMAC](./assets/cp-koos-womac.svg)
+![Clinician view of KOOS/WOMAC](./assets/cp-patient-list-koos-womac.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting KOOS/WOMAC all historical data can be displayed as a graph or a table of results.
 
-![Clinician view of KOOS/WOMAC](./assets/cp-module-details-koos-womac.svg)
+![Clinician view of KOOS/WOMAC](./assets/cp-module-details-koos-womac.png)

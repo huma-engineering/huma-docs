@@ -11,4 +11,4 @@ In bringing Patients into the Huma product includes an easy way of collecting in
 
 As a Patient onboards in the Huma App, they will be taken through the Baseline Questionnaire, which are questions that will provide basic information into a Patient’s account. 
 
-![Baseline Questionnaire in Huma App](./assets/baseline-questionnaire.svg)
+![Baseline Questionnaire in Huma App](./assets/baseline-questionnaire.png)

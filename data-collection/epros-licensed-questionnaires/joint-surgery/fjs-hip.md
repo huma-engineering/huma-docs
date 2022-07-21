@@ -13,7 +13,7 @@ The questions include how often you are aware of your affected hip joint in ever
 
 In the Huma App, from the “Track” screen, Patients can select FJS Hip Score and answer the questions to reflect how they feel.
 
-![Forgotten Joint Score Hip in the Huma App ](./assets/fjs-hip.svg)
+![Forgotten Joint Score Hip in the Huma App ](./assets/fjs-hip.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -21,4 +21,4 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which FJS Hip will show the historic entries from the Patient, where the last recorded reading is indicated as a Red Amber Green indicator to inform severity. 
 
-![Clinician view of Forgotten Joint Score Hip](./assets/cp-fjs-hip.svg)
+![Clinician view of Forgotten Joint Score Hip](./assets/cp-patient-list-fjs-hip.png)

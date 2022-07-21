@@ -18,7 +18,7 @@ From a Deployment in the Admin Portal, Administrators can customise the experien
 
 Selecting the Profile on the bottom navigation bar of the Huma App, Patients are presented with all the information relating to them and editable.
 
-![Profile screen in the Huma App](./assets/profile.svg)
+![Profile screen in the Huma App](./assets/profile.png)
 
 #### Personal & account details
 
@@ -28,7 +28,7 @@ Basic information about the Patient can be edited here, such as name, gender, et
 
 From person to person, how a particular vital is measured varies, so the Huma app allows users to adjust the Units used throughout the App.
 
-![Preferred units in the Huma App](./assets/preferred-units.svg)
+![Preferred units in the Huma App](./assets/preferred-units.png)
 
 #### Personal Documents
 
@@ -69,10 +69,10 @@ The Huma App can connect to Bluetooth-enabled devices to automatic take readings
 - Weighing Scales
 - Spirometer
 
-![Adding a device in the Huma App](./assets/health-device-integration.svg)
+![Adding a device in the Huma App](./assets/health-device-integration.png)
 
 #### Proxy / Helper
 
 In Huma, a patient can invite a helper who can manage data/information on behalf of the patient. As Helpers receive their invite and are prompted to download the Huma App, they are taken through the sign-up and onboarding process. Once in the App, Helpers can enter data into modules in the same way that a Patient or Participant would.
 
-![Adding a helper in the Huma App](./assets/proxy-helper.svg)
+![Adding a helper in the Huma App](./assets/proxy-helper.png)

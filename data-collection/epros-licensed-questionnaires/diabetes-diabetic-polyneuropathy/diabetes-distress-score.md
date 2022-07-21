@@ -19,7 +19,7 @@ The Diabetes Distress Score Questionnaire gives Patients with diabetes a way to 
 
 In the Huma App, Patients can select the Diabetes Distress Score from the “track” screen. From there, pressing “Add” takes them into the questionnaire where they can reflect on how they feel.
 
-![Diabetes Distress Score in the Huma App](./assets/diabetes-distress-score.svg)
+![Diabetes Distress Score in the Huma App](./assets/diabetes-distress-score.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -27,8 +27,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Diabetes Distress Score column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Clinician view of Diabetes Distress Score](./assets/cp-diabetes-distress-score.svg)
+![Clinician view of Diabetes Distress Score](./assets/cp-patient-list-diabetes-distress-score.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Diabetes Distress Scoreall historical data can be displayed as a graph or a table of results.
 
-![Clinician view of Diabetes Distress Score](./assets/cp-modules-details-diabetes-distress-score.svg)
+![Clinician view of Diabetes Distress Score](./assets/cp-module-details-diabetes-distress-score.png)

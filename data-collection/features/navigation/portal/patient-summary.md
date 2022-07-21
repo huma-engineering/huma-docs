@@ -17,7 +17,7 @@ In the Huma App, Patients will update detail in the onboarding flow by going to 
 
 In the Clinician Portal, the Patient summary can be viewed by clicking on a particular patient in the Patient List and the profile icon. On this page, data can be viewed and edited by clicking the pencil icon. From here, Care Teams can also add to Personal Documents.
 
-![Patient Summary in Clinician Portal](./assets/patient-summary.svg)
+![Patient Summary in Clinician Portal](./assets/patient-summary.png)
 
 ## Administrators
 

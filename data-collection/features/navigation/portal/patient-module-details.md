@@ -17,4 +17,4 @@ From the Patient List in the Clinician Portal, selecting a Patient will display 
 
 When you click on the module or questionnaire you will be taken to the individual results of the patient’s entries.
 
-![Patient Modules Details in the Clinician Portal](./assets/patient-module-details.svg)
+![Patient Modules Details in the Clinician Portal](./assets/patient-module-details.png)

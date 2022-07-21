@@ -21,7 +21,7 @@ In the Huma app, Oxford Arthroplasty Early Recovery Score can be selected and th
 - Agree
 - Strongly agree
 
-![Oxford Arthroplasty Early Recovery Score in Huma App](./assets/oars.svg)
+![Oxford Arthroplasty Early Recovery Score in Huma App](./assets/oars.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -29,6 +29,6 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Oxford Arthroplasty Early Recovery Score column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity.
 
-![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-oars.svg)
+![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-patient-list-oars.png)
 
-![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-module-details-oars.svg)
+![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-module-details-oars.png)

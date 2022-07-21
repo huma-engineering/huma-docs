@@ -17,4 +17,4 @@ From the Admin Portal, the Helper agreement can be added from a Deployment, sele
 
 When identity verification is required, the Patient will be prompted to first upload a form of ID and then to take a photo of themselves. From there, verification will be complete in up to 60 seconds and be prompted when completed.
 
-![ID verification in the Huma App](./assets/id-verification.svg)
+![ID verification in the Huma App](./assets/id-verification.png)

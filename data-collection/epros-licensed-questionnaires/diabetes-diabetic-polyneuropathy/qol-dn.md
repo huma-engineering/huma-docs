@@ -13,7 +13,7 @@ The Norfolk Quality of Life-Diabetic Neuropathy Questionnaire allows Patients to
 
 In the Huma App, from the “Track” screen, Patients can select the Norfolk Quality of Life-Diabetic Neuropathy Questionnaire and can answer questions on how they feel by pressing “Add”. 
 
-![Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN) in Huma App](./assets/norfolk-quality-of-life-score.svg)
+![Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN) in Huma App](./assets/norfolk-quality-of-life-score.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -21,8 +21,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the QOL-DN column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity.
 
-![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-norfolk-quality-of-life-score.svg)
+![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-patient-list-norfolk-quality-of-life-score.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting QOL-DN all historical data can be displayed as a graph or a table of results.
 
-![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-modules-details-norfolk-qol.svg)
+![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-module-details-norfolk-quality-of-life-score.png)
