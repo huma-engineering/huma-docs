@@ -13,7 +13,7 @@ The Rey Auditory Verbal Learning Test (RAVLT) provides a standardised procedure 
 
 In the Huma App, Patients can select the Audio Word Recall module and by pressing the “Start” button to begin the activity.
 
-![Accessing the Audio Word Recall in the Huma App](./assets/audio-word-recall.svg)
+![Accessing the Audio Word Recall in the Huma App](./assets/audio-word-recall.png)
 
 In this module, the patient will be asked to listen to a list of words that will be read out loud to them. Afterwards, they then say back as many words as they can remember, speaking clearly into your phone’s microphone. This cycle will be repeated several times. Patients will be provided with step-by-step instructions throughout the activity. 
 

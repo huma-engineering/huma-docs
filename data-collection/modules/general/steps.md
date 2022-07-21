@@ -25,4 +25,4 @@ From within the module, Patients can view their progress in a graph and press â€
 
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Steps module will show the historic entries from the Patient.
 
-![](./assets/cp-patient-list-steps.svg)
+![](./assets/cp-patient-list-steps.png)

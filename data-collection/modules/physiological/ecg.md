@@ -12,7 +12,7 @@ This feature is available to iPhone Patients on iOS 14 or later, with Apple Watc
 ## How it works
 This module provides the ability for iOS user patients to sync their ECG data collected from apple watch with Huma App and Clinician Portal. By selecting the ECG module, the Patient can tap on Sync to manually retrieve the data from their Apple Watch. 
 
-![Adding ECG tracking from Apple Watch to Huma App](./assets/ecg.svg)
+![Adding ECG tracking from Apple Watch to Huma App](./assets/ecg.png)
 
 From within the module, Patients can view their progress in a graph and press “View previous entries” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -28,8 +28,8 @@ In the Clinician Portal, on the Patient List, Clinicians can view a table of Pat
 
 With that it will be indicated as a Red Amber Green indicator to inform severity. 
 
-![Patient Summary of ECG results](./assets/cp-patient-summary-ecg.svg)
+![Patient Summary of ECG results](./assets/cp-patient-list-ecg.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, By selecting the ECG module all historic data can be displayed as a graph or a table of results.
 
-![Patient Summary of ECG results](./assets/cp-module-details-ecg.svg)
+![Patient Summary of ECG results](./assets/cp-module-details-ecg.png)

@@ -23,7 +23,7 @@ To enable calls, make sure your browser settings allow camera and microphone use
 
 When an appointment is scheduled Patient will receive a notification to accept the date and time. Appointments can also be managed from the Huma App, in Profile and Appointments.
 
-![Managing appointments in the Huma App](./assets/appointment.svg)
+![Managing appointments in the Huma App](./assets/appointment.png)
 
 When a Clinician joins the call it will ring the Patients phone just like any other incoming call.
 

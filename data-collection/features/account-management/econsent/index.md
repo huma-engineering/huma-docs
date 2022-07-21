@@ -15,7 +15,7 @@ Huma provides the functionality of the whole eConsent process, therefore Health 
 
 From inside the Huma app, a Patient can accept, view, retract, and re-consent amendments to the eConsent that is currently active. This can be viewed in the Profile and Informed consent forms.
 
-![Adding onboarding module in Admin Portal](./assets/cp-econsent.svg)
+![Adding onboarding module in Admin Portal](./assets/econsent.png)
 
 ### Administrators
 

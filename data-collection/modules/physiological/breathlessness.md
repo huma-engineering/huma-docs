@@ -16,7 +16,7 @@ In the Huma App, Patients can select the Breathlessness module and answer the qu
 - Severe
 - Very Severe
 
-![Adding a breathlessness score to Huma App](./assets/breathlessness.svg)
+![Adding a breathlessness score to Huma App](./assets/breathlessness.png)
 
 To view historic answers, Patients can see a table of them by pressing “Previous entries”.
 
@@ -24,8 +24,8 @@ To view historic answers, Patients can see a table of them by pressing “Previo
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Breathlessness column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Viewing Patient data in the Clinician Portal](./assets/cp-patient-list-breathlessness.svg)
+![Viewing Patient data in the Clinician Portal](./assets/cp-patient-list-breathlessness.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Breathlessness module all historic data can be displayed as a graph or a table of results.
 
-![Viewing Patient data in the Clinician Portal](./assets/cp-module-details-breathlessness.svg)
+![Viewing Patient data in the Clinician Portal](./assets/cp-module-details-breathlessness.png)

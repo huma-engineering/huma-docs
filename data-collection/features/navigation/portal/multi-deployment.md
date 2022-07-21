@@ -12,5 +12,3 @@ Huma provides Multi-Deployment, an instance that contains particular Patients an
 ## Administrators
 
 Clinicians are invited from a Deployment in the Admin Portal by Administrators, from there the Care Teams will invite Patients and those personas will be associated with that deployment.
-
-![Multi deployment in the Admin Portal](./assets/multi-deployment.svg)

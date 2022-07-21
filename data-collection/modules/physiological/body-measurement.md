@@ -29,7 +29,7 @@ In the Huma app, when onboarding, the questionnaire will prompt the Patient to c
 
 Patients can then select the Body Measurements module, and by pressing “Add” they can enter their waist and hip measurements in cm (centimetres).
 
-![Adding data to body measurements](./assets/body-measurements.svg)
+![Adding data to body measurements](./assets/body-measurements.png)
 
 The Patient can use the camera on their phone to scan themselves and determine Visceral Fat and Total Body Fat percentage. 
 

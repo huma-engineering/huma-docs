@@ -9,4 +9,4 @@ At the core of Huma’s offering is collecting Patient data and providing it to 
 
 When Patients log into the Huma App, the Track screen can be accessed from the bottom navigation bar. Every module and questionnaire available is presented as a card with the last recorded entry on display. Patients can click to view historical data and add new records.
 
-![Track in Huma App](./assets/track.svg)
+![Track in Huma App](./assets/track.png)

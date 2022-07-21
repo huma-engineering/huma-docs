@@ -25,4 +25,4 @@ From the Clinician Portal, in the Patient View and Account details, Care Teams c
 
 As Helpers receive their invite and are prompted to download the Huma App, they are taken through the sign up and onboarding process. Once in the App, Helpers can enter data into modules in the same way that a Patient or Participant would.
 
-![Helper Agreement in the Huma App](./assets/helper-agreement.svg)
+![Helper Agreement in the Huma App](./assets/helper-agreement.png)

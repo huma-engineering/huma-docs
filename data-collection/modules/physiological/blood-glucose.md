@@ -15,7 +15,7 @@ Patients will measure their blood glucose using a Blood Glucose Monitor, and ent
 
 From the home screen, Patients can select the Blood Glucose Modules, and simply by clicking “Add” a result can be entered in mmol/L (millimoles per litre) with the time and date automatically added as now, but editable. 
 
-![Add a blood glucose result](./assets/blood-glucose.svg)
+![Add a blood glucose result](./assets/blood-glucose.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -23,8 +23,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Blood Glucose column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![View blood glucose from the Patient List](./assets/cp-patient-list-blood-glucose.svg)
+![View blood glucose from the Patient List](./assets/cp-patient-list-blood-glucose.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Glucose module all historic data can be displayed as a graph or a table of results.
 
-![View blood glucose from the Module Detail](./assets/cp-module-details-blood-glucose.svg)
+![View blood glucose from the Module Detail](./assets/cp-module-details-blood-glucose.png)

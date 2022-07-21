@@ -25,7 +25,7 @@ As a study comes to an end Huma will automatically take the Participants through
 
 When a Patient is off-boarded, they are informed at the end of monitoring with a list of possible reasons why this has happened. This will reassure them that this is a standard process and helps with providing context and confidence.
 
-![Offboarding in the Huma App](./assets/offboarding.svg)
+![Offboarding in the Huma App](./assets/offboarding.png)
 
 ### Administrators
 

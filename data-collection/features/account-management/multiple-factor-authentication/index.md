@@ -15,7 +15,7 @@ Huma offers 2-factor authentication via password entry and entry of verification
 
 In the Huma App, this can be turned on from the Profile page under Account, and toggling “Two-step verification”. From there, they will be taken through steps to add a phone number and then sent a verification code via text message. 
 
-![Two factor authentication in the Huma App](./assets/multiple-factor-authentication.svg)
+![Two factor authentication in the Huma App](./assets/multiple-factor-authentication.png)
 
 ### Clinicians 
 

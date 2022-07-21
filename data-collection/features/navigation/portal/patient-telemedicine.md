@@ -13,7 +13,7 @@ From the Clinician Portal, Care Teams can select a Patient from the Patient List
 
 To enable calls, make sure your browser settings allow camera and microphone use.
 
-![Making an Appointment in the Clinician Portal](./assets/patient-telemedicine.svg)
+![Making an Appointment in the Clinician Portal](./assets/patient-telemedicine.png)
 
 ### Patients
 

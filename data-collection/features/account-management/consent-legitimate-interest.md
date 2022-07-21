@@ -13,7 +13,7 @@ The type of consent also varies based on the user type being a clinical trial pa
 
 From the Admin Portal, the Helper agreement can be added from a Deployment, selecting Onboarding and clicking on “Consent” or “Legitimate Interest”.
 
-![Adding consent and legimate interest in the Admin Portal](./assets/consent-legitimate-interest.svg)
+![Adding consent and legimate interest in the Admin Portal](./assets/consent-legitimate-interest.png)
 
 ### Patients
 

@@ -27,4 +27,6 @@ In the messages table for a Patient is a ‘status’ column which will either s
 
 In the Huma App, as well as Patients recieving a notification on their device, they can go to Profile and Messages, where all recieved messages can be found.
 
-![Recieving a messages in the Huma App](./assets/messaging.svg)
+![Recieving a messages in the Huma App](./assets/messaging-1.png)
+
+![Recieving a messages in the Huma App](./assets/messaging-2.png)

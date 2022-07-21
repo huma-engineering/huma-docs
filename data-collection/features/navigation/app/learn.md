@@ -19,4 +19,6 @@ From a particular Deployment in the Admin Portal, Administrators can click on â€
 
 In the Huma App, Patients can access the Learn feature from the bottom navigation menu and are presented with a grid of the available Articles separated by Sections. Clicking on an Article will load the document, video or website to review.
 
-![Learn screen in Huma App](./assets/learn.svg)
+![Learn screen in Huma App](./assets/learn-1.png)
+
+![Learn screen in Huma App](./assets/learn-2.png)

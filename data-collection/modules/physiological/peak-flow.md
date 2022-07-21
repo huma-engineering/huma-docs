@@ -15,7 +15,7 @@ Patients will measure their Peak Flow using a Peak Flow meter, and enter into th
 
 In the Huma App, Patients can select the Peak Flow module and by pressing the “Add” button can enter a value as L/min (litres per minute), with the time and date automatically added as now, but editable. The peak flow result will take into account your gender, age and height before showing your calculated result as a percentage
 
-![Adding a peak flow reading to the Huma App](./assets/peak-flow.svg)
+![Adding a peak flow reading to the Huma App](./assets/peak-flow.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -23,8 +23,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Peak Flow column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity.
 
-![Viewing a patients peak flow from the clinician portal](./assets/cp-patient-list-peak-flow.svg)
+![Viewing a patients peak flow from the clinician portal](./assets/cp-patient-list-peak-flow.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Peak Flow module all historic data can be displayed as a graph or a table of results.
 
-![Viewing a patients peak flow from the clinician portal](./assets/cp-modules-details-peak-flow.svg)
+![Viewing a patients peak flow from the clinician portal](./assets/cp-module-details-peak-flow.png)

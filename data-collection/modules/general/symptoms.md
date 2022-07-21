@@ -13,7 +13,7 @@ The Symptoms module is used to record a Patient's symptoms as they occur. Keepin
 
 In the Huma App, Patients can select the Symptoms module and simply by clicking “Add” they are able to select from a predetermined list of symptoms and how serious they feel that particular affliction. 
 
-![Symptoms in the Huma App](./assets/symptoms.svg)
+![Symptoms in the Huma App](./assets/symptoms.png)
 
 From within the module, Patients can view previous entries and can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -21,6 +21,6 @@ From within the module, Patients can view previous entries and can also set a da
 
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Symptoms module will show the historic entries from the Patient.
 
-![Symptoms in the Clinician Portal](./assets/cp-patient-list-symptoms.svg)
+![Symptoms in the Clinician Portal](./assets/cp-patient-list-symptoms.png)
 
-![Symptoms in the Clinician Portal](./assets/cp-module-details-symptoms.svg)
+![Symptoms in the Clinician Portal](./assets/cp-module-details-symptoms.png)
