@@ -1,0 +1,56 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that encapsulates integration with Twilio VoIP service
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+Call Kit sdk integrates with Twilio VoIP service, no extra work is required to configurate it.
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:call:<latest-version>")
+```
+
+2.1 Initialize `HumaUtilsManager`, `HumaUiManager` and `HumaSharedManager` in your Application class:
+```kotlin
+HumaUtilsManager.init(/*..*/)
+HumaUiManager.init(/*..*/)
+HumaSharedManager.init(/*..*/)
+HumaCallManager.init(/*..*/)
+```
+
+2.2 Initialize via Initializer DSL
+```kotlin
+ initializeHumaSdk {
+    install {
+      ...
+      call()
+    }
+  }
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+  
+  Call Kit module encapsulates Twilio SDK. When the user receives an incoming call notification appears. On Accept call screen opens. On Decline, notification disappears.
+
+  ### Documentation
+  [API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+</TabItem>
+</Tabs>
