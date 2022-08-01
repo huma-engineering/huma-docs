@@ -9,7 +9,7 @@ The aim is to explain how each component works and assists in the adoption of th
 
 ## Personas
 
-This Knowledge Base is for:
+This Knowledge Base is for: 
 
 - **User**: Often used to mean patients but can encompass users of any Huma product, from patients, to clinicians to admins.
 - **Patients**: Users of the Huma App whose health data is being tracked.
