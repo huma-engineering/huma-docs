@@ -11,8 +11,9 @@ The aim is to explain how each component works and assists in the adoption of th
 
 This Knowledge Base is for:
 
-- **Administrators**: Internal Huma users who will build and configure the Healthcare or Research Institute's organisations and deployments.
-- **Clinicians**: The people in the Care Teams who will use Huma to view and assess Patients.
-- **Patients**: Individuals who will be submitting their data for assessment and feedback.
-- **Research Teams**: Leaders of Clinical Trials who are ingressing data to aid their studies.
-- **Participants**: Individuals involved in a Clinical Trial who supply their data.
+- **User**: Often used to mean patients but can encompass users of any Huma product, from patients, to clinicians to admins.
+- **Patients**: Users of the Huma App whose health data is being tracked.
+- **Helper**: People assigned by an admin or a patient to enter data to the Huma App on behalf of a patient. Also referred to as a proxy.
+- **Clinician**: Users on the Clinician Portal who manage patients e.g. nurses and doctors, including tracking their data and contacting them.
+- **Admin / Administrator**: User role in the Clinician Portal which can assign and edit other user roles.
+- **Account Administrator**:User role in the Admin Portal tasked with setting up deployments and organisations.
