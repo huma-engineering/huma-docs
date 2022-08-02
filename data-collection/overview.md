@@ -16,4 +16,4 @@ This Knowledge Base is for:
 - **Helper**: People assigned by an admin or a patient to enter data to the Huma App on behalf of a patient. Also referred to as a proxy.
 - **Clinician**: Users on the Clinician Portal who manage patients e.g. nurses and doctors, including tracking their data and contacting them.
 - **Admin / Administrator**: User role in the Clinician Portal which can assign and edit other user roles.
-- **Account Administrator**:User role in the Admin Portal tasked with setting up deployments and organisations.
+- **Account Administrator**: User role in the Admin Portal tasked with setting up deployments and organisations.
