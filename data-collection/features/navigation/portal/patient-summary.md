@@ -19,6 +19,8 @@ In the Clinician Portal, the Patient summary can be viewed by clicking on a part
 
 ![Patient Summary in Clinician Portal](./assets/patient-summary.png)
 
+Bulk actions are available in the Clinician Portal, saving time for Care Team members by providing the ability to make several changes at once. This includes; Pending Invitations, Offboarding Patients, and Sending Messages.
+
 ## Administrators
 
 From the Admin Portal, the fields to be available in Patient Summary can be configured in a chosen Deployment, and by clicking on Profile. On this screen, Administrators can enable fields to be presented to the Patient, create custom fields, make any of them manditory, and change the order of them. 

@@ -16,3 +16,5 @@ We make inviting a Patient to the platform straightforward, by being able to sen
 The Huma portal provides a “Get link” button for alternate means of communication — giving Clinicians the ability to invite their Patients via methods other than email.
 
 The URL generated is short enough to work with SMS or any popular messaging app without any issues for the invitee. This gives confidence to both Patients and Clinicians.
+
+From the "Pending Invitations" tab, any yet to be onboarded patient can be sent a reminder of their invitation, or revoke it all together. This can be done as a single invitation or several using the checkboxes and selecting a bulk action.

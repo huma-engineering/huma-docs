@@ -7,7 +7,7 @@ Huma provides the International Knee Documentation Committee (IKDC) Questionnair
 
 ## How it works
 
-The IKDC Questionnaire is a subjective scale that provides patients with an overall function score. The questionnaire looks at 3 categories: symptoms, sports activity, and knee function. The symptoms subscale helps to evaluate things such as pain, stiffness, swelling, and giving-way of the knee. A score is given out of 100, calculated by the answers given.
+The IKDC Questionnaire is a subjective scale that provides patients with an overall function score. The questionnaire looks at 3 categories: symptoms, sports activity, and knee function. The symptoms subscale helps to evaluate things such as pain, stiffness, swelling, and giving-way of the knee. A score is given out of 100, calculated by the answers given. This questionnaire is also available in German.
 
 ## Patients
 

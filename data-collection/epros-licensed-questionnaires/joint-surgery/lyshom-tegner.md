@@ -6,7 +6,7 @@ Mobility in the Knee is important for the ability to manage everyday life. Huma 
 
 ## How it works
 
-The Patient responds to questions from pre-determined descriptive answers that are categorised as limp, support, locking, instability, pain, swelling, stair climbing, or squatting. Scores in Huma are calculated in a range from 0 (worse disability) to 100 (less disability).
+The Patient responds to questions from pre-determined descriptive answers that are categorised as limp, support, locking, instability, pain, swelling, stair climbing, or squatting. Scores in Huma are calculated in a range from 0 (worse disability) to 100 (less disability). This questionnaire is also available in German.
 
 ## Patients
 
