@@ -10,31 +10,28 @@ Questionnaires can be added to the deployment as a tracking module in the same w
 ## Questionnaire list
 Questionnaires fall into two categories based on their ability to generate a score; Questionnaires or PROMs (Patient Recorded Outcome Measures), also known as ePROs or PROs.
 
-| Type | Customisation | Questionnaires |
-| --- | --- | --- |
-| **PROM** Questionnaires are scored. The score may or may not be shown to the patient. PROMS are displayed in the Huma App and Clinician Portal as an individual module | Questions, answers and scoring cannot be modified | **Score shown to patient** :
-Diabetes Distress Score (DDS)
-FJS Knee 
-FJS Hip 
-GAD-7
-Kansas City Cardiomyopathy Questionnaire (KCCQ) 
-Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC) [English, German, Italian, Spanish]
-Norfolk QoL-DN [English, Dutch]
-Oxford Knee Score [English]
-Oxford Hip Score [English]
-PHQ-8 [English (UK)]
-SF-36 [English, Dutch]
-
-**Score not shown to patient**:
-EQ-5D-5L [English]
-Patient Activation Measure 13 (PAM 13)
-PROMIS CAT Pain Interference [English]
-PROMIS CAT Physical Function [English]
-PROMIS Global Health v1.2 [Catalan, French, German, Spanish, Swedish] |
-| **Questionnaire** No score is shown to patients but it may be calculated separately in the Clinician Portal where available. These may include customer experience surveys or telephone surveys and may be shown in the Huma App and in the Clinician Portal under the Questionnaire umbrella. | Can be customised as needed
-Activity and Health Questionnaire | Baseline COVID-19 Questionnaire [German]
-Food Security Questionnaire
-Perceived Stress Scale (PSS) |
+| Questionnaire | Type | Scored | Score shown to patient | Can be modified |
+| --- | --- | --- | --- | --- |
+| Diabetes Distress Score (DDS)| PROM | Yes | Yes | No | 
+| FJS Knee | PROM | Yes | Yes | No | 
+| FJS Hip | PROM | Yes | Yes | No | 
+| GAD-7 | PROM | Yes | Yes | No | 
+| Kansas City Cardiomyopathy Questionnaire (KCCQ) | PROM | Yes | Yes | No |  
+| Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC) [English, German, Italian, Spanish] | PROM | Yes | Yes | No | 
+| Norfolk QoL-DN [English, Dutch] | PROM | Yes | Yes | No | 
+| Oxford Knee Score [English] | PROM | Yes | Yes | No | 
+| Oxford Hip Score [English] | PROM | Yes | Yes | No | 
+| PHQ-8 [English (UK)] | PROM | Yes | Yes | No | 
+| SF-36 [English, Dutch] | PROM | Yes | Yes | No | 
+| EQ-5D-5L [English] | PROM | Yes | No | No |
+| Patient Activation Measure 13 (PAM 13) | PROM | Yes | No | No |
+| PROMIS CAT Pain Interference [English] | PROM | Yes | No | No |
+| PROMIS CAT Physical Function [English] | PROM | Yes | No | No |
+| PROMIS Global Health v1.2 [Catalan, French, German, Spanish, Swedish] | PROM | Yes | No | No | 
+| Activity and Health Questionnaire | Questionnaire | Yes/No | No | Yes |
+| Baseline COVID-19 Questionnaire [German] | Questionnaire | Yes/No | No | Yes |
+| Food Security Questionnaire | Questionnaire | Yes/No | No | Yes |
+| Perceived Stress Scale (PSS) | Questionnaire | Yes/No | No | Yes |
 
 ## Creating custom questionnaires
 You can create a completely new questionnaire from scratch. In the **Add track module** dropdown, select **Add new questionnaire**.
