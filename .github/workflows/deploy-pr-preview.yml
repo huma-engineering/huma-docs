@@ -2,11 +2,6 @@ name: Deploy to Firebase Hosting on PR
 
 on: pull_request
 
-# cancel in-progress workflows instances for the same PR
-concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: true
-
 # => in case later, somebody is interested in deploying by comment
   # issue_comment:
   #   types: [created]
