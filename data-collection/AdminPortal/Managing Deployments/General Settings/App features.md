@@ -7,12 +7,20 @@ Huma is designed principally for either clinical research trials (CRT) or remote
 ## How it works​
 From the **Admin Portal**, go to the **App features** tab, under **General Settings**.
 
-### App menu
-You can choose which tabs appear in the Huma App. There are two pre-configured options that you can select from the dropdown: **Legacy** or **Timeline**.  
+![image](https://user-images.githubusercontent.com/110832367/183861713-a39593f3-2665-4559-b882-5d559feba2ca.png)
 
-If you click the **Show advanced options** link, you can see the menu items for each configuration. The Legacy option includes **Care plan, Key actions, Learn**, and **Profile**.
+### App menu
+You can choose which tabs appear in the Huma App. There are two pre-configured options that you can select from the dropdown: **Legacy** or **Timeline**. If you click the **Show advanced options** link, you can see the menu items for each configuration. 
+
+![image](https://user-images.githubusercontent.com/110832367/183861994-b8ef351a-53db-4348-ba9c-8d01dd0abd4e.png)
+
+The Legacy option includes **Care plan, Key actions, Learn**, and **Profile**.
+
+![image](https://user-images.githubusercontent.com/110832367/183861882-16b40079-7297-48e5-b032-388dd28a3d84.png)
 
 The Timeline option includes **To do, Track, Learn**, and **Profile**.
+
+![image](https://user-images.githubusercontent.com/110832367/183861819-c4df18c2-ee69-492b-bff7-8cfa19b75af6.png)
 
 ### App features
 Check the features on the list that you want to include for your users:
