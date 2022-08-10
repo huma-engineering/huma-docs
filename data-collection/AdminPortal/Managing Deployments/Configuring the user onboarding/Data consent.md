@@ -10,7 +10,8 @@ When creating a new deployment, you can add the **Consent** module by selecting 
 Whichever option you choose, it will be listed in the onboarding modules as **Consent**. Consent modules are configured in English (as indicated by ‘UK’) but the template can be configured for other languages.
 
 Click the **Edit✎** icon at the end of the row to configure the module.
-> Note that the details may vary depending on the country. For the purpose of this guide, we will look at the configuration needed for EU regions who are regulated by GDPR guidelines.
+
+> 📘 Note that the details may vary depending on the country. For the purpose of this guide, we will look at the configuration needed for EU regions who are regulated by GDPR guidelines.
 
 - **General** - This section specifies the user who needs to consent. In this case, as it is the user’s data being processed, only **User** should be checked.
 
