@@ -11,6 +11,7 @@ In the pop-out window, enter a name for your organisation, select a **View Type*
 ![image](https://user-images.githubusercontent.com/110832367/183899651-903a9438-9062-42fc-8f2a-faf368c65528.png)
 
 For DCT deployments, you can also optionally choose to include a **Study completion target** which shows a % of the patients who completed the trial compared to the target on the deployment list view in the Clinician Portal. 
+
 Once you have completed these details, save the organisation and it will be listed on the **Organisations** tab. On the list, you can see the organisation name, enrollment target, study completion target and the number of deployments associated with it. 
 ![image](https://user-images.githubusercontent.com/110832367/183843835-d1a953b1-9b62-4816-9bc7-6a5d421e146d.png)
 To make any changes to the Organisation, open the dropdown menu at the end of the row and select **Edit**. 
@@ -18,3 +19,5 @@ To make any changes to the Organisation, open the dropdown menu at the end of th
 You can edit any of the fields and also remove any deployments you might have added.
 
 ![image](https://user-images.githubusercontent.com/110832367/183899881-156bd073-6540-4568-b416-a1195fca5aa3.png)
+
+**Related articles**: [Creating a new Deployment](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/AdminPortal/Managing%20Deployments/General%20Settings/Creating%20a%20new%20Deployment.md)
