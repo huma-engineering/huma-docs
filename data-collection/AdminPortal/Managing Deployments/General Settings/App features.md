@@ -33,6 +33,8 @@ Check the features on the list that you want to include for your users:
 - **Hide app support (Intercom)** - This hides access to the support centre from the Profile page of the App.  
 - **Patient status** - This lets clinicians see the patient status in the Patient List
 
+![image](https://user-images.githubusercontent.com/110832367/183897763-667ccdae-c2c1-4b58-bd74-63da2a10096b.png)
+
 \*<sub>Functionality soon to be removed.</sub>
 \**<sub>Functionality not currently active.</sub>
 
