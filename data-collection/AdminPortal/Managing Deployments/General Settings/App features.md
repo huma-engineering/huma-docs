@@ -17,14 +17,14 @@ The Timeline option includes **To do, Track, Learn**, and **Profile**.
 ### App features
 Check the features on the list that you want to include for your users:
 - **Appointment** - This feature lets clinicians schedule appointments with their patients or call them directly sing the in-app telemedicine video or audio call functionality
-- **Care plan daily adherence**<sup>1</sup> - This lets patients see a progress bar on the modules to track their task compliance.
-- **Health device integration**<sup>2</sup> - Allow user to sync other health devices such as heart monitors with their account.
+- **Care plan daily adherence**\* - This lets patients see a progress bar on the modules to track their task compliance.
+- **Health device integration**\** - Allow user to sync other health devices such as heart monitors with their account.
 - **Off-boarding** - Allows manual offboarding of patients from the Clinician Portal 
 - **Personal documents** - Allow both patients and clinicians to upload documents to a users account 
 - **Proxy** - Let patients nominate helpers to enter health data on their behalf. If any Onboarding modules are configured with proxy users, this must be checked.
 - **Hide app support (Intercom)** - This hides access to the support centre from the Profile page of the App.  
 - **Patient status** - This lets clinicians see the patient status in the Patient List
 
-<sup>1</sup><sub>Functionality soon to be removed.</sub>
-<sup>2</sup><sub>Functionality not currently active.</sub>
+\*<sub>Functionality soon to be removed.</sub>
+\**<sub>Functionality not currently active.</sub>
 
