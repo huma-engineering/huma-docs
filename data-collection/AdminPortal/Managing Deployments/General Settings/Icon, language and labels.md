@@ -7,8 +7,12 @@ When setting up multiple deployments for different user groups, the Huma platfor
 ## How it works​
 In the **Deployment config** tab, you can configure each individual deployment’s look and feel.
 
+![image](https://user-images.githubusercontent.com/110832367/183860504-9471a286-9b5a-48e9-9412-6fb0c577c9bf.png)
+
 ## General
 - **Icon** - You can upload an icon for your deployment. This will appear on the Huma App home screen (either Track or To do). Just click **Browse** and select the file you want to upload.
+
+![image](https://user-images.githubusercontent.com/110832367/183860618-f0a4cf35-6ce7-4fb1-a8d3-b48712d1db1a.png)
 
 > Recommended icon specifications: 
 Use a high resolution client logo with transparent background; min 800x800px; png. 
@@ -17,7 +21,11 @@ Use a high resolution client logo with transparent background; min 800x800px; pn
 The Languages section will list the different language configurations available in your deployment. 
 To add new languages to your deployment, the **Generate file to translate** link will generate a json file with all the code from your deployment. 
 
+![image](https://user-images.githubusercontent.com/110832367/183860710-67093534-9bd1-4d8f-bd57-8255b65938f8.png)
+
 To add a new language, you will need to translate all the text into the new language and then upload the localization file by clicking the **upload** link.
+
+![image](https://user-images.githubusercontent.com/110832367/183860877-43b1159a-fe3c-4493-90b6-15a879a17c18.png)
 
 > Please note that once you have downloaded the localisation file, your deployment configuration will be locked and you won’t be able to make any changes. For the full procedure, please refer to [this documentation](https://humatherapeutics.atlassian.net/wiki/spaces/DO/pages/3298689083/How-To+Log+a+Translation+Request).
 
