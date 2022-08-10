@@ -1,8 +1,6 @@
 # Tracking questionnaires (ePROs)
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Related articles: Tracking modules; Reviewing Questionnaires; 
-
 One of the ways Huma allows you to collect data from patients is with Patient Reported Outcome Measures (PROs/PROMs), or validated questionnaires. Feedback from patients is key to being able to improve the care provided by the care team and this feature lets them build and collect qualitative data from patients about how they feel and tailor their treatment plan accordingly. 
 
 ## How it works
@@ -49,6 +47,8 @@ Follow these steps to create your questionnaire and it will appear on the dropdo
 - If you want the questionnaire to be part of the user onboarding, check the box **Is onboarding?**
 - If you want the questionnaire to be presented in a horizontal flow, rather than vertical scrolling, check the box **Horizontal flow**
 
+![image](https://user-images.githubusercontent.com/110832367/183921513-093c3385-26aa-4b4e-8b74-77492a2266d4.png)
+
 ### Scoring
 If you want to assign scores to the answers given to the questions in your questionnaire, you can configure the settings here.
 - Check the **Score available** box and when you add your questions and answer options, there will be a space for you to enter a score. This also means RAG thresholds can be assigned and the questionnaire will have its own module on the patient track and clinician portal with its own graph, schedule, reminders and contextual Learn article.
@@ -60,7 +60,9 @@ If you want to assign scores to the answers given to the questions in your quest
 ### Schedule
 If your questionnaire is requesting data that needs to be collected on a regular basis, you can set a schedule. 
 - Set the **ISO duration** to determine how long you want to track the data and the **Times per duration** to set how many times during that period you want to collect the data. For example, if the duration is one month and the times per duration is 3, the schedule is 3 times per month. 
-> If there is no specific schedule, set **Times per duration** to as needed and leave the **ISO Duration** field blank.
+
+> **Tip** If there is no specific schedule, set **Times per duration** to as needed and leave the **ISO Duration** field blank.
+
 - Check the checkbox to let the patient know what **times of day** they need to submit their data. If no option is selected, the patient will be informed to submit the questionnaire at the same time of day each time.
 
 ![image](https://user-images.githubusercontent.com/110832367/183853424-5c95b812-b749-4158-9afd-94ac1c44048c.png)
@@ -82,17 +84,20 @@ Some questionnaires also allow **Footnote text**.
 
 ### Adding questions
 Add new questions using the **+ New question** button at the top. You will be asked to choose a question type. 
-> If you have checked the box **Score available**, you will only be able to choose from Multiple Choice and Single Choice question types. 
+
+> ⚠️ If you have checked the box **Score available**, you will only be able to choose from **Multiple Choice** and **Single Choice** question types. 
 
 ![image](https://user-images.githubusercontent.com/110832367/183851036-f887a4c4-6bcc-4e38-8ec4-c6af53160bf0.png)
 
-Next, enter your question. Make sure it fits the [question type]() you have selected. 
+Next, enter your question. Make sure it fits the question type you have selected. 
 In addition to the question, you can enter a description to give the patient some more details. 
-The **placeholder text** can be useful for questions that are text based, to give users an example of the type of information they need to input, or instructions on how to answer. It will appear in the answer field for the end user. (see Huma App view)
+
+The **placeholder text** can be useful for questions that are text based, to give users an example of the type of information they need to input, or instructions on how to answer. It will appear in the answer field for the end user. (see [Huma App view](https://www.figma.com/file/2B0Y7wKLBeY37XTO5JF6cx/Configuration-template-visual-guide?node-id=180%3A890498))
 
 ![image](https://user-images.githubusercontent.com/110832367/183851450-312a85fc-1e36-4942-abe3-a41edac0a660.png)
 
 For multiple choice questions, you’ll need to enter all the answer options. Click **Add options** to add more options. 
+
 Single choice questions let you choose between **regular** or **text picker**. The text picker variation lets you include an **ID** with the answer options. This is useful with countries, for example. 
 
 ![image](https://user-images.githubusercontent.com/110832367/183851650-4fc67124-c822-4ea8-9f9c-4f3c9f475990.png)
@@ -114,6 +119,8 @@ Once you have added your question and answer options, save your changes and the 
 ### Reordering or deleting questions 
 Questions appear in the order they will appear in the questionnaire, with the Welcome page at the start and the Submission page at the end. Use the arrows🕂 icon to reorder the questions in the list. 
 
+![image](https://user-images.githubusercontent.com/110832367/183923647-4aad2add-2408-4b17-9023-512c20427b5e.png)
+
 Click the three dots on the question tab then click **Delete** to delete the question.
 
 ![image](https://user-images.githubusercontent.com/110832367/183851316-11cc102a-1de5-41b0-908b-ecdec7e1dcd5.png)
@@ -121,7 +128,7 @@ Click the three dots on the question tab then click **Delete** to delete the que
 ### Question types
 The question types you should select depends on the kind of information you are collecting and what you intend to do with it afterwards. Click the **Type** dropdown and select from the options available:
 - **Multiple Choice** - Users have a list of options to choose from and can pick more than one. 
-- **Single choice** - Similar to multiple-choice questions but users can only choose one. With this option, you can choose between Regular single choice and Text picker. The text picker option allows you to add IDs to the answer options.
+- **Single choice** - Similar to multiple-choice questions but users can only choose one. With this option, you can choose between **Regular single choice** and **Text picker**. The text picker option allows you to add IDs to the answer options.
 - **Yes / No** - For questions that only have a “yes” or “no” response. Similarly, “true" or “false” can be used as alternatives.
 - **Text** - Users can enter free text, for example their name or email address. You can also use them to ask more open questions although answers need to be quite short.
 - **Number** - Similar to text input but users must enter a number. Useful when you are asking for a data point or measurement.
@@ -129,17 +136,18 @@ The question types you should select depends on the kind of information you are 
 - **Date** - The user selects a date, month, and year from a carousel of options. Use this option when asking for the patient’s date of birth or the dates of specific medical interventions.
 - **Duration** - The user selects from a carrousel of options to choose a time or a period of time/duration.
 - **Photo** - The user can upload a photo or a file in response to a question.
-- **Phone number** - The user is asked to select the country code and enter their phone number. Make sure to use this option instead of Text input when asking for a phone number as the app can verify it is valid based on the area code. 
+- **Phone number** - The user is asked to select the country code and enter their phone number. Make sure to use this option instead of **Text input** when asking for a phone number as the app can verify it is valid based on the area code. 
 - **Scale** - The scale option is useful if you want the patient to choose a value within a minimum and maximum range. They simply position the slider on a scale.
 - **Info page / Submission page** - These cards are already formatted to be used at the beginning and end of the questionnaire and don’t require any input from the patient, they are just there to inform.
-See how the different question types appear to patients in the Huma App.
+
+[See how the different question types](https://www.figma.com/file/2B0Y7wKLBeY37XTO5JF6cx/Configuration-template-visual-guide?node-id=180%3A890497) appear to patients in the Huma App.
 
 ### Adding Logic
 The **Logic** tab is where you can manage what happens when a user gives a particular response to one of your questions. For example, if they answer that they have a history of a certain condition, you may send them to a different part of the questionnaire compared to those who answer “no” to the same question.
 
 ![image](https://user-images.githubusercontent.com/110832367/183852637-2fcaca31-1b46-459b-99da-60bf7e4614c4.png)
 
-> If no logic is added, the user will move through each of the questions in order.
+> **INFO** If no logic is added, the user will move through each of the questions in order.
 
 The **Logic** section lists all the questions on your questionnaire with a link to **Add rule**. 
 
@@ -166,6 +174,9 @@ You can add or delete any existing rules as needed.
 
 ## Editing existing questionnaires
 Some questionnaires can be edited and modified, including changing the scoring and thresholds. It is also possible to edit questions, including changing the response options, deleting or adding new questions, and changing the order and the logic. Just click any of the questions to edit them. 
-> For licenced questionnaires, you cannot change anything except the custom thresholds.
+
+> ⚠️ For licenced questionnaires, you cannot change anything except the custom thresholds.
+
 Remember to save any changes you make.
 
+**Related articles**: [Tracking modules](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md)
