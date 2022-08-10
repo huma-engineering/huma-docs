@@ -13,7 +13,7 @@ Select the type of role you want to assign from the dropdown.
 - **Organisation Controller** – this Admin Portal user can create and edit deployments within this organisation and invite other staff members
 - **Organisation Owner** – this Admin Portal user can do everything an Organisation Controller can do and can also delete the organisation
 - **Access controller** – this role is specifically for adding and removing organisation staff members and managing roles in the Clinician Portal
-For more information on roles and permissions, see the article on [Roles and permissions]().
+For more information on roles and permissions, see the article on Roles and permissions.
 
 ![image](https://user-images.githubusercontent.com/110832367/183845087-ae069e94-1cbe-402e-afd3-0d84ae6142cb.png)
 
