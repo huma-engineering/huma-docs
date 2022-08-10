@@ -1,0 +1,48 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that provides an internal caching layer. 
+
+### Getting Started
+<Tabs>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:caching:<latest-version>")
+```
+2. Initialize `HumaCachingManager` in your Application class:
+```kotlin
+HumaCachingManager.init()
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+Huma Android SDK uses [Room](https://developer.android.com/jetpack/androidx/releases/room) library which provides an abstraction layer over SQLite to allow fluent database access for persisting data locally.    
+HumaCachingManager is a provider of an interface for interaction with local database.  
+HumaCachingManager module encapsulates logic of creating instance of `Humadatabase` inherited from `RoomDatabase` and defines interfaces for creating DAOs classes and entities converters.  
+There are major components for interaction with database using HumaCachingManager:
+* Data entity - class that represents tables in a database.
+* Data access object (DAO) - class provides methods for executing CRUD operations with data in the database.
+* Data object mapper - class defines methods to convert appropriate app's data class to data entity class.  
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+  **[0.1.17]**
+
+  - [#42](https://github.com/huma-engineering/huma-android-sdk/pull/42) Added documentation for HumaCaching module
+  - [#40](https://github.com/huma-engineering/huma-android-sdk/pull/40) Created HumaCaching module
+  
+</TabItem>
+</Tabs>
