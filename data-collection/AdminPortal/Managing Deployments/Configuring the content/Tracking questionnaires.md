@@ -15,22 +15,22 @@ Questionnaires fall into two categories based on their ability to generate a sco
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
-| Diabetes Distress Score (DDS)| PROM | Yes | Yes | No | 
-| FJS Knee | PROM | Yes | Yes | No | 
-| FJS Hip | PROM | Yes | Yes | No | 
-| GAD-7 | PROM | Yes | Yes | No | 
-| Kansas City Cardiomyopathy Questionnaire (KCCQ) | PROM | Yes | Yes | No |  
-| Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC) [English, German, Italian, Spanish] | PROM | Yes | Yes | No | 
+| [Diabetes Distress Score (DDS)](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
+| [FJS Knee](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
+| [FJS Hip](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
+| [GAD-7](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
+| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
+| [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/joint-surgery/koos-womac.md) [English, German, Italian, Spanish] | PROM | Yes | Yes | No | 
 | Norfolk QoL-DN [English, Dutch] | PROM | Yes | Yes | No | 
-| Oxford Knee Score [English] | PROM | Yes | Yes | No | 
-| Oxford Hip Score [English] | PROM | Yes | Yes | No | 
+| [Oxford Knee Score](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) [English] | PROM | Yes | Yes | No | 
+| [Oxford Hip Score](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) [English] | PROM | Yes | Yes | No | 
 | PHQ-8 [English (UK)] | PROM | Yes | Yes | No | 
-| SF-36 [English, Dutch] | PROM | Yes | Yes | No | 
-| EQ-5D-5L [English] | PROM | Yes | No | No |
-| Patient Activation Measure 13 (PAM 13) | PROM | Yes | No | No |
-| PROMIS CAT Pain Interference [English] | PROM | Yes | No | No |
+| [SF-36](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) [English, Dutch] | PROM | Yes | Yes | No | 
+| [EQ-5D-5L](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) [English] | PROM | Yes | No | No |
+| [Patient Activation Measure 13 (PAM 13)](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
+| [PROMIS CAT Pain Interference](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) [English] | PROM | Yes | No | No |
 | PROMIS CAT Physical Function [English] | PROM | Yes | No | No |
-| PROMIS Global Health v1.2 [Catalan, French, German, Spanish, Swedish] | PROM | Yes | No | No | 
+| [PROMIS Global Health](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) [Catalan, French, German, Spanish, Swedish] | PROM | Yes | No | No | 
 | Activity and Health Questionnaire | Questionnaire | Yes/No | No | Yes |
 | Baseline COVID-19 Questionnaire [German] | Questionnaire | Yes/No | No | Yes |
 | Food Security Questionnaire | Questionnaire | Yes/No | No | Yes |
@@ -38,6 +38,8 @@ Questionnaires fall into two categories based on their ability to generate a sco
 
 ## Creating custom questionnaires
 You can create a completely new questionnaire from scratch. In the **Add track module** dropdown, select **Add new questionnaire**.
+![image](https://user-images.githubusercontent.com/110832367/183918367-0e95f547-5aad-4534-beb9-6519ab412e4b.png)
+
 
 Follow these steps to create your questionnaire and it will appear on the dropdown list of questionnaires for selection.
 
