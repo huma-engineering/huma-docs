@@ -1,6 +1,5 @@
-# Tracking Modules
+# Tracking modules
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
-Related articles: Tracking questionnaires; Reviewing module details; Preferred Units; 
 
 The Huma app collects data from patients based on a number of purpose-built modules to track different data points or patient-reported qualitative data. 
 ## How it works
@@ -9,7 +8,7 @@ You can add modules from the **Track** tab of your deployment configuration. Jus
 ![image](https://user-images.githubusercontent.com/110832367/183849927-a7f16008-7af3-450d-818d-7474efad6d95.png)
 
 ## Modules list
-This is the full list of modules available for tracking health data. Configuration is similar for each module although the RAG thresholds are not available for all of them. Modules that use RAG will be labelled **Threshold** and those that do not will be labelled **Static**. The only exception to this would be the Symptoms module, which is explained in more detail in the **Configuration** section.
+This is the full list of modules available for tracking health data. Configuration is similar for each module although the RAG thresholds are not available for all of them. Modules that use RAG will be labelled **Threshold** and those that do not will be labelled **Static**. The only exception to this would be the [Symptoms](https://github.com/huma-engineering/huma-docs/edit/new-knowledgebase/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md#symptoms:~:text=labelled%20Static.-,Symptoms,-The%20Symptoms%20module) module, which is explained in more detail in the **Configuration** section.
 
 Different modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps to log it automatically e.g. heart rate monitors, step counters. 
 
@@ -105,3 +104,5 @@ When you have finished editing the module, make sure you click **Save changes**.
 If you have entered incomplete data in the **Settings** tab, you will be notified with a red dot on the tab. Go back and make sure you have included all the required information and saved your changes.
 
 ![image](https://user-images.githubusercontent.com/110832367/183850659-d4834513-46d0-42af-b922-57af1a39cd3f.png)
+
+Related articles: [Tracking questionnaires](https://github.com/huma-engineering/huma-docs/blob/0d6c7b7d55ae2cb9c6968ce84e405c67a9323b53/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20questionnaires.md); [Preferred Units](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/Preferred%20units.md) 
