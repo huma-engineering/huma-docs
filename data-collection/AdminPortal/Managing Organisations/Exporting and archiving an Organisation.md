@@ -12,3 +12,5 @@ You will be asked to confirm the action.
 ![image](https://user-images.githubusercontent.com/110832367/183844394-eed44b8b-2325-4b35-93ca-7b67eaf5b5b7.png)
 
 Once your organisation has been archived, you will no longer be able to see it on your portal. However, if you need to retrieve the data at a later date, please contact a Super Admin who will be able to restore it.
+
+**Related articles**: [Creating a new Organisation](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/AdminPortal/Managing%20Organisations/Creating%20a%20new%20Organisation.md); [Exporting the configuration or localisation files](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/AdminPortal/Managing%20Organisations/Exporting%20and%20archiving%20an%20organisation.md)
