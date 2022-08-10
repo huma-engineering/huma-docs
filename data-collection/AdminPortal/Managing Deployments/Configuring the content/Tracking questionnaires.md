@@ -1,11 +1,14 @@
 # Tracking questionnaires (ePROs)
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
+
 Related articles: Tracking modules; Reviewing Questionnaires; 
 
 One of the ways Huma allows you to collect data from patients is with Patient Reported Outcome Measures (PROs/PROMs), or validated questionnaires. Feedback from patients is key to being able to improve the care provided by the care team and this feature lets them build and collect qualitative data from patients about how they feel and tailor their treatment plan accordingly. 
 
 ## How it works
 Questionnaires can be added to the deployment as a tracking module in the same way as the other tracking modules. Just click **Add track module** and select **Questionnaires** from the dropdown.
+
+![image](https://user-images.githubusercontent.com/110832367/183852892-3f48eab0-4589-482d-94f6-6215bdcbf6e5.png)
 
 ## Questionnaire list
 Questionnaires fall into two categories based on their ability to generate a score; Questionnaires or PROMs (Patient Recorded Outcome Measures), also known as ePROs or PROs.
@@ -50,38 +53,59 @@ If you want to assign scores to the answers given to the questions in your quest
 - By checking **Calculated score**, the module will add together the scores of all selected multiple choice options on submission of the questionnaire to give you a total. You can also enter a maximum score (Maxscore) to establish a maximum threshold if, for example, the available points are above what you want to establish as the maximum score. 
 - If you want to add RAG thresholds to the score so that the care team will be notified via flags when a result is concerning, just check the **RAG Thresholds** box and set the min and max values in the chart below. Add more thresholds as needed with the **Add threshold** link.
 
+![image](https://user-images.githubusercontent.com/110832367/183853317-82141569-bf18-42f5-8583-755cd2244370.png)
+
 ### Schedule
 If your questionnaire is requesting data that needs to be collected on a regular basis, you can set a schedule. 
 - Set the **ISO duration** to determine how long you want to track the data and the **Times per duration** to set how many times during that period you want to collect the data. For example, if the duration is one month and the times per duration is 3, the schedule is 3 times per month. 
 > If there is no specific schedule, set **Times per duration** to as needed and leave the **ISO Duration** field blank.
 - Check the checkbox to let the patient know what **times of day** they need to submit their data. If no option is selected, the patient will be informed to submit the questionnaire at the same time of day each time.
 
+![image](https://user-images.githubusercontent.com/110832367/183853424-5c95b812-b749-4158-9afd-94ac1c44048c.png)
+
 ### Other settings
 You have the option to add **Learn** articles to some modules. 
 - Check the **Learn articles** checkbox to open a list of Learn content then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the Learn article.
 
+![image](https://user-images.githubusercontent.com/110832367/183853509-8b3b2dee-3851-4bb8-80c2-ede908049582.png)
+
 Check the **Push notifications** checkbox to activate push notifications for the questionnaire. 
 - Customise the **title** and **body** to match the data you want to collect and remind the patient of any important information they might need at this time. Patients can set their own custom reminders for completing certain tasks, and this is the text they will see in the notification.
 
+![image](https://user-images.githubusercontent.com/110832367/183853580-d6a7c1e3-e0a1-4028-81d0-c7f2f9476873.png)
+
 Some questionnaires also allow **Footnote text**.
+
+![image](https://user-images.githubusercontent.com/110832367/183853667-535bcd7c-9d10-41e1-8261-c605917870b9.png)
 
 ### Adding questions
 Add new questions using the **+ New question** button at the top. You will be asked to choose a question type. 
-> If you have checked the box Score available, you will only be able to choose from Multiple Choice and Single Choice question types. 
+> If you have checked the box **Score available**, you will only be able to choose from Multiple Choice and Single Choice question types. 
+
+![image](https://user-images.githubusercontent.com/110832367/183851036-f887a4c4-6bcc-4e38-8ec4-c6af53160bf0.png)
 
 Next, enter your question. Make sure it fits the [question type]() you have selected. 
 In addition to the question, you can enter a description to give the patient some more details. 
 The **placeholder text** can be useful for questions that are text based, to give users an example of the type of information they need to input, or instructions on how to answer. It will appear in the answer field for the end user. (see Huma App view)
 
+![image](https://user-images.githubusercontent.com/110832367/183851450-312a85fc-1e36-4942-abe3-a41edac0a660.png)
+
 For multiple choice questions, you’ll need to enter all the answer options. Click **Add options** to add more options. 
 Single choice questions let you choose between **regular** or **text picker**. The text picker variation lets you include an **ID** with the answer options. This is useful with countries, for example. 
 
+![image](https://user-images.githubusercontent.com/110832367/183851650-4fc67124-c822-4ea8-9f9c-4f3c9f475990.png)
+
 If you are creating a scored questionnaire (make sure **Score available** is checked in the questionnaire settings), add your answer options and assign a score in the **Enter score** box.
+
+![image](https://user-images.githubusercontent.com/110832367/183851752-3d5f4d07-ca95-41b5-9267-2aa461c7dc77.png)
 
 You can make the question mandatory by enabling the **Required** toggle. 
 
+![image](https://user-images.githubusercontent.com/110832367/183851542-9ae3cf2b-84c3-4178-b59d-9affd2d91300.png)
 
 You can change the order of the answer options using the **arrows🕂** icon at the end of the rows. 
+
+![image](https://user-images.githubusercontent.com/110832367/183851206-36e7a805-219c-4da1-b097-6db64c705a1d.png)
 
 Once you have added your question and answer options, save your changes and the question will be added to your questions list. Note that you will always have to include an **Info** and **Submission** page before you can save your questionnaire.
 
@@ -90,6 +114,7 @@ Questions appear in the order they will appear in the questionnaire, with the We
 
 Click the three dots on the question tab then click **Delete** to delete the question.
 
+![image](https://user-images.githubusercontent.com/110832367/183851316-11cc102a-1de5-41b0-908b-ecdec7e1dcd5.png)
 
 ### Question types
 The question types you should select depends on the kind of information you are collecting and what you intend to do with it afterwards. Click the **Type** dropdown and select from the options available:
@@ -109,20 +134,33 @@ See how the different question types appear to patients in the Huma App.
 
 ### Adding Logic
 The **Logic** tab is where you can manage what happens when a user gives a particular response to one of your questions. For example, if they answer that they have a history of a certain condition, you may send them to a different part of the questionnaire compared to those who answer “no” to the same question.
+
+![image](https://user-images.githubusercontent.com/110832367/183852637-2fcaca31-1b46-459b-99da-60bf7e4614c4.png)
+
 > If no logic is added, the user will move through each of the questions in order.
 
 The **Logic** section lists all the questions on your questionnaire with a link to **Add rule**. 
+
+![image](https://user-images.githubusercontent.com/110832367/183851860-649cab87-ace9-4b0d-9359-94dc3f85c33b.png)
 
 Click the link to add your rule and a condition. The **Rule** defines what will happen as a result of a certain action. The user will be sent directly to another part of the questionnaire when the condition or conditions are met. 
 
 Click the **Jump to** dropdown to select the question you want to send the user to. Then, select **Any of** or **All of** from the **when** dropdown to define whether a number of conditions need to be met or just one. If you only have one condition, you can choose either option here. 
 
+![image](https://user-images.githubusercontent.com/110832367/183852219-1c71cdb2-e362-4fdf-bac1-f32044336f9e.png)
+
 In the **Conditions** section, select the question that will trigger your rule and the answer options that will enforce it. The answer options will appear in the final dropdown. The **Operator** dropdown in between lets you define when the condition is met: if the answer *is equal to, not equal to, greater than, equal or greater than, less than, equal or less than*. 
+
+![image](https://user-images.githubusercontent.com/110832367/183852290-1848762b-f561-43f7-af37-17053479bd5e.png)
 
 Add more conditions if you want more than one condition to be met in order to trigger the rule (**All of**) or if you want different conditions to be able to trigger the rule (**Any of**).
 
+![image](https://user-images.githubusercontent.com/110832367/183852553-9844b324-9233-4de6-9392-c71f10d0170d.png)
+
 You can also add multiple rules to the same question if you want different outcomes for different responses. Just click the **Add rule** link.
 You can add or delete any existing rules as needed. 
+
+![image](https://user-images.githubusercontent.com/110832367/183852748-588e0d6e-3d12-4d8f-96fa-6dbe8035f2df.png)
 
 ## Editing existing questionnaires
 Some questionnaires can be edited and modified, including changing the scoring and thresholds. It is also possible to edit questions, including changing the response options, deleting or adding new questions, and changing the order and the logic. Just click any of the questions to edit them. 
