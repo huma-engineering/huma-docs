@@ -8,50 +8,50 @@ You can add modules from the **Track** tab of your deployment configuration. Jus
 ![image](https://user-images.githubusercontent.com/110832367/183849927-a7f16008-7af3-450d-818d-7474efad6d95.png)
 
 ## Modules list
-This is the full list of modules available for tracking health data. Configuration is similar for each module although the RAG thresholds are not available for all of them. Modules that use RAG will be labelled **Threshold** and those that do not will be labelled **Static**. The only exception to this would be the [Symptoms](https://github.com/huma-engineering/huma-docs/edit/new-knowledgebase/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md#symptoms:~:text=labelled%20Static.-,Symptoms,-The%20Symptoms%20module) module, which is explained in more detail in the **Configuration** section.
+This is the full list of modules available for tracking health data. Configuration is similar for each module although the RAG thresholds are not available for all of them. Modules that use RAG will be labelled **Threshold** and those that do not will be labelled **Static**. The only exception to this would be the **Symptoms** module, which is explained in more detail in the **Configuration** section.
 
 Different modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps to log it automatically e.g. heart rate monitors, step counters. 
 
 Other modules require qualitative data, such as the Photos and Journal modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app. 
 
 The table below shows which modules have the threshold option and what data entry methods are available. It also includes a link to an image of the modules in the patient App.
-| Module Name | Thresholds | Data collection | Link |
-|--- | --- | --- | --- |
-| Anxiety level - GAD-7 | Yes | Manual, followed by calculated | () |
-|Audio Word Recall | No | Manual | () |
-| Awareness Training | No | Manual | () |
-| BMI | Yes | Manual, followed by calculated | () |
-| Blood glucose | Yes | Manual | () |
-| Blood pressure | Yes | Manual | () |
-| BodyMeasurement | No | Manual or collect from camera (from BVI) | () |
-| COVID-19 Daily Check-in | No | Manual | () |
-| COVID-19 Risk Score | No | Manual; Camera (Happitech), followed by calculated | () |
-| CVD Risk Score | No | Manual; Camera (Happitech & BVI), followed by calculated | () |
-| ECG | No | Sync (from Kardia) | () |
-| ECGHealthKit | Yes | Sync (from Kardia) | () |
-| Health Score | No | Manual, followed by calculated | () |
-| Heart rate/ HRV | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | () |
-| Height Z-Score | No | Manual, followed by calculated | () |
-| High-Frequency HR | No | Sync (from Apple Health, Google Fit) | () |
-| High-Frequency Step | No | Sync (from Apple Health, Google Fit) | () |
-| Journal | No | Manual | () |
+| Module Name | Thresholds | Data collection | 
+|--- | --- | --- | 
+| Anxiety level - GAD-7 | Yes | Manual, followed by calculated | 
+| [Audio Word Recall](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/general/audio-word-recall.md) | No | Manual | 
+| Awareness Training | No | Manual | 
+| [BMI](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
+| [Blood glucose](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/blood-glucose.md) | Yes | Manual | 
+| [Blood pressure](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/blood-pressure.md) | Yes | Manual |
+| [BodyMeasurement](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
+| [COVID-19 Daily Check-in](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/general/audio-word-recall.md) | No | Manual |
+| COVID-19 Risk Score | No | Manual; Camera (Happitech), followed by calculated | 
+| [CVD Risk Score](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/risk-scores/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
+| [ECG](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/ecg.md) | No | Sync (from Kardia) |
+| ECGHealthKit | Yes | Sync (from Kardia) | 
+| Health Score | No | Manual, followed by calculated | 
+| [Heart rate/ HRV](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
+| Height Z-Score | No | Manual, followed by calculated | 
+| High-Frequency HR | No | Sync (from Apple Health, Google Fit) | 
+| High-Frequency Step | No | Sync (from Apple Health, Google Fit) | 
+| [Journal](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
-| Medications | No | Manual | () |
-| Oxford Knee Score | No | Manual, followed by calculated | () |
-| Oxygen saturation | Yes | Manual | () |
-| PROMIS Global Health v1.2 | No | Manual, followed by calculated | () |
-| Peak flow | Yes | Manual, followed by calculated | () |
-| Photos | No | Manual | () |
-| Pulse Oximetry | Yes | Manual | () |
-| Quality of life | No | Manual | () |
-| Respiratory rate | Yes | Manual | () |
-| Resting Breathing Rate | No | Manual | () |
-| Resting heart rate | Yes | Camera (from Happitech) | () |
-| Steps | No | Sync (from Apple Health or Google Fit) | () |
-| Symptoms | | Manual | () | 
-| Temperature | Yes | Manual | () |
-| Waist to Height | Yes | Manual, followed by calculated | () |
-| Weight | Yes | Manual | () |
+| [Medications](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/medications.md) | No | Manual | 
+| Oxford Knee Score | No | Manual, followed by calculated | 
+| [Oxygen saturation](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/oxygen-saturation.md) | Yes | Manual | 
+| PROMIS Global Health v1.2 | No | Manual, followed by calculated | 
+| [Peak flow](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
+| [Photos](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/general/photos.md) | No | Manual |
+| Pulse Oximetry | Yes | Manual | 
+| Quality of life | No | Manual | 
+| [Respiratory rate](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/respiratory-rate.md) | Yes | Manual |
+| [Resting Breathing Rate](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/resting-breathing-rate.md) | No | Manual | 
+| Resting heart rate | Yes | Camera (from Happitech) | 
+| [Steps](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/general/steps.md) | No | Sync (from Apple Health or Google Fit) | 
+| [Symptoms](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/general/symptoms.md) | | Manual | 
+| [Temperature](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/temperature.md) | Yes | Manual |
+| Waist to Height | Yes | Manual, followed by calculated | 
+| [Weight](https://github.com/huma-engineering/huma-docs/blob/baf6584b5f17a3684f7c06b76afe575bf60791ea/data-collection/modules/physiological/weight.md) | Yes | Manual | 
 
 ## Configuring the module
 From the modules list, click the **Edit✎** icon at the end of the row to configure the module.
@@ -83,6 +83,7 @@ From the modules list, click the **Edit✎** icon at the end of the row to confi
 
 ### RAG thresholds 
 When the clinician is reviewing the patient data, they can be informed of potentially dangerous readings through a red-amber-green (RAG) flag system. On the **RAG thresholds** tab, you can configure the thresholds that will be used to determine the severity levels of the submitted patient data. Just select the severity level from the dropdown and enter the min and max values of the thresholds. For readings that are outside the specified thresholds, they will appear in the portal without a colour.
+
 You can add as many thresholds as you need with the **Add threshold** link at the bottom. For example, a very high or a very low temperature reading would be considered dangerous so you would need to add thresholds for both high and low readings.
 
 ![image](https://user-images.githubusercontent.com/110832367/183850328-a5987b33-26a5-4d64-9cd0-0785af17cf73.png)
