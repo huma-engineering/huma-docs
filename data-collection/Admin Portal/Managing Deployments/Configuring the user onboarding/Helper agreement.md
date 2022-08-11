@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+title: Helper agreement 
+---
 # Helper Agreement
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
