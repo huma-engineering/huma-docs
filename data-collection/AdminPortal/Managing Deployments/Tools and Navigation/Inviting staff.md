@@ -1,8 +1,6 @@
 # Inviting Staff
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Related articles: Creating a new Deployment; User roles and permissions; Inviting users and assigning roles; Inviting staff
-
 The Huma Admin Portal is the place where individual Organisations and Deployments are configured and managed. Once a new deployment has been created, an Admin user can invite staff to the Clinician Portal to manage that deployment and invite or remove other staff members. 
 ## How it works​
 In the Admin Portal, go to the **Deployments** tab and open the dropdown menu at the end of the deployment row that you want to invite staff to.
@@ -25,6 +23,6 @@ Click **Send invites** and the user will receive an email with the link that wil
 
 ![image](https://user-images.githubusercontent.com/110832367/183864438-449018d0-c04d-46c2-a008-11f240ebcae9.png)
 
-If you want to give them access to more than one deployment within your organisation, you will need to invite them at an Organisation level.
+If you want to give them access to more than one deployment within your organisation, you will need to [invite them at an Organisation level](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Organisations/Inviting%20staff.md).
 
-
+**Related articles**: [Creating a new Deployment](https://github.com/huma-engineering/huma-docs/blob/189b5276bb8cf7798aa3728edc00ffd0663eceec/data-collection/AdminPortal/Managing%20Deployments/General%20Settings/Creating%20a%20new%20Deployment.md); [Inviting staff (Organisations)](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Organisations/Inviting%20staff.md)
