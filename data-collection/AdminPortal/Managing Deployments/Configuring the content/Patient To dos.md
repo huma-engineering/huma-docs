@@ -4,7 +4,9 @@
 Part of the Huma methodology is providing patients with a clear pathway for what needs to be done and when. To do items are a way of telling a user to perform a certain action at a certain date and time. An item becomes active and completable on the date it is due. A push notification will be sent to the user at the date and time specified (provided the user has push notifications enabled). 
 ## How it works​
 To dos are linked to **Modules** or **Questionnaires** and remind users when they need to complete them. This can all be configured with a completion date and notification schedule as part of the deployment configuration.
-Go to the **To do** tab on the **App Components** list and click to **Add new action**.
+Go to the **To do** tab on the **App Components** list and click to **Add key action**.
+
+![image](https://user-images.githubusercontent.com/110832367/184093126-68751081-a907-4239-9692-e27375eccce2.png)
 
 Configure the to-do action by filling in the fields:
 - **Title** - Add a name e.g. Take heart rate. This will also be used as the title for the push notification and the card on the To-do page.
