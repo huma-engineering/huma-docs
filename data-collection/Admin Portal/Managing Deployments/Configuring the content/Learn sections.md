@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+title: Learn sections 
+---
 # Learn sections 
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
