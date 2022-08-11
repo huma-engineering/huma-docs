@@ -28,19 +28,17 @@ Next, you will need to add the content details. Select **Link** as the **Content
 ![image](https://user-images.githubusercontent.com/110832367/183857001-98a37fcd-2b15-4aeb-9a2f-02a533d904e1.png)
 
 
-> For uploads, please request assistance from a member of the Delivery Operations team.
+>
+> ⚠️ **INFO**: For uploads, please request assistance from a member of the Delivery Operations team.
+> 
 After saving, you will be able to see a list of articles. Click **Add article** to add more articles to that **Learn** section. 
 
 Click the Learn tab to return to the **Sections** list and add more sections.
 
 ## Huma Learn articles
-Huma has created the following article on Letting go of stress and anxiety which can be included in the configuration of any organisation. 
+Huma has created the following article on [Letting go of stress and anxiety](https://humatherapeutics.atlassian.net/wiki/spaces/PRODUCT/pages/3526951098/Biobase+Coaching+Content) which can be included in the configuration of any organisation. 
 
 ## Assigning Learn sections
-You will be able to find a list of your Learn sections when configuring tracking modules or questionnaires and will be able to select which ones you want to associate with the module.
+You will be able to find a list of your Learn sections when [configuring tracking modules]() or [questionnaires]() and will be able to select which ones you want to associate with the module.
 
-
-
-
-
-
+**Related articles**:
