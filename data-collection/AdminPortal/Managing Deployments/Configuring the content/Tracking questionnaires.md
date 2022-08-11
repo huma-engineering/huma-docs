@@ -9,7 +9,7 @@ Questionnaires can be added to the deployment as a tracking module in the same w
 ![image](https://user-images.githubusercontent.com/110832367/183852892-3f48eab0-4589-482d-94f6-6215bdcbf6e5.png)
 
 ## Questionnaire list
-Questionnaires fall into two categories based on their ability to generate a score; Questionnaires or PROMs (Patient Recorded Outcome Measures), also known as ePROs or PROs.
+Questionnaires fall into two categories; **Questionnaires** or **PROMs** (Patient Recorded Outcome Measures), also known as ePROs or PROs. PROMs have set questions and answer options which cannot be modified and a score assigned which can sometimes be displayed to patients. PROMs appear as a standalone module to patients and care teams whereas questionnaires are grouped under the umbrella Questionnaires module. Questionnaires can be scored but don't have to be, the scores are not shown to patients and they are fully customisable. A list of questionnaires are listed below along with their characteristics:   
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
@@ -53,15 +53,18 @@ Follow these steps to create your questionnaire and it will appear on the dropdo
 If you want to assign scores to the answers given to the questions in your questionnaire, you can configure the settings here.
 - Check the **Score available** box and when you add your questions and answer options, there will be a space for you to enter a score. This also means RAG thresholds can be assigned and the questionnaire will have its own module on the patient track and clinician portal with its own graph, schedule, reminders and contextual Learn article.
 - By checking **Calculated score**, the module will add together the scores of all selected multiple choice options on submission of the questionnaire to give you a total. You can also enter a maximum score (Maxscore) to establish a maximum threshold if, for example, the available points are above what you want to establish as the maximum score. 
+
+![image](https://user-images.githubusercontent.com/110832367/184089319-6e991913-0fbd-4cac-9164-04b8d4fa7be4.png)
+
 - If you want to add RAG thresholds to the score so that the care team will be notified via flags when a result is concerning, just check the **RAG Thresholds** box and set the min and max values in the chart below. Add more thresholds as needed with the **Add threshold** link.
 
-![image](https://user-images.githubusercontent.com/110832367/183853317-82141569-bf18-42f5-8583-755cd2244370.png)
+![image](https://user-images.githubusercontent.com/110832367/184089427-07441d4a-a65a-4d5c-916a-7fde69ffb236.png)
 
 ### Schedule
 If your questionnaire is requesting data that needs to be collected on a regular basis, you can set a schedule. 
 - Set the **ISO duration** to determine how long you want to track the data and the **Times per duration** to set how many times during that period you want to collect the data. For example, if the duration is one month and the times per duration is 3, the schedule is 3 times per month. 
 
-> **Tip** If there is no specific schedule, set **Times per duration** to as needed and leave the **ISO Duration** field blank.
+> 💡 **TIP**: If there is no specific schedule, set **Times per duration** to as needed and leave the **ISO Duration** field blank.
 
 - Check the checkbox to let the patient know what **times of day** they need to submit their data. If no option is selected, the patient will be informed to submit the questionnaire at the same time of day each time.
 
@@ -85,7 +88,7 @@ Some questionnaires also allow **Footnote text**.
 ### Adding questions
 Add new questions using the **+ New question** button at the top. You will be asked to choose a question type. 
 
-> ⚠️ If you have checked the box **Score available**, you will only be able to choose from **Multiple Choice** and **Single Choice** question types. 
+> ⚠️ **INFO**: If you have checked the box **Score available**, you will only be able to choose from **Multiple Choice** and **Single Choice** question types. 
 
 ![image](https://user-images.githubusercontent.com/110832367/183851036-f887a4c4-6bcc-4e38-8ec4-c6af53160bf0.png)
 
@@ -147,7 +150,9 @@ The **Logic** tab is where you can manage what happens when a user gives a parti
 
 ![image](https://user-images.githubusercontent.com/110832367/183852637-2fcaca31-1b46-459b-99da-60bf7e4614c4.png)
 
-> **INFO** If no logic is added, the user will move through each of the questions in order.
+>
+>  ⚠️ **INFO**: If no logic is added, the user will move through each of the questions in order.
+>  
 
 The **Logic** section lists all the questions on your questionnaire with a link to **Add rule**. 
 
@@ -175,7 +180,9 @@ You can add or delete any existing rules as needed.
 ## Editing existing questionnaires
 Some questionnaires can be edited and modified, including changing the scoring and thresholds. It is also possible to edit questions, including changing the response options, deleting or adding new questions, and changing the order and the logic. Just click any of the questions to edit them. 
 
-> ⚠️ For licenced questionnaires, you cannot change anything except the custom thresholds.
+>
+>  ⚠️ **INFO**: For licenced questionnaires, you cannot change anything except the custom thresholds.
+>  
 
 Remember to save any changes you make.
 
