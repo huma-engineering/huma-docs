@@ -1,0 +1,121 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that provides easy to use integration with Google Fit SDK. Used in Huma-Modules library for Heart Rate and Steps integrations. 
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+  
+  To start working with google fit you need to create and 0Auth access registry for your project on [Google API console](https://developers.google.com/fit/android/get-api-key).
+
+  After obtaining key you can proceed with SDK.
+
+  1. Check or get permission for specific type of activity.
+
+  ```kotlin
+  //returns true if access is granted for reading steps record
+  HumaGoogleFitManager.getInstance().isAccessGranted(RecordType.Steps.Read) 
+
+  //opens screen where access can be given
+  HumaGoogleFitManager.getInstance().requestAccess(context, RecordType.Steps.Read) 
+
+  //returns Intent for that screen
+  HumaGoogleFitManager.getInstance().requestAccessIntent(context, RecordType.Steps.Read) 
+  ```
+
+  Also you can observe for access if you have two or more points for starting some work with SDK
+
+  ```kotlin
+  HumaGoogleFitManager.getInstance().observeAccess(listOf(RecordType.Steps.Read)){
+    //this callback will be called if user gave access for specified record types
+  }
+  ```
+
+  2. After obtaining access to fitness data you can make a request:
+  
+  ```kotlin
+  //suspend call for fitness data
+  suspend fun HumaGoogleFitManager.fetchData(
+            recordType = RecordType.Steps.Read
+            startTime = Instant.now().minusDays(10)
+            endTime = Instant.now(),
+            bucketBy = BucketBy.Time(...), //optional
+            enableServerQueries = true,
+            tag = "Steps_Request", //optional
+            timeout = Pair(10L, TimeUnit.SECONDS), //optional
+            retryOnFailure = true //optional
+        ) : List<Record>
+
+  //callback version is also available
+  fun HumaGoogleFitManager.fetchData(
+            recordType = RecordType.Steps.Read
+            startTime = Instant.now().minusDays(10)
+            endTime = Instant.now(),
+            bucketBy = BucketBy.Time(...), //optional
+            enableServerQueries = true,
+            tag = "Steps_Request", //optional
+            timeout = Pair(10L, TimeUnit.SECONDS), //optional
+            retryOnFailure = true //optional
+        ) { records: List<Records> ->
+          ...
+        }
+  ```
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+  1. Add the dependency in your local build.gradle file:
+
+  ```kotlin
+  implementation("com.huma.sdk:google-fit:<latest-version>")
+  ```
+  2. Initialize `HumaGoogleFitManager` in your Application class:
+
+  ```kotlin
+  HumaGoogleFitManager.init()
+  ```
+
+</TabItem>
+<TabItem value="readme" label="Readme">
+  Huma Google Fit SDK is desinged to provide easy to use layer on top of existing Google Fit SDK
+
+  **RecordType** - specifiy data types and access level that need to be granted by the user.
+
+  **Record** - data point that is obtained from Google Fit SDK
+
+  **BucketBy** - type of bucketing that will be applied to user request
+
+  Huma Google Fit SDK support this listed record types:
+
+  - HeartRate
+    - Read
+    - Write
+  - Steps
+    - Read
+    - Write
+  - Sleep
+    - Read
+    - Write
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+  **[0.2.3]**
+
+  - [#149](https://github.com/huma-engineering/huma-android-sdk/pull/149) - Added HF Steps module
+  - [#148](https://github.com/huma-engineering/huma-android-sdk/pull/148) - Step module with Google fit integration
+  - [#143](https://github.com/huma-engineering/huma-android-sdk/pull/143) - HF HeartRate Google fit implementation
+  - [#138](https://github.com/huma-engineering/huma-android-sdk/pull/138) - Added google fit core sdk
+  
+</TabItem>
+</Tabs>
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
