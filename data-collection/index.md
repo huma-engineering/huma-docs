@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+title: Welcome 
+---
 # Welcome
 Welcome to the Huma knowledge base. The following documentation is to explain the suite of products used in the delivery of Remote Patient Monitoring.
 
