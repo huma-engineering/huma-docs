@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+title: ID verification 
+---
 ## Identity Verification
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
