@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+title: Data Consent 
+---
 # Data consent
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
