@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+title: eConsent 
+---
 # eConsent
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
