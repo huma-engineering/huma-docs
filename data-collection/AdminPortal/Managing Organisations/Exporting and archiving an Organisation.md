@@ -1,6 +1,6 @@
 # Exporting and archiving an Organisation
 **User**: Admins
-Related articles: Creating a new Organisation; Exporting the configuration or localisation files; 
+
 Once a client has reached the end of their Huma journey, you may want to archive the Organisation. If you think you may need to reestablish the organisation at some point in the future, you can export it as a JSON file so that none of your configuration is lost. It’s a good idea to do this with any of the associated deployments as well.
 ## How it works
 In the **Admin Portal**, find your list of organisations on the **Organisations** tab. Open the dropdown menu at the end of the row and select **Export JSON**. 
