@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+title: Icon, language and labels 
+---
 # Icon, language and labels
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
