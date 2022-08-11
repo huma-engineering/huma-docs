@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+title: Exporting config or localisation files 
+---
 # Exporting the configuration or localisation files
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
