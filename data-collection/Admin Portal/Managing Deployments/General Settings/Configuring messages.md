@@ -1,4 +1,8 @@
-# Messaging
+---
+sidebar_position: 5
+title: Configuring messages 
+---
+# Configuring messages
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 Huma takes clinician-patient communication seriously. Messages can be configured in the deployment so that clinicians can send out pre-built messages designed to address specific issues quickly. In addition to this, custom messaging allows clinicians to write their own personalised messages to patients.
