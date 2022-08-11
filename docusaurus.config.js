@@ -20,7 +20,11 @@ module.exports = {
     }
   },
   themeConfig: {
-    autoCollapseSidebarCategories: true,
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true
+      }
+    },
     colorMode: {
       defaultMode: 'light',
       disableSwitch: true,
@@ -122,7 +126,7 @@ module.exports = {
       {
         specs: [{
           id: 'api-data-collection',
-          routePath: 'api-data-collection',
+          route: 'api-data-collection',
           spec: 'api-data-collection/documentations-huma.json',
         }]
       }
