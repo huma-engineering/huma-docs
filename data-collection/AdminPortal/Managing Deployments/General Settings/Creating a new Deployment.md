@@ -1,6 +1,5 @@
 # Creating a new Deployment
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor.
-Related articles: Creating a new Organisation; Inviting staff; 
 
 Once you have set up your Organisation, you can create as many deployments as you need associated to that organisation within the Admin Portal. Each deployment will create a version of the Clinician Portal and Huma App with its own distinct characteristics. 
 ## How it works​
@@ -22,5 +21,6 @@ If you have more than one Organisation on your list, you can switch between them
  
 You will be able to configure the look and feel and functionality of the deployment using the **App Components** and **Overall Settings**.
 
-When you have everything set up as needed, [invite Admin users]() to manage the deployment.
+When you have everything set up as needed, [invite Admin users](https://github.com/huma-engineering/huma-docs/blob/9d5398e17efa861fec806b2c706c52754f1b599b/data-collection/AdminPortal/Managing%20Deployments/Tools%20and%20Navigation/Inviting%20staff.md) to manage the deployment.
 
+**Related articles**: [Creating a new Organisation](https://github.com/huma-engineering/huma-docs/blob/9d5398e17efa861fec806b2c706c52754f1b599b/data-collection/AdminPortal/Managing%20Organisations/Creating%20a%20new%20Organisation.md); [Inviting staff (Organisation level)](https://github.com/huma-engineering/huma-docs/blob/9d5398e17efa861fec806b2c706c52754f1b599b/data-collection/AdminPortal/Managing%20Organisations/Inviting%20staff.md); [Inviting staff (Deployment level)](https://github.com/huma-engineering/huma-docs/blob/9d5398e17efa861fec806b2c706c52754f1b599b/data-collection/AdminPortal/Managing%20Deployments/Tools%20and%20Navigation/Inviting%20staff.md)
