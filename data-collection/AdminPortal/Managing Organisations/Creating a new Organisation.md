@@ -1,6 +1,5 @@
 # Creating a new Organisation
 **User**: Account Manager, Super Admin
-Related articles: Creating a new Deployment; 
 
 Every client that joins Huma, whether medical organisation, pharmaceutical or other, can have a custom platform configured specifically for their needs from the Admin Portal. The Organisation set up includes adding a name, legal documentation and defining their key activity; either clinical trials or remote patient monitoring. 
 ## How it works​
