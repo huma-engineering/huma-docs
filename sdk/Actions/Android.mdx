@@ -1,0 +1,301 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Android
+A library that provides a layer of support for huma key actions in the application. It defines the structure of a key action, contains set of default key actions and allows to register new. Provides storage for key actions. Contain default behaviors. 
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+### **How to use Huma Track**
+
+**Huma Track** module can be used without any additional work. It contains the default logic of fetching key actions from backend, filtering them by categories and sorting by date time and title. 
+Check Readme to get the list of supported key actions.
+
+
+Huma Track module can be extended and support to adding new type of key actions in a simple way.
+
+### **Create new key action**
+
+To add new type of key action you need to override `KeyAction` interface.
+*Huma Track* module has the base abstract implementation of `KeyAction` - `BaseKeyAction`. It provides a basic configuration for key action. It's _recomended_ to use it as a base class for all key actions.
+
+Then register your key action in the `HumaTrackManaget`. Huma Track module allows to do that in two ways.
+
+**1. Register new key action manually**
+
+For that case you can create an instance of your key action from outside and register it via this function:
+
+```kt
+HumaTrackManager.registerKeyAction(uniqueKeyActionId: UniqueKeyActionId, keyAction: KeyAction)
+```
+
+If you want to register several key actions in one batch you can use:
+
+```kt
+HumaTrackManager.registerKeyActions(vararg keyActions: Pair<UniqueKeyActionId, KeyAction>)
+```
+
+These functions adds key action to local list of key actions and then it can be rendered as a list of cards.
+
+
+**2. Register new key actions using processor**
+
+*Key action processor* is used to create an instance of key actions from configuration data. Huma Track module contains logic to fetching configuration of key actions from backend. You just need to provide a processor for you key action type. Override `ImportKeyActionProcessor` interface to create your own processor.
+
+```kt
+class YourProcessor(
+    private val context: Context
+) : ImportKeyActionProcessor {
+
+    override fun processConfig(keyActionConfigs: List<KeyActionConfig>): List<Pair<KeyActionId, KeyAction>> {
+        return keyActionConfigs.filter { it.learnArticleId != null }
+            .map { config ->
+                val keyActionId = config.id
+                keyActionId to LearnKeyAction(
+                    context = context,
+                    keyActionId = config.id,
+                    title = config.title,
+                    startDateTime = config.startDateTime,
+                    endDateTime = config.endDateTime,
+                    completedDateTime = config.completeDateTime,
+                    model = config.model,
+                    category = config.keyActionCategory,
+                    learnArticleId = config.learnArticleId
+                )
+            }
+    }
+}
+```
+
+Then register your processor in the `HumaTrackManager`:
+
+```kt
+HumaTrackManager.registerImportProcessor(processor: YourProcessor)
+```
+
+When the processor is registered you can call `fetchKeyActions(datetimeRange: Pair<Instant, Instant>?)` to fetch the configuration and fill your key action with a data.
+
+```kt
+HumaTrackManager.fetchKeyActions(datetimeRange: Pair<Instant, Instant>?) //call to fetch list of key actions
+```
+
+`datetimeRange` - is optional and allow to fetch key actions in specific date time range.  
+
+
+Call `reloadKeyActions()` function to reload a list of key action. It doesn't contain input parameters and use `datetimeRange` property which was set in 
+`fetchKeyActions()` function.
+
+```kt
+HumaTrackManager.reloadKeyActions() // call to refresh a list of key actions 
+```
+
+
+### **Get the instance of a key action**
+
+After you created the key action and register it you can get it instance by `uniqueKeyActionId` or get a list of specific category of registered key actions.
+
+***By Id***
+```kt
+HumaTrackManager.provideKeyAction(uniqueKeyActionId: UniqueKeyActionId)
+```
+
+***List of all registered key actions***
+```kt
+HumaTrackManager.keyActions
+```
+
+***List of key actions ready for submit***
+```kt
+HumaTrackManager.enabledKeyActions
+```
+
+***List of coming up key actions***
+```kt
+HumaTrackManager.comingUpKeyActions
+```
+
+***List of submitted and deprecated key actions***
+```kt
+HumaTrackManager.previousKeyActions
+```
+
+***Clear key actions cache***
+
+To clear key actions cache you can use `clearCache()` function. After that you need to register the required key actions from scratch.
+```kt
+HumaTrackManager.clearCache()
+```
+
+### **Key Action Card**
+
+`Key Action` interface defines the `keyActionCard` field, but it does not contains any specific implementation.
+`BaseKeyAction` class defines creating an instance of `KeyActionCardView`. Every key action that is extended from `BaseKeyAction` can render a card. 
+
+```kt
+override val keyActionCard: (Context) -> KeyActionView = { context ->
+    KeyActionCardView(context, cardConfig).apply {
+        cardClicked = { action(context) }
+    }
+}
+```
+
+To make `KeyActionView` work, `BaseKeyAction` requires to provide `KeyActionCardConfig` in child class.
+
+```kt
+override val cardConfig: KeyActionCardConfig
+    get() = KeyActionCardConfig(
+        uniqueKeyActionId,
+        keyActionId = keyActionId,
+        title = title,
+        actionTypeLabel = context.getString(R.string.key_action_learn_category),
+        actionTypeIcon = R.drawable.ic_learn_small,
+        hasArrowRight = true,
+        actionDateTime = startDateTime,
+        cardViewType = category
+    )
+```
+
+### **Key Action Events**
+
+Each type of key action defines specific events which should be executed by interactions with key action.   
+`KeyAction` interface contains an `action(context: Context)` function for definition behavior by interaction with key action. It does not have default implementation. Each child of `KeyAction` interface should override that function and describe specific behavior to do by interact with key action.
+
+After successful execution of key action event your key actions should be marked as completed (marked as read). It is mandatory requirement. 
+
+To mark key actions as completed you can use this function `markKeyActionRead(..)`:
+
+```kt
+humaTrackModule.markKeyActionRead(
+    uniqueKeyActionId,
+    keyActionId,
+    model,
+    startDateTime,
+    endDateTime
+)
+```
+
+Just call this function from your implementation of `action(..)` function:
+
+```kt
+override fun action(context: Context) {
+
+                        //here desribe specific event to do by your key action
+
+                        //mark key action as completed after successful execution event
+                        humaTrackModule.markKeyActionRead(
+                            uniqueKeyActionId,
+                            keyActionId,
+                            model,
+                            startDateTime,
+                            endDateTime
+                        )
+                    }
+                }
+            }
+        }
+    }
+```
+
+### **Rendering Key Actions Cards List**
+
+***Huma Track*** module contains two screens to display key actions data.
+
+*Main* screen creates list of cards for **To do** and **Coming up** categories of key action. It contains a headers to group key action cards by apropriate categories.
+
+*Previous* screen contains a list of key actions that belong to **Submitted** and **Deprecated** categories. 
+You can navigate from *Main* to *Previous* screen by tap button *Show previous*
+
+To show and refresh *Main* screen with list of key actions cards ***Huma Track*** provides `KeyActionListView`.
+
+```html
+ <com.huma.sdk.track.display.view.KeyActionListView
+        android:id="@+id/keyActionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:emptyListImageRes="@drawable/ic_clap"
+        app:emptyListImageWidth="175dp"
+        app:emptyListImageHeight="125dp"
+        app:emptyListTitle="You’re all done"
+        app:emptyListSubtitle="There’s nothing to do right now. If any new to-do items come up, we’ll show them here."/>
+```
+
+| Attribute | Value |
+|---|---|
+| `app:emptyListImageRes` | Image resource which should be shown if key actions cards list is empty |
+| `app:emptyListImageWidth` | Value of image width |
+| `app:emptyListImageHeight` | Value of image height |
+| `app:emptyListTitle` | Title to show when list of key actions cards is empty |
+| `app:emptyListSubtitle` | Subtitle to show when list of key actions cards is empty |
+
+
+To initialize list of key actions cards you should call function `setLoadType(loadingType: LoadType)` and set type of loading key actions config:
+
+`LoadType.Default` - for loading key actions without time range.
+
+`LoadType.TimeRange` - for loading timeline key actions.
+
+```kt
+override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val start = Instant.now().minus(14, ChronoUnit.DAYS)
+        val end = Instant.now().plus(14, ChronoUnit.DAYS)
+        binding.keyActionsContainer.setLoadType(LoadType.TimeRange(start, end))
+    }
+```
+
+Also you can customize screen whey list of key actions cards is empty. For that you can call these functions from code:
+
+`setEmptyListImageRes(...)` - to set image and it size
+
+`setEmptyListMessage(...)` - to set message
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:   
+
+```kotlin
+implementation("com.huma.sdk:track:latest-version")
+```
+2. Initialize `HumaTrackManager` in your Application class:
+
+```kotlin
+HumaTrackManager.init()  
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme">
+
+**Key action** is a specific event which should be executed by user.
+
+**Supported type of key actions:**
+* Appointment
+* Learn
+* Module:
+    * Track
+    * Questionnaire
+
+**Category of key actions:**
+* To do - ready to complete
+* Coming up - will be ready to complete after some period of time
+* Submitted - successfully completed
+* Deprecated - not completed on time
+
+### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+**[0.2.5]**
+
+- [#163](https://github.com/huma-engineering/huma-android-sdk/pull/163) Implemented Huma Track module. Added unit tests and documentation
+
+</TabItem>
+</Tabs>
