@@ -47,4 +47,4 @@ This section lets you define which of the above fields you want to be mandatory.
 
 You can reorder the options to define how they appear in the portal as well as the onboarding profile questionnaire.
 
-**Related articles**: [Onboarding set up](https://github.com/huma-engineering/huma-docs/blob/bc4b009dfc136ebe1d66f12eb214e5ba74609f7c/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/Onboarding%20setup.md)
+**Related articles**: [Onboarding set up](https://github.com/huma-engineering/huma-docs/blob/bc4b009dfc136ebe1d66f12eb214e5ba74609f7c/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/Onboarding%20setup.md); [Custom fields](https://github.com/huma-engineering/huma-docs/blob/430ecccefa8fbbeadb2877bfdafde238d487ccd3/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20profile/Custom%20fields.md)
