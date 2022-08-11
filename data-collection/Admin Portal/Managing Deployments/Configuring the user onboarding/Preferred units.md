@@ -1,4 +1,8 @@
-# Preferred Units
+---
+sidebar_position: 7
+title: Preferred units 
+---
+# Preferred units
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 When entering data points for different modules, users in different territories are accustomed to using different measurement units. For example ºF or ºC for temperature, feet and inches or cm for height, etc. As part of the onboarding process, both patients and their proxies can choose their preferred measurement units.
