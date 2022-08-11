@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+title: App features 
+---
 # App Features
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
