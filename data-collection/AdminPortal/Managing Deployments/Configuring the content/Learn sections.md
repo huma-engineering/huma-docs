@@ -1,8 +1,6 @@
 # Learn sections 
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Related articles: Configuring content: Tracking modules; Configuring content: Tracking Questionnaires.
-
 The Learn section provides patients with a repository of useful articles and other resources to educate and inform them so that they can better understand their symptoms or how to prepare for certain procedures, etc. You can build out your repository for each deployment with your own custom content or link out to useful content from the web.  
 Individual articles can also be added to the patient’s to-do list or as related content for tracking modules and questionnaires.
 
@@ -39,6 +37,6 @@ Click the Learn tab to return to the **Sections** list and add more sections.
 Huma has created the following article on [Letting go of stress and anxiety](https://humatherapeutics.atlassian.net/wiki/spaces/PRODUCT/pages/3526951098/Biobase+Coaching+Content) which can be included in the configuration of any organisation. 
 
 ## Assigning Learn sections
-You will be able to find a list of your Learn sections when [configuring tracking modules]() or [questionnaires]() and will be able to select which ones you want to associate with the module.
+You will be able to find a list of your Learn sections when [configuring tracking modules](https://github.com/huma-engineering/huma-docs/blob/22c357ad2205622dbc5cc3bb6b812d3275b6e0ac/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md) or [questionnaires](https://github.com/huma-engineering/huma-docs/blob/22c357ad2205622dbc5cc3bb6b812d3275b6e0ac/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20questionnaires.md) and will be able to select which ones you want to associate with the module.
 
-**Related articles**:
+**Related articles**: [Tracking modules](https://github.com/huma-engineering/huma-docs/blob/22c357ad2205622dbc5cc3bb6b812d3275b6e0ac/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md); [Tracking questionnaires](https://github.com/huma-engineering/huma-docs/blob/22c357ad2205622dbc5cc3bb6b812d3275b6e0ac/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20content/Tracking%20questionnaires.md)
