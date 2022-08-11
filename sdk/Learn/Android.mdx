@@ -1,0 +1,78 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that implements Learn functionality (articles, videos, links) 
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+Opening learn articles activity:
+```kotlin
+    startActivity(LearnArticlesActivity.getIntent(this))
+```
+
+For custom views (such as `LearnSectionView` in [Huma Module Kit](Module%20Kit/Android.mdx)), inject and use LearnArticleViewModel:
+
+```kotlin
+    class LearnArticleSectionView(/*..*/) : HumaSdkKoinComponent {
+        private val viewModel: LearnArticleViewModel by inject()
+        /*...*/
+
+        fun onAttachedToWindow() {
+            viewModel.getLearnArticles(learnArticleIds)
+            viewModel.learnArticles.observe(context) { /*...*/ }
+        }
+    }
+```
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:learn:<latest-version>")
+```
+2. Initialize `HumaLearnManager` in your Application class:
+```kotlin
+HumaLearnManager.init(
+    learnRepository: LearnRepository? = null,
+    articleInteractionDelegate: LearnArticleInteractionDelegate? = null
+)
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+### Definitions
+
+Learn screen consists of sections to divide articles by categories
+
+**Section item** - section/category that contains a list of articles
+
+**Learn article** - guide content aimed to help the user. It can be an article, a video or a link.
+
+### Customization
+
+* By default learn content is fetched from `Deployment`. It is possible to override `LearnRepository` for any custom logic and pass it to `HumaLearnManager.init()`
+* You can implement `LearnArticleInteractionDelegate` and pass it to `HumaLearnManager.init()`
+
+### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+**[0.2.2]**
+
+  - [#147](https://github.com/huma-engineering/huma-android-sdk/pull/147) Learn module tests & docs
+  - [#146](https://github.com/huma-engineering/huma-android-sdk/pull/146) Learn module
+  
+</TabItem>
+</Tabs>
