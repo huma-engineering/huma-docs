@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+title: Questionnaires and ePROs 
+---
 # Tracking questionnaires (ePROs)
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
