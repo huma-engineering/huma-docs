@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: Creting a new Deployment 
+---
+
 # Creating a new Deployment
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor.
 
