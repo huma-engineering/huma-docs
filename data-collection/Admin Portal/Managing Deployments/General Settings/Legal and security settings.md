@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+title: Legal and security settings 
+---
 # Legal and security settings
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor.
 
