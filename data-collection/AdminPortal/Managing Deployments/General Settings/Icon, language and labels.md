@@ -13,10 +13,11 @@ In the **Deployment config** tab, you can configure each individual deployment�
 ![image](https://user-images.githubusercontent.com/110832367/183860618-f0a4cf35-6ce7-4fb1-a8d3-b48712d1db1a.png)
 
 > ⚠️ **INFO**: 
-> Use a high resolution client logo with transparent background 
+> Use a high resolution client logo with transparent background.
 > Size: min 800x800px; 
 > Format: png
->  
+
+
 - **Name** - Give your deployment a name to differentiate it from other deployments in the same organisation
 ## Languages
 The Languages section will list the different language configurations available in your deployment. 
