@@ -1,4 +1,8 @@
-# Custom Fields
+---
+sidebar_position: 3
+title: Custom fields 
+---
+# Custom fields
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 When participating in Huma clinical trials or remote monitoring, every patient has to enter some profile details that are shared with their care team. Whatever the aims of your trial, you have the option to fully customise what profile details you request from your patients using the **Custom Fields** feature. 
