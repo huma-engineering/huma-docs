@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+title: Intro 
+---
 # Introduction to the Admin Portal
 The Admin Portal is the place where organisations and deployments are configured. 
 
