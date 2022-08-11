@@ -1,4 +1,8 @@
-# Inviting staff
+---
+sidebar_position: 3
+title: Inviting staff
+---
+# Inviting staff to an organisation
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
  
 The Huma Admin Portal is the place where individual Organisations and Deployments are configured and managed. Once a new organisation has been created, other users can be assigned to manage or edit the organisation and invite other users.
