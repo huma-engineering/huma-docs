@@ -1,8 +1,6 @@
 # Patient To dos
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Related articles: Tracking Questionnaires; Tracking modules; 
-
 Part of the Huma methodology is providing patients with a clear pathway for what needs to be done and when. To do items are a way of telling a user to perform a certain action at a certain date and time. An item becomes active and completable on the date it is due. A push notification will be sent to the user at the date and time specified (provided the user has push notifications enabled). 
 ## How it works​
 To dos are linked to **Modules** or **Questionnaires** and remind users when they need to complete them. This can all be configured with a completion date and notification schedule as part of the deployment configuration.
