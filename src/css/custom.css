@@ -279,6 +279,14 @@ html[data-theme="dark"] {
   transform: translateY(-50%) rotate(180deg);
 }
 
+.header-github-link {
+  padding-left: 0;
+}
+
+.breadcrumbs__link {
+  background: var(--ifm-color-gray-100);
+}
+
 .navbar__logo {
   height: var(--ifm-navbar-logo-height);
   margin-right: 0;
@@ -455,10 +463,6 @@ html[data-theme="dark"] {
 
 .pb-2 {
   padding-bottom: 2rem !important;
-}
-
-.header-github-link {
-  padding-left: 0;
 }
 
 .header-github-link:hover {

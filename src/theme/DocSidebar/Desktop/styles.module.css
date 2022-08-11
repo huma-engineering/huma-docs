@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-:root {
+ :root {
   --collapse-button-bg-color-dark: #2e333a;
 }
 
@@ -35,7 +35,6 @@
     display: block;
   }
 }
-
 
 @media (min-width: 997px) {
   .sidebar {
@@ -75,60 +74,8 @@
     margin-right: 0.5rem;
     height: 2rem;
   }
-
-  .menu {
-    flex-grow: 1;
-  }
-
-  .menuWithAnnouncementBar {
-    margin-bottom: var(--docusaurus-announcement-bar-height);
-  }
-
-  .collapseSidebarButton {
-    display: block !important;
-    background-color: var(--ifm-button-background-color);
-    height: 40px;
-    position: sticky;
-    bottom: 0;
-    border-radius: 0;
-    border: 1px solid var(--ifm-toc-border-color);
-  }
-
-  .collapseSidebarButtonIcon {
-    transform: rotate(180deg);
-    margin-top: 4px;
-  }
-
-  [dir='rtl'] .collapseSidebarButtonIcon {
-    transform: rotate(0);
-  }
-
-  [data-theme='dark'] .collapseSidebarButton {
-    background-color: var(--collapse-button-bg-color-dark);
-  }
-
-  [data-theme='dark'] .collapseSidebarButton:hover,
-  [data-theme='dark'] .collapseSidebarButton:focus {
-    background-color: var(--ifm-color-emphasis-200);
-  }
 }
 
-.sidebarLogo,
-.collapseSidebarButton {
+.sidebarLogo {
   display: none;
-}
-
-.sidebarMenuIcon {
-  vertical-align: middle;
-}
-
-.sidebarMenuCloseIcon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 24px;
-  font-size: 1.5rem;
-  font-weight: var(--ifm-font-weight-bold);
-  line-height: 0.9;
-  width: 24px;
 }

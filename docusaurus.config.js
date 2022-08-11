@@ -172,6 +172,7 @@ module.exports = {
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
+    ['docusaurus-node-polyfills', { excludeAliases: ['console']}]
   ],
   i18n: {
     defaultLocale: 'en',
