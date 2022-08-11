@@ -1,14 +1,14 @@
 # User Profile Data
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Related articles: Onboarding set up; Custom fields;
-
 When participating in Huma clinical trials or remote monitoring, every patient has to enter some profile details that are shared with their care team. From Name, DOB, and medical ID, to gender expression, the profile details requested from the patient can be completely customised for each deployment. 
 ## How it works
 
 When configuring a new deployment, select **Profile** from the side menu, under **Overall Settings** to configure the user profile data.
 
 ![image](https://user-images.githubusercontent.com/110832367/183859096-0ef27bca-f9ad-465f-94c1-3c902ecabc2c.png)
+
+The patient will be asked to complete their profile details immediately following the onboarding modules and before landing on their homepage. Check the boxes to select as many fields as you require. 
 
 ### Common fields 
 The first section has four options to choose from: 
@@ -17,10 +17,6 @@ The first section has four options to choose from:
 - Height 
 - Biological sex 
 
-![image](https://user-images.githubusercontent.com/110832367/183859670-a64ab787-c66b-4fbf-9fcc-47f74f273404.png)
-
-The patient will be asked to complete these immediately following the onboarding modules and before landing on their homepage. Check the boxes to select as many fields as you require. You can choose to make any or all of these mandatory in the Mandatory Onboarding Fields section.
-
 ### Extra IDs
 In this section you can ask users for some additional identification details that might be useful for their care team:
 - **NHS ID** - National healthcare ID for UK residents
@@ -28,8 +24,6 @@ In this section you can ask users for some additional identification details tha
 - **Insurance number** - For medical insurance
 - **WeChat** - Patients can also connect their healthcare data from their WeChat account. Providing their ID helps care teams to connect with that data.
 - **AliveCor ID** - This is an ECG device that users can connect to their account via Kardia to provide readings. The user ID is useful for their care team to be able to track their readings.
-
-![image](https://user-images.githubusercontent.com/110832367/183859559-7262f2b2-fd75-42c3-a538-d9a48180b82e.png)
 
 ### Additional contact details
 It can be useful to get some additional contact details for patients and their primary caregivers. You can request these details in this section.
@@ -52,3 +46,5 @@ This section lets you define which of the above fields you want to be mandatory.
 ![image](https://user-images.githubusercontent.com/110832367/183859314-7f446c4d-6e44-4887-a014-5989d3452efa.png)
 
 You can reorder the options to define how they appear in the portal as well as the onboarding profile questionnaire.
+
+**Related articles**: [Onboarding set up](https://github.com/huma-engineering/huma-docs/blob/bc4b009dfc136ebe1d66f12eb214e5ba74609f7c/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/Onboarding%20setup.md)
