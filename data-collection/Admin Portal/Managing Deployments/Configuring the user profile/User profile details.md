@@ -1,4 +1,8 @@
-# User Profile Data
+---
+sidebar_position: 2
+title: User profile details 
+---
+# User profile details
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 When participating in Huma clinical trials or remote monitoring, every patient has to enter some profile details that are shared with their care team. From Name, DOB, and medical ID, to gender expression, the profile details requested from the patient can be completely customised for each deployment. 
