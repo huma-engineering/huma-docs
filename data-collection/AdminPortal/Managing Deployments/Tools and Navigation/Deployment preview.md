@@ -1,8 +1,6 @@
 # Deployment Preview
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Related articles: Creating a new Deployment; Inviting patients; Inviting Staff (Organisation level); Inviting Staff (Deployment level) ;
-
 The Huma Admin Portal is the place where individual Organisations and Deployments are configured and managed. Once a new deployment has been created, you can preview it before you start inviting patients and clinicians to check you have your configuration set up right.
 This can be done both for the Huma App and the Clinician Portal. 
 ## How it works
@@ -18,4 +16,6 @@ Click the icon and a QR code will appear for you to scan with your phone. Make s
 Click the link that appears on your phone when you scan the QR, this will take you to the sign up screen. The process is the same as when you sign up using a link.
 Review the onboarding process and the rest of the experience and make any changes to the configuration as needed.
 ### Previewing the Clinician Portal
-To preview how the Clinician Portal looks for your deployment, just invite yourself as an [Admin (Deployment level)]() or [Access Controller (Organization)](). 
+To preview how the Clinician Portal looks for your deployment, just invite yourself as an [Admin (Deployment level)](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Deployments/Tools%20and%20Navigation/Inviting%20staff.md) or [Access Controller (Organization)](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Organisations/Inviting%20staff.md). 
+
+**Related articles**: [Creating a new Deployment](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Deployments/General%20Settings/Creating%20a%20new%20Deployment.md); [Inviting Staff](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Organisations/Inviting%20staff.md) (Organisation level); [Inviting Staff](https://github.com/huma-engineering/huma-docs/blob/0479ced148122672f0f0ef92aded896be225ce94/data-collection/AdminPortal/Managing%20Deployments/Tools%20and%20Navigation/Inviting%20staff.md) (Deployment level) ;
