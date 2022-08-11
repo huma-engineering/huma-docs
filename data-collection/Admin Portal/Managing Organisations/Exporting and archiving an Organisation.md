@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+title: Exporting and archiving and Organisation 
+---
 # Exporting and archiving an Organisation
 **User**: Admins
 
