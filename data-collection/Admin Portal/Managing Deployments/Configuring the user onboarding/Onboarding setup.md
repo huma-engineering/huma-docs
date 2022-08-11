@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+title: Onboarding setup 
+---
 # Onboarding Setup
 **User**: Admins
 
