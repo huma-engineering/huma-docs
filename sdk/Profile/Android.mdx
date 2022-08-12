@@ -216,7 +216,22 @@ data class ScreenToOpen(
     override val onResult: (ActivityResultData?, SettingsListContainerDelegate) -> Unit = { _, _ -> }
 )
 ```
+### Features notes
 
+#### **Biometric auth**
+
+In default implementation biometric auth (app lock) is the first onboarding step. If you don't use Huma Onbording module it is also
+possible to manually start bio auth activity:
+
+```kotlin
+startActivity(
+    BiometricAuthenticationActivity.getLauncherIntent(
+        context = this,
+        // if present - will be launched after user is authenticated
+        nextActivityIntent = null,
+    )
+)
+```
 
  ### Documentation
 [API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)

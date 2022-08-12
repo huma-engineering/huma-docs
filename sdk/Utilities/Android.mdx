@@ -113,6 +113,24 @@ HumaUtilsManager.preferences.registerAuthStateProvider(authStateProvider: AuthSt
 
  ***Preferences*** - manager for huma prefered storage configuration
 
+ ### Customization
+
+ You can add `ApplicationStateListener` if needed:
+
+ ```kotlin
+ HumaUtilsManager.getInstance().addAppStateListener(
+    "listener key",
+    AppStateListener()
+  )
+ ```
+
+ For **custom error screens** you can add an intent provider:
+
+```kotlin
+HumaUtilsManager#setErrorActivityIntentProvider(provider: ((Context, ErrorData) -> Intent))
+```
+
+
  ### Documentation
 [API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
 
