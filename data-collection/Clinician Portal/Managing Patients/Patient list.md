@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Patient list
 ---
 # Filters and sorting the Patient List
@@ -20,12 +20,13 @@ Filters are split into categories: **Patient type** and **DOB** will always appe
 - **Offboarded patients** - Only view patients who have been offboarded and don’t currently have access to the platform
 - **Pending patient invitations** - Only view patients who have been sent an invite but have not yet activated their account. This is useful for administrative staff looking to follow up on these patients
 
-You can only select one option from the Patient type filters. The default view is to list All patients.
-Gender
+You can only select one option from the Patient type filters. The default view is to list **All patients**.
+### Gender
 The default view is to list all genders, but you can choose any combination of options. 
+
 Because deployments can assign different gender categories depending on what terms are used in a specific organisation, the ‘other’ category includes all genders not covered by male and female.
 
-DOB / Surgery Date
+### DOB / Surgery Date
 There are two date range filters that allow you to search for patients either by date of birth or by the date of their surgery.
 
 Just open the calendar and select a start date and an end date for your search window.
@@ -60,4 +61,5 @@ All checked items will show as columns on the table. Just uncheck any that you w
 You can also sort the table using some of the vitals. Just click the arrow in the column header to sort patients by this metric and click it again to reverse the order.
 
 Not all metrics allow sorting. Look for the arrow to see which ones have this option.
+
 **Related articles**: Patient status; Resolving flags
