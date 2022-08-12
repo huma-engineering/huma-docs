@@ -23,4 +23,4 @@ To reschedule, just select a new time and click **Reschedule**.
 
 Patients will be notified of scheduled appointments in the app and can either accept or reject them.
 
-**Related articles**: [Messaging patients](https://github.com/huma-engineering/huma-docs/blob/5939f357ccecffb2aa6884313daf5020080ed244/data-collection/Clinician%20Portal/Telemedicine/Messaging%20patients.md); [Calling patients]();
+**Related articles**: [Messaging patients](https://github.com/huma-engineering/huma-docs/blob/5939f357ccecffb2aa6884313daf5020080ed244/data-collection/Clinician%20Portal/Telemedicine/Messaging%20patients.md); [Calling patients](https://github.com/huma-engineering/huma-docs/blob/f0d71999d4f00cd79650ff16fd89c13d01b28c42/data-collection/Clinician%20Portal/Telemedicine/Calling%20patients.md);
