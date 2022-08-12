@@ -33,4 +33,4 @@ Patients will be notified that you have seen their data and they will no longer 
 
 Your note will be saved with your initials and a time stamp. You can find a record in the **Notes** tab of the Patient Overview.
 
-**Related articles**: [Tracking modules]()
+**Related articles**: [Patient Dashboard](https://github.com/huma-engineering/huma-docs/blob/624388535d86df1e9bc0d06e4070db8e060d2ee1/data-collection/Clinician%20Portal/Managing%20Health%20Data/Patient%20dashboard.md)
