@@ -21,4 +21,4 @@ Note: The test is meant to be difficult and Patients should not be alarmed if th
 
 ### Clinicians
 
-This module helps Patients to understand their health and to help with decisions in their lifestyle and therefore the data collected is not viewable from the Clinician Portal.
+This module helps Patients to understand their health and to help with decisions in their lifestyle and therefore the data collected is not viewable from the Clinician Portal. 1
