@@ -23,4 +23,4 @@ Next, select the data you want to include in the report. You can choose to inclu
 
 Finally, choose the file format you want to export the data in and click **Export ZIP file**.
 
-**Related articles**: [Tracking modules](); [Reviewing module details]() 
+**Related articles**: [Tracking modules](https://github.com/huma-engineering/huma-docs/blob/26b5442079c3db8d4e5f370aaf45142e93a09a3e/data-collection/Admin%20Portal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md); Reviewing module details
