@@ -1,11 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Creating a new Orgnisation
 ---
 # Creating a new Organisation
 **User**: Account Manager, Super Admin
 
-Every client that joins Huma, whether medical organisation, pharmaceutical or other, can have a custom platform configured specifically for their needs from the Admin Portal. The Organisation set up includes adding a name, legal documentation and defining their key activity; either clinical trials or remote patient monitoring. 
+The first step for any new client is to create an Organisation. Setup includes adding a name, legal documentation and defining their key activity; either clinical trials or remote patient monitoring. 
+
 ## How it works​
 In the **Admin Portal**, go to the Organisation tab and click **New organisation**.
 ![image](https://user-images.githubusercontent.com/110832367/183843298-09c1a4c2-552f-4db5-b51f-ab2cdd8cecc3.png)
