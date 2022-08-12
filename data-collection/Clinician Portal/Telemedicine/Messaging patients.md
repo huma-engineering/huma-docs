@@ -18,4 +18,4 @@ Otherwise, you can select from a set of pre-configured messages which are specif
 
 You can find a list of your sent messages in the Telemedicine tab. You will see information about the sender, the date when it was sent and whether the message has been delivered and if it has been read.
 
-**Related articles**: [Configuring messages](https://github.com/huma-engineering/huma-docs/blob/052dca39711e6481e92fb876bc861e502171bcf4/data-collection/Admin%20Portal/Managing%20Deployments/General%20Settings/Configuring%20messages.md)
+**Related articles**: [Configuring messages](https://github.com/huma-engineering/huma-docs/blob/052dca39711e6481e92fb876bc861e502171bcf4/data-collection/Admin%20Portal/Managing%20Deployments/General%20Settings/Configuring%20messages.md); [Scheduling appointments](https://github.com/huma-engineering/huma-docs/blob/676db81273f45bf854cb87f6ff9e63f91d71496e/data-collection/Clinician%20Portal/Telemedicine/Scheduling%20appointments.md); [Calling patients](https://github.com/huma-engineering/huma-docs/blob/ed02d3871dffa8629e34456558259c23de70cdcf/data-collection/Clinician%20Portal/Telemedicine/Calling%20patients.md)
