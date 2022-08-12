@@ -2,7 +2,7 @@
 sidebar_position: 4
 title: Custom roles
 ---
-# Creating Custom Roles
+# Creating custom roles
 **User**: Admin; Access Controller; 
 
 The Clinician Portal is one easy-to-use interface for all Care Team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. The portal has a number of default user roles which can be assigned to users via invitation. However, if the default roles do not fully serve the needs of the organisation, specific custom roles can also be created using any configuration of permissions.
