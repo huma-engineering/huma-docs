@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: ECG
+title: ECG - Apple Health
 ---
 
 ** Taking a closer look at the heart. **

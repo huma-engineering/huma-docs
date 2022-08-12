@@ -13,16 +13,32 @@ Patients will answer questions in the Huma app about tests and symptoms of COVID
 
 ### Patients
 
-In the Huma app, patients can select Questionnaire and the Food Security Questionnaire from the Track screen, which will take the Patient through a series of measurements and questions.
-
-<!-- ![Add a Food Security result](./assets/blood-glucose.svg) -->
+In the Huma app, patients can select Questionnaire and the Food Security Questionnaire from the Track screen, which will take the Patient through a series of questions.
 
 From within the module, Patients can select "View previous entries" and review historical records.
 
+### Food Security Questionnaire
+
+#### Question 1
+
+**I/We worried whether my/our food would run out before I/we got money to buy more.**
+
+Select one of the following
+- Often true
+- Sometimes true
+- Never true
+
+#### Question 2
+
+**The food that I/we bought just didn't last, and I/we didn�t have money to get more.**
+
+Select one of the following
+- Often true
+- Sometimes true
+- Never true
+
 ### Clinicians
 
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Food Security column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
-
-<!-- ![View Food Security from the Patient List](./assets/cp-patient-list-blood-glucose.svg) -->
+In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Food Security column will display the last recorded reading.
 
 Clicking on the Patient row takes the Clinician to the Patient Summary, where Care Teams can view all vitals. By selecting Food Security, all historical data can be displayed as a graph or a table of results.

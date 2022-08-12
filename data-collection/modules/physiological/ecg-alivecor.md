@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: ECG Monitoring - AliveCor
+title: ECG - AliveCor
 ---
 
 ** Taking a closer look at the heart. **

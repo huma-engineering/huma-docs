@@ -22,4 +22,8 @@ From within the module, Patients can view their progress in a graph and press â€
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Knee Health IKDC column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
 
-![Clinician view of International Knee Documentation Committee](./assets/cp-patient-list-knee-health-ikdc.png)
+![Clinician view of International Knee Documentation Committee](./assets/cp-patient-list-ikdc.png)
+
+Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Knee Health IKDC all historical data can be displayed as a graph or a table of results.
+
+![Clinician view of International Knee Documentation Committee](./assets/cp-module-details-ikdc.png)
