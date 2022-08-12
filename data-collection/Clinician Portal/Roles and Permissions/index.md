@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Roles and Permissions
 ---
 # Roles and Permissions
