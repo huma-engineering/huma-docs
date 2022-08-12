@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Questionnaires
 ---
-# Reviewing Questionnaires
+# Reviewing questionnaires
 **User**: Admin; Deployment staff; Organisation staff;
 The Patient Dashboard includes questionnaires which have been responded to by the patient, either as specific modules (in the case of scored questionnaires) or under the Questionnaires umbrella module (for non-scored questionnaires). Clinicians can review patient responses and use them to make informed decisions about the patient’s care plan.
 
