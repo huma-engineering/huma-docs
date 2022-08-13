@@ -12,22 +12,36 @@ The Clinician Portal is one easy-to-use interface for all Care Team and administ
 ## How it works​
 Open the dropdown menu next to your name at the top-right of the portal and select **Invite staff members**.
 
+![Invite staff members](./assets/InvitingStaff01.png)
+
 In the edit window, enter the email addresses of the users you want to invite and select the role you want to assign from the dropdown.
+
+![Roles dropdown](./assets/InvitingStaff02.png)
 
 Click **Send invites** to send an email to the user with a link to create their account.
 ### Importing staff emails by csv
 You can use the csv import feature to invite staff in bulk. Make sure you have a csv file with the email addresses of all the staff members you want to invite listed in the first column, then click the **Import csv file** link and select the file. 
 
+![Import csv file](./assets/InvitingStaff03.png)
+
 Once you have imported your contacts, they will appear in the emails field. Review them to check there are no errors and then click to **Send invites**. 
+
+![Welcome email](./assets/InvitingStaff05.png)
 
 If you want to invite different users to different roles, just repeat the process and select a different user from the dropdown.
 ### Reviewing pending invitations
 To see which staff have not yet responded to invitations by clicking the link, use the **Overview** filters at the top of the Patient list and select **Staff members >> Pending staff invitations**.
 
+![Pending staff invitations](./assets/InvitingStaff06.png)
+
 You will see all staff members with pending invitations listed.
 ### Resending or deleting invitations
 If you want to send out a reminder to staff who have not yet set up their account or whose invitations have expired, you can easily resend the invitation. On the **pending staff invitations list**, open the menu at the end of the row and select **Resend invitation**.
 
+![Resending invitations](./assets/InvitingStaff07.png)
+
 On the same menu, you can choose to delete the invitation. This means the link will no longer work.
 
-**Related articles**: Default roles and permissions; Creating custom roles;
+![Delete invitations](./assets/InvitingStaff08.png)
+
+**Related articles**: [Default roles and permissions](https://github.com/huma-engineering/huma-docs/blob/e675551cf233468db6d0b8dca60129e96e6493e3/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Default%20roles%20and%20permissions.md); [Creating custom roles](https://github.com/huma-engineering/huma-docs/blob/e675551cf233468db6d0b8dca60129e96e6493e3/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Creating%20custom%20roles.md)
