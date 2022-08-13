@@ -32,4 +32,4 @@ All the above permissions can be combined into specific configurations to create
 - Only Admins can invite other Admins and Contributors.
 - Both Admins and Access Controllers can invite Organisation staff and Access controllers.
 
-**Related articles**: Inviting users and assigning roles; Creating custom roles; inviting Staff
+**Related articles**: [Inviting staff and assigning roles](https://github.com/huma-engineering/huma-docs/blob/49ab1d12bd317bf953f4261cf449cb6e9a0d9197/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Inviting%20staff%20and%20assigning%20roles.md); [Creating custom roles](https://github.com/huma-engineering/huma-docs/blob/49ab1d12bd317bf953f4261cf449cb6e9a0d9197/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Creating%20custom%20roles.md); [Inviting Deployment Admins](https://github.com/huma-engineering/huma-docs/blob/49ab1d12bd317bf953f4261cf449cb6e9a0d9197/data-collection/Admin%20Portal/Managing%20Deployments/Tools%20and%20Navigation/Inviting%20Deployment%20Admins.md)
