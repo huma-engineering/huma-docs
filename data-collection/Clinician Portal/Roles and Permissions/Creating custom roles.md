@@ -9,6 +9,8 @@ The Clinician Portal is one easy-to-use interface for all Care Team and administ
 ## How it works
 Open the dropdown menu next to your name at the top-right of the portal and select **Edit roles**.
 
+![Edit roles](./assets/Custom roles01.png)
+
 Alternatively, in the **Invite staff members** window, click the **Add a new role** link.
 
 The **Edit Roles** window will open, where you will be able to either edit a current role or add a new one. Click **Add a role** to create a new one.
