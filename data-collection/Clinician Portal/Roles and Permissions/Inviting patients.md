@@ -13,6 +13,8 @@ Open the dropdown menu next to your name at the top-right of the portal and sele
 
 In the pop-out window, enter the email addresses of the users you want to invite.
 
+![Send invites](./assets/Inviting patient02.png)
+
 Set an expiry window for your invites by clicking the dropdown and selecting a duration. Options are 24 hours, 48 hours, 7 days and 1 year. Once the invitation link has expired, you’ll need to send another one.
 
 Click **Send invites** to invite your patients. They will receive an email inviting them to a 2-step process. First, they will be asked to download the app, with links to the app stores.
