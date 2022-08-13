@@ -9,6 +9,8 @@ Once the Clinician Portal is set up and ready to go, you need to invite patients
 ## How it works​
 Open the dropdown menu next to your name at the top-right of the portal and select **Invite Patients**.
 
+![Invite patients](./assets/Inviting patient01.png)
+
 In the pop-out window, enter the email addresses of the users you want to invite.
 
 Set an expiry window for your invites by clicking the dropdown and selecting a duration. Options are 24 hours, 48 hours, 7 days and 1 year. Once the invitation link has expired, you’ll need to send another one.
