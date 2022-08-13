@@ -10,6 +10,8 @@ These users, or any users on the Clinician Portal with permission to add other s
 ## How it works​
 When you receive your invitation to join the Clinician Portal, you will be informed of your role in the email.
 
+![Welcome Email](./assets/iMarkup_20220727_155213.png)
+
 The email also contains a link where you can create your account. Click the **Create account** button and you will be asked to fill in your personal details, including your full name, email and password. 
 
 The first time you log in, we will verify your details using 2-factor authentication; first verify your email by clicking the link emailed to you and then enter the 6 digit code sent to your mobile number via text message.
