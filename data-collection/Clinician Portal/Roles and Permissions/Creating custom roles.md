@@ -9,13 +9,19 @@ The Clinician Portal is one easy-to-use interface for all Care Team and administ
 ## How it works
 Open the dropdown menu next to your name at the top-right of the portal and select **Edit roles**.
 
-![Edit roles](./assets/Custom roles01.png)
+![Edit roles](./assets/CustomRoles01.png)
 
 Alternatively, in the **Invite staff members** window, click the **Add a new role** link.
 
+![Add new role](./assets/CustomRoles02.png)
+
 The **Edit Roles** window will open, where you will be able to either edit a current role or add a new one. Click **Add a role** to create a new one.
 
+![Add a role](./assets/CustomRoles03.png)
+
 The new role will appear at the bottom of the list. Click the **Rename** button to give your role a new name.
+
+![Rename](./assets/CustomRoles04.png)
 
 Next, you can check the permissions that you want to assign to this role by selecting them from the list. The following permissions are available: 
 - **Manage patient data** - This includes adding and removing patients, changing patient status, editing patient data, assigning patients to staff and offboarding patients.
@@ -30,7 +36,11 @@ Next, you can check the permissions that you want to assign to this role by sele
 
 Once you have selected the permissions, click **Submit** to save the role.
 
+![Select permissions](./assets/CustomRoles05.png)
+
 Now, when you invite staff to the Clinician Portal, you will find the new role available on the dropdown.
+
+![Select new role](./assets/CustomRoles06.png)
 
 **Related articles**: [Inviting staff and assigning roles](https://github.com/huma-engineering/huma-docs/blob/e6474f6da4a97f0f11773b46b4480c2843759fe9/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Inviting%20staff%20and%20assigning%20roles.md); [Default roles and permissions](https://github.com/huma-engineering/huma-docs/blob/e6474f6da4a97f0f11773b46b4480c2843759fe9/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Default%20roles%20and%20permissions.md)
 
