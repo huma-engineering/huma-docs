@@ -10,12 +10,20 @@ The Huma experience connects clinician and patients through the portal. Clinicia
 ## How it works​
 On the **Patient Overview** page, open the patient dropdown menu and select **Send message**.
 
+![Send Message](./assets/Messaging01.png)
+
 If you have custom messaging enabled, you will be able to write a custom message to the patient. 
+
+![Custom Message](./assets/Messaging02.png)
 
 Otherwise, you can select from a set of pre-configured messages which are specifically for typical situations. Click the message you want to send and it will populate the text field at the top. Confirm this is the message you want to send and click **Send**.
 
+![Send Message](./assets/Messaging03.png)
+
 > 🛑 **IMPORTANT**: Patients will not be able to respond to any messages you send. With this in mind, if you are composing your own custom message, try to keep your instructions clear and simple as the patient will not be able to ask you any follow up questions.
 
-You can find a list of your sent messages in the Telemedicine tab. You will see information about the sender, the date when it was sent and whether the message has been delivered and if it has been read.
+You can find a list of your sent messages in the **Telemedicine** tab. You will see information about the sender, the date when it was sent and whether the message has been delivered and if it has been read.
+
+![Messages](./assets/Messaging04.png)
 
 **Related articles**: [Configuring messages](https://github.com/huma-engineering/huma-docs/blob/052dca39711e6481e92fb876bc861e502171bcf4/data-collection/Admin%20Portal/Managing%20Deployments/General%20Settings/Configuring%20messages.md); [Scheduling appointments](https://github.com/huma-engineering/huma-docs/blob/676db81273f45bf854cb87f6ff9e63f91d71496e/data-collection/Clinician%20Portal/Telemedicine/Scheduling%20appointments.md); [Calling patients](https://github.com/huma-engineering/huma-docs/blob/ed02d3871dffa8629e34456558259c23de70cdcf/data-collection/Clinician%20Portal/Telemedicine/Calling%20patients.md)
