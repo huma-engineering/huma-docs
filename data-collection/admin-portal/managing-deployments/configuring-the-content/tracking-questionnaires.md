@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
-title: Questionnaires and ePROs 
+sidebar_position: 2
+title: Tracking questionnaires 
 ---
-# Tracking questionnaires (ePROs)
+# Tracking questionnaires and ePROs
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 One of the ways Huma allows you to collect data from patients is with Patient Reported Outcome Measures (PROs/PROMs), or validated questionnaires. Feedback from patients is key to being able to improve the care provided by the care team and this feature lets them build and collect qualitative data from patients about how they feel and tailor their treatment plan accordingly. 
