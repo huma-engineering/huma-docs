@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Creating a new Orgnisation
+sidebar_position: 1
+title: Creating a new Organisation
 ---
 # Creating a new Organisation
 **User**: Account Manager, Super Admin
