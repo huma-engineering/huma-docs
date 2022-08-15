@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: ID verification 
 ---
-## Identity Verification
+## Identity verification
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 When collecting personal health data for clinical trials in a digital environment and requesting consent on how data is used, it is a regulatory requirement to ensure the participant is who they say they are. Electronic ID verification is possible through the Huma App onboarding process.
