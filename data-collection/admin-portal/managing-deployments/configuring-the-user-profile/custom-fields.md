@@ -13,7 +13,7 @@ In the **Profile** configuration tab, under **Overall settings**, you can add cu
 
 After adding a name for your field, click the down arrow to open up the rest of the form.
 
-![image](./assets/CustomFields01.png)
+![image](./assets/CustomFields02.png)
 
 - **Type** - Choose between numerical and text depending on the type of information you are requesting
 - **Onboarding collection text** - This is the question you want to ask the patient e.g. What is your Patient ID number?
@@ -27,6 +27,6 @@ After adding a name for your field, click the down arrow to open up the rest of 
 
 Click **Done** when you have completed the fields and continue to add more fields if needed. You can change the order afterwards using the **arrows✛** or remove the field and edit the name using the **Remove** and **Rename** buttons at the end of the row.
 
-![image](./assets/CustomFields01.png)
+![image](./assets/CustomFields03.png)
 
 **Related articles**: [User profile](data-collection/admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md); [Onboarding setup](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md)
