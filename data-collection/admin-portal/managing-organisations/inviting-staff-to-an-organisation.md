@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: Inviting staff
 ---
 # Inviting staff to an organisation
