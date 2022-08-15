@@ -2,7 +2,7 @@
 sidebar_position: 3
 title: App features 
 ---
-# App Features
+# App features
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 Huma is designed principally for either clinical research trials (CRT) or remote patient monitoring (RPM). The app features that are delivered to patients can vary depending on the specific needs of their program. 
