@@ -10,9 +10,11 @@ Once a new organisation has been created, other users can be assigned to manage 
 ## How it works​
 In the Admin Portal, go to the **Organisations** tab and open the dropdown menu on the row that you want to invite users to and click **Invite staff**.
 
+![image](./assets/Admin0301.png)
+
 A pop-out window will appear where you can add the email addresses of the people you want to invite. Make sure you hit enter so the **Send invites** button is activated.
 
-![image](./assets/Admin0301.png)
+![image](./assets/Admin0302.png)
 
 Select the type of role you want to assign from the dropdown.
 - **Organisation Controller** – this Admin Portal user can create and edit deployments within this organisation and invite other staff members
@@ -20,14 +22,14 @@ Select the type of role you want to assign from the dropdown.
 - **Access controller** – this role is specifically for adding and removing organisation staff members and managing roles in the Clinician Portal
 For more information on roles and permissions, see the article on Roles and permissions.
 
-![image](./assets/Admin0302.png)
+![image](./assets/Admin0303.png)
 
 Finally, you can decide the window of time that you will give staff to use your invite before it expires. Click the link to open the dropdown and choose from 24 hours, 72 hours or 7 days.
 
-![image](https://user-images.githubusercontent.com/110832367/183845408-8448f8f9-d969-43c3-9838-a6f3a0e591c1.png)
+![image](./assets/Admin0304.png)
 
 Click **Send invites** and the user will receive an email with the link that will let them set a password and access the Clinician Portal. 
 
-![image](./assets/Admin0303.png)
+![image](./assets/Admin0305.png)
 
-**Related articles**: [Creating a new Organisation](data-collection/admin-portal/managing-organisations/creating-a-new-organisation.md); [Inviting staff and assigning roles](data-collection/Clinician Portal/Roles and Permissions/Inviting staff and assigning roles.md); [Inviting Deployment Admins](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
+**Related articles**: [Creating a new Organisation](data-collection/admin-portal/managing-organisations/creating-a-new-organisation.md); [Inviting Deployment Admins](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
