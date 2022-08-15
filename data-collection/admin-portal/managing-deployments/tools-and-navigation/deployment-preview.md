@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: Deployment preview 
 ---
-# Deployment Preview
+# Deployment preview
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 The Huma Admin Portal is the place where individual Organisations and Deployments are configured and managed. Once a new deployment has been created, you can preview it before you start inviting patients and clinicians to check you have your configuration set up right.
