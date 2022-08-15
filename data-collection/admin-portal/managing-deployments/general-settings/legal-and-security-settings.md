@@ -11,12 +11,12 @@ Make sure your users are always informed of how you are using their data by addi
 ## How it works​
 When configuring a new deployment, you can set up authentication and legal documents in the **Deployment config** tab.
 
-![image](https://user-images.githubusercontent.com/110832367/183863087-16a04c48-73f6-471a-8d90-afe165a84bfd.png)
+![image](./assets/LegalPrivacy01.png)
 
 ### Authentication
 In the **Deployment config** settings, ensure the **Multi-factor authentication** checkbox is checked. 
 
-![image](https://user-images.githubusercontent.com/110832367/184100176-ab700390-df91-4d80-8ad7-b2509def8790.png)
+![image](./assets/LegalPrivacy02.png)
 
 > 
 > 🛑 **IMPORTANT**: In line with data protection regulations, you should not disable multi-factor authentication on the Clinician Portal which contains patient data.   
@@ -30,10 +30,10 @@ In this area, you can upload or link to your legal documents: **Privacy policy**
 
 Choose between **URL** and **Upload**. If using the URL option, add links to these pages on your website or wherever they are located.
 
-![image](https://user-images.githubusercontent.com/110832367/183863489-caf4cd75-5ac0-4ce6-a6dd-9be99cd39eee.png)
+![image](./assets/LegalPrivacy03.png)
 
 If you choose the **Upload** option, click the file icon at the end of each line to upload your documents.
 
-![image](https://user-images.githubusercontent.com/110832367/183863334-bb0565c9-32b9-43f7-89c8-09206e57c0ac.png)
+![image](./assets/LegalPrivacy04.png)
 
-**Related articles**: [Data consent](https://github.com/huma-engineering/huma-docs/blob/f2e1d56f1301e07007649fb81070a705a6d6fa1c/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/Data%20consent.md); [eConsent](https://github.com/huma-engineering/huma-docs/blob/f2e1d56f1301e07007649fb81070a705a6d6fa1c/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/eConsent.md);
+**Related articles**: [Data consent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md)
