@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Onboarding setup 
 ---
-# Onboarding Setup
+# Onboarding setup
 **User**: Admins
 
 Huma aims to deliver a seamless onboarding experience for patients when they first log into the app. The onboarding experience can be customised for each deployment by selecting which modules to add. Getting users to agree to your terms and conditions, verify their identity or agree to using a proxy are all things you can include in the onboarding process. 
