@@ -15,6 +15,6 @@ Click the module to see the patient’s symptoms in table form, listed with the 
 
 To resolve the red flags, simply click the **Add note / Resolve flags** button and add a note once all the flagged symptoms have been reviewed.
 
-![Resolve flags](Symptoms02.png)
+![Resolve flags](./assets/TrackSymptoms03.png)
 
 **Related articles**: [Inviting patients](https://github.com/huma-engineering/huma-docs/blob/6a4b3cd6f400d779dbfdf7846a86270a8f3d3f50/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Inviting%20patients.md); [Patient Dashboard](https://github.com/huma-engineering/huma-docs/blob/2b6c3c5a1655da89a6a0774c776712347f87c150/data-collection/Clinician%20Portal/Managing%20Health%20Data/Patient%20dashboard.md); [Questionnaires](https://github.com/huma-engineering/huma-docs/blob/2b6c3c5a1655da89a6a0774c776712347f87c150/data-collection/Clinician%20Portal/Managing%20Health%20Data/Questionniares.md)  
