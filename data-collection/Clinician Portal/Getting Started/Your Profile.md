@@ -63,4 +63,4 @@ At the bottom of your profile page details, you can find links to licensing and 
 
 ![Privacy Policy link](./assets/YourProfile08.png)
 
-**Related articles**: [Logging into the Portal](https://github.com/huma-engineering/huma-docs/blob/3deb505ce094485a689be204a20a8c4f8cffa64b/data-collection/Clinician%20Portal/Getting%20Started/Logging%20into%20the%20Portal.md)
+**Related articles**: [Logging into the Portal](https://github.com/huma-engineering/huma-docs/blob/9dd229574a4a3d98f741d6cb1b695261cc41649d/data-collection/Clinician%20Portal/Getting%20Started/Logging%20into%20the%20Portal.md)
