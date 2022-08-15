@@ -14,11 +14,12 @@ Open the dropdown menu next to your name at the top-right of the portal and sele
 
 ![Invite staff members](./assets/InvitingStaff01.png)
 
-In the edit window, enter the email addresses of the users you want to invite and select the role you want to assign from the dropdown.
+In the edit window, enter the email addresses of the users you want to invite, select the role you want to assign from the dropdown and click **Send invites**.
 
 ![Roles dropdown](./assets/InvitingStaff02.png)
 
-Click **Send invites** to send an email to the user with a link to create their account.
+An email will be sent to the user with a link to create their account.
+
 ### Importing staff emails by csv
 You can use the csv import feature to invite staff in bulk. Make sure you have a csv file with the email addresses of all the staff members you want to invite listed in the first column, then click the **Import csv file** link and select the file. 
 
@@ -30,11 +31,12 @@ Once you have imported your contacts, they will appear in the emails field. Revi
 
 If you want to invite different users to different roles, just repeat the process and select a different user from the dropdown.
 ### Reviewing pending invitations
-To see which staff have not yet responded to invitations by clicking the link, use the **Overview** filters at the top of the Patient list and select **Staff members >> Pending staff invitations**.
+To see which staff have not yet responded to invitations, use the **Overview** filters at the top of the Patient list and select **Staff members >> Pending staff invitations**.
 
 ![Pending staff invitations](./assets/InvitingStaff06.png)
 
-You will see all staff members with pending invitations listed.
+You will see all staff members who have not yet clicked the link in their invitation.
+
 ### Resending or deleting invitations
 If you want to send out a reminder to staff who have not yet set up their account or whose invitations have expired, you can easily resend the invitation. On the **pending staff invitations list**, open the menu at the end of the row and select **Resend invitation**.
 
