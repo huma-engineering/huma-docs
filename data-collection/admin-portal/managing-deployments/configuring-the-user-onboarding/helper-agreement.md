@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 title: Helper agreement 
 ---
-# Helper Agreement
+# Helper agreement
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 In some cases, patients may need assistance to manage data entry in the Huma App. The Helper role exists to allow other users to access the app as a proxy for the patient to enter data on their behalf.
