@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Track modules 
+sidebar_position: 1
+title: Tracking modules 
 ---
 # Tracking modules
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
