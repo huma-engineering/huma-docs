@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Creting a new Deployment 
+sidebar_position: 1
+title: Creating a new Deployment 
 ---
 
 # Creating a new Deployment
