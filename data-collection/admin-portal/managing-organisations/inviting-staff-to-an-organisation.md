@@ -30,4 +30,4 @@ Click **Send invites** and the user will receive an email with the link that wil
 
 ![image](./assets/Admin0303.png)
 
-**Related articles**: [Creating a new Organisation](data-collection/admin-portal/managing-organisations/creating-a-new-organisation.md)
+**Related articles**: [Creating a new Organisation](data-collection/admin-portal/managing-organisations/creating-a-new-organisation.md); [Inviting staff and assigning roles](data-collection/Clinician Portal/Roles and Permissions/Inviting staff and assigning roles.md); [Inviting Deployment Admins](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
