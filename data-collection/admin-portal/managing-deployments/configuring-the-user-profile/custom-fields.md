@@ -9,11 +9,11 @@ When participating in Huma clinical trials or remote monitoring, every patient h
 ## How it works
 In the **Profile** configuration tab, under **Overall settings**, you can add custom fields. Scroll to the bottom of the page and click **Add custom field**. 
 
-![image](https://user-images.githubusercontent.com/110832367/183860039-1287b01e-37cb-4e52-a35c-6791ec516e32.png)
+![image](./assets/CustomFields01.png)
 
 After adding a name for your field, click the down arrow to open up the rest of the form.
 
-![image](https://user-images.githubusercontent.com/110832367/183860265-c87566b9-a8a8-432b-96a3-545d2252e9d3.png)
+![image](./assets/CustomFields01.png)
 
 - **Type** - Choose between numerical and text depending on the type of information you are requesting
 - **Onboarding collection text** - This is the question you want to ask the patient e.g. What is your Patient ID number?
@@ -27,6 +27,6 @@ After adding a name for your field, click the down arrow to open up the rest of 
 
 Click **Done** when you have completed the fields and continue to add more fields if needed. You can change the order afterwards using the **arrows✛** or remove the field and edit the name using the **Remove** and **Rename** buttons at the end of the row.
 
-![image](https://user-images.githubusercontent.com/110832367/183860187-b837c92b-313e-409e-ba14-2fbf6d075b07.png)
+![image](./assets/CustomFields01.png)
 
-**Related articles**: [User profile](https://github.com/huma-engineering/huma-docs/blob/511bcd51e046b988708a7c83f7da2d8505cedcad/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20profile/User%20profile%20details.md); [Onboarding setup](https://github.com/huma-engineering/huma-docs/blob/511bcd51e046b988708a7c83f7da2d8505cedcad/data-collection/AdminPortal/Managing%20Deployments/Configuring%20the%20user%20onboarding/Onboarding%20setup.md)
+**Related articles**: [User profile](data-collection/admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md); [Onboarding setup](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md)
