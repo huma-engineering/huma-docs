@@ -40,10 +40,10 @@ If you receive documents relating to your healthcare e.g. vaccination certificat
 From the **Personal Documents** screen, just select **Add new document**. You will be prompted to select a PDF or photo from their device.
 
 ### Messages and Appointments
-You can access your [messages](data-collection/huma-app/features/messages.md) and [appointments](data-collection/huma-app/features/calls-and-appointments.md) from your Profile. To find out more, see the articles Messages and Calls and appointments.
+You can access your [messages](../features/messages.md) and [appointments](../features/calls-and-appointments.md) from your Profile. To find out more, see the articles Messages and Calls and appointments.
 
 ### Data privacy and account settings
-There are a number of features and settings in your Profile to help keep your data safe and secure. See the [data privacy and account security](data-collection/huma-app/features/data-privacy-and-security.md) article for more details.
+There are a number of features and settings in your Profile to help keep your data safe and secure. See the [data privacy and account security](../features/data-privacy-and-security.md) article for more details.
 
 ### App support​
 If you have the **App support** feature available in your Profile, click to access live chat or a resource of support documentation.
@@ -51,4 +51,4 @@ If you have the **App support** feature available in your Profile, click to acce
 ### Logout
 You can log out from the Profile page. Just scroll down and click **Logout** to return to the login screen.
 
-**Related articles**: [Personal information and account settings](data-collection/huma-app/getting-started/personal-information-account-settings.md); [Data privacy and account security](data-collection/huma-app/features/data-privacy-and-security.md); [Managing calls and appointments](data-collection/huma-app/features/calls-and-appointments.md); [Messages](data-collection/huma-app/features/messages.md)
+**Related articles**: [Personal information and account settings](./personal-information-account-settings.md); [Data privacy and account security](../features/data-privacy-and-security.md); [Managing calls and appointments](../features/calls-and-appointments.md); [Messages](../features/messages.md)
