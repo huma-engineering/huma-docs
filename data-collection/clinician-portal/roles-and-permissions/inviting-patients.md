@@ -58,4 +58,4 @@ If you want to send out a reminder to patients who have not yet set up their acc
 
 On the same menu, you can choose to delete the invitation. This means the link will no longer work.
 
-**Related articles**: [Default roles and permissions](data-collection/clinician-portal/roles-and-permissions/default-roles-and-permissions.md); [Creating custom roles](data-collection/clinician-portal/roles-and-permissions/creating-custom-roles.md); [Inviting staff and assigning roles](data-collection/clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md) 
+**Related articles**: [Default roles and permissions](./default-roles-and-permissions.md); [Creating custom roles](./creating-custom-roles.md); [Inviting staff and assigning roles](./inviting-staff-and-assigning-roles.md) 
