@@ -15,9 +15,9 @@ Check the **Proxy** checkbox to ensure they receive the Helper Agreement module.
 
 ![image](./assets/Helper02.png)
 
-By including this module, the user’s proxy will be able to read and agree to it as part of their  onboarding. In the [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md) module, you can specify separately whether helpers also need to sign data consent forms as part of their onboarding.
+By including this module, the user’s proxy will be able to read and agree to it as part of their  onboarding. In the [eConsent](./econsent.md) module, you can specify separately whether helpers also need to sign data consent forms as part of their onboarding.
 Helpers can be invited by the patient from the Huma App. 
 
 Link to [Helper experience](https://www.figma.com/file/6AJeEs7bfU6ITVhJRWJ7SQ/Huma1---App?node-id=3169%3A134023).
 
-**Related articles**: [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md): [Personal information and account settings](data-collection/huma-app/getting-started/personal-information-account-settings.md)
+**Related articles**: [eConsent](./econsent.md)
