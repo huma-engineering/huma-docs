@@ -17,22 +17,22 @@ Questionnaires fall into two categories; **Questionnaires** or **PROMs** (Patien
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
-| [Diabetes Distress Score (DDS)](data-collection/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
-| [FJS Knee](data-collection/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
-| [FJS Hip](data-collection/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
-| [GAD-7](data-collection/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
-| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](data-collection/epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
-| [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](data-collection/epros-licensed-questionnaires/joint-surgery/koos-womac.md) [English, German, Italian, Spanish] | PROM | Yes | Yes | No | 
-| [Norfolk QoL-DN](data-collection/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) [English, Dutch] | PROM | Yes | Yes | No | 
-| [Oxford Knee Score](data-collection/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) [English] | PROM | Yes | Yes | No | 
-| [Oxford Hip Score](data-collection/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) [English] | PROM | Yes | Yes | No | 
-| [PHQ-8](data-collection/epros-licensed-questionnaires/mental-health/depression-level-phq-8.md) [English (UK)] | PROM | Yes | Yes | No | 
-| [SF-36](data-collection/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) [English, Dutch] | PROM | Yes | Yes | No | 
-| [EQ-5D-5L](data-collection/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) [English] | PROM | Yes | No | No |
-| [Patient Activation Measure 13 (PAM 13)](data-collection/epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
-| [PROMIS CAT Pain Interference](data-collection/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) [English] | PROM | Yes | No | No |
-| [PROMIS CAT Physical Function](data-collection/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) [English] | PROM | Yes | No | No |
-| [PROMIS Global Health](data-collection/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) [Catalan, French, German, Spanish, Swedish] | PROM | Yes | No | No | 
+| [Diabetes Distress Score (DDS)](../../../epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
+| [FJS Knee](../../../epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
+| [FJS Hip](../../../epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
+| [GAD-7](../../../epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
+| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
+| [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](../../../epros-licensed-questionnaires/joint-surgery/koos-womac.md) [English, German, Italian, Spanish] | PROM | Yes | Yes | No | 
+| [Norfolk QoL-DN](../../../epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) [English, Dutch] | PROM | Yes | Yes | No | 
+| [Oxford Knee Score](../../../epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) [English] | PROM | Yes | Yes | No | 
+| [Oxford Hip Score](../../../epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) [English] | PROM | Yes | Yes | No | 
+| [PHQ-8](../../../epros-licensed-questionnaires/mental-health/depression-level-phq-8.md) [English (UK)] | PROM | Yes | Yes | No | 
+| [SF-36](../../../epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) [English, Dutch] | PROM | Yes | Yes | No | 
+| [EQ-5D-5L](../../../epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) [English] | PROM | Yes | No | No |
+| [Patient Activation Measure 13 (PAM 13)](../../../epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
+| [PROMIS CAT Pain Interference](../../../epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) [English] | PROM | Yes | No | No |
+| [PROMIS CAT Physical Function](../../../epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) [English] | PROM | Yes | No | No |
+| [PROMIS Global Health](../../../epros-licensed-questionnaires/quality-of-life/promis-global-health.md) [Catalan, French, German, Spanish, Swedish] | PROM | Yes | No | No | 
 | Activity and Health Questionnaire | Questionnaire | Yes/No | No | Yes |
 | Baseline COVID-19 Questionnaire [German] | Questionnaire | Yes/No | No | Yes |
 | Food Security Questionnaire | Questionnaire | Yes/No | No | Yes |
@@ -186,4 +186,4 @@ Some questionnaires can be edited and modified, including changing the scoring a
 
 Remember to save any changes you make.
 
-**Related articles**: [Tracking modules](./tracking-modules.md); [Entering your health data](data-collection/huma-app/features/entering-your-health-data.md); [Reviewing questionnaires](data-collection/clinician-portal/managing-health-data/questionnaires.md)
+**Related articles**: [Tracking modules](./tracking-modules.md); [Entering your health data](../../../huma-app/features/entering-your-health-data.md); [Reviewing questionnaires](../../clinician-portal/managing-health-data/questionnaires.md)
