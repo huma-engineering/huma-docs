@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Symptoms
 ---
 # Tracking Symptoms
-**User**: Admin; Deployment staff; Organisation staff;
+**User**: Admin; Deployment staff; Organisation staff
 
 As well as data points from tracking modules, Huma also collects symptoms reported by the patient and tracks them with time/date stamps and severity grading. Symptoms can be set up from the Admin Portal so that these can be customised to the needs of the specific deployment.
 ## How it works​
