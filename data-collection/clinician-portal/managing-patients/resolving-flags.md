@@ -49,4 +49,4 @@ Your note will be saved with your initials and a time stamp. You can find a reco
 
 ![View notes](./assets/ResolveFlags08.png)
 
-**Related articles**: [Patient Dashboard](https://github.com/huma-engineering/huma-docs/blob/624388535d86df1e9bc0d06e4070db8e060d2ee1/data-collection/Clinician%20Portal/Managing%20Health%20Data/Patient%20dashboard.md) 
+**Related articles**: [Patient Dashboard](data-collection/clinician-portal/managing-health-data/patient-dashboard.md) 
