@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: Telemedicine 
+title: Messaging patients 
 ---
-# Messaging Patients
+# Messaging patients
 **User**: Admin; Deployment Staff; 
 
 The Huma experience connects clinician and patients through the portal. Clinicians can choose to message their patients with important information and the portal makes this easy by giving them the choice of composing their own message or selecting from a library of pre-built messages.
