@@ -32,4 +32,4 @@ All the above permissions can be combined into specific configurations to create
 - Only Admins can invite other Admins and Contributors.
 - Both Admins and Access Controllers can invite Organisation staff and Access controllers.
 
-**Related articles**: [Inviting staff and assigning roles](data-collection/clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md); [Creating custom roles](data-collection/clinician-portal/roles-and-permissions/creating-custom-roles.md); [Inviting Deployment Admins](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
+**Related articles**: [Inviting staff and assigning roles](./inviting-staff-and-assigning-roles.md); [Creating custom roles](./creating-custom-roles.md); [Inviting Deployment Admins](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
