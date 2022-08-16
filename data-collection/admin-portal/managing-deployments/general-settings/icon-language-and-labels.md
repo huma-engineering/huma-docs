@@ -42,4 +42,4 @@ At the bottom of the **Deployment Config** page, you can find the labels toggle.
 
 [^1]:<sub>*Will become available once Class IIb Medical Device Certification has been attained.</sub>
 
-**Related articles**: [Exporting the configuration or translation files](data-collection/admin-portal/managing-deployments/tools-and-navigation/exporting-config-or-localization-files.md)
+**Related articles**: [Exporting the configuration or translation files](../tools-and-navigation/exporting-config-or-localization-files.md)
