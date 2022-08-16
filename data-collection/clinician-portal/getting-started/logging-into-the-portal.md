@@ -19,5 +19,5 @@ The first time you log in, we will verify your details using 2-factor authentica
 
 2-factor authentication will be used for subsequent logins but you can check the box **Remember me** to pause the mobile verification step for 2 weeks. 
  
-**Related articles**: [Inviting Deployment Admins](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); [Creating a new Deployment](data-collection/admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md); [Inviting staff to the Organisation](data-collection/admin-portal/managing-organisations/inviting-staff-to-an-organisation.md)
+**Related articles**: [Inviting Deployment Admins](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); [Creating a new Deployment](../../admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md); [Inviting staff to the Organisation](../../admin-portal/managing-organisations/inviting-staff-to-an-organisation.md)
 
