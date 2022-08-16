@@ -42,4 +42,4 @@ From inside the Huma app, you can view the eConsent agreement.
 
 You can easily withdraw your consent at any time without having to search for it or contact a customer support representative. In your Profile, go to **Informed consent form** and simply click the button to **Withdraw your consent**.
 
-**Related articles**: [Personal information and account settings](data-collection/huma-app/getting-started/personal-information-account-settings.md); [Configuring the security settings](data-collection/admin-portal/managing-deployments/general-settings/legal-and-security-settings.md) 
+**Related articles**: [Personal information and account settings](../getting-started/personal-information-account-settings.md); [Configuring the security settings]([data-collection/admin-portal/managing-deployments/general-settings/legal-and-security-settings.md](https://github.com/huma-engineering/huma-docs/blob/c79c894beab9d0c433b7e76167699478577af2b4/data-collection/admin-portal/managing-deployments/general-settings/legal-and-security-settings.md)) 
