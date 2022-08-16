@@ -51,4 +51,4 @@ This section lets you define which of the above fields you want to be mandatory.
 
 You can reorder the options to define how they appear in the portal as well as the onboarding profile questionnaire.
 
-**Related articles**: [Onboarding set up](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Custom fields](data-collection/admin-portal/managing-deployments/configuring-the-user-profile/custom-fields.md)
+**Related articles**: [Onboarding set up](../configuring-the-user-onboarding/onboarding-setup.md); [Custom fields](./custom-fields.md)
