@@ -16,7 +16,7 @@ If you have this role, it is likely you are managing multiple deployments, so yo
 
 ![Org-level stats](./assets/Navigating01.png)
 
-Click on any of the deployments and you will go to the [Patient List](data-collection/clinician-portal/managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular Deployment-level role.
+Click on any of the deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular Deployment-level role.
 
 Click the Huma icon at the top left to return to the Deployment List at any time. You can use the filter at the top to switch between the **Deployments list**, **All staff members**, or **Pending staff invitations**.
 
@@ -35,7 +35,7 @@ Remove a staff member by opening the menu at the end of the row and clicking on 
 
 ![Remove](./assets/Navigating05.png)
 
-You can also [invite staff and edit roles](data-collection/clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md) from the main menu at the top-right of the table.
+You can also [invite staff and edit roles](../roles-and-permissions/inviting-staff-and-assigning-roles.md) from the main menu at the top-right of the table.
 
 ![Invite or edit](./assets/Navigating06.png)
 
@@ -62,7 +62,7 @@ From here, you manage all your patient information including Track data; **Patie
 ![Patient Overview](./assets/Navigating10.png)
 
 ### Patient Tools
-Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](data-collection/clinician-portal/telemedicine/messaging-patients.mdd) or [calling the patient](/data-collection/Clinician-Portal/Telemedicine/Calling-patients.md).
+Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.mdd) or [calling the patient](../telemedicine/calling-patients.md).
 
 ![Patient Tools](./assets/Navigating11.png)
 
@@ -71,7 +71,7 @@ The **Add note / Resolve flags** button can also be accessed from anywhere in th
 ![Resolve Flags](./assets/Navigating12.png)
 
 ### Profile and User Management
-You can access the tools menu from the three dots next to your name in the button at the top right. This lets you access [your profile](data-collection/clinician-portal/getting-started/your-profile.md) and manage users, roles and permissions.
+You can access the tools menu from the three dots next to your name in the button at the top right. This lets you access [your profile](./your-profile.md) and manage users, roles and permissions.
 
 ![Profile menu](./assets/Navigating13.png)
 
@@ -80,4 +80,4 @@ You can navigate back to the patient list screen at any time by clicking the Hum
 
 ![Home icon](./assets/Navigating14.png)
 
-**Related articles**: [Logging into the Portal](data-collection/clinician-portal/getting-started/logging-into-the-portal.md); [Patient List](data-collection/clinician-portal/managing-patients/patient-list.md); [Inviting staff and assigning roles](data-collection/clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md); [Your Profile](data-collection/clinician-portal/getting-started/your-profile.md); [Inviting staff (Organisations)](data-collection/admin-portal/managing-organisations/inviting-staff-to-an-organisation.md); [Inviting staff (Deployments)](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); 
+**Related articles**: [Logging into the Portal](./logging-into-the-portal.md); [Patient List](../managing-patients/patient-list.md); [Inviting staff and assigning roles](../roles-and-permissions/inviting-staff-and-assigning-roles.md); [Your Profile](./your-profile.md); [Inviting staff (Organisations)](../../admin-portal/managing-organisations/inviting-staff-to-an-organisation.md); [Inviting staff (Deployments)](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); 
