@@ -36,4 +36,4 @@ Offboarded patients can also be reactivated. Just open the menu at the end of th
 
 Once reactivated, the patient will receive a notification and email to tell them that they once again have access to the app. 
 
-**Related articles**: [Inviting patients](data-collection/clinician-portal/roles-and-permissions/inviting-patients.md)
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md)
