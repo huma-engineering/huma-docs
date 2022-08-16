@@ -5,7 +5,7 @@ title: Calls and appointments
 # Calls and appointments
 **User**: Patient
 
-Patients sometimes need additional support from their clinician in the form of direct consultation. The Huma App facilitates this with the Telemedicine function which permits secure video and audio calls. Clinicians can [schedule an appointment](data-collection/clinician-portal/telemedicine/scheduling-appointments.md) or [call their patient](data-collection/clinician-portal/telemedicine/calling-patients.md) directly from the Telemedicine section of the Clinician Portal.
+Patients sometimes need additional support from their clinician in the form of direct consultation. The Huma App facilitates this with the Telemedicine function which permits secure video and audio calls. Clinicians can [schedule an appointment](../../clinician-portal/telemedicine/scheduling-appointments.md) or [call their patient](../../clinician-portal/telemedicine/calling-patients.md) directly from the Telemedicine section of the Clinician Portal.
 
 ## How it works​
 
@@ -19,4 +19,4 @@ Once the call has started, these buttons will disappear but can be brought back 
 
 You can find all your past and scheduled appointments in the **Appointments** section of your **Profile**. Missed calls will also be logged here. 
 
-**Related articles**: [Messages](data-collection/huma-app/features/messages.md); [Scheduling appointments](data-collection/clinician-portal/telemedicine/scheduling-appointments.md); [Calling patients](data-collection/clinician-portal/telemedicine/calling-patients.md);
+**Related articles**: [Messages](./messages.md); [Scheduling appointments](../../clinician-portal/telemedicine/scheduling-appointments.md); [Calling patients](../../clinician-portal/telemedicine/calling-patients.md);
