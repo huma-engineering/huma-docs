@@ -53,4 +53,4 @@ You will be presented with a series of questions. Select the answer that best re
 
 Once you have answered all the questions, click **Submit** to share your answers with your care team.
 
-**Related articles**: Navigating the app; Responding to questionnaires; Setting reminders; Adding photos; Viewing historic health data;
+**Related articles**: [Navigating the app](data-collection/huma-app/getting-started/navigating-the-app.md); [Setting reminders](data-collection/huma-app/features/setting-reminders.md); [Track modules](data-collection/huma-app/features/track-modules.md)
