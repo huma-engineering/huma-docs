@@ -37,4 +37,4 @@ To reschedule, just select a new time and click **Reschedule**.
 
 Patients will be notified of scheduled appointments in the app and can either accept or reject them.
 
-**Related articles**: [Messaging patients](data-collection/clinician-portal/telemedicine/messaging-patients.md); [Calling patients](data-collection/clinician-portal/telemedicine/calling-patients.md);
+**Related articles**: [Messaging patients](./messaging-patients.md); [Calling patients](./calling-patients.md);
