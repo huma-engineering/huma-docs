@@ -46,4 +46,4 @@ On the same menu, you can choose to delete the invitation. This means the link w
 
 ![Delete invitations](./assets/InvitingStaff08.png)
 
-**Related articles**: [Default roles and permissions](https://github.com/huma-engineering/huma-docs/blob/e675551cf233468db6d0b8dca60129e96e6493e3/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Default%20roles%20and%20permissions.md); [Creating custom roles](https://github.com/huma-engineering/huma-docs/blob/e675551cf233468db6d0b8dca60129e96e6493e3/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Creating%20custom%20roles.md)
+**Related articles**: [Default roles and permissions](data-collection/clinician-portal/roles-and-permissions/default-roles-and-permissions.md); [Creating custom roles](data-collection/clinician-portal/roles-and-permissions/creating-custom-roles.md)
