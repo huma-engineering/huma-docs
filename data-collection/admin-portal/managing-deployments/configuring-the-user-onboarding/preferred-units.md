@@ -11,10 +11,10 @@ As part of the onboarding configuration of a new deployment, add the **Preferred
 
 ![image](./assets/PreferredUnits01.png)
 
-Check both **User** and **Proxy** to ensure both parties get to select the type of units they prefer to use. You’ll need to ensure the [Helper agreement](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) is also added as an onboarding module if you have checked the **Proxy** box.
+Check both **User** and **Proxy** to ensure both parties get to select the type of units they prefer to use. You’ll need to ensure the [Helper agreement](./helper-agreement.md) is also added as an onboarding module if you have checked the **Proxy** box.
 
 ![image](./assets/PreferredUnits02.png)
 
 View the [Helper experience screens](https://www.figma.com/file/6AJeEs7bfU6ITVhJRWJ7SQ/Huma1---App?node-id=3169%3A134023).
 
-**Related articles**: [Helper Agreement](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 
+**Related articles**: [Helper Agreement](./helper-agreement.md) 
