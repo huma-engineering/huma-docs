@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: Default roles and permissions
 ---
 # Default roles and permissions
