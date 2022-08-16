@@ -15,6 +15,6 @@ Each task on the To do list will indicate the date it became active and they wil
 
 Pending appointments are also displayed here when they require confirmation, as well as confirmed appointments which are upcoming.
 
-Besides the To do list, which lets you see your top priority tasks from within the app, you can also [configure your own reminders](data-collection/huma-app/features/setting-reminders.md) from within the modules so that you get push notifications. 
+Besides the To do list, which lets you see your top priority tasks from within the app, you can also [configure your own reminders](./setting-reminders.md) from within the modules so that you get push notifications. 
 
 **Related articles**: [Track modules](./track-modules.md); [Setting reminders](./setting-reminders.md); [Configuring patient to dos](../../admin-portal/managing-deployments/configuring-the-content/patient-to-dos.md)  
