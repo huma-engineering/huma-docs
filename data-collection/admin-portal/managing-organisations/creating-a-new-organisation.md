@@ -26,4 +26,4 @@ You can edit any of the fields and also remove any deployments you might have ad
 
 ![image](./assets/Admin0105.png)
 
-**Related articles**: [Creating a new Deployment](data-collection/admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md)
+**Related articles**: [Creating a new Deployment](../managing-deployments/general-settings/creating-a-new-deployment.md)
