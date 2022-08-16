@@ -9,10 +9,10 @@ Huma facilitates the connection between patient and care teams via both direct a
 
 # How it works​
 
-The [messaging](data-collection/admin-portal/managing-deployments/general-settings/configuring-messages.md) feature is enabled and configured in the Admin Portal.
+The [messaging](../../admin-portal/managing-deployments/general-settings/configuring-messages.md) feature is enabled and configured in the Admin Portal.
 
 Messaging is only one-way, so you will not be able to respond to messages from your care team. 
 
 You will be advised of new messages via a notification on your device and can find and read the message in the **Messages** section of your profile. Your care team will be able to see when you have read the message. 
 
-**Related articles**: [Calls and appointments](data-collection/huma-app/features/calls-and-appointments.md); [Calling patients](data-collection/clinician-portal/telemedicine/calling-patients.md); [Messaging patients](data-collection/clinician-portal/telemedicine/messaging-patients.md); [Configuring messaging](data-collection/admin-portal/managing-deployments/general-settings/configuring-messages.md)
+**Related articles**: [Calls and appointments](./calls-and-appointments.md); [Calling patients](../../clinician-portal/telemedicine/calling-patients.md); [Messaging patients](../../clinician-portal/telemedicine/messaging-patients.md); [Configuring messaging](../../admin-portal/managing-deployments/general-settings/configuring-messages.md)
