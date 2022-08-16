@@ -34,10 +34,10 @@ Select the purpose of the data collection from the dropdown: **for research or f
 
 ![image](./assets/econsent05.png)
 
-When including this module in the onboarding, ensure that it comes after the **[Data consent](hdata-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md)** and **[Identity verification](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md)** modules.
+When including this module in the onboarding, ensure that it comes after the **[Data consent](./data-consent.md)** and **[Identity verification](./identity-verification.md)** modules.
 ## Patient experience
 When first logging into the Huma App, patients will be taken through the privacy policy and terms and conditions and will be asked to consent. On receipt of the patient signature, Huma will generate an electronic informed consent (eICF) PDF.
 Participants can easily withdraw their consent at any time without having to search for it or contact a customer support representative. 
 
-**Related articles**: [Onboarding setup](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Identity verification](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md)
+**Related articles**: [Onboarding setup](./onboarding-setup.md); [Identity verification](./identity-verification.md)
 
