@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Patient status
 ---
-# Patient Status
+# Patient status
 **User**: Admin; Access Controller; Deployment Staff; 
 
 Patient status is a useful metric to add to help different members of the care team see what is happening with specific patients.
