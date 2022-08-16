@@ -42,5 +42,5 @@ Now, when you invite staff to the Clinician Portal, you will find the new role a
 
 ![Select new role](./assets/CustomRoles06.png)
 
-**Related articles**: [Inviting staff and assigning roles](https://github.com/huma-engineering/huma-docs/blob/e6474f6da4a97f0f11773b46b4480c2843759fe9/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Inviting%20staff%20and%20assigning%20roles.md); [Default roles and permissions](https://github.com/huma-engineering/huma-docs/blob/e6474f6da4a97f0f11773b46b4480c2843759fe9/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Default%20roles%20and%20permissions.md)
+**Related articles**: [Inviting staff and assigning roles](data-collection/clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md); [Default roles and permissions](data-collection/clinician-portal/roles-and-permissions/default-roles-and-permissions.md)
 
