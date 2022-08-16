@@ -20,7 +20,7 @@ If you have this feature in your Profile it means you can invite someone to mana
 
 Select **Add a helper** from your profile, then click **Continue**.
 
-On the next screen, enter the helper’s email address and click Invite.
+On the next screen, enter the helper’s email address and click **Invite**.
 
 Your helper will receive their invite and which will ask them to download the Huma App, then will be taken through the sign up and onboarding process. 
 
