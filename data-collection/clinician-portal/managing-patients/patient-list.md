@@ -90,4 +90,4 @@ You can also sort the table using some of the vitals. Just click the arrow in th
 
 Not all metrics allow sorting. Look for the arrow to see which ones have this option.
 
-**Related articles**: [Patient status](https://github.com/huma-engineering/huma-docs/blob/1fab471283fcabdb19c0fa6e6bf473fd7985663f/data-collection/Clinician%20Portal/Managing%20Patients/Patient%20status.md); [Resolving flags](https://github.com/huma-engineering/huma-docs/blob/1fab471283fcabdb19c0fa6e6bf473fd7985663f/data-collection/Clinician%20Portal/Managing%20Patients/Resolving%20flags.md)
+**Related articles**: [Patient status](data-collection/clinician-portal/managing-patients/patient-status.md); [Resolving flags](hdata-collection/clinician-portal/managing-patients/resolving-flags.md)
