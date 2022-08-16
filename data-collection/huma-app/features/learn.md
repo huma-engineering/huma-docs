@@ -15,4 +15,4 @@ Here you can find a series of articles represented by thumbnails. Articles can a
 
 You may also be assigned Learn content via a module. These are resources that have been recommended by your care team in order to help you understand more about the health data being collected. Just click the link inside the module to go to the assigned Learn content.
 
-**Related articles**: [Configuring Learn sections](data-collection/admin-portal/managing-deployments/configuring-the-content/learn-sections.md)
+**Related articles**: [Configuring Learn sections](../../admin-portal/managing-deployments/configuring-the-content/learn-sections.md)
