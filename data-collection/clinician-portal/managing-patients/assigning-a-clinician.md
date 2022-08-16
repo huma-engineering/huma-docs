@@ -17,4 +17,4 @@ In the pop-out window, search for the clinicians you want to assign and check th
 
 Click the **Assign Clinicians** button and the assignment is complete.
 
-**Related articles**: [Inviting patients](data-collection/clinician-portal/roles-and-permissions/inviting-patients.md)
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md)
