@@ -26,6 +26,6 @@ If you have more than one Organisation on your list, you can switch between them
  
 You will be able to configure the look and feel and functionality of the deployment using the **App Components** and **Overall Settings**.
 
-When you have everything set up as needed, [invite Admin users](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md) to manage the deployment.
+When you have everything set up as needed, [invite Admin users](../tools-and-navigation/inviting-deployment-admins.md) to manage the deployment.
 
-**Related articles**: [Creating a new Organisation](data-collection/admin-portal/managing-organisations/creating-a-new-organisation.md); [Inviting staff (Organisation level)](data-collection/admin-portal/managing-organisations/inviting-staff-to-an-organisation.md); [Inviting staff (Deployment level)](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
+**Related articles**: [Creating a new Organisation](../../managing-organisations/creating-a-new-organisation.md); [Inviting staff (Organisation level)](../../managing-organisations/inviting-staff-to-an-organisation.md); [Inviting staff (Deployment level)](../tools-and-navigation/inviting-deployment-admins.md)
