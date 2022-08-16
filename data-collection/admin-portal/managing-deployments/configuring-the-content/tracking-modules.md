@@ -22,40 +22,40 @@ The table below shows which modules have the threshold option and what data entr
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
 | Anxiety level - GAD-7 | Yes | Manual, followed by calculated | 
-| [Audio Word Recall](data-collection/modules/general/audio-word-recall.md) | No | Manual | 
+| [Audio Word Recall](../../../modules/general/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
-| [BMI](data-collection/modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
-| [Blood glucose](data-collection/modules/physiological/blood-glucose.md) | Yes | Manual | 
-| [Blood pressure](data-collection/modules/physiological/blood-pressure.md) | Yes | Manual |
-| [BodyMeasurement](data-collection/modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
-| [COVID-19 Daily Check-in](data-collection/modules/general/daily-check-in.md) | No | Manual |
+| [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
+| [Blood glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
+| [Blood pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
+| [BodyMeasurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
+| [COVID-19 Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
 | COVID-19 Risk Score | No | Manual; Camera (Happitech), followed by calculated | 
-| [CVD Risk Score](data-collection/modules/risk-scores/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
-| [ECG](data-collection/modules/physiological/ecg.md) | No | Sync (from Kardia) |
+| [CVD Risk Score](../../../modules/risk-scores/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
+| [ECG](../../../modules/physiological/ecg.md) | No | Sync (from Kardia) |
 | ECGHealthKit | Yes | Sync (from Kardia) | 
 | Health Score | No | Manual, followed by calculated | 
-| [Heart rate/ HRV](data-collection/modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
+| [Heart rate/ HRV](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
 | Height Z-Score | No | Manual, followed by calculated | 
 | High-Frequency HR | No | Sync (from Apple Health, Google Fit) | 
 | High-Frequency Step | No | Sync (from Apple Health, Google Fit) | 
-| [Journal](data-collection/modules/general/journal.md) | No | Manual | 
+| [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
-| [Medications](data-collection/modules/physiological/medications.md) | No | Manual | 
+| [Medications](../../../modules/physiological/medications.md) | No | Manual | 
 | Oxford Knee Score | No | Manual, followed by calculated | 
-| [Oxygen saturation](data-collection/modules/physiological/oxygen-saturation.md) | Yes | Manual | 
+| [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | PROMIS Global Health v1.2 | No | Manual, followed by calculated | 
-| [Peak flow](data-collection/modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
-| [Photos](data-collection/modules/general/photos.md) | No | Manual |
+| [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
+| [Photos](../../../modules/general/photos.md) | No | Manual |
 | Pulse Oximetry | Yes | Manual | 
 | Quality of life | No | Manual | 
-| [Respiratory rate](data-collection/modules/physiological/respiratory-rate.md) | Yes | Manual |
-| [Resting Breathing Rate](data-collection/modules/physiological/resting-breathing-rate.md) | No | Manual | 
+| [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
+| [Resting Breathing Rate](../../../modules/physiological/resting-breathing-rate.md) | No | Manual | 
 | Resting heart rate | Yes | Camera (from Happitech) | 
-| [Steps](data-collection/modules/general/steps.md) | No | Sync (from Apple Health or Google Fit) | 
-| [Symptoms](data-collection/modules/general/symptoms.md) | | Manual | 
-| [Temperature](data-collection/modules/physiological/temperature.md) | Yes | Manual |
+| [Steps](../../../modules/general/steps.md) | No | Sync (from Apple Health or Google Fit) | 
+| [Symptoms](../../../modules/general/symptoms.md) | | Manual | 
+| [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
 | Waist to Height | Yes | Manual, followed by calculated | 
-| [Weight](data-collection/modules/physiological/weight.md) | Yes | Manual | 
+| [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
 
 ## Configuring the module
 From the modules list, click the **Edit✎** icon at the end of the row to configure the module.
@@ -116,4 +116,4 @@ If you have entered incomplete data in the **Settings** tab, you will be notifie
 
 ![image](./assets/TrackModule11.png)
 
-Related articles: [Tracking questionnaires](./tracking-questionnaires.md); [Preferred Units](./preferred-units.md); [Track modules](); 
+Related articles: [Tracking questionnaires](./tracking-questionnaires.md); [Preferred Units](./preferred-units.md); [Track modules](../../../huma-app/features/track-modules.md); 
