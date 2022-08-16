@@ -17,4 +17,4 @@ In the pop-out window, search for the clinicians you want to assign and check th
 
 Click the **Assign Clinicians** button and the assignment is complete.
 
-**Related articles**: [Inviting patients](https://github.com/huma-engineering/huma-docs/blob/6a4b3cd6f400d779dbfdf7846a86270a8f3d3f50/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Inviting%20patients.md)
+**Related articles**: [Inviting patients](data-collection/clinician-portal/roles-and-permissions/inviting-patients.md)
