@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: Scheduling appointments 
 ---
-# Scheduling Appointments
+# Scheduling appointments
 **User**: Admin; Deployment Staff; 
 
 The Huma experience connects clinician and patient through the portal’s telemedicine functionality. Options include calling or messaging the patient from within the portal or scheduling appointments.
