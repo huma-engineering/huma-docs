@@ -27,6 +27,6 @@ Click **Send invites** and the user will receive an email with the link that wil
 
 ![image](./assets/InviteStaff05.png)
 
-If you want to give them access to more than one deployment within your organisation, you will need to [invite them at an Organisation level](data-collection/admin-portal/managing-organisations/inviting-staff-to-an-organisation.md).
+If you want to give them access to more than one deployment within your organisation, you will need to [invite them at an Organisation level](../../managing-organisations/inviting-staff-to-an-organisation.md).
 
 **Related articles**: [Creating a new Deployment](../general-settings/creating-a-new-deployment.md); [Inviting staff (Organisations)](../../managing-organisations/inviting-staff-to-an-organisation.md)
