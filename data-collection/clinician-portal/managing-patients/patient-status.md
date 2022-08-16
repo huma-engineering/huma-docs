@@ -19,5 +19,5 @@ Other users can now use the patient status for filtering in order to find specif
 
 ![Status filters](./assets/PatientStatus03.png)
 
-**Related articles**: [Filters and sorting the patient list](https://github.com/huma-engineering/huma-docs/blob/99f12b32f4c6ce6f6e559b261e1899a817077982/data-collection/Clinician%20Portal/Managing%20Patients/Patient%20list.md) 
+**Related articles**: [Filters and sorting the patient list](data-collection/clinician-portal/managing-patients/patient-list.md) 
 
