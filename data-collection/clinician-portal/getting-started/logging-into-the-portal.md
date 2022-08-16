@@ -19,5 +19,5 @@ The first time you log in, we will verify your details using 2-factor authentica
 
 2-factor authentication will be used for subsequent logins but you can check the box **Remember me** to pause the mobile verification step for 2 weeks. 
  
-**Related articles**: [Inviting Deployment Admins](https://github.com/huma-engineering/huma-docs/blob/97029f3643bd48a1d382a6ac8435f9aa9e57d4ec/data-collection/Admin%20Portal/Managing%20Deployments/Tools%20and%20Navigation/Inviting%20Deployment%20Admins.md); [Creating a new Deployment](https://github.com/huma-engineering/huma-docs/blob/97029f3643bd48a1d382a6ac8435f9aa9e57d4ec/data-collection/Admin%20Portal/Managing%20Deployments/General%20Settings/Creating%20a%20new%20Deployment.md); [Inviting staff to the Organisation](https://github.com/huma-engineering/huma-docs/blob/97029f3643bd48a1d382a6ac8435f9aa9e57d4ec/data-collection/Admin%20Portal/Managing%20Organisations/Inviting%20staff%20to%20an%20Organisation.md);
+**Related articles**: [Inviting Deployment Admins](data-collection/admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); [Creating a new Deployment](data-collection/admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md); [Inviting staff to the Organisation](data-collection/admin-portal/managing-organisations/inviting-staff-to-an-organisation.md)
 
