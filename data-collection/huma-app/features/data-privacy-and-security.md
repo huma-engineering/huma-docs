@@ -2,7 +2,7 @@
 sidebar_position: 8
 title: Data privacy and security 
 ---
-Data privacy and security features
+# Data privacy and security features
 **User**: Patient
 
 Huma takes the handling of personal health data very seriously. That is why the App uses all means necessary to protect patient data, providing a number of features and settings so that every patient can take steps to help to keep their data safe and secure.
