@@ -35,4 +35,4 @@ Finally, choose the file format you want to export the data in and click **Expor
 
 ![Export Zip](./assets/ExportData06.png)
 
-**Related articles**: [Tracking modules](https://github.com/huma-engineering/huma-docs/blob/26b5442079c3db8d4e5f370aaf45142e93a09a3e/data-collection/Admin%20Portal/Managing%20Deployments/Configuring%20the%20content/Tracking%20modules.md); [Patient Dashboard](https://github.com/huma-engineering/huma-docs/blob/09f2baf8c646f5735e5b2e6feab9bf59c4d84f7d/data-collection/Clinician%20Portal/Managing%20Health%20Data/Patient%20dashboard.md)
+**Related articles**: [Patient Dashboard](data-collection/clinician-portal/managing-health-data/patient-dashboard.md)
