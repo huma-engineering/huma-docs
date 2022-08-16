@@ -186,4 +186,4 @@ Some questionnaires can be edited and modified, including changing the scoring a
 
 Remember to save any changes you make.
 
-**Related articles**: [Tracking modules](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-modules.md)
+**Related articles**: [Tracking modules](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-modules.md); [Entering your health data](data-collection/huma-app/features/entering-your-health-data.md); [Reviewing questionnaires](data-collection/clinician-portal/managing-health-data/questionnaires.md)
