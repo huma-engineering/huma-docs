@@ -41,4 +41,4 @@ In the following two dropdowns, you can set the day and time that you would like
 Click to **Save changes**. 
 Your new action will now appear on the list along with all your other To dos for this deployment. 
 
-**Related articles**: [Tracking questionnaires](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-questionnaires.md); [Tracking modules](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-modules.md)
+**Related articles**: [Tracking questionnaires](./tracking-questionnaires.md); [Tracking modules](./tracking-modules.md)
