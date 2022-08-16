@@ -55,4 +55,4 @@ Recommended section types are as follows:
    - **Agreement** - This usually comes at the end of the consent form and asks the user to agree to everything contained within it. This section also has space for you to add a privacy policy statement and your terms and conditions.
 - **Consent additional questions** – You can add more questions to your consent form if needed. Click the Add question button and fill in the details in the pop-out window.
 
-**Related articles**: [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Identity verification](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md)
+**Related articles**: [eConsent](./econsent.md); [Identity verification](./identity-verification.md)
