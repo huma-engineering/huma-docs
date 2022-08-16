@@ -17,4 +17,4 @@ You will be asked to confirm the action.
 
 Once your organisation has been archived, you will no longer be able to see it on your portal. However, if you need to retrieve the data at a later date, please contact a Super Admin who will be able to restore it.
 
-**Related articles**: [Creating a new Organisation](data-collection/admin-portal/managing-organisations/creating-a-new-organisation.md); [Exporting the configuration or localisation files](data-collection/admin-portal/managing-deployments/tools-and-navigation/exporting-config-or-localization-files.md)
+**Related articles**: [Creating a new Organisation](./creating-a-new-organisation.md); [Exporting the configuration or localisation files](../managing-deployments/tools-and-navigation/exporting-config-or-localization-files.md)
