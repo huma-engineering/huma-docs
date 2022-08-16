@@ -32,4 +32,4 @@ When a call on Huma does not connect, you will be provided with one of the follo
 
 The patient will receive a missed call notification which will give them the option to rebook the appointment at another time.
 
-**Related articles**: [Messaging patients](https://github.com/huma-engineering/huma-docs/blob/5939f357ccecffb2aa6884313daf5020080ed244/data-collection/Clinician%20Portal/Telemedicine/Messaging%20patients.md); [Scheduling appointments](https://github.com/huma-engineering/huma-docs/blob/676db81273f45bf854cb87f6ff9e63f91d71496e/data-collection/Clinician%20Portal/Telemedicine/Scheduling%20appointments.md)
+**Related articles**: [Messaging patients](data-collection/clinician-portal/telemedicine/messaging-patients.md); [Scheduling appointments](data-collection/clinician-portal/telemedicine/scheduling-appointments.md)
