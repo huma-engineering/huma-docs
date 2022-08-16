@@ -20,4 +20,4 @@ Helpers can be invited by the patient from the Huma App.
 
 Link to [Helper experience](https://www.figma.com/file/6AJeEs7bfU6ITVhJRWJ7SQ/Huma1---App?node-id=3169%3A134023).
 
-**Related articles**: [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md)
+**Related articles**: [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md): [Personal information and account settings](data-collection/huma-app/getting-started/personal-information-account-settings.md)
