@@ -20,8 +20,9 @@ After downloading the app, you will be able to create your account by clicking *
 
 After clicking **Activate Account** or passing through the verification process, you will go to the password screen where you can create your account password. Passwords must be alphanumeric, with at least 8 characters including upper and lowercase. 
 
-If 2-step verification has been configured, you will also need to enter a 6-digit code sent to your mobile number. You can turn 2-step verification on or off from your profile for future logins.
-You can pause 2-factor authentication by checking the box Remember me for 14 days.
+If 2-step verification has been configured, you will also need to enter a 6-digit code sent to your mobile number. You can turn [2-step verification](data-collection/huma-app/features/data-privacy-and-security.md) on or off from your profile for future logins.
+
+You can pause 2-factor authentication by checking the box **Remember me for 14 days**.
 
 ### Onboarding
 
@@ -41,7 +42,7 @@ If you are taking part in clinical trials, you will be required to read the pati
 
 On receipt of your signature, Huma will generate an electronic informed consent (eICF) PDF which you can download from your Profile under Informed consent form.
 
-You can withdraw your consent at any time from your Profile.
+You can withdraw your consent at any time from your [Profile](data-collection/huma-app/getting-started/personal-information-account-settings.md).
 
 ### Helper agreement
 You can allow another party to manage data entry on your behalf if you are unable to use the Huma App yourself. 
@@ -58,4 +59,4 @@ Biometrics is just one of the data security settings that you can manage from yo
 ### Profile Questionnaire
 The Profile Questionnaire asks you for some basic information that will be used to populate your profile. The exact data requested will depend on your [deployment configuration](data-collection/admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md).
 
-**Related articles**: [Configuring the user onboarding](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md)  
+**Related articles**: [Configuring the user onboarding](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Privacy and security settings](data-collection/huma-app/features/data-privacy-and-security.md); [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Data consent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [Identity verification](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md); [Preferred units](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/preferred-units.md); [Helper agreement](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 
