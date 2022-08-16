@@ -42,5 +42,5 @@ Now, when you invite staff to the Clinician Portal, you will find the new role a
 
 ![Select new role](./assets/CustomRoles06.png)
 
-**Related articles**: [Inviting staff and assigning roles](data-collection/clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md); [Default roles and permissions](data-collection/clinician-portal/roles-and-permissions/default-roles-and-permissions.md)
+**Related articles**: [Inviting staff and assigning roles](./inviting-staff-and-assigning-roles.md); [Default roles and permissions](./default-roles-and-permissions.md)
 
