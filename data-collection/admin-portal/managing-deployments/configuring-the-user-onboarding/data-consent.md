@@ -7,7 +7,7 @@ title: Data consent
 
 As the Huma platform processes patient data, it’s important to let them know what is done with that data along with the company privacy policy and terms and conditions. There are three Data Consent onboarding modules within the Huma platform that can be configured to the needs of the organisation. The information you enter here, as well as appearing in the onboarding module, will be accessible to users view links on their Profile page.  
 
-Note that the [eConsent](hdata-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md) module is specifically for patients participating in clinical trials and is required for compliance.
+Note that the [eConsent](./econsent.md) module is specifically for patients participating in clinical trials and is required for compliance.
 ## How it works​
 When creating a new deployment, you can add the **Consent** module by selecting either **Consent or Legitimate Interest**, or by using the **Empty Consent Template** to start from scratch. Please consult the Legal team (legal@huma.com) to determine which is appropriate for your organisation.
 
