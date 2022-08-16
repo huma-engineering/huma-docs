@@ -36,4 +36,4 @@ If you choose the **Upload** option, click the file icon at the end of each line
 
 ![image](./assets/LegalPrivacy04.png)
 
-**Related articles**: [Data consent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [eConsent](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md)
+**Related articles**: [Data consent](../configuring-the-user-onboarding/data-consent.md); [eConsent](../configuring-the-user-onboarding/econsent.md)
