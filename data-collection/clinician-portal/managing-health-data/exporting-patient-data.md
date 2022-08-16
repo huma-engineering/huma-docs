@@ -35,4 +35,4 @@ Finally, choose the file format you want to export the data in and click **Expor
 
 ![Export Zip](./assets/ExportData06.png)
 
-**Related articles**: [Patient Dashboard](data-collection/clinician-portal/managing-health-data/patient-dashboard.md)
+**Related articles**: [Patient Dashboard](./patient-dashboard.md)
