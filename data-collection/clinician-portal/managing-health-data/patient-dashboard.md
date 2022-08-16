@@ -49,4 +49,4 @@ The colour of the line will match the colour on the module tab on the left.
 
 Click on a different module to overlay that vital.
 
-**Related articles**: [Inviting patients](data-collection/clinician-portal/roles-and-permissions/inviting-patients.md); [Configuring tracking modules](data-collection/Admin Portal/Managing Deployments/Configuring the content/Tracking modules.md); [Configuring Questionnaires](data-collection/Admin Portal/Managing Deployments/Configuring the content/Tracking questionnaires.md)  
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Configuring tracking modules](../../admin-portal/managing-deployments/configuring-the-content/tracking-modules.md); [Configuring Questionnaires](../../admin-portal/managing-deployments/configuring-the-content/tracking-questionnaires.md)  
