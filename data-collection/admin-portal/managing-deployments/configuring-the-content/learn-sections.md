@@ -6,6 +6,7 @@ title: Learn sections
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 The Learn section provides patients with a repository of useful articles and other resources to educate and inform them so that they can better understand their symptoms or how to prepare for certain procedures, etc. You can build out your repository for each deployment with your own custom content or link out to useful content from the web.  
+
 Individual articles can also be added to the patient’s to-do list or as related content for tracking modules and questionnaires.
 
 ## How it works
@@ -40,6 +41,6 @@ Click the Learn tab to return to the **Sections** list and add more sections.
 Huma has created the following article on [Letting go of stress and anxiety](https://humatherapeutics.atlassian.net/wiki/spaces/PRODUCT/pages/3526951098/Biobase+Coaching+Content) which can be included in the configuration of any organisation. 
 
 ## Assigning Learn sections
-You will be able to find a list of your Learn sections when configuring [tracking modules](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-modules.md) or [questionnaires](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-questionnaires.md) and will be able to select which ones you want to associate with the module.
+You will be able to find a list of your Learn sections when configuring [tracking modules](./tracking-modules.md) or [questionnaires](./tracking-questionnaires.md) and will be able to select which ones you want to associate with the module.
 
-**Related articles**: [Tracking modules](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-modules.md); [Tracking questionnaires](data-collection/admin-portal/managing-deployments/configuring-the-content/tracking-questionnaires.md)
+**Related articles**: [Tracking modules](./tracking-modules.md); [Tracking questionnaires](./tracking-questionnaires.md)
