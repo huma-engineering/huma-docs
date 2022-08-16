@@ -29,4 +29,4 @@ Click **Done** when you have completed the fields and continue to add more field
 
 ![image](./assets/CustomFields03.png)
 
-**Related articles**: [User profile](data-collection/admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md); [Onboarding setup](data-collection/admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md)
+**Related articles**: [User profile](./user-profile-details.md); [Onboarding setup](../../managing-deployments/configuring-the-user-onboarding/onboarding-setup.md)
