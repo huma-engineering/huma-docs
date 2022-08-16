@@ -43,4 +43,4 @@ Huma has created the following article on [Letting go of stress and anxiety](htt
 ## Assigning Learn sections
 You will be able to find a list of your Learn sections when configuring [tracking modules](./tracking-modules.md) or [questionnaires](./tracking-questionnaires.md) and will be able to select which ones you want to associate with the module.
 
-**Related articles**: [Tracking modules](./tracking-modules.md); [Tracking questionnaires](./tracking-questionnaires.md); [Using the Learn centre](../../huma-app/features/learn.md)
+**Related articles**: [Tracking modules](./tracking-modules.md); [Tracking questionnaires](./tracking-questionnaires.md); [Using the Learn centre](../../../huma-app/features/learn.md)
