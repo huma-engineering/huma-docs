@@ -62,7 +62,7 @@ From here, you manage all your patient information including Track data; **Patie
 ![Patient Overview](./assets/Navigating10.png)
 
 ### Patient Tools
-Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.mdd) or [calling the patient](../telemedicine/calling-patients.md).
+Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.md) or [calling the patient](../telemedicine/calling-patients.md).
 
 ![Patient Tools](./assets/Navigating11.png)
 
