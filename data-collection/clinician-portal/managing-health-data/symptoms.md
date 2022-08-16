@@ -17,4 +17,4 @@ To resolve the red flags, simply click the **Add note / Resolve flags** button a
 
 ![Resolve flags](./assets/TrackSymptoms03.png)
 
-**Related articles**: [Inviting patients](data-collection/Clinician Portal/Roles and Permissions/Inviting patients.md); [Patient Dashboard](data-collection/Clinician Portal/Managing Health Data/Patient dashboard.md); [Questionnaires](data-collection/clinician-portal/managing-health-data/questionnaires.md)  
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Questionnaires](./questionnaires.md)  
