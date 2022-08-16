@@ -19,4 +19,4 @@ The reminder will be logged within the module and you will receive a push notifi
 
 You can edit your reminder at any time. Just click **Edit** to change the time/frequency or to delete the reminder altogether.
 
-**Related articles**: Navigating the app; Responding to questionnaires; Entering health data; Adding photos
+**Related articles**: [Navigating the app](data-collection/huma-app/getting-started/navigating-the-app.md); [Track modules](data-collection/huma-app/features/track-modules.md); [Entering health data](data-collection/huma-app/features/entering-your-health-data.md); [To dos](data-collection/huma-app/features/to-dos.md)
