@@ -30,4 +30,4 @@ In the case of scored questionnaires, you can choose **Chart view** to see a gra
 
 ![Chart view](./assets/Questionnaire06.png)
 
-**Related articles**: [Inviting patients](https://github.com/huma-engineering/huma-docs/blob/6a4b3cd6f400d779dbfdf7846a86270a8f3d3f50/data-collection/Clinician%20Portal/Roles%20and%20Permissions/Inviting%20patients.md); [Patient Dashboard](https://github.com/huma-engineering/huma-docs/blob/da1cf432dfdb7adf7c6954e29226ccac1f237992/data-collection/Clinician%20Portal/Managing%20Health%20Data/Patient%20dashboard.md); [Tracking Symptoms](https://github.com/huma-engineering/huma-docs/blob/da1cf432dfdb7adf7c6954e29226ccac1f237992/data-collection/Clinician%20Portal/Managing%20Health%20Data/Symptoms.md)  
+**Related articles**: [Inviting patients](data-collection/Clinician Portal/Roles and Permissions/Inviting patients.md); [Patient Dashboard](data-collection/Clinician Portal/Managing Health Data/Patient dashboard.md); [Tracking Symptoms](data-collection/Clinician Portal/Managing Health Data/Symptoms.md)  
