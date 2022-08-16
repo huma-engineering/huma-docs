@@ -1,5 +1,5 @@
 ---
-sidebar_poition: 3
+sidebar_position: 3
 title: Clinician Portal
 ---
 
