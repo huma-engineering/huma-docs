@@ -63,4 +63,4 @@ At the bottom of your profile page details, you can find links to licensing and 
 
 ![Privacy Policy link](./assets/YourProfile08.png)
 
-**Related articles**: [Logging into the Portal](data-collection/clinician-portal/getting-started/logging-into-the-portal.md)
+**Related articles**: [Logging into the Portal](./logging-into-the-portal.md)
