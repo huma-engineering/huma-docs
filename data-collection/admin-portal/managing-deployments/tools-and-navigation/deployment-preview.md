@@ -20,6 +20,6 @@ Click the icon and a QR code will appear for you to scan with your phone. Make s
 Click the link that appears on your phone when you scan the QR, this will take you to the sign up screen. The process is the same as when you sign up using a link.
 Review the onboarding process and the rest of the experience and make any changes to the configuration as needed.
 ### Previewing the Clinician Portal
-To preview how the Clinician Portal looks for your deployment, just [invite yourself as an Admin](./inviting-deployment-admins.md) or [Access Controller (Organization)](../managing-organisations/inviting-staff-to-an-organisation.md). 
+To preview how the Clinician Portal looks for your deployment, just [invite yourself as an Admin](./inviting-deployment-admins.md) or [Access Controller (Organization)](../../managing-organisations/inviting-staff-to-an-organisation.md). 
 
 **Related articles**: [Creating a new Deployment](../general-settings/creating-a-new-deployment.md); [Inviting Deployment Admin](./inviting-deployment-admins.md)
