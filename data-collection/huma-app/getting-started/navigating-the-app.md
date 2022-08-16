@@ -17,6 +17,6 @@ The [Track](data-collection/huma-app/features/track-modules.md) page is where us
 
 The [Learn](data-collection/huma-app/features/learn.md) area provides further reading and insights to educate patients. Users can browse the content in the Learn area at any time and specific articles may be recommended to them by their care team. 
 
-The Profile page is where users can find and [edit their personal data](data-collection/huma-app/getting-started/personal-information-account-settings.md), access [privacy and security settings](data-collection/huma-app/features/data-privacy-and-security.md), invite helpers, access their [messages](data-collection/huma-app/features/messages.md) and log out of the app.
+The Profile page is where users can find and [edit their personal data](./personal-information-account-settings.md), access [privacy and security settings](../features/data-privacy-and-security.md), invite helpers, access their [messages](../features/messages.md) and log out of the app.
 
-**Related articles**: [Login and onboarding](data-collection/huma-app/getting-started/login-and-onboarding.md); 
+**Related articles**: [Login and onboarding](./login-and-onboarding.md); 
