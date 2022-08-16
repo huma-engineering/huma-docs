@@ -21,4 +21,4 @@ The edit window will pop out and you can enter your message content.
 
 Clinicians will be able to select from your list of custom messages to communicate important information to their patients .
 
-**Related articles**: [Messaging patients](data-collection/clinician-portal/telemedicine/messaging-patients.md); [Checking messages](data-collection/huma-app/features/messages.md);
+**Related articles**: [Messaging patients](../../../clinician-portal/telemedicine/messaging-patients.md); [Checking messages](../../../huma-app/features/messages.md);
