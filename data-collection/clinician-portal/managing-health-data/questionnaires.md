@@ -30,4 +30,4 @@ In the case of scored questionnaires, you can choose **Chart view** to see a gra
 
 ![Chart view](./assets/Questionnaire06.png)
 
-**Related articles**: [Inviting patients](data-collection/Clinician Portal/Roles and Permissions/Inviting patients.md); [Patient Dashboard](data-collection/Clinician Portal/Managing Health Data/Patient dashboard.md); [Tracking Symptoms](data-collection/Clinician Portal/Managing Health Data/Symptoms.md)  
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Tracking Symptoms](./symptoms.md)  
