@@ -26,4 +26,4 @@ You can find a list of your sent messages in the **Telemedicine** tab. You will 
 
 ![Messages](./assets/Messaging04.png)
 
-**Related articles**: [Configuring messages](https://github.com/huma-engineering/huma-docs/blob/052dca39711e6481e92fb876bc861e502171bcf4/data-collection/Admin%20Portal/Managing%20Deployments/General%20Settings/Configuring%20messages.md); [Scheduling appointments](https://github.com/huma-engineering/huma-docs/blob/676db81273f45bf854cb87f6ff9e63f91d71496e/data-collection/Clinician%20Portal/Telemedicine/Scheduling%20appointments.md); [Calling patients](https://github.com/huma-engineering/huma-docs/blob/ed02d3871dffa8629e34456558259c23de70cdcf/data-collection/Clinician%20Portal/Telemedicine/Calling%20patients.md)
+**Related articles**: [Configuring messages](data-collection/admin-portal/managing-deployments/general-settings/configuring-messages.md); [Scheduling appointments](data-collection/clinician-portal/telemedicine/scheduling-appointments.md); [Calling patients](data-collection/clinician-portal/telemedicine/calling-patients.md)
