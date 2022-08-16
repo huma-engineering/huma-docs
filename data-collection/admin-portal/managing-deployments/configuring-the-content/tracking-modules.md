@@ -116,4 +116,4 @@ If you have entered incomplete data in the **Settings** tab, you will be notifie
 
 ![image](./assets/TrackModule11.png)
 
-Related articles: [Tracking questionnaires](./tracking-questionnaires.md); [Preferred Units](./preferred-units.md); [Track modules](../../../huma-app/features/track-modules.md); 
+Related articles: [Tracking questionnaires](./tracking-questionnaires.md); [Preferred Units](../configuring-the-user-onboarding/preferred-units.md); [Track modules](../../../huma-app/features/track-modules.md); 
