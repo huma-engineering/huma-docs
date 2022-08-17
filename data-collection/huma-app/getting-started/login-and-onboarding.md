@@ -30,12 +30,17 @@ The onboarding process consists of a number of screens that will ask you for inf
 
 ### Data processing agreement
 As the Huma App allows the collection of data from patients, you must provide informed consent to Huma as part of the terms and conditions of using the app.
+
 You will be taken through the terms and conditions and finally asked to consent by checking a box. 
+
+![Data Consent](../../features/account-management/assets/consent-legitimate-interest.svg)
 
 ### ID Verification
 In some cases, it is important to confirm that the person using the app is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular deployment.
 
 There are two possible steps to identity verification; documentation and facial recognition. With the first step, you will need to photograph a form of ID such as a passport or national identity document. The second step is to take a photo of your face. It should take around 60 seconds to complete the verification process and you will be informed via push notification once the process is complete.
+
+![ID verification](../../features/account-management/assets/id-verification.svg)
 
 ### eConsent
 If you are taking part in clinical trials, you will be required to read the patient information leaflet which contains information about the trial and confirm your compliance by signing the electronic informed consent form. 
@@ -49,6 +54,8 @@ You can allow another party to manage data entry on your behalf if you are unabl
 
 You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the App, helpers can enter data into modules in the same way that a patient would.
 
+![Helper agreement](../../features/account-management/assets/helper-agreement.svg)
+
 ### Biometric Login​
 Biometric login offers an alternative to password login, something which can be very useful for patients with memory difficulties or mobility issues.
 
@@ -58,5 +65,6 @@ Biometrics is just one of the data security settings that you can manage from yo
 
 ### Profile Questionnaire
 The Profile Questionnaire asks you for some basic information that will be used to populate your profile. The exact data requested will depend on your [deployment configuration](../../admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md).
+
 
 **Related articles**: [Configuring the user onboarding](../../admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Privacy and security settings](../features/data-privacy-and-security.md); [eConsent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Data consent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [Identity verification](../../admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md); [Preferred units](../../admin-portal/managing-deployments/configuring-the-user-onboarding/preferred-units.md); [Helper agreement](../../admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 
