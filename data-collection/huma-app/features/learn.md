@@ -13,6 +13,8 @@ Resources are added to the Learn centre in the form of links, pdfs and videos. Y
 
 Here you can find a series of articles represented by thumbnails. Articles can also be organised into categories. Just click the thumbnail to open the article (note that the article will open outside of the app, either as a download or in your browser).
 
+![Learn](../../features/navigation/app/assets/learn.svg)
+
 You may also be assigned Learn content via a module. These are resources that have been recommended by your care team in order to help you understand more about the health data being collected. Just click the link inside the module to go to the assigned Learn content.
 
 **Related articles**: [Configuring Learn sections](../../admin-portal/managing-deployments/configuring-the-content/learn-sections.md)
