@@ -15,6 +15,8 @@ Specific privacy and security features are configured by the Admin user for each
 
 You can enable this toggle to ensure that you have to verify your identity every time you use the app, even if you haven’t closed it down. The type of verification required will depend on the device lock procedure e.g. biometrics or passcode. 
 
+![Lock App](../../features/account-management/multiple-factor-authentication/assets/multiple-factor-authentication.svg)
+
 You will be able to decide this when you sign up and can then change the configuration from here in your profile. 
 
 ### Download your data​
