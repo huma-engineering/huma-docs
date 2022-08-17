@@ -11,6 +11,8 @@ The key function of the Huma App Is for collecting patient data and sharing it w
 
 The **Track** screen is accessed via the 🗠 icon on the navigation menu. 
 
+![Track](../../features/navigation/app/assets/track.svg)
+
 The exact modules and questionnaires on the Track page will depend on the deployment configuration and are shown as a list of tiles which the patient can view by scrolling. 
 
 Select the module you want to add your data for and click the **Add** button. 
