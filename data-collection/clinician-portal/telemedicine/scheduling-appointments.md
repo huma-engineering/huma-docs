@@ -7,17 +7,11 @@ title: Scheduling appointments
 
 The Huma experience connects clinician and patient through the portal’s telemedicine functionality. Options include calling or messaging the patient from within the portal or scheduling appointments.
 ## How it works​
+
 On the **Patient Overview** page, click the **Telemedicine** tab and select either **Upcoming Appointments** or **Past Appointments**. 
+Click **Schedule an appointment** to open the scheduling window then select a day and time and click **Add appointment**.
 
-![Appointments area](./assets/Scheduling01.png)
-
-Click **Schedule an appointment** to open the scheduling window.
-
-![Scheduling window](./assets/Scheduling02.png)
-
-Select a day and time for your appointment and click **Add appointment**.
-
-![Date time](./assets/Scheduling03.png)
+![Scheduling window](../../features/telemedicine/assets/cp-telemedicine.gif)
 
 Patients will receive a notification and will need to accept or reject your appointment. The scheduled appointment will show up in the **Upcoming appointments** tab with the status **Pending confirmation** until the patient has accepted it.
 
