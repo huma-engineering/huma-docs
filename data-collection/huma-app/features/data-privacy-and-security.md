@@ -15,7 +15,7 @@ Specific privacy and security features are configured by the Admin user for each
 
 You can enable this toggle to ensure that you have to verify your identity every time you use the app, even if you haven’t closed it down. The type of verification required will depend on the device lock procedure e.g. biometrics or passcode. 
 
-![Lock App](../../features/account-management/multiple-factor-authentication/assets/multiple-factor-authentication.svg)
+![Lock App](../assets/lockapp.png)
 
 You will be able to decide this when you sign up and can then change the configuration from here in your profile. 
 
@@ -37,7 +37,7 @@ If your healthcare provider has enabled biometric login as mandatory, you will b
 ### Legal documentation
 Read about how your data is used and terms and conditions of using the app in the **Legal** section of your profile. Just click **About Huma** to access the documentation.
 
-![Profile](../../features/navigation/app/assets/profile.svg)
+![Profile](../assets/About.png)
 
 ### Withdrawing Consent​
 
