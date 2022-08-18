@@ -13,7 +13,7 @@ The To do/Timeline screen is where you land when you [log into the Huma App](../
 
 Each task on the To do list will indicate the date it became active and they will be listed in order of priority. Once the task is complete (or expires) it will disappear from the timeline. The main list will include the top priority tasks and those upcoming over the next two weeks. The **Previous** list will show previous tasks up to 3 months in the past. 
 
-![To do](../../features/navigation/app/assets/to-do-timeline.svg)
+![To do](../assets/Todo.png)
 
 Pending appointments are also displayed here when they require confirmation, as well as confirmed appointments which are upcoming.
 
