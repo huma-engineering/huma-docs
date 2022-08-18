@@ -11,7 +11,7 @@ The key function of the Huma App Is for collecting patient data and sharing it w
 
 The **Track** screen is accessed via the 🗠 icon on the navigation menu. 
 
-![Track](../../features/navigation/app/assets/track.svg)
+![Track](../assets/Track.png)
 
 The module tiles show the most recent entry recorded. Below that you can see the recommended schedule and the date and time of the last entry. Click the **Add** button (or **Start** in the case of questionnaires) to [enter data](./entering-your-health-data.md) directly or click the tile to see more information.
 
