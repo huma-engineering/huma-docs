@@ -11,7 +11,7 @@ The key function of the Huma App Is for collecting patient data and sharing it w
 
 The **Track** screen is accessed via the 🗠 icon on the navigation menu. 
 
-![Track](../../features/navigation/app/assets/track.svg)
+![Track](../assets/Track.png)
 
 The exact modules and questionnaires on the Track page will depend on the deployment configuration and are shown as a list of tiles which the patient can view by scrolling. 
 
@@ -34,6 +34,8 @@ Open the **Symptoms** module and you will see a list of the symptoms that have b
 
 In the following screens, you will be asked to grade the severity of each symptom on a sliding scale from **mild** to **very severe**. Choose the one that best applies in that moment and click **Next**.
 
+![symptoms](../assets/symptoms.png)
+
 Once you have graded all your symptoms, you’ll see a summary of your responses. If everything is correct, click **Submit** and your responses will be saved along with the time and date for your care team to review. Click **Done** to return back to the Symptoms page. 
 
 Logging your symptoms on a regular basis helps the care team to see patterns and plan your care accordingly.
@@ -52,6 +54,8 @@ Questionnaires allow for more detailed feedback on how you are feeling and give 
 Select the questionnaire that you want to respond to and click the **Add** button.
 
 You will be presented with a series of questions. Select the answer that best represents how you feel and click **Next**.
+
+![questionnaire](../assets/questionnairefjs.png)
 
 Once you have answered all the questions, click **Submit** to share your answers with your care team.
 
