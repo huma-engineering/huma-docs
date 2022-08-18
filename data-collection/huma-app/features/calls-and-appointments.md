@@ -15,7 +15,7 @@ Your care team can also make unscheduled calls which you can choose to accept or
 
 Video calls take place in the Huma App without the need for any additional technology. The camera icon can be used to start and stop the camera and the microphone icon can be used to mute and unmute. The button with the arrow swaps between the front-facing and rear-facing camera. The red phone button ends the call.
 
-![Video call](../../features/telemedicine/real-time-video-calls/assets/real-time-video-calls.svg)
+![Video call](../assets/Calls.png)
 
 Once the call has started, these buttons will disappear but can be brought back by tapping the screen.
 
