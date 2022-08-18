@@ -20,6 +20,8 @@ If data is available, you will see a chart at the top of the module showing all 
 
 You can change the time frame shown by clicking the options on the horizontal axis, showing data across the past **year, month, week, day** or **hour**. Click **Show all data** to see all your past readings in list form.
 
+![Track Temperature](../assets/tracktemp.png)
+
 In the case of non-scored questionnaires or symptoms modules, you won’t see a graph. Click Previous entries to see past responses to these modules. 
 
 ### Schedule
