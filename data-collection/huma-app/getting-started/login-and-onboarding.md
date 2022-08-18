@@ -33,19 +33,21 @@ As the Huma App allows the collection of data from patients, you must provide in
 
 You will be taken through the terms and conditions and finally asked to consent by checking a box. 
 
-![Data Consent](../../features/account-management/assets/consent-legitimate-interest.svg)
+![Data Consent](../assets/econsent.png)
 
 ### ID Verification
 In some cases, it is important to confirm that the person using the app is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular deployment.
 
 There are two possible steps to identity verification; documentation and facial recognition. With the first step, you will need to photograph a form of ID such as a passport or national identity document. The second step is to take a photo of your face. It should take around 60 seconds to complete the verification process and you will be informed via push notification once the process is complete.
 
-![ID verification](../../features/account-management/assets/id-verification.svg)
+![ID verification](../assets/idverification.png)
 
 ### eConsent
 If you are taking part in clinical trials, you will be required to read the patient information leaflet which contains information about the trial and confirm your compliance by signing the electronic informed consent form. 
 
 On receipt of your signature, Huma will generate an electronic informed consent (eICF) PDF which you can download from your Profile under Informed consent form.
+
+![econsent](../assets/informedconsent.png)
 
 You can withdraw your consent at any time from your [Profile](./personal-information-account-settings.md).
 
@@ -54,7 +56,7 @@ You can allow another party to manage data entry on your behalf if you are unabl
 
 You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the App, helpers can enter data into modules in the same way that a patient would.
 
-![Helper agreement](../../features/account-management/assets/helper-agreement.svg)
+![Helper agreement](../assets/helpertrio.png)
 
 ### Biometric Login​
 Biometric login offers an alternative to password login, something which can be very useful for patients with memory difficulties or mobility issues.
