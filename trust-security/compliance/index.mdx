@@ -32,6 +32,34 @@ export const list = [
     href: '/trust-security/compliance/iso13485', 
     filters: {region: ['UK', 'All regions'], industry: ['Healthcare'], area: ['Risk management']},
   },
+  {
+    type: 'link',
+    label: 'Cyber Essentials',
+    label2: 'Cyber Essentials',
+    href: '/trust-security/compliance/cyber-essentials', 
+    filters: {region: ['UK',], industry: ['Healthcare'], area: ['Risk management', 'Security']},
+  },
+  {
+    type: 'link',
+    label: 'Cyber Essentials Plus',
+    label2: 'Cyber Essentials Plus',
+    href: '/trust-security/compliance/cyber-essentials-plus', 
+    filters: {region: ['UK',], industry: ['Healthcare'], area: ['Risk management', 'Security']},
+  },
+  {
+    type: 'link',
+    label: 'Security Overview',
+    label2: 'Security Overview',
+    href: '/trust-security/compliance/Overview', 
+    filters: {region: ['UK',], industry: ['Healthcare'], area: ['Risk management', 'Security']},
+  },
+  {
+    type: 'link',
+    label: 'Control Frameworks',
+    label2: 'Control Frameworks',
+    href: '/trust-security/compliance/control-frameworks', 
+    filters: {region: ['UK',], industry: ['Healthcare'], area: ['Risk management', 'Security']},
+  },
 ]
 
 <CardList items={list} filters={filters} cols={3} learnMore/>
