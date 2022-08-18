@@ -13,18 +13,18 @@ Depending on the app configuration, there will be up to four different areas, ac
 
 The default homepage is usually the [To do/Timeline](../features/to-dos.md) page. This is where patients will see any actionable items assigned to them by the care teams, such as appointment request or modules pending data collection.
 
-![To do](../../features/navigation/app/assets/to-do-timeline.svg)
+![To do](../assets/Todo.png)
 
 The [Track](../features/track-modules.md) page is where users can find a list of all their assigned modules and questionnaires. Patients can find information about the modules here and set specific reminders for entering their data. 
 
-![Track](../../features/navigation/app/assets/track.svg)
+![Track](../assets/Track.png)
 
 The [Learn](../features/learn.md) area provides further reading and insights to educate patients. Users can browse the content in the Learn area at any time and specific articles may be recommended to them by their care team. 
 
-![Learn](../../features/navigation/app/assets/learn.svg)
+![Learn](../assets/Learn.png)
 
 The Profile page is where users can find and [edit their personal data](./personal-information-account-settings.md), access [privacy and security settings](../features/data-privacy-and-security.md), invite helpers, access their [messages](../features/messages.md) and log out of the app.
 
-![Profile](../../features/navigation/app/assets/profile.svg)
+![Profile](../assets/Profile.png)
 
 **Related articles**: [Login and onboarding](./login-and-onboarding.md); 
