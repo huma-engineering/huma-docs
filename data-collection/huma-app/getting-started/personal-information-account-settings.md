@@ -8,7 +8,7 @@ The **Profile** screen contains the patient’s personal information along with 
 ## How it works​
 From the App, access your **Profile** screen using the menu icon 🗣. 
 
-![Profile](../../features/navigation/app/assets/profile.svg)
+![Profile](../assets/Profile.png)
 
 ### Personal & account details​
 
@@ -20,7 +20,7 @@ You can also edit the mobile number used for 2-factor authentication and can cha
 
 If you have this feature in your Profile it means you can invite someone to manage data entry in the Huma App on your behalf. 
 
-![Helper](../../features/navigation/app/assets/proxy-helper.svg)
+![Helper](../assets/Helper.png)
 
 Select **Add a helper** from your profile, then click **Continue**.
 
@@ -45,6 +45,8 @@ From the **Personal Documents** screen, just select **Add new document**. You wi
 
 ### Messages and Appointments
 You can access your [messages](../features/messages.md) and [appointments](../features/calls-and-appointments.md) from your Profile. 
+
+![Messages](../assets/Messages.png)
 
 ### Data privacy and account settings
 There are a number of features and settings in your Profile to help keep your data safe and secure. See the [data privacy and account security](../features/data-privacy-and-security.md) article for more details.
