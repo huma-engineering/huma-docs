@@ -34,7 +34,7 @@ From person to person, how a particular vital is measured varies, so the Huma ap
 
 As Patients receive documents relating to their healthcare, e.g. vaccination cards, they can be uploaded to their Care Teams via the Personal Documents feature. By selecting "Personal Documents", and "Add new document", Patients are prompted to add either a PDF from the device or a photo from the camera or device's library.
 
-![Adding Personal Documents in the Huma App](./assets/personal-documents.svg)
+
 
 #### Appointments
 
@@ -58,7 +58,7 @@ Patients are required to periodically authenticate with an additional mechanism 
 
 Patients can receive support in-app by connecting with one of the teams in a live chat, and gain access to support documentation.
 
-![Support in the Huma App](./assets/support.svg)
+
 
 #### Device Integration
 
