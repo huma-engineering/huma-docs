@@ -1,0 +1,89 @@
+---
+sidebar_position: 2
+---
+
+### Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma/ui 
+```
+
+yarn:
+```bash
+yarn add @huma/ui
+```
+
+### Project Setup
+
+Once dependency installed we need to setup project modules. There are multiple options to do that.
+If it is expected to install all package modules, we can import full `HumaUIModule` package. Here is an example:
+
+```typescript
+import { HumaUiModule } from '@huma/ui';
+...
+
+@NgModule({
+  imports: [HumaUiModule]
+})
+export class AppModule {}
+```
+
+The other way would be installing only required packages to reduce application dist size. To do that, import specific module into your propect.
+
+```typescript
+import { HumaButton } from '@huma/ui';
+...
+
+@NgModule({
+  imports: [HumaButton]
+})
+export class AppModule {}
+```
+
+### Styles
+
+There are a multiple ways on how to import required styles for SDK. First way would be importing required style over LESS/SCSS import statement.
+For that you may edit global style file to include:
+
+```less
+@import "@huma/ui/themes/default/index.less";
+@import "@huma/ui/themes/default/notification.less";
+```
+
+The other way around would be editing `angular.json` file of the project to include build options with new styles:
+
+```json
+"<angular-project-name>": {
+  "build": {
+    "options": {
+      ...
+      "styles": [
+        "node_modules/@huma/ui/themes/default/index.less",
+        "node_modules/@huma/ui/themes/default/notification.less'",
+      ]
+    }
+  }
+}
+```
+
+### Assets
+
+To import all required assets from SDK, we need to modify project `angular.json` settings. Here is an example how to do that:
+
+```json
+"<angular-project-name>": {
+  "build": {
+    "options": {
+      ...
+      "assets": {
+        "glob": "**/*",
+        "input": "./projects/huma-ui/assets",
+        "output": "/assets/"
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,46 @@
+---
+sidebar_position: 2
+---
+
+### Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma/charts 
+```
+
+yarn:
+```bash
+yarn add @huma/charts
+```
+
+### Project Setup
+
+Once dependency installed we need to setup project modules. There are multiple options to do that.
+If it is expected to install all package modules, we can import full `HumaChartModule` package. Here is an example:
+
+```typescript
+import { HumaChartModule } from '@huma/chart';
+...
+
+@NgModule({
+  imports: [HumaChartModule]
+})
+export class AppModule {}
+```
+
+If it is required to configure chart library before initializing the module, it is possible to use `forRoot()` method of the `HumaChartModule` class.
+
+```typescript
+import { HumaChartModule } from '@huma/chart';
+...
+
+@NgModule({
+  imports: [HumaChartModule.forRoot({ amchartLicense: 'XXXXXXXXX' })]
+})
+export class AppModule {}
+```
+
+Chart configuration supports only `amchartLicense`.

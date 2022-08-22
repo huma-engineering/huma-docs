@@ -1,0 +1,57 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.menuExternalLink {
+  align-items: center;
+}
+
+
+.menuLink {
+  position: relative;
+}
+
+.menuLink::after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  background-color: var(--ifm-menu-color);
+  transition: opacity 600ms ease;
+}
+
+.menuLink:global(.menu__link--active)::after, .menuLink:global(.menu__list-item-collapsible--active)::after {
+  opacity: 1;
+}
+
+.menuLink:global(.menu__link--active)::before {
+  transform: scaleX(1) rotate(-180deg);
+}
+
+@media (min-width: 997px) {
+  .menuLinkText {
+    cursor: initial;
+  }
+  .menuLinkText:hover {
+    background: none;
+  }
+}
+
+@media (max-width: 997px) {
+  .menuLink::after,
+  .menuLink::before {
+    display: none;
+  }
+}
+
+@media (min-width: 997px) {
+  .menuHtmlItem {
+    padding: var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+  }
+}
