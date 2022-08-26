@@ -22,8 +22,6 @@ Select the reason that best describes why you want to stop monitoring the patien
 
 The patient will be informed that they have been offboarded and will no longer have access to the Huma App. If they try to log in, they will see a message giving some of the reasons why they may have been offboarded. 
 
-![Offboarding patient](../../features/account-management/offboarding/assets/offboarding.svg)
-
 However, offboarded patients can still be found in the Clinician Portal by selecting **Offboarded patients** in the **Patient type** filters.
 
 ![Filters menu](./assets/OffboardPatient04.png)
