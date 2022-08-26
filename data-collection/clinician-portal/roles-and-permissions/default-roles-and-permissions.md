@@ -9,8 +9,6 @@ The Clinician Portal is one easy-to-use interface for all care team and administ
 
 The portal has a number of default user roles which can be assigned to users via invitation. Some of these roles (Admin and Access Controller) can also be invited from the Admin Portal. 
 
-![Roles and permissions](../../features/account-management/assets/roles-permissions.svg)
-
 This article explains the specific permissions associated with each of these roles.
 ## Clinician Portal user roles and permissions
 
