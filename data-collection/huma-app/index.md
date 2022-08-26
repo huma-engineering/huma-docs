@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: Huma App
 ---
 The Huma App is the place where patients enter their health data. The information provided via the App will be displayed in the Clinician Portal for care and research teams to track. 
