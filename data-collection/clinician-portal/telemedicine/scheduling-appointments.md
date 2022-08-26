@@ -18,8 +18,6 @@ Patients will receive a notification and will need to accept or reject your appo
 ![Pending confirmation](./assets/Scheduling06.png)
 
 Once accepted, the status will change to **Scheduled** and you will see a **Join call** button. Use this button to call the patient any time before the scheduled appointment.
-
-![Scheduled appointment](../../features/navigation/portal/assets/patient-telemedicine.svg)
  
 If you want to reschedule or delete the appointment, open the menu at the end of the row.
 
