@@ -5,7 +5,8 @@ title: Exporting patient data
 # Exporting patient data
 **User**: Admin; Deployment Staff; Organisation staff
 
-Users in the Clinician Portal can export patient data so that it can be used to show results, for reports, etc.
+Patient data can be exported from the Clinician Portal and used to show results, for reports, etc.
+
 ## How it works​
 On the **Patient Overview** screen, open the menu at the top right and select **Export data**.
 
@@ -14,11 +15,11 @@ On the **Patient Overview** screen, open the menu at the top right and select **
 ### Select patient(s)
 In the edit window you can select the patient that you currently have open, add other patients, or select **All patients**. 
 
-To add another patient, just start typing the patient name or email address and a list of patients will let you select the patient you want to add.
+To add another patient, just start typing the patient name or email address then select the patient you want to add.
 
 ![Select patients](./assets/ExportData02.png)
 
-Check the box **Remove identifiable information** if you want to export only the data points and protect the patient identity. If you don’t have permission to view identifiable information, this box will be checked by default.
+Check the box **Remove identifiable information** if you want to export only the data points and protect the patient identity. If you don’t have permission to view identifiable information, this box will be checked by default and will not be editable.
 
 ![Remove info](./assets/ExportData03.png)
 
