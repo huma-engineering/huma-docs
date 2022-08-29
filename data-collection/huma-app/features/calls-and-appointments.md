@@ -5,15 +5,21 @@ title: Calls and appointments
 # Calls and appointments
 **User**: Patient
 
-Patients sometimes need additional support from their clinician in the form of direct consultation. The Huma App facilitates this with the Telemedicine function which permits secure video and audio calls. Clinicians can [schedule an appointment](../../clinician-portal/telemedicine/scheduling-appointments.md) or [call their patient](../../clinician-portal/telemedicine/calling-patients.md) directly from the Telemedicine section of the Clinician Portal.
+Patients sometimes need additional support from their care team in the form of direct consultation. The Huma App facilitates this with the Telemedicine function which permits secure video and audio calls. Care teams can [schedule appointments](../../clinician-portal/telemedicine/scheduling-appointments.md) or [call their patient](../../clinician-portal/telemedicine/calling-patients.md) directly from the Telemedicine section of the Clinician Portal.
 
 ## How it works​
 
-When someone from your care team schedules an appointment with you, you will receive a push notification and see a new task on the To do list. If you are happy with the time suggested, click **Accept** and it becomes a scheduled appointment. You will be contacted at the scheduled time. If the proposed schedule is not good for you, you can simply reject it. Your care team will be informed and will propose another schedule.
+When someone from your care team schedules an appointment with you, you will receive a push notification and see a new task on your To do list. If you are happy with the time suggested, click **Accept**. It then becomes a scheduled appointment and you will be contacted at the scheduled time. 
 
-Your care team can also make unscheduled calls which you can choose to accept or reject directly. If you reject a call or miss it for some other reason, you will receive a missed call notification
+If the proposed schedule is not good for you, you can simply reject it. Your care team will be informed and will propose another schedule.
 
-Video calls take place in the Huma App without the need for any additional technology. The camera icon can be used to start and stop the camera and the microphone icon can be used to mute and unmute. The button with the arrow swaps between the front-facing and rear-facing camera. The red phone button ends the call.
+You can also receive unscheduled calls from your care team which you can choose to accept or reject directly. If you reject a call or miss it for some other reason, you will receive a missed call notification
+
+Video calls take place in the Huma App without the need for any additional technology. The functionality is very simple:
+- The camera icon is used to start and stop the camera 
+- The microphone icon is used to mute and unmute the mic 
+- The button with the arrow lets you swap between the front-facing and rear-facing camera 
+- The red phone button ends the call
 
 ![Video call](../assets/Calls.png)
 
