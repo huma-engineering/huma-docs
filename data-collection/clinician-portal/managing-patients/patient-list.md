@@ -26,14 +26,14 @@ Filters are split into categories: **Patient type** and **DOB** will always appe
 
 You can only select one option from the Patient type filters. The default view is to list **All patients**.
 ### Gender
-The default view is to list all genders, but you can choose any combination of options. 
+You can also filter the patient list by gender. The default view is to list all genders, but you can choose any combination of options. 
 
 Because deployments can assign different gender categories depending on what terms are used in a specific organisation, the **‘other’** category includes all genders not covered by **male** and **female**.
 
 ![Gender](./assets/PatientList03.png)
 
 ### DOB / Surgery Date
-There are two date range filters that allow you to search for patients either by date of birth or by the date of their surgery.
+There are two date range filters that allow you to search for patients; by date of birth or by the date of their surgery.
 
 ![DOB and Surgery](./assets/PatientList04.png)
 
@@ -57,7 +57,7 @@ The list is now filtered to your specifications and you can see the filters you 
 
 ![Filters bar](./assets/PatientList08.png)
 
-Once you have the filters you can manage them from the top of the patient list. Just click the filter dropdown to select a different option. 
+Once you have the filters configured, you can manage them from the top of the patient list. Just click the filter dropdown to change your selection. 
 
 ![Gender dropdown](./assets/PatientList09.png)
 
