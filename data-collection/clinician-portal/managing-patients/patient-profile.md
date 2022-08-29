@@ -4,6 +4,7 @@ title: Patient profile
 ---
 # Patient profile
 **User**: Admin; Deployment staff
+
 Users with permissions can view patient profile information and may also be able to edit that information.
 ## How it works​
 On the **Patient Overview**, select the **Profile** tab.
