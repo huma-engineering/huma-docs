@@ -5,7 +5,7 @@ title: Entering your health data
 # Entering your health data
 **User**: Patient, Helper
 
-The key function of the Huma App Is for collecting patient data and sharing it with care teams. The Track screen is where patients can access all modules in order to enter their data, respond to questionnaires and set reminders.
+The key function of the Huma App is for collecting patient data and sharing it with care teams. The Track screen is where patients can access all modules in order to enter their data, respond to questionnaires and set reminders.
 
 ## How it works​
 
@@ -22,6 +22,8 @@ Depending on the type of data being collected you will have the choice of enteri
 ### Adding data manually
 
 To add data manually, just click the **Add** button and enter the data by inputting it to the text field. The date and time will be automatically set to the current date and time and this should match the time the data was taken. If the data was taken previous to data entry, make sure you set the date and time to match.
+
+![Track](../assets/ManualEntry.png)
 
 ### Adding data using the camera
 
