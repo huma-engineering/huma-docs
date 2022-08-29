@@ -9,7 +9,7 @@ Huma takes the handling of personal health data very seriously. That is why the 
 
 ## How it works​
 
-Specific privacy and security features are configured by the Admin user for each Deployment and may contain some or all of the following. 
+Specific privacy and security features are configured by the Admin user for each deployment so your setup may contain some or all of the following. 
 
 ### Lock app when not in use​
 
@@ -21,11 +21,12 @@ You will be able to decide this when you sign up and can then change the configu
 
 ### Download your data​
 
-Every patient in Huma has a right to their data and you can choose to export them in CSV or PDF format from the Profile page. Select **Download your data** and, on the next screen, just click **Request a download**. The data will take a few minutes to download and you will be informed via a notification once the document is ready.
+Every patient in Huma has a right to their data and you can choose to export it in CSV or PDF format from the Profile page. Select **Download your data** and, on the next screen, just click **Request a download**. The data will take a few minutes to download and you will be informed via a notification once the document is ready.
 
 ### Two-step verification​
 
-You can enable this toggle to ensure that you have to verify your identity via a 2-step process when accessing the app. The first verification is with email and password, and the second is via a 4-digit code sent to your mobile number. As such, you must have a working mobile number added to your profile.  
+You can enable this toggle to ensure that you have to verify your identity via a 2-step process when accessing the app. The first verification is with email and password, and the second is via a 4-digit code sent to your mobile number. As such, you must have a working mobile number added to your profile.
+
 You will be asked to enable this on signup and can then change the configuration from your profile. 
 
 ### Biometric login
