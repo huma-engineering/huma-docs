@@ -23,11 +23,11 @@ Depending on the type of data being collected you will have the choice of enteri
 
 To add data manually, just click the **Add** button and enter the data by inputting it to the text field. The date and time will be automatically set to the current date and time and this should match the time the data was taken. If the data was taken previous to data entry, make sure you set the date and time to match.
 
-![Track](../assets/ManualEntry.png)
-
 ### Adding data using the camera
 
 Some health vitals can be collected using the camera on your phone. For example, heart rate can be taken by placing your finger over the camera lens. Open the module and select **Collect from camera** then simply follow the instructions to take your reading. Once complete, it will be recorded automatically with the date and time.
+
+![heart rate](../assets/HeartRate.png)
 
 ### Adding symptoms
 The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. 
@@ -44,6 +44,8 @@ Logging your symptoms on a regular basis helps the care team to see patterns and
 
 ### Adding photos
 Click the **Photos** module and click **Add** to add your photo. To add your photo directly using the camera on your device, click **Take photo**.
+
+![photos](../assets/AddPhoto.png)
 
 Use the **Photo library** option to select a photo you have already taken on your device.
 
