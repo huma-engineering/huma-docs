@@ -5,7 +5,7 @@ title: Calling patients
 # Calling patients
 **User**: Admin; Deployment Staff; 
 
-The Huma experience connects clinician and patient through the portal’s telemedicine functionality. Clinicians can schedule video and voice calls with their patients or call them directly, without an appointment.
+The Huma experience connects clinician and patient through the portal’s telemedicine functionality. Care teams can schedule video and voice calls with their patients, or call them directly without an appointment.
 
 ## How it works​
 On the **Patient Overview** page, open the patient dropdown menu and select **Call patient**.
@@ -15,6 +15,8 @@ On the **Patient Overview** page, open the patient dropdown menu and select **Ca
 Click **Confirm** on the pop-up window and make sure your browser settings allow camera and microphone use. You can minimise the call window so you can take notes and view the patient’s data during the conversation. Mute the call with the microphone button and use the camera icon to enable or disable the video recording.
 
 The patient will receive the call as a standard video or audio call. 
+
+## Past and upcoming appointments
 
 You can review your call history with the patient in the **Past Appointments** tab of the **Telemedicine** area of the Patient Overview. Unanswered attempts or other unsuccessful calls will not be stored.
 
