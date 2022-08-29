@@ -22,7 +22,7 @@ You can change the time frame shown by clicking the options on the horizontal ax
 
 ![Track Temperature](../assets/tracktemp.png)
 
-In the case of non-scored questionnaires or symptoms modules, you won’t see a graph. Click Previous entries to see past responses to these modules. 
+In the case of non-scored questionnaires or symptoms modules, you won’t see a graph. Click **Previous entries** to see past responses to these modules. 
 
 ### Schedule
 
