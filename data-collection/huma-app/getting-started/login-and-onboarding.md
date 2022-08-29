@@ -7,7 +7,7 @@ title: Login and onboarding
 
 The Huma sign-up process is intuitive and accessible, enabling patients, and people involved in clinical trials to easily create their account and get started.
 
-The onboarding steps are configured to ensure all the essential information is collected from the patient at the outset, ensuring all their needs and capabilities are accounted for.
+The onboarding steps are configured so that all the essential information is collected from the patient at the outset, ensuring all their needs and capabilities are accounted for.
 ## How it works​
 You will be invited to the Huma App by email or direct link from your care team. 
 ### Login
@@ -38,18 +38,18 @@ You will be taken through the terms and conditions and finally asked to consent 
 ### ID Verification
 In some cases, it is important to confirm that the person using the app is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular deployment.
 
-There are two possible steps to identity verification; documentation and facial recognition. With the first step, you will need to photograph a form of ID such as a passport or national identity document. The second step is to take a photo of your face. It should take around 60 seconds to complete the verification process and you will be informed via push notification once the process is complete.
+There are two possible steps to identity verification - documentation and facial recognition. With the first step, you will need to photograph a form of ID such as a passport or national identity document. The second step is to take a photo of your face. It should take around 60 seconds to complete the verification process and you will be informed via push notification once the process is complete.
 
 ![ID verification](../assets/idverification.png)
 
 ### eConsent
 If you are taking part in clinical trials, you will be required to read the patient information leaflet which contains information about the trial and confirm your compliance by signing the electronic informed consent form. 
 
-On receipt of your signature, Huma will generate an electronic informed consent (eICF) PDF which you can download from your Profile under Informed consent form.
+On receipt of your signature, Huma will generate an electronic informed consent form(eICF) PDF which you can download from your Profile under **Informed consent form**.
 
 ![econsent](../assets/informedconsent.png)
 
-You can withdraw your consent at any time from your [Profile](./personal-information-account-settings.md).
+You can withdraw your consent at any time from your [Profile](../features/data-privacy-and-security.md).
 
 ### Helper agreement
 You can allow another party to manage data entry on your behalf if you are unable to use the Huma App yourself. 
@@ -66,7 +66,7 @@ Depending on the device being used, biometric login could be via fingerprints or
 Biometrics is just one of the data security settings that you can manage from your **Profile** page under **Account**. On enabling the **Two-step verification** toggle, you will be able to set up your biometric login.
 
 ### Profile Questionnaire
-The Profile Questionnaire asks you for some basic information that will be used to populate your profile. The exact data requested will depend on your [deployment configuration](../../admin-portal/managing-deployments/general-settings/creating-a-new-deployment.md).
+The Profile Questionnaire asks you for some basic information that will be used to populate your profile. The exact data requested will depend on your [deployment configuration](../../admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md).
 
 
-**Related articles**: [Configuring the user onboarding](../../admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Privacy and security settings](../features/data-privacy-and-security.md); [eConsent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Data consent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [Identity verification](../../admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md); [Preferred units](../../admin-portal/managing-deployments/configuring-the-user-onboarding/preferred-units.md); [Helper agreement](../../admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 
+**Related articles**: [Onboarding setup](../../admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Privacy and security settings](../features/data-privacy-and-security.md); [eConsent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Data consent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [Identity verification](../../admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md); [Preferred units](../../admin-portal/managing-deployments/configuring-the-user-onboarding/preferred-units.md); [Helper agreement](../../admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 
