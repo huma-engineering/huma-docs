@@ -6,4 +6,4 @@ title: Telemedicine
 
 Huma's Telemedicine feature allows care teams and patients to connect through the portal via messaging and live calls.
 
-This section will explain how to use the messaging feature, how to schedule appointments and call patients.
+This section will explain how to use the [messaging](./messaging-patients.md) feature, how to [schedule appointments](./scheduling-appointments.md) and [call patients](./calling-patients.md).
