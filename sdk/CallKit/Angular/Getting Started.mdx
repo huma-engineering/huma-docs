@@ -8,12 +8,12 @@ First thing is to install huma package into the project. To do that, we can use 
 
 npm:
 ```bash
-npm install @huma/call-kit
+npm install @huma-engineering/call-kit
 ```
 
 yarn:
 ```bash
-yarn add @huma/call-kit
+yarn add @huma-engineering/call-kit
 ```
 
 ## Project Setup
@@ -22,7 +22,7 @@ Once dependency installed we are able to use `HumaCallKitModule` to add call kit
 To provide proper configuration `forRoot()` method should be used as folowing:
 
 ```typescript
-import { HumaCallKitModule, CallKitConfig } from '@huma/call-kit';
+import { HumaCallKitModule, CallKitConfig } from '@huma-engineering/call-kit';
 ...
 const CALL_KIT_CONFIG: CallKitConfig = {
   apiBaseUrl: 'https://qaapi.humaapp.io',
