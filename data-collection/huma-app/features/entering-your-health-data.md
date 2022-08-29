@@ -43,11 +43,10 @@ Once you have graded all your symptoms, you’ll see a summary of your responses
 Logging your symptoms on a regular basis helps the care team to see patterns and plan your care accordingly.
 
 ### Adding photos
-Click the **Photos** module and click **Add** to add your photo. To add your photo directly using the camera on your device, click **Take photo**.
+Click the **Photos** module and click **Add** to add your photo. To add your photo directly using the camera on your device, click **Take photo** or 
+use the **Photo library** option to select a photo you have already taken on your device.
 
 ![photos](../assets/AddPhoto.png)
-
-Use the **Photo library** option to select a photo you have already taken on your device.
 
 Once you have added your photo, you can type a note to explain what you are showing, then click **Submit**.
 
