@@ -5,9 +5,9 @@ title: Symptoms
 # Tracking Symptoms
 **User**: Admin; Deployment staff; Organisation staff
 
-As well as data points from tracking modules, Huma also collects symptoms reported by the patient and tracks them with time/date stamps and severity grading. Symptoms can be set up from the Admin Portal so that these can be customised to the needs of the specific deployment.
+As well as data points from tracking modules, Huma also collects symptoms reported by the patient and tracks them with time/date stamps and severity grading. Symptoms can be set up from the Admin Portal and customised to the needs of the specific deployment.
 ## How it works​
-On the **Patient Dashboard**, look for the Symptoms module. The module tile shows the total symptoms which have been recorded in each of the RAG thresholds. 
+On the Patient Dashboard, look for the **Symptoms** module. The module tile shows the total symptoms which have been recorded in each of the RAG thresholds. 
 
 ![Patient Dashboard](./assets/TrackSymptoms01.png)
 
