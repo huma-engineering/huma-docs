@@ -11,19 +11,19 @@ The main objective of the Huma App is to give patients the ability to record the
 
 Depending on the app configuration, there will be up to four different areas, accessible via the navigation menu at the bottom.
 
-The default homepage is usually the [To do/Timeline](../features/to-dos.md) page. This is where patients will see any actionable items assigned to them by the care teams, such as appointment request or modules pending data collection.
+The default homepage is usually the [To do/Timeline](../features/to-dos.md) page. This is where you will see any actionable items assigned to you by the care team, such as appointment request or modules pending data collection.
 
 ![To do](../assets/Todo.png)
 
-The [Track](../features/track-modules.md) page is where users can find a list of all their assigned modules and questionnaires. Patients can find information about the modules here and set specific reminders for entering their data. 
+The [Track](../features/track-modules.md) page is where you can find a list of all your assigned modules and questionnaires. You can find information about the modules [set specific reminders](../features/setting-reminders.md) for entering your data. 
 
 ![Track](../assets/Track.png)
 
-The [Learn](../features/learn.md) area provides further reading and insights to educate patients. Users can browse the content in the Learn area at any time and specific articles may be recommended to them by their care team. 
+The [Learn](../features/learn.md) area provides further reading and insights. Browse the content in the Learn area at any time or wait for specific recommendations from your care team. 
 
 ![Learn](../assets/Learn.png)
 
-The Profile page is where users can find and [edit their personal data](./personal-information-account-settings.md), access [privacy and security settings](../features/data-privacy-and-security.md), invite helpers, access their [messages](../features/messages.md) and log out of the app.
+The Profile page is where you can find and [edit your personal data](./personal-information-account-settings.md), access [privacy and security settings](../features/data-privacy-and-security.md), invite helpers, access [messages](../features/messages.md) and log out of the app.
 
 ![Profile](../assets/Profile.png)
 
