@@ -19,7 +19,7 @@ The page is divided into sections: **Personal details**, **Contact information**
 Edit the name as it is shown on the interface to colleagues and patients.
 
 ### Contact Information
-You can edit your mobile number that is used as part of the 2-factor authentication process. Don’t forget to include the area code in your phone number. Your mail is set as your username so that cannot be modified.
+You can edit your mobile number that is used as part of the 2-factor authentication process. Don’t forget to include the area code in your phone number. Your email is set as your username so that cannot be modified.
 
 ![Contact Info](./assets/YourProfile03.png)
 
