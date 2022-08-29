@@ -5,7 +5,7 @@ title: Scheduling appointments
 # Scheduling appointments
 **User**: Admin; Deployment Staff; 
 
-The Huma experience connects clinician and patient through the portal’s telemedicine functionality. Options include calling or messaging the patient from within the portal or scheduling appointments.
+The Huma experience connects care teams and patients through the portal’s telemedicine functionality. Options include calling or messaging the patient from within the portal or scheduling appointments.
 ## How it works​
 
 Scheduling an appointment in the Clinician Portal is simple:
