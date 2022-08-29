@@ -5,7 +5,7 @@ title: Offboarding patients
 # Offboarding patients
 **User**: Deployment Staff; 
 
-When a patient has reached the end of their journey with Huma, either by completing the trial, changing to another medical provider or another reason, they should be offboarded, meaning they will no longer have access to the Huma App and they will no longer be monitored in the Clinician Portal.
+When a patient has reached the end of their journey with Huma - either by completing the trial, changing to another medical provider or another reason - they should be offboarded, meaning they will no longer have access to the Huma App and they will no longer be monitored in the Clinician Portal.
 
 ## How it works​
 On the **Patient List**, find the patient you want to offboard and open the menu at the end of the row and click **Stop monitoring patient**.
