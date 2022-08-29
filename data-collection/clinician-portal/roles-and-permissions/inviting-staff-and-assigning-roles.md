@@ -25,9 +25,7 @@ You can use the csv import feature to invite staff in bulk. Make sure you have a
 
 ![Import csv file](./assets/InvitingStaff03.png)
 
-Once you have imported your contacts, they will appear in the emails field. Review them to check there are no errors and then click to **Send invites**. 
-
-![Welcome email](./assets/InvitingStaff05.png)
+Once you have imported your contacts, they will appear in the emails field. Review them to check there are no errors and then click the **Send invites** button. 
 
 If you want to invite different users to different roles, just repeat the process and select a different user from the dropdown.
 ### Reviewing pending invitations
