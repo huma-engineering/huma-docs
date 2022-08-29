@@ -1,0 +1,83 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma-engineering/authorization
+```
+
+yarn:
+```bash
+yarn add @huma-engineering/authorization
+```
+
+## Project Setup
+
+Once dependency installed we are able to use `HumaAuthorizationModule` to add authorization features from the SDK. 
+To import all functionality right away, `HumaAuthorizationModule` can beimported as folowing:
+
+```typescript
+import { HumaAuthorizationModule } from '@huma-engineering/authorization';
+...
+
+@NgModule({
+  imports: [
+    HumaAuthorizationModule
+  ],
+})
+export class AppModule {}
+```
+
+To provide an ability to use networking layer components, it is required to include authentication config into the providers.
+
+```typescript
+import { API_CONFIG } from '@huma-engineering/utils/api';
+import { HumaAuthorizationModule } from '@huma-engineering/authorization';
+...
+
+@NgModule({
+  imports: [
+    HumaAuthorizationModule
+  ],
+  providers: [
+    {
+      provide: API_CONFIG,
+      useValue: {
+        hostUrl: 'https://devapi.humaapp.io',
+        clientId: 'c3',
+        projectId: 'p1',
+      },
+    }
+  ]
+})
+export class AppModule {}
+```
+
+## Usage
+
+Patients invitation modal can be added into any component's template:
+
+```html
+<huma-patient-invite-modal
+  *ngIf="visible"
+  title="Test Modal"
+  [(visible)]="visible"
+  permissionsLink="https://huma.com"
+  (sendInvite)="invitePatient($event)"
+></huma-patient-invite-modal>
+```
+
+To provide messaging functionality including requesting the backend, modules export component can be included:
+
+```html
+<huma-patient-invite
+  [title]="title"
+  [deploymentId]="deploymentId"
+  [(visible)]="modalVisible"
+></huma-patient-invite>
+```

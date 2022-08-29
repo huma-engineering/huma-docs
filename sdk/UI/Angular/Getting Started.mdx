@@ -8,12 +8,12 @@ First thing is to install huma package into the project. To do that, we can use 
 
 npm:
 ```bash
-npm install @huma/ui 
+npm install @huma-engineering/ui
 ```
 
 yarn:
 ```bash
-yarn add @huma/ui
+yarn add @huma-engineering/ui
 ```
 
 ### Project Setup
@@ -22,7 +22,7 @@ Once dependency installed we need to setup project modules. There are multiple o
 If it is expected to install all package modules, we can import full `HumaUIModule` package. Here is an example:
 
 ```typescript
-import { HumaUiModule } from '@huma/ui';
+import { HumaUiModule } from '@huma-engineering/ui';
 ...
 
 @NgModule({
@@ -34,7 +34,7 @@ export class AppModule {}
 The other way would be installing only required packages to reduce application dist size. To do that, import specific module into your propect.
 
 ```typescript
-import { HumaButton } from '@huma/ui';
+import { HumaButton } from '@huma-engineering/ui';
 ...
 
 @NgModule({

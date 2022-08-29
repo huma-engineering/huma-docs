@@ -8,12 +8,12 @@ First thing is to install huma package into the project. To do that, we can use 
 
 npm:
 ```bash
-npm install @huma/charts 
+npm install @huma-engineering/charts 
 ```
 
 yarn:
 ```bash
-yarn add @huma/charts
+yarn add @huma-engineering/charts
 ```
 
 ### Project Setup
@@ -22,7 +22,7 @@ Once dependency installed we need to setup project modules. There are multiple o
 If it is expected to install all package modules, we can import full `HumaChartModule` package. Here is an example:
 
 ```typescript
-import { HumaChartModule } from '@huma/chart';
+import { HumaChartModule } from '@huma-engineering/chart';
 ...
 
 @NgModule({
@@ -34,7 +34,7 @@ export class AppModule {}
 If it is required to configure chart library before initializing the module, it is possible to use `forRoot()` method of the `HumaChartModule` class.
 
 ```typescript
-import { HumaChartModule } from '@huma/chart';
+import { HumaChartModule } from '@huma-engineering/chart';
 ...
 
 @NgModule({
