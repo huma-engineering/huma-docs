@@ -16,11 +16,11 @@ If you have custom messaging enabled, you will be able to write a custom message
 
 ![Custom Message](./assets/Messaging02.png)
 
-Otherwise, you can select from a set of pre-configured messages which are specifically for typical situations. Click the message you want to send and it will populate the text field at the top. Confirm this is the message you want to send and click **Send**.
+Otherwise, you can select from a set of pre-configured messages. Click the message you want to send and it will populate the text field at the top. Confirm this is the message you want to send and click **Send**.
 
 ![Send Message](./assets/Messaging03.png)
 
-> 🛑 **IMPORTANT**: Patients will not be able to respond to any messages you send. With this in mind, if you are composing your own custom message, try to keep your instructions clear and simple as the patient will not be able to ask you any follow up questions.
+> 🛑 **IMPORTANT**: Patients will not be able to respond to any messages you send. With this in mind, if you are composing your own custom message, try to keep your instructions clear and simple as the patient will not be able to ask you any follow-up questions.
 
 You can find a list of your sent messages in the **Telemedicine** tab. You will see information about the sender, the date when it was sent and whether the message has been delivered and if it has been read.
 
