@@ -12,13 +12,15 @@ Portal layout is different depending on whether you have an Organisation-level r
 ## Organisation-level navigation
 If your role is at the organisation level, the layout of the portal will be a little different.
 
-If you have this role, it is likely you are managing multiple deployments, so your homepage immediately lets you see a list of your deployments along with some high-level stats on the overall number of patients and deployments.
+If you have this role it is likely you are managing multiple deployments, so your homepage immediately lets you see a list of your deployments along with some high-level stats on the overall number of patients and deployments.
 
 ![Org-level stats](./assets/Navigating01.png)
 
 Click on any of the deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular Deployment-level role.
 
-Click the Huma icon at the top left to return to the Deployment List at any time. You can use the filter at the top to switch between the **Deployments list**, **All staff members**, or **Pending staff invitations**.
+Click the Huma icon at the top left to return to the Deployment List at any time. 
+
+You can use the filter at the top to switch between the **Deployments list**, **All staff members**, or **Pending staff invitations**.
 
 ![Deployments filters](./assets/Navigating02.png)
 
@@ -57,7 +59,7 @@ If you have a deployment-level role on the Clinician Portal, you will land on th
 ### Patient Overview
 Navigate to the **Patient Overview** by simply clicking on any patient row in the table.
 
-From here, you manage all your patient information including Track data; **Patient Profile**; **Notes**; **Telemedicine**. These areas can be accessed from the side navigation menu.
+From here, you manage all your patient information including **Track data**; **Patient Profile**; **Notes**; **Telemedicine**. These areas can be accessed from the side navigation menu.
 
 ![Patient Overview](./assets/Navigating10.png)
 
