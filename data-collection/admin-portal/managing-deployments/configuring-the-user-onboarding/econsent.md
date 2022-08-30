@@ -28,16 +28,18 @@ You’ll need to select the section type from the dropdown window, then add a ti
 
 - **Additional consent questions** - You can also add additional questions to your consent form. Click to **Add question** and fill in the details in the pop-out window.
 
-![image](./assets/econsent04.png)
+![image](./assets/econsent05.png)
 
 Select the purpose of the data collection from the dropdown: **for research or for future studies**.
 
-![image](./assets/econsent05.png)
+![image](./assets/econsent06.png)
 
 When including this module in the onboarding, ensure that it comes after the **[Data consent](./data-consent.md)** and **[Identity verification](./identity-verification.md)** modules.
 ## Patient experience
 When first logging into the Huma App, patients will be taken through the privacy policy and terms and conditions and will be asked to consent. On receipt of the patient signature, Huma will generate an electronic informed consent (eICF) PDF.
 Participants can easily withdraw their consent at any time without having to search for it or contact a customer support representative. 
+
+![eConsent](../../../huma-app/assets/econsent.png)
 
 **Related articles**: [Onboarding setup](./onboarding-setup.md); [Identity verification](./identity-verification.md)
 
