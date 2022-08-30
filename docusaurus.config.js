@@ -45,7 +45,7 @@ module.exports = {
               type: 'doc',
               label: 'Data collection',
               docsPluginId: 'data-collection',
-              docId: 'overview',
+              docId: 'index',
             },
           ],
         },
