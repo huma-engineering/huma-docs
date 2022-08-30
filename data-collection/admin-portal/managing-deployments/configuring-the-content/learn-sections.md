@@ -32,7 +32,8 @@ Next, you will need to add the content details. Select **Link** as the **Content
 
 >
 > ⚠️ **INFO**: For uploads, please request assistance from a member of the Delivery Operations team.
-> 
+>
+
 After saving, you will be able to see a list of articles. Click **Add article** to add more articles to that **Learn** section. 
 
 Click the Learn tab to return to the **Sections** list and add more sections.
