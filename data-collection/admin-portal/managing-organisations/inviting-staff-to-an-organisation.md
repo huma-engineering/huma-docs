@@ -30,6 +30,6 @@ Finally, you can choose how long your invitation will remain active. Click the l
 
 Click **Send invites** and the user will receive an email with the link that will let them set a password and access the Clinician Portal or the Admin Portal (depending on the role). 
 
-![image](./assets/WelcometoAP.png)
+![image](./assets/Admin0305.png)
 
 **Related articles**: [Creating a new Organisation](./creating-a-new-organisation.md); [Inviting Deployment Admins](../managing-deployments/tools-and-navigation/inviting-deployment-admins.md); [Inviting staff and assigning roles](../../clinician-portal/roles-and-permissions/inviting-staff-and-assigning-roles.md); [Roles and permissions](../../clinician-portal/roles-and-permissions/default-roles-and-permissions.md)
