@@ -13,7 +13,9 @@ Questionnaires can be added to the deployment as a tracking module in the same w
 ![image](./assets/Questionnaires01.png)
 
 ## Questionnaire list
-Questionnaires fall into two categories; **Questionnaires** or **PROMs** (Patient Recorded Outcome Measures), also known as ePROs or PROs. PROMs have set questions and answer options which cannot be modified and a score assigned which can sometimes be displayed to patients. PROMs appear as a standalone module to patients and care teams whereas questionnaires are grouped under the umbrella Questionnaires module. Questionnaires can be scored but don't have to be, the scores are not shown to patients and they are fully customisable. A list of questionnaires are listed below along with their characteristics:   
+Questionnaires fall into two categories; **Questionnaires** or **PROMs** (Patient Recorded Outcome Measures), also known as ePROs or PROs. PROMs have set questions and answer options which cannot be modified and a score assigned which can sometimes be displayed to patients. PROMs appear as a standalone module to patients and care teams whereas questionnaires are grouped under the umbrella 'Questionnaires' module. Questionnaires can be scored but don't have to be and the scores are not shown to patients. Unlike ePROs, these are fully customisable. 
+
+A list of questionnaires are listed below along with their characteristics:   
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
@@ -51,16 +53,16 @@ Follow these steps to create your questionnaire and it will appear on the dropdo
 - If you want the questionnaire to be part of the user onboarding, check the box **Is onboarding?**
 - If you want the questionnaire to be presented in a horizontal flow, rather than vertical scrolling, check the box **Horizontal flow**
 
-![image](./assets/Questionnaires03.png)
+![image](./assets/Questionnaire22.png)
 
 ### Scoring
 If you want to assign scores to the answers given to the questions in your questionnaire, you can configure the settings here.
-- Check the **Score available** box and when you add your questions and answer options, there will be a space for you to enter a score. This also means RAG thresholds can be assigned and the questionnaire will have its own module on the patient track and clinician portal with its own graph, schedule, reminders and contextual Learn article.
+- Check the **Score available** box and when you add your questions and answer options, there will be a space for you to enter a score. This also means RAG thresholds can be assigned and the questionnaire will have its own module with graph, schedule, reminders and contextual Learn article.
 - By checking **Calculated score**, the module will add together the scores of all selected multiple choice options on submission of the questionnaire to give you a total. You can also enter a maximum score (Maxscore) to establish a maximum threshold if, for example, the available points are above what you want to establish as the maximum score. 
 
 - If you want to add RAG thresholds to the score so that the care team will be notified via flags when a result is concerning, just check the **RAG Thresholds** box and set the min and max values in the chart below. Add more thresholds as needed with the **Add threshold** link.
 
-![image](./assets/Questionnaires04.png)
+![image](./assets/Questionnaires23.png)
 
 ### Schedule
 If your questionnaire is requesting data that needs to be collected on a regular basis, you can set a schedule. 
@@ -70,65 +72,64 @@ If your questionnaire is requesting data that needs to be collected on a regular
 
 - Check the checkbox to let the patient know what **times of day** they need to submit their data. If no option is selected, the patient will be informed to submit the questionnaire at the same time of day each time.
 
-![image](./assets/Questionnaires05.png)
+![image](./assets/Questionnaires04.png)
 
 ### Other settings
 You have the option to add **Learn** articles to some modules. 
 - Check the **Learn articles** checkbox to open a list of Learn content then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the Learn article.
 
+![image](./assets/Questionnaires05.png)
+
+- Check the **Push notifications** checkbox to activate push notifications for the questionnaire. Customise the **title** and **body** to match the data you want to collect and remind the patient of any important information they might need at this time. Patients can set their own custom reminders for completing certain tasks, and this is the text they will see in the notification.
+
 ![image](./assets/Questionnaires06.png)
-
-Check the **Push notifications** checkbox to activate push notifications for the questionnaire. 
-- Customise the **title** and **body** to match the data you want to collect and remind the patient of any important information they might need at this time. Patients can set their own custom reminders for completing certain tasks, and this is the text they will see in the notification.
-
-![image](./assets/Questionnaires07.png)
 
 Some questionnaires also allow **Footnote text**.
 
-![image](./assets/Questionnaires08.png)
+![image](./assets/Questionnaires07.png)
 
 ### Adding questions
 Add new questions using the **+ New question** button at the top. You will be asked to choose a question type. 
 
 > ⚠️ **INFO**: If you have checked the box **Score available**, you will only be able to choose from **Multiple Choice** and **Single Choice** question types. 
 
-![image](./assets/Questionnaires09.png)
+![image](./assets/Questionnaires08.png)
 
 Next, enter your question. Make sure it fits the question type you have selected. 
 In addition to the question, you can enter a description to give the patient some more details. 
 
 The **placeholder text** can be useful for questions that are text based, to give users an example of the type of information they need to input, or instructions on how to answer. It will appear in the answer field for the end user. (see [Huma App view](https://www.figma.com/file/2B0Y7wKLBeY37XTO5JF6cx/Configuration-template-visual-guide?node-id=180%3A890498))
 
-![image](./assets/Questionnaires10.png)
+![image](./assets/Questionnaires09.png)
 
 For multiple choice questions, you’ll need to enter all the answer options. Click **Add options** to add more options. 
 
 Single choice questions let you choose between **regular** or **text picker**. The text picker variation lets you include an **ID** with the answer options. This is useful with countries, for example. 
 
-![image](./assets/Questionnaires11.png)
+![image](./assets/Questionnaires10.png)
 
 If you are creating a scored questionnaire (make sure **Score available** is checked in the questionnaire settings), add your answer options and assign a score in the **Enter score** box.
 
-![image](./assets/Questionnaires12.png)
+![image](./assets/Questionnaires11.png)
 
 You can make the question mandatory by enabling the **Required** toggle. 
 
-![image](./assets/Questionnaires13.png)
+![image](./assets/Questionnaires12.png)
 
 You can change the order of the answer options using the **arrows🕂** icon at the end of the rows. 
 
-![image](./assets/Questionnaires14.png)
+![image](./assets/Questionnaires13.png)
 
 Once you have added your question and answer options, save your changes and the question will be added to your questions list. Note that you will always have to include an **Info** and **Submission** page before you can save your questionnaire.
 
 ### Reordering or deleting questions 
 Questions appear in the order they will appear in the questionnaire, with the Welcome page at the start and the Submission page at the end. Use the arrows🕂 icon to reorder the questions in the list. 
 
-![image](./assets/Questionnaires15.png)
+![image](./assets/Questionnaires14.png)
 
 Click the three dots on the question tab then click **Delete** to delete the question.
 
-![image](./assets/Questionnaires16.png)
+![image](./assets/Questionnaires15.png)
 
 ### Question types
 The question types you should select depends on the kind of information you are collecting and what you intend to do with it afterwards. Click the **Type** dropdown and select from the options available:
@@ -150,7 +151,7 @@ The question types you should select depends on the kind of information you are 
 ### Adding Logic
 The **Logic** tab is where you can manage what happens when a user gives a particular response to one of your questions. For example, if they answer that they have a history of a certain condition, you may send them to a different part of the questionnaire compared to those who answer “no” to the same question.
 
-![image](./assets/Questionnaires17.png)
+![image](./assets/Questionnaires16.png)
 
 >
 >  ⚠️ **INFO**: If no logic is added, the user will move through each of the questions in order.
@@ -158,15 +159,17 @@ The **Logic** tab is where you can manage what happens when a user gives a parti
 
 The **Logic** section lists all the questions on your questionnaire with a link to **Add rule**. 
 
-![image](./assets/Questionnaires18.png)
+![image](./assets/Questionnaires17.png)
 
 Click the link to add your rule and a condition. The **Rule** defines what will happen as a result of a certain action. The user will be sent directly to another part of the questionnaire when the condition or conditions are met. 
+
+![image](./assets/Questionnaires18.png)
 
 Click the **Jump to** dropdown to select the question you want to send the user to. Then, select **Any of** or **All of** from the **when** dropdown to define whether a number of conditions need to be met or just one. If you only have one condition, you can choose either option here. 
 
 ![image](./assets/Questionnaires19.png)
 
-In the **Conditions** section, select the question that will trigger your rule and the answer options that will enforce it. The answer options will appear in the final dropdown. The **Operator** dropdown in between lets you define when the condition is met: if the answer *is equal to, not equal to, greater than, equal or greater than, less than, equal or less than*. 
+In the **Conditions** section, select the question that will trigger your rule and the answer options that will enforce it. The answer options will appear in the final dropdown. The middle dropdown in between lets you define when the condition is met: if the answer *is equal to, not equal to, greater than, equal or greater than, less than, equal or less than*. 
 
 ![image](./assets/Questionnaires20.png)
 
