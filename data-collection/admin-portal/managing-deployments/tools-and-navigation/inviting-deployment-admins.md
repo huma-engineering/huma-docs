@@ -5,7 +5,7 @@ title: Inviting Deployment Admins
 # Inviting Deployment Admins
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-The Huma Admin Portal is the place where individual Organisations and Deployments are configured and managed. Once a new deployment has been created, an Admin user can invite staff to the Clinician Portal to manage that deployment and invite or remove other staff members. 
+The Huma Admin Portal is the place where individual organisations and deployments are configured and managed. Once a new deployment has been created, an Admin user can invite staff to the Clinician Portal to manage that deployment and invite or remove other staff members. 
 ## How it works​
 In the Admin Portal, go to the **Deployments** tab and open the dropdown menu at the end of the deployment row that you want to invite staff to.
 
