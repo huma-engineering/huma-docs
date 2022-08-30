@@ -12,7 +12,7 @@ In the Admin Portal, find your list of deployments on the **Deployments** tab. O
 
 ![image](./assets/ExportConfig01.png)
 
-A file will be downloaded to your device in JSON. The localisation file can be reuploaded in the [Languages section of the **App Configuration**](../general-settings/icon-language-and-labels.md).
+A file will be downloaded to your device in JSON. The localisation file can be reuploaded in the Languages section of the **App Configuration**.
 >
 > 🛑 **IMPORTANT**: In the case of the localisation file, please note that once you have downloaded it, your deployment configuration will be locked and you won’t be able to make any changes. For the full procedure, please refer to [this documentation](https://humatherapeutics.atlassian.net/wiki/spaces/DO/pages/3298689083/How-To+Log+a+Translation+Request).
 
