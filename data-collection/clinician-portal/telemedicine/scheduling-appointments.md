@@ -14,8 +14,6 @@ Scheduling an appointment in the Clinician Portal is simple:
 3. Select a day and time.
 4. Click **Add appointment** to complete the process.
 
-![Scheduling window](../../features/telemedicine/assets/cp-telemedicine.gif)
-
 Patients will receive a notification and will need to accept or reject your appointment. Appointments will show up in the **Upcoming appointments** tab with the status **Pending confirmation** until the patient has accepted it.
 
 ![Pending confirmation](./assets/Scheduling06.png)
