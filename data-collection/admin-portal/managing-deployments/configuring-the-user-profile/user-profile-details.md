@@ -23,9 +23,9 @@ The first section has four options to choose from:
 
 ### Extra IDs
 In this section you can ask users for some additional identification details that might be useful for their care team:
-- **NHS ID** - National healthcare ID for UK residents
-- **Fenland cohort ID** - This is specifically for those patients participating in the Fenland study
-- **Insurance number** - For medical insurance
+- **NHS ID** - National healthcare ID for UK residents.
+- **Fenland cohort ID** - This is specifically for those patients participating in the Fenland study.
+- **Insurance number** - For medical insurance.
 - **WeChat** - Patients can also connect their healthcare data from their WeChat account. Providing their ID helps care teams to connect with that data.
 - **AliveCor ID** - This is an ECG device that users can connect to their account via Kardia to provide readings. The user ID is useful for their care team to be able to track their readings.
 
@@ -45,7 +45,9 @@ This field appears in the patient profile, but only on the clinician side. If us
 ![image](./assets/UserProfile06.png)
 
 ### Mandatory onboarding fields
-This section lets you define which of the above fields you want to be mandatory. This means users will not be able to skip them. Review the modules you have added and ensure any of the data that is needed for these modules is made mandatory e.g. height and weight for BMI, biological sex for CVD score, gender and height for Peak flow, etc. As default, it is recommended that DoB and biological sex are mandatory in all cases.
+This section lets you define which of the above fields you want to be mandatory. This means users will not be able to skip them. Review the modules you have added and ensure any of the data that is needed for these modules is made mandatory e.g. height and weight for BMI, biological sex for CVD score, gender and height for Peak flow, etc. 
+
+As a default, it is recommended that DoB and biological sex are mandatory in all cases.
 
 ![image](./assets/UserProfile07.png)
 
