@@ -88,6 +88,13 @@ module.exports = {
           ],
         },
         {
+          type: 'doc',
+          position: 'left',
+          label: 'Trust Centre',
+          docsPluginId: 'trust-centre',
+          docId: 'index',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -170,6 +177,14 @@ module.exports = {
         path: 'trust-security',
         routeBasePath: 'trust-security',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'trust-centre',
+        path: 'trust-centre',
+        routeBasePath: 'trust-centre',
       },
     ],
     ['docusaurus-node-polyfills', { excludeAliases: ['console']}]
