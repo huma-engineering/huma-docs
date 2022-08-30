@@ -5,7 +5,7 @@ title: Data consent
 # Data consent
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-As the Huma platform processes patient data, it’s important to let them know what is done with that data along with the company privacy policy and terms and conditions. There are three Data Consent onboarding modules within the Huma platform that can be configured to the needs of the organisation. The information you enter here, as well as appearing in the onboarding module, will be accessible to users view links on their Profile page.  
+As the Huma platform processes patient data, it’s important to let them know how that data is treated so that they can give their consent. There are three Data Consent onboarding modules within the Huma platform that can be configured to the needs of the organisation. The information you enter here, as well as appearing in the onboarding module, will be accessible to users view links on their Profile page.  
 
 Note that the [eConsent](./econsent.md) module is specifically for patients participating in clinical trials and is required for compliance.
 ## How it works​
@@ -21,7 +21,7 @@ Click the **Edit✎** icon at the end of the row to configure the module.
 
 ![image](./assets/DataConsent01.png)
 
-- **Signature** - Check this box if user signature is required. In the fields, you can edit the placement text which instructs the user how to complete the fields, or leave as the default. 
+- **Signature** - Check this box if user signature is required. For each field, you can edit the placeholder text or leave it as the default. 
 
 ![image](./assets/DataConsent02.png)
 
@@ -51,8 +51,8 @@ Recommended section types are as follows:
    - **Withdrawing** - Explain the terms of withdrawal from the trial
    - **Data sharing** - Tell the user what data will be shared and with who
    - **Data processing** - Indicate how user data will be processed
-   - **Feedback** - Indicates how the user should submit feedback or how they will be contacted for their feedback
+   - **Feedback** - Indicate how the user should submit feedback or how they will be contacted for their feedback
    - **Agreement** - This usually comes at the end of the consent form and asks the user to agree to everything contained within it. This section also has space for you to add a privacy policy statement and your terms and conditions.
-- **Consent additional questions** – You can add more questions to your consent form if needed. Click the Add question button and fill in the details in the pop-out window.
+- **Consent additional questions** – You can add more questions to your consent form if needed. Click the **Add question** button and fill in the details in the pop-out window.
 
 **Related articles**: [eConsent](./econsent.md); [Identity verification](./identity-verification.md)
