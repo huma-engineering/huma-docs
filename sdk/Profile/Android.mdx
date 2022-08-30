@@ -1,0 +1,251 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that implements profile settings screen functionality
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+Start profile activity:
+```kotlin
+// you need to be authenticated 
+startActivity(ProfileActivity.getIntent(this))
+```
+
+Set notifications badge count:
+```kotlin
+// for single setting
+HumaProfileManager.getInstance().setSettingNotificationsCount("setting 1", 1)
+
+// for multiple settings 
+HumaProfileManager.getInstance().setSettingsNotificationsCount(
+    mapOf(
+        "setting 2" to 2, 
+        "setting 3" to 3
+    )
+)
+```
+
+Clear notifications badges:
+```kotlin
+HumaProfileManager.getInstance().clearNotifications()
+```
+
+Sync notifications count (will invoke `ProfileSettingsRepository.getNotificationsCountBySettingId()`):
+```kotlin
+HumaProfileManager.getInstance().syncProfileNotificationsCount(
+    onSynced = { /* on success */ },
+    onFailure = { error -> /* on failure */ }
+)
+```
+
+### Customization
+
+If you want to use **custom profile settings** instead of the default ones, it is possible to provide `ProfileSettingsRepository` implementation when initializing HumaProfileManager.
+
+Some settings will be hidden if needed (refer to `SettingItem.shouldBeShown(/*..*/)`), and empty section headers will be removed
+```kotlin
+HumaProfileManager.init(
+    profileSettingsRepository = object : ProfileSettingsRepository() {
+        override suspend fun getSettings(): Result<List<SettingsListItem>, Error> {
+            // returns a list of settings
+        }
+
+        override suspend fun getNotificationsCountBySettingId(): Result<Map<String, Int>, Error> {
+            // returns a map of notifications count by setting id
+        }
+    }
+)
+```
+
+### Sample settings interaction handlers
+
+**Toggle that launches a screen and handles screen result:**
+
+(Make sure to not use a getter if you change setting state in the handler)
+```kotlin
+override val interactionHandler = DefaultSettingInteractionHandler.Toggle(
+        isSelected = AppLockPreferences.isAppLockEnabled
+    ) { toggle ->
+        InteractionHandlerResult.ScreenToOpen(
+            getIntentDelegate = { context ->
+                if (toggle.isSelected) {
+                    LockHumaAppActivity.getTurnOnLockIntent(context)
+                } else {
+                    LockHumaAppActivity.getTurnOffLockIntent(context)
+                }
+            },
+            onResult = { activityResultData, uiDelegate ->
+                if ((requireNotNull(activityResultData).resultCode) != Activity.RESULT_OK) {
+                    Timber.d("A flow launched by toggle was canceled/failed, reverting toggle selection status..")
+                    // revert toggle selection state if the flow failed
+                    toggle.isSelected = !toggle.isSelected
+                    // refresh settings list to display the updated state
+                    uiDelegate.notifySettingChanged()
+                    return@ScreenToOpen
+                }
+                uiDelegate.showMessage(resources.getString(
+                    if (toggle.isSelected) {
+                        R.string.bio_auth_profile_tab_state_changed
+                    } else {
+                        R.string.bio_auth_profile_tab_state_disabled
+                    }
+                ))
+            }
+        )
+    }
+```
+
+**Default setting that just launches the screen**:
+
+```kotlin
+// with helper extension function
+override val interactionHandler get() = DefaultSettingInteractionHandler.forScreen { context ->
+    DownloadDataActivity.getLauncherIntent(context)
+}
+
+// without helper extension function
+override val interactionHandler get() = DefaultSettingInteractionHandler.Default {
+    InteractionHandlerResult.ScreenToOpen(getIntentDelegate = { context ->
+        DownloadDataActivity.getLauncherIntent(context)
+    })
+}
+```
+
+
+
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:profile:<latest-version>")
+```
+2. Initialize `HumaProfileManager` in your Application class:
+```kotlin
+HumaProfileManager.init(
+   profileSettingsRepository: ProfileSettingsRepository? = null,
+   proxyHelperRepo: ProxyHelperRepo? = null,
+)
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+### Setting list types
+
+`ProfileSettingsRepository.getSettings()` returns a list of `SettingsListItem`.
+
+There's two `SettingsListItem` types:
+
+* `SettingsListItem.SectionHeader(val sectionName: String)` - section header
+* `SettingsListItem.Setting(val item: SettingItem)` - setting with certain behavior
+
+### Setting item
+
+```kotlin
+interface SettingItem {
+
+    // setting id - will be used for notifications badges etc
+    val id: String
+    // icon res id
+    val iconResId: Int
+    // setting title
+    val name: String
+    // interaction handler
+    val interactionHandler: SettingInteractionHandler
+
+    // can be used if settings visibility depends on certain conditions
+    fun shouldBeShown(user: User) = true
+}
+```
+
+### Setting interaction handler
+
+There's two default interaction handler types: `DefaultSettingInteractionHandler.Toggle` and `DefaultSettingInteractionHandler.Default`
+
+* Toggle:
+```kotlin
+data class Toggle(
+    // current toggle selection status
+    var isSelected: Boolean,
+    // will be invoked whenever toggle selection status changes
+    // Toggle instance is passed so you can change it (refer to samples)
+    val onValueChanged: suspend (Toggle) -> InteractionHandlerResult,
+) : DefaultSettingInteractionHandler()
+```
+
+* Default:
+```kotlin
+data class Default(
+    // will be invoked whenever the setting is clicked
+    val action: suspend () -> InteractionHandlerResult
+) : DefaultSettingInteractionHandler()
+```
+
+### Interaction handler result (also see samples)
+
+`InteractionHandlerResult` is returned by interaction handlers and determines what should happen after interaction
+
+* `Nothing` - nothing will happen after interaction
+
+* `LinkToOpen` - a link will be opened in browser
+
+* `ScreenToOpen` - a screen will be opened
+
+`getIntentDelegate: (Context) -> Intent` returns activity intent
+
+`onResult: (ActivityResultData?, SettingsListContainerDelegate)` will be invoked on activity result.
+
+`ActivityResultData` contains resultCode and intent
+
+`SettingsListContainerDelegate` contains helper methods (such as showing a message or refreshing settings list 
+if we change certain setting state (such as selection status in `Toggle` setting))
+
+```kotlin
+data class ScreenToOpen(
+    val getIntentDelegate: (Context) -> Intent,
+    override val onResult: (ActivityResultData?, SettingsListContainerDelegate) -> Unit = { _, _ -> }
+)
+```
+
+
+ ### Documentation
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+**[0.2.9]**
+
+  - [#201](https://github.com/huma-engineering/huma-android-sdk/pull/201) Settings visibility conditions + some corresponding refactoring
+  - [#200](https://github.com/huma-engineering/huma-android-sdk/pull/200) Huma Profile - code docs, visibility modifiers 
+  - [#199](https://github.com/huma-engineering/huma-android-sdk/pull/199) About Huma setting + Huma Utils now has more info about app version 
+  - [#197](https://github.com/huma-engineering/huma-android-sdk/pull/197) Two-Step verification
+  - [#195](https://github.com/huma-engineering/huma-android-sdk/pull/195) Fixed missing downloads notification badge; logout on SslHandshakeException
+  - [#194](https://github.com/huma-engineering/huma-android-sdk/pull/194) Personal Details offline sample fixes
+  - [#193](https://github.com/huma-engineering/huma-android-sdk/pull/193) Fixed Informed Consent Forms setting offline sample
+  - [#192](https://github.com/huma-engineering/huma-android-sdk/pull/192) Export data - docs, visibility modifiers
+  - [#191](https://github.com/huma-engineering/huma-android-sdk/pull/191) Lock app while not in use; Huma Profile API refactoring; improvements
+  - [#185](https://github.com/huma-engineering/huma-android-sdk/pull/185) Fixed Personal Documents offline sample for pdf files
+  - [#183](https://github.com/huma-engineering/huma-android-sdk/pull/183) Bug fixes
+  - [#178](https://github.com/huma-engineering/huma-android-sdk/pull/178) Informed consent forms setting
+  - [#176](https://github.com/huma-engineering/huma-android-sdk/pull/176) Notifications count badge flow
+  - [#175](https://github.com/huma-engineering/huma-android-sdk/pull/175) Export Data unit tests, tests extension functions
+  - [#174](https://github.com/huma-engineering/huma-android-sdk/pull/174) Added appointment to Profile module
+  - [#173](https://github.com/huma-engineering/huma-android-sdk/pull/173) Export Data setting; Object Storage updates
+  - [#169](https://github.com/huma-engineering/huma-android-sdk/pull/169) Added sign out profile screen item; added action setting type
+  - [#168](https://github.com/huma-engineering/huma-android-sdk/pull/168) Added preferred units setup setting; added action setting type
+  - [#167](https://github.com/huma-engineering/huma-android-sdk/pull/167) Personal documents; settings builder extensions
+  - [#155](https://github.com/huma-engineering/huma-android-sdk/pull/155) Profile module core; unit tests & code docs
+  
+</TabItem>
+</Tabs>

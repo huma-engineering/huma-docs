@@ -1,0 +1,72 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Android
+Library that provides a messaging feature which allows to receive messages on Android app from a remote service. This feature supports **one-way** messaging where user can **only** receive messages and **not** reply to the messages.
+
+### Getting Started
+<Tabs>
+<TabItem value="example" label="Example" default>
+
+To start working with **Huma Messaging** you need to call `openMessages()` function from your code:
+
+```korlin
+HumaMessagingManager.getInstance().openMessages()
+```
+
+</TabItem>
+<TabItem value="installing" label="Installing">
+
+1. Add the dependency in your local build.gradle file:   
+
+
+```kotlin
+implementation("com.huma.sdk:messaging:latest-version")
+```
+
+2. `HumaMessagingManager` require dependencies to be initialized before it in `Application` class
+
+```kotlin
+HumaUtilsManager.init(/*..*/)
+HumaAuthManager.init(/*..*/)
+HumaUiManager.init(/*..*/)
+HumaSharedManager.init(/*..*/)
+HumaCachingManager.init(/*..*/)
+HumaMessagingManager.init(/*..*/)
+```
+
+</TabItem>
+<TabItem value="readme" label="Readme" default>
+
+**Main** screen of **Huma Messaging** module contains list of latest incoming messages from a senders sorted by datetime. Newest are in the top of the list. 
+There is an indicator if messages were read and count of unread messages.
+
+By tap on the message from **Main** page will navigate to **Detail** screen with all past messages from a selected sender arranged by datetime with latest message at the bottom. Older messages will be loading by scrolling up. By navigate to that screen all messages here will be marked as read.
+
+**Huma Messaging** supports receiving push notification with new incoming message. Implemented navigation to **Detail** messages screen by tap on push notification.
+
+
+### Documentation   
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)
+
+ ### Dependencies
+- [Huma Utils](../Utilities/Android.mdx)
+- [Huma Auth](../Authentication/Android.mdx)
+- [Huma UI](../UI/Android.mdx)
+- [Huma Shared](../Shared%20Models/Android.mdx)
+- Huma Caching
+
+</TabItem>
+<TabItem value="changelog" label="Changelog">
+
+**[0.2.11]**
+
+  - [#205](https://github.com/huma-engineering/huma-android-sdk/pull/205) Added HumaMessaging module to display one way messages
+  
+</TabItem>
+</Tabs>
