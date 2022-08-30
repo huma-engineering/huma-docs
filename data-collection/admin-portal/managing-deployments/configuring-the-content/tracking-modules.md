@@ -16,9 +16,10 @@ This is the full list of modules available for tracking health data. Configurati
 
 Different modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps to log it automatically e.g. heart rate monitors, step counters. 
 
-Other modules require qualitative data, such as the Photos and Journal modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app. 
+Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app. 
 
-The table below shows which modules have the threshold option and what data entry methods are available. It also includes a link to an image of the modules in the patient App.
+The table below shows which modules have the threshold option and what data entry methods are available.
+
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
 | Anxiety level - GAD-7 | Yes | Manual, followed by calculated | 
@@ -58,12 +59,13 @@ The table below shows which modules have the threshold option and what data entr
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
 
 ## Configuring the module
-From the modules list, click the **Edit✎** icon at the end of the row to configure the module.
+From the modules list, click the **edit✎** icon at the end of the row to configure the module.
 
 ![image](./assets/TrackModule02.png)
 
 ### Settings
-- **Name and description** - In the module settings, you can edit the description of the module. This is what the patient will see on the module overview screen and where you can add useful information. Note that you will not be able to change the default name but you can add a custom name which will appear on the module overview screen as well. 
+- **Name** - You will not be able to change the default name but you can add a custom name which will appear on the module overview screen.
+- **About** - This is a description of the module that the patient will see on the module overview screen.  
 - **Custom unit** - Indicate the unit of measurement you want to use for this data point. These will be used as defaults but can be changed by the user:
     - **Weight**: Kilograms (kg) / Pounds (lb) / Stones (st lb)
     - **Body Measurements**: Centimeters/centimeters (cm) / Inches (in)
@@ -73,13 +75,13 @@ From the modules list, click the **Edit✎** icon at the end of the row to confi
 
 ![image](./assets/TrackModule03.png)
 
-- **Schedule** - For data points that need to be collected on a regular basis, you can set a recommended schedule for the patient. Set the ISO duration and the Times per duration to indicate to users how long and how many times they will need to submit data to this module. Check the checkbox to let the patient know what times of day they need to submit their data. If you don’t select any option, the patient will be told to submit their data as needed.
+- **Schedule** - For data points that need to be collected on a regular basis, you can set a recommended schedule for the patient. Set the **ISO duration** and the **Times per duration** to indicate to users how long and how many times they will need to submit data to this module. Check the checkbox to let the patient know what times of day they need to submit their data. If you don’t select any option, the patient will be told to submit their data as needed.
 
 ![image](./assets/TrackModule04.png)
 
-- **Device sync** - If the data point can be collected via a device or smartphone functionality, you can indicate which collection methods are available e.g. For heart rate variability, patients can collect their reading using their phone camera.
+- **Device sync** - If the data point can be collected via a device or smartphone, you can indicate which collection methods are available here. For example, patients can collect their heart rate variability reading using their phone camera.
  
-- **Learn** - You have the option to associate configured Learn articles to the modules. Check the box to open a list of Learn articles that you have already added to your Deployment, then just select the ones that link to this module. When the patient opens this module, they will be able to access the Learn article.
+- **Learn** - You have the option to associate configured Learn articles to the modules. Check the box to open a list of Learn articles that you have already added to your deployment, then just select the ones that link to this module. When the patient opens this module, they will be able to access the Learn article.
 
 ![image](./assets/TrackModule05.png)
 
@@ -101,12 +103,15 @@ You can add as many thresholds as you need with the **Add threshold** link at th
 Flag notifications will only show for amber (moderate severity) and red (high severity) data points; green ones are considered acceptable and won’t be flagged. 
 
 ### Static modules
-Bear in mind that not all modules will use the RAG system and patient data will have to be reviewed manually to determine whether it is dangerous or not. For example, the number of steps considered healthy would vary from patient to patient. Modules that include RAG thresholds are labelled **Thresholds** and those without are labelled **Static**. 
+Bear in mind that not all modules will use the RAG system and patient data will have to be reviewed manually to determine whether it is dangerous or not. For example, in the case of the Steps module, the number of steps considered healthy would vary from patient to patient. 
+
+Modules that include RAG thresholds are labelled **Thresholds** and those without are labelled **Static**. 
 
 ![image](./assets/TrackModule09.png)
 
 ### Symptoms
 The **Symptoms** module lets you track specific symptoms for different health trials that you might be running. Each deployment can be configured to track a completely different set of symptoms. The care team will be able to view the evolution of different symptoms amongst a cohort of patients e.g. muscle pain, insomnia, headaches, etc.
+
 Go to the **Symptoms** tab and click the button **Add symptom**. To configure the symptom, just enter a name and then set the RAG thresholds.
 
 ![image](./assets/TrackModule10.png)
