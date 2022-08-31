@@ -7,29 +7,103 @@ import TabItem from '@theme/TabItem';
 
 
 # Android
-Library that provides a set of Charts components required to build new products.
+Library that provides a set of Charts components required to build new products. 
 
 ### Getting Started
 <Tabs>
 <TabItem value="example" label="Example" default>
-  Code snippets separated by files (if/when needed), etc...
+
+  For creating LineChart you should create data provider which extended `BaseLineChartDataProvider` and pass it to `ChartContainerView`.  
+  Example of creating data provider for LineChart:
+
+  ```kotlin
+  class LineChartDataProvider(/*..*/) : BaseLineChartDataProvider(/*..*/) {
+
+    // function for providing list of RawRecord values
+    override fun getRawRecords(result: (unit: String, List<RawRecord>) -> Unit) {
+
+      // get raw records values here
+
+      result("subtitle", listOf(RawRecord(/*..*/)))
+    }
+
+    // function for providing input data to chart
+    override fun getData(
+        chartRange: ChartRangeType, // type of time range on chart
+        accuracyCoefficient: Long, // timeline accuracy factor on chart
+        chartSubcategoryId: ChartSubcategoryId, // ID value of chart subcategory
+        result: (InitialChartData) -> Unit // lambda should be invoked to provide result of input data
+    ) {
+
+      // set data for chart here and convert it to List<LineChartData> type
+
+      result(InitialChartData.LineChart(listOf(LineChartData(/*..*/))))
+    }
+  }
+  ```
+  
+For BarChart you should create the same data provider extended from `BaseBarChartDataProvider`.  
+Creating view of LineChart or BarChart will be depend on type of data provider that you pass to `ChartContainerView`.  
+  
+Adding `ChartContainerView` component in the layout:
+  ```xml
+ <com.huma.sdk.charts.chart_container.ChartContainerView
+        android:id="@+id/chartContainer"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        app:layout_constraintWidth_percent="0.5" />
+  ```
+
+Creating instance of `ChartContainerView` component from code:
+  ```kotlin
+  return ChartContainerView(context).apply {
+            this.chartDataProvider = dataProvider // instance of your ChartDataProvider implementation class
+            this.config = chartConfig // instance of ChartConfig class with configuration chart view
+            this.configs = chartUnitConfig // instance of ChartUnitConfig class with configuration of chart subcategory item
+        }
+  ```
 </TabItem>
 <TabItem value="installing" label="Installing">
-  How to install this Library any code snippets or steps required
+
+1. Add the dependency in your local build.gradle file:
+```kotlin
+implementation("com.huma.sdk:charts:<latest-version>")
+```
+
+2. Initialize `HumaChartsManager` in your Application class:
+```kotlin
+HumaChartsManager.init()
+```
 </TabItem>
 <TabItem value="readme" label="Readme" default>
-  Readme files that we can find in the root of the repo, outlining the usage some history and developer notes revelant to be shared.
+
+Huma Chart module is dedicated to creating LineChart and BarChart using [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) library.  
+
+**ChartContainerView** - add this view to your layout for using charts. 
+
+**ChartDataProvider** - is a base interface contains definitions of main methods to providing data to chart views.  
+
+**BaseChartDataProvider** - abstract class extends `ChartDataProvider` and defines methods which describes steps of calculation and preparing data before display on chart and handling events in process of interacting with charts.  
+For example that include sorting, filtering data by ranges, calculating average values and data for single selected point etc.   
+
+**BaseLineChartDataProvider** - extends `BaseChartDataProvider` and defines logic of preparing data specific for LineChart.
+
+**BaseBarChartDataProvider** - extends `BaseChartDataProvider` and defines logic of preparing data specific for BarChart.
+
+**LineChartDataProcessor** - contains impelmentation of processing row input data to data type which used to dispaly items on LineChart.
+
+**BarChartDataProcessor** - contains impelmentation of processing row input data to data type which used to dispaly items on BarChart. 
+
+**LineChartData** - use this class to set row input data for LineChart.
+
+**BarChartData** - use this class to set row input data for BarChart.
+
+
+### Documentation  
+[API Reference](https://github.com/huma-engineering/huma-android-sdk/releases)  
+
 </TabItem>
 <TabItem value="changelog" label="Changelog">
-
-  - [#172](https://github.com/huma-engineering/huma-web-sdk/pull/172) Unit tests running for CI/CD workflow
   
 </TabItem>
 </Tabs>
-
- ### Documentation
-[API Reference](https://github.com/huma-engineering/huma-web-sdk/releases)
-
- ### Dependencies
-- Dependency A
-- Dependency B
