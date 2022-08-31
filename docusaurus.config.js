@@ -75,11 +75,17 @@ module.exports = {
           docId: 'intro',
         },
         {
-          type: 'doc',
+          type: 'dropdown',
           position: 'left',
-          label: 'Trust Centre',
-          docsPluginId: 'trust-centre',
-          docId: 'index',
+          label: 'Resources',
+          items: [
+            {
+              type: 'doc',
+              label: 'Trust Centre',
+              docsPluginId: 'trust-centre',
+              docId: 'index',
+            },
+          ],
         },
         {
           type: 'localeDropdown',

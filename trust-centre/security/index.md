@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
+title: Security
 ---
 
 # Security Overview
@@ -137,11 +138,3 @@ Huma maintains a Business Continuity plan which meets the following requirements
 ### Compliance
 
 Add compliance aspects of security
-
-
-
-
-
-
-
-

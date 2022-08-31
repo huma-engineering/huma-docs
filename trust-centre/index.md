@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: Security Overview
+title: Trust Centre
 ---
 
 
