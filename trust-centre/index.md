@@ -13,8 +13,8 @@ Our infrastructure is deployed in major cloud providers. We deploy multiple laye
 ## Privacy
 
 ## Encryption by default, at rest and in transit
-We encrypt data in transit between our facilities and at rest, ensuring that it can only be accessed by authorized roles and services with audited access to the encryption keys. [Learn more](/trust-security/compliance) about how we encrypt data at rest and how we encrypt data in transit.
+We encrypt data in transit between our facilities and at rest, ensuring that it can only be accessed by authorized roles and services with audited access to the encryption keys. [Learn more](/trust-centre/compliance/overview#cryptography) about how we encrypt data at rest and how we encrypt data in transit.
 
 ## Compliance
-We undergo independent verification of our security, and compliance controls to help you meet your regulatory and policy objectives. Find details on our full set of [compliance offerings](/trust-security/compliance), like [ISO/IEC 27001](/trust-security/compliance/iso27001), GDPR.
+We undergo independent verification of our security, and compliance controls to help you meet your regulatory and policy objectives. Find details on our full set of [compliance offerings](/trust-centre/compliance), like [ISO/IEC 27001](/trust-centre/compliance/iso27001), GDPR.
 

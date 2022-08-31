@@ -75,19 +75,6 @@ module.exports = {
           docId: 'intro',
         },
         {
-          type: 'dropdown',
-          position: 'left',
-          label: 'Resources',
-          items: [
-            {
-              type: 'doc',
-              label: 'Trust & Security',
-              docsPluginId: 'trust-security',
-              docId: 'index',
-            },
-          ],
-        },
-        {
           type: 'doc',
           position: 'left',
           label: 'Trust Centre',
@@ -168,15 +155,6 @@ module.exports = {
         id: 'sdk',
         path: 'sdk',
         routeBasePath: 'sdk',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'trust-security',
-        path: 'trust-security',
-        routeBasePath: 'trust-security',
-        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
     [
