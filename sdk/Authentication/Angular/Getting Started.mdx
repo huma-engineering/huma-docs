@@ -8,12 +8,12 @@ First thing is to install huma package into the project. To do that, we can use 
 
 npm:
 ```bash
-npm install @huma/auth
+npm install @huma-engineering/auth
 ```
 
 yarn:
 ```bash
-yarn add @huma/auth
+yarn add @huma-engineering/auth
 ```
 
 ## Project Setup
@@ -24,36 +24,13 @@ In case if you would like to change the UI of the authentication but keet the sa
 To provide proper auth configuration `forRoot()` method should be used as folowing:
 
 ```typescript
-import { HumaAuthModule } from '@huma/auth';
+import { API_CONFIG } from '@huma-engineering/utils/api';
+import { HumaAuthModule } from '@huma-engineering/auth';
 ...
-
-const AUTH_APP_CONFIG: AuthConfig = {
-  clientId: 'c3',
-  projectId: 'p1',
-  countryCodes: countryCodes,
-  rootUrl: '/auth',
-  afterLoginRedirectionUrl: '/welcome',
-  signUpType: 'invite',
-  defaultLoginMethod: DefaultLoginMethodEnum.EMAIL,
-  allowedLoginMethods: [
-    DefaultLoginMethodEnum.EMAIL,
-    DefaultLoginMethodEnum.PHONE,
-  ],
-  multiCountrySelect: true,
-  eulaUrl: '',
-  privacyUrl: '',
-  countryCode: 'GB',
-  loginProcessRestartInMins: 10,
-  siteName: 'Huma',
-  apiBaseUrl: 'https://qaapi.humaapp.io',
-  localStoragePrefix: 'huma',
-  siteDomain: '',
-  siteTitle: 'Huma',
-}
 
 @NgModule({
   imports: [
-    HumaAuthModule.forRoot(AUTH_APP_CONFIG),
+    HumaAuthModule,
     RouterModule.forRoot([
       {
         path: 'auth',
@@ -63,6 +40,16 @@ const AUTH_APP_CONFIG: AuthConfig = {
           }),
       }
     ])
+  ],
+  providers: [
+    {
+      provide: API_CONFIG,
+      useValue: {
+        hostUrl: 'https://devapi.humaapp.io',
+        clientId: 'c3',
+        projectId: 'p1',
+      },
+    }
   ]
 })
 export class AppModule {}
@@ -75,6 +62,4 @@ The most important fields are:
 
 - `clientId` - provides client identifier to the backend
 - `projectId` - provides project identifier to the backend
-- `apiBaseUrl` - backend host url, used to build the enpdoints 
-- `rootUrl` - local url which is used to host the authentication pages
-- `afterLoginRedirectionUrl` - local project url that should be used to navigate after successful login 
+- `hostUrl` - backend host url, used to build the enpdoints 

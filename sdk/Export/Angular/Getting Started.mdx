@@ -1,0 +1,85 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma-engineering/export
+```
+
+yarn:
+```bash
+yarn add @huma-engineering/export
+```
+
+## Project Setup
+
+Once dependency installed we are able to use `HumaExportModulesModule` to add messaging features from the SDK. 
+To import all functionality right away, `HumaExportModulesModule` can beimported as folowing:
+
+```typescript
+import { HumaExportModulesModule } from '@huma-engineering/export';
+...
+
+@NgModule({
+  imports: [
+    HumaExportModulesModule
+  ],
+})
+export class AppModule {}
+```
+
+To provide an ability to use networking layer components, it is required to include authentication config into the providers.
+
+```typescript
+import { API_CONFIG } from '@huma-engineering/utils/api';
+import { HumaExportModulesModule } from '@huma-engineering/export';
+...
+
+@NgModule({
+  imports: [
+    HumaExportModulesModule
+  ],
+  providers: [
+    {
+      provide: API_CONFIG,
+      useValue: {
+        hostUrl: 'https://devapi.humaapp.io',
+        clientId: 'c3',
+        projectId: 'p1',
+      },
+    }
+  ]
+})
+export class AppModule {}
+```
+
+## Usage
+
+Modules export modal can be added into any component's template:
+
+```html
+<huma-modules-export-modal
+  title="Export Patient Data"
+  [(visible)]="visible"
+  [patients]="patients"
+  [isSearching]="isSearching"
+  (exportZip)="exportZip($event)"
+  (patientSearch)="patientSearch($event)"
+></huma-modules-export-modal>
+```
+
+To provide messaging functionality including requesting the backend, modules export component can be included:
+
+```html
+<huma-modules-export
+  [title]="title"
+  [deploymentId]="deploymentId"
+  [modules]="modules"
+  [(visible)]="modalVisible"
+></huma-modules-export>
+```

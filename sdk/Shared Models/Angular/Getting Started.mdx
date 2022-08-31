@@ -1,0 +1,33 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma-engineering/shared-models
+```
+
+yarn:
+```bash
+yarn add @huma-engineering/shared-models
+```
+
+## Project Setup
+
+Shared models is a DEV dependency that can be directly imported into the project after installing. Currently shared modes implements
+data interfaces that might be shared across different libraries and projects, such as:
+- Deployment data
+- Roles and permissions 
+- Base modules
+- User profiles
+
+Here is usage example:
+
+```typescript
+import { BaseObject, S3Object } from '@huma-engineering/shared-models/common';
+import { Profile, ProfileRole, ProfileRoleId } from '@huma-engineering/shared-models';
+```

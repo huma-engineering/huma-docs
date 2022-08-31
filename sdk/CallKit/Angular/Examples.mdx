@@ -29,7 +29,7 @@ Call kit module come with the predefined configuration.
 If you want to change it's configuration, You need to provide `forRoot()` method as folowing:
 
 ```typescript
-import { HumaCallKitModule, CallKitConfig } from '@huma/call-kit';
+import { HumaCallKitModule, CallKitConfig } from '@huma-engineering/call-kit';
 ...
 const CALL_KIT_CONFIG: CallKitConfig = {
   apiBaseUrl: 'https://qaapi.humaapp.io',
@@ -50,7 +50,7 @@ export class AppModule {}
 You need to define basic details to initiate this process. Or you can simply set them statically.
 
 ```typescript
-import { CallKitConfigService } from '@huma/call-kit';
+import { CallKitConfigService } from '@huma-engineering/call-kit';
 ...
 
 @Component({
