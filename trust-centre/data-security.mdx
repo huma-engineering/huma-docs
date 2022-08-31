@@ -4,3 +4,6 @@ title: Data Security
 ---
 
 ## Encryption at rest and in transit
+* Huma encrypts all personal data at rest by default, without the need for any further actions from the customer.
+* This includes the data stored in Mongo DB as well as S3 buckets which in some cases are used as object storage for the app.
+* By default, we use the managed encryption service offered by major providers (GCP, AWS, Azure , ...), however based on regional and customer requirements, we are able to manage the keys through Customer Managed Encryption Keys (CMEK).
