@@ -1,0 +1,34 @@
+---
+sidebar_position: 2
+---
+
+## Install Dependency 
+
+First thing is to install huma package into the project. To do that, we can use `npm` or `yarn` package managers.
+
+npm:
+```bash
+npm install @huma-engineering/profile
+```
+
+yarn:
+```bash
+yarn add @huma-engineering/profile
+```
+
+## Project Setup
+
+Once dependency installed we are able to use `HumaProfileModule` to add profile features from the SDK. 
+To import all functionality right away, `HumaProfileModule` can beimported as folowing:
+
+```typescript
+import { HumaProfileModule } from '@huma-engineering/profile';
+...
+
+@NgModule({
+  imports: [
+    HumaProfileModule
+  ],
+})
+export class AppModule {}
+```
