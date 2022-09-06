@@ -841,7 +841,26 @@ HumaUiManager.init(
 
 **UI Componentns** - HumaUI module constist a list of the basic UI components for the Huma SDK. These components can be used for building customizable pages/screens.  
 
-List of available basic UI components:
+## Base classes
+
+Huma SDK defines base classes for your activities and fragments - `BaseFragment` and `AbsBaseActivity`. It is desireable to inherit from them whenever possible.
+
+`AbsBaseActivity` constructor has two arguments:
+* `statusBarTransparent` - if true - status bar will be transparent
+* `routerConsumer` - if true - activity will handle `com.huma.sdk.utils.commons.navigation.ScreenRouter` navigation events
+
+It is possible to handle activity lifecycle events (if activity is inherited from AbsBaseActivity). To perform this, add base activity state listener:
+
+```kotlin
+HumaUiManager.getInstance().addBaseActivityStateListener(
+    "handler key",
+    SomeHandler()
+)
+```
+
+Huma SDK uses it to check whether biometric auth is set up on the device
+
+## UI components:
 
   * Button - allow users to take actions, and make choices, with a single tap. 
   * ChoiceInputView - component defines visual toggle between two mutually exclusive states.
