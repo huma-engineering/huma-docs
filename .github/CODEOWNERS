@@ -2,11 +2,11 @@
 * @milanof-huma @rodelt-huma
 
 # data-colleciton owners
-/data-colleciton @farzin-huma @meldee-huma
+/data-colleciton/** @farzin-huma @meldee-huma
 
 # trust-security owner
-/trust-security @harrison-huma
+/trust-security/** @harrison-huma
 
 # sdk owners
 /sdk @jaygajjar-huma @fernandod-huma
-/sdk_versioned_docs @jaygajjar-huma @fernandod-huma
+/sdk_versioned_docs/** @jaygajjar-huma @fernandod-huma
