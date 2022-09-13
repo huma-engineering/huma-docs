@@ -17,7 +17,7 @@ The PHQ-8 questionnaire provides Care Teams with an assessment tool in the Clini
 
 In the Huma App, from the “Track” screen, Patients can select Depression Level - PHQ-8 and by pressing “Add” can answer the questions to reflect how they feel.
 
-![Depression Level - PHQ-8 in Huma App](./assets/depression-level-phq-8.svg)
+![Depression Level - PHQ-8 in Huma App](./assets/depression-level-phq-8.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -25,8 +25,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Depression Level - PHQ-8 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
-![Clilnician view of Depression Level - PHQ-8](./assets/cp-depression-level-phq-8.svg)
+![Clilnician view of Depression Level - PHQ-8](./assets/cp-patient-list-phq-8.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Depression Level - PHQ-8 all historical data can be displayed as a graph or a table of results.
 
-![Clilnician view of Depression Level - PHQ-8](./assets/cp-module-details-phq-8.svg)
+![Clilnician view of Depression Level - PHQ-8](./assets/cp-module-details-phq-8.png)

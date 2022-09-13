@@ -15,7 +15,7 @@ The Medication Tracker will bring the list of all items from the Medications Mod
 
 In the Huma App, Patients can select the Medication Tracker module and simply by clicking “Take Adherence Questionnaire” are able to report how much commitment they have taken to all their medication, out of 100, and how they have responded to it.
 
-![Adding to the medication tracker](./assets/medication-tracker.svg)
+![Adding to the medication tracker](./assets/medication-tracker.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -25,8 +25,8 @@ In addition, Patients can add additional medication in the same way as the Medic
 
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Medication Tracker module will show the historic entries from the Patient.
 
-![Medication tracker in Clinician Portal](./assets/cp-patient-list-medication-tracker.svg)
+![Medication tracker in Clinician Portal](./assets/cp-patient-summary-medication-tracker.png)
 
 By clicking on the module, all historic data can be displayed as a graph or a table of results.
 
-![Medication tracker in Clinician Portal](./assets/cp-module-details-medication-tracker.svg)
+![Medication tracker in Clinician Portal](./assets/cp-module-details-medication-tracker.png)

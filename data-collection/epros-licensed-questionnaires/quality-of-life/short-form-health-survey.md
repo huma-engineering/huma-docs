@@ -21,7 +21,7 @@ In this questionnaire, there are questions scored on a scale from 0 to 100, with
 
 In the Huma App, Patients from the Track screen can select Short Form Health Survey. From here, pressing “Add” will that them through the questions that can be answered to the best of their ability. 
 
-![Short Form Health Survey in Huma app ](./assets/short-form-health-survey.svg)
+![Short Form Health Survey in Huma app ](./assets/short-form-health-survey.png)
 
 From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
@@ -29,6 +29,8 @@ From within the module, Patients can view their progress in a graph and press �
 
 In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the SF-36 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
 
+![Short Form Health Survey in Clinician Portal ](./assets/cp-patient-list-sf-36.png)
 
 Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the SF-36 module all historic data can be displayed as a graph or a table of results.
 
+![Short Form Health Survey in Clinician Portal ](./assets/cp-patient-summary-sf-36.png)

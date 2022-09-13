@@ -32,7 +32,7 @@ The table below shows which modules have the threshold option and what data entr
 | [COVID-19 Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
 | COVID-19 Risk Score | No | Manual; Camera (Happitech), followed by calculated | 
 | [CVD Risk Score](../../../modules/risk-scores/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
-| [ECG](../../../modules/physiological/ecg.md) | No | Sync (from Kardia) |
+| [ECG](../../../modules/physiological/ecg-alivecor.md) | No | Sync (from Kardia) |
 | ECGHealthKit | Yes | Sync (from Kardia) | 
 | Health Score | No | Manual, followed by calculated | 
 | [Heart rate/ HRV](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 

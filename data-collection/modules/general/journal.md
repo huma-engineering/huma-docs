@@ -12,7 +12,7 @@ As Patients are on their Health Care journey with Huma, having the means to refl
 
 In the Huma App, Patients can select the Journal module click “Add” and just type what they want to record.
 
-![Adding to the journal](./assets/journal.svg)
+![Adding to the journal](./assets/journal.png)
 
 To view historical entries, Patients can see a table of them by pressing “View X entries”.
 
@@ -20,6 +20,6 @@ To view historical entries, Patients can see a table of them by pressing “View
 
 In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Journal module will show the historic entries from the Patient.
 
-![Journal in clinician portal](./assets/cp-patient-list-journal.svg)
+![Journal in clinician portal](./assets/cp-patient-summary-journal.png)
 
-![Journal in clinician portal](./assets/cp-module-details-journal.svg)
+![Journal in clinician portal](./assets/cp-module-details-journal.png)
