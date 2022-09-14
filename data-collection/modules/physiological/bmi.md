@@ -3,26 +3,20 @@ sidebar_position: 2
 title: BMI
 ---
 
-BMI is a measure of whether a Patient is a healthy weight for their height. Huma provides the functionailty to track BMI for themselves and provide to their Clinicians in order to determine any advice needed.
+Body Mass Index (BMI) is a measure of whether a patient is a healthy weight for their height. BMI can be an important indicator of risk factors of certain health conditions and can be an important vital to keep track of for some patients.
 
 ## How it works
 
-In the sign up process, Patients are asked for their height and with that when they report their weight the BMI can be calculated. 
+Patients report their height and weight as part of the onboarding process. Huma then calculates their BMI from this data. 
 
-### Patients
-
-In the Huma App, Patients can select the Weight & BMI module and by pressing the “Add” button can enter a value as kilograms (or configured unit), with the time and date automatically added as now, but editable. 
+In the BMI module, patients can report weight changes and see how this affects their BMI score. The time and date is added automatically at the moment they make the entry (although this can be edited if needed). They can set reminders from within the module to help them stay on track and make sure they don't miss a reading.
 
 ![Reporting Weight for BMI in the Huma App](./assets/bmi.png)
 
-From within the module, Patients can view their progress in a graph, changing to view BMI by pressing the “BMI” button, and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
-
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the BMI & Weight column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+Patients can view their BMI evolution presented in a graph. In the Clinician Portal, care teams will be able to easily see the latest BMI entries from their patients and any concerning values will be flagged. 
 
 ![Viewing BMI in the Clinician Portal](./assets/cp-patient-list-bmi.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Weight & BMI module all historic data can be displayed as a graph or a table of results.
+The Patient Summary displays a more detailed view of the patient's BMI data in graph or table form.
 
 ![Viewing BMI module details in the Clinician Portal](./assets/cp-module-details-bmi.png)
