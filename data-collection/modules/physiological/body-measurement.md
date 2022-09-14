@@ -3,8 +3,6 @@ sidebar_position: 3
 title: Body Measurement
 ---
 
-** Helping Patients make good lifestyle choices. **
-
 Body measurements can be used to calculate risk of weight-related and metabolic health problems. Waist and hip circumferance help determine the body fat content in a patient's midsection. From this data, a waist-to-hip ratio (WHR) is calculated to estimate the body fat content in the midsection. By using a ratio, WHR adjusts for different body shapes. Visceral fat measures the fat in and around the midsection, which plays an important part in protecting vital organs. Total body fat is a measure of how much of your body mass is made up of essential body fat and storage body fat. Too much or too little visceral fat or body fat can cause health problems. Both can be regulated through a balanced diet and regular exercise. 
 
 ## How it works
