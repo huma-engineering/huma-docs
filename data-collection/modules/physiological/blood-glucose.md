@@ -9,7 +9,7 @@ For many people, regular blood glucose monitoring is an important part of managi
 
 Patients measure their blood glucose using a blood glucose monitor and enter the reading into the Huma App. Care teams can easily view results and be informed of any concerning readings.
 
-Patients input their result in mmol/L (millimoles per litre) and the time and date is added automatically at the moment they make the entry, but can be edited if needed. They can set reminders from within the module to help them stay on track and make sure they don't miss a reading.
+Patients input their result in mmol/L (millimoles per litre) and the time and date is added automatically at the moment they make the entry (although this can be edited if needed). They can set reminders from within the module to help them stay on track and make sure they don't miss a reading.
 
 ![Add a blood glucose result](./assets/blood-glucose.png)
 
