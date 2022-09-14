@@ -3,7 +3,9 @@ sidebar_position: 1
 title: Smoking and Vaping
 ---
 
-Smoking is the most popular ways to consume tobacco, whereas an e-cigarette is a device that allows you to inhale nicotine in a vapour rather than smoke.
+Smoking can lead to a number of health conditions and overall poor health. The Smoking module helps patients track their smoking habits, whether they are smoking cigarettes or e-cigarettes (vapes).
+
+## Questions
 
 #### Question 1
 
