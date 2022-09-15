@@ -3,30 +3,20 @@ sidebar_position: 7
 title: Medication Tracker
 ---
 
-** Informing Care Team with Patients’ medication **
-
-Huma provides a means to health care alongside a Patients current health care. With that, they may well have medications they currently take and that will have to be stated to their Care Team. The Medication Tracker module allows Patients to make a log of ongoing medicine and how much they adhere to it, in order to fully inform Clinicians when they are providing feedback or making Health Care decisions.
+Patients may be taking medications associated to another care plan that should be shared with their care team. The Medication Tracker module allows patients to make a log of medications and track how they are responding.
 
 ## How it works
 
-### Patients
-
-The Medication Tracker will bring the list of all items from the Medications Module. 
-
-In the Huma App, Patients can select the Medication Tracker module and simply by clicking “Take Adherence Questionnaire” are able to report how much commitment they have taken to all their medication, out of 100, and how they have responded to it.
+The Medication Tracker presents patients with an adherence questionnaire which asks them to what extent they have stuck to their medication plan and how they have responded to it. The tracker also pulls data from the [Medication module]() although patients can also add their medication in this module. 
 
 ![Adding to the medication tracker](./assets/medication-tracker.png)
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
+The time and date is added automatically at the moment they make the entry (although this can be edited if needed). Patients can also set reminders from within the module to help them stay on track.
 
-In addition, Patients can add additional medication in the same way as the Medications Module.
-
-### Clinicians
-
-In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the Medication Tracker module will show the historic entries from the Patient.
+Patients can view their historic data fom the module. In the Clinician Portal, care teams will be able to see the patient's latest entries and any concerning readings will be flagged. 
 
 ![Medication tracker in Clinician Portal](./assets/cp-patient-summary-medication-tracker.png)
 
-By clicking on the module, all historic data can be displayed as a graph or a table of results.
+The Patient Summary displays a more detailed view of the patient's historic data in graph or table form.
 
 ![Medication tracker in Clinician Portal](./assets/cp-module-details-medication-tracker.png)
