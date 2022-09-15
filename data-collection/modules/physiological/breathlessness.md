@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Breathlessness (Dyspnoea Score)
 ---
 
-Shortness of breath can be caused by conditions such as asthma, chest infections, or from smoking but can also be a sign of something more serious. This module provides a quick assessment to understand the degree of breathlessness patients are experiencing. This information allows care teams to track lung function over time and provide insight or recommendations to patients.
+Shortness of breath can be caused by conditions such as asthma, chest infections, or from smoking but can also be a sign of something more serious. This module provides a quick assessment to understand the degree of breathlessness patients are experiencing. Care teams can use this information to track lung function over time and provide insight or recommendations to patients.
 
 ## How it works
 
