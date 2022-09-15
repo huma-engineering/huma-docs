@@ -11,7 +11,7 @@ The first time a patient signs in, they will be prompted to complete the COVID-1
 
 In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
-The Baseline questionnaire contains 30 questions:
+The COVID-19 Baseline Questionnaire contains 30 questions:
 
 ### Questions
 
