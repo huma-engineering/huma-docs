@@ -3,11 +3,11 @@ sidebar_position: 1
 title: Inpatient Questionnaire
 ---
 
-The Inpatient Questionnaire is a way of collecting information about patient hospital visits and sharing this information with care teams. 
+The Inpatient Questionnaire is a way of collecting information about overnight hospital visits and sharing this information with care teams. 
 
 ## How it works
 
-Patients will answer questions on symptoms and tests over the previous month. 
+Patients will answer questions about the details of their hospital stay, including dates and the specialities they visited. 
 
 In the Clinician Portal, care teams will see the latest Inpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
 
