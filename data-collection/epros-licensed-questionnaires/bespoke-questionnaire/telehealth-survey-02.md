@@ -11,7 +11,7 @@ Patients answer questions regarding their use of technology as part of their hea
 
 In the Clinician Portal, care teams will see the latest Telehealth Survey results for their patient. In the Patient Summary, they will be able to see all historical data in table form.
 
-The Telehealth Survey No. 2 has a total of 5 questions:
+The Telehealth Survey No. 2 has a total of 8 questions:
 
 ## Questions
 
