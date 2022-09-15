@@ -7,7 +7,7 @@ The CVD risk score asseses the risk of a patient developing cardiovascular disea
 
 ## How it works
 
-Patients answer a series of questions relating to their lifestyle and also measures some vitals to calculate a score.
+Patients answer a series of questions relating to their lifestyle and the module also measures some vitals to calculate the final score.
 
 ![Accessing the CVD score questionnaire in Huma App](./assets/cvd-score.png)
 
