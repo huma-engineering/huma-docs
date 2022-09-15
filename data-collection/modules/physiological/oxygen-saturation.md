@@ -3,28 +3,20 @@ sidebar_position: 7
 title: Oxygen Saturation
 ---
 
-** Ensuring the body’s organs are getting oxygen to function properly **
-
-The patient’s blood oxygen level is the measurement of the percentage of oxygen in the blood. The Oxygen Saturation module allows Patients to monitor their blood oxygen level and is made available to Care Teams so that they can assess that the body is functioning properly.
+The patient’s blood oxygen level measures the percentage of oxygen in the blood. The Oxygen Saturation module allows patients to monitor their blood oxygen level and share this data with care teams.
 
 ## How it works
 
-Patients will measure their Oxygen Saturation using a Pulse Oximeter, and enter into the Huma App. From there, Clinicians can view new and historic results in the Clinician Portal and be informed on severity.  
-
-### Patients
-
-In the Huma App, Patients can select the Oxygen Saturation module and by pressing the “Add” button can enter a value as a percentage with the time and date automatically added as now, but editable. 
+Patients will measure their oxygen saturation using a pulse oximeter and enter the results into the Huma App. 
 
 ![Adding a value of Oxygen Saturation in the Huma App](./assets/oxygen-saturation.png)
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
+The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic blood oxygen results from within the module. Reminders can be set to help them stay on track and make sure they don't miss a reading.
 
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the SPO2 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will be able to easily see the latest blood saturation readings from their patients in the SPO2 column and any concerning readings will be flagged. 
 
 ![Viewing oxygen saturation in the clinician portal](./assets/cp-patient-list-oxygen-saturation.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Oxygen Saturation module all historic data can be displayed as a graph or a table of results.
+The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
 ![Viewing oxygen saturation in the clinician portal](./assets/cp-module-details-oxygen-saturation.png)
