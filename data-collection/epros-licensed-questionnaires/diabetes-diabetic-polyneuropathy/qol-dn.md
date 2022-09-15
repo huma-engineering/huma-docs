@@ -3,9 +3,9 @@ sidebar_position: 2
 title: Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)
 ---
 
-Diabetic neuropathy is a type of nerve damage that can occur if you have diabetes, and Huma provides the Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN) questionnaire to capture the effects of diabetic neuropathy and how it affects daily activities. Care teams can view the results to gain insight and provide care to Patients.
+Diabetic neuropathy is a type of nerve damage that can occur if you have diabetes, and Huma provides the Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN) questionnaire to capture the effects of diabetic neuropathy and how it affects daily activities. Care teams can view the results to gain insight and provide care to patients.
 
-The Norfolk Quality of Life-Diabetic Neuropathy Questionnaire allows Patients to reflect on their quality of life through 47 questions. From the QOL-DN module, patients can start the questionnaire by clicking “Add”.
+The Norfolk Quality of Life-Diabetic Neuropathy Questionnaire allows patients to reflect on their quality of life through 47 questions. From the QOL-DN module, patients can start the questionnaire by clicking “Add”.
 
 ![Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN) in Huma App](./assets/norfolk-quality-of-life-score.png)
 
