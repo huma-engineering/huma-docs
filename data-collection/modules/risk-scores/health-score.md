@@ -9,7 +9,7 @@ Huma Health Score is a comprehensive assessment of a patient's overall health, p
 
 Patients respond to a questionnaire which calculates their Huma Health Score. They can retake the questionnaire as many times as they wish in order to monitor their health score over time. The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic results from within the module. Reminders can be set to help them stay on track and make sure they don't miss an entry.
 
-The six domains monitored by the questionnaire are listed below:
+## Domains
 
 #### Heart health
 
