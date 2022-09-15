@@ -13,10 +13,10 @@ The Medication Tracker presents patients with an adherence questionnaire which a
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will be able to view all their previous entries from within the module. Patients can also set reminders to help them stay on track.
 
-In the Clinician Portal, care teams will be able to see the patient's latest entries and any concerning entries will be flagged. 
+In the Patient Summary, care teams will be able to see the patient's latest entries. 
 
 ![Medication tracker in Clinician Portal](./assets/cp-patient-summary-medication-tracker.png)
 
-The Patient Summary displays a more detailed view of the patient's historic data in table form.
+The detailed view shows all the patient's historic data in table form.
 
 ![Medication tracker in Clinician Portal](./assets/cp-module-details-medication-tracker.png)
