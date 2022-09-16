@@ -9,7 +9,7 @@ Good knee mobility in key to performing regular daily activities, such as standi
 
 Patients answer a series of multple-choice questions about their knee. Questions fall into the following categories: limp, support, locking, instability, pain, swelling, stair climbing, or squatting. At the end of the questionnaire, patients are assigned a scores out of 100, where 0 indicates the highest level of disability and 100 the lowest. 
 
-To start, patients can select the Lysholm & Tegner module and click "Add" to start. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+To start, patients can select the Lysholm & Tegner module and click "Add". From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Lysholm & Tegner in Huma App](./assets/lyshom-tegner.png)
 
