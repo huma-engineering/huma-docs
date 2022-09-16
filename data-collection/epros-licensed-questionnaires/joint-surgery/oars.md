@@ -7,7 +7,7 @@ Post-surgery care is key to successful recovery from any operation. The Oxford A
 
 ## How it works
 
-Patients answer a series of questions about how they feel post-surgery. To start, patients select the OARS module and click "Add" to start. For each question, they will choose from the following options:
+Patients answer a series of questions about how they feel post-surgery. To start, patients select the OARS module and click "Add". For each question, they will choose from the following options:
 - Strongly disagree
 - Disagree
 - Neither agree nor disagree
