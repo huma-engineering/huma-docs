@@ -3,10 +3,10 @@ sidebar_position: 7
 title: Mobility
 ---
 
-A Patient’s Mobility is how able they are to move around in their environment with ease and without restriction. Huma helps to relay the condition of a Patient to Care Teams through questionnaires that make it easy to express their current mobility and where in the body is affected.
+A patient's leel of mobility determines how easily they are able to move around in their environment. Huma's mobility questionnares help to assess the condition of a patient in terms of their mobility and to transmit this information to their care teams.
 
 ## How it works
 
-The questionnaires ask subjective questions that help assess the Mobility of the Patient in focused areas. Patients answer in a manner that expresses how they feel to prompts. That data is shared with Care Teams in the Clinician Portal where they can look for trends and responses that might require prioritisation.
+The questionnaires ask questions about how the patient feels in terms of their ease of mobility. Results are shared with care teams via the Clinician Portal where they can look for trends and prioritise accordingly.
 
 
