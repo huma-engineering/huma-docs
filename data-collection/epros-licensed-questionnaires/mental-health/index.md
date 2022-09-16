@@ -3,10 +3,10 @@ sidebar_position: 3
 title: Mental Health
 ---
 
-The signs and symptoms of Mental Health issues can vary depending on the specific issues, circumstances, and other factors. It can affect the day to day operation and function in general. Huma offers a range of questionnaires that Care Teams can receive self-reported answers from Patients. 
+The signs and symptoms of mental health issues can vary depending on the specific circumstances facing the patient and can affect their everyday operation and functioning. Huma offers a range of questionnaires that can help care teams assist patients suffering from mental health issues and provide appropriate and timely intervention. 
 
 ## How it works
 
-The questionnaires ask subjective questions that help assess the Mental Health of the Patient in focused areas. Patients answer in a manner that expresses how they feel to prompts. That data is shared with Care Teams in the Clinician Portal where they can look for trends and responses that might require prioritisation.
+Huma provides questionnaires that help assess the mental health of the patient in the areas of [anxiety](./anxiety-level-gad-7.md), [depression](./depression-level-phq-8.md) and [perceived stress](./perceived-stress-scale.md). Patients answers questions to tell their care team how they are feeling, which helps them spot trends and identify those who might require prioritisation.
 
 
