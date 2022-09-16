@@ -14,7 +14,7 @@ To start, patients can select the KOOS/WOMAC module and click "Add" to start. Fr
 ![KOOS/WOMAC in Huma App](./assets/koos-womac.png)
 
 
-In the Clinician Portal, care teams will see the latest FJS Hip score for their patient, with concerning scores flagged for attention.
+In the Clinician Portal, care teams will see the latest KOOS/WOMAC score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of KOOS/WOMAC](./assets/cp-patient-list-koos-womac.png)
 
