@@ -7,7 +7,7 @@ The daily check-in provides a way for patients to record how they are doing on a
 
 ## How it works
 
-The Daily Check-In module asks patients to answer a simple questions; “Are you feeling better than yesterday?”. They can answer "Yes", "No" or "Same".
+The Daily Check-In module asks patients to answer a simple question; “Are you feeling better than yesterday?”. They can answer "Yes", "No" or "Same".
 
 ![Responding to daily check in](./assets/daily-check-in.png)
 
