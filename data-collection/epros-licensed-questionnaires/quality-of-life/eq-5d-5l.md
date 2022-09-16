@@ -3,21 +3,20 @@ sidebar_position: 1
 title: EQ-5D-5L
 ---
 
-The EQ-5D-5L is a licensed, self-assessed, quality of life PROM questionnaire. Huma provides the questionnaire in-app, allowing Patients to continually evaluate their quality of life and deliver that assessment to Care Teams in order to make decisions about the Patient’s health.
+The EQ-5D-5L is a licensed quality-of-life PROM questionnaire where patients make a self-assessment about their current state of wellbeing. The questionnaire allows patients to use the Huma App to continually evaluate their quality of life and share their responses with care teams in order to make more informed decisions about their healthcare.
 
 ## How it works
 
-In the Huma App, the EQ-5D-5L questionnaire measures quality of life on a 5-level scale including mobility, self-care, usual activities, pain/discomfort, and anxiety/depression. Patients give both descriptive and scaled answers, of which the Index value is given and available to Care Teams through the Clinician Portal.
+Patients answer questions about their mobility, self-care, regular activities, pain/discomfort, and anxiety/depression. Some questions are scored on a scale while others are more qualitative. The responses are converted into an index value between 1-5 which is shared with care teams via the Clinician Portal.
 
-## Patient
-
-In the Huma App, Patients can select the EQ-5D-5L questionnaire and answer the questions according to how they feel. Patients can see their past entries within ‘Previous entries’
+To start, patients select the EQ-5D-5L module and click "Add". When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track. 
 
 ![Adding the EQ-5D-5L](./assets/eq-5d-5l.png)
 
-## Clinicians
-In the Clinician Portal, on the Patient Summary, Clinicians can view all data submitted, from which the EQ-5D-5L module will show the historic entries from the Patient. The index score from 1-5 will be displayed in the EQ-5D-5L module details screen, and from the Patient Summary a calculated 5 digit Health State can be viewed as the Primary Value of EQ-5D-5L.
+In the Clinician Portal, care teams will see the latest EQ-5D-5L score for their patient, with concerning scores flagged for attention. 
 
 ![EQ-5D-5L in the Clinician Portal](./assets/cp-patient-summary-eq-5d-5l.png)
+
+In the Patient Summary, care teams can view all historical data in graph or table form.
 
 ![EQ-5D-5L in the Clinician Portal](./assets/cp-module-details-eq-5d-5l.png)
