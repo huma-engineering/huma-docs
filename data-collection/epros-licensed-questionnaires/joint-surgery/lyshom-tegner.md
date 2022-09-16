@@ -2,26 +2,21 @@
 sidebar_position: 5
 title: Lysholm & Tegner
 ---
-Mobility in the Knee is important for the ability to manage everyday life. Huma provides the Lysholm & Tegner Questionnaire for Patients to report on the functionality of their knees by answering questions about any impediment they experience. Care Teams can work with Patients with this reporting in order to deliver the needed care. 
+
+Good knee mobility in key to performing regular daily activities, such as standing, and walking. The Lysholm & Tegner Questionnaire asks patients to report on the functionality of their knees by answering questions about impediments or limitations they experience. This information is shared with care teams to gather insights for their ongoing care. This questionnaire is available in both English and German.
 
 ## How it works
 
-The Patient responds to questions from pre-determined descriptive answers that are categorised as limp, support, locking, instability, pain, swelling, stair climbing, or squatting. Scores in Huma are calculated in a range from 0 (worse disability) to 100 (less disability). This questionnaire is also available in German.
+Patients answer a series of multple-choice questions about their knee. Questions fall into the following categories: limp, support, locking, instability, pain, swelling, stair climbing, or squatting. At the end of the questionnaire, patients are assigned a scores out of 100, where 0 indicates the highest level of disability and 100 the lowest. 
 
-## Patients
-
-In the Huma App, from the “Track” screen, Patients can select Lysholm & Tegner and answer the questions to reflect how they feel.
+To start, patients can select the Lysholm & Tegner module and click "Add" to start. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Lysholm & Tegner in Huma App](./assets/lyshom-tegner.png)
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
-
-## Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Lysholm & Tegner column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will see the latest Lysholm & Tegner score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Lysholm & Tegner](./assets/cp-patient-list-lysholm-tegner.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Lysholm & Tegner all historical data can be displayed as a graph or a table of results.
+In the Patient Summary, care teams can view all historical data in graph or table form.
 
 ![Clinician view of Lysholm & Tegner](./assets/cp-module-details-lysholm-tegner.png)
