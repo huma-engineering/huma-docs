@@ -4,7 +4,7 @@ title: Nuisance Bleeding Scale Questionnaire
 ---
 
 
-Nuisance bleeding is any bleeding that is considered to be a nuisance or annoyance rather than a medical emergency. This can include bleeding from minor cuts or scrapes, nosebleeds, or bleeding gums. While nuisance bleeding is not usually severe, it can be a sign of a more serious condition if it occurs frequently or is accompanied by other symptoms.
+Nuisance bleeding is any bleeding that is considered to be a nuisance or annoyance rather than a medical emergency. This can include bleeding from minor cuts or scrapes, nosebleeds, or bleeding gums. While nuisance bleeding is not usually critical, it can be a sign of a more serious condition if it occurs frequently or is accompanied by other symptoms.
 
 ## How it works
 
