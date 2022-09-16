@@ -3,8 +3,8 @@ sidebar_position: 5
 title: Heart Failure
 ---
 
-Heart failure is a complex chronic condition that presents debilitating symptoms. Dealing with daily activities can be impeded and therefore Huma provides Questionnaires to assess how Patients manage their condition to Care Teams to work together in offering Healthcare. 
+Heart failure is a complex chronic condition that presents debilitating symptoms which can impact on daily life. The Heart Failure Questionnaires assess how patients manage their condition so they can work together with their care teams to to improve outcomes and quality of life. 
 
 ## How it works
 
-The Questionnaires ask subjective questions that help assess Patients who have experienced Heart failure. Patients answer in a manner that expresses how they feel to prompts. That data is shared with Care Teams in the Clinician Portal where they can look for trends and responses that might require prioritisation.
+Patients are asked questions about their experience of heart failure how how the condition impacts on their life. The data is shared with care teams via the Clinician Portal where they can look for trends and prioritise those patiets with immediate needs.
