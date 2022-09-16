@@ -15,7 +15,7 @@ To start, patients select the Oxford Hip Score module and click "Add" to start. 
 
 ## Clinicians
 
-In the Clinician Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention.. 
+In the Clinician Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention. 
 
 ![Oxford Hip Score in the Clinician Portal](./assets/cp-patient-list-oxford-hip-score.png)
 
