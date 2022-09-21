@@ -47,4 +47,4 @@ Choose between 1 and 5
 
 Choose between 1 and 5
 
-This survey can be used in conjunction with the [Telehealth Survey No. 1](/telehealth-survey-01.md)
+This survey can be used in conjunction with the [Telehealth Survey No. 1](./telehealth-survey-01.md)
