@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Onboarding setup 
 ---
 # Onboarding setup
-**User**: Admins
+**User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
 Huma aims to deliver a seamless onboarding experience for patients when they first log into the app. The onboarding experience can be customised for each deployment by selecting which modules to add. Getting users to agree to your terms and conditions, verify their identity or agree to using a proxy are all things you can include in the onboarding process. 
 ## How it works​
@@ -16,11 +16,11 @@ To add a new module, click **Add onboarding** and select from the list.
 ![image](./assets/onboarding02.png)
 
 Available options are:
-- [Data Consent /Legitimate interest](./data-consent.md) - Include your privacy policy, EULA, terms and conditions, etc.
+- [Data Consent /Legitimate interest](./data-consent.md) - Ask users to consent to the Huma platform's privacy policy, EULA and terms and conditions.
 - [Identity verification](./identity-verification.md) - Get users to confirm identity using ID documents and photo verification
 - [eConsent](./econsent.md) - Get consent from patients participating in clinical trials
-- [Helper agreement](./helper-agreement.md) - Get consent from patients to allow a proxy to enter data on their behalf
-- [Preferred units](./preferred-units.md) - Ask patients and their proxies which units of measurement they prefer to use 
+- [Helper agreement](./helper-agreement.md) - Get consent from a proxy to enter data on the patient's behalf
+- [Preferred units](./preferred-units.md) - Ask users which units of measurement they prefer to use 
 
 Use the arrows🕂 to change the order in which the modules will be served to the patient. It’s recommended to use the above order. In particular, identity verification must come before the eConsent module in order for the signature to be recognised as 23 CFR Part 11 compliant.
 
