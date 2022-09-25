@@ -22,7 +22,7 @@ The table below shows which modules have the threshold option and what data entr
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
-| Anxiety level - GAD-7 | Yes | Manual, followed by calculated | 
+| [Anxiety level - GAD-7](../../../epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Yes | Manual, followed by calculated | 
 | [Audio Word Recall](../../../modules/general/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
@@ -30,32 +30,32 @@ The table below shows which modules have the threshold option and what data entr
 | [Blood pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
 | [BodyMeasurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
 | [COVID-19 Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
-| COVID-19 Risk Score | No | Manual; Camera (Happitech), followed by calculated | 
+| [COVID-19 Risk Score](../../../modules/risk-scores/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
 | [CVD Risk Score](../../../modules/risk-scores/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
 | [ECG](../../../modules/physiological/ecg-alivecor.md) | No | Sync (from Kardia) |
-| ECGHealthKit | Yes | Sync (from Kardia) | 
-| Health Score | No | Manual, followed by calculated | 
+| [ECGHealthKit](../../../modules/physiological/ecg-apple-health.md) | Yes | Sync (from Apple Health) | 
+| [Health Score](../../../modules/risk-scores/health-score.md)| No | Manual, followed by calculated | 
 | [Heart rate/ HRV](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
 | Height Z-Score | No | Manual, followed by calculated | 
-| High-Frequency HR | No | Sync (from Apple Health, Google Fit) | 
-| High-Frequency Step | No | Sync (from Apple Health, Google Fit) | 
+| [High-Frequency HR](../../../modules/physiological/heart-rate.md) | No | Sync (from Apple Health, Google Fit) | 
+| [High-Frequency Step](../../../modules/general/steps.md) | No | Sync (from Apple Health, Google Fit) | 
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
 | [Medications](../../../modules/physiological/medications.md) | No | Manual | 
-| Oxford Knee Score | No | Manual, followed by calculated | 
+| [Oxford Knee Score](../../../epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | No | Manual, followed by calculated | 
 | [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
-| PROMIS Global Health v1.2 | No | Manual, followed by calculated | 
+| [PROMIS Global Health v1.2](../../../epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | No | Manual, followed by calculated | 
 | [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
 | [Photos](../../../modules/general/photos.md) | No | Manual |
-| Pulse Oximetry | Yes | Manual | 
-| Quality of life | No | Manual | 
+| [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
+| [Quality of life](../../../epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | No | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
 | [Resting Breathing Rate](../../../modules/physiological/resting-breathing-rate.md) | No | Manual | 
-| Resting heart rate | Yes | Camera (from Happitech) | 
+| [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) | 
 | [Steps](../../../modules/general/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
-| Waist to Height | Yes | Manual, followed by calculated | 
+| [Waist to Hip](../../../modules/physiological/body-measurement.md) | Yes | Manual, followed by calculated | 
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
 
 ## Configuring the module
