@@ -16,7 +16,7 @@ In the pop-out window, enter a name for your organisation, select a **View type*
 
 ![image](./assets/Admin0102.png)
 
-For DCT deployments, you can also optionally choose to set a **Study completion target**. This is a % of the patients to complete the trial and will be displayed on the deployment list view in the Clinician Portal. 
+For DCT deployments, you can also optionally choose to set a **Study completion target** and **Enrollment target**. Study completion target is the number of patients needed to complete the trial and will be displayed on the deployment list view in the Clinician Portal. Enrollment target is the number of patients that should be recruited to ensure the study completion target is met.
 
 Once you have completed these details, click **Save** and your organisation will be listed on the **Organisations** tab. On the list, you can see the organisation name, enrollment target, study completion target and the number of deployments associated with it. 
 ![image](./assets/Admin0103.png)
