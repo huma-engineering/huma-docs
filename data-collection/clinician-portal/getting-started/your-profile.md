@@ -49,7 +49,7 @@ You can reset your password from here. Click to edit and you will be asked to en
 
 ![Password](./assets/YourProfile05.png)
 
-When you have made your edits, click the 🗸 to confirm the changes or 𐄂 to cancel the changes.
+When you have made your edits, click the **check ✓** icon to save or the **cross X** to revert back.
 
 ![Conifrm or Cancel](./assets/YourProfile06.png)
 
