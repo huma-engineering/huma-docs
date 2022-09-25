@@ -100,7 +100,7 @@ You can add as many thresholds as you need with the **Add threshold** link at th
 
 ![image](./assets/TrackModule08.png)
 
-Flag notifications will only show for amber (moderate severity) and red (high severity) data points; green ones are considered acceptable and won’t be flagged. 
+Red, amber and grey flag notifications will show on the Clinician Portal for all newly entered data in line with the severity settings you enter here: red flags indicate high severity data points, amber flags indicate moderate severity data points and grey shows low severity and non-RAG configured data. 
 
 ### Static modules
 Bear in mind that not all modules will use the RAG system and patient data will have to be reviewed manually to determine whether it is dangerous or not. For example, in the case of the Steps module, the number of steps considered healthy would vary from patient to patient. 
