@@ -13,7 +13,7 @@ The **Track** screen is accessed via the 🗠 icon on the navigation menu.
 
 ![Track](../assets/Track.png)
 
-The module tiles show the most recent entry recorded. Below that you can see the recommended schedule and the date and time of the last entry. Click the **Add** button (or **Start** in the case of questionnaires) to [enter data](./entering-your-health-data.md) directly or click the tile to see more information.
+The module tiles show the most recent entry recorded. Below that you can see the recommended schedule and the date and time of the last entry. Click the tile to see more information or [enter new data](./entering-your-health-data.md).
 
 ### Historic data
 If data is available, you will see a chart at the top of the module showing all your past data points mapped onto the graph. At the top of the graph you will see the average reading alongside the most recent, with the date of your last reading. 
