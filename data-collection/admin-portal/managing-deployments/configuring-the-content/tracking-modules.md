@@ -22,7 +22,6 @@ The table below shows which modules have the threshold option and what data entr
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
-| [Anxiety level - GAD-7](../../../epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Yes | Manual, followed by calculated | 
 | [Audio Word Recall](../../../modules/general/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
@@ -42,13 +41,10 @@ The table below shows which modules have the threshold option and what data entr
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
 | [Medications](../../../modules/physiological/medications.md) | No | Manual | 
-| [Oxford Knee Score](../../../epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | No | Manual, followed by calculated | 
 | [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
-| [PROMIS Global Health v1.2](../../../epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | No | Manual, followed by calculated | 
 | [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
 | [Photos](../../../modules/general/photos.md) | No | Manual |
 | [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
-| [Quality of life](../../../epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | No | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
 | [Resting Breathing Rate](../../../modules/physiological/resting-breathing-rate.md) | No | Manual | 
 | [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) | 
