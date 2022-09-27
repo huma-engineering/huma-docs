@@ -9,7 +9,7 @@ The key function of the Huma App is for collecting patient data and sharing it w
 
 ## How it works​
 
-The **Track** screen is accessed via the 🗠 icon on the navigation menu. 
+The **Track** screen is accessed via the ![Track](../assets/TrackIcon.png) icon on the navigation menu. 
 
 ![Track](../assets/Track.png)
 
