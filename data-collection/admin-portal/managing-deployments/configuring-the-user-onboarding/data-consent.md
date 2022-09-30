@@ -17,27 +17,25 @@ Click the **Edit✎** icon at the end of the row to configure the module.
 
 > 📘 Note that the details may vary depending on the country. For the purpose of this guide, we will look at the configuration needed for EU regions who are regulated by GDPR guidelines.
 
-- **General** - This section specifies the user who needs to consent. In this case, as it is the user’s data being processed, only **User** should be checked.
+### General
+This section specifies the user who needs to consent. In this case, as it is the user’s data being processed, only **User** should be checked.
 
 ![image](./assets/DataConsent01.png)
 
-- **Signature** - Check this box if user signature is required. For each field, you can edit the placeholder text or leave it as the default. 
+### Signature
+Check the signature box if user signature is required. For each field, you can edit the placeholder text or leave it as the default. 
 
 ![image](./assets/DataConsent02.png)
 
-- If you want to include a middle name as part of the signature, check the **Has middle name** checkbox. 
+- **Has middle name** - Check this if you want to include a middle name as part of the signature. 
 - **Show first last name** - Ensure this is checked so user name and surname is requested.
-- **Sections** - The sections listed in the consent module can be edited, removed and added to in order to configure the module to your specifications. Just click the **Edit✎** icon at the end of the row to change the **Type**, **Title** and **Details** of the section.
 
-![image](./assets/DataConsent03.png)
-
-You can add more sections to your consent form if needed. Click the **Add section** button and complete the details in the pop-out window.
-
-![image](./assets/DataConsent04.png)
+### Sections
+The sections listed in the consent module can be edited, removed and added to in order to configure the module to your specifications. Just click the **Edit✎** icon at the end of the row to change the **Type**, **Title** and **Details** of the section. You can add more sections to your consent form if needed. Click the **Add section** button and complete the details in the pop-out window.
 
 The sections you add to your consent policy is up to you. We have included some recommended sections to guide you. Select the ones you would like to include and add the relevant details. 
 
-![image](./assets/DataConsent05.png)
+![image](./assets/DataConsent04.png)
 
 Recommended section types are as follows:
    
