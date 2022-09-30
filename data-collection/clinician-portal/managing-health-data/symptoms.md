@@ -15,6 +15,6 @@ Click the module to see the patient’s symptoms in table form, listed with the 
 
 To resolve the red flags, simply click the **Add note / Resolve flags** button and add a note once all the flagged symptoms have been reviewed.
 
-![Resolve flags](./assets/TrackSymptoms03.png)
+![Resolve flags](./assets/TrackSymptoms02.png)
 
 **Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Questionnaires](./questionnaires.md)  
