@@ -39,14 +39,8 @@ Click the **Table view** button at the top to see the data points listed along w
 ![Chart view](./assets/PatientDashboard07.png)
 
 ### Comparing data points
-To compare different data points side by side, click the **Overlay vital** button. This lets you pick a second data point to overlay onto the graph so that you can compare them side by side. 
+To compare different data points side by side, click the **Overlay vital** button. This lets you pick a second data point to overlay onto the graph so that you can compare them side by side. The colour of the line will match the colour on the module tab on the left. Click on a different module to overlay that vital.
 
 ![Overlay vital](./assets/PatientDashboard08.png)
-
-The colour of the line will match the colour on the module tab on the left.
-
-![Overlaid vitals](./assets/PatientDashboard09.png)
-
-Click on a different module to overlay that vital.
 
 **Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Configuring tracking modules](../../admin-portal/managing-deployments/configuring-the-content/tracking-modules.md); [Configuring Questionnaires](../../admin-portal/managing-deployments/configuring-the-content/tracking-questionnaires.md)  
