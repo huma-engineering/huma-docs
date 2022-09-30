@@ -27,16 +27,12 @@ Configure the to-do action by filling in the fields:
 - **Number of notifications** - Add a value for the total number of notifications that you want to go out between the start date and end date. Usually, this is calculated based on the frequency and duration you have set, but you can add a lower value here in order to limit the total number of notifications.
 - **Delta from trigger time** - This sets the start date for when you want your To do to become active and is relative to the trigger event. If you want the notifications to start before the trigger event, the value you enter should be a minus e.g. -14 (notifications start 2 weeks before).
 - **Duration from trigger time** - This sets the period of time that the to-do will remain active on the user’s timeline. Work out your end date and calculate the distance from the start date (Delta from trigger time).
-
-![image](./assets/Todo04.png)
-
 - **Instance expires in** - This indicates how long a task (or subtask) should remain on the To do list before it expires. 
 - **Notify every** - If a task remains incomplete on the patient’s To do list, you can send out reminders. Set the frequency of the reminders here e.g. “1 Day(s)” sends one daily notification; “2 Hour(s)” sends one notification every two hours, etc. This frequency will continue until the task is either completed or expires.
-
 - **Duration ISO** - This is the active duration of the task or subtask (the length of time it will remain on the user's timeline). If you don’t want to create any subtasks, just set the duration to the same value you entered in **Duration from trigger time**.
 In the following two dropdowns, you can set the day and time that you would like the task or subtask to be pushed to the timeline. For example, select 10 hours, 30 minutes to send the subtask at 10:30am. 
 
-![image](./assets/Todo05.png)
+![image](./assets/Todo04.png)
 
 Click to **Save changes**. 
 Your new action will now appear on the list along with all your other To dos for this deployment. 
