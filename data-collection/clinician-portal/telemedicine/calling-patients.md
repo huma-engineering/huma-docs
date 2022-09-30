@@ -20,11 +20,11 @@ The patient will receive the call as a standard video or audio call.
 
 You can review your call history with the patient in the **Past Appointments** tab of the **Telemedicine** area of the Patient Overview. Unanswered attempts or other unsuccessful calls will not be stored.
 
-![Past appointments](./assets/CallPatients03.png)
+![Past appointments](./assets/CallPatients02.png)
 
 If you have a call scheduled with a patient, you can choose to start that call at any time using the **Join call** button in the scheduled appointments tab.
 
-![Join call](./assets/CallPatients04.png)
+![Join call](./assets/CallPatients03.png)
 
 ## Missed calls
 When a call on Huma does not connect, you will be provided with one of the following reasons: 
