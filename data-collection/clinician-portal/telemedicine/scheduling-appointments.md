@@ -14,21 +14,21 @@ Scheduling an appointment in the Clinician Portal is simple:
 3. Select a day and time.
 4. Click **Add appointment** to complete the process.
 
-![Scheduling](./assets/Scheduling08.png)
+![Scheduling](./assets/Scheduling01.png)
 
 Patients will receive a notification and will need to accept or reject your appointment. Appointments will show up in the **Upcoming appointments** tab with the status **Pending confirmation** until the patient has accepted it.
 
-![Pending confirmation](./assets/Scheduling06.png)
+![Pending confirmation](./assets/Scheduling02.png)
 
 Once accepted, the status will change to **Scheduled** and you will see a **Join call** button. Use this button to call the patient any time before the scheduled appointment.
  
 If you want to reschedule or delete the appointment, open the menu at the end of the row.
 
-![Delete appointment](./assets/Scheduling04.png)
+![Delete appointment](./assets/Scheduling03.png)
 
 To reschedule, just select a new time and click **Reschedule**.
 
-![Reschedule appointment](./assets/Scheduling07.png)
+![Reschedule appointment](./assets/Scheduling04.png)
 
 Patients will be notified of scheduled appointments in the app and can either accept or reject them.
 
