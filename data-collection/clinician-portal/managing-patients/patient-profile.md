@@ -15,6 +15,6 @@ The patient profile can be [configured from the Admin Portal](../../admin-portal
 
 If your role allows it, click the **Edit✎** button to edit the patient details. When you have made changes, click the **check✓** icon to save or the **cross⨯** to revert back.
 
-![Edit profile](./assets/PatientProfile03.png)
+![Edit profile](./assets/PatientProfile02.png)
 
 **Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md)
