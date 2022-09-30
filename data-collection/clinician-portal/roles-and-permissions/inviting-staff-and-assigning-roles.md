@@ -36,12 +36,8 @@ To see which staff have not yet responded to invitations, use the **Overview** f
 You will see all staff members who have not yet clicked the link in their invitation.
 
 ### Resending or deleting invitations
-If you want to send out a reminder to staff who have not yet set up their account or whose invitations have expired, you can easily resend the invitation. On the **pending staff invitations list**, open the menu at the end of the row and select **Resend invitation**.
+If you want to send out a reminder to staff who have not yet set up their account or whose invitations have expired, you can easily resend the invitation. On the **pending staff invitations list**, open the menu at the end of the row and select **Resend invitation**. On the same menu, you can choose to delete the invitation. This means the link will no longer work.
 
-![Resending invitations](./assets/InvitingStaff07.png)
-
-On the same menu, you can choose to delete the invitation. This means the link will no longer work.
-
-![Delete invitations](./assets/InvitingStaff08.png)
+![Delete invitations](./assets/InvitingStaff07.png)
 
 **Related articles**: [Default roles and permissions](./default-roles-and-permissions.md); [Creating custom roles](./creating-custom-roles.md); [Inviting Deployment Admins](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
