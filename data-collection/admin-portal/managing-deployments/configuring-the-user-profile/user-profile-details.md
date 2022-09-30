@@ -41,19 +41,19 @@ It can be useful to get some additional contact details for patients and their p
 ### Gender and Ethnicity
 There are a number of gender and ethnicity categories that can be selected. These can also be renamed and customised depending on the needs of your study and cultural sensitivities (although the original name will always be used in exports).
 
-![image](./assets/UserProfile04.png)
+![image](./assets/UserProfile02.png)
 
 ### Clinician-only fields
 This field appears in the patient profile, but only on the clinician side. If using the surgery date as a trigger for To dos, make sure this box is checked.
 
-![image](./assets/UserProfile05.png)
+![image](./assets/UserProfile03.png)
 
 ### Mandatory onboarding fields
 This section lets you define which of the above fields you want to be mandatory. This means users will not be able to skip them. Review the modules you have added and ensure any of the data that is needed for these modules is made mandatory e.g. height and weight for BMI, biological sex for CVD score, gender and height for Peak flow, etc. 
 
 As a default, it is recommended that DoB and biological sex are mandatory in all cases.
 
-![image](./assets/UserProfile06.png)
+![image](./assets/UserProfile04.png)
 
 You can reorder the options to define how they appear in the portal as well as the onboarding profile questionnaire.
 
