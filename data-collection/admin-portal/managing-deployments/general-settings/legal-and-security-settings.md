@@ -28,12 +28,9 @@ Huma also offers the possibility of biometric login using biometric data such as
 ### Legal Documents
 In this area, you can upload or link to your legal documents: **Privacy policy**, **End-User Licence Agreement (EULA)** and **Terms and conditions** (the same link as the  EULA) are the documents that should be included. Make sure the documents correspond to the documents you include as part of the onboarding modules.
 
-Choose between **URL** and **Upload**. If using the URL option, add links to these pages on your website or wherever they are located.
+Choose between **URL** and **Upload**. If using the URL option, add links to these pages on your website or wherever they are located. 
+If using the **Upload** option, click the file icon at the end of each line to upload your documents.
 
 ![image](./assets/LegalPrivacy03.png)
-
-If you choose the **Upload** option, click the file icon at the end of each line to upload your documents.
-
-![image](./assets/LegalPrivacy04.png)
 
 **Related articles**: [Data consent](../configuring-the-user-onboarding/data-consent.md); [eConsent](../configuring-the-user-onboarding/econsent.md)
