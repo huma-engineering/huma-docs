@@ -22,7 +22,7 @@ You can review your call history with the patient in the **Past Appointments** t
 
 ![Past appointments](./assets/CallPatients02.png)
 
-If you have a call scheduled with a patient, you can choose to start that call at any time using the **Join call** button in the scheduled appointments tab.
+If you have a call scheduled with a patient, you can choose to start that call at any time using the **Join call** button in the **Upcoming appointments** tab.
 
 ![Join call](./assets/CallPatients03.png)
 
