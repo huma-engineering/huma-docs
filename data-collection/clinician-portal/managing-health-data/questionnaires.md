@@ -24,10 +24,10 @@ Click the questionnaire to view the patient responses.
 
 If you have multiple submissions of the same questionnaire, you can see all the different submissions of the same question in a panel on the right, along with a timestamp of the answer.
 
-![Questionnaire history](./assets/Questionnaire05.png)
+![Questionnaire history](./assets/Questionnaire04.png)
 
 In the case of scored questionnaires, you can choose **Chart view** to see a graph tracking the patient scores over time. 
 
-![Chart view](./assets/Questionnaire06.png)
+![Chart view](./assets/Questionnaire05.png)
 
 **Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Tracking Symptoms](./symptoms.md)  
