@@ -53,7 +53,7 @@ Follow these steps to create your questionnaire and it will appear on the dropdo
 - If you want the questionnaire to be part of the user onboarding, check the box **Is onboarding?**
 - If you want the questionnaire to be presented in a horizontal flow, rather than vertical scrolling, check the box **Horizontal flow**
 
-![image](./assets/Questionnaire22.png)
+![image](./assets/Questionnaires03.png)
 
 ### Scoring
 If you want to assign scores to the answers given to the questions in your questionnaire, you can configure the settings here.
@@ -62,7 +62,7 @@ If you want to assign scores to the answers given to the questions in your quest
 
 - If you want to add RAG thresholds to the score so that the care team will be notified via flags when a result is concerning, just check the **RAG Thresholds** box and set the min and max values in the chart below. Add more thresholds as needed with the **Add threshold** link.
 
-![image](./assets/Questionnaires23.png)
+![image](./assets/Questionnaires04.png)
 
 ### Schedule
 If your questionnaire is requesting data that needs to be collected on a regular basis, you can set a schedule. 
@@ -72,19 +72,15 @@ If your questionnaire is requesting data that needs to be collected on a regular
 
 - Check the checkbox to let the patient know what **times of day** they need to submit their data. If no option is selected, the patient will be informed to submit the questionnaire at the same time of day each time.
 
-![image](./assets/Questionnaires04.png)
+![image](./assets/Questionnaires05.png)
 
 ### Other settings
 You have the option to add **Learn** articles to some modules. 
 - Check the **Learn articles** checkbox to open a list of Learn content then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the Learn article.
 
-![image](./assets/Questionnaires05.png)
-
-- Check the **Push notifications** checkbox to activate push notifications for the questionnaire. Customise the **title** and **body** to match the data you want to collect and remind the patient of any important information they might need at this time. Patients can set their own custom reminders for completing certain tasks, and this is the text they will see in the notification.
-
 ![image](./assets/Questionnaires06.png)
 
-Some questionnaires also allow **Footnote text**.
+- Check the **Push notifications** checkbox to activate push notifications for the questionnaire. Customise the **title** and **body** to match the data you want to collect and remind the patient of any important information they might need at this time. Patients can set their own custom reminders for completing certain tasks, and this is the text they will see in the notification. Some questionnaires also allow **Footnote text**.
 
 ![image](./assets/Questionnaires07.png)
 
