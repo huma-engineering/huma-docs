@@ -12,12 +12,11 @@ In the **Admin Portal**, find your list of organisations on the **Organisations*
 ![image](./assets/Admin0201.png)
 A file will be downloaded to your device containing all the code for your organisation's configuration in JSON. 
 
-Next, open the menu again and select **Archive**. 
+To archive the file, open the menu again and select **Archive**. 
 
-![image](./assets/Admin0202.png)
 You will be asked to confirm the action. 
 
-![image](./assets/Admin0203.png)
+![image](./assets/Admin0202.png)
 
 Once your organisation has been archived, you will no longer be able to see it on your portal. However, if you need to retrieve the data at a later date, please contact a Super Admin who will be able to restore it.
 
