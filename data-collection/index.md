@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Welcome 
 ---
 # Welcome
-Welcome to the Huma knowledge base. The following documentation is to explain the suite of products used in the delivery of remote patient monitoring.
+Welcome to the Huma knowledge base. The following documentation is to explain the suite of products used in the delivery of Remote Patient Monitoring (RPM).
 
 Huma provides digital-first care by facilitating the journey of data from patients to care teams. Huma’s hospital-at-home technology collects real-world patient data remotely, connecting patients and clinical teams, enabling greater access to care from any location and improving efficiency for clinicians. 
 
