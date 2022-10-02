@@ -5,7 +5,7 @@ title: Icon, language and labels
 # Icon, language and labels
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-When setting up multiple deployments for different user groups, the Huma platform makes it possible to differentiate each deployment, not only by customising the features, but also by adding specific branding and language configurations.
+When setting up multiple Deployments for different user groups, the Huma platform makes it possible to differentiate each deployment, not only by customising the features, but also by adding specific branding and language configurations.
 ## How it works​
 In the **Deployment config** tab, you can configure each individual deployment’s look and feel.
 
