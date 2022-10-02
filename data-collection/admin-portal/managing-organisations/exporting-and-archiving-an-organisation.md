@@ -17,6 +17,6 @@ To archive the file, open the menu again and select **Archive**. You will be ask
 
 ![image](./assets/Admin0202.png)
 
-Once your organisation has been archived, you will no longer be able to see it on your portal. However, if you need to retrieve the data at a later date, please contact a Super Admin who will be able to restore it.
+Once your organisation has been archived, you will no longer be able to see it on your portal. However, if you need to retrieve the data at a later date, please contact a super admin who will be able to restore it.
 
 **Related articles**: [Creating a new Organisation](./creating-a-new-organisation.md); [Exporting the configuration or localisation files](../managing-deployments/tools-and-navigation/exporting-config-or-localization-files.md)
