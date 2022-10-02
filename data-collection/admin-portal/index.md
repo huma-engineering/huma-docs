@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Admin Portal 
 ---
 # Introduction to the Admin Portal
-The Admin Portal is the place where organisations and deployments are configured. 
+The Admin Portal is the place where Organisations and Deployments are configured. 
 
 When a healthcare institute or study program wants to use Huma for remote data collection, the Huma operations team will build a new Organisation for them within the Admin Portal.
 
