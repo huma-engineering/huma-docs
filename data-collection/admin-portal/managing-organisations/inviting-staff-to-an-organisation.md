@@ -12,7 +12,7 @@ In the Admin Portal, go to the **Organisations** tab and open the dropdown menu 
 
 ![image](./assets/Admin0301.png)
 
-A pop-out window will appear where you can add the email addresses of the people you want to invite. Make sure you hit enter so the **Send invites** button is activated.
+A pop-out window will appear where you can add the email addresses of the people you want to invite. Click **Send invites** to send out your email invitations.
 
 ![image](./assets/Admin0302.png)
 
@@ -21,15 +21,15 @@ Select the type of role you want to assign from the dropdown:
 - **Organisation Owner** – this Admin Portal user can do everything an Organisation Editor can do and can also delete the organisation
 - **Access Controller** – this role is specifically for adding and removing organisation staff members and managing roles in the Clinician Portal
 
-For more information on roles and permissions, see the article on [Roles and permissions](../../clinician-portal/roles-and-permissions/default-roles-and-permissions.md).
+For more information on what each user can do, see the article on [Roles and permissions](../../clinician-portal/roles-and-permissions/default-roles-and-permissions.md).
 
 ![image](./assets/Admin0303.png)
 
-Finally, you can choose how long your invitation will remain active. Click the link to open the dropdown and choose from 24 hours, 72 hours or 7 days.
+Finally, you can choose how long your invitation will remain active. Click the link after 'Invites expire in' to open the dropdown and choose from 24 hours, 72 hours or 7 days.
 
 ![image](./assets/Admin0304.png)
 
-Click **Send invites** and the user will receive an email with the link that will let them set a password and access the Clinician Portal or the Admin Portal (depending on the role). 
+Click **Send invites** and the user will receive an email invitation with the link that will let them access the relevant portal. 
 
 ![image](./assets/Admin0305.png)
 
