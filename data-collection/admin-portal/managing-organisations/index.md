@@ -6,4 +6,4 @@ title: Managing Organisations
 
 Every client that joins Huma can have a custom platform configured specifically for their needs from the Admin Portal.
 
-In this section, you will find out how to [create organisations](./creating-a-new-organisation.md), [invite staff](./inviting-staff-to-an-organisation.md) to manage them and [export the organisation data](./exporting-and-archiving-an-organisation.md).
+In this section, you will find out how to [create Organisations](./creating-a-new-organisation.md), [invite staff](./inviting-staff-to-an-organisation.md) to manage them and [export the Organisation data](./exporting-and-archiving-an-organisation.md).
