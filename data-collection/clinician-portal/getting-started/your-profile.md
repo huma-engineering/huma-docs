@@ -61,6 +61,4 @@ If you ever forget your password, just click the **Forgot Password** link on the
 ### Privacy policy and licence agreement
 At the bottom of your profile page details, you can find links to licensing and privacy policy documentation. These links are set up in the deployment configuration and describe the terms of your user agreement.
 
-![Privacy Policy link](./assets/YourProfile08.png)
-
 **Related articles**: [Logging into the Portal](./logging-into-the-portal.md)
