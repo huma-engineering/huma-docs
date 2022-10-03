@@ -9,7 +9,7 @@ The Huma Admin Portal is the place where individual organisations and deployment
 This can be done both for the Huma App and the Clinician Portal. 
 ## How it works
 ### Previewing the Huma App​
-Go to the Deployment you want to preview. You’ll see a **phone icon** at the bottom right of the screen (you can find this on any page within the deployment management screens).
+Go to the Deployment you want to preview. You’ll see a ![Preview](./assets/Preview.png) icon at the bottom right of the screen (you can find this on any page within the deployment management screens).
 
 ![image](./assets/Preview01.png)
 
