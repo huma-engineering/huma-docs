@@ -17,10 +17,8 @@ In the **Deployment config** tab, you can configure each individual deployment�
 ![image](./assets/IconLanguage02.png)
 
 > ⚠️ **INFO**: Use a high resolution client logo with transparent background.
-> 
-> Recommended min size: 800x800px
-> 
-> Recommended format: png
+> - Recommended min size: 800x800px
+> - Recommended format: png
 
 
 - **Name** - Give your deployment a name to differentiate it from other deployments in the same organisation
@@ -38,7 +36,7 @@ To add a new language, you will need to translate all the text into the new lang
 > 🛑 **IMPORTANT**: Once you have downloaded the localisation file, your deployment configuration will be locked and you won’t be able to make any changes. For the full procedure, please refer to [this documentation](https://humatherapeutics.atlassian.net/wiki/spaces/DO/pages/3298689083/How-To+Log+a+Translation+Request).
 
 ## Labels[^1]
-At the bottom of the **Deployment Config** page, you can find the labels toggle. Enable this feature to assign tags to patients. Once enabled, this will appear as a column in the [Patient List](../../../clinician-portal/managing-patients/patient-list.md) and care teams will be able to add labels to patients in order to help with filtering.
+At the bottom of the **Deployment config** page, you can find the **Labels** toggle. Enable this feature to assign tags to patients. Once enabled, this will appear as a column in the [Patient List](../../../clinician-portal/managing-patients/patient-list.md) and care teams will be able to add labels to patients in order to help with filtering.
 
 ![image](./assets/IconLanguage05.png)
 
