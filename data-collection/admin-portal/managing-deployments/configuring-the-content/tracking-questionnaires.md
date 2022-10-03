@@ -111,7 +111,7 @@ You can make the question mandatory by enabling the **Required** toggle.
 
 ![image](./assets/Questionnaires12.png)
 
-You can change the order of the answer options using the **arrows🕂** icon at the end of the rows. 
+You can change the order of the answer options using the ![image](./assets/Move.png) icon at the end of the rows. 
 
 ![image](./assets/Questionnaires13.png)
 
