@@ -64,22 +64,18 @@ From here, you manage all your patient information including **Track data**; **P
 ![Patient Overview](./assets/Navigating10.png)
 
 ### Patient Tools
-Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.md) or [calling the patient](../telemedicine/calling-patients.md).
+Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.md) or [calling the patient](../telemedicine/calling-patients.md). The **Add note / Resolve flags** button can also be accessed from anywhere in the patient UI.
 
-![Patient Tools](./assets/Navigating11.png)
-
-The **Add note / Resolve flags** button can also be accessed from anywhere in the patient UI.
-
-![Resolve Flags](./assets/Navigating12.png)
+![Resolve Flags](./assets/Navigating11.png)
 
 ### Profile and User Management
 You can access the tools menu from the three dots next to your name in the button at the top right. This lets you access [your profile](./your-profile.md) and manage users, roles and permissions.
 
-![Profile menu](./assets/Navigating13.png)
+![Profile menu](./assets/Navigating12.png)
 
 ### Return to Home
 You can navigate back to the patient list screen at any time by clicking the Huma logo at the top-left of the screen.
 
-![Home icon](./assets/Navigating14.png)
+![Home icon](./assets/Navigating13.png)
 
 **Related articles**: [Logging into the Portal](./logging-into-the-portal.md); [Patient List](../managing-patients/patient-list.md); [Inviting staff and assigning roles](../roles-and-permissions/inviting-staff-and-assigning-roles.md); [Your Profile](./your-profile.md); [Inviting staff (Organisations)](../../admin-portal/managing-organisations/inviting-staff-to-an-organisation.md); [Inviting staff (Deployments)](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); 
