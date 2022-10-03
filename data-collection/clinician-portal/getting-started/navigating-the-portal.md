@@ -5,7 +5,7 @@ title: Navigation
 # Navigating the Portal
 **User**: Admin, Access Controller, Deployment Staff
 
-The Clinician Portal is one easy-to-use interface for all Care Team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles.
+The Clinician Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles.
 
 Portal layout is different depending on whether you have an Organisation-level role or a Deployment-level role as permissions are different for each. This guide will help you find your way around the portal no matter which view you have.
 
