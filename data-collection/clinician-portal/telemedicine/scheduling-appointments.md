@@ -12,7 +12,9 @@ Scheduling an appointment in the Clinician Portal is simple. From the Patient Da
 
 ![Scheduling](./assets/Scheduling01.png)
 
-You will select a day and time then click **Add appointment**. A notification will be sent to the patient who will be able to accept or reject your appointment.
+Select a day and time then click **Add appointment**. A notification will be sent to the patient who will be able to accept or reject your appointment.
+
+![Scheduling](./assets/Scheduling05.png)
 
 Appointments will show up in the **Upcoming appointments** tab with the status **Pending confirmation** until the patient has accepted it.
 
