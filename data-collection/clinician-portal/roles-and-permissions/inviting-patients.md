@@ -38,17 +38,17 @@ If you prefer, you can invite patients via a direct link. In the **Get Link** wi
 When users click on the link, they will be sent to the app (provided they have it downloaded already) where they will need to enter their email address and then verify it.
 You can also set an expiration date for the link by choosing a duration from the dropdown before you copy the link.
 ### Reviewing pending invitations
-To see which patients have not yet responded to invitations by clicking the link, use the filters at the top right and select **Pending patient invitations** as the Patient type then click **Search**.
+To see which patients have not yet responded to invitations by clicking the link, use the filters at the top right and select **Pending patient invitations** as the **Patient type** then click **Search**.
 
 ![Patient type](./assets/InvitingPatient07.png)
 
-Alternatively, use the Overview filters and select **Patients >> Pending invitations**.
+Alternatively, use the Overview filters and select **Patients >> Pending patient invitations**.
 
 ![Pending invitations](./assets/InvitingPatient08.png)
 
 You will see all patients with pending invitations listed.
 ### Resending or deleting invitations
-If you want to send out a reminder to patients who have not yet set up their account or whose invitations have expired, you can easily resend the invitation. On the list of pending patient invitations, open the menu at the end of the row and select **Resend invitation**.
+If you want to send out a reminder to patients who have not yet set up their account or whose invitations have expired, you can easily resend the invitation. On the list of pending patient invitations, open the menu at the end of the row and select **Re-send invitation**.
 
 ![Resend](./assets/InvitingPatient09.png)
 
