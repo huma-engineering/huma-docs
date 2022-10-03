@@ -12,13 +12,12 @@ You can add modules from the **Track** tab of your deployment configuration. Jus
 ![image](./assets/TrackModules01.png)
 
 ## Modules list
-This is the full list of modules available for tracking health data. Configuration is similar for each module although the RAG thresholds are not available for all of them. Modules that use RAG will be labelled **Threshold** and those that do not will be labelled **Static**. The only exception to this would be the **Symptoms** module, which is explained in more detail in the **Configuration** section.
+This is the full list of modules available for tracking health data. The table shows which modules have the threshold option and what data entry methods are available.
 
-Different modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps to log it automatically e.g. heart rate monitors, step counters. 
+- **Thresholds** - RAG thresholds are not available for all modules. Modules that use RAG will be labelled 'Thresholds' and those that do not will be labelled 'Static'. The only exception to this would be the **Symptoms** module (explained in more detail below).
 
-Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app. 
+- **Date Collection** - Different modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps e.g. heart rate monitors, step counters. Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app. 
 
-The table below shows which modules have the threshold option and what data entry methods are available.
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
@@ -55,7 +54,7 @@ The table below shows which modules have the threshold option and what data entr
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
 
 ## Configuring the module
-From the modules list, click the **edit✎** icon at the end of the row to configure the module.
+From the modules list, click the ![image](./assets/Edit.png) icon at the end of the row to configure the module.
 
 ![image](./assets/TrackModules02.png)
 
@@ -71,13 +70,13 @@ From the modules list, click the **edit✎** icon at the end of the row to confi
 
 ![image](./assets/TrackModules03.png)
 
-- **Schedule** - For data points that need to be collected on a regular basis, you can set a recommended schedule for the patient. Set the **ISO duration** and the **Times per duration** to indicate to users how long and how many times they will need to submit data to this module. Check the checkbox to let the patient know what times of day they need to submit their data. If you don’t select any option, the patient will be told to submit their data as needed.
+- **Schedule** - For data points that need to be collected on a regular basis, you can set a recommended schedule for the patient. Set the **ISO duration** and the **Times per duration** to indicate to users how long and how many times they will need to submit data to this module. Check the checkbox to let the patient know what times of day they need to submit their data. If you don’t select any option, the patient will be told to submit their data 'as needed'.
 
 ![image](./assets/TrackModules04.png)
 
 - **Device sync** - If the data point can be collected via a device or smartphone, you can indicate which collection methods are available here. For example, patients can collect their heart rate variability reading using their phone camera.
  
-- **Learn** - You have the option to associate configured Learn articles to the modules. Check the box to open a list of Learn articles that you have already added to your deployment, then just select the ones that link to this module. When the patient opens this module, they will be able to access the Learn article.
+- **Learn** - You have the option to associate configured Learn articles to the modules. Check the box to open a list of articles that you have already added to your deployment, then just select the ones that link to this module. When the patient opens this module, they will be able to access the article.
 
 ![image](./assets/TrackModules05.png)
 
@@ -101,7 +100,7 @@ Red, amber and grey flag notifications will show on the Clinician Portal for all
 ### Static modules
 Bear in mind that not all modules will use the RAG system and patient data will have to be reviewed manually to determine whether it is dangerous or not. For example, in the case of the Steps module, the number of steps considered healthy would vary from patient to patient. 
 
-Modules that include RAG thresholds are labelled **Thresholds** and those without are labelled **Static**. 
+Modules that include RAG thresholds are labelled 'Thresholds' and those without are labelled 'Static'. 
 
 ![image](./assets/TrackModules09.png)
 
