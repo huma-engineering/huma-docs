@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-title: Roles and Permissions
+title: Roles and permissions
 ---
-# Roles and Permissions
+# Roles and permissions
 
 The Cilnician Portal has a number of different [user roles](./default-roles-and-permissions.md) available so that users can only access or edit what they need to. [Custom roles](./creating-custom-roles.md) can also be created with any combination of permissions.
 
