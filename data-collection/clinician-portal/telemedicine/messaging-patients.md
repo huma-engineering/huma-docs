@@ -8,7 +8,7 @@ title: Messaging patients
 The Huma experience connects clinician and patients through the portal. Clinicians can choose to message their patients with important information and the portal makes this easy by giving them the choice of composing their own message or selecting from a library of pre-built messages.
 
 ## How it works​
-On the **Patient Overview** page, open the patient dropdown menu and select **Send message**.
+From the Patient Dashboard, open the patient dropdown menu and select **Send message**.
 
 ![Send Message](./assets/Messaging01.png)
 
