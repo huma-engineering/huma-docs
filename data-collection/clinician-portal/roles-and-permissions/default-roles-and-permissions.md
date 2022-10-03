@@ -29,7 +29,7 @@ The following table shows the specific permissions associated with each of these
 All the above permissions can be combined into specific configurations to create custom roles. Please see the article on [Creating custom roles](./creating-custom-roles.md). 
 
 ## Who invites who?
-- Only Admins can invite other Admins and Contributors.
-- Both Admins and Access Controllers can invite Organisation staff and Access Controllers.
+- Only admins can invite other admins and contributors.
+- Both admins and access controllers can invite organisation staff and access controllers.
 
 **Related articles**: [Inviting staff and assigning roles](./inviting-staff-and-assigning-roles.md); [Creating custom roles](./creating-custom-roles.md); [Inviting Deployment Admins](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)
