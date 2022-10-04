@@ -59,12 +59,12 @@ module.exports = {
               to: "api-data-collection",
               docsPluginId: 'api-data-collection',
             },
-            {
-              type: 'doc',
-              label: 'Integration',
-              docsPluginId: 'api-integration',
-              docId: 'intro',
-            },
+            // {
+            //   type: 'doc',
+            //   label: 'Integration',
+            //   docsPluginId: 'api-integration',
+            //   docId: 'intro',
+            // },
           ],
         },
         {
@@ -135,7 +135,8 @@ module.exports = {
   plugins: [
     [
       require.resolve('docusaurus-lunr-search'), {
-        languages: ['en', 'fr']
+        // languages: ['en', 'fr']
+        languages: ['en']
       }
     ],
     [
@@ -176,6 +177,7 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'fr'],
+    //locales: ['en', 'fr'],
+    locales: ['en']
   },
 };

@@ -1,0 +1,2787 @@
+{
+   "openapi": "3.0.0",
+   "servers": [
+     {
+       "url": "https://demoapi.humaapp.io/"
+     },
+     {
+       "url": "https://qaapi.humaapp.io/"
+     }
+   ],
+   "info": {
+     "title": "Huma Platform Play",
+     "version": "1.14.1",
+     "description": "Welcome to API documentation for **Platform Play** product. Download the spec [here](./documentations.json).\n\n### Introduction\nThis API is written in **OpenAPI v3** and is based on existing functionalities of [Huma Portal](https://info.huma.com/clinician-portal-guide) And [Huma App](https://apps.apple.com/gb/app/huma/id1519444604).\n\n### Authentication\nThere are two ways to authenticate to the API:\n- End user authentication: Using username, password flow. It may ask to setup 2FA based of deployment configuration.\n- Machine user authencation: Using [Hawk](https://blog.mozilla.org/services/2015/02/05/whats-hawk-and-how-to-use-it/) method to authenticate into system.\n\nFor Hawk authentication, Huma staffs provides you with the necessary credentials.\n\n#### Python / export de-identified data\n  Download from the export.py file [here](./pyexample/export.py). Make sure to have python3 (>= 3.7) and pip on your system.\n\n  1. Install dependencies:\n    \n     `$ pip install requests mohawk`\n  \n\n  2. Set AUTH_ID, AUTH_KEY, DEPLOYMENT_ID in code and call export.py:\n\n     `$ python3 export.py`\n\n  3. Or alternatively to step 2, set the env variable and call export.py:\n\n     `$ AUTH_ID=<ID> AUTH_KEY=<KEY> DEPLOYMENT_ID=<DEP_ID> python3 export.py`\n  \n  Step 2 or 3 generates an export.json based on the input parameters.\n\n#### Note\nOpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).\n",
+     "x-logo": {
+       "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Huma_Logo.svg"
+     }
+   },
+   "tags": [
+     {
+       "name": "Export",
+       "description": " Export module is used by clinicians to export the patient data in CSV/JSON format."
+     }
+   ],
+   "paths": {
+     "/api/extensions/v1beta/export/": {
+       "post": {
+         "tags": [
+           "Export"
+         ],
+         "summary": "Export",
+         "description": "The users with any these roles can access the export API: `Admin`, `OrganizationStaff`, `AccessController` and `Contributor`\n\n###### If you are using End user authentication\n\n  1. **Sign in for clinician user:**\n      - API `/api/auth/{version}/signin` will return the `authToken` and `user_id` in response.\n  2. **Get deploymentId:**\n      - Using the `Bearer {authToken}` do call `/api/extensions/{version}/user/{user_id}/configuration` to get `deploymentId`\n  3. **Export patients data in CSV/JSON format(for that clinician):**\n      - For given `deploymentId` the data can be exported using `/api/extensions/{version}/export/`\n\n###### If you are using Hawk authentication\n\n  1. **Sign in Api Key and Api ID:** \n        - Huma staffs provides you with Api credentials\n  2. **Get deploymentId:**\n        - Huma staffs provides you with necessary deployment ID(s)\n  3. **Export patients data in CSV/JSON format:**\n        - For given `deploymentId` the data can be exported using `/api/extensions/{version}/export/`\n",
+         "requestBody": {
+           "description": "Export request",
+           "required": true,
+           "content": {
+             "application/json": {
+               "schema": {
+                 "$ref": "#/components/schemas/ExportRequest"
+               },
+               "examples": {
+                 "Single deployment with all modules (except step) and de-identified in JSON": {
+                   "value": {
+                     "userExportProfile": false,
+                     "deIdentified": true,
+                     "excludedModuleNames": [
+                       "Step"
+                     ],
+                     "binaryOption": "NONE",
+                     "includeNullFields": false,
+                     "format": "JSON",
+                     "singleFileResponse": true,
+                     "fromDate": "2021-07-15",
+                     "toDate": "2021-08-12",
+                     "deploymentId": "{{deploymentId}}"
+                   }
+                 },
+                 "Single deployment with all modules (except step) and identified in JSON": {
+                   "value": {
+                     "userExportProfile": false,
+                     "deIdentified": false,
+                     "excludedModuleNames": [
+                       "Step"
+                     ],
+                     "binaryOption": "NONE",
+                     "includeNullFields": false,
+                     "format": "JSON",
+                     "singleFileResponse": true,
+                     "fromDate": "2021-07-15",
+                     "toDate": "2021-08-12",
+                     "deploymentId": "{{deploymentId}}"
+                   }
+                 },
+                 "Single patient data excluding identifiable information for all modules and export to JSON format": {
+                   "value": {
+                     "deIdentified": true,
+                     "format": "JSON",
+                     "fromDate": "2021-07-08",
+                     "toDate": "2021-07-25",
+                     "deploymentId": "{{deploymentId}}",
+                     "singleFileResponse": true,
+                     "userIds": [
+                       "{{userId}}"
+                     ]
+                   }
+                 },
+                 "Single patient data excluding identifiable information for specific modules and export to CSV & JSON both formats": {
+                   "value": {
+                     "deIdentified": true,
+                     "format": "JSON_CSV",
+                     "fromDate": "2021-07-08",
+                     "toDate": "2021-07-28",
+                     "moduleNames": [
+                       "Questionnaire",
+                       "RevereTest"
+                     ],
+                     "deploymentId": "{{deploymentId}}",
+                     "userIds": [
+                       "{{userId}}"
+                     ]
+                   }
+                 },
+                 "Multiple patients data including identifiable information for all modules and export CSV format": {
+                   "value": {
+                     "deIdentified": false,
+                     "format": "CSV",
+                     "fromDate": "2021-07-08",
+                     "toDate": "2021-07-25",
+                     "deploymentId": "{{deploymentId}}",
+                     "userIds": [
+                       "{{userId}}",
+                       "{{userId}}"
+                     ]
+                   }
+                 },
+                 "Multiple patients data including identifiable information for selected module and export JSON format": {
+                   "value": {
+                     "deIdentified": false,
+                     "format": "JSON",
+                     "fromDate": "2021-07-08",
+                     "toDate": "2021-07-25",
+                     "deploymentId": "{{deploymentId}}",
+                     "moduleNames": [
+                       "Questionnaire"
+                     ],
+                     "userIds": [
+                       "{{userId}}",
+                       "{{userId}}"
+                     ]
+                   }
+                 },
+                 "All patients data excluding identifiable information identifiable for all modules and export CSV & JSON both formats": {
+                   "value": {
+                     "deIdentified": true,
+                     "format": "JSON_CSV",
+                     "fromDate": "2021-07-08",
+                     "toDate": "2021-07-25",
+                     "deploymentId": "{{deploymentId}}"
+                   }
+                 },
+                 "Export patients data for specific deployment using base profile": {
+                   "value": {
+                     "baseProfile": "{{enter created profile name}}",
+                     "deploymentId": "{{deploymentId}}"
+                   }
+                 },
+                 "Export multiple patients data for specific deployment with all objects": {
+                   "value": {
+                     "deIdentified": false,
+                     "format": "JSON",
+                     "fromDate": "2021-07-08",
+                     "toDate": "2021-07-25",
+                     "binaryOption": "NONE",
+                     "deploymentId": "{{deploymentId}}",
+                     "exportBucket": "hu-pp-qa-app-bucket",
+                     "includeNullFields": true,
+                     "includeUserMetaData": true,
+                     "layer": "FLAT",
+                     "quantity": "SINGLE",
+                     "questionnairePerName": true,
+                     "singleFileResponse": true,
+                     "splitMultipleChoice": true,
+                     "splitSymptoms": true,
+                     "translatePrimitives": true,
+                     "translationShortCodesObjectFormat": "JSON",
+                     "view": "USER",
+                     "useFlatStructure": false,
+                     "doTranslate": true,
+                     "moduleNames": [
+                       "Questionnaire"
+                     ],
+                     "excludedModuleNames": [
+                       "RevereTest"
+                     ],
+                     "userIds": [
+                       "{{userId}}",
+                       "{{userId}}"
+                     ]
+                   }
+                 },
+                 "All deployments data excluding identifiable information identifiable for all modules and export JSON format as an access controller (AC)": {
+                   "value": {
+                     "deIdentified": true,
+                     "format": "JSON",
+                     "fromDate": "2021-07-01",
+                     "toDate": "2021-07-23",
+                     "singleFileResponse": true,
+                     "deploymentIds": [
+                       "{{deploymentId}}",
+                       "{{deploymentId}}"
+                     ],
+                     "organizationId": "{{organizationId}}"
+                   }
+                 },
+                 "Multiple deployments data excluding identifiable information identifiable for all modules and export CSV format as an access controller (AC)": {
+                   "value": {
+                     "deIdentified": true,
+                     "format": "CSV",
+                     "fromDate": "2021-07-01",
+                     "toDate": "2021-07-23",
+                     "singleFileResponse": true,
+                     "deploymentIds": [
+                       "{{deploymentId}}",
+                       "{{deploymentId}}"
+                     ],
+                     "organizationId": "{{organizationId}}"
+                   }
+                 },
+                 "Export multiple deployments data for specific organization with all objects": {
+                   "value": {
+                     "deIdentified": true,
+                     "format": "JSON",
+                     "fromDate": "2021-07-01",
+                     "toDate": "2021-07-27",
+                     "singleFileResponse": true,
+                     "binaryOption": "NONE",
+                     "exportBucket": "hu-pp-qa-app-bucket",
+                     "includeNullFields": true,
+                     "includeUserMetaData": true,
+                     "layer": "FLAT",
+                     "quantity": "SINGLE",
+                     "questionnairePerName": true,
+                     "splitMultipleChoice": true,
+                     "splitSymptoms": true,
+                     "translatePrimitives": true,
+                     "translationShortCodesObjectFormat": "JSON",
+                     "useFlatStructure": true,
+                     "view": "USER",
+                     "moduleNames": [
+                       "BackgroundInformation",
+                       "AZGroupKeyActionTrigger"
+                     ],
+                     "excludedModuleNames": [
+                       "AZFurtherPregnancyKeyActionTrigger"
+                     ],
+                     "deploymentIds": [
+                       "{{deploymentId}}",
+                       "{{deploymentId}}"
+                     ],
+                     "organizationId": "{{organizationId}}"
+                   }
+                 }
+               }
+             }
+           }
+         },
+         "responses": {
+           "200": {
+             "description": "Export data (zip archive of CSV/JSON)",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "$ref": "#/components/schemas/ExportResponse"
+                 }
+               }
+             }
+           },
+           "401": {
+             "description": "Unauthorized - `10001` While passing expired bearer token in header",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "type": "object",
+                   "required": [
+                     "code",
+                     "message"
+                   ],
+                   "properties": {
+                     "code": {
+                       "type": "integer",
+                       "format": "int32",
+                       "description": "Code type:\n   * `10001` - TOKEN EXPIRED\n",
+                       "example": 10001
+                     },
+                     "message": {
+                       "type": "string",
+                       "example": "Token Expired"
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "403": {
+             "description": "Forbidden - `100003` While passing invalid value to any object",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "type": "object",
+                   "required": [
+                     "code",
+                     "message"
+                   ],
+                   "properties": {
+                     "code": {
+                       "type": "integer",
+                       "format": "int32",
+                       "description": "Code type:\n   * `100003` - INVALID REQUEST\n",
+                       "example": 100003
+                     },
+                     "message": {
+                       "type": "string",
+                       "example": "Field [ExportUsersRequestObject.deIdentified] with value [false] is not type of [bool]"
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "404": {
+             "description": "Not found - `100003` While export profile does not exist",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "type": "object",
+                   "required": [
+                     "code",
+                     "message"
+                   ],
+                   "properties": {
+                     "code": {
+                       "type": "integer",
+                       "format": "int32",
+                       "description": "Code type:\n   * `100003` - INVALID REQUEST\n",
+                       "example": 100003
+                     },
+                     "message": {
+                       "type": "string",
+                       "example": "Export profile None does not exist"
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     },
+     "/api/extensions/v1beta/export/profile": {
+       "post": {
+         "tags": [
+           "Export"
+         ],
+         "summary": "Create export profile",
+         "description": " Using Export Profile API endpoint you can perform basic CRUD operations against Export Profile data \n\n\nFor example, To export the data using created export profile we can call below APIs: \n\n 1. **Create export profile for patients(for that clinician)/deployments(for that organization) data :** \n\n - For given `deploymentId/organizationId`, `content` and `name` the export profile can be created using `/api/extensions/{version}/export/profile` \n\n 2. **Export patients/deployments data in CSV/JSON format(for that clinician/organization) by using created profile:** \n\n - For given `baseProfile` and `deploymentId/organizationId` the data can be exported using `/api/extensions/{version}/export/` \n\n\n ",
+         "requestBody": {
+           "description": "Create export profile request",
+           "required": true,
+           "content": {
+             "application/json": {
+               "schema": {
+                 "$ref": "#/components/schemas/CreateExportProfileRequest"
+               },
+               "examples": {
+                 "Create profile for all patients data with Identifiable information": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "deploymentId": "{{deploymentId}}",
+                     "content": {
+                       "fromDate": "2021-07-08",
+                       "toDate": "2021-07-25",
+                       "format": "JSON",
+                       "deIdentified": false,
+                       "singleFileFormat": true
+                     }
+                   }
+                 },
+                 "Create profile for multiple patients data without Identifiable information": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "deploymentId": "{{deploymentId}}",
+                     "content": {
+                       "deIdentified": true,
+                       "format": "JSON_CSV",
+                       "fromDate": "2021-07-08",
+                       "toDate": "2021-07-25",
+                       "userIds": [
+                         "{{userId}}",
+                         "{{userId}}"
+                       ]
+                     }
+                   }
+                 },
+                 "Create profile for all deployment data with single file format (JSON)": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "organizationId": "{{organizationId}}",
+                     "deploymentIds": [
+                       "{{deploymentId}}",
+                       "{{deploymentId}}"
+                     ],
+                     "content": {
+                       "deIdentified": true,
+                       "format": "JSON",
+                       "fromDate": "2021-07-01",
+                       "toDate": "2021-07-27",
+                       "exportBucket": "hu-pp-qa-app-bucket",
+                       "singleFileResponse": true
+                     }
+                   }
+                 },
+                 "Create profile for single deployment data with nested layer": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "organizationId": "{{organizationId}}",
+                     "deploymentIds": [
+                       "{{deploymentId}}"
+                     ],
+                     "content": {
+                       "deIdentified": true,
+                       "format": "JSON_CSV",
+                       "fromDate": "2021-07-08",
+                       "toDate": "2021-07-15",
+                       "layer": "NESTED"
+                     }
+                   }
+                 },
+                 "Create profile for single patient data with including user metadata": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "deploymentId": "{{deploymentId}}",
+                     "content": {
+                       "deIdentified": true,
+                       "format": "JSON",
+                       "fromDate": "2021-07-08",
+                       "toDate": "2021-07-25",
+                       "includeUserMetaData": true,
+                       "userIds": [
+                         "{{userId}}"
+                       ]
+                     }
+                   }
+                 },
+                 "Create profile for single patient data view like per date": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "deploymentId": "{{deploymentId}}",
+                     "content": {
+                       "deIdentified": true,
+                       "format": "JSON",
+                       "fromDate": "2021-07-08",
+                       "toDate": "2021-07-25",
+                       "view": "DAY",
+                       "userIds": [
+                         "{{userId}}"
+                       ]
+                     }
+                   }
+                 },
+                 "Create profile for multiple patients data of specific deployment with all objects": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "deploymentId": "{{deploymentId}}",
+                     "content": {
+                       "fromDate": "2021-07-15",
+                       "toDate": "2021-07-15",
+                       "format": "JSON",
+                       "binaryOption": "NONE",
+                       "deIdentifyHashFields": [
+                         "primitive.id",
+                         "primitive.userId",
+                         "primitive.submitterId"
+                       ],
+                       "deIdentifyRemoveFields": [
+                         "primitive.aggregationPrecision"
+                       ],
+                       "excludeFields": [
+                         "user.id",
+                         "user.email"
+                       ],
+                       "includeFields": [
+                         "user.language",
+                         "user.timezone"
+                       ],
+                       "excludedModuleNames": [
+                         "Journal"
+                       ],
+                       "moduleNames": [
+                         "Questionnaire",
+                         "Step",
+                         "Symptom",
+                         "Weight"
+                       ],
+                       "exportBucket": "hu-pp-qa-app-bucket",
+                       "includeNullFields": true,
+                       "includeUserMetaData": true,
+                       "layer": "FLAT",
+                       "quantity": "SINGLE",
+                       "questionnairePerName": true,
+                       "splitMultipleChoice": true,
+                       "splitSymptoms": true,
+                       "translatePrimitives": true,
+                       "translationShortCodesObjectFormat": "JSON",
+                       "view": "USER",
+                       "deIdentified": false,
+                       "singleFileResponse": true,
+                       "useFlatStructure": true,
+                       "userIds": [
+                         "{{userId}}",
+                         "{{userId}}"
+                       ]
+                     }
+                   }
+                 },
+                 "Create profile for multiple deployments data of specific organization with all objects": {
+                   "value": {
+                     "name": "{{profile name}}",
+                     "deploymentIds": [
+                       "{{deploymentId}}",
+                       "{{deploymentId}}"
+                     ],
+                     "organizationId": "{{organizationId}}",
+                     "content": {
+                       "deIdentified": true,
+                       "binaryOption": "NONE",
+                       "exportBucket": "hu-pp-qa-app-bucket",
+                       "format": "JSON",
+                       "fromDate": "2021-07-01",
+                       "toDate": "2021-07-27",
+                       "singleFileResponse": true,
+                       "includeNullFields": true,
+                       "includeUserMetaData": true,
+                       "layer": "FLAT",
+                       "quantity": "SINGLE",
+                       "questionnairePerName": true,
+                       "splitMultipleChoice": true,
+                       "splitSymptoms": true,
+                       "translatePrimitives": true,
+                       "translationShortCodesObjectFormat": "JSON",
+                       "useFlatStructure": true,
+                       "view": "USER",
+                       "doTranslate": true,
+                       "moduleNames": [
+                         "BackgroundInformation",
+                         "AZGroupKeyActionTrigger"
+                       ],
+                       "excludedModuleNames": [
+                         "AZFurtherPregnancyKeyActionTrigger"
+                       ],
+                       "deIdentifyHashFields": [
+                         "primitive.id",
+                         "primitive.userId",
+                         "primitive.submitterId"
+                       ],
+                       "deIdentifyRemoveFields": [
+                         "primitive.aggregationPrecision"
+                       ],
+                       "excludeFields": [
+                         "user.id",
+                         "user.email"
+                       ],
+                       "includeFields": [
+                         "user.language",
+                         "user.timezone"
+                       ]
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         },
+         "responses": {
+           "201": {
+             "description": "Created Export Profile successfully",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "$ref": "#/components/schemas/CreateExportProfileResponse"
+                 }
+               }
+             }
+           },
+           "400": {
+             "description": "Bad request - `900001` While passing already existed profile name",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "type": "object",
+                   "required": [
+                     "code",
+                     "message"
+                   ],
+                   "properties": {
+                     "code": {
+                       "type": "integer",
+                       "format": "int32",
+                       "description": "Code type:\n   * `900001` - DUPLICATE PROFILE NAME\n",
+                       "example": 900001
+                     },
+                     "message": {
+                       "type": "string",
+                       "example": "Profile with that name already exists."
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "401": {
+             "description": "Unauthorized - `10001` While passing expired bearer token in header",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "type": "object",
+                   "required": [
+                     "code",
+                     "message"
+                   ],
+                   "properties": {
+                     "code": {
+                       "type": "integer",
+                       "format": "int32",
+                       "description": "Code type:\n   * `10001` - TOKEN EXPIRED\n",
+                       "example": 10001
+                     },
+                     "message": {
+                       "type": "string",
+                       "example": "Token Expired"
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "403": {
+             "description": "Forbidden - `100003` While passing invalid value to any object",
+             "content": {
+               "application/json": {
+                 "schema": {
+                   "type": "object",
+                   "required": [
+                     "code",
+                     "message"
+                   ],
+                   "properties": {
+                     "code": {
+                       "type": "integer",
+                       "format": "int32",
+                       "description": "Code type:\n   * `100003` - INVALID REQUEST\n",
+                       "example": 100003
+                     },
+                     "message": {
+                       "type": "string",
+                       "example": "Field [ExportUsersRequestObject.deIdentified] with value [false] is not type of [bool]"
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     }
+   },
+   "components": {
+     "schemas": {
+       "Primitive": {
+         "type": "object",
+         "required": [
+           "deviceName"
+         ],
+         "properties": {
+           "aggregationPrecision": {
+             "type": "string"
+           },
+           "correlationStartDateTime": {
+             "type": "string",
+             "format": "date-time"
+           },
+           "deploymentId": {
+             "type": "string",
+             "example": "5e84b0dab8dfa268b1180536"
+           },
+           "deviceDetails": {
+             "type": "string"
+           },
+           "deviceName": {
+             "type": "string",
+             "example": "iOS"
+           },
+           "endDateTime": {
+             "type": "string",
+             "format": "date-time"
+           },
+           "isAggregated": {
+             "type": "boolean"
+           },
+           "startDateTime": {
+             "type": "string",
+             "format": "date-time"
+           },
+           "submitterId": {
+             "type": "string",
+             "example": "5e84b0dab8dfa268b1180536"
+           },
+           "tags": {
+             "type": "object",
+             "properties": {}
+           },
+           "tagsAuthorId": {
+             "type": "string",
+             "example": "5e84b0dab8dfa268b1180536"
+           },
+           "type": {
+             "type": "string",
+             "example": "BloodPressure"
+           },
+           "version": {
+             "type": "integer",
+             "example": 2
+           }
+         }
+       },
+       "BloodPressurePrimitive": {
+         "allOf": [
+           {
+             "$ref": "#/components/schemas/Primitive"
+           },
+           {
+             "type": "object",
+             "properties": {
+               "diastolicValue": {
+                 "maximum": 130,
+                 "minimum": 30,
+                 "type": "integer",
+                 "example": 110
+               },
+               "diastolicValueUnit": {
+                 "type": "string",
+                 "default": "mmHg"
+               },
+               "systolicValue": {
+                 "maximum": 260,
+                 "minimum": 60,
+                 "type": "integer",
+                 "example": 70
+               },
+               "systolicValueUnit": {
+                 "type": "string",
+                 "default": "mmHg"
+               },
+               "unitSi": {
+                 "maxLength": 256,
+                 "minLength": 1,
+                 "type": "string"
+               }
+             }
+           }
+         ]
+       },
+       "BloodGlucosePrimitive": {
+         "allOf": [
+           {
+             "$ref": "#/components/schemas/Primitive"
+           },
+           {
+             "type": "object",
+             "properties": {
+               "originalUnit": {
+                 "type": "string",
+                 "example": "mg/dL"
+               },
+               "originalValue": {
+                 "type": "number",
+                 "format": "float",
+                 "example": 270.5
+               },
+               "unitSi": {
+                 "type": "string"
+               },
+               "value": {
+                 "maximum": 26,
+                 "minimum": 1,
+                 "type": "number",
+                 "format": "float",
+                 "example": 15.5
+               },
+               "valueUnit": {
+                 "type": "string",
+                 "default": "mmol/L"
+               }
+             }
+           }
+         ]
+       },
+       "QuestionnairePrimitive": {
+         "allOf": [
+           {
+             "$ref": "#/components/schemas/Primitive"
+           },
+           {
+             "type": "object",
+             "properties": {
+               "answers": {
+                 "type": "array",
+                 "items": {
+                   "$ref": "#/components/schemas/QuestionnaireAnswer"
+                 }
+               },
+               "appResult": {
+                 "$ref": "#/components/schemas/QuestionnaireAppResult"
+               },
+               "isForManager": {
+                 "type": "boolean"
+               },
+               "questionnaireId": {
+                 "type": "string",
+                 "example": "5e84b0dab8dfa268b1180536"
+               },
+               "questionnaireName": {
+                 "type": "string"
+               },
+               "skipped": {
+                 "type": "array",
+                 "items": {
+                   "$ref": "#/components/schemas/QuestionnaireAnswer"
+                 }
+               },
+               "value": {
+                 "type": "number",
+                 "format": "float"
+               }
+             }
+           }
+         ]
+       },
+       "QuestionnaireAnswer": {
+         "type": "object",
+         "properties": {
+           "answerText": {
+             "type": "string"
+           },
+           "answerValue": {
+             "type": "object",
+             "properties": {}
+           },
+           "format": {
+             "type": "string",
+             "enum": [
+               "NUMERIC",
+               "TEXTCHOICE",
+               "BOOLEAN",
+               "DATE",
+               "TEXT",
+               "DURATION",
+               "SCALE"
+             ]
+           },
+           "id": {
+             "type": "string"
+           },
+           "lowerBound": {
+             "type": "integer"
+           },
+           "question": {
+             "type": "string"
+           },
+           "questionId": {
+             "type": "string",
+             "example": "5e84b0dab8dfa268b1180536"
+           },
+           "selectedChoices": {
+             "type": "array",
+             "items": {
+               "type": "string",
+               "example": "Yes"
+             }
+           },
+           "selectionCriteria": {
+             "type": "string",
+             "enum": [
+               "MULTIPLE",
+               "SINGLE"
+             ]
+           },
+           "upperBound": {
+             "type": "integer"
+           }
+         }
+       },
+       "QuestionnaireAppResult": {
+         "type": "object",
+         "properties": {
+           "appType": {
+             "type": "string",
+             "enum": [
+               "T_DISTRIBUTION",
+               "GRADED_RESULT"
+             ]
+           },
+           "values": {
+             "type": "array",
+             "items": {
+               "$ref": "#/components/schemas/QuestionnaireAppResultValue"
+             }
+           }
+         }
+       },
+       "QuestionnaireAppResultValue": {
+         "type": "object",
+         "properties": {
+           "label": {
+             "type": "string"
+           },
+           "valueFloat": {
+             "type": "number",
+             "format": "float"
+           },
+           "valueType": {
+             "type": "string",
+             "enum": [
+               "VALUE_FLOAT",
+               "STD_ERR_FLOAT"
+             ]
+           }
+         }
+       },
+       "BMIPrimitive": {
+         "type": "object",
+         "properties": {
+           "value": {
+             "type": "number",
+             "format": "float",
+             "example": 20.5
+           },
+           "valueUnit": {
+             "type": "string",
+             "default": "kg/cm2"
+           }
+         }
+       },
+       "DDSPrimitive": {
+         "type": "object",
+         "properties": {
+           "emotionalBurden": {
+             "maximum": 6,
+             "minimum": 1,
+             "type": "number",
+             "format": "float",
+             "example": 2.7
+           },
+           "interpersonalDistress": {
+             "maximum": 6,
+             "minimum": 1,
+             "type": "number",
+             "format": "float",
+             "example": 2.1
+           },
+           "physicianDistress": {
+             "maximum": 6,
+             "minimum": 1,
+             "type": "number",
+             "format": "float",
+             "example": 2.6
+           },
+           "regimenDistress": {
+             "maximum": 6,
+             "minimum": 1,
+             "type": "number",
+             "format": "float",
+             "example": 2.2
+           },
+           "totalDDS": {
+             "maximum": 6,
+             "minimum": 1,
+             "type": "number",
+             "format": "float",
+             "example": 2.5
+           }
+         }
+       },
+       "JournalPrimitive": {
+         "type": "object",
+         "properties": {
+           "value": {
+             "type": "string",
+             "example": "New note"
+           }
+         }
+       },
+       "PhotoPrimitive": {
+         "type": "object",
+         "properties": {
+           "height": {
+             "type": "number",
+             "example": 15.5
+           },
+           "note": {
+             "type": "string",
+             "example": "Some note"
+           },
+           "s3Object": {
+             "$ref": "#/components/schemas/S3Object"
+           },
+           "s3Thumbnail": {
+             "$ref": "#/components/schemas/S3Object"
+           },
+           "width": {
+             "type": "number",
+             "example": 15.5
+           }
+         }
+       },
+       "S3Object": {
+         "type": "object",
+         "properties": {
+           "bucket": {
+             "type": "string"
+           },
+           "key": {
+             "type": "string"
+           },
+           "region": {
+             "type": "string"
+           }
+         }
+       },
+       "Error": {
+         "type": "object",
+         "required": [
+           "code",
+           "message"
+         ],
+         "properties": {
+           "code": {
+             "type": "integer",
+             "format": "int32"
+           },
+           "message": {
+             "type": "string"
+           }
+         }
+       },
+       "ExportRequest": {
+         "type": "object",
+         "properties": {
+           "deIdentified": {
+             "type": "boolean",
+             "default": false,
+             "description": "Identified information type:\n   * `true` - excluding identified information\n   * `false` - including identified information\n"
+           },
+           "format": {
+             "type": "string",
+             "enum": [
+               "JSON",
+               "CSV",
+               "JSON_CSV"
+             ],
+             "default": "JSON",
+             "description": "Exported files format"
+           },
+           "fromDate": {
+             "type": "string",
+             "format": "yyyy-mm-dd",
+             "description": "Export data starting date `fromDate`"
+           },
+           "toDate": {
+             "type": "string",
+             "format": "yyyy-mm-dd",
+             "description": "Export data ending date `toDate`"
+           },
+           "deploymentId": {
+             "type": "string",
+             "description": "Export data for specific `deploymentId`"
+           },
+           "deploymentIds": {
+             "type": "array",
+             "items": {
+               "type": "string"
+             },
+             "description": "Export data from multiple deployments by its `deploymentIds`"
+           },
+           "userIds": {
+             "type": "array",
+             "items": {
+               "type": "string"
+             },
+             "description": "Export data only for specific users specified by thier `id`"
+           },
+           "moduleNames": {
+             "type": "array",
+             "description": "Export only specific modules specific by module names",
+             "items": {
+               "type": "string"
+             }
+           },
+           "excludedModuleNames": {
+             "type": "array",
+             "description": "Export all modules but not these",
+             "items": {
+               "type": "string"
+             }
+           },
+           "includeUserMetaData": {
+             "type": "boolean",
+             "default": true,
+             "description": "User's meta data type:\n   * `true` - excluding user's meta data\n   * `false` - including user's meta data\n"
+           },
+           "includeNullFields": {
+             "type": "boolean",
+             "default": true,
+             "description": "* `true` - Include fields which have null values\n* `false` - Remove fields which have null values\n"
+           },
+           "useFlatStructure": {
+             "type": "boolean",
+             "description": "* `true` - Will use flat structure.\n* `false` - Will use hierarchical structure.\n",
+             "default": false
+           },
+           "view": {
+             "type": "string",
+             "default": "USER",
+             "description": "Export the data according to the selected view.\n  * `\"USER\"` - Per user (user data will be first on the CSV/JSON)\n  * `\"DAY\"` - Per date\n  * `\"MODULE_CONFIG\"` - Per module\n"
+           },
+           "binaryOption": {
+             "type": "string",
+             "default": "BINARY_INCLUDE",
+             "description": "Binary options type:\n  * `\"BINARY_INCLUDE\"` - Include primitive's binaries\n  * `\"SIGNED_URL\"` - Generate signed urls to download primitive's binaries\n  * `\"NONE\"` - Keep as it is\n"
+           },
+           "layer": {
+             "type": "string",
+             "default": "NESTED",
+             "description": "Export files based on below layer type:\n  * `\"NESTED\"` - Export files will be in the separate folders based on the view\n  * `\"FLAT\"` - Export files will be in one folder based on the view\n"
+           },
+           "quantity": {
+             "type": "string",
+             "default": "MULTIPLE",
+             "description": "Export files based on below quantity type:\n  * `\"MULTIPLE\"` - Exported files will be in the separate files according to the module/day/user per file\n  * `\"SINGLE\"` - Exported files should be in one file (CSV does not support single file option)\n"
+           },
+           "questionnairePerName": {
+             "type": "boolean",
+             "default": false,
+             "description": "* `true` - Split questionnaire primitives into separate files as per their name\n* `false` - Can not split questionnaire primitives into separate files as per their name\n"
+           },
+           "splitMultipleChoice": {
+             "type": "boolean",
+             "default": false,
+             "description": "* `true` - Split multiple questionnaire choices based on a module config\n* `false` - Can not split multiple questionnaire choices based on a module config\n"
+           },
+           "splitSymptoms": {
+             "type": "boolean",
+             "default": false,
+             "description": "* `true` - Split symptoms in CSV format\n* `false` - Can not split symptoms in CSV format\n"
+           },
+           "translatePrimitives": {
+             "type": "boolean",
+             "default": false,
+             "description": "* `true` - Translate primitive values into keywords based on provided CSV in export deployment config\n* `false` - Can not translate primitive values into keywords based on provided CSV in export deployment config\n"
+           },
+           "singleFileResponse": {
+             "type": "boolean",
+             "default": false,
+             "description": "* `true` - Get response into single file format (CSV/JSON)\n* `false` - Get response into multiple files\n"
+           },
+           "translationShortCodesObjectFormat": {
+             "type": "string",
+             "enum": [
+               "JSON",
+               "CSV",
+               "JSON_CSV"
+             ],
+             "default": "JSON",
+             "description": "Translation Short Codes Object files format"
+           },
+           "doTranslate": {
+             "type": "boolean"
+           },
+           "baseProfile": {
+             "type": "string",
+             "description": "Export data for created profile"
+           },
+           "organizationId": {
+             "type": "string",
+             "description": "Export data for specific organization by `organizationId`"
+           }
+         }
+       },
+       "ExportResponse": {
+         "type": "object",
+         "additionalProperties": {
+           "type": "object",
+           "additionalProperties": {
+             "type": "array",
+             "items": {
+               "anyOf": [
+                 {
+                   "$ref": "#/components/schemas/BloodPressurePrimitive"
+                 },
+                 {
+                   "$ref": "#/components/schemas/BloodGlucosePrimitive"
+                 },
+                 {
+                   "$ref": "#/components/schemas/QuestionnairePrimitive"
+                 },
+                 {
+                   "$ref": "#/components/schemas/JournalPrimitive"
+                 },
+                 {
+                   "$ref": "#/components/schemas/PhotoPrimitive"
+                 },
+                 {
+                   "$ref": "#/components/schemas/BMIPrimitive"
+                 },
+                 {
+                   "$ref": "#/components/schemas/DDSPrimitive"
+                 }
+               ]
+             }
+           }
+         },
+         "example": {
+           "BloodPressure": {
+             "BloodPressure": [
+               {
+                 "id": "0a4bb54aa61b9130dc60f0e81f85c45c3a7649c23e649a0559382784c3377f87",
+                 "userId": "7d7f29bc7bf67f9cd931350b85cb8650d9295248ab5986710e1e2e5d03d5bc71",
+                 "moduleId": "BloodPressure",
+                 "moduleConfigId": "5f7258e729e61eb9f9b8397a",
+                 "deploymentId": "5f72588029e61eb9f9b83979",
+                 "version": 0,
+                 "deviceName": "Android",
+                 "isAggregated": false,
+                 "startDateTime": "2021-07-15T08:03:31.000000Z",
+                 "createDateTime": "2021-07-15T08:03:33.921000Z",
+                 "submitterId": "7d7f29bc7bf67f9cd931350b85cb8650d9295248ab5986710e1e2e5d03d5bc71",
+                 "client": {
+                   "product": "Huma-Demo",
+                   "version": "1.10.0",
+                   "software_name": "Android",
+                   "software_version": "25 (7.1.1)",
+                   "bundle_id": "com.huma.humaapp.demo",
+                   "build": "8508",
+                   "hardware": "motorola Moto E (4) Plus"
+                 },
+                 "server": {
+                   "hostUrl": "demoapi.humaapp.io",
+                   "server": "1.10.0",
+                   "api": "V1"
+                 },
+                 "diastolicValue": 68,
+                 "systolicValue": 120,
+                 "diastolicValueUnit": "mmHg",
+                 "systolicValueUnit": "mmHg",
+                 "_cls": "BloodPressure",
+                 "user": {
+                   "id": "7d7f29bc7bf67f9cd931350b85cb8650d9295248ab5986710e1e2e5d03d5bc71",
+                   "updateDateTime": "2021-10-22T12:01:28.023000Z",
+                   "createDateTime": "2021-07-14T14:38:05.185000Z",
+                   "height": 168,
+                   "extraCustomFields": {},
+                   "timezone": "Europe/London",
+                   "enrollmentId": 18,
+                   "language": "en",
+                   "stats": {
+                     "taskCompliance": {}
+                   },
+                   "consent": {
+                     "id": "c7a71c9d389d5843849b69b0051bfec26bdf9ee98eb231aa11234c5c00e27c49",
+                     "userId": "631dcb9cadeb648a38997466b180ad6af4e962459f9523c39bbe0fd0d37a992b",
+                     "consentId": "5f7258f329e61eb9f9b8397e",
+                     "revision": 4,
+                     "sharingOption": 0,
+                     "createDateTime": "2021-07-14T15:00:55.389000Z",
+                     "agreement": true,
+                     "deploymentId": "5f72588029e61eb9f9b83979"
+                   }
+                 }
+               }
+             ]
+           }
+         }
+       },
+       "CreateExportProfileRequest": {
+         "type": "object",
+         "properties": {
+           "name": {
+             "type": "string",
+             "description": "Name of the export profile"
+           },
+           "deploymentId": {
+             "type": "string",
+             "description": "Export data for specific `deploymentId`"
+           },
+           "organizationId": {
+             "type": "string",
+             "description": "Export data for specific organization by `organizationId`"
+           },
+           "deploymentIds": {
+             "type": "array",
+             "items": {
+               "type": "string"
+             },
+             "description": "Export data from multiple deployments by its `deploymentIds`"
+           },
+           "content": {
+             "type": "object",
+             "properties": {
+               "deIdentified": {
+                 "type": "boolean",
+                 "description": "Identified information type:\n   * `true` - excluding identified information\n   * `false` - including identified information\n"
+               },
+               "format": {
+                 "type": "string",
+                 "enum": [
+                   "JSON",
+                   "CSV",
+                   "JSON_CSV"
+                 ],
+                 "default": "JSON",
+                 "description": "Exported files format"
+               },
+               "fromDate": {
+                 "type": "string",
+                 "format": "yyyy-mm-dd",
+                 "description": "Export data starting date `fromDate`"
+               },
+               "toDate": {
+                 "type": "string",
+                 "format": "yyyy-mm-dd",
+                 "description": "Export data ending date `toDate`"
+               },
+               "exportBucket": {
+                 "type": "string",
+                 "description": "Export data for specific `bucket`"
+               },
+               "userIds": {
+                 "type": "array",
+                 "items": {
+                   "type": "string"
+                 },
+                 "description": "Export data only for specific users specified by thier `id`"
+               },
+               "moduleNames": {
+                 "type": "array",
+                 "description": "Export only specific modules specific by module names",
+                 "items": {
+                   "type": "string"
+                 }
+               },
+               "excludedModuleNames": {
+                 "type": "array",
+                 "description": "Export all modules but not these",
+                 "items": {
+                   "type": "string"
+                 }
+               },
+               "includeFields": {
+                 "type": "array",
+                 "description": "If these fields are set, then only they will be part of export data",
+                 "items": {
+                   "type": "string"
+                 }
+               },
+               "excludeFields": {
+                 "type": "array",
+                 "description": "Fields which will always removed from export data",
+                 "items": {
+                   "type": "string"
+                 }
+               },
+               "deIdentifyHashFields": {
+                 "type": "array",
+                 "description": "Fields which will be hashed when exporting with `\"de-identify\"` option",
+                 "items": {
+                   "type": "string"
+                 }
+               },
+               "deIdentifyRemoveFields": {
+                 "type": "array",
+                 "description": "Fields which will be removed when exporting with `\"de-identify\"` option",
+                 "items": {
+                   "type": "string"
+                 }
+               },
+               "includeUserMetaData": {
+                 "type": "boolean",
+                 "default": true,
+                 "description": "User's meta data type:\n    * `true` - excluding user's meta data\n    * `false` - including user's meta data\n"
+               },
+               "includeNullFields": {
+                 "type": "boolean",
+                 "default": true,
+                 "description": "* `true` - Include fields which have null values\n* `false` - Remove fields which have null values\n"
+               },
+               "useFlatStructure": {
+                 "type": "boolean",
+                 "description": "* `true` - Will use flat structure.\n* `false` - Will use hierarchical structure.\n",
+                 "default": false
+               },
+               "view": {
+                 "type": "string",
+                 "default": "USER",
+                 "description": "Export the data according to the selected view.\n  * `\"USER\"` - Per user (user data will be first on the CSV/JSON)\n  * `\"DAY\"` - Per date\n  * `\"MODULE_CONFIG\"` - Per module\n"
+               },
+               "binaryOption": {
+                 "type": "string",
+                 "default": "BINARY_INCLUDE",
+                 "description": "Binary options type:\n  * `\"BINARY_INCLUDE\"` - Include primitive's binaries\n  * `\"SIGNED_URL\"` - Generate signed urls to download primitive's binaries\n  * `\"NONE\"` - Keep as it is\n"
+               },
+               "layer": {
+                 "type": "string",
+                 "default": "NESTED",
+                 "description": "Export files based on below layer type:\n  * `\"NESTED\"` - Export files will be in the separate folders based on the view\n  * `\"FLAT\"` - Export files will be in one folder based on the view\n"
+               },
+               "quantity": {
+                 "type": "string",
+                 "default": "MULTIPLE",
+                 "description": "Export files based on below quantity type:\n  * `\"MULTIPLE\"` - Exported files will be in the separate files according to the module/day/user per file\n  * `\"SINGLE\"` - Exported files should be in one file (CSV does not support single file option)\n"
+               },
+               "questionnairePerName": {
+                 "type": "boolean",
+                 "default": false,
+                 "description": "* `true` - Split questionnaire primitives into separate files as per their name\n* `false` - Can not split questionnaire primitives into separate files as per their name\n"
+               },
+               "splitMultipleChoice": {
+                 "type": "boolean",
+                 "default": false,
+                 "description": "* `true` - Split multiple questionnaire choices based on a module config\n* `false` - Can not split multiple questionnaire choices based on a module config\n"
+               },
+               "splitSymptoms": {
+                 "type": "boolean",
+                 "default": false,
+                 "description": "* `true` - Split symptoms in CSV format\n* `false` - Can not split symptoms in CSV format\n"
+               },
+               "translatePrimitives": {
+                 "type": "boolean",
+                 "default": false,
+                 "description": "* `true` - Translate primitive values into keywords based on provided csv in export deployment config\n* `false` - Can not translate primitive values into keywords based on provided csv in export deployment config\n"
+               },
+               "singleFileResponse": {
+                 "type": "boolean",
+                 "default": false,
+                 "description": "* `true` - Get response into single file format (CSV/JSON)\n* `false` - Get response into multiple files\n"
+               },
+               "translationShortCodesObjectFormat": {
+                 "type": "string",
+                 "enum": [
+                   "JSON",
+                   "CSV",
+                   "JSON_CSV"
+                 ],
+                 "default": "JSON",
+                 "description": "Translation Short Codes Object files format"
+               }
+             }
+           }
+         }
+       },
+       "CreateExportProfileResponse": {
+         "type": "object",
+         "required": [
+           "id"
+         ],
+         "properties": {
+           "id": {
+             "type": "string",
+             "example": "60fa5ce3ee36446d38825f11"
+           }
+         }
+       },
+       "RetrieveProfilesRequest": {
+         "type": "object",
+         "properties": {
+           "limit": {
+             "type": "integer",
+             "example": 10
+           },
+           "modules": {
+             "type": "array",
+             "items": {
+               "type": "string",
+               "example": "Journal"
+             }
+           },
+           "nameContains": {
+             "type": "string",
+             "example": "test"
+           },
+           "patientDataOnly": {
+             "description": "To show only patient data",
+             "type": "boolean"
+           },
+           "patientIdentifiersOnly": {
+             "description": "To show only patient identifiers",
+             "type": "boolean"
+           },
+           "role": {
+             "type": "string",
+             "enum": [
+               "User",
+               "Manager",
+               "Contributor"
+             ],
+             "example": "User"
+           },
+           "skip": {
+             "type": "integer",
+             "example": 0
+           }
+         }
+       },
+       "RetrieveProfilesResponse": {
+         "type": "array",
+         "items": {
+           "$ref": "#/components/schemas/UserProfileObject"
+         }
+       },
+       "UserProfileObject": {
+         "type": "object",
+         "properties": {
+           "additionalContactDetails": {
+             "type": "object",
+             "properties": {
+               "emergencyContactName": {
+                 "type": "string",
+                 "example": "Test"
+               },
+               "emergencyContactNumber": {
+                 "type": "string",
+                 "example": "+37529 775-88-44"
+               },
+               "regularContactName": {
+                 "type": "string",
+                 "example": "Test"
+               },
+               "regularContactNumber": {
+                 "type": "string",
+                 "example": "+37529 887-63-55"
+               }
+             }
+           },
+           "assingedManagers": {
+             "type": "array",
+             "items": {
+               "type": "string"
+             },
+             "example": [
+               "5f9c321a7e985e9dd3187915",
+               "5f8d4da038077f776c6e4afd",
+               "5fae8c4fc7536835f33c0db7"
+             ]
+           },
+           "bloodGroup": {
+             "type": "string",
+             "example": "AB_POSITIVE"
+           },
+           "createDateTime": {
+             "type": "string",
+             "example": "2020-07-29T21:06:44.038000Z"
+           },
+           "dateOfBirth": {
+             "type": "string",
+             "example": "1976-03-15"
+           },
+           "email": {
+             "type": "string",
+             "example": "alexander.burtsev+13@huma.com"
+           },
+           "enrollmentId": {
+             "type": "integer",
+             "example": 84
+           },
+           "ethnicity": {
+             "type": "string",
+             "example": "WHITE"
+           },
+           "extraCustomFields": {
+             "type": "object",
+             "properties": {
+               "someCustomField": {
+                 "type": "string",
+                 "example": "654212"
+               }
+             }
+           },
+           "familyName": {
+             "type": "string",
+             "example": "Test"
+           },
+           "finishedOnboarding": {
+             "type": "boolean",
+             "example": true
+           },
+           "gender": {
+             "type": "string",
+             "example": "MALE"
+           },
+           "givenName": {
+             "type": "string",
+             "example": "Test"
+           },
+           "height": {
+             "type": "integer",
+             "example": 180
+           },
+           "id": {
+             "type": "string",
+             "example": "5f897b0f38077f776c6e4621"
+           },
+           "language": {
+             "type": "string",
+             "example": "en"
+           },
+           "latestModuleResults": {
+             "type": "object",
+             "properties": {
+               "Journal": {
+                 "type": "object",
+                 "properties": {
+                   "createDateTime": {
+                     "type": "string",
+                     "example": "2021-02-06T22:56:44.455000Z"
+                   },
+                   "deploymentId": {
+                     "type": "string",
+                     "example": "5f21e1d605f94e9073a8c964"
+                   },
+                   "deviceName": {
+                     "type": "string",
+                     "example": "Android"
+                   },
+                   "id": {
+                     "type": "string",
+                     "example": "601f1eac2c218e03608df42b"
+                   },
+                   "isAggregated": {
+                     "type": "boolean",
+                     "example": false
+                   },
+                   "moduleConfigId": {
+                     "type": "string",
+                     "example": "5f68a279fdd2ba434096d806"
+                   },
+                   "moduleId": {
+                     "type": "string",
+                     "example": "Journal"
+                   },
+                   "startDateTime": {
+                     "type": "string",
+                     "example": "2021-02-06T22:56:42.651000Z"
+                   },
+                   "submitterId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "userId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "value": {
+                     "type": "string",
+                     "example": "test journal to write something \n\ntest journal to write something\n"
+                   },
+                   "version": {
+                     "type": "integer",
+                     "example": 0
+                   }
+                 }
+               },
+               "Weight": {
+                 "type": "object",
+                 "properties": {
+                   "createDateTime": {
+                     "type": "string",
+                     "example": "22021-04-20T07:26:28.289000Z"
+                   },
+                   "deploymentId": {
+                     "type": "string",
+                     "example": "5f21e1d605f94e9073a8c964"
+                   },
+                   "deviceName": {
+                     "type": "string",
+                     "example": "Android"
+                   },
+                   "id": {
+                     "type": "string",
+                     "example": "607e822430110a59eff209ae"
+                   },
+                   "isAggregated": {
+                     "type": "boolean",
+                     "example": false
+                   },
+                   "moduleConfigId": {
+                     "type": "string",
+                     "example": "5f21e1e272760aedcd9ada98"
+                   },
+                   "moduleId": {
+                     "type": "string",
+                     "example": "Weight"
+                   },
+                   "originalUnit": {
+                     "type": "string",
+                     "example": "St and lbs"
+                   },
+                   "originalValue": {
+                     "type": "number",
+                     "format": "float",
+                     "example": 16.285714285714285
+                   },
+                   "startDateTime": {
+                     "type": "string",
+                     "example": "2021-04-20T07:26:28.000000Z"
+                   },
+                   "submitterId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "userId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "value": {
+                     "type": "number",
+                     "format": "float",
+                     "example": 103.41900857142856
+                   },
+                   "valueUnit": {
+                     "type": "string",
+                     "example": "kg"
+                   },
+                   "version": {
+                     "type": "integer",
+                     "example": 1
+                   }
+                 }
+               },
+               "Photo": {
+                 "type": "object",
+                 "properties": {
+                   "createDateTime": {
+                     "type": "string",
+                     "example": "2020-12-10T16:32:39.120000Z"
+                   },
+                   "deploymentId": {
+                     "type": "string",
+                     "example": "5f21e1d605f94e9073a8c964"
+                   },
+                   "deviceName": {
+                     "type": "string",
+                     "example": "Android"
+                   },
+                   "id": {
+                     "type": "string",
+                     "example": "5fd24da78b51bd583092b1eb"
+                   },
+                   "isAggregated": {
+                     "type": "boolean",
+                     "example": false
+                   },
+                   "moduleConfigId": {
+                     "type": "string",
+                     "example": "5f68a27cfdd2ba434096d807"
+                   },
+                   "moduleId": {
+                     "type": "string",
+                     "example": "Photo"
+                   },
+                   "note": {
+                     "type": "string",
+                     "example": "Landscape"
+                   },
+                   "s3Object": {
+                     "type": "object",
+                     "properties": {
+                       "bucket": {
+                         "type": "string",
+                         "example": "hu-pp-qa-app-bucket"
+                       },
+                       "key": {
+                         "type": "string",
+                         "example": "user/5f897b0f38077f776c6e4621/Photo/A63C3579-EEA7-47C8-A3B5-12281DC65138.jpeg"
+                       },
+                       "region": {
+                         "type": "string",
+                         "example": "eu"
+                       }
+                     }
+                   },
+                   "s3Thumbnail": {
+                     "type": "object",
+                     "properties": {
+                       "bucket": {
+                         "type": "string",
+                         "example": "hu-pp-qa-app-bucket"
+                       },
+                       "key": {
+                         "type": "string",
+                         "example": "user/5f897b0f38077f776c6e4621/Photo/A63C3579-EEA7-47C8-A3B5-12281DC65138-thumbnail.jpeg"
+                       },
+                       "region": {
+                         "type": "string",
+                         "example": "eu"
+                       }
+                     }
+                   },
+                   "startDateTime": {
+                     "type": "string",
+                     "example": "2020-11-17T09:17:55.857000Z"
+                   },
+                   "submitterId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "userId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "version": {
+                     "type": "integer",
+                     "example": 0
+                   }
+                 }
+               },
+               "Step": {
+                 "type": "object",
+                 "properties": {
+                   "createDateTime": {
+                     "type": "string",
+                     "example": "2021-06-23T06:50:48.734000Z"
+                   },
+                   "deploymentId": {
+                     "type": "string",
+                     "example": "5f21e1d605f94e9073a8c964"
+                   },
+                   "deviceName": {
+                     "type": "string",
+                     "example": "Android"
+                   },
+                   "id": {
+                     "type": "string",
+                     "example": "60d2d9c8523d23c4459f5526"
+                   },
+                   "isAggregated": {
+                     "type": "boolean",
+                     "example": false
+                   },
+                   "moduleConfigId": {
+                     "type": "string",
+                     "example": "5f68a27fdfd88db0d7219638"
+                   },
+                   "moduleId": {
+                     "type": "string",
+                     "example": "Step"
+                   },
+                   "startDateTime": {
+                     "type": "string",
+                     "example": "2021-06-16T09:00:00.000000Z"
+                   },
+                   "submitterId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "userId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "value": {
+                     "type": "integer",
+                     "example": 45
+                   },
+                   "version": {
+                     "type": "integer",
+                     "example": 0
+                   }
+                 }
+               },
+               "Symptom": {
+                 "type": "object",
+                 "properties": {
+                   "complexValues": {
+                     "type": "array",
+                     "items": {
+                       "type": "object",
+                       "properties": {
+                         "name": {
+                           "type": "string",
+                           "example": "Persistent cough"
+                         },
+                         "severity": {
+                           "type": "integer",
+                           "example": 2
+                         }
+                       }
+                     }
+                   },
+                   "createDateTime": {
+                     "type": "string",
+                     "example": "2021-02-09T08:45:05.445000Z"
+                   },
+                   "deploymentId": {
+                     "type": "string",
+                     "example": "5f21e1d605f94e9073a8c964"
+                   },
+                   "deviceName": {
+                     "type": "string",
+                     "example": "Android"
+                   },
+                   "id": {
+                     "type": "string",
+                     "example": "60224b9122e70015099bed7a"
+                   },
+                   "isAggregated": {
+                     "type": "boolean",
+                     "example": false
+                   },
+                   "moduleConfigId": {
+                     "type": "string",
+                     "example": "5f21e1e272760aedcd9ada97"
+                   },
+                   "moduleId": {
+                     "type": "string",
+                     "example": "Symptom"
+                   },
+                   "startDateTime": {
+                     "type": "string",
+                     "example": "2021-02-09T08:45:05.038000Z"
+                   },
+                   "submitterId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "userId": {
+                     "type": "string",
+                     "example": "5f897b0f38077f776c6e4621"
+                   },
+                   "version": {
+                     "type": "integer",
+                     "example": 0
+                   }
+                 }
+               }
+             }
+           },
+           "nhsId": {
+             "type": "string",
+             "example": "1203001203"
+           },
+           "preferredUnits": {
+             "type": "object",
+             "properties": {
+               "BloodGlucose": {
+                 "type": "string",
+                 "example": "mg/dL"
+               },
+               "Temperature": {
+                 "type": "string",
+                 "example": "oF"
+               },
+               "Weight": {
+                 "type": "string",
+                 "example": "St and lbs"
+               }
+             }
+           },
+           "ragThresholds": {
+             "type": "object",
+             "properties": {
+               "5f21e1e205f94e9073a8c96a": {
+                 "type": "object",
+                 "properties": {
+                   "HeartRate": {
+                     "type": "object",
+                     "properties": {
+                       "value": {
+                         "type": "object",
+                         "properties": {
+                           "color": {
+                             "type": "string",
+                             "example": "#CBEBF0"
+                           },
+                           "direction": {
+                             "type": "string",
+                             "example": "DECREASED"
+                           }
+                         }
+                       }
+                     }
+                   }
+                 }
+               },
+               "5f21e1e205f94e9073a8c96b": {
+                 "type": "object",
+                 "properties": {
+                   "Temperature": {
+                     "type": "object",
+                     "properties": {
+                       "value": {
+                         "type": "object",
+                         "properties": {
+                           "color": {
+                             "type": "string",
+                             "example": "#CBEBF0"
+                           },
+                           "direction": {
+                             "type": "string",
+                             "example": "DECREASED"
+                           }
+                         }
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "recentModuleResults": {
+             "type": "object",
+             "properties": {
+               "5f21e1e205f94e9073a8c969": {
+                 "type": "array",
+                 "items": {
+                   "type": "object",
+                   "properties": {
+                     "Questionnaire": {
+                       "type": "object",
+                       "properties": {
+                         "answers": {
+                           "type": "array",
+                           "items": {
+                             "type": "object",
+                             "properties": {
+                               "answerText": {
+                                 "type": "string",
+                                 "example": "78"
+                               },
+                               "question": {
+                                 "type": "string",
+                                 "example": "In the last month, how frequently did you complete your scheduled medication and supplements routine?"
+                               },
+                               "questionId": {
+                                 "type": "string",
+                                 "example": "7c50c7d5-6f4e-4c0b-aeaf-c266eafd056e"
+                               }
+                             }
+                           }
+                         },
+                         "createDateTime": {
+                           "type": "string",
+                           "example": "2020-11-21T06:23:47.189000Z"
+                         },
+                         "deploymentId": {
+                           "type": "string",
+                           "example": "5f21e1d605f94e9073a8c964"
+                         },
+                         "deviceName": {
+                           "type": "string",
+                           "example": "Android"
+                         },
+                         "id": {
+                           "type": "string",
+                           "example": "5fb8b273e9d3e30f308edfed"
+                         },
+                         "isAggregated": {
+                           "type": "boolean",
+                           "example": false
+                         },
+                         "moduleConfigId": {
+                           "type": "string",
+                           "example": "5f21e1e205f94e9073a8c969"
+                         },
+                         "moduleId": {
+                           "type": "string",
+                           "example": "MedicationTracker"
+                         },
+                         "questionnaireId": {
+                           "type": "string",
+                           "example": "1e67dd23-d1e5-465f-95a0-ef1dadb15428"
+                         },
+                         "questionnaireName": {
+                           "type": "string",
+                           "example": "Medication and Supplement Tracker"
+                         },
+                         "startDateTime": {
+                           "type": "string",
+                           "example": "2020-11-21T06:23:47.103000Z"
+                         },
+                         "submitterId": {
+                           "type": "string",
+                           "example": "5f897b0f38077f776c6e4621"
+                         },
+                         "userId": {
+                           "type": "string",
+                           "example": "5f897b0f38077f776c6e4621"
+                         },
+                         "value": {
+                           "type": "integer",
+                           "example": 78
+                         },
+                         "version": {
+                           "type": "integer",
+                           "example": 0
+                         }
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "roles": {
+             "type": "array",
+             "items": {
+               "type": "object",
+               "properties": {
+                 "resource": {
+                   "type": "string",
+                   "example": "deployment/5f21e1d605f94e9073a8c964"
+                 },
+                 "roleId": {
+                   "type": "string",
+                   "example": "User"
+                 },
+                 "userType": {
+                   "type": "string",
+                   "example": "User"
+                 }
+               }
+             }
+           },
+           "stats": {
+             "type": "object",
+             "properties": {
+               "taskCompliance": {
+                 "type": "object",
+                 "properties": {
+                   "current": {
+                     "type": "integer",
+                     "example": 1
+                   },
+                   "due": {
+                     "type": "integer",
+                     "example": 0
+                   },
+                   "total": {
+                     "type": "integer",
+                     "example": 55
+                   },
+                   "updateDateTime": {
+                     "type": "string",
+                     "example": "2021-08-31T07:06:06.045000Z"
+                   }
+                 }
+               }
+             }
+           },
+           "status": {
+             "type": "object",
+             "properties": {
+               "5f21e1e205f94e9073a8c969": {
+                 "type": "object",
+                 "properties": {
+                   "Questionnaire": {
+                     "type": "object",
+                     "properties": {
+                       "seen": {
+                         "type": "boolean",
+                         "example": true
+                       }
+                     }
+                   }
+                 }
+               }
+             }
+           },
+           "surgeryDateTime": {
+             "type": "string",
+             "example": "2020-12-11"
+           },
+           "tags": {
+             "type": "object",
+             "properties": {
+               "continueMonitoring": {
+                 "type": "string",
+                 "example": "true"
+               }
+             }
+           },
+           "tagsAuthorId": {
+             "type": "string",
+             "example": "5f8d4da038077f776c6e4afd"
+           },
+           "timezone": {
+             "type": "string",
+             "example": "Europe/Minsk"
+           },
+           "updateDateTime": {
+             "type": "string",
+             "example": "2021-08-31T07:06:06.045000Z"
+           }
+         }
+       },
+       "DataOfUserProfileResponse": {
+         "$ref": "#/components/schemas/UserProfileObject"
+       },
+       "GetDeploymentByUserIdResponse": {
+         "type": "object",
+         "properties": {
+           "color": {
+             "type": "string",
+             "example": "0x007AFF"
+           },
+           "consent": {
+             "type": "object",
+             "properties": {
+               "createDateTime": {
+                 "type": "string",
+                 "example": "2021-03-12T15:26:38.589000Z"
+               },
+               "id": {
+                 "type": "string",
+                 "example": "5eff308d1afbc05f76099f15"
+               },
+               "instituteFullName": {
+                 "type": "string"
+               },
+               "instituteTextDetails": {
+                 "type": "string"
+               },
+               "revision": {
+                 "type": "integer",
+                 "example": 5
+               },
+               "sections": {
+                 "type": "array",
+                 "items": {
+                   "anyOf": [
+                     {
+                       "type": "object",
+                       "properties": {
+                         "details": {
+                           "type": "string",
+                           "example": "We recognise the importance of processing and protecting your personal and health information responsibly and securely. For further information on how Huma process your personal information, please refer to <a href=\"https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma_App_Privacy_Notice_General_V1_2020.pdf\">Privacy Policy</a>."
+                         },
+                         "title": {
+                           "type": "string",
+                           "example": "Your data"
+                         },
+                         "type": {
+                           "type": "string",
+                           "example": "DATA_GATHERING"
+                         }
+                       }
+                     },
+                     {
+                       "type": "object",
+                       "properties": {
+                         "options": {
+                           "type": "array",
+                           "items": {
+                             "anyOf": [
+                               {
+                                 "type": "object",
+                                 "properties": {
+                                   "order": {
+                                     "type": "integer",
+                                     "example": 0
+                                   },
+                                   "text": {
+                                     "type": "string",
+                                     "example": "I understand that Huma will process my personal health data, including health information, as described in the <a href=\"https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma_App_Privacy_Notice_General_V1_2020.pdf\">Privacy Policy</a>."
+                                   },
+                                   "type": {
+                                     "type": "integer",
+                                     "example": 0
+                                   }
+                                 }
+                               },
+                               {
+                                 "type": "object",
+                                 "properties": {
+                                   "order": {
+                                     "type": "integer",
+                                     "example": 1
+                                   },
+                                   "text": {
+                                     "type": "string",
+                                     "example": "I agree to the <a href=\"https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma%20(Medopad)_EULA_May_2020.pdf\">Terms & Conditions</a>"
+                                   },
+                                   "type": {
+                                     "type": "integer",
+                                     "example": 1
+                                   }
+                                 }
+                               }
+                             ]
+                           }
+                         },
+                         "title": {
+                           "type": "string",
+                           "example": "Agreement"
+                         },
+                         "type": {
+                           "type": "string",
+                           "example": "AGREEMENT"
+                         }
+                       }
+                     },
+                     {
+                       "type": "object",
+                       "properties": {
+                         "details": {
+                           "type": "string",
+                           "example": "As part of this programme, you may be contacted to provide feedback on your experiences either using the HUMA app or being part of the remote patient monitoring programme."
+                         },
+                         "title": {
+                           "type": "string",
+                           "example": "Feedback"
+                         },
+                         "type": {
+                           "type": "string",
+                           "example": "FEEDBACK"
+                         }
+                       }
+                     }
+                   ]
+                 }
+               }
+             }
+           },
+           "consentNeeded": {
+             "type": "boolean",
+             "example": true
+           },
+           "createDateTime": {
+             "type": "string",
+             "example": "2020-07-03T13:19:56.012000Z"
+           },
+           "deploymentId": {
+             "type": "string",
+             "example": "5eff307c1afbc05f76099f14"
+           },
+           "eConsentNeeded": {
+             "type": "boolean",
+             "example": false
+           },
+           "enrollmentCounter": {
+             "type": "integer",
+             "example": 320
+           },
+           "eulaUrl": {
+             "type": "string",
+             "example": "https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma%20(Medopad)_EULA_May_2020.pdf"
+           },
+           "features": {
+             "type": "object",
+             "properties": {
+               "appMenu": {
+                 "type": "array",
+                 "items": {
+                   "type": "string"
+                 },
+                 "example": [
+                   "CARE_PLAN",
+                   "KEY_ACTIONS",
+                   "LEARN",
+                   "PROFILE"
+                 ]
+               },
+               "appointment": {
+                 "type": "boolean",
+                 "example": true
+               },
+               "carePlanDailyAdherence": {
+                 "type": "boolean",
+                 "example": true
+               },
+               "healthDeviceIntegration": {
+                 "type": "boolean",
+                 "example": true
+               },
+               "offBoarding": {
+                 "type": "boolean",
+                 "example": false
+               },
+               "personalDocuments": {
+                 "type": "boolean",
+                 "example": false
+               },
+               "proxy": {
+                 "type": "boolean",
+                 "example": false
+               }
+             }
+           },
+           "icon": {
+             "type": "object",
+             "properties": {
+               "bucket": {
+                 "type": "string",
+                 "example": "hu-pp-qa-app-bucket"
+               },
+               "key": {
+                 "type": "string",
+                 "example": "deployment/5eff307c1afbc05f76099f14/huma_logo.png"
+               },
+               "region": {
+                 "type": "string",
+                 "example": "eu"
+               }
+             }
+           },
+           "isOffBoarded": {
+             "type": "boolean",
+             "example": false
+           },
+           "keyActions": {
+             "type": "array",
+             "items": {
+               "type": "object",
+               "properties": {
+                 "createDateTime": {
+                   "type": "string",
+                   "example": "2020-07-29T20:54:48.849000Z"
+                 },
+                 "deltaFromTriggerTime": {
+                   "type": "string",
+                   "example": "PT0M"
+                 },
+                 "description": {
+                   "type": "string",
+                   "example": "You have a new activity for the DeTAP study. Please complete as soon as you are able to."
+                 },
+                 "durationFromTrigger": {
+                   "type": "string",
+                   "example": "P24W6D"
+                 },
+                 "durationIso": {
+                   "type": "string",
+                   "example": "P24WT10H0M"
+                 },
+                 "id": {
+                   "type": "string",
+                   "example": "5f21e21872760aedcd9ada9f"
+                 },
+                 "instanceExpiresIn": {
+                   "type": "string",
+                   "example": "P1W"
+                 },
+                 "moduleConfigId": {
+                   "type": "string",
+                   "example": "5f21e1e205f94e9073a8c966"
+                 },
+                 "moduleId": {
+                   "type": "string",
+                   "example": "Questionnaire"
+                 },
+                 "notifyEvery": {
+                   "type": "string",
+                   "example": "P3D"
+                 },
+                 "numberOfNotifications": {
+                   "type": "integer",
+                   "example": 2
+                 },
+                 "title": {
+                   "type": "string",
+                   "example": "PAM Questionnaire"
+                 },
+                 "trigger": {
+                   "type": "string",
+                   "example": "SIGN_UP"
+                 },
+                 "type": {
+                   "type": "string",
+                   "example": "MODULE"
+                 },
+                 "updateDateTime": {
+                   "type": "string",
+                   "example": "2020-07-29T20:54:48.849000Z"
+                 }
+               }
+             }
+           },
+           "keyActionsEnabled": {
+             "type": "boolean",
+             "example": true
+           },
+           "language": {
+             "type": "string",
+             "example": "en"
+           },
+           "learn": {
+             "type": "object",
+             "properties": {
+               "createDateTime": {
+                 "type": "string",
+                 "example": "2020-07-03T13:19:56.012000Z"
+               },
+               "id": {
+                 "type": "string",
+                 "example": "5eff307c1afbc05f76099f13"
+               },
+               "updateDateTime": {
+                 "type": "string",
+                 "example": "2020-07-03T13:19:56.012000Z"
+               }
+             }
+           },
+           "moduleConfigs": {
+             "type": "array",
+             "items": {
+               "type": "object",
+               "properties": {
+                 "about": {
+                   "type": "string",
+                   "example": "For this activity, you’ll be asked to listen to a list of words that will be read out loud to you. You’ll then say back as many words as you can remember, speaking clearly into your phone’s microphone. This cycle will be repeated several times. You will be provided with step-by-step instructions throughout the activity. The test is meant to be difficult and do not be alarmed if you cannot complete the full task.<br><br>This app is for research purposes only. It is not a medical device and will not provide you with any medical information. Using this app does not impact your care and should not be substituted for clinical care. If you have any concerns after participating in this research, please contact your GP."
+                 },
+                 "configBody": {
+                   "type": "object",
+                   "properties": {
+                     "id": {
+                       "type": "string",
+                       "example": "f4c2f219-e0c5-462f-afc3-e8955cb2dae8"
+                     },
+                     "isForManager": {
+                       "type": "boolean",
+                       "example": false
+                     },
+                     "isOnboarding": {
+                       "type": "boolean",
+                       "example": true
+                     },
+                     "name": {
+                       "type": "string",
+                       "example": "Baseline Questionnaire"
+                     },
+                     "pages": {
+                       "type": "array",
+                       "items": {
+                         "type": "object",
+                         "properties": {
+                           "items": {
+                             "type": "array",
+                             "items": {
+                               "type": "object",
+                               "properties": {
+                                 "description": {
+                                   "type": "string"
+                                 },
+                                 "format": {
+                                   "type": "string",
+                                   "example": "TEXT"
+                                 },
+                                 "id": {
+                                   "type": "string",
+                                   "example": "87c64b87-657b-4cb2-9f49-83573fb0605c"
+                                 },
+                                 "logic": {
+                                   "type": "object",
+                                   "properties": {
+                                     "isEnabled": {
+                                       "type": "boolean",
+                                       "example": false
+                                     }
+                                   }
+                                 },
+                                 "order": {
+                                   "type": "integer",
+                                   "example": 1
+                                 },
+                                 "required": {
+                                   "type": "boolean",
+                                   "example": true
+                                 },
+                                 "text": {
+                                   "type": "string",
+                                   "example": "Please enter your Subject ID"
+                                 }
+                               }
+                             }
+                           },
+                           "order": {
+                             "type": "integer",
+                             "example": 1
+                           },
+                           "type": {
+                             "type": "string",
+                             "example": "QUESTION"
+                           }
+                         }
+                       }
+                     },
+                     "publisherName": {
+                       "type": "string",
+                       "example": "NX"
+                     },
+                     "submissionPage": {
+                       "type": "object",
+                       "properties": {
+                         "buttonText": {
+                           "type": "string",
+                           "example": "Submit"
+                         },
+                         "description": {
+                           "type": "string",
+                           "example": "Scroll up to change any of your answers. Changing answers may add new questions."
+                         },
+                         "id": {
+                           "type": "string",
+                           "example": "21a1cd2d-ad31-411f-8c4a-4531dcb3774f"
+                         },
+                         "order": {
+                           "type": "integer",
+                           "example": 2
+                         },
+                         "text": {
+                           "type": "string",
+                           "example": "You've completed the questionnaire"
+                         },
+                         "type": {
+                           "type": "string",
+                           "example": "SUBMISSION"
+                         }
+                       }
+                     }
+                   }
+                 },
+                 "createDateTime": {
+                   "type": "string",
+                   "example": "2020-09-16T20:09:53.196000Z"
+                 },
+                 "id": {
+                   "type": "string",
+                   "example": "5f6271110ac012c5c2100b55"
+                 },
+                 "moduleId": {
+                   "type": "string",
+                   "example": "Questionnaire"
+                 },
+                 "moduleName": {
+                   "type": "string"
+                 },
+                 "order": {
+                   "type": "integer",
+                   "example": 8
+                 },
+                 "ragThresholds": {
+                   "type": "object",
+                   "properties": {
+                     "5f21e1e205f94e9073a8c96a": {
+                       "type": "object",
+                       "properties": {
+                         "HeartRate": {
+                           "type": "object",
+                           "properties": {
+                             "value": {
+                               "type": "object",
+                               "properties": {
+                                 "color": {
+                                   "type": "string",
+                                   "example": "#CBEBF0"
+                                 },
+                                 "direction": {
+                                   "type": "string",
+                                   "example": "DECREASED"
+                                 }
+                               }
+                             }
+                           }
+                         }
+                       }
+                     }
+                   }
+                 },
+                 "schedule": {
+                   "type": "object",
+                   "properties": {
+                     "friendlyText": {
+                       "type": "string",
+                       "example": "friendlyText"
+                     },
+                     "timesOfDay": {
+                       "type": "array"
+                     },
+                     "timesPerDuration": {
+                       "type": "integer",
+                       "example": 0
+                     }
+                   }
+                 },
+                 "status": {
+                   "type": "string",
+                   "example": "ENABLED"
+                 },
+                 "updateDateTime": {
+                   "type": "string",
+                   "example": "2020-09-21T12:33:34.461000Z"
+                 },
+                 "version": {
+                   "type": "integer",
+                   "example": 0
+                 }
+               }
+             }
+           },
+           "name": {
+             "type": "string",
+             "example": "Revere Deployment"
+           },
+           "privacyPolicyUrl": {
+             "type": "string",
+             "example": "https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma_App_Privacy_Notice_General_V1_2020.pdf"
+           },
+           "stats": {
+             "type": "object",
+             "properties": {
+               "completedCount": {
+                 "type": "object",
+                 "properties": {
+                   "unit": {
+                     "type": "string"
+                   },
+                   "value": {
+                     "type": "integer",
+                     "example": 0
+                   }
+                 }
+               },
+               "completedTask": {
+                 "type": "object",
+                 "properties": {
+                   "unit": {
+                     "type": "string",
+                     "example": "%"
+                   },
+                   "value": {
+                     "type": "integer",
+                     "example": 0
+                   }
+                 }
+               },
+               "consentedCount": {
+                 "type": "object",
+                 "properties": {
+                   "unit": {
+                     "type": "string"
+                   },
+                   "value": {
+                     "type": "integer",
+                     "example": 520
+                   }
+                 }
+               },
+               "enrolledCount": {
+                 "type": "object",
+                 "properties": {
+                   "unit": {
+                     "type": "string"
+                   },
+                   "value": {
+                     "type": "integer",
+                     "example": 243
+                   }
+                 }
+               },
+               "updateDateTime": {
+                 "type": "string",
+                 "example": "Fri, 03 Sep 2021 07:00:45 GMT"
+               }
+             }
+           },
+           "status": {
+             "type": "string",
+             "example": "DEPLOYED"
+           },
+           "termAndConditionUrl": {
+             "type": "string",
+             "example": "https://storage.googleapis.com/hu-deployment-static-content/revere/v2/Huma%20(Medopad)_EULA_May_2020.pdf"
+           },
+           "updateDateTime": {
+             "type": "string",
+             "example": "2021-08-25T10:01:22.126000Z"
+           },
+           "userActivationCode": {
+             "type": "string",
+             "example": "34106508"
+           },
+           "version": {
+             "type": "integer",
+             "example": 0
+           }
+         }
+       }
+     }
+   }
+ }
+ 
