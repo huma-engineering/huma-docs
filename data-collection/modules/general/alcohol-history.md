@@ -3,13 +3,13 @@ sidebar_position: 1
 title: Alcohol History
 ---
 
-Over time, excessive alcohol use can lead to the development of health concerns, therefore, Huma provides the Alcohol History module to assess risk for the Patient relative to thier consumption levels.
+Over time, excessive alcohol consumption can lead to health concerns. The Alcohol History module aims to assess the risk to patients of developing health problems arising from excessive alcohol consumption.
 
 ## How it works
 
-### Patients
+Patients answer a series of questions about how much alcohol they have consumed from various different categories. They will then be assigned a score to assess their current risk of over consumption.
 
-From within the Huma Health Score, Patients will taken throught the flow of answering a question of how much alcohol they have consumed, as follows:
+## Questions
 
 **Add the types and amounts of alcohol you have consumed in the past week.**
 

@@ -11,7 +11,7 @@ The main objective of the Huma App is to give patients the ability to record the
 
 Depending on the app configuration, there will be up to four different areas, accessible via the navigation menu at the bottom.
 
-The default homepage is usually the [To do/Timeline](../features/to-dos.md) page. This is where you will see any actionable items assigned to you by the care team, such as appointment request or modules pending data collection.
+The default homepage is usually the [To do/Timeline](../features/to-dos.md) page. This is where you will see any actionable items assigned to you by the care team, such as appointment requests, Learn content, or modules pending data collection.
 
 ![To do](../assets/Todo.png)
 

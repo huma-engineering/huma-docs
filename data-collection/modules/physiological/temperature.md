@@ -3,28 +3,20 @@ sidebar_position: 11
 title: Temperature 
 ---
 
-** Body temperature is one of the main vital signs that is monitored to ensure safe and effective care **
-
-As body temperature can reflect on the condition of a person, the Huma Temperature module enables Patients to record their temperature so that Clinicians can review for any indications of various conditions of human health.
+Body temperature is a vital sign used to monitor a patient and to ensure safe and effective health care.
 
 ## How it works
 
-Patients will measure their Body Temperature using a thermometer, and enter into the Huma App. From there, Clinicians can view new and historic results in the Clinician Portal and be informed on severity.  
-
-### Patients
-
-In the Huma App, Patients can select the Temperature module and by pressing the “Add” button can enter a value as °C, with the time and date automatically added as now, but editable. 
+Patients measure their body temperature using a thermometer and enter their reading into the Huma App. 
 
 ![Adding temperature in the Huma App](./assets/temperature.png)
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
+The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic results from within the module. Reminders can be set to help them stay on track and make sure they don't miss an entry.
 
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Temp column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will be able to easily see the latest body temperature readings from their patients, with very low or very high flagged for attention.
 
 ![Viewing patient's temperature in the Huma App](./assets/cp-patient-list-temperature.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Blood Glucose module all historic data can be displayed as a graph or a table of results.
+The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
 ![Viewing patient's temperature in the Huma App](./assets/cp-module-details-temperature.png)

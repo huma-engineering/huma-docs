@@ -7,11 +7,11 @@ title: Profile
 
 Once you have created an account in the Clinician Portal, Huma lets you manage your personal data, change your password, edit units of measurement used in the portal and access terms and conditions documents.
 ## How it works​
-Once you have logged into the Clinician Portal, click the button with your name on it at the top right and select **Profile** from the dropdown menu. 
+Click the button with your name on it at the top right and select **Profile** from the dropdown menu. 
 
 ![Profile Menu](./assets/YourProfile01.png)
 
-The page is divided into sections: **Personal details**, **Contact information**, **Units and Password**. Just click the **edit✎** icon to switch to the edit view and change any of the details. 
+The page is divided into sections: **Personal details**, **Contact information**, **Units and Password**. Just click the ![Edit button](./assets/Edit.png) icon to switch to the edit view and change any of the details. 
 
 ![Edit button](./assets/YourProfile02.png)
 
@@ -24,7 +24,7 @@ You can edit your mobile number that is used as part of the 2-factor authenticat
 ![Contact Info](./assets/YourProfile03.png)
 
 ### Units
-Each user on the Clinician Portal can decide the unit of measurement that is used to show the patient data for **blood glucose**, **temperature**, **height** and **weight**. Just click the down arrow at the end of each line to see a list of other options.
+Each user on the clinician portal can decide the unit of measurement that is used to show the patient data for **blood glucose**, **temperature**, **height** and **weight**. Just click the down arrow at the end of each line to see a list of other options.
 
 ![Units](./assets/YourProfile04.png)
 
@@ -49,7 +49,7 @@ You can reset your password from here. Click to edit and you will be asked to en
 
 ![Password](./assets/YourProfile05.png)
 
-When you have made your edits, click the 🗸 to confirm the changes or 𐄂 to cancel the changes.
+When you have made your edits, click the ![Check](./assets/Tick.png) icon to save or the ![Cross](./assets/Cross.png) to revert back.
 
 ![Conifrm or Cancel](./assets/YourProfile06.png)
 
@@ -60,7 +60,5 @@ If you ever forget your password, just click the **Forgot Password** link on the
 
 ### Privacy policy and licence agreement
 At the bottom of your profile page details, you can find links to licensing and privacy policy documentation. These links are set up in the deployment configuration and describe the terms of your user agreement.
-
-![Privacy Policy link](./assets/YourProfile08.png)
 
 **Related articles**: [Logging into the Portal](./logging-into-the-portal.md)

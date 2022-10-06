@@ -3,22 +3,18 @@ sidebar_position: 3
 title: PROMIS Global Health
 ---
 
-The Patient-Reported Outcomes Measurement Information System (PROMIS) Global Health is a licensed PROM questionnaire that captures Global Health Patient data. It contains a set of 10 multiple choice (single answer) questions. Huma provides the PROMIS Global Health module to assess an individual’s physical, mental, and social health, by asking generic questions about them. Care Teams can access those answers and the 2 calculated scores - ‘Physical Health’ and ‘Mental Health’ through the Clinician Portal to gather insights.
+The Patient-Reported Outcomes Measurement Information System (PROMIS) Global Health is a licensed questionnaire to assess a patient's health in terms of their physical, mental, and social wellbeing. Results are shared with care teams who can work with patients to provide the care that is needed.
 
 ## How it works
 
-## Patients
+Patients respond to a set of 10 multiple choice questions to assess their physical and mental health. 
 
-In the Huma App, on the Track Screen Patients can select Global Health, and by pressing “Add” can enter the questionnaire and proceed to answer questions in a way that reflects how they feel.
+To start, patients select the PROMIS Global Health module and click "Add". When they have answered all the questions, they will be assigned scores in the categories of ‘Physical Health’ and ‘Mental Health’ that are shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 <!-- ![PROMIS Global Health in Huma App](./assets/) -->
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
-
-## Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Global Health column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will see the latest PROMIS Global Health score for their patient, with concerning scores flagged for attention.
 
 <!-- ![Clinician view of gloabl health](./assets/) -->
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Global Health all historical data can be displayed as a graph or a table of results.
+In the Patient Summary, care teams can view all historical data in graph or table form.

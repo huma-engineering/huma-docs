@@ -3,24 +3,20 @@ sidebar_position: 1
 title: Patient Activation Measure-13
 ---
 
-The Patient Activation Measure is an easy way for Patients to provide information about how confident they are in managing their health. Clinicians can view this data to understand what care needs to be delivered.
+Patient activation looks at how confident a patient is when it comes to managing their health. The Patient Activation Measure-13 questionnaire is an easy way for patients to provide this information to their care team, who can use this data to understand how to best help and support them.
 
 ## How it works
 
-Patients answer generic questions about how they feel about their health. Care Teams can then access those answers through the Clinician Portal.
-
-## Patients
-
-In the Huma App, Patients can select “Questionnaire” from the track screen. They can select the Patient Activation Measure-13 and answer the questions according to how they feel.
+Patients answer generic questions about how they feel about their health. To start, patients select the Patient Activation Measure-13 module and click "Add". When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Patient Activation Measure-13 in the Huma App](./assets/patient-activation-measure-13.png)
 
 ## Clinicians
 
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Anxiety Level - GAD-7 column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will see the latest Patient Activation Measure-13 score for their patient, with concerning scores flagged for attention.
 
 ![Clinician View of Patient Activation Measure-13](./assets/cp-patient-summary-pam-13.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Anxiety Level - GAD-7 all historical data can be displayed as a graph or a table of results.
+In the Patient Summary, care teams can view all historical data in graph or table form..
 
 ![Clinician View of Patient Activation Measure-13](./assets/cp-module-details-pam-13.png)

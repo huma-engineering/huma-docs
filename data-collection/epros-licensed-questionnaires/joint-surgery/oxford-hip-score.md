@@ -2,26 +2,23 @@
 sidebar_position: 7
 title: Oxford Hip Score
 ---
-After Patients receive treatment it is important to know how successful that treatment is and if additional steps need to be taken. Huma provides the Oxford Hip Score to assess the function and pain after total Hip replacement. The information is available to Care Teams so they can initiate the post-surgery care.
+
+Post-surgery care is key to successful recovery from any operation. The Oxford Hip Score questionnaire is a quick and effective way to ask the patient about function and pain after total hip replacement. Their feedback is shared with their care teams in order to provide the best post-surgery care. 
 
 ## How it works
 
-The Oxford Hip Score Questionnaire is a quick and effective way for Patients to assess pain for Care Teams in the Clinician Portal. The Patient responds to questions with pre-determined descriptive answers. Scores in Huma are calculated out of 48 is calculated, in which a lower score represents a better hip function.
+Patients are asked a series of multiple-choice questions about how they feel and are assigned a score out of 48, where a lower score represents a better hip function.
 
-## Patients
-
-In the Huma App, from the “Track” screen, Patients can select Oxford Hip Score and by pressing “Add” can answer the questions to reflect how they feel.
+To start, patients select the Oxford Hip Score module and click "Add". From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Oxford Hip Score in the Huma App](./assets/oxford-hip-score.png)
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
-
 ## Clinicians
 
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Oxford Hip Score column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention. 
 
 ![Oxford Hip Score in the Clinician Portal](./assets/cp-patient-list-oxford-hip-score.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting Oxford Hip Score all historical data can be displayed as a graph or a table of results.
+In the Patient Summary, care teams can view all historical data in graph or table form.
 
 ![Oxford Hip Score in the Clinician Portal](./assets/cp-module-details-oxford-hip-score.png)

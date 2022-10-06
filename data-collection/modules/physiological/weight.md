@@ -3,29 +3,20 @@ sidebar_position: 12
 title: Weight 
 ---
 
-** Helping Patients manage their Weight  **
-
-It is critical to maintaining a healthy weight for good health, as it can lower the risk of many conditions and ailments. With a simple and accessible measurement, the Weight module will inform Care Teams to gather insights and provide feedback if needed.
-
+Helping Patients manage their Weight is critical for good health as it can lower the risk of many conditions and ailments. 
 
 ## How is works
 
-Using a typical bathroom scale, a Patient can weigh themselves and provide the result in the Huma App in kilogram, pounds, or stone dependants on the units preferred.
-
-### Patients
-
-In the Huma App, Patients can select the Weight module and by pressing the “Add” button can enter a value as kilograms (or configured unit), with the time and date automatically added as now, but editable. 
+Using a typical bathroom scale, patients weigh themselves and enter the reading into the Huma App in either kilograms, pounds, or stones and pounds,  depending on the preferred units selected in the App.
 
 ![Adding weight to the Huma App](./assets/weight.png)
 
-From within the module, Patients can view their progress in a graph and press “Show all data” to view previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
+The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic readings from within the module. Reminders can be set to help them stay on track and make sure they don't miss an entry.
 
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Weight column will display the last recorded reading indicated as a Red Amber Green indicator to inform severity. 
+In the Clinician Portal, care teams will be able to easily see the latest weight entries from their patients.
 
 ![Viewing weight in the Clinician Portal](./assets/cp-patient-list-weight.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Heart Rate module all historic data can be displayed as a graph or a table of results.
+The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
 ![Viewing weight in the Clinician Portal](./assets/cp-module-details-weight.png)

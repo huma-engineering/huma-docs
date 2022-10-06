@@ -5,22 +5,20 @@ title: Navigation
 # Navigating the Portal
 **User**: Admin, Access Controller, Deployment Staff
 
-The Clinician Portal is one easy-to-use interface for all Care Team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles.
+The Clinician Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles.
 
 Portal layout is different depending on whether you have an Organisation-level role or a Deployment-level role as permissions are different for each. This guide will help you find your way around the portal no matter which view you have.
 
 ## Organisation-level navigation
-If your role is at the organisation level, the layout of the portal will be a little different.
-
-If you have this role it is likely you are managing multiple deployments, so your homepage immediately lets you see a list of your deployments along with some high-level stats on the overall number of patients and deployments.
+If your role is at the organisation level, it is likely you are managing multiple deployments. Your homepage immediately lets you see a list of your deployments along with the overall number of patients and deployments.
 
 ![Org-level stats](./assets/Navigating01.png)
 
-Click on any of the deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular Deployment-level role.
+Click on any of the deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular deployment-level role.
 
-Click the Huma icon at the top left to return to the Deployment List at any time. 
+Click the Huma icon at the top left to return to the deployments list at any time. 
 
-You can use the filter at the top to switch between the **Deployments list**, **All staff members**, or **Pending staff invitations**.
+You can use the filter at the top to switch between the **My deployments**, **All staff members**, or **Pending staff invitations**.
 
 ![Deployments filters](./assets/Navigating02.png)
 
@@ -52,7 +50,7 @@ You can **resend** or **delete** invitations using the dropdown menu at the end 
 
 ## Deployment-level navigation
 ### Patient List
-If you have a deployment-level role on the Clinician Portal, you will land on the **Patient List** screen when you log into the platform, which gives you an overview of all your active patients. 
+If you have a deployment-level role on the Clinician Portal, you will land on the **Patient List** screen when you log into the platform, which gives you an overview of all your patients. 
 
 ![Patient List](./assets/Navigating09.png)
 
@@ -63,23 +61,19 @@ From here, you manage all your patient information including **Track data**; **P
 
 ![Patient Overview](./assets/Navigating10.png)
 
-### Patient Tools
-Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.md) or [calling the patient](../telemedicine/calling-patients.md).
+### Patient tools
+Within the patient interface, you also have a tools menu that lets you access some of the functionality directly, such as [messaging](../telemedicine/messaging-patients.md) or [calling the patient](../telemedicine/calling-patients.md). The **Add note / Resolve flags** button can also be accessed from anywhere in the patient UI.
 
-![Patient Tools](./assets/Navigating11.png)
-
-The **Add note / Resolve flags** button can also be accessed from anywhere in the patient UI.
-
-![Resolve Flags](./assets/Navigating12.png)
+![Resolve Flags](./assets/Navigating11.png)
 
 ### Profile and User Management
 You can access the tools menu from the three dots next to your name in the button at the top right. This lets you access [your profile](./your-profile.md) and manage users, roles and permissions.
 
-![Profile menu](./assets/Navigating13.png)
+![Profile menu](./assets/Navigating12.png)
 
 ### Return to Home
 You can navigate back to the patient list screen at any time by clicking the Huma logo at the top-left of the screen.
 
-![Home icon](./assets/Navigating14.png)
+![Home icon](./assets/Navigating13.png)
 
 **Related articles**: [Logging into the Portal](./logging-into-the-portal.md); [Patient List](../managing-patients/patient-list.md); [Inviting staff and assigning roles](../roles-and-permissions/inviting-staff-and-assigning-roles.md); [Your Profile](./your-profile.md); [Inviting staff (Organisations)](../../admin-portal/managing-organisations/inviting-staff-to-an-organisation.md); [Inviting staff (Deployments)](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md); 

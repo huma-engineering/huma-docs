@@ -3,35 +3,27 @@ sidebar_position: 1
 title: Inpatient Questionnaire
 ---
 
-This questionnaire feature is an easy way of collecting information about a person's health who does not require to be admitted overnight. Answering all questions and sharing this information will allow a person's care team to make better treatment decisions.
+The Inpatient Questionnaire is a way of collecting information about overnight hospital visits and sharing this information with care teams. 
 
 ## How it works
 
-### Patients
- 
-In the Huma app, patients can select Questionnaire and the Inpatient Questionnaire from the Track screen. From here, the Patient can answer questions on symptoms and tests in the previous month.
+Patients will answer questions about the details of their hospital stay, including dates and the specialities they visited. 
 
-From the module, Patients can select "View previous entries" and review historical records.
+In the Clinician Portal, care teams will see the latest Inpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
 
-### Inpatient Questionnaire
+The Inpatient Questionnaire has 7 questions in total.
 
-The Questionnaire feature is an easy way of collecting information about your health. Answering all questions and sharing this information will allow your care team to make better treatment decisions.
+## Questions
 
-#### Question 1
-
-**What was your date of admission?**
+#### Question 1: What was your date of admission?
 
 Select a date
 
-#### Question 2
-
-**What was your date of discharge?**
+#### Question 2: What was your date of discharge?
 
 Select a date
 
-#### Question 3
-
-**Which speciality did you attend?**
+#### Question 3: Which speciality did you attend?
 
 Choose multiple of the following
 - Cardiology
@@ -41,15 +33,11 @@ Choose multiple of the following
 - Elderly care
 - Other
 
-#### Question 4
-
-**Please specify the speciality you attended**
+#### Question 4: Please specify the speciality you attended
 
 Write a descriptive answer
 
-#### Question 5
-
-**Why were you admitted?**
+#### Question 5: Why were you admitted?
 
 Choose multiple of the following
 - Abnormal bowel function
@@ -63,9 +51,7 @@ Choose multiple of the following
 - Weakness
 - Weight loss
 
-#### Question 6
-
-**Was medication changed?**
+#### Question 6: Was medication changed?
 
 Choose multiple of the following
 - Pain medicine
@@ -74,14 +60,6 @@ Choose multiple of the following
 - Bowel medication
 - Other
 
-#### Question 7
-
-**What medication change?**
+#### Question 7: What medication change?
 
 Write a descriptive answer
-
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients and the Inpatient column will display the last recorded reading.
-
-Clicking on the Patient row takes the Clinician to the Patient Summary, where Care Teams can view all vitals. By selecting the Inpatient, all historical data can be displayed as a graph or a table of results.

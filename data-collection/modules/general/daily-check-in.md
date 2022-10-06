@@ -3,24 +3,18 @@ sidebar_position: 4
 title: Daily Check-in
 ---
 	
-By tracking how they feel every day, Patients help Care Teams understand how they can offer better support.
+The daily check-in provides a way for patients to record how they are doing on a day-to-day basis, helping care teams understand how they can offer better support.
 
 ## How it works
 
-### Patients
-
-In the Huma App, Patients can select the Daily Check-In module and by pressing the “Add” button can answer the question “Are you feeling better than yesterday?”. 
+The Daily Check-In module asks patients to answer a simple question; “Are you feeling better than yesterday?”. They can answer "Yes", "No" or "Same".
 
 ![Responding to daily check in](./assets/daily-check-in.png)
 
-To view historic answers, Patients can see a table of them by pressing “Previous entries”.
-
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients, from which the Daily Check-In column will display the last recorded reading.
+Both patients and their care teams can review their answers to this question to notice how their general wellbeing fluctuates. In the Clinician Portal, care teams can easily see the patient's last recorded reading in the Daily Check-In column.
 
 ![Daily check in in the clinician portal](./assets/cp-patient-list-daily-check-in.png)
 
-Clicking on the Patient row takes the Clinician to the Patient Summary where all vitals can be viewed, by selecting the Daily Check-In module all historic data can be displayed as a graph or a table of results.
+In the Patient Summary, all historic data concerning the patient's daily check-in reponses can be displayed as a graph or a table of results.
 
 ![Daily check in in the clinician portal](./assets/cp-module-details-daily-check-in.png)

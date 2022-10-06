@@ -9,7 +9,7 @@ The Huma Admin Portal is the place where individual organisations and deployment
 This can be done both for the Huma App and the Clinician Portal. 
 ## How it works
 ### Previewing the Huma App​
-In the Admin Portal, go to the deployment you want to preview. You’ll see a **phone icon** at the bottom right of the screen (you can find this on any page within the deployment management screens).
+Go to the Deployment you want to preview. You’ll see a ![Preview](./assets/Preview.png) icon at the bottom right of the screen (you can find this on any page within the deployment management screens).
 
 ![image](./assets/Preview01.png)
 
@@ -21,6 +21,6 @@ Click the link that appears on your phone and this will take you to the sign-up 
 
 Review the onboarding process and the rest of the experience and make any changes to the configuration as needed.
 ### Previewing the Clinician Portal
-To preview how the Clinician Portal looks for your deployment, just [invite yourself as an Admin](./inviting-deployment-admins.md) or [Access Controller (Organization)](../../managing-organisations/inviting-staff-to-an-organisation.md). 
+To preview how the clinician portal looks for your deployment, just [invite yourself as an Admin](./inviting-deployment-admins.md) or [Access Controller (Organization)](../../managing-organisations/inviting-staff-to-an-organisation.md). 
 
 **Related articles**: [Creating a new Deployment](../general-settings/creating-a-new-deployment.md); [Inviting Deployment Admin](./inviting-deployment-admins.md)

@@ -3,7 +3,8 @@ sidebar_position: 5
 title: Modules
 ---
 
-** Where data is collected from patients **
+# Modules
+Modules represent different categories where health data is collected from the patient and tracked. 
 
-Each data category (e.g. Blood Glucose) is contained within a module. Some modules are a series of different data points (e.g. Body measurement) which collects different data points related to the category. Existing modules mentioned in the Knowledge Base can be toggled on for each deployment via the Admin portal.
+Specific modules can be selected for each deployment in order to track only the data points that are relevant to each set of patients. Let's take a look at each of the available modules and what each one is useful for.
 

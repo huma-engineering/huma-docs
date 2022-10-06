@@ -5,7 +5,7 @@ title: App features
 # App features
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Huma is designed principally for either clinical research trials (CRT) or remote patient monitoring (RPM). The app features that are delivered to patients can vary depending on the specific needs of their program. 
+Huma is designed principally for either Decentralised Clinical Trials (DCT) or Remote Patient Monitoring (RPM). The app features that are delivered to patients can vary depending on the specific needs of their program. 
 ## How it works​
 From the **Admin Portal**, go to the **App features** tab, under **Overall Settings**.
 
@@ -16,11 +16,11 @@ You can choose which tabs appear in the Huma App. There are two pre-configured o
 
 ![image](./assets/AppFeatures02.png)
 
-The Legacy option includes **Care plan, Key actions, Learn**, and **Profile**.
+The legacy option includes **Care plan, Key actions, Learn**, and **Profile**.
 
 ![image](./assets/AppFeatures03.png)
 
-The Timeline option includes **To do, Track, Learn**, and **Profile**.
+The timeline option includes **To do, Track, Learn**, and **Profile**.
 
 ![image](./assets/AppFeatures04.png)
 
@@ -32,7 +32,7 @@ Check the features on the list that you want to include for your users:
 - **Off-boarding** - Allows manual offboarding of patients from the Clinician Portal.
 - **Personal documents** - Allows both patients and care teams to upload documents to a user's account.
 - **Proxy** - Lets patients nominate helpers to enter health data on their behalf. If any [onboarding modules](../configuring-the-user-onboarding/onboarding-setup.md) are configured with proxy users, this must be checked.
-- **Hide app support (Intercom)** - This hides access to the support centre from the [Profile](../../../huma-app/getting-started/personal-information-account-settings.md) page of the App.  
+- **Hide app support (Intercom)** - This hides access to the support centre from the [Profile](../../../huma-app/getting-started/personal-information-account-settings.md) page of the app.  
 - **Patient status** - This lets care teams see the patient status in the Patient List
 
 ![image](./assets/AppFeatures05.png)

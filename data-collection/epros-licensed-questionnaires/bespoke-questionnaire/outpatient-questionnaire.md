@@ -3,29 +3,23 @@ sidebar_position: 1
 title: Outpatient Questionnaire
 ---
 
-This questionnaire feature is an easy way of collecting information about a person's health who does not require to be admitted overnight. Answering all questions and sharing this information will allow a person's care team to make better treatment decisions.
+The Outpatient Questionnaire is a way of collecting information about hospital visits and sharing this information with care teams. 
 
 ## How it works
 
-### Patients
- 
-In the Huma app, patients can select Questionnaire and the Outpatient Monthly Questionnaire from the Track screen. From here, the Patient can answer questions on symptoms and tests in the previous month.
+Patients will answer questions about the details of their hospital stay, including dates and the specialities they visited. 
 
-From within the module, Patients can select "View previous entries" and review historical records.
+In the Clinician Portal, care teams will see the latest Outpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
 
-### Outpatient Questionnaire
+The Outpatient Questionnaire has 4 questions in total.
 
-The Questionnaire feature is an easy way of collecting information about your health. Answering all questions and sharing this information will allow your care team to make better treatment decisions.
+## Questions
 
-#### Question 1
-
-**What was your attendance date?**
+#### 1. What was your attendance date?
 
 Select a date
 
-#### Question 2
-
-**Which speciality did you attend?**
+#### 2. Which speciality did you attend?
 
 Choose multiple of the following
 - Cardiology
@@ -35,15 +29,11 @@ Choose multiple of the following
 - Nephrology
 - Other
 
-#### Question 3
-
-**Please specify the specialty you attended**
+#### 3. Please specify the specialty you attended
 
 Write a descriptive answer
 
-#### Question 4
-
-**Why were you admitted?**
+#### 4. Why were you admitted?
 
 Choose multiple of the following
 - Abnormal bowel function
@@ -57,8 +47,3 @@ Choose multiple of the following
 - Weakness
 - Weight loss
 
-### Clinicians
-
-In the Clinician Portal, on the Patient List, Clinicians can view a table of Patients and in the Outpatient column will display the last recorded reading.
-
-Clicking on the Patient row takes the Clinician to the Patient Summary, where Care Teams can view all vitals. By selecting the Outpatient, all historical data can be displayed as a graph or a table of results.
