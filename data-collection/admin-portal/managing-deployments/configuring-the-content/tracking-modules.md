@@ -36,7 +36,7 @@ This is the full list of modules available for tracking health data. The table s
 | [Heart rate/ HRV](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
 | Height Z-Score | No | Manual, followed by calculated | 
 | [High-Frequency HR](../../../modules/physiological/heart-rate.md) | No | Sync (from Apple Health, Google Fit) | 
-| [High-Frequency Step](../../../modules/general/steps.md) | No | Sync (from Apple Health, Google Fit) | 
+| [High-Frequency Step](../../../modules/physiological/steps.md) | No | Sync (from Apple Health, Google Fit) | 
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
 | [Medications](../../../modules/physiological/medications.md) | No | Manual | 
