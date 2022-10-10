@@ -19,26 +19,26 @@ A list of questionnaires are listed below along with their characteristics:
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
-| [Diabetes Distress Score (DDS)](../../../epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
-| [FJS Knee](../../../epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
-| [FJS Hip](../../../epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
-| [GAD-7](../../../epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
-| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
-| [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC) [English, German, Italian, Spanish]](../../../epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
-| [Norfolk QoL-DN [English, Dutch]](../../../epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) | PROM | Yes | Yes | No | 
-| [Oxford Knee Score [English]](../../../epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | PROM | Yes | Yes | No | 
-| [Oxford Hip Score [English]](../../../epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | PROM | Yes | Yes | No | 
-| [PHQ-8 [English (UK)]](../../../epros-licensed-questionnaires/mental-health/depression-level-phq-8.md) | PROM | Yes | Yes | No | 
-| [SF-36 [English, Dutch]](../../../epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | PROM | Yes | Yes | No | 
-| [EQ-5D-5L](../../../epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) | PROM | Yes | No | No |
-| [Patient Activation Measure 13 (PAM 13) [English]](../../../epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
-| [PROMIS CAT Pain Interference [English]](../../../epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
-| [PROMIS CAT Physical Function [English]](../../../epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
-| [PROMIS Global Health [Catalan, French, German, Spanish, Swedish]](../../../epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
-| [Activity and Health Questionnaire](../../../epros-licensed-questionnaires/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
-| [Baseline COVID-19 Questionnaire [German]](../../../epros-licensed-questionnaires/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
-| [Food Security Questionnaire](../../../epros-licensed-questionnaires/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
-| [Perceived Stress Scale](../../../epros-licensed-questionnaires/mental-health/perceived-stress-scale.md) | Questionnaire | Yes/No | No | Yes |
+| [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
+| [FJS Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
+| [FJS Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
+| [GAD-7](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
+| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
+| [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC) [English, German, Italian, Spanish]](../../../modules/epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
+| [Norfolk QoL-DN [English, Dutch]](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) | PROM | Yes | Yes | No | 
+| [Oxford Knee Score [English]](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | PROM | Yes | Yes | No | 
+| [Oxford Hip Score [English]](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | PROM | Yes | Yes | No | 
+| [PHQ-8 [English (UK)]](../../../modules/epros-licensed-questionnaires/mental-health/depression-level-phq-8.md) | PROM | Yes | Yes | No | 
+| [SF-36 [English, Dutch]](../../../modules/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | PROM | Yes | Yes | No | 
+| [EQ-5D-5L](../../../modules/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) | PROM | Yes | No | No |
+| [Patient Activation Measure 13 (PAM 13) [English]](../../../modules/epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
+| [PROMIS CAT Pain Interference [English]](../../../modules/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
+| [PROMIS CAT Physical Function [English]](../../../modules/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
+| [PROMIS Global Health [Catalan, French, German, Spanish, Swedish]](../../../modules/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
+| [Activity and Health Questionnaire](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
+| [Baseline COVID-19 Questionnaire [German]](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
+| [Food Security Questionnaire](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
+| [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/mental-health/perceived-stress-scale.md) | Questionnaire | Yes/No | No | Yes |
 
 ## Creating custom questionnaires
 You can create a completely new questionnaire from scratch. In the **Add track module** dropdown, select **Add new questionnaire**.
