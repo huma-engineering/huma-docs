@@ -21,7 +21,7 @@ This is the full list of modules available for tracking health data. The table s
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
-| [Audio Word Recall](../../../modules/general/audio-word-recall.md) | No | Manual | 
+| [Audio Word Recall](../../../modules/risk-scores/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
 | [Blood glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
