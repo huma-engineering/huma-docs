@@ -48,7 +48,7 @@ This is the full list of modules available for tracking health data. The table s
 | [Resting Breathing Rate](../../../modules/physiological/resting-breathing-rate.md) | No | Manual | 
 | [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) | 
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
-| [Symptoms](../../../modules/general/symptoms.md) | | Manual | 
+| [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
 | [Waist to Hip](../../../modules/physiological/body-measurement.md) | Yes | Manual, followed by calculated | 
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
