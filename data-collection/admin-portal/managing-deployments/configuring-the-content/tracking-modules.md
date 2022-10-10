@@ -21,25 +21,25 @@ This is the full list of modules available for tracking health data. The table s
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
-| [Audio Word Recall](../../../modules/risk-scores/audio-word-recall.md) | No | Manual | 
+| [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
 | [Blood glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
 | [Blood pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
 | [BodyMeasurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
 | [COVID-19 Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
-| [COVID-19 Risk Score](../../../modules/risk-scores/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
-| [CVD Risk Score](../../../modules/risk-scores/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
+| [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
+| [CVD Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
 | [ECG](../../../modules/physiological/ecg-alivecor.md) | No | Sync (from Kardia) |
 | [ECGHealthKit](../../../modules/physiological/ecg-apple-health.md) | Yes | Sync (from Apple Health) | 
-| [Health Score](../../../modules/risk-scores/health-score.md)| No | Manual, followed by calculated | 
+| [Health Score](../../../modules/algorithm-based-assessments/health-score.md)| No | Manual, followed by calculated | 
 | [Heart rate/ HRV](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
 | Height Z-Score | No | Manual, followed by calculated | 
 | [High-Frequency HR](../../../modules/physiological/heart-rate.md) | No | Sync (from Apple Health, Google Fit) | 
 | [High-Frequency Step](../../../modules/physiological/steps.md) | No | Sync (from Apple Health, Google Fit) | 
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
-| [Medications](../../../modules/physiological/medications.md) | No | Manual | 
+| [Medications](../../../modules/general/medications.md) | No | Manual | 
 | [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
 | [Photos](../../../modules/general/photos.md) | No | Manual |
