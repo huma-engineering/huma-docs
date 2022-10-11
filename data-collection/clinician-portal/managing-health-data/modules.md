@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-title: Patient Dashboard
+title: Modules
 ---
-# Patient Dashboard
+# Reviewing module data
 **User**: Admin; Deployment staff; Organisation staff
 
-The patient dashboard displays all the data points collected for a specific patient via tracking data points, symptoms or answering questionnaires in the Huma App. Care teams can track patient vitals and compare it next to other data to get a global understanding of how their patient is doing.
+The Patient Dashboard displays all the data points collected for a specific patient via tracking data points, symptoms or answering questionnaires in the Huma App. Care teams can track patient vitals and compare it next to other data to get a global understanding of how their patient is doing.
 ## How it works​
 From the **Patient List** click on the patient to see their dashboard. The dashboard is represented by the ![Patient Dashboard](./assets/Dashboard.png) icon on the left side menu. 
 

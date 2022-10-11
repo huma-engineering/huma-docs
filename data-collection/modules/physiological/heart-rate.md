@@ -1,9 +1,11 @@
 ---
 sidebar_position: 7
-title: Heart Rate
+title: Heart Rate/Heart Rate Variability
 ---
 
-The Heart Rate module is used to record how many times a patient’s heart beats per minute. A healthy heart rate is between 60 and 100 bpm but can be affected by certain heart conditions, stress, anxiety, etc.
+The Heart Rate module can be used to collect Heart Rate, Heart Rate Variaibility and Classification. For Heart rate, the module records how many times a patient’s heart beats per minute. A healthy heart rate is between 60 and 100 bpm but can be affected by certain heart conditions, stress, anxiety, etc. 
+
+Heart rate variability measures the difference between your individual heartbeats. These fluctuations are undetectable without a specialised device, but can indicate current or future health problems, including heart conditions and mental health issues like anxiety and depression.
 
 ## How it works
 
