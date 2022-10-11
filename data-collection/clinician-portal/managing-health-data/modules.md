@@ -1,17 +1,16 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Modules
 ---
 # Reviewing module data
 **User**: Admin; Deployment staff; Organisation staff
 
-The Patient Dashboard displays all the data points collected for a specific patient via tracking data points, symptoms or answering questionnaires in the Huma App. Care teams can track patient vitals and compare it next to other data to get a global understanding of how their patient is doing.
+The Patient Dashboard shows all the data points collected for a specific patient by modules. Care teams can track patient vitals and compare it next to other data to get a global understanding of how their patient is doing.
+
 ## How it works​
-From the **Patient List** click on the patient to see their dashboard. The dashboard is represented by the ![Patient Dashboard](./assets/Dashboard.png) icon on the left side menu. 
+On the Patient Dashboard, you can see the patient’s individual modules and their most recent health records. When you click on the module, you will be taken to a more detailed graph.
 
 ![Patient Dashboard](./assets/PatientDashboard01.png)
-
-Here you can see the patient’s individual modules and their most recent health records. When you click on the module or questionnaire you will be taken to a more detailed graph.
 
 From this view you can browse the list of all modules and questionnaires down the left hand side and click to see a graph showing previous entries in either table or graph format.
 
@@ -43,4 +42,4 @@ To compare different data points side by side, click the **Overlay vital** butto
 
 ![Overlay vital](./assets/PatientDashboard08.png)
 
-**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Configuring tracking modules](../../admin-portal/managing-deployments/configuring-the-content/tracking-modules.md); [Configuring Questionnaires](../../admin-portal/managing-deployments/configuring-the-content/tracking-questionnaires.md)  
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Questionnaires](./questionnaires.md); [Tracking Symptoms](./symptoms.md)  
