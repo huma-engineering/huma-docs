@@ -27,8 +27,7 @@ Click the **Edit✎** icon at the end of the row to configure the module.
 
 ## Patient experience 
 Patient identification takes place quite seamlessly as part of their onboarding experience. Using the camera on their device, users will be able to take a photo of their identity document and then take a photo of themselves. It will take around 60 seconds for them to be verified in the app and then they can continue to the next step of their onboarding.
-![ID verification](../../../huma-app/assets/idverification.png)
 
-<img src="../../../huma-app/assets/idverification.png" width="600" height="589">
+![ID verification](../../../huma-app/assets/idverification.png" width="600" height="589">
 
 **Related articles**: [eConsent](./econsent.md); [Helper Agreement](./helper-agreement.md)
