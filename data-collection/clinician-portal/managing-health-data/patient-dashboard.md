@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Patient Dashboard
+title: Patient dashboard
 ---
 # Patient Dashboard
 **User**: Admin; Deployment staff; Organisation staff
