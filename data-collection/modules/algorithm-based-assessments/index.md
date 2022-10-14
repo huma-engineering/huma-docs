@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-title: Algorithm-based assessments
+sidebar_position: 4
+title: Algorithm-based Assessments
 ---
 
 Huma enables care teams to collect important health data for remote patient monitoring to help them advise and make decisions about their patients' healthcare plan. Algorithm-based assessments measure the possibility that an individual will experience a medical event or specific outcome. 
