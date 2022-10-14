@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-title: Health Score Questionnaire
+sidebar_position: 4
+title: Health Score
 ---
 
 Huma Health Score is a comprehensive assessment of a patient's overall health, providing a breakdown of scores accross six key domains which affect long-term health risks.

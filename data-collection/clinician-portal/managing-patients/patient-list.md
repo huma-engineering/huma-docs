@@ -64,18 +64,18 @@ If you want to enter a different search term, click the filters icon again or ju
 
 Click **Clear result** to remove all filters and start again.
 
-![Clear result](./assets/PatientList10.png)
+![Clear result](./assets/PatientList09.png)
 
 ## Customising column headers
 Besides filters, you can customise the information you see in the table by adding or removing columns.
 Just click the **vitals icon** to open the list. All checked items will show as columns on the table. Just uncheck any that you want to hide and check any you want to add again.
 
-![Column headers](./assets/PatientList11.png)
+![Column headers](./assets/PatientList10.png)
 
 ## Sorting
 You can also sort the table using some of the vitals. Just click the arrows in the column header to sort patients by this metric and click it again to reverse the order.
 
-![Sorting columns](./assets/PatientList12.png)
+![Sorting columns](./assets/PatientList11.png)
 
 Not all metrics allow sorting. Look for the arrows to see which ones have this option.
 

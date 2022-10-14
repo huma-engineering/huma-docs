@@ -21,4 +21,3 @@ In the Patient Summary, care teams will be able to see the patient's latest entr
 The detailed view shows all the patient's historic data in table form.
 
 ![View patient heart rate in the Clinician Portal](./assets/cp-module-details-medications.png)
-

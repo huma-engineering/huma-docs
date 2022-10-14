@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Questionnaires
 ---
 # Reviewing questionnaires
@@ -28,4 +28,4 @@ In the case of scored questionnaires, you can choose **Chart view** to see a gra
 
 ![Chart view](./assets/Questionnaire05.png)
 
-**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Tracking Symptoms](./symptoms.md)  
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [Patient Dashboard](./patient-dashboard.md); [Tracking Symptoms](./symptoms.md); [Modules](./modules.md)

@@ -35,7 +35,7 @@ The sections listed in the consent module can be edited, removed and added to in
 
 The sections you add to your consent policy are up to you. The section types we have included on the list can be used as a guide but you can customise them with your own title and details. 
 
-![image](./assets/DataConsent04.png)
+![image](./assets/DataConsent03.png)
 
 Recommended section types are as follows:
    
