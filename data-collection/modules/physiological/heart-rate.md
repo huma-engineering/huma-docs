@@ -7,6 +7,8 @@ Depending on which source of data the readings will come from, the Heart Rate mo
 
 Heart rate variability measures the difference between your individual heartbeats. These fluctuations are undetectable without a specialised device, but can indicate current or future health problems, including heart conditions and mental health issues like anxiety and depression.
 
+Classification is the given outcome of the heart beat rhythm. The heart’s normal rhythm is between 60 and 100 beats per minute (bpm) while you are resting. Huma provides 2 possible heart rate classification outcome using Happitech's medical grade, Class IIa CE-certified SDK - Atrial Fibrillation and Normal Sinus Rhythm.
+
 ## How it works
 
 Patients have a number of ways in which to collect their heart rate reading:
