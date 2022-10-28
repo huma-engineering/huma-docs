@@ -12,6 +12,6 @@ The [Huma App](./huma-app/index.md) collects the data and delivers it to care an
 This knowledge base explains the features and tools included in each of the Huma products and describes how to complete the different tasks necessary for the successful completion of a monitoring programme. 
 
 The Huma platform is used by:
-- **Administrators**: Internal Huma users who will build and configure the healthcare or research institute's Organisations and Deployments.
+- **Administrators**: Internal Huma users who will build and configure the technical structures (Organisations and Deployments) for healthcare or research organisations
 - **Care teams**: Doctors, nurses or admin users who will use Huma to view and assess patients.
 - **Patients**: Users who will be submitting their data for assessment and feedback.
