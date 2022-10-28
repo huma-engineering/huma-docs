@@ -35,9 +35,9 @@ A list of questionnaires are listed below along with their characteristics:
 | [PROMIS CAT Pain Interference [English]](../../../modules/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
 | [PROMIS CAT Physical Function [English]](../../../modules/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
 | [PROMIS Global Health [Catalan, French, German, Spanish, Swedish]](../../../modules/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
-| [Activity and Health Questionnaire](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
-| [Baseline COVID-19 Questionnaire [German]](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
-| [Food Security Questionnaire](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
+| [Activity and Health Questionnaire](../../../modules/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
+| [Baseline COVID-19 Questionnaire [German]](../../../modules/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
+| [Food Security Questionnaire](../../../modules/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
 | [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/mental-health/perceived-stress-scale.md) | Questionnaire | Yes/No | No | Yes |
 
 ## Creating custom questionnaires
