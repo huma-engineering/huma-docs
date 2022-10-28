@@ -5,7 +5,7 @@ title: Weight
 
 Helping Patients manage their Weight is critical for good health as it can lower the risk of many conditions and ailments. 
 
-## How is works
+## How it works
 
 Using a typical bathroom scale, patients weigh themselves and enter the reading into the Huma App in either kilograms, pounds, or stones and pounds,  depending on the preferred units selected in the App.
 
