@@ -13,7 +13,7 @@ On the **Patient List**, the first column shows flags for each patient.
 
 ![Flags columns](./assets/ResolveFlags01.png)
 
-Flags are shown in order of severity; with red flags first, then yellow flags, then grey flags. The patient list is ordered by default to show the patient with the most red flags first. When there are no red flags, patients are ordered by the most yellow flags, then by the most grey flags.
+Flags are shown in order of severity; with red flags first, then yellow flags, then grey flags. The Patient List is ordered by default to show the patient with the most red flags first. When there are no red flags, patients are ordered by the most yellow flags, then by the most grey flags.
 - **Red flags** - These indicate metrics that fall into the most severe RAG range.
 - **Yellow flags** - These indicate metrics that fall into the less severe, but still concerning RAG range.
 - **Grey flags** - These indicate any new data that has been submitted, including green values or entries coming from static modules i.e. those which don’t have any RAG thresholds set. They are flagged to indicate that the clinician should review them to determine whether they are concerning or not and don’t necessarily indicate an issue.

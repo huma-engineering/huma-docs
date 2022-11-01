@@ -9,7 +9,7 @@ The main objective of the Huma App is to give patients the ability to record the
 
 # How it works​
 
-Depending on the app configuration, there will be up to four different areas, accessible via the navigation menu at the bottom.
+Depending on the Huma App configuration, there will be up to four different areas, accessible via the navigation menu at the bottom.
 
 The default homepage is usually the [To do/Timeline](../features/to-dos.md) page. This is where you will see any actionable items assigned to you by the care team, such as appointment requests, Learn content, or modules pending data collection.
 
@@ -23,7 +23,7 @@ The [Learn](../features/learn.md) area provides further reading and insights. Br
 
 ![Learn](../assets/Learn.png)
 
-The Profile page is where you can find and [edit your personal data](./personal-information-account-settings.md), access [privacy and security settings](../features/data-privacy-and-security.md), invite helpers, access [messages](../features/messages.md) and log out of the app.
+The Profile page is where you can find and [edit your personal data](./personal-information-account-settings.md), access [privacy and security settings](../features/data-privacy-and-security.md), invite helpers, access [messages](../features/messages.md) and log out of the Huma App.
 
 ![Profile](../assets/Profile.png)
 

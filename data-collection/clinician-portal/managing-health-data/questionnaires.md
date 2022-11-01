@@ -8,7 +8,7 @@ title: Questionnaires
 The Patient Dashboard includes questionnaires which have been submitted by the patient, either as specific modules (in the case of scored questionnaires) or under the Questionnaires umbrella module (for non-scored questionnaires). Care teams can review patient responses and use them to make informed decisions about the patient’s care plan.
 
 ## How it works​
-On the patient dashboard, select a questionnaire to see the individual patient responses. The module tile will show you whether the questionnaire has already been completed and the results (if applicable). 
+On the Patient Dashboard, select a questionnaire to see the individual patient responses. The module tile will show you whether the questionnaire has already been completed and the results (if applicable). 
 
 ![Questionnaire modules](./assets/Questionnaire01.png)
 

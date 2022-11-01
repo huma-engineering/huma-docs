@@ -17,7 +17,7 @@ Patients have a number of ways in which to collect their heart rate reading:
 - taking the reading manually  
 - using their smartphone camera to take the reading
 
-Using the smartphone camera collection method also gives the user a heart rate variability and classification reading. When configuring the module, the admin can select which readings and sources should be available (maximum 2 sources per deployment). For example, deployments can choose to only have the heart rate reading from the smartphone camera source, instead of Heart Rate, Heart Rate Variaibility and Classification.
+Using the smartphone camera collection method also gives the user a heart rate variability and classification reading. When configuring the module, the admin can select which readings and sources should be available (maximum 2 sources per Deployment). For example, Deployments can choose to only have the heart rate reading from the smartphone camera source, instead of Heart Rate, Heart Rate Variaibility and Classification.
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed). 
 

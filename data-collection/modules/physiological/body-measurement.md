@@ -15,7 +15,7 @@ The patient uses a measuring tape to take measurements from different areas of t
 - **Visceral fat** - This measurement is collected by scanning the body using the camera on the Patient’s phone.
 - **Total body fat %** - A balanced diet and regular exercise can help maintain the optimum level. This measurement is collected by scanning the body using the camera on the Patient’s phone.
 
-The Huma app uses profile data such as height, weight, age and gender collected from the patient in the onboarding process to make some of these calculations. Patients can then enter their waist and hip measurements and scan themselves to determine visceral and total body fat percentage and add this data to the module.
+The Huma App uses profile data such as height, weight, age and gender collected from the patient in the onboarding process to make some of these calculations. Patients can then enter their waist and hip measurements and scan themselves to determine visceral and total body fat percentage and add this data to the module.
 
 ![Adding data to body measurements](./assets/body-measurements.png)
 

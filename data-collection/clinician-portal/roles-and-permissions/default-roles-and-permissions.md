@@ -22,7 +22,7 @@ The following table shows the specific permissions associated with each of these
 | Manage notes | --- | ✓ | --- | --- | ✓ |
 | Edit roles and permissions | --- | ✓ | --- | --- | ✓ |
 | Add /remove staff members | --- | ✓ | --- | --- | ✓ |
-| View staff members in organisation | --- | ✓ | --- | ✓ | ✓ |
+| View staff members in Organisation | --- | ✓ | --- | ✓ | ✓ |
 | Add data on behalf of patient | --- | ✓ | --- | --- | --- |
 | Offboard patients | ✓ | ✓ | ✓ | --- | --- |
 
@@ -30,6 +30,6 @@ All the above permissions can be combined into specific configurations to create
 
 ## Who invites who?
 - Only admins can invite other admins and contributors.
-- Both admins and access controllers can invite organisation staff and access controllers.
+- Both admins and access controllers can invite Organisation staff and access controllers.
 
 **Related articles**: [Inviting staff and assigning roles](./inviting-staff-and-assigning-roles.md); [Creating custom roles](./creating-custom-roles.md); [Inviting Deployment Admins](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)

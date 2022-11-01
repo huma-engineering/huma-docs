@@ -21,7 +21,7 @@ After adding a name for your field, click the down arrow to open up the form and
 - **Profile collection text** - The name for the field in the patient profile e.g. Patient ID
 - **Length** - The number of expected characters for the answer e.g. 10 characters for the NHS number
 - **Required** - Check the box to make this a required field
-- **Show clinician header** - Check the box to show the field on the patient list in the Clinician Portal beside the patient name and ID
+- **Show clinician header** - Check the box to show the field on the Patient List in the Clinician Portal beside the patient name and ID
 - **Clinician update** - Check the box to allow clinician to update
 - **Regular expression** - Enter the code that describes what a valid entry looks like. Use [Regexr](https://regexr.com/) for help generating your regular expression code.
 

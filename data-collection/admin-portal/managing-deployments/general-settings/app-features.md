@@ -5,7 +5,7 @@ title: App features
 # App features
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Huma is designed principally for either Decentralised Clinical Trials (DCT) or Remote Patient Monitoring (RPM). The app features that are delivered to patients can vary depending on the specific needs of their program. 
+Huma is designed principally for either Decentralised Clinical Trials (DCT) or Remote Patient Monitoring (RPM). The Huma App features that are delivered to patients can vary depending on the specific needs of their program. 
 ## How it works​
 From the **Admin Portal**, go to the **App features** tab, under **Overall Settings**.
 

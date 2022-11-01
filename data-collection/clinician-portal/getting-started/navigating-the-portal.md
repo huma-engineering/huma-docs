@@ -10,15 +10,15 @@ The Clinician Portal is one easy-to-use interface for all care team and administ
 Portal layout is different depending on whether you have an Organisation-level role or a Deployment-level role as permissions are different for each. This guide will help you find your way around the portal no matter which view you have.
 
 ## Organisation-level navigation
-If your role is at the organisation level, it is likely you are managing multiple deployments. Your homepage immediately lets you see a list of your deployments along with the overall number of patients and deployments.
+If your role is at the Organisation level, it is likely you are managing multiple Deployments. Your homepage immediately lets you see a list of your Deployments along with the overall number of patients and Deployments.
 
 ![Org-level stats](./assets/Navigating01.png)
 
-Click on any of the deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular deployment-level role.
+Click on any of the Deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular Deployment-level role.
 
-Click the Huma icon at the top left to return to the deployments list at any time. 
+Click the Huma icon at the top left to return to the Deployments list at any time. 
 
-You can use the filter at the top to switch between the **My deployments**, **All staff members**, or **Pending staff invitations**.
+You can use the filter at the top to switch between the **My Deployments**, **All staff members**, or **Pending staff invitations**.
 
 ![Deployments filters](./assets/Navigating02.png)
 
@@ -50,7 +50,7 @@ You can **resend** or **delete** invitations using the dropdown menu at the end 
 
 ## Deployment-level navigation
 ### Patient List
-If you have a deployment-level role on the Clinician Portal, you will land on the **Patient List** screen when you log into the platform, which gives you an overview of all your patients. 
+If you have a Deployment-level role on the Clinician Portal, you will land on the **Patient List** screen when you log into the platform, which gives you an overview of all your patients. 
 
 ![Patient List](./assets/Navigating09.png)
 
@@ -72,7 +72,7 @@ You can access the tools menu from the three dots next to your name in the butto
 ![Profile menu](./assets/Navigating12.png)
 
 ### Return to Home
-You can navigate back to the patient list screen at any time by clicking the Huma logo at the top-left of the screen.
+You can navigate back to the Patient List screen at any time by clicking the Huma logo at the top-left of the screen.
 
 ![Home icon](./assets/Navigating13.png)
 

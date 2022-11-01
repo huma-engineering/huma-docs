@@ -7,14 +7,14 @@ title: Patient list
 
 The **Patient List** is the main dashboard of the Clinician Portal and where you can find all patients listed along with their vitals. This list can be filtered, sorted and customised according to the needs of the user. 
 ## How it works​
-You can access the patient list filters via the icon![Filters icon](./assets/FiltersIcon.png) at the top-right of the portal.
+You can access the Patient List filters via the icon![Filters icon](./assets/FiltersIcon.png) at the top-right of the portal.
 
 This opens the filters in a pop-out window. Here you can see any current filters applied and edit them.
 
 ![Filters window](./assets/PatientList01.png)
 
 ## Filters
-Filters are split into categories: **Patient type** and **DOB** will always appear as filters as they are mandatory on all deployments. You may also have **Gender**, **Status** and **Surgery Date** if these items have been configured.
+Filters are split into categories: **Patient type** and **DOB** will always appear as filters as they are mandatory on all Deployments. You may also have **Gender**, **Status** and **Surgery Date** if these items have been configured.
 
 ### Patient type 
 - **My patients** - Only view patients where you are the assigned clinician
@@ -26,9 +26,9 @@ Filters are split into categories: **Patient type** and **DOB** will always appe
 
 You can only select one option from the patient type filters. The default view is to list all patients.
 ### Gender
-You can also filter the patient list by gender. The default view is to list all genders, but you can choose any combination of options. 
+You can also filter the Patient List by gender. The default view is to list all genders, but you can choose any combination of options. 
 
-Because deployments can assign different gender categories depending on what terms are used in a specific organisation, the **other** category includes all genders not covered by **male** and **female**.
+Because Deployments can assign different gender categories depending on what terms are used in a specific Organisation, the **other** category includes all genders not covered by **male** and **female**.
 
 ![Gender](./assets/PatientList03.png)
 
@@ -48,11 +48,11 @@ Once you have set your filters, click **Search**.
 
 ![Search](./assets/PatientList06.png)
 
-The list is now filtered to your specifications and you can see the filters you have set at the top of the patient list.
+The list is now filtered to your specifications and you can see the filters you have set at the top of the Patient List.
 
 ![Filters bar](./assets/PatientList07.png)
 
-You can now manage your filters from the top of the patient list. Just click the filter dropdown to change your selection. 
+You can now manage your filters from the top of the Patient List. Just click the filter dropdown to change your selection. 
 
 ![Gender dropdown](./assets/PatientList08.png)
 

@@ -22,7 +22,7 @@ Select the reason that best describes why you want to stop monitoring the patien
 
 The patient will be informed that they have been offboarded and will no longer have access to the Huma App. If they try to log in, they will see a message giving some of the reasons why they may have been offboarded. 
 
-Although they are no longer being monitored, offboarded patients can still be found in the clinician portal by selecting **Offboarded patients** in the **Patient type** filters.
+Although they are no longer being monitored, offboarded patients can still be found in the Clinician Portal by selecting **Offboarded patients** in the **Patient type** filters.
 
 ![Filters menu](./assets/OffboardPatient04.png)
 
@@ -30,10 +30,10 @@ Users will still be able to see historic data on offboarded patients.
 
 ![Offboarded patients](./assets/OffboardPatient05.png)
 
-Offboarded patients can also be reactivated. Just open the menu at the end of the patient row on the patient list and select **Reactivate patient**.
+Offboarded patients can also be reactivated. Just open the menu at the end of the patient row on the Patient List and select **Reactivate patient**.
 
 ![Reactivate patient](./assets/OffboardPatient06.png)
 
-Once reactivated, the patient will receive a notification and email to tell them that they once again have access to the app. 
+Once reactivated, the patient will receive a notification and email to tell them that they once again have access to the Huma App. 
 
 **Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md)

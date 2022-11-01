@@ -13,6 +13,6 @@ Just like any journal, patients can note down and share with their care team any
 
 Patients can view their past entries from within the App. In the Clinician Portal, care teams can also view all data submitted to the journal.
 
-![Journal in clinician portal](./assets/cp-patient-summary-journal.png)
+![Journal in Clinician Portal](./assets/cp-patient-summary-journal.png)
 
-![Journal in clinician portal](./assets/cp-module-details-journal.png)
+![Journal in Clinician Portal](./assets/cp-module-details-journal.png)

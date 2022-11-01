@@ -5,7 +5,7 @@ title: Personal information and account settings
 # Personal information and account settings
 **User**: Patient, Helper
 
-The **Profile** screen contains the patient’s personal information along with some account settings. It can also be used to access some of the App’s customisable features. The exact contents of the Profile screen will depend on the deployment configuration.
+The **Profile** screen contains the patient’s personal information along with some account settings. It can also be used to access some of the App’s customisable features. The exact contents of the Profile screen will depend on the Deployment configuration.
 ## How it works​
 Access your **Profile** screen from the navigation menu. 
 
@@ -31,7 +31,7 @@ Your helper will receive their invite which will ask them to download the Huma A
 ### Preferred units​
 You can decide which units you would like to use for measuring different vitals. 
 
-In **Units**, select the metrics that are being measured in the app and choose the unit of measurement that you prefer to use. This will affect both how the data is collected and displayed to you. 
+In **Units**, select the metrics that are being measured in the Huma App and choose the unit of measurement that you prefer to use. This will affect both how the data is collected and displayed to you. 
 
 The selected measurement unit will appear below each metric.
 

@@ -5,7 +5,7 @@ title: Learn sections
 # Learn sections 
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-The Learn section provides patients with a repository of useful articles and other resources to educate and inform them so that they can better understand their symptoms or how to prepare for certain procedures, etc. You can build out your repository for each deployment with your own custom content or link out to useful content from the web.  
+The Learn section provides patients with a repository of useful articles and other resources to educate and inform them so that they can better understand their symptoms or how to prepare for certain procedures, etc. You can build out your repository for each Deployment with your own custom content or link out to useful content from the web.  
 
 Individual articles can also be added to the patient’s to-do list or as related content for tracking modules and questionnaires.
 
@@ -39,7 +39,7 @@ After saving, you will be able to see a list of articles. Click **Add article** 
 Click the learn tab to return to the **Sections** list and add more sections.
 
 ## Huma Learn articles
-Huma has created the following article on [Letting go of stress and anxiety](https://humatherapeutics.atlassian.net/wiki/spaces/PRODUCT/pages/3526951098/Biobase+Coaching+Content) which can be included in the configuration of any organisation. 
+Huma has created the following article on [Letting go of stress and anxiety](https://humatherapeutics.atlassian.net/wiki/spaces/PRODUCT/pages/3526951098/Biobase+Coaching+Content) which can be included in the configuration of any Organisation. 
 
 ## Assigning Learn sections
 You will be able to find a list of your learn sections when configuring [tracking modules](./tracking-modules.md) or [questionnaires](./tracking-questionnaires.md) and will be able to select which ones you want to associate with the module.

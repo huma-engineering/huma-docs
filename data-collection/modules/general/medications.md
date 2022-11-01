@@ -10,7 +10,7 @@ Patients may be taking medications associated to another care plan that should b
 Patients enter the names of any medications they are taking plus the dosage and frequency. Patients can use this module alongside the 
 [Medication Tracker](./medication-tracker.md) module if needed view their Medications added, as well as change or delete them as necessary. This can be used in conjunction with the 
 
-![Medications in the Huma app](./assets/medications.png)
+![Medications in the Huma App](./assets/medications.png)
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will be able to view all their previous entries from within the module. Patients can also set reminders to help them stay on track.
 

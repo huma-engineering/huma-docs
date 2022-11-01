@@ -8,7 +8,7 @@ title: Tracking questionnaires
 One of the ways Huma allows you to collect data from patients is with Patient Reported Outcome Measures (PROs/PROMs), or validated questionnaires. Feedback from patients is key to being able to improve the care provided by the care team and this feature lets them build and collect qualitative data from patients about how they feel and tailor their treatment plan accordingly. 
 
 ## How it works
-Questionnaires can be added to the deployment as a tracking module in the same way as the other tracking modules. Just click **Add track module** and select **Questionnaires** from the dropdown.
+Questionnaires can be added to the Deployment as a tracking module in the same way as the other tracking modules. Just click **Add track module** and select **Questionnaires** from the dropdown.
 
 ![image](./assets/Questionnaires01.png)
 
@@ -137,7 +137,7 @@ The question types you should select depends on the kind of information you are 
 - **Date** - The user selects a date, month, and year from a carousel of options. Use this option when asking for the patient’s date of birth or the dates of specific medical interventions.
 - **Duration** - The user selects from a carrousel of options to choose a time or a period of time/duration.
 - **Photo** - The user can upload a photo or a file in response to a question.
-- **Phone number** - The user is asked to select the country code and enter their phone number. Make sure to use this option instead of **Text input** when asking for a phone number as the app can verify it is valid based on the area code. 
+- **Phone number** - The user is asked to select the country code and enter their phone number. Make sure to use this option instead of **Text input** when asking for a phone number as the Huma App can verify it is valid based on the area code. 
 - **Scale** - The scale option is useful if you want the patient to choose a value within a minimum and maximum range. They simply position the slider on a scale.
 - **Info page / Submission page** - These cards are already formatted to be used at the beginning and end of the questionnaire and don’t require any input from the patient, they are just there to inform.
 

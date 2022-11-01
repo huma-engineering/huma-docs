@@ -13,8 +13,8 @@ The Daily Check-In module asks patients to answer a simple question; “Are you 
 
 Both patients and their care teams can review their answers to this question to notice how their general wellbeing fluctuates. In the Clinician Portal, care teams can easily see the patient's last recorded reading in the Daily Check-In column.
 
-![Daily check in in the clinician portal](./assets/cp-patient-list-daily-check-in.png)
+![Daily check in in the Clinician Portal](./assets/cp-patient-list-daily-check-in.png)
 
 In the Patient Summary, all historic data concerning the patient's daily check-in reponses can be displayed as a graph or a table of results.
 
-![Daily check in in the clinician portal](./assets/cp-module-details-daily-check-in.png)
+![Daily check in in the Clinician Portal](./assets/cp-module-details-daily-check-in.png)

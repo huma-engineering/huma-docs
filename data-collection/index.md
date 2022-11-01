@@ -13,5 +13,5 @@ The aim of this documentation is to explain the features and tools included in e
 
 This knowledge base is for:
 - **Administrators**: Internal Huma users who will build and configure the healthcare or research institute's Organisations and Deployments.
-- **Care teams**: Doctors, nurses or admin users who will use Huma to view and assess patients.
+- **Care teams**: Doctors, nurses or allied health professionals users who will use Huma to view and assess patients.
 - **Patients**: Users who will be submitting their data for assessment and feedback.

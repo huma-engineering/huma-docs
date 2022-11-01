@@ -15,8 +15,8 @@ The time and date is added automatically at the moment they make the entry (alth
 
 In the Clinician Portal, care teams will be able to easily see the latest blood saturation readings from their patients in the SPO2 column and any concerning readings will be flagged. 
 
-![Viewing oxygen saturation in the clinician portal](./assets/cp-patient-list-oxygen-saturation.png)
+![Viewing oxygen saturation in the Clinician Portal](./assets/cp-patient-list-oxygen-saturation.png)
 
 The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
-![Viewing oxygen saturation in the clinician portal](./assets/cp-module-details-oxygen-saturation.png)
+![Viewing oxygen saturation in the Clinician Portal](./assets/cp-module-details-oxygen-saturation.png)
