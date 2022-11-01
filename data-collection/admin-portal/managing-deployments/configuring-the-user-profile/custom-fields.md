@@ -18,7 +18,7 @@ After adding a name for your field, click the down arrow to open up the form and
 - **Type** - Choose between numerical and text depending on the type of information you are requesting
 - **Onboarding collection text** - This is the question you want to ask the patient e.g. What is your Patient ID number?
 - **Error message** - The message text shown to the patient if the answer they have entered is not valid (or the wrong length) e.g. The Patient ID must contain letters and numbers
-- **Profile collection text** - The name for the field in the patient profile e.g. Patient ID
+- **Profile collection text** - The name for the field in the Patient Profile e.g. Patient ID
 - **Length** - The number of expected characters for the answer e.g. 10 characters for the NHS number
 - **Required** - Check the box to make this a required field
 - **Show clinician header** - Check the box to show the field on the Patient List in the Clinician Portal beside the patient name and ID

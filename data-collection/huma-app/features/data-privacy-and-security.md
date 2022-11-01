@@ -17,7 +17,7 @@ You can enable this toggle to ensure that you have to verify your identity every
 
 ![Lock App](../assets/lockapp.png)
 
-You will be able to decide this when you sign up and can then change the configuration from here in your profile. 
+You will be able to decide this when you sign up and can then change the configuration from here in your Profile. 
 
 ### Download your data​
 
@@ -25,9 +25,9 @@ Every patient in Huma has a right to their data and you can choose to export it 
 
 ### Two-step verification​
 
-You can enable this toggle to ensure that you have to verify your identity via a 2-step process when accessing the Huma App. The first verification is with email and password, and the second is via a 4-digit code sent to your mobile number. As such, you must have a working mobile number added to your profile.
+You can enable this toggle to ensure that you have to verify your identity via a 2-step process when accessing the Huma App. The first verification is with email and password, and the second is via a 4-digit code sent to your mobile number. As such, you must have a working mobile number added to your Profile.
 
-You will be asked to enable this on signup and can then change the configuration from your profile. 
+You will be asked to enable this on signup and can then change the configuration from your Profile. 
 
 ### Biometric login
 
@@ -36,7 +36,7 @@ Within 2-factor authentication, you can also add **Biometric login**. This means
 If your healthcare provider has enabled biometric login as mandatory, you will be prompted to configure this on signup.
 
 ### Legal documentation
-Read about how your data is used and terms and conditions of using the app in the **Legal** section of your profile. Just click **About Huma** to access the documentation.
+Read about how your data is used and terms and conditions of using the app in the **Legal** section of your Profile. Just click **About Huma** to access the documentation.
 
 ![Profile](../assets/About.png)
 

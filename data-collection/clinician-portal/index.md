@@ -12,4 +12,4 @@ Huma provides all the tools needed for care teams to identify and prioritise pat
 Key to the Clinician Portal is the [Patient List](./managing-patients/patient-list.md) which displays all patients along with their module data. Further detail can be found on the [Patient Dashboard](./managing-health-data/patient-dashboard.md), where care teams can also call and message their patients. 
 ## Users
 User roles can be managed from the portal, with a variety of permissions available for all types of user.
-Organisation staff will be able to manage multiple Deployments from within the Clinician Portal.
+Organisation Staff will be able to manage multiple Deployments from within the Clinician Portal.

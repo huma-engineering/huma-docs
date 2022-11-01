@@ -13,7 +13,7 @@ The [messaging](../../admin-portal/managing-deployments/general-settings/configu
 
 Messaging is only one-way, so you will not be able to respond to messages from your care team. 
 
-You will be advised of new messages via a notification on your device and can find and read the message in the **Messages** section of your profile. Your care team will be able to see when you have read the message. 
+You will be advised of new messages via a notification on your device and can find and read the message in the **Messages** section of your Profile. Your care team will be able to see when you have read the message. 
 
 ![Messaging](../assets/Messages.png)
 

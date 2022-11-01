@@ -20,7 +20,7 @@ You can also edit the mobile number used for 2-factor authentication and can cha
 ### Add a helper
 
 If you have this feature in your Profile it means you can invite someone to manage data entry in the Huma App on your behalf. 
-1. Select **Add a helper** from your profile.
+1. Select **Add a helper** from your Profile.
 2. Click **Continue**.
 3. On the next screen, enter the helper’s email address and click **Invite**.
 

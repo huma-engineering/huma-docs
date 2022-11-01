@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Modules
 ---
 # Reviewing module data
-**User**: Admin; Deployment staff; Organisation staff
+**User**: Admin; Deployment Staff; Organisation Staff
 
 The Patient Dashboard shows all the data points collected for a specific patient by modules. Care teams can track patient vitals and compare it next to other data to get a global understanding of how their patient is doing.
 

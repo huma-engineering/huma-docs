@@ -3,7 +3,7 @@ sidebar_position: 3
 title: Resolving flags
 ---
 # Resolving flags and adding notes
-**User**: Admin; Access Controller; Deployment Staff; Organisation staff
+**User**: Admin; Access Controller; Deployment Staff; Organisation Staff
 
 The Clinician Portal uses flags to indicate to the care team vitals that fall outside the RAG thresholds that have been configured as acceptable. Adding a note confirms that you have reviewed that flagged information and it will be logged as resolved.
 

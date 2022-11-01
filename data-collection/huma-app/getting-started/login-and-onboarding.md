@@ -20,7 +20,7 @@ After downloading the Huma App, you will be able to create your account by click
 
 After clicking **Activate Account** or passing through the verification process, you will go to the password screen where you can create your account password. Passwords must be alphanumeric, with at least 8 characters including upper and lowercase. 
 
-If 2-step verification has been configured, you will also need to enter a 6-digit code sent to your mobile number. You can turn [2-step verification](../features/data-privacy-and-security.md) on or off from your profile for future logins.
+If 2-step verification has been configured, you will also need to enter a 6-digit code sent to your mobile number. You can turn [2-step verification](../features/data-privacy-and-security.md) on or off from your Profile for future logins.
 
 You can pause 2-factor authentication by checking the box **Remember me for 14 days**.
 
@@ -66,7 +66,7 @@ Depending on the device being used, biometric login could be via fingerprints or
 Biometrics is just one of the data security settings that you can manage from your **Profile** page under **Account**. On enabling the **Two-step verification** toggle, you will be able to set up your biometric login.
 
 ### Profile Questionnaire
-The Profile Questionnaire asks you for some basic information that will be used to populate your profile. The exact data requested will depend on your [Deployment configuration](../../admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md).
+The Profile Questionnaire asks you for some basic information that will be used to populate your Profile. The exact data requested will depend on your [Deployment configuration](../../admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md).
 
 
 **Related articles**: [Onboarding setup](../../admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Privacy and security settings](../features/data-privacy-and-security.md); [eConsent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Data consent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [Identity verification](../../admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md); [Preferred units](../../admin-portal/managing-deployments/configuring-the-user-onboarding/preferred-units.md); [Helper agreement](../../admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 

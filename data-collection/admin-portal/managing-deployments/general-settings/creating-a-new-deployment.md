@@ -24,6 +24,6 @@ If you have more than one Organisation on your list, you can switch between them
 
 ![image](./assets/CreateDeployment04.png)
  
-You can configure the look and feel and functionality of the Deployment to your requirements and then [invite admin users](../tools-and-navigation/inviting-deployment-admins.md) to manage it.
+You can configure the look and feel and functionality of the Deployment to your requirements and then [invite Admin users](../tools-and-navigation/inviting-deployment-admins.md) to manage it.
 
 **Related articles**: [Creating a new Organisation](../../managing-organisations/creating-a-new-organisation.md); [Inviting staff (Organisation level)](../../managing-organisations/inviting-staff-to-an-organisation.md); [Inviting Deployment Admins](../tools-and-navigation/inviting-deployment-admins.md)

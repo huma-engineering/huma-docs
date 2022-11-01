@@ -19,7 +19,7 @@ Configure the to-do action by filling in the fields:
 
 ![image](./assets/Todo02.png)
 
-- **Trigger** - Choose whether the trigger for the to-do appearing on the patient timeline is as soon as they sign up (**Sign Up**) or according to a scheduled surgery date (**Surgery**). If selecting surgery as the trigger, you must ensure that **Surgery date and time** is checked in the user profile configuration.  
+- **Trigger** - Choose whether the trigger for the to-do appearing on the patient timeline is as soon as they sign up (**Sign Up**) or according to a scheduled surgery date (**Surgery**). If selecting surgery as the trigger, you must ensure that **Surgery date and time** is checked in the Profile configuration.  
 
 ![image](./assets/Todo03.png)
 
