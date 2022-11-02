@@ -7,7 +7,7 @@ Body measurements can be used to calculate risk of weight-related and metabolic 
 
 ## How it works
 
-The patient uses a measuring tape to take measurements from different areas of their body and records them in the App. Other measurements are taken by scanning the body with the phone's camera. 
+The patient uses a measuring tape to take measurements from different areas of their body and records them in the Huma App. Other measurements are taken by scanning the body with the phone's camera. 
 
 - **Waist circumference** - This measurement should be taken using a measuring tape just above the belly button. The tape should be snug but not tight and the measurement should be taken on an outward breath.
 - **Hip circumference** - This measurement should be taken using a measuring tape around the widest part of the hips and buttocks. 

@@ -28,11 +28,11 @@ Select one of the following
 
 Choose between 1 and 5
 
-#### 3. Seeing my health information and study progress on the App will make me feel more motivated to complete the study
+#### 3. Seeing my health information and study progress on the Huma App will make me feel more motivated to complete the study
 
 Choose between 1 and 5
 
-#### 4. Seeing my health information and study progress on the App will make me feel more motivated to take my medication
+#### 4. Seeing my health information and study progress on the Huma App will make me feel more motivated to take my medication
 
 Choose between 1 and 5
 

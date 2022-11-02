@@ -5,7 +5,7 @@ title: Data privacy and security
 # Data privacy and security features
 **User**: Patient
 
-Huma takes the handling of personal health data very seriously. That is why the App uses all means necessary to protect patient data, providing a number of features and settings so that every patient can take steps to help to keep their data safe and secure.
+Huma takes the handling of personal health data very seriously. That is why the Huma App uses all means necessary to protect patient data, providing a number of features and settings so that every patient can take steps to help to keep their data safe and secure.
 
 ## How it works​
 
@@ -31,7 +31,7 @@ You will be asked to enable this on signup and can then change the configuration
 
 ### Biometric login
 
-Within 2-factor authentication, you can also add **Biometric login**. This means you don’t need to remember your password but can instead use fingerprint or facial recognition to log into the App. The type of biometrics used will depend on the device being used.
+Within 2-factor authentication, you can also add **Biometric login**. This means you don’t need to remember your password but can instead use fingerprint or facial recognition to log into the Huma App. The type of biometrics used will depend on the device being used.
 
 If your healthcare provider has enabled biometric login as mandatory, you will be prompted to configure this on signup.
 

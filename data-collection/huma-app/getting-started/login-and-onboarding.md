@@ -26,7 +26,7 @@ You can pause 2-factor authentication by checking the box **Remember me for 14 d
 
 ### Onboarding
 
-The onboarding process consists of a number of screens that will ask you for information, consent or preferences on using the App. The exact onboarding steps will depend on the Deployment configuration. Once you have completed all the steps, you can access the Huma App features. 
+The onboarding process consists of a number of screens that will ask you for information, consent or preferences on using the Huma App. The exact onboarding steps will depend on the Deployment configuration. Once you have completed all the steps, you can access the Huma App features. 
 
 ### Data processing agreement
 As the Huma App allows the collection of data from patients, you must provide informed consent to Huma as part of the terms and conditions of using the Huma App.
@@ -54,7 +54,7 @@ You can withdraw your consent at any time from your [Profile](../features/data-p
 ### Helper agreement
 You can allow another party to manage data entry on your behalf if you are unable to use the Huma App yourself. 
 
-You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the App, helpers can enter data into modules in the same way that a patient would.
+You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the Huma App, helpers can enter data into modules in the same way that a patient would.
 
 ![Helper agreement](../assets/helpertrio.png)
 

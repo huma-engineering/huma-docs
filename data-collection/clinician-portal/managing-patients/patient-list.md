@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: Patient list
+title: Search, filter and sort patients
 ---
-# Filters and sorting the Patient List
+# Searching, filtering and sorting the Patient List
 **User**: Admin; Access Controller; Deployment Staff; Contributor; Organisation Staff
 
 The **Patient List** is the main dashboard of the Clinician Portal and where you can find all patients listed along with their vitals. This list can be filtered, sorted and customised according to the needs of the user. 

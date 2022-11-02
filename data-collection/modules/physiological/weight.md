@@ -7,7 +7,7 @@ Helping Patients manage their Weight is critical for good health as it can lower
 
 ## How it works
 
-Using a typical bathroom scale, patients weigh themselves and enter the reading into the Huma App in either kilograms, pounds, or stones and pounds,  depending on the preferred units selected in the App.
+Using a typical bathroom scale, patients weigh themselves and enter the reading into the Huma App in either kilograms, pounds, or stones and pounds,  depending on the preferred units selected in the Huma App.
 
 ![Adding weight to the Huma App](./assets/weight.png)
 

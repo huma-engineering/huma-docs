@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
-title: Navigating the App
+title: Navigating the Huma App
 ---
-# Navigating the App
+# Navigating the Huma App
 **User**: Patient, Helper
 
 The main objective of the Huma App is to give patients the ability to record their health data and self-observations so that these can be shared with care teams, helping them to manage their general health and specific conditions.

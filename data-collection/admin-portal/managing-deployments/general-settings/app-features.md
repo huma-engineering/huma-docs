@@ -40,4 +40,4 @@ Check the features on the list that you want to include for your users:
 [^1]: Soon to be removed.
 [^2]: Functionality not currently active.
 
-**Related articles**: [Navigating the App](../../../huma-app/getting-started/navigating-the-app.md)
+**Related articles**: [Navigating the Huma App](../../../huma-app/getting-started/navigating-the-app.md)

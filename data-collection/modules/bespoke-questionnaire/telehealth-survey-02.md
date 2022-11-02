@@ -19,11 +19,11 @@ The Telehealth Survey No. 2 has a total of 8 questions:
 
 Choose between 1 and 5
 
-#### 2. Seeing my health information and study progress on the App makes me feel more motivated to complete the study
+#### 2. Seeing my health information and study progress on the Huma App makes me feel more motivated to complete the study
 
 Choose between 1 and 5
 
-#### 3. Seeing my health information and study progress on the App makes me feel more motivated to take my medication
+#### 3. Seeing my health information and study progress on the Huma App makes me feel more motivated to take my medication
 
 Choose between 1 and 5
 

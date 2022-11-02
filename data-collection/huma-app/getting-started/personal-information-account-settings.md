@@ -5,7 +5,7 @@ title: Personal information and account settings
 # Personal information and account settings
 **User**: Patient, Helper
 
-The **Profile** screen contains the patient’s personal information along with some account settings. It can also be used to access some of the App’s customisable features. The exact contents of the Profile screen will depend on the Deployment configuration.
+The **Profile** screen contains the patient’s personal information along with some account settings. It can also be used to access some of the Huma App’s customisable features. The exact contents of the Profile screen will depend on the Deployment configuration.
 ## How it works​
 Access your **Profile** screen from the navigation menu. 
 
@@ -37,7 +37,7 @@ The selected measurement unit will appear below each metric.
 
 ### Personal documents​
 
-If you receive documents relating to your healthcare e.g. vaccination certificates, you can upload them to the App via the **Personal Documents** feature.
+If you receive documents relating to your healthcare e.g. vaccination certificates, you can upload them to the Huma App via the **Personal Documents** feature.
 
 From the **Personal Documents** screen, just select **Add new document**. You will be prompted to select a PDF or photo from your device.
 
@@ -53,6 +53,6 @@ There are a number of features and settings in your Profile to help keep your da
 If you have the **App support** feature available in your Profile, click to access live chat or support documentation.
 
 ### Logout
-To log out of the App, scroll down t the bottom of the Profile page and click **Logout**. You will be returned to the login screen.
+To log out of the Huma App, scroll down to the bottom of the Profile page and click **Logout**. You will be returned to the login screen.
 
 **Related articles**: [Personal information and account settings](./personal-information-account-settings.md); [Data privacy and account security](../features/data-privacy-and-security.md); [Managing calls and appointments](../features/calls-and-appointments.md); [Messages](../features/messages.md)
