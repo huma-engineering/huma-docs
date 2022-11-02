@@ -15,7 +15,7 @@ Go to the **To do** tab on the **App Components** list and click to **Add key ac
 Configure the to-do action by filling in the fields:
 - **Title** - Add a name e.g. Take heart rate. This will also be used as the title for the push notification and the card on the To-do page.
 - **Type** - Select from **Learn** or **Module**, depending on what you want the patient to do.
-- **Module / Learn** - Depending on the type selected above, choose from the list of modules or learn content that you want the patient to complete as part of the to-do.
+- **Module / Learn** - Depending on the type selected above, choose from the list of modules or Learn content that you want the patient to complete as part of the to-do.
 
 ![image](./assets/Todo02.png)
 

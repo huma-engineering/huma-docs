@@ -3,7 +3,7 @@ sidebar_position: 7
 title: Mobility
 ---
 
-A patient's leel of mobility determines how easily they are able to move around in their environment. Huma's mobility questionnares help to assess the condition of a patient in terms of their mobility and to transmit this information to their care teams.
+A patient's level of mobility determines how easily they are able to move around in their environment. Huma's mobility questionnares help to assess the condition of a patient in terms of their mobility and to transmit this information to their care teams.
 
 ## How it works
 

@@ -18,7 +18,7 @@ A pop-out window will appear where you can add the email addresses of the people
 
 Select the type of role you want to assign from the dropdown:
 - **Organisation Editor** – this Admin Portal user can create and edit Deployments within this Organisation and invite other staff members
-- **Organisation Owner** – this Admin Portal user can do everything an Organisation editor can do and can also delete the Organisation
+- **Organisation Owner** – this Admin Portal user can do everything an Organisation Editor can do and can also delete the Organisation
 - **Access Controller** – this role is specifically for adding and removing Organisation Staff members and managing roles in the Clinician Portal
 
 For more information on what each user can do, see the article on [Roles and permissions](../../clinician-portal/roles-and-permissions/default-roles-and-permissions.md).

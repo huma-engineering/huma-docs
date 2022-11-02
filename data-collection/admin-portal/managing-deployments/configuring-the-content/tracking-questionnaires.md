@@ -76,7 +76,7 @@ If your questionnaire is requesting data that needs to be collected on a regular
 
 ### Other settings
 You have the option to add **Learn** articles to some modules. 
-- Check the **Learn articles** checkbox to open a list of learning content, then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the learn article.
+- Check the **Learn articles** checkbox to open a list of learning content, then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the Learn article.
 
 ![image](./assets/Questionnaires06.png)
 

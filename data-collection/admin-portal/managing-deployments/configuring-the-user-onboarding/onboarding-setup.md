@@ -22,7 +22,7 @@ Available options are:
 - [Helper agreement](./helper-agreement.md) - Get consent from a proxy to enter data on the patient's behalf
 - [Preferred units](./preferred-units.md) - Ask users which units of measurement they prefer to use 
 
-Use the arrows🕂 to change the order in which the modules will be shown to the patient. It’s recommended to use the above order. In particular, identity verification must come before the eConsent module in order for the signature to be recognised as 23 CFR Part 11 compliant.
+Use the arrows to change the order in which the modules will be shown to the patient. It’s recommended to use the above order. In particular, identity verification must come before the eConsent module in order for the signature to be recognised as 23 CFR Part 11 compliant.
 
 Click ![Edit](./assets/Edit.png) at the end of the line to edit the units and ![Delete](./assets/Bin.png) to remove modules from the list.
 

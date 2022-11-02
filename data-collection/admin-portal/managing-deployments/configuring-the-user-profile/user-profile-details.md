@@ -44,7 +44,7 @@ There are a number of gender and ethnicity categories that can be selected. Thes
 ![image](./assets/UserProfile02.png)
 
 ### Clinician-only fields
-This field appears in the patient profile, but only on the clinician side. If using the surgery date as a trigger for to-dos, make sure this box is checked.
+This field appears in the Patient Profile, but only on the clinician side. If using the surgery date as a trigger for to-dos, make sure this box is checked.
 
 ![image](./assets/UserProfile03.png)
 

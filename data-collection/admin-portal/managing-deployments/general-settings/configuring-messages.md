@@ -5,7 +5,7 @@ title: Configuring messages
 # Configuring messages
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-Huma takes clinician-patient communication seriously. Messages are configured in the Deployment so that care teams can send out pre-built messages designed to address specific issues quickly. In addition to this, custom messaging allows care teams to write their own personalised messages to patients.
+Excellent clinician-patient communication is paramount at Huma. Messages are configured in the deployment so that care teams can send out pre-built messages designed to address specific issues quickly. In addition to this, care teams can write their own personalised messages to patients.
 ## How it works​
 When configuring your Deployment, in the **App features**, check the **Messaging** checkbox to enable messaging and **Allow custom message** to allow care teams to compose their own messages.
 
