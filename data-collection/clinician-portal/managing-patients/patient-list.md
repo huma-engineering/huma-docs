@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Search, filter and sort patients
+title: Search, filter and sort
 ---
 # Searching, filtering and sorting the Patient List
 **User**: Admin; Access Controller; Deployment Staff; Contributor; Organisation Staff
