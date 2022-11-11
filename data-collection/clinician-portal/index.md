@@ -7,7 +7,7 @@ title: Clinician Portal
 
 The Clinician Portal is the place where care and research teams can view and track patient data. 
 
-Huma provides all the tools needed for care teams to identify and prioritise patients who are in the most immediate need of help. 
+Huma provides care teams with tools and information to support and improve patients care, helping them to identify patients in need of support and input.
 
 Key to the Clinician Portal is the [Patient List](./managing-patients/patient-list.md) which displays all patients along with their module data. Further detail can be found on the [Patient Dashboard](./managing-health-data/patient-dashboard.md), where care teams can also call and message their patients. 
 ## Users

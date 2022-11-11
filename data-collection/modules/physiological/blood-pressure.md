@@ -8,8 +8,8 @@ Maintaining normal blood pressure is important for a healthy heart and body. Unt
 ## How it works
 
 Using a monitor to take their blood pressure, patients enter the two values into the Blood Pressure module in mmHg:
-- **Systolic** - the highest level your blood pressure reaches when your heart beats
-- **Diastolic** - the lowest level your blood pressure reaches when your heart relaxes between beats
+- **Systolic** - the pressure in your arteries when your heart beats
+- **Diastolic** - the pressure in your arteries when your heart relaxes between beats
 
 ![Add a blood pressure result](./assets/blood-pressure.png)
 

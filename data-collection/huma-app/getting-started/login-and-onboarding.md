@@ -14,7 +14,7 @@ You will be invited to the Huma App by email or direct link from your care team.
 
 The email will give you the direct iOS and Android links to download the Huma App. 
 
-After downloading the Huma App, you will be able to create your account by clicking **Activate Account** in the email.
+After downloading the Huma App, you will be able to create your account by clicking **Activate Account** in the email on your mobile device.
 
 > ⚠️ **INFO**: If you're signing up via direct link, you will have to enter your email address and verify it by entering a 6-digit code sent from your care team.
 

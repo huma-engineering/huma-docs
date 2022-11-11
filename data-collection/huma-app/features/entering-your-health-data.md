@@ -34,7 +34,7 @@ The **Symptoms** module lets you keep track of how you are feeling in terms of s
 
 Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your Deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
 
-In the following screens, you will be asked to grade the severity of each symptom on a sliding scale from **mild** to **very severe**. Choose the one that best applies in that moment and click **Next**.
+In the following screens, you will be asked to grade each symptom on a sliding scale. Choose the one that best applies in that moment and click **Next**.
 
 ![symptoms](../assets/symptoms.png)
 

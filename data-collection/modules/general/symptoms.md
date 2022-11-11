@@ -11,9 +11,9 @@ The Symptoms module is set up with a predefined list of symptoms. Each time the 
 
 ![Symptoms in the Huma App](./assets/symptoms.png)
 
-Patients can view theirr historic symptoms data and also set reminders for inputting their data to help them stay on track.
+Patients can view their historic symptoms data and also set reminders for inputting their data to help them stay on track.
 
-Care teams can access the symptoms module for their patients to see how each of their symtpoms is developing or improving over time.
+Care teams can access the symptoms module for their patients to see how each of their symptoms is developing or improving over time.
 
 ![Symptoms in the Clinician Portal](./assets/cp-patient-list-symptoms.png)
 
