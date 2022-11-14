@@ -17,7 +17,7 @@ From this view you can browse the list of all modules and questionnaires down th
 ![Modules sidebar](./assets/PatientDashboard02.png)
 
 ## Viewing patient data points 
-Modules with data in the red or amber range will be flagged in the left-hand column to help you prioritise. In addition, the graph will also show danger thresholds in the red or amber.
+Modules with data in the red or amber range, as set by the care teams, will be flagged in the left-hand column. The red and amber thresholds will also be displayed in the graph, allowing care teams to review and track trends.
 
 ![Data points](./assets/PatientDashboard03.png)
 

@@ -14,8 +14,8 @@ On the **Patient List**, the first column shows flags for each patient.
 ![Flags columns](./assets/ResolveFlags01.png)
 
 Flags are shown in order of patients with the most Red and Amber ratings; with red flags first, then amber flags, then grey flags. The Patient List is ordered by default to show the patient with the most red flags first. When there are no red flags, patients are ordered by the most amber flags, then by the most grey flags.
-- **Red flags** - These indicate metrics that fall into the most severe RAG range.
-- **Amber flags** - These indicate metrics that fall into the less severe, but still concerning RAG range.
+- **Red flags** - These indicate metrics that are deemed Red as assigned by the care team.
+- **Amber flags** - These indicate metrics that are deemed Amber as assigned by the care team.
 - **Grey flags** - These indicate any new data that has been submitted, including green values or entries coming from static modules i.e. those which don’t have any RAG thresholds set.
 
 You can see which of the data points are causing the flags by looking in the columns. Data in the red range will be shown in red, data in the amber range will show in amber, etc.
