@@ -45,7 +45,6 @@ This is the full list of modules available for tracking health data. The table s
 | [Photos](../../../modules/general/photos.md) | No | Manual |
 | [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
-| [Resting Breathing Rate](../../../modules/physiological/resting-breathing-rate.md) | No | Manual | 
 | [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) | 
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
