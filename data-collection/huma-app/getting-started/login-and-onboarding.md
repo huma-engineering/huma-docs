@@ -12,31 +12,31 @@ The onboarding steps are configured so that all the essential information is col
 You will be invited to the Huma App by email or direct link from your care team. 
 ### Login
 
-The email will give you the direct iOS and Android links to download the app. 
+The email will give you the direct iOS and Android links to download the Huma App. 
 
-After downloading the app, you will be able to create your account by clicking **Activate Account** in the email.
+After downloading the Huma App, you will be able to create your account by clicking **Activate Account** in the email on your mobile device.
 
 > ⚠️ **INFO**: If you're signing up via direct link, you will have to enter your email address and verify it by entering a 6-digit code sent from your care team.
 
 After clicking **Activate Account** or passing through the verification process, you will go to the password screen where you can create your account password. Passwords must be alphanumeric, with at least 8 characters including upper and lowercase. 
 
-If 2-step verification has been configured, you will also need to enter a 6-digit code sent to your mobile number. You can turn [2-step verification](../features/data-privacy-and-security.md) on or off from your profile for future logins.
+If 2-step verification has been configured, you will also need to enter a 6-digit code sent to your mobile number. You can turn [2-step verification](../features/data-privacy-and-security.md) on or off from your Profile for future logins.
 
 You can pause 2-factor authentication by checking the box **Remember me for 14 days**.
 
 ### Onboarding
 
-The onboarding process consists of a number of screens that will ask you for information, consent or preferences on using the App. The exact onboarding steps will depend on the deployment configuration. Once you have completed all the steps, you can access the app features. 
+The onboarding process consists of a number of screens that will ask you for information, consent or preferences on using the Huma App. The exact onboarding steps will depend on the Deployment configuration. Once you have completed all the steps, you can access the Huma App features. 
 
 ### Data processing agreement
-As the Huma App allows the collection of data from patients, you must provide informed consent to Huma as part of the terms and conditions of using the app.
+As the Huma App allows the collection of data from patients, you must provide informed consent to Huma as part of the terms and conditions of using the Huma App.
 
 You will be taken through the terms and conditions and finally asked to consent by checking a box. 
 
 ![Data Consent](../assets/econsent.png)
 
 ### ID Verification
-In some cases, it is important to confirm that the person using the app is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular deployment.
+In some cases, it is important to confirm that the person using the Huma App is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular Deployment.
 
 There are two possible steps to identity verification - documentation and facial recognition. With the first step, you will need to photograph a form of ID such as a passport or national identity document. The second step is to take a photo of your face. It should take around 60 seconds to complete the verification process and you will be informed via push notification once the process is complete.
 
@@ -54,19 +54,19 @@ You can withdraw your consent at any time from your [Profile](../features/data-p
 ### Helper agreement
 You can allow another party to manage data entry on your behalf if you are unable to use the Huma App yourself. 
 
-You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the App, helpers can enter data into modules in the same way that a patient would.
+You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the Huma App, helpers can enter data into modules in the same way that a patient would.
 
 ![Helper agreement](../assets/helpertrio.png)
 
 ### Biometric Login​
 Biometric login offers an alternative to password login, something which can be very useful for patients with memory difficulties or mobility issues.
 
-Depending on the device being used, biometric login could be via fingerprints or facial recognition and is something that you can set up as part of the onboarding if the deployment is configured in this way. 
+Depending on the device being used, biometric login could be via fingerprints or facial recognition and is something that you can set up as part of the onboarding if the Deployment is configured in this way. 
 
 Biometrics is just one of the data security settings that you can manage from your **Profile** page under **Account**. On enabling the **Two-step verification** toggle, you will be able to set up your biometric login.
 
 ### Profile Questionnaire
-The Profile Questionnaire asks you for some basic information that will be used to populate your profile. The exact data requested will depend on your [deployment configuration](../../admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md).
+The Profile Questionnaire asks you for some basic information that will be used to populate your Profile. The exact data requested will depend on your [Deployment configuration](../../admin-portal/managing-deployments/configuring-the-user-profile/user-profile-details.md).
 
 
 **Related articles**: [Onboarding setup](../../admin-portal/managing-deployments/configuring-the-user-onboarding/onboarding-setup.md); [Privacy and security settings](../features/data-privacy-and-security.md); [eConsent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/econsent.md); [Data consent](../../admin-portal/managing-deployments/configuring-the-user-onboarding/data-consent.md); [Identity verification](../../admin-portal/managing-deployments/configuring-the-user-onboarding/identity-verification.md); [Preferred units](../../admin-portal/managing-deployments/configuring-the-user-onboarding/preferred-units.md); [Helper agreement](../../admin-portal/managing-deployments/configuring-the-user-onboarding/helper-agreement.md) 

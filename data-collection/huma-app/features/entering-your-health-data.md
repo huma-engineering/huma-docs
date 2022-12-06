@@ -13,7 +13,7 @@ The **Track** screen is accessed via the ![Track](../assets/TrackIcon.png) icon 
 
 ![Track](../assets/Track.png)
 
-The exact modules and questionnaires on the Track page will depend on the deployment configuration and are shown as a list of tiles which the patient can view by scrolling. 
+The exact modules and questionnaires on the Track page will depend on the Deployment configuration and are shown as a list of tiles which the patient can view by scrolling. 
 
 Select the module you want to add your data for and click the **Add** button. 
 
@@ -32,9 +32,9 @@ Some health vitals can be collected using the camera on your phone. For example,
 ### Adding symptoms
 The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. 
 
-Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
+Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your Deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
 
-In the following screens, you will be asked to grade the severity of each symptom on a sliding scale from **mild** to **very severe**. Choose the one that best applies in that moment and click **Next**.
+In the following screens, you will be asked to grade each symptom on a sliding scale. Choose the one that best applies in that moment and click **Next**.
 
 ![symptoms](../assets/symptoms.png)
 

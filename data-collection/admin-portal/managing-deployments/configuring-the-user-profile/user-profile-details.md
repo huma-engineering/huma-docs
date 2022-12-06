@@ -5,7 +5,7 @@ title: User profile details
 # User profile details
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-The first time they access the Huma App, patients will be asked for some profile details that are shared with their care team. From name, DOB, and medical ID, to gender expression, the profile details requested from the patient can be completely customised for each deployment. 
+The first time they access the Huma App, patients will be asked for some profile details that are shared with their care team. From name, DOB, and medical ID, to gender expression, the profile details requested from the patient can be completely customised for each Deployment. 
 ## How it works
 
 When configuring a new Deployment, select **Profile** from the side menu to configure the user profile data.
@@ -44,7 +44,7 @@ There are a number of gender and ethnicity categories that can be selected. Thes
 ![image](./assets/UserProfile02.png)
 
 ### Clinician-only fields
-This field appears in the patient profile, but only on the clinician side. If using the surgery date as a trigger for to-dos, make sure this box is checked.
+This field appears in the Patient Profile, but only on the clinician side. If using the surgery date as a trigger for to-dos, make sure this box is checked.
 
 ![image](./assets/UserProfile03.png)
 

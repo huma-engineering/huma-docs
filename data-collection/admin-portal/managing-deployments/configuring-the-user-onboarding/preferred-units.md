@@ -7,7 +7,7 @@ title: Preferred units
 
 When entering data points for different modules, users in different territories are accustomed to using different measurement units. For example ºF or ºC for temperature, feet and inches or cm for height, etc. As part of the onboarding process, both patients and their proxies can choose their preferred measurement units.
 ## How it works​
-As part of the onboarding configuration of a new deployment, add the **Preferred Units** module.
+As part of the onboarding configuration of a new Deployment, add the **Preferred Units** module.
 
 ![image](./assets/PreferredUnits01.png)
 

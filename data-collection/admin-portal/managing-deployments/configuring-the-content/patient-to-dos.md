@@ -7,7 +7,7 @@ title: To dos
 
 Part of the Huma methodology is providing patients with a clear pathway for what needs to be done and when. To do items are a way of telling a user to perform a certain action at a certain date and time. An item becomes active and completable on the date it is due. A push notification will be sent to the user at the date and time specified (provided the user has push notifications enabled). 
 ## How it works​
-To dos are linked to **Modules** or **Questionnaires** and remind users when they need to complete them. This can all be configured with a completion date and notification schedule as part of the deployment configuration.
+To dos are linked to **Modules** or **Questionnaires** and remind users when they need to complete them. This can all be configured with a completion date and notification schedule as part of the Deployment configuration.
 Go to the **To do** tab on the **App Components** list and click to **Add key action**.
 
 ![image](./assets/Todo01.png)
@@ -15,11 +15,11 @@ Go to the **To do** tab on the **App Components** list and click to **Add key ac
 Configure the to-do action by filling in the fields:
 - **Title** - Add a name e.g. Take heart rate. This will also be used as the title for the push notification and the card on the To-do page.
 - **Type** - Select from **Learn** or **Module**, depending on what you want the patient to do.
-- **Module / Learn** - Depending on the type selected above, choose from the list of modules or learn content that you want the patient to complete as part of the to-do.
+- **Module / Learn** - Depending on the type selected above, choose from the list of modules or Learn content that you want the patient to complete as part of the to-do.
 
 ![image](./assets/Todo02.png)
 
-- **Trigger** - Choose whether the trigger for the to-do appearing on the patient timeline is as soon as they sign up (**Sign Up**) or according to a scheduled surgery date (**Surgery**). If selecting surgery as the trigger, you must ensure that **Surgery date and time** is checked in the user profile configuration.  
+- **Trigger** - Choose whether the trigger for the to-do appearing on the patient timeline is as soon as they sign up (**Sign Up**) or according to a scheduled surgery date (**Surgery**). If selecting surgery as the trigger, you must ensure that **Surgery date and time** is checked in the Profile configuration.  
 
 ![image](./assets/Todo03.png)
 
@@ -35,6 +35,6 @@ In the following two dropdowns, you can set the day and time that you would like
 ![image](./assets/Todo04.png)
 
 Click to **Save changes**. 
-Your new action will now appear on the list along with all your other to-dos for this deployment. 
+Your new action will now appear on the list along with all your other to-dos for this Deployment. 
 
 **Related articles**: [Tracking questionnaires](./tracking-questionnaires.md); [Tracking modules](./tracking-modules.md); [Patient to do list](../../../huma-app/features/to-dos.md)

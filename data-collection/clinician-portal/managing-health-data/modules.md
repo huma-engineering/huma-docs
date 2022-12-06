@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Modules
 ---
 # Reviewing module data
-**User**: Admin; Deployment staff; Organisation staff
+**User**: Admin; Deployment Staff; Organisation Staff
 
 The Patient Dashboard shows all the data points collected for a specific patient by modules. Care teams can track patient vitals and compare it next to other data to get a global understanding of how their patient is doing.
 
@@ -17,7 +17,7 @@ From this view you can browse the list of all modules and questionnaires down th
 ![Modules sidebar](./assets/PatientDashboard02.png)
 
 ## Viewing patient data points 
-Modules with data in the red or yellow range will be flagged in the left-hand column to help you prioritise. In addition, the graph will also show danger thresholds in the red or yellow.
+Modules with data in the red or amber range, as set by the care teams, will be flagged in the left-hand column. The red and amber thresholds will also be displayed in the graph, allowing care teams to review and track trends.
 
 ![Data points](./assets/PatientDashboard03.png)
 

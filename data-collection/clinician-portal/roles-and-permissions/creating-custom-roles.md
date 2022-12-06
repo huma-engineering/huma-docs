@@ -33,14 +33,14 @@ The following permissions are available:
 - **Export patient data** - Allows the user to export patient data in json or csv.
 - **Edit roles and permissions** - The user can edit and view custom roles.
 - **Add/remove staff members** - The user can invite staff, assign roles and also remove them.
-- **View staff in organisation** - Allows users to see who else is a staff member in the organisation and what role they have been assigned.
+- **View staff in Organisation** - Allows users to see who else is a staff member in the Organisation and what role they have been assigned.
 - **Offboard patients** - Allows the user to remove patient access to the Huma App through offboarding.
 
 Once you have selected the permissions, click **Submit** to save the role.
 
 ![Select permissions](./assets/CustomRoles05.png)
 
-Now, when you invite staff to the clinician portal, you will find the new role available on the dropdown.
+Now, when you invite staff to the Clinician Portal, you will find the new role available on the dropdown.
 
 ![Select new role](./assets/CustomRoles06.png)
 

@@ -7,7 +7,7 @@ Body Mass Index (BMI) is a measure of whether a patient is a healthy weight for 
 
 ## How it works
 
-Patients report their height and weight as part of the onboarding process. Huma then calculates their BMI from this data. 
+Patients report their height as part of the onboarding process. Huma then use this to caluclate their BMI when their weight is inputed into the BMI module.
 
 In the BMI module, patients can report weight changes and see how this affects their BMI score. The time and date is added automatically at the moment they make the entry (although this can be edited if needed). They can set reminders from within the module to help them stay on track and make sure they don't miss a reading.
 

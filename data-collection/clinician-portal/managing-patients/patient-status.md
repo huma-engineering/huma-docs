@@ -19,5 +19,5 @@ Other users can now use the patient status for filtering in order to find specif
 
 ![Status filters](./assets/PatientStatus03.png)
 
-**Related articles**: [Filters and sorting the patient list](./patient-list.md) 
+**Related articles**: [Patient List](./patient-list.md) 
 

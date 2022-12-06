@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Profile
 ---
 # Your Profile
-**User**: Admin; Deployment staff; Organisation staff;
+**User**: Admin; Deployment Staff; Organisation Staff;
 
 Once you have created an account in the Clinician Portal, Huma lets you manage your personal data, change your password, edit units of measurement used in the portal and access terms and conditions documents.
 ## How it works​
@@ -24,7 +24,7 @@ You can edit your mobile number that is used as part of the 2-factor authenticat
 ![Contact Info](./assets/YourProfile03.png)
 
 ### Units
-Each user on the clinician portal can decide the unit of measurement that is used to show the patient data for **blood glucose**, **temperature**, **height** and **weight**. Just click the down arrow at the end of each line to see a list of other options.
+Each user on the Clinician Portal can decide the unit of measurement that is used to show the patient data for **blood glucose**, **temperature**, **height** and **weight**. Just click the down arrow at the end of each line to see a list of other options.
 
 ![Units](./assets/YourProfile04.png)
 
@@ -59,6 +59,6 @@ If you ever forget your password, just click the **Forgot Password** link on the
 ![Forgot Password link](./assets/YourProfile07.png)
 
 ### Privacy policy and licence agreement
-At the bottom of your profile page details, you can find links to licensing and privacy policy documentation. These links are set up in the deployment configuration and describe the terms of your user agreement.
+At the bottom of your Profile page details, you can find links to licensing and privacy policy documentation. These links are set up in the Deployment configuration and describe the terms of your user agreement.
 
 **Related articles**: [Logging into the Portal](./logging-into-the-portal.md)

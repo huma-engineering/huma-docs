@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Exporting patient data
 ---
 # Exporting patient data
-**User**: Admin; Deployment Staff; Organisation staff
+**User**: Admin; Deployment Staff; Organisation Staff
 
 Patient data can be exported from the Clinician Portal and used to show results.
 

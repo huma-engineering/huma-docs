@@ -11,7 +11,7 @@ Education is key when delivering a health program at a distance and this is an i
 
 Resources are added to the Learn centre in the form of links, pdfs and videos. You can access these by clicking the Learn ![Learn](../assets/LearnIcon.png) icon on the navigation menu. 
 
-Here you can find a series of articles represented by thumbnails. Articles can also be organised into categories. Just click the thumbnail to open the article (note that the article will open outside of the app, either as a download or in your browser).
+Here you can find a series of articles represented by thumbnails. Articles can also be organised into categories. Just click the thumbnail to open the article (note that the article will open outside of the Huma App, either as a download or in your browser).
 
 ![Learn](../assets/Learn.png)
 

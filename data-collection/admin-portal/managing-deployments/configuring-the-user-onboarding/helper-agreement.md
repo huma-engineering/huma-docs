@@ -5,9 +5,9 @@ title: Helper agreement
 # Helper agreement
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-In some cases, patients may need assistance to manage data entry in the Huma App. The Helper role exists to allow other users to access the app as a proxy for the patient to enter data on their behalf.
+In some cases, patients may need assistance to manage data entry in the Huma App. The Helper role exists to allow other users to access the Huma App as a proxy for the patient to enter data on their behalf.
 ## How it works​
-As part of the onboarding configuration of a new deployment, add the **Helper Agreement** module.
+As part of the onboarding configuration of a new Deployment, add the **Helper Agreement** module.
 
 ![image](./assets/Helper01.png)
 

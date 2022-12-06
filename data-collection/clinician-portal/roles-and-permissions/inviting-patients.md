@@ -3,9 +3,9 @@ sidebar_position: 4
 title: Inviting patients
 ---
 # Inviting Patients
-**User**: Admin; Access Controller; Deployment staff; Organisation staff; Patients
+**User**: Admin; Access Controller; Deployment Staff; Organisation Staff; Patients
 
-Once the Clinician Portal is set up and ready to go, you need to invite patients. Patients can only get access to the App via an invitation. Any user with ‘manage patient data’ permissions can invite patients. 
+Once the Clinician Portal is set up and ready to go, you need to invite patients. Patients can only get access to the Huma App via an invitation. Any user with ‘manage patient data’ permissions can invite patients. 
 ## How it works​
 Open the dropdown menu next to your name at the top-right of the portal and select **Invite Patients**.
 
@@ -19,7 +19,7 @@ Now, enter the email addresses of the users you want to invite and click **Send 
 
 ![Send invites](./assets/InvitingPatient03.png)
 
-They will receive an email inviting them to a 2-step process. First, they will be asked to download the app. Once the user has downloaded the app, they will be able to click the link to create their account.
+They will receive an email inviting them to a 2-step process. First, they will be asked to download the Huma App. Once the user has downloaded the Huma App, they will be able to click the link to create their account.
 
 ![Email 2](./assets/InvitingPatient04.png)
 
@@ -35,7 +35,7 @@ If you prefer, you can invite patients via a direct link. In the **Get Link** wi
 
 ![Get link](./assets/InvitingPatient06.png)
 
-When users click on the link, they will be sent to the app (provided they have it downloaded already) where they will need to enter their email address and then verify it.
+When users click on the link, they will be sent to the Huma App (provided they have it downloaded already) where they will need to enter their email address and then verify it.
 You can also set an expiration date for the link by choosing a duration from the dropdown before you copy the link.
 ### Reviewing pending invitations
 To see which patients have not yet responded to invitations by clicking the link, use the filters at the top right and select **Pending patient invitations** as the **Patient type** then click **Search**.

@@ -7,7 +7,7 @@ Huma enables care teams to collect important health data for remote patient moni
 
 ## How it works
 
-From the Huma app, patients enter their health data into the module according to the schedule indicated - setting reminders to help them with this schedule if needed. Historic data showing trends in the patient's evolution is also available to view in some of the modules. 
+From the Huma App, patients enter their health data into the module according to the schedule indicated - setting reminders to help them with this schedule if needed. Historic data showing trends in the patient's evolution is also available to view in some of the modules. 
 
 This data is displayed for care teams within the Clinician Portal, with anomalous or concerning data highlighted to aid with prioritisation. Care teams can then feed back to the patient with their observations and recommendations.
 

@@ -12,7 +12,7 @@ The portal has a number of default user roles which can be assigned to users via
 The following table shows the specific permissions associated with each of these roles.
 ## Clinician Portal user roles and permissions
 
-|  | Contributor | Admin | Deployment staff | Organisation staff | Access controller |
+|  | Contributor | Admin | Deployment Staff | Organisation Staff | Access Controller |
 | --- |--- | --- | --- | --- | --- |
 | Manage patient data |--- | ✓ | ✓ | --- | --- |
 | Contact patient | ✓ | ✓ | ✓ | --- | --- |
@@ -22,14 +22,14 @@ The following table shows the specific permissions associated with each of these
 | Manage notes | --- | ✓ | --- | --- | ✓ |
 | Edit roles and permissions | --- | ✓ | --- | --- | ✓ |
 | Add /remove staff members | --- | ✓ | --- | --- | ✓ |
-| View staff members in organisation | --- | ✓ | --- | ✓ | ✓ |
+| View staff members in Organisation | --- | ✓ | --- | ✓ | ✓ |
 | Add data on behalf of patient | --- | ✓ | --- | --- | --- |
 | Offboard patients | ✓ | ✓ | ✓ | --- | --- |
 
 All the above permissions can be combined into specific configurations to create custom roles. Please see the article on [Creating custom roles](./creating-custom-roles.md). 
 
 ## Who invites who?
-- Only admins can invite other admins and contributors.
-- Both admins and access controllers can invite organisation staff and access controllers.
+- Only Admins can invite other Admins and Contributors.
+- Both Admins and Access Controllers can invite Organisation Staff and Access Controllers.
 
 **Related articles**: [Inviting staff and assigning roles](./inviting-staff-and-assigning-roles.md); [Creating custom roles](./creating-custom-roles.md); [Inviting Deployment Admins](../../admin-portal/managing-deployments/tools-and-navigation/inviting-deployment-admins.md)

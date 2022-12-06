@@ -8,7 +8,7 @@ title: Tracking questionnaires
 One of the ways Huma allows you to collect data from patients is with Patient Reported Outcome Measures (PROs/PROMs), or validated questionnaires. Feedback from patients is key to being able to improve the care provided by the care team and this feature lets them build and collect qualitative data from patients about how they feel and tailor their treatment plan accordingly. 
 
 ## How it works
-Questionnaires can be added to the deployment as a tracking module in the same way as the other tracking modules. Just click **Add track module** and select **Questionnaires** from the dropdown.
+Questionnaires can be added to the Deployment as a tracking module in the same way as the other tracking modules. Just click **Add track module** and select **Questionnaires** from the dropdown.
 
 ![image](./assets/Questionnaires01.png)
 
@@ -35,9 +35,9 @@ A list of questionnaires are listed below along with their characteristics:
 | [PROMIS CAT Pain Interference [English]](../../../modules/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
 | [PROMIS CAT Physical Function [English]](../../../modules/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
 | [PROMIS Global Health [Catalan, French, German, Spanish, Swedish]](../../../modules/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
-| [Activity and Health Questionnaire](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
-| [Baseline COVID-19 Questionnaire [German]](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
-| [Food Security Questionnaire](../../../modules/epros-licensed-questionnaires/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
+| [Activity and Health Questionnaire](../../../modules/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
+| [Baseline COVID-19 Questionnaire [German]](../../../modules/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
+| [Food Security Questionnaire](../../../modules/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
 | [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/mental-health/perceived-stress-scale.md) | Questionnaire | Yes/No | No | Yes |
 
 ## Creating custom questionnaires
@@ -76,7 +76,7 @@ If your questionnaire is requesting data that needs to be collected on a regular
 
 ### Other settings
 You have the option to add **Learn** articles to some modules. 
-- Check the **Learn articles** checkbox to open a list of learning content, then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the learn article.
+- Check the **Learn articles** checkbox to open a list of learning content, then just select the ones that link to this questionnaire. When associated with a scored questionnaire, the patient will be able to access the Learn article.
 
 ![image](./assets/Questionnaires06.png)
 
@@ -137,7 +137,7 @@ The question types you should select depends on the kind of information you are 
 - **Date** - The user selects a date, month, and year from a carousel of options. Use this option when asking for the patient’s date of birth or the dates of specific medical interventions.
 - **Duration** - The user selects from a carrousel of options to choose a time or a period of time/duration.
 - **Photo** - The user can upload a photo or a file in response to a question.
-- **Phone number** - The user is asked to select the country code and enter their phone number. Make sure to use this option instead of **Text input** when asking for a phone number as the app can verify it is valid based on the area code. 
+- **Phone number** - The user is asked to select the country code and enter their phone number. Make sure to use this option instead of **Text input** when asking for a phone number as the Huma App can verify it is valid based on the area code. 
 - **Scale** - The scale option is useful if you want the patient to choose a value within a minimum and maximum range. They simply position the slider on a scale.
 - **Info page / Submission page** - These cards are already formatted to be used at the beginning and end of the questionnaire and don’t require any input from the patient, they are just there to inform.
 

@@ -5,9 +5,9 @@ title: Tracking modules
 # Tracking modules
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-The Huma app collects data from patients based on a number of purpose-built modules to track different data points or patient-reported qualitative data. 
+The Huma App collects data from patients based on a number of purpose-built modules to track different data points or patient-reported qualitative data. 
 ## How it works
-You can add modules from the **Track** tab of your deployment configuration. Just click **Add track module** and select from the list on the **Modules** dropdown or enter a search term to find the module you’re looking for.
+You can add modules from the **Track** tab of your Deployment configuration. Just click **Add track module** and select from the list on the **Modules** dropdown or enter a search term to find the module you’re looking for.
 
 ![image](./assets/TrackModules01.png)
 
@@ -16,7 +16,7 @@ This is the full list of modules available for tracking health data. The table s
 
 - **Thresholds** - RAG thresholds are not available for all modules. Modules that use RAG will be labelled 'Thresholds' and those that do not will be labelled 'Static'. The only exception to this would be the **Symptoms** module (explained in more detail below).
 
-- **Date Collection** - Different modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps e.g. heart rate monitors, step counters. Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app. 
+- **Date Collection** - Different modules also permit different collection methods. Patients can either enter their data manually or sync the Huma App with other tracking devices or Huma Apps e.g. heart rate monitors, step counters. Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the Huma App. 
 
 
 | Module Name | Thresholds | Data collection | 
@@ -45,7 +45,6 @@ This is the full list of modules available for tracking health data. The table s
 | [Photos](../../../modules/general/photos.md) | No | Manual |
 | [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
-| [Resting Breathing Rate](../../../modules/physiological/resting-breathing-rate.md) | No | Manual | 
 | [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) | 
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
@@ -76,7 +75,7 @@ From the modules list, click the ![image](./assets/Edit.png) icon at the end of 
 
 - **Device sync** - If the data point can be collected via a device or smartphone, you can indicate which collection methods are available here. For example, patients can collect their heart rate variability reading using their phone camera.
  
-- **Learn** - You have the option to associate configured Learn articles to the modules. Check the box to open a list of articles that you have already added to your deployment, then just select the ones that link to this module. When the patient opens this module, they will be able to access the article.
+- **Learn** - You have the option to associate configured Learn articles to the modules. Check the box to open a list of articles that you have already added to your Deployment, then just select the ones that link to this module. When the patient opens this module, they will be able to access the article.
 
 ![image](./assets/TrackModules05.png)
 
@@ -105,7 +104,7 @@ Modules that include RAG thresholds are labelled 'Thresholds' and those without 
 ![image](./assets/TrackModules09.png)
 
 ### Symptoms
-The **Symptoms** module lets you track specific symptoms for different health trials that you might be running. Each deployment can be configured to track a completely different set of symptoms. The care team will be able to view the evolution of different symptoms amongst a cohort of patients e.g. muscle pain, insomnia, headaches, etc.
+The **Symptoms** module lets you track specific symptoms for different health trials that you might be running. Each Deployment can be configured to track a completely different set of symptoms. The care team will be able to view the evolution of different symptoms amongst a cohort of patients e.g. muscle pain, insomnia, headaches, etc.
 
 Go to the **Symptoms** tab and click the button **Add symptom**. To configure the symptom, just enter a name and then set the RAG thresholds.
 
