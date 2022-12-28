@@ -1,10 +1,9 @@
 ---
 sidebar_position: 8
-title: Oxford Hip Score
+title: Oxford Shoulder Score
 ---
 
-Post-surgery care is key to successful recovery from any operation. The Oxford Shoulder Score questionnaire is a quick and effective way to assess the outcome of all 
-shoulder surgery with the exception of instability surgery. Their feedback is shared with their care teams in order to provide the best post-surgery care.
+Post-surgery care is key to successful recovery from any operation. The Oxford Shoulder Score questionnaire is a quick and effective way to assess the outcome of all shoulder surgery with the exception of instability surgery. Their feedback is shared with their care teams in order to provide the best post-surgery care.
 
 ## How it works
 
