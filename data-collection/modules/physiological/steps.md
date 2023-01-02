@@ -11,7 +11,7 @@ Huma accesses the patient's step count from their fitness tracker, either Apple 
 
 Patients first need to sync the Huma App with Google Fit or Apple Health, followig the instructions in the Steps module. The data will automatically be populated in the Huma App.
 
-![Adding steps tracking in the Huma App](./assets/steps.svg)
+![Adding steps tracking in the Huma App](./assets/steps.png)
 
 Patients can view their steps data in a graph and care teams can view also see it from the Clinician Portal.
 
