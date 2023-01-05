@@ -14,6 +14,11 @@ If your role is at the Organisation level, it is likely you are managing multipl
 
 ![Org-level stats](./assets/Navigating01.png)
 
+![Org-level stats01](./assets/Navigating012x.png)
+
+![Org-level stats01](./assets/Navigating014x.png)
+
+
 Click on any of the Deployments and you will go to the [Patient List](../managing-patients/patient-list.md), where you will be able to access all the navigation tools of a regular Deployment-level role.
 
 Click the Huma icon at the top left to return to the Deployments list at any time. 
