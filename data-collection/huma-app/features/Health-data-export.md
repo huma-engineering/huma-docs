@@ -1,8 +1,8 @@
 ---
 sidebar_position: 6
-title: Health summary data export
+title: Health data export
 ---
-# Health summary data export 
+# Health data export 
 
 Huma App enables the patient to download the summary of the health data reported over a period of time in a PDF or CSV format. The data in PDF format is shown in an interactive graphical colour coded format.
 
