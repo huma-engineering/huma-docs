@@ -46,6 +46,9 @@ You can access your [messages](../features/messages.md) and [appointments](../fe
 
 ![Messages](../assets/Messages.png)
 
+### Health summary data export
+You can download the summary of health data that was tracked over a period of time in a PDF or CSV format. 
+
 ### Data privacy and account settings
 There are a number of features and settings in your Profile to help keep your data safe and secure. See the [data privacy and account security](../features/data-privacy-and-security.md) article for more details.
 
@@ -55,4 +58,4 @@ If you have the **App support** feature available in your Profile, click to acce
 ### Logout
 To log out of the Huma App, scroll down to the bottom of the Profile page and click **Logout**. You will be returned to the login screen.
 
-**Related articles**: [Personal information and account settings](./personal-information-account-settings.md); [Data privacy and account security](../features/data-privacy-and-security.md); [Managing calls and appointments](../features/calls-and-appointments.md); [Messages](../features/messages.md)
+**Related articles**: [Personal information and account settings](./personal-information-account-settings.md); [Data privacy and account security](../features/data-privacy-and-security.md); [Managing calls and appointments](../features/calls-and-appointments.md); [Messages](../features/messages.md) ; [Health data export](../features/Health-data-export.md)
