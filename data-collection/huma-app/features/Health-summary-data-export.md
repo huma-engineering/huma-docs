@@ -1,21 +1,21 @@
 ---
 sidebar_position: 6
-title: PDF health summary report 
+title: Health summary data export
 ---
-# PDF health summary report 
+# Health summary data export 
 
-Huma App enables the patient to download the summary of the health data reported over a period of time in a PDF format. The data is shown in an interactive graphical colour coded format.
+Huma App enables the patient to download the summary of the health data reported over a period of time in a PDF or CSV format. The data in PDF format is shown in an interactive graphical colour coded format.
 
 ## How it works
 Data can be exported from the **Profile** section, by clicking on **Download your data**. Then, click **Request a download** after which the download needs to be authenticated with biometrics or password.
 
 ![PDF Health Summary 1](../assets/HealthSummary1.png)
 
-Then, click on **Summary Health Report (PDF)** section, by clicking on **Download your data**. The user will be notified after the file is ready to be reported. Click on **Save file** beside the **Summary Health Report (PDF)** and the file will be downloaded.
+Then, click **Summary Health Report (PDF)** or **All your data (CSV)** based on the format required. The user will be notified after the file is ready to be exported. Click on **Save file** adjacent to the **Summary Health Report (PDF)**  or **All your data (CSV)** for the file to be downloaded.
 
 ![PDF Health Summary 2](../assets/HealthSummary2.png)
 
-Here is how a Health summary report looks like:
+Here is how a Health summary report in the PDF format looks like:
 
 ![PDF Health Summary 3](../assets/HealthSummary3.png)
 
