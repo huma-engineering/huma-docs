@@ -14,3 +14,7 @@ Patients answer a number of multiple choice questions about hip joint awareness.
 In the Clinician Portal, care teams will see the latest FJS Hip score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Forgotten Joint Score Hip](./assets/cp-patient-list-fjs-hip.png)
+
+The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
+
+![Clinician view of Forgotten Joint Score Hip](./assets/cp-patient-summary-fjs-hip.png)

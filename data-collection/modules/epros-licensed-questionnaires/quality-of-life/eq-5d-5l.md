@@ -11,11 +11,11 @@ The EQ-5D-5L is a licensed quality-of-life PROM questionnaire where patients mak
 
 Patients answer questions about their mobility, self-care, regular activities, pain/discomfort, and anxiety/depression. Some questions are scored on a scale while others are more qualitative. The responses are converted into an index value between 1-5 which is shared with care teams via the Clinician Portal.
 
-To start, patients select the EQ-5D-5L module and click "Add". When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track. 
+To start, patients select the **EQ-5D-5L module** and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track. 
 
 ![Adding the EQ-5D-5L](./assets/eq-5d-5l.png)
 
-In the Clinician Portal, care teams will see the latest EQ-5D-5L score for their patient, with concerning scores flagged for attention. 
+In the Clinician Portal, care teams will see the latest EQ-5D-5L score for their patient, with concerning scores flagged for attention.
 
 ![EQ-5D-5L in the Clinician Portal](./assets/cp-patient-summary-eq-5d-5l.png)
 
