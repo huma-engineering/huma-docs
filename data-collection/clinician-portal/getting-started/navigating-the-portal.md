@@ -66,7 +66,7 @@ Within the patient interface, you also have a tools menu that lets you access so
 
 ![Resolve Flags](./assets/Navigating11.png)
 
-### Profile and User Management
+### Profile and user management
 You can access the tools menu from the three dots next to your name in the button at the top right. This lets you access [your Profile](./your-profile.md) and manage users, roles and permissions.
 
 ![Profile menu](./assets/Navigating12.png)
