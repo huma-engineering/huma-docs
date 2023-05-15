@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Configuring messages 
+title: Configuring the billing 
 ---
 # Configuring the billing
 
