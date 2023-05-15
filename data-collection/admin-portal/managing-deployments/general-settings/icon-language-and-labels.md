@@ -5,9 +5,9 @@ title: Icon, language and labels
 # Icon, language and labels
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor
 
-When setting up multiple Deployments for different user groups, the Huma platform makes it possible to differentiate each Deployment, not only by customising the features, but also by adding specific branding and language configurations.
+When setting up multiple Deployments for different user groups, the Huma platform makes it possible to differentiate each deployment, not only by customising the features, but also by adding specific branding and language configurations and enabling the labels features.
 ## How it works​
-In the **Deployment config** tab, you can configure each individual Deployment’s look and feel.
+In the **Deployment config** tab, you can configure each individual deployment’s look and feel.
 
 ![image](./assets/IconLanguage01.png)
 
@@ -35,11 +35,9 @@ To add a new language, you will need to translate all the text into the new lang
 
 > 🛑 **IMPORTANT**: Once you have downloaded the localisation file, your Deployment configuration will be locked and you won’t be able to make any changes. For the full procedure, please refer to [this documentation](https://humatherapeutics.atlassian.net/wiki/spaces/DO/pages/3298689083/How-To+Log+a+Translation+Request).
 
-## Labels[^1]
-At the bottom of the **Deployment config** page, you can find the **Labels** toggle. Enable this feature to assign tags to patients. Once enabled, this will appear as a column in the [Patient List](../../../clinician-portal/managing-patients/patient-list.md) and care teams will be able to add labels to patients in order to help with filtering.
+## Labels
+At the bottom of the **Deployment config** page, you can find the **Labels** toggle. Enable this feature to assign labels to patients in the [Patient List](../../../clinician-portal/managing-patients/patient-list.md) which you will also be able to use for filtering.
 
 ![image](./assets/IconLanguage05.png)
 
-[^1]:<sub>*This feature will become available once Class IIb Medical Device Certification has been attained.</sub>
-
-**Related articles**: [Exporting the configuration or translation files](../tools-and-navigation/exporting-config-or-localization-files.md)
+**Related articles**: [Exporting the configuration or translation files](../tools-and-navigation/exporting-config-or-localization-files.md); Filtering the Patient List; Patient Labels;
