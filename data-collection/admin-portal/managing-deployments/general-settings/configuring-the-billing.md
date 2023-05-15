@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+title: Configuring messages 
+---
 # Configuring the billing
 
 **User**: Super Admin, Huma Support, Account Manager, Organisation Owner, Organisation Editor.
