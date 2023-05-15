@@ -58,7 +58,8 @@ You can check your patient’s compliance with their medication schedule from th
 ![Patient Medication](./assets/PatientMedication10.png)
 Green circles indicate when the patient should be taking their medication. A filled circle indicates they took it as scheduled, an empty circle indicates they missed it. This gives you an easy visual idea of how well the patient is adhering to their schedule. At the top of the calendar, you will see either an adherence %, based on when patients cleared their reminders. 
 ![Patient Medication](./assets/PatientMedication11.png)
-In the case of  ‘as needed’ schedules, you will see a number which represents the total medications taken. Where you see a ! icon, this means the patient exceeded their daily recommended dosage. 
+In the case of  ‘as needed’ schedules, you will see a number which represents the total medications taken. Where you see a ! icon, this means the patient exceeded their daily recommended dosage.
+
 ![Patient Medication](./assets/PatientMedication12.png)
 
 **Related articles**: Medications module
