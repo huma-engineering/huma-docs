@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: Exporting patient data
+title: Adding patient medication
 ---
 # Adding patient medication
 **User**: Admin; Deployment staff; Organisation staff
