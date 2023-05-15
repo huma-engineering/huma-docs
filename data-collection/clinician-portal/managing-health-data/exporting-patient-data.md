@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: Exporting patient data
 ---
 # Exporting patient data
