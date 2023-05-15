@@ -19,7 +19,7 @@ Where you see a message icon, it means questions have been submitted along with 
 
 ![Patient Dashboard](./assets/TrackSymptoms03.png)
 
-Click the Graph view tab at the top to see the evolution of the symptoms over time. Use the slider at the bottom to select the time period you want to review or the calendar at the top right to select specific dates. The default view will show data for the last 10 days.
+Click the **Graph view** tab at the top to see the evolution of the symptoms over time. Use the slider at the bottom to select the time period you want to review or the calendar at the top right to select specific dates. The default view will show data for the last 10 days.
 
 ![Patient Dashboard](./assets/TrackSymptoms04.png)
 
