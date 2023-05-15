@@ -25,16 +25,16 @@ The new role will appear at the bottom of the list. Click the **Rename** button 
 
 ![Rename](./assets/CustomRoles04.png)
 
-The following permissions are available: 
-- **Manage patient data** - This includes adding and removing patients, changing patient status, editing patient data, assigning patients to staff and offboarding patients.
+Next, you can check the permissions that you want to assign to this role by selecting them from the list. The following permissions are available: 
+- **Manage patient data** - This includes adding and removing patients, changing patient status, editing patient data, assigning and unassigning patient labels, assigning patients to staff and offboarding patients.
 - **Contact patient** - This includes scheduling and rescheduling patient calls and messaging and calling patients directly.
 - **View patient data** - The user can view the patient’s submitted data points but not interact with them. This permission is mandatory so will be checked by default.
 - **View patient identifiers** - Allows the user to see identifying patient information such as name, email and DOB.
 - **Export patient data** - Allows the user to export patient data in json or csv.
 - **Edit roles and permissions** - The user can edit and view custom roles.
 - **Add/remove staff members** - The user can invite staff, assign roles and also remove them.
-- **View staff in Organisation** - Allows users to see who else is a staff member in the Organisation and what role they have been assigned.
-- **Offboard patients** - Allows the user to remove patient access to the Huma App through offboarding.
+- **View staff in Organisation** - Allows users to see who else is a staff member in the organisation and what role they have been assigned.
+- **Offboard patients** - Allows the user to remove patient access to the Huma app through offboarding.
 
 Once you have selected the permissions, click **Submit** to save the role.
 
