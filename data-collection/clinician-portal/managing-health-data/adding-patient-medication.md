@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+title: Exporting patient data
+---
 # Adding patient medication
 **User**: Admin; Deployment staff; Organisation staff
 
