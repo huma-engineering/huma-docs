@@ -17,4 +17,11 @@ If your role allows it, click the ![Edit](./assets/Edit.png) button to edit the 
 
 ![Edit Profile](./assets/PatientProfile02.png)
 
-**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md)
+## RAG rating
+If **Personalise RAG** has been enabled in the deployment configuration, you will see the **RAG rating** tab in the patient profile.  From here, you can configure the RAG limits for that patient’s modules independently from how they are set up for the overall deployment. This helps you customise and prioritise care for each patient’s specific profile and needs.
+
+You will see each of the patient modules listed along with their current RAG limits. Click the **Customise** button to edit the module and set personalised RAG limits. Any readings recorded before the change will use the old RAG limits. 
+
+![Edit Profile](./assets/PatientProfile03.png)
+
+**Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md); [App Features]
