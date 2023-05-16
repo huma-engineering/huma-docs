@@ -12,15 +12,18 @@ You can add modules from the **Track** tab of your Deployment configuration. Jus
 ![image](./assets/TrackModules01.png)
 
 ## Modules list
-This is the full list of modules available for tracking health data. The table shows which modules have the threshold option and what data entry methods are available.
+This is the full list of modules available for tracking health data. Configuration is similar for each module although the RAG thresholds are not available for all of them. Modules that use RAG will be labelled **Threshold** and those that do not will be labelled **Static**. The only exception to this would be the **Symptoms** module, which is explained in more detail in the **Configuration** section.
 
-- **Thresholds** - RAG thresholds are not available for all modules. Modules that use RAG will be labelled 'Thresholds' and those that do not will be labelled 'Static'. The only exception to this would be the **Symptoms** module (explained in more detail below).
+Some modules also permit different collection methods. Patients can either enter their data manually or sync the app with other tracking devices or apps to log it automatically e.g. heart rate monitors, step counters. 
 
-- **Date Collection** - Different modules also permit different collection methods. Patients can either enter their data manually or sync the Huma App with other tracking devices or Huma Apps e.g. heart rate monitors, step counters. Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the Huma App. 
+Other modules require qualitative data, such as the **Photos** and **Journal** modules. Journal entries are submitted via free text from the patient and photos can be captured easily from within the app.
 
+The table below shows which modules have the threshold option and what data entry methods are available.
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
+| [Air Quality Module](../../../modules/algorithm-based-assessments/air-quality-module.md) | Yes | Manual or Breezeometer, followed by calculated |
+| [Anxiety Level GAD-7](../../../modules/physiological/anxiety-level-gad7.md) | Yes | Manual or Breezeometer, followed by calculated |
 | [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
@@ -45,7 +48,9 @@ This is the full list of modules available for tracking health data. The table s
 | [Photos](../../../modules/general/photos.md) | No | Manual |
 | [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
-| [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) | 
+| [Sleep](../../../modules/physiological/sleep.md) | Yes | Sync (from Apple Health, Google Fit) |
+| [Self-Rated Health](../../../modules/general/self-rated-health.md) | No | Manual |
+| [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) |
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
@@ -97,9 +102,9 @@ You can add as many thresholds as you need with the **Add threshold** link at th
 Red, amber and grey flag notifications will show on the Clinician Portal for all newly entered data in line with the severity settings you enter here: red flags indicate high severity data points, amber flags indicate moderate severity data points and grey shows low severity and non-RAG configured data. 
 
 ### Static modules
-Bear in mind that not all modules will use the RAG system and patient data will have to be reviewed manually to determine whether it is dangerous or not. For example, in the case of the Steps module, the number of steps considered healthy would vary from patient to patient. 
-
-Modules that include RAG thresholds are labelled 'Thresholds' and those without are labelled 'Static'. 
+Bear in mind that not all health vitals can be measured and assigned risk levels. In some cases, patient data will have to be reviewed manually to determine
+whether it is dangerous or not. For example, in the case of the Steps module, the number of steps considered healthy would vary from patient to patient. 
+Modules that do not include RAG thresholds are labelled **Static**.
 
 ![image](./assets/TrackModules09.png)
 
