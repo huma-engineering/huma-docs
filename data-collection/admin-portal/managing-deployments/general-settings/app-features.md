@@ -12,11 +12,13 @@ From the **Admin Portal**, go to the **App features** tab, under **Overall Setti
 ![image](./assets/AppFeatures01.png)
 
 ### App menu
-You can choose which tabs appear in the Huma App. There are two pre-configured options that you can select from the dropdown: **Legacy** or **Timeline**.  
+You can choose which tabs appear in the Huma App. There are two pre-configured options that you can select from the dropdown: **Legacy** or **Timeline**. The Legacy option includes **Care plan, Key actions**, and **Care plan daily adherence** and the Timeline option includes **To do, Track, Learn**, and **Profile**.
 
 ![image](./assets/AppFeatures02.png)
 
-If you click the **Show advanced options** link, you can see the menu items for each configuration. The Legacy option includes **Care plan, Key actions**, and **Care plan daily adherence** and the Timeline option includes **To do, Track, Learn**, and **Profile**.
+Click the <u>Show advanced options<u> link to open out the list of menu items and remove or add items as needed. 
+  
+![image](./assets/AppFeatures03.png)
 
 ### App features
 Check the features on the list that you want to include for your users:
