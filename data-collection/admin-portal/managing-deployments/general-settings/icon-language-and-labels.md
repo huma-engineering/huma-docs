@@ -40,4 +40,4 @@ At the bottom of the **Deployment config** page, you can find the **Labels** tog
 
 ![image](./assets/IconLanguage05.png)
 
-**Related articles**: [Exporting the configuration or translation files](../tools-and-navigation/exporting-config-or-localization-files.md); [Filtering the Patient List](/clinician-portal/managing-patients/patient-list.md); [Patient Labels](/clinician-portal/managing-patients/patient-labels.md);
+**Related articles**: [Exporting the configuration or translation files](../tools-and-navigation/exporting-config-or-localization-files.md); [Filtering the Patient List](../../../clinician-portal/managing-patients/patient-list.md); [Patient Labels](../../../clinician-portal/managing-patients/patient-labels.md);
