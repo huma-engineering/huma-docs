@@ -32,5 +32,5 @@ You can also edit labels directly on the patient dashboard. Just below the patie
 
 ![Status filters](./assets/PatientLabels06.png)
 
-**Related articles**: [Patient List](./patient-list.md); [Icon,language and labels](../../../admin-portal/managing-deployments/general-settings/icon-language-and-labels.md) 
+**Related articles**: [Patient List](./patient-list.md); [Icon,language and labels](../../admin-portal/managing-deployments/general-settings/icon-language-and-labels.md) 
 
