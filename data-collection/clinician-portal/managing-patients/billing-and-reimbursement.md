@@ -75,3 +75,6 @@ Each patient’s billing information can be exported in order to provide a state
 From the patient dashboard menu, select **Export data**. Then, in the export window, select the patient or patients you would like to export the data for. Under the selected activities, questionnaires and notes, make sure **Billing status** is checked along with any clinical data you would like to export. Choose the type of file you want to download and click **Export to ZIP file**.
 
 ![Billing](.assets/Billing11.png)
+
+Related articles: [Configuring the billing](../../admin-portal/managing-deployments/general-settings
+/configuring-the-billing.md)
