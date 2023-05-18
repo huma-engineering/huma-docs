@@ -66,4 +66,4 @@ In the case of  ‘as needed’ schedules, you will see a number which represent
 
 ![Patient Medication](./assets/PatientMedication12.png)
 
-**Related articles**: Medications module
+**Related articles**: [Medications module](../../modules/general/medications.md)
