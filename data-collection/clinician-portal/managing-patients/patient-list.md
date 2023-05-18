@@ -81,4 +81,4 @@ You can also sort the table using some of the vitals. Click the arrows in the co
 
 Not all metrics allow sorting. Look for the arrows to see which ones have this option.
 
-**Related articles**: [Patient status](./patient-status.md); [Resolving flags](./resolving-flags.md)
+**Related articles**: [Patient status](./patient-status.md); [Resolving flags](./resolving-flags.md); [Icons,languages and labels](/../../../admin-portal/managing-deployments/general-settings/icon-language-and-labels.md) 
