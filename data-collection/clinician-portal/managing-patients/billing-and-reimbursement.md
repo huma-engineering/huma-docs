@@ -76,5 +76,4 @@ From the patient dashboard menu, select **Export data**. Then, in the export win
 
 ![Billing](.assets/Billing11.png)
 
-Related articles: [Configuring the billing](../../admin-portal/managing-deployments/general-settings
-/configuring-the-billing.md)
+Related articles: [Configuring the billing](../../admin-portal/managing-deployments/general-settings/configuring-the-billing.md)
