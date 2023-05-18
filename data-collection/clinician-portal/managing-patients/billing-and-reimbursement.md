@@ -52,7 +52,7 @@ Click the timestamp to view the billing requirement status for the current time 
 
 ![Billing](./assets/Billing07.png)
 
-You can add notes to a past appointment. The time spent adding notes is also tracking for billing purposes. At the end of the line, click the three dots and select **Add note**.
+You can add notes to a past appointment. The time spent adding notes is also tracked for billing purposes. At the end of the line, click the three dots and select **Add note**.
 
 Enter your notes about the appointment and click **Submit** to save the note. If you want to complete the note details later, you can save as a draft.
  
