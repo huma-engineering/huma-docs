@@ -5,7 +5,7 @@ title: Entering your health data
 # Entering your health data
 **User**: Patient, Helper
 
-The key function of the Huma App is for collecting patient data and sharing it with care teams. The Track screen is where patients can access all modules in order to enter their data, respond to questionnaires and set reminders.
+The key function of the Huma App is for collecting patient data and sharing it with care teams. Patients will be reminded via their To do list on data they need to add and can also enter it, as needed, by looking for the module on the Track page.
 
 ## How it works​
 
@@ -17,7 +17,7 @@ The exact modules and questionnaires on the Track page will depend on the Deploy
 
 Select the module you want to add your data for and click the **Add** button. 
 
-Depending on the type of data being collected you will have the choice of entering it manually or by using the camera on your phone.
+Depending on the type of data being collected you will have the choice of entering it manually, using the camera on your phone or syncing from a connected device.
 
 ### Adding data manually
 
@@ -28,6 +28,24 @@ To add data manually, just click the **Add** button and enter the data by inputt
 Some health vitals can be collected using the camera on your phone. For example, heart rate can be taken by placing your finger over the camera lens. Open the module and select **Collect from camera** then simply follow the instructions to take your reading. Once complete, it will be recorded automatically with the date and time.
 
 ![heart rate](../assets/HeartRate.png)
+
+### Syncing data from a device
+
+Some health vitals can be collected via Bluetooth from a medical measurement device such as a blood pressure monitor or a thermometer. 
+
+Make sure your [device is paired](../getting-started/pairing-devices.md) and Bluetooth turned on then open the module or click the item from your to do list.
+
+On the module page, select the option **Take and sync your reading**. 
+
+![take and sync](../assets/TakeSync01.png)
+
+Follow the instructions on the screen to take your measurement. Instructions may vary depending on the device you are using. Once you have taken your reading, click **Sync** to add the data to the app and share it with your care team. 
+
+![take and sync](../assets/TakeSync02.png)
+
+You can find a list of your paired devices on your **Paired devices** list.  
+
+![take and sync](../assets/TakeSync03.png)
 
 ### Adding symptoms
 The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. 
