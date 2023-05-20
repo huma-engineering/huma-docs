@@ -8,7 +8,7 @@ Patients may be taking medications associated to another care plan that should b
 ## How it works
 
 Patients enter the names of any medications they are taking plus the dosage and frequency. Patients can use this module alongside the 
-[Medication Tracker](./medication-tracker.md) module if needed view their Medications added, as well as change or delete them as necessary. This can be used in conjunction with the 
+[Medication Tracker](./medication-tracker.md) module if needed. They can view their list of added medications and change or delete them as necessary. 
 
 ![Medications in the Huma App](./assets/medications.png)
 
@@ -18,6 +18,6 @@ In the Patient Summary, care teams will be able to see the patient's latest entr
 
 ![View medications in the Clinician Portal](./assets/cp-patient-summary-medications.png)
 
-The detailed view shows all the patient's historic data in table form.
+The detailed view shows all the patient's historic data in table form and also allows new medications to be added by the care team..
 
 ![View patient heart rate in the Clinician Portal](./assets/cp-module-details-medications.png)
