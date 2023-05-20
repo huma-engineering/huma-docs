@@ -80,4 +80,4 @@ You will be presented with a series of questions. Select the answer that best re
 
 Once you have answered all the questions, click **Submit** to share your answers with your care team.
 
-**Related articles**: [Navigating the app](../getting-started/navigating-the-app.md); [Setting reminders](./setting-reminders.md); [Track modules](./track-modules.md)
+**Related articles**: [Navigating the app](../getting-started/navigating-the-app.md); [Setting reminders](./setting-reminders.md); [Track modules](./track-modules.md); [Pairing devices](../getting-started/pairing-devices.md)
