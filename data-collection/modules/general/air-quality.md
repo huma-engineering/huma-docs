@@ -1,4 +1,7 @@
-
+---
+sidebar_position: 1
+title: Air Quality Module
+---
 
 A Breezometer can be used to test the air quality of the surrounding environment. This is important for asthma/COPD patients to track as it can affect their day-to-day lives.
 
@@ -11,7 +14,7 @@ This module integrates with the Breezometer to provide detailed information abou
 - **Pollen** - This gives a daily forecast of the pollen levels (low, high, or moderate), including trees, grass and weeds
 - **Weather** - This gives a daily and hourly forecast of the temperature and humidity 
 
-![Air Quality](../assets/AirQuality.png)
+![Air Quality](./assets/AirQuality.png)
 
 Clinicians can view air quality data on the **Patient List**.
 
