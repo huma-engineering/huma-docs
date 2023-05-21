@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+title: COPD (CAT)  Assessment Test
+---
 The COPD assessment test is a licensed questionnaire where patients make a self-assessment about their current state of well being to help their care team to asses the impact Chronic Obstructive Pulmonary Disease is having on their daily life. 
 It is also a valuable tool in research that could be used to measure, compare and value health status across disease areas.
 
