@@ -20,7 +20,7 @@ A list of questionnaires are listed below along with their characteristics:
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
 | [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
-| [COPD Assessment Test(CAT)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No | 
+| [COPD Assessment Test (CAT)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No | 
 | [FJS Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [FJS Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
 | [GAD-7](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
