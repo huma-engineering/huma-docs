@@ -22,7 +22,7 @@ The table below shows which modules have the threshold option and what data entr
 
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
-| [Air Quality Module](../../../modules/algorithm-based-assessments/air-quality-module.md) | Yes | Manual or Breezeometer, followed by calculated |
+| [Air Quality Module](../../../modules/general/air-quality-module.md) | Yes | Manual or Breezeometer, followed by calculated |
 | [Anxiety Level GAD-7](../../../modules/physiological/anxiety-level-gad7.md) | Yes | Manual or Breezeometer, followed by calculated |
 | [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
@@ -48,9 +48,9 @@ The table below shows which modules have the threshold option and what data entr
 | [Photos](../../../modules/general/photos.md) | No | Manual |
 | [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
-| [Sleep](../../../modules/physiological/sleep.md) | Yes | Sync (from Apple Health, Google Fit) |
-| [Self-Rated Health](../../../modules/general/self-rated-health.md) | No | Manual |
 | [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) |
+| [Self-Rated Health](../../../modules/general/self-rated-health.md) | No | Manual |
+| [Sleep](../../../modules/physiological/sleep.md) | Yes | Sync (from Apple Health, Google Fit) |
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
