@@ -29,7 +29,7 @@ The table below shows which modules have the threshold option and what data entr
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
 | [Blood glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
 | [Blood pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
-| [BodyMeasurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
+| [Body Measurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
 | [COVID-19 Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
 | [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
 | [CVD Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
@@ -43,6 +43,8 @@ The table below shows which modules have the threshold option and what data entr
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
 | [Medications](../../../modules/general/medications.md) | No | Manual | 
+| [Oxford hip score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | No | Manual, followed by calculated | 
+| [Oxford knee score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | No | Manual, followed by calculated | 
 | [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
 | [Photos](../../../modules/general/photos.md) | No | Manual |
@@ -54,7 +56,7 @@ The table below shows which modules have the threshold option and what data entr
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
-| [Waist to Hip](../../../modules/physiological/body-measurement.md) | Yes | Manual, followed by calculated | 
+| [Waist to Height](../../../modules/physiological/body-measurement.md) | Yes | Manual, followed by calculated | 
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
 
 ## Configuring the module
