@@ -42,7 +42,7 @@ There are two date range filters that allow you to search for patients; by date 
 ### Labels
 The labels feature can be toggled on or off on the deployment configuration and can be use to create specific filtering criteria for your patients. By default, all labels will be selected on the initial patient view. Just click on a label to deselect it and remove it from the list. Labels are set manually by members of the care team and will depend on the needs of the deployment.
 
-![Status](./assets/PatientList05.png)
+![Labels](./assets/PatientList05.png)
 
 You can also use the search box to look for specific patients by entering a name or patient ID. Once you have set your filters, click **Search**.
 
@@ -81,4 +81,4 @@ You can also sort the table using some of the vitals. Click the arrows in the co
 
 Not all metrics allow sorting. Look for the arrows to see which ones have this option.
 
-**Related articles**: [Patient status](./patient-status.md); [Resolving flags](./resolving-flags.md); [Icons,languages and labels](../../admin-portal/managing-deployments/general-settings/icon-language-and-labels.md);
+**Related articles**: [Patient labels](./patient-labels.md); [Resolving flags](./resolving-flags.md); [Icons,languages and labels](../../admin-portal/managing-deployments/general-settings/icon-language-and-labels.md);
