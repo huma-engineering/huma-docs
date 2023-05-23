@@ -23,7 +23,7 @@ The table below shows which modules have the threshold option and what data entr
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
 | [Air Quality Module](../../../modules/general/air-quality.md) | Yes | Manual or Breezeometer, followed by calculated |
-| [Anxiety Level GAD-7](../../../modules/physiological/anxiety-level-gad7.md) | Yes | Manual or Breezeometer, followed by calculated |
+| [Anxiety Level GAD-7](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Yes | Manual, followed by calculated |
 | [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
