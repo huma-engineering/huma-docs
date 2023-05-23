@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 title: Symptoms 
 --- 
 
@@ -11,10 +11,16 @@ The Symptoms module is set up with a predefined list of symptoms. Each time the 
 
 ![Symptoms in the Huma App](./assets/symptoms.png)
 
-Patients can view their historic symptoms data and also set reminders for inputting their data to help them stay on track.
+Patients can view data about each of their tracked symptoms in graph format to see how their symptoms have progressed over the year, month, week, day, or hour. They can also view all historic entries for each symptom including the time and date, the health data, or questionnaire responses.
 
-Care teams can access the symptoms module for their patients to see how each of their symptoms is developing or improving over time.
+Care teams get an overview of the number and severity of tracked symptoms along with the date of the last update from the Patient list.
 
 ![Symptoms in the Clinician Portal](./assets/cp-patient-list-symptoms.png)
 
-![Symptoms in the Clinician Portal](./assets/cp-module-details-symptoms.png)
+From the patient’s dashboard, care teams can view a list of tracked symptoms along with any notes added by the patient.
+
+![Symptoms in the Clinician Portal](./assets/symptoms02.png)
+
+The graph view is useful for showing trends.
+
+![Symptoms in the Clinician Portal](./assets/symptoms03.png)

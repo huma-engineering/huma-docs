@@ -12,22 +12,22 @@ Scheduling an appointment in the Clinician Portal is simple. From the Patient Da
 
 ![Scheduling](./assets/Scheduling01.png)
 
-In the scheduling window, select a day and time then click **Add appointment**. A notification will be sent to the patient who will be able to accept or reject your appointment.
+In the scheduling window, select a day and time then click **Primary**. A notification will be sent to the patient who will be able to accept or reject your appointment.
 
-![Scheduling](./assets/Scheduling05.png)
+![Pending confirmation](./assets/Scheduling02.png)
 
 Appointments will show up in the **Upcoming appointments** tab with the status **Pending confirmation** until the patient has accepted it.
 
-![Pending confirmation](./assets/Scheduling02.png)
+![Delete appointment](./assets/Scheduling03.png)
 
 Once accepted, the status will change to **Scheduled** and you will see a **Join call** button. Use this button to call the patient any time before the scheduled appointment.
  
 If you want to reschedule or delete the appointment, open the menu at the end of the row.
 
-![Delete appointment](./assets/Scheduling03.png)
+![Reschedule appointment](./assets/Scheduling04.png)
 
 To reschedule, just select a new time and click **Reschedule**.
 
-![Reschedule appointment](./assets/Scheduling04.png)
+![Reschedule appointment](./assets/Scheduling05.png)
 
 **Related articles**: [Messaging patients](./messaging-patients.md); [Calling patients](./calling-patients.md);

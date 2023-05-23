@@ -35,8 +35,8 @@ If you prefer, you can invite patients via a direct link. In the **Get Link** wi
 
 ![Get link](./assets/InvitingPatient06.png)
 
-When users click on the link, they will be sent to the Huma App (provided they have it downloaded already) where they will need to enter their email address and then verify it.
-You can also set an expiration date for the link by choosing a duration from the dropdown before you copy the link.
+When users click on the link, they will be sent to the app (provided they have it downloaded already) where they will need to enter their email address and then verify it. You can also set an expiration date for the link by choosing a duration from the dropdown before you copy the link. 24 hours before the link expires, those patients who have not activated their account will receive an email reminder.
+
 ### Reviewing pending invitations
 To see which patients have not yet responded to invitations by clicking the link, use the filters at the top right and select **Pending patient invitations** as the **Patient type** then click **Search**.
 

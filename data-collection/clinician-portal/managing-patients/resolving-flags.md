@@ -43,4 +43,4 @@ Your note will be saved with your initials and a time stamp. You can find a reco
 
 ![View notes](./assets/ResolveFlags06.png)
 
-**Related articles**: [Patient Dashboard](../managing-health-data/patient-dashboard.md) 
+**Related articles**: [Patient Dashboard](../managing-health-data/patient-dashboard.md); [App Features](../../admin-portal/managing-deployments/general-settings/app-features.md) 
