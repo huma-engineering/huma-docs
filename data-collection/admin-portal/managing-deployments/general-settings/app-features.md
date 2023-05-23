@@ -16,7 +16,7 @@ You can choose which tabs appear in the Huma App. There are two pre-configured o
 
 ![image](./assets/AppFeatures02.png)
 
-Click the <u>Show advanced options<u> link to open out the list of menu items and remove or add items as needed. 
+Click the **Show advanced options** link to open out the list of menu items and remove or add items as needed. 
   
 ![image](./assets/AppFeatures03.png)
 
