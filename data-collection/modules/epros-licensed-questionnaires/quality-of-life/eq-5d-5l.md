@@ -9,7 +9,7 @@ The EQ-5D-5L is a licensed quality-of-life PROM questionnaire where patients mak
 
 ## How it works
 
-Patients answer questions about their mobility, self-care, regular activities, pain/discomfort, and anxiety/depression. Some questions are scored on a scale while others are more qualitative. The responses are converted into an index value between 1-5 which is shared with care teams via the Clinician Portal.
+Patients answer questions about their mobility, self-care, regular activities, pain/discomfort, and anxiety/depression. Some questions are scored on a scale while others are more qualitative. The responses are converted into an index value between 0-1 and an EQ VAS score out of 100 which are both shared with care teams via the Clinician Portal.
 
 To start, patients select the **EQ-5D-5L module** and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track. 
 
