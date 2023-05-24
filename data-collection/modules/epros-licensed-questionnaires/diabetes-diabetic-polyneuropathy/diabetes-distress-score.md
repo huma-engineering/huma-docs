@@ -9,7 +9,7 @@ Living with diabetes comes with challenges, so keeping track of how patients fee
 
 The Diabetes Distress Score Questionnaire gives patients with diabetes a way to reflect on their wellbeing through a series of subjective questions, such as “Do you feel overwhelmed by the demands of living with diabetes”. They can choose from a set of multiple-choice responses to indicate the severity in each case.
 
-From the Diabetes Distress Score module, patients can start the questionnaire by clicking “Add”.
+From the Diabetes Distress Score module, patients can start the questionnaire by clicking **Add**.
 
 ![Diabetes Distress Score in the Huma App](./assets/diabetes-distress-score.png)
 
