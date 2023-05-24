@@ -12,19 +12,19 @@ The portal has a number of default user roles which can be assigned to users via
 The following table shows the specific permissions associated with each of these roles.
 ## Clinician Portal user roles and permissions
 
-|  | Contributor | Admin | Deployment Staff | Organisation Staff | Access Controller |
+|  | Contributor | Admin | Organisation Staff | Deployment Staff | Access Controller |
 | --- |--- | --- | --- | --- | --- |
-| Manage patient data |--- | ✓ | ✓ | --- | --- |
-| Contact patient | ✓ | ✓ | ✓ | --- | --- |
-| View patient data | ✓ | ✓ | ✓ | --- | --- |
-| View patient identifiers | ✓ | --- | --- | ✓ | --- |
-| Export patient data | --- | ✓ | ✓ | ✓ | ✓ |
-| Manage notes | --- | ✓ | --- | --- | ✓ |
-| Edit roles and permissions | --- | ✓ | --- | --- | ✓ |
-| Add /remove staff members | --- | ✓ | --- | --- | ✓ |
-| View staff members in Organisation | --- | ✓ | --- | ✓ | ✓ |
-| Add data on behalf of patient | --- | ✓ | --- | --- | --- |
-| Offboard patients | ✓ | ✓ | ✓ | --- | --- |
+| View staff list |--- | ✓ | ✓ | ✓ | ✓ |
+| View patient data | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Manage patient data |--- |--- | --- | ✓ | ✓ |
+| Edit patient data |--- |--- | --- | ✓ | ✓ |
+| Contact patient | --- | --- | --- | ✓ | ✓ |
+| View patient identifiers | ✓ | --- | --- | ✓ | ✓ |
+| Offboard patient | --- | --- | ✓ | ✓ | ✓ |
+| Invite proxy | ✓ | --- | --- | ✓ | ✓ |
+| View own data | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Manage own data | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Manage labels patients | --- | ✓ | ✓ | --- | ✓ |
 
 All the above permissions can be combined into specific configurations to create custom roles. Please see the article on [Creating custom roles](./creating-custom-roles.md). 
 
