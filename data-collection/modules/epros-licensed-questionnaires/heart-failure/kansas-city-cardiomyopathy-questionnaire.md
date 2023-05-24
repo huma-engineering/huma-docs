@@ -9,7 +9,7 @@ Heart failure is a complex chronic condition that presents debilitating symptoms
 
 Patients answer questions about how living with a heart condition impacts their quality of life, both physical and social. The Kansas City Cardiomyopathy Questionnaire has no right or wrong answers and takes around 4-6 minutes to complete.
 
-From the Kansas City Cardiomyopathy Questionnaire module, patients can start the questionnaire by clicking “Add”. They can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help keep patients on track.
+From the Kansas City Cardiomyopathy Questionnaire module, patients can start the questionnaire by clicking **Add**. They can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help keep patients on track.
 
 ![Kansas City Cardiomyopathy Questionnaire in the Huma App](./assets/kccq.png)
 
