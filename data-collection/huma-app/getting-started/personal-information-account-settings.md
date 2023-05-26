@@ -58,4 +58,4 @@ If you have the **App support** feature available in your Profile, click to acce
 ### Logout
 To log out of the Huma App, scroll down to the bottom of the Profile page and click **Logout**. You will be returned to the login screen.
 
-**Related articles**: [Personal information and account settings](./personal-information-account-settings.md); [Data privacy and account security](../features/data-privacy-and-security.md); [Managing calls and appointments](../features/calls-and-appointments.md); [Messages](../features/messages.md) ; [Health data export](../features/Health-data-export.md)
+**Related articles**: [Personal information and account settings](./personal-information-account-settings.md); [Data privacy and account security](../features/data-privacy-and-security.md); [Managing calls and appointments](../features/calls-and-appointments.md); [Messages](../features/messages.md) ; [Health data export](../features/health-data-export.md)
