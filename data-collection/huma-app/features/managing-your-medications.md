@@ -37,13 +37,15 @@ It’s also possible to record your adherence from the **Medication log** page, 
 
 You can view other days and log adherence. Click the arrows either side of the date to open the calendar then click on the day you want to view.
 
+![Medication module](../assets/ManageMeds06.png)
+
 ## Making modifications
 
 You can edit your medications from the **Medication list**. Click the **Edit** button next to the medication you want to edit and you will be taken through the same screens you see when adding a new medication. You can edit the dosage, schedule type and frequency. You can also edit whether you want to receive a reminder. Your care team will be notified about any changes you make to your medications.
 
 If your care team have added a new medication or modified an existing dosage or schedule, you will see a red notification icon on the medication module. Click on the module to see what changes have been made. You will also receive a notification to your mobile when a medication has been added or edited by your care team.
 
-![Medication module](../assets/ManageMeds06.png)
+![Medication module](../assets/ManageMeds07.png)
 
 **Related articles**: [Medications module](../../modules/general/medications.md)
 
