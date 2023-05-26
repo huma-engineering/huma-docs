@@ -24,6 +24,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [Baseline COVID-19 Questionnaire [German]](../../../modules/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
 | [COPD Assessment Test (CAT)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No |
 | [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
+| [EQ-5D-5L](../../../modules/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) | PROM | Yes | No | No |
 | [FJS Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [FJS Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
 | [Food Security Questionnaire](../../../modules/bespoke-questionnaire/food-security.md) | Questionnaire | Yes/No | No | Yes |
@@ -34,14 +35,13 @@ A list of questionnaires are listed below along with their characteristics:
 | [Norfolk QoL-DN [English, Dutch]](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) | PROM | Yes | Yes | No | 
 | [Oxford Knee Score [English]](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | PROM | Yes | Yes | No | 
 | [Oxford Hip Score [English]](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | PROM | Yes | Yes | No | 
+| [Patient Activation Measure 13 (PAM 13) [English]](../../../modules/epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
 | [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/mental-health/perceived-stress-scale.md) | Questionnaire | Yes/No | No | Yes |
 | [PHQ-8 [English (UK)]](../../../modules/epros-licensed-questionnaires/mental-health/depression-level-phq-8.md) | PROM | Yes | Yes | No | 
-| [SF-36 [English, Dutch]](../../../modules/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | PROM | Yes | Yes | No | 
-| [EQ-5D-5L](../../../modules/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) | PROM | Yes | No | No |
-| [Patient Activation Measure 13 (PAM 13) [English]](../../../modules/epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
 | [PROMIS CAT Pain Interference [English]](../../../modules/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
 | [PROMIS CAT Physical Function [English]](../../../modules/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
 | [PROMIS Global Health [Catalan, French, German, Spanish, Swedish]](../../../modules/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
+| [SF-36 [English, Dutch]](../../../modules/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | PROM | Yes | Yes | No | 
 | [VR-12 Health Survey](../../../modules/epros-licensed-questionnaires/quality-of-life/VR-12-health-survey.md) | PROM | Yes | Yes | No | 
 
 ## Creating custom questionnaires
