@@ -23,7 +23,6 @@ The table below shows which modules have the threshold option and what data entr
 | Module Name | Thresholds | Data collection | 
 |--- | --- | --- | 
 | [Air Quality Module](../../../modules/general/air-quality.md) | Yes | Manual or Breezeometer, followed by calculated |
-| [Anxiety Level GAD-7](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Yes | Manual, followed by calculated |
 | [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | No | Manual | 
 | Awareness Training | No | Manual | 
 | [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
@@ -43,8 +42,6 @@ The table below shows which modules have the threshold option and what data entr
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | Medical History | No | Manual | () |
 | [Medications](../../../modules/general/medications.md) | No | Manual | 
-| [Oxford hip score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | No | Manual, followed by calculated | 
-| [Oxford knee score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | No | Manual, followed by calculated | 
 | [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
 | [Photos](../../../modules/general/photos.md) | No | Manual |
