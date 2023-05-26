@@ -17,6 +17,6 @@ In the Patient Summary, care teams will be able to see the patient's listed medi
 
 ![View medications in the Clinician Portal](./assets/cp-patient-summary-medications.png)
 
-The detailed view shows a list of the patient's current medications. From the **Adherence** column, clinicians can access a calendar view of the patients medication adherance for the current month or previous months. Clinicians can also see any previous medications by switching to the Archived medications view. New medications can also be added by the care team from this page.
+The detailed view shows a list of the patient's current medications. From the **Adherence** column, clinicians can access a calendar view of the patients medication adherence for the current month or previous months. Clinicians can also see any previous medications by switching to the **Archived medications** view. New medications can also be added by the care team from this page.
 
 ![View patient heart rate in the Clinician Portal](./assets/cp-module-details-medications.png)
