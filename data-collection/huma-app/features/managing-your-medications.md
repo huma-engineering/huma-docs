@@ -1,15 +1,18 @@
-
-User: Patient, Helper
+---
+sidebar_position: 4
+title: Managing your medications
+---
+**User**: Patient, Helper
 
 The Huma App not only helps you track and manage your symptoms, but also provides a means to measure these against the medications you are taking. You can follow the medications schedule set for you by your care team and also make changes to it yourself.
 
 ## How it works
 
-The Medications module is accessed from the Track or Home page.
+The **Medications** module is accessed from the **Track** or **Home** page.
 
 ![Medication module](../assets/ManageMeds01.png)
 
-You have access to the Medication list, which shows all medications added by you or your care tem along with their dosage and recommended frequency, and the Medication log, which is a record of everything your have taken and when. 
+You have access to the **Medication list**, which shows all medications added by you or your care team along with their dosage and recommended frequency, and the Medication log, which is a record of everything your have taken and when. 
 
 ![Medication module](../assets/ManageMeds02.png)
 
