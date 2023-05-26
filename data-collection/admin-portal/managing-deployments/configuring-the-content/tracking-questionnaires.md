@@ -19,13 +19,14 @@ A list of questionnaires are listed below along with their characteristics:
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
+| [COPD Assessment Test (CAT)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No |
 | [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
-| [COPD Assessment Test (CAT)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No | 
 | [FJS Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [FJS Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
 | [GAD-7](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
 | [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
 | [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC) [English, German, Italian, Spanish]](../../../modules/epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
+| [MG-ADL Questionnaire (English, French)](../../../modules/epros-licensed-questionnaires/quality-of-life/mg-adl.md) | PROM | Yes | Yes | No |
 | [Norfolk QoL-DN [English, Dutch]](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) | PROM | Yes | Yes | No | 
 | [Oxford Knee Score [English]](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | PROM | Yes | Yes | No | 
 | [Oxford Hip Score [English]](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | PROM | Yes | Yes | No | 
