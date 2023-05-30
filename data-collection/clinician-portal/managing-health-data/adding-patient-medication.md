@@ -24,7 +24,7 @@ First, add the medication name and dosage. Start typing in the name field to see
 
 ![Patient Medication](./assets/PatientMedication03.png)
 
-For the next step, select the frequency. You can choose between Daily, Specific days, Days interval, and As needed.
+For the next step, select the frequency:
 
  - **Daily frequency** - Select the time
  - **Specific days** - Select one or more days of the week and the time 
@@ -58,7 +58,7 @@ You can check notes by clicking the three dots at the end of the line and clicki
 
 ## Checking patient adherence
 
-You can check your patient’s compliance with their medication schedule from the **Adherence** column. Click the See monthly link to open the calendar. 
+You can check your patient’s compliance with their medication schedule from the **Adherence** column. Click the **See monthly** link to open the calendar. 
 ![Patient Medication](./assets/PatientMedication10.png)
 Green circles indicate when the patient should be taking their medication. A filled circle indicates they took it as scheduled, an empty circle indicates they missed it. This gives you an easy visual idea of how well the patient is adhering to their schedule. At the top of the calendar, you will see either an adherence %, based on when patients cleared their reminders. 
 ![Patient Medication](./assets/PatientMedication11.png)
