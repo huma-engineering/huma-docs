@@ -24,7 +24,7 @@ The following table shows the specific permissions associated with each of these
 | Invite proxy | ✓ | --- | --- | ✓ | ✓ |
 | View own data | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Manage own data | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Manage labels patients | --- | ✓ | ✓ | --- | ✓ |
+| Manage labels | --- | ✓ | ✓ | --- | ✓ |
 
 All the above permissions can be combined into specific configurations to create custom roles. Please see the article on [Creating custom roles](./creating-custom-roles.md). 
 
