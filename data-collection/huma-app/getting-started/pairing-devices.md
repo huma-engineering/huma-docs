@@ -16,7 +16,7 @@ Before you can add any devices, you will need to enable Bluetooth. Follow the in
 
 ![Pairing devices](../assets/PairDevices02.png)
 
-Once you have granted Bluetooth permissions, you’ll see a list of devices which are available for pairing. Select the one you want to pair and then follow the instructions click **Next**.
+Once you have granted Bluetooth permissions, you’ll see a list of devices which are available for pairing. Select the one you want to pair then click **Next** and follow the instructions.
 
 ![Pairing devices](../assets/PairDevices03.png)
 
