@@ -18,6 +18,7 @@ As part of the billing configuration, you will need to add the following informa
 - Names of the insurance carriers, billing providers, and ICD-10 codes (uploaded as csv files)
 - Whether you are tracking according to RPM or RTM codes 
 - Whether you want to enable manual appointment scheduling (so you can track appointments that happen offline and count these towards remote patient monitoring time).
+
 Once you have finished the configuration, click **Save changes**.
 
 **Related articles**: [Billing and Reimbursement](../../../clinician-portal/managing-patients/billing-and-reimbursement.md)
