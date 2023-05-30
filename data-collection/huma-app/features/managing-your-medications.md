@@ -12,7 +12,7 @@ The **Medications** module is accessed from the **Track** or **Home** page.
 
 ![Medication module](../assets/ManageMeds01.png)
 
-You have access to the **Medication list**, which shows all medications added by you or your care team along with their dosage and recommended frequency, and the Medication log, which is a record of everything your have taken and when. 
+You have access to the **Medication list**, which shows all medications added by you or your care team along with their dosage and recommended frequency, and the **Medication log**, which is a record of everything your have taken and when. 
 
 ![Medication module](../assets/ManageMeds02.png)
 
@@ -30,7 +30,7 @@ You will get a notification to your mobile when it is time to take your medicati
 
 ![Medication module](../assets/ManageMeds04.png)
 
-You will be asked to record whether you have taken or skipped your scheduled dosage. This lets your care team keep an eye on your adherence and make adjustments where necessary.  
+You will be asked to record whether you have taken or skipped your scheduled dosage. This lets your care team keep an eye on your adherence and make adjustments where necessary. 
 
 When you see the notification asking whether you have taken your medication, simply click **Skipped** or **Taken** and then click **Done**. If your medication schedule is **As needed**, after clicking **Done**, you will be asked how many times you have taken your dosage.
 
