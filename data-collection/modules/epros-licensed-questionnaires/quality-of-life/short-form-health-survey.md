@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: Short Form Health Survey (SF-36)
 ---
 
