@@ -21,7 +21,7 @@ A list of questionnaires are listed below along with their characteristics:
 | --- | --- | --- | --- | --- |
 | [Activity and Health Questionnaire](../../../modules/bespoke-questionnaire/activity-health.md) | Questionnaire | Yes/No | No | Yes |
 | [Anxiety Level GAD-7](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Questionnaire | Yes | Yes | No |
-| [Asthma Control Test](../../../modules/epros-licensed-questionnaires/quality-of-life/asthma-control-test.md) | Yes | Manual or Breezeometer, followed by calculated |
+| [Asthma Control Test](../../../modules/epros-licensed-questionnaires/quality-of-life/asthma-control-test.md) | Questionnaire | Yes | Yes | No |
 | [Baseline COVID-19 Questionnaire [German]](../../../modules/bespoke-questionnaire/covid-19-baseline.md) | Questionnaire | Yes/No | No | Yes |
 | [COPD Assessment Test (CAT)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No |
 | [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
