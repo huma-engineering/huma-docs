@@ -12,7 +12,7 @@ To start, patients select the ACT module and click **Add**. When they have answe
 
 ![ACT](./assets/ACT01.png)
 
-In the Clinician Portal, care teams will see the latest COPD assessment test score for their patient, with concerning scores flagged for attention.
+In the Clinician Portal, care teams will see the latest ACT assessment test score for their patient, with concerning scores flagged for attention.
 
 ![ACT](./assets/ACT02.png)
 
