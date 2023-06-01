@@ -3,10 +3,10 @@ sidebar_position: 6
 title: ECG - Apple Health
 ---
 
-An ECG is often used alongside other tests to help diagnose and monitor conditions affecting the heart. The ECG module records the patient's heart rhythm and electrical activity to look for irregularities.
+An electrocardiogram (ECG) is often used alongside other tests to help diagnose and monitor conditions affecting the heart. The ECG module records the patient's heart rhythm and electrical activity to look for irregularities.
 
 ## How it works
-This feature is available to iPhone users with iOS14 or later, or Apple Watch Series 4 or later. Patients open the module and tap on "Sync" to retrieve the data from their Apple Watch or iPhone and sync it with the Huma App. 
+This feature is available to iPhone users with iOS14 or later, or Apple Watch Series 4 or later. Patients open the module and tap on **Sync** to retrieve the data from their Apple Watch or iPhone and sync it with the Huma App. 
 
 ![Adding ECG tracking from Apple Watch to Huma App](./assets/ecg.png)
 
