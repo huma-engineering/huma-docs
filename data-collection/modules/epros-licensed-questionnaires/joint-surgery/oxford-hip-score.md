@@ -9,7 +9,7 @@ Post-surgery care is key to successful recovery from any operation. The Oxford H
 
 Patients are asked a series of multiple-choice questions about how they feel and are assigned a score out of 48, where a lower score represents a better hip function.
 
-To start, patients select the Oxford Hip Score module and click "Add". From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+To start, patients select the Oxford Hip Score module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Oxford Hip Score in the Huma App](./assets/oxford-hip-score.png)
 
