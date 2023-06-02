@@ -39,6 +39,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [PROMIS Pain Interference](../../../modules/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
 | [PROMIS Physical Function](../../../modules/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
 | [PROMIS Global Health Survey](../../../modules/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
+| [Self-Rated Health](../../../modules/general/self-rated-health.md) | No | Manual |
 | [Short-Form Health Survey (SF-36)](../../../modules/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | PROM | Yes | Yes | No | 
 | [Veterans RAND Health Survey (VR-12)](../../../modules/epros-licensed-questionnaires/quality-of-life/VR-12-health-survey.md) | PROM | Yes | Yes | No | 
 
