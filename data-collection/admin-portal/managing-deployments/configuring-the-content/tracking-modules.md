@@ -24,22 +24,18 @@ The table below shows which modules have the threshold option and what data entr
 |--- | --- | --- | 
 | [Air Quality Module](../../../modules/general/air-quality.md) | Yes | Manual or Breezeometer, followed by calculated |
 | [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | No | Manual | 
-| Awareness Training | No | Manual | 
-| [BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated | 
 | [Blood glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
 | [Blood pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
 | [Body Measurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
 | [COVID-19 Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
 | [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
-| [CVD Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
-| [ECG](../../../modules/physiological/ecg-alivecor.md) | No | Sync (from Kardia) |
-| [ECGHealthKit](../../../modules/physiological/ecg-apple-health.md) | Yes | Sync (from Apple Health) | 
+| [Cardiovascular Disease Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
+| [Electrocardiograph](../../../modules/physiological/ecg-alivecor.md) | No | Sync (from Kardia) |
+| [ECG HealthKit](../../../modules/physiological/ecg-apple-health.md) | Yes | Sync (from Apple Health) | 
 | [Health Score](../../../modules/algorithm-based-assessments/health-score.md)| No | Manual, followed by calculated | 
 | [Heart rate/ HRV](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
-| Height Z-Score | No | Manual, followed by calculated | 
 | [High-Frequency HR](../../../modules/physiological/heart-rate.md) | No | Sync (from Apple Health, Google Fit) | 
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
-| Medical History | No | Manual | () |
 | [Medications](../../../modules/general/medications.md) | No | Manual | 
 | [Oxygen saturation](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Peak flow](../../../modules/physiological/peak-flow.md) | Yes | Manual, followed by calculated | 
@@ -47,13 +43,12 @@ The table below shows which modules have the threshold option and what data entr
 | [Pulse Oximetry](../../../modules/physiological/oxygen-saturation.md) | Yes | Manual | 
 | [Respiratory rate](../../../modules/physiological/respiratory-rate.md) | Yes | Manual |
 | [Resting heart rate](../../../modules/physiological/heart-rate.md) | Yes | Camera (from Happitech) |
-| [Self-Rated Health](../../../modules/general/self-rated-health.md) | No | Manual |
 | [Sleep](../../../modules/physiological/sleep.md) | Yes | Sync (from Apple Health, Google Fit) |
 | [Steps](../../../modules/physiological/steps.md) | No | Sync (from Apple Health or Google Fit) | 
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
-| [Waist to Height](../../../modules/physiological/body-measurement.md) | Yes | Manual, followed by calculated | 
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
+| [Weight & BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated |
 
 ## Configuring the module
 From the modules list, click the ![image](./assets/Edit.png) icon at the end of the row to configure the module.
