@@ -7,7 +7,7 @@ The Symptoms module is used to record a patient's symptoms as they occur. Keepin
 
 ## How it works
 
-The Symptoms module is set up with a predefined list of symptoms. Each time the patient opens the module, they select the symptoms they are experiencing at that time and also how severely they are experiencing them. 
+The Symptoms module is set up with a predefined list of symptoms. Each time the patient opens the module, they select the symptoms they are experiencing at that time and report how severely they are experiencing them. They may have additional questions to answer about the symptom, such as the frequency they experience it, depending on how the module has been configured. 
 
 ![Symptoms in the Huma App](./assets/symptoms.png)
 
@@ -17,7 +17,7 @@ Care teams get an overview of the number and severity of tracked symptoms along 
 
 ![Symptoms in the Clinician Portal](./assets/cp-patient-list-symptoms.png)
 
-From the patient’s dashboard, care teams can view a list of tracked symptoms along with any notes added by the patient.
+From the patient’s dashboard, care teams can view a list of tracked symptoms along with their severity. A message icon indicates where there is additional information available from the patient. Click the icon to view the details.
 
 ![Symptoms in the Clinician Portal](./assets/symptoms02.png)
 
