@@ -10,14 +10,15 @@ Some clients require billing data in order to claim reimbursement from insurance
 
 ## How it works
 
-In the **Deployment config** tab, go to **Billing** and enable the **Billing features** toggle to configure the billing.
+In the **Deployment config** tab, go to **Billing** and enable the **Billing feature** toggle to configure the billing.
 
 ![IMAGE](./assets/ConfigureBilling.png)
 
 As part of the billing configuration, you will need to add the following information:
 - Names of the insurance carriers, billing providers, and ICD-10 codes (uploaded as csv files)
 - Whether you are tracking according to RPM or RTM codes 
-- Whether you want to enable manual appointment scheduling (so you can track appointments that happen offline and count these towards remote patient monitoring time)
+- Whether you want to enable manual appointment scheduling (so you can track appointments that happen offline and count these towards remote patient monitoring time).
+
 Once you have finished the configuration, click **Save changes**.
 
 **Related articles**: [Billing and Reimbursement](../../../clinician-portal/managing-patients/billing-and-reimbursement.md)

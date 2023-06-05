@@ -18,4 +18,8 @@ This module integrates with the Breezometer to provide detailed information abou
 
 Clinicians can view air quality data on the **Patient List**.
 
+![Air Quality](./assets/AirQuality01.png)
+
 The **Patient Summary** displays a more detailed view of the patient's historic readings in graph or table form.
+
+![Air Quality](./assets/AirQuality02.png)

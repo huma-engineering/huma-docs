@@ -9,7 +9,7 @@ Good knee function is key to performing many regular activties, such as walking 
 
 Patients answer a number of subjective questions about knee function divided into 3 categories: symptoms, sports activity, and knee function. The symptoms subscale helps to evaluate things such as pain, stiffness, swelling, and giving-way of the knee. A score is assigned out of 100 which helps care teams to prioritise. 
 
-To start, patients select the Knee Health IKDC module and click "Add". From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+To start, patients select the Knee Health IKDC module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![International Knee Documentation Committee in Huma App](./assets/knee-health-ikdc.png)
 

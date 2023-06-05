@@ -5,7 +5,7 @@ title: Patient labels
 # Patient labels
 **User**: Admin; Access Controller; Organisation Staff; 
 
-Patient labels are a way to assess patients based on different criteria depending on their needs. For example, labels can be set based on risk level, patient status, communication channel, etc. is a useful metric to add to help different members of the care team see what is happening with specific patients.
+Patient labels are a way to assess patients based on different criteria. For example, labels can be set based on risk level, patient status, communication channel, etc. as a useful metric to help different members of the care team see what is happening with specific patients.
 
 ## How it works​
 Patient labels can be added manually. First, search for the patient on the patient list, then open the menu at the end of the row and select **Update labels**.

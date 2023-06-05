@@ -7,16 +7,11 @@ Shortness of breath can be caused by conditions such as asthma, chest infections
 
 ## How it works
 
-The Breathlessness module asks patients to answer a simple question; “How breathless are you when you are walking around or walking up stairs?”. Patients can choose from the following options:
-- None
-- Mild
-- Moderate
-- Severe
-- Very Severe
+The Breathlessness module asks patients to answer a simple question about their degree of breathlessness. Their response is converted into a score out of 5 which is shared with their care team, allowing them to monitor their level of breathlessness over time.
 
 ![Adding a breathlessness score to Huma App](./assets/breathlessness.png)
 
-Patients can view their historic breathlessness scores in a graph. In the Clinician Portal, care teams will be able to see the latest breathlessness scores from their patients and any concerning readings will be flagged. 
+Patients can view their historic breathlessness scores in a graph. In the Clinician Portal, care teams will be able to see the latest breathlessness scores from their patients. 
 
 ![Viewing Patient data in the Clinician Portal](./assets/cp-patient-list-breathlessness.png)
 

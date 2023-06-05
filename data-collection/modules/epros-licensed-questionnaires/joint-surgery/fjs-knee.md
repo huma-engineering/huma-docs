@@ -7,7 +7,7 @@ Good knee mobility is key to performing many regular activties, such as walking 
 
 ## How it works
 
-Patients answer a number of multiple choice questions about knee joint awareness. At the end of the questionnaire, they are assigned a score out of 100 which is shared with their care team. To start, patients can select the FJS Knee Score module and click "Add". From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+Patients answer a number of multiple choice questions about knee joint awareness. At the end of the questionnaire, they are assigned a score out of 100 which is shared with their care team. To start, patients can select the FJS Knee Score module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Forgotten Joint Score Knee in Huma App](./assets/fjs-knee.png)
 

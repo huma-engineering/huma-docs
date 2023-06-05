@@ -9,12 +9,12 @@ Good knee mobility in key to performing regular daily activities, such as standi
 
 Patients answer questions about the functionality of their knee on a subjective scale. Questions fall into the following categories: pain, symptoms, activities of daily living, sports and recreation, and quality of life. At the end of the questionnaire, patients are assigned a score out of 100.
 
-To start, patients can select the KOOS/WOMAC module and click "Add" to start. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+To start, patients select the KOOS/WOMAC module and click **Add** to start. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![KOOS/WOMAC in Huma App](./assets/koos-womac.png)
 
 
-In the Clinician Portal, care teams will see the latest KOOS/WOMAC score for their patient, with concerning scores flagged for attention.
+In the Clinician Portal, care teams will see the number of entries for KOOS/WOMAC and the date of the last entry.
 
 ![Clinician view of KOOS/WOMAC](./assets/cp-patient-list-koos-womac.png)
 
