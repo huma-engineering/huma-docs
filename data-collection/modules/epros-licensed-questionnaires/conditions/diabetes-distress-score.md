@@ -1,13 +1,13 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 title: Diabetes Distress Score
 ---
 
-Living with diabetes comes with challenges, so keeping track of how patients feel while managing their condition is an important part of their healthcare. Huma provides the Diabetes Distress Score Questionnaire so patients can report their wellbeing to care teams to help manage their diabetes.
+Living with diabetes comes with challenges, so keeping track of how patients feel while managing their condition is an important part of their healthcare. Huma provides the diabetes distress score questionnaire so patients can report their well being to care teams to help manage their diabetes.
 
 ## How it works
 
-The Diabetes Distress Score Questionnaire gives patients with diabetes a way to reflect on their wellbeing through a series of subjective questions, such as “Do you feel overwhelmed by the demands of living with diabetes”. They can choose from a set of multiple-choice responses to indicate the severity in each case.
+The diabetes distress score questionnaire gives patients with diabetes a way to reflect on their wellbeing through a series of subjective questions, such as “Do you feel overwhelmed by the demands of living with diabetes”. They can choose from a set of multiple-choice responses to indicate the severity in each case.
 
 From the Diabetes Distress Score module, patients can start the questionnaire by clicking **Add**.
 
