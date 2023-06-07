@@ -15,8 +15,8 @@ To start, patients select the PROMIS CAT Pain Interference module and click **Ad
 
 In the Clinician Portal, care teams will see the latest PROMIS CAT Pain Interference score for their patient, with concerning scores flagged for attention. 
 
-![Clinician View of PROMIS CAT Pain Interference](../mobility/assets/cp-patient-summary-promis-cat-pain-interference.png)
+![Clinician View of PROMIS CAT Pain Interference](./assets/cp-patient-summary-promis-cat-pain-interference.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Clinician View of PROMIS CAT Pain Interference](../mobility/assets/cp-module-details-promis-cat-pain-interference.png)
+![Clinician View of PROMIS CAT Pain Interference](.assets/cp-module-details-promis-cat-pain-interference.png)
