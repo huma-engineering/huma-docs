@@ -1,9 +1,9 @@
 ---
-sidebar_position: 4
-title: MG-ADL Questionnaire
+sidebar_position: 6
+title: Myasthenia Gravis-Activities of Daily Living Questionnaire (MG-ADL)
 ---
 
-The Myasthenia Gravis questionnaire is a quality-of-life PROM questionnaire where patients make a self-assessment about their current level of health. The questionnaire allows patients to use the Huma app to evaluate the impact of 8 key symptoms of MG on their daily life and share their responses with care teams in order to make more informed decisions about their healthcare.
+The myasthenia gravis activities of daily living (MG-ADL) questionnaire is a quality-of-life PROM questionnaire where patients make a self-assessment about their current level of health. The questionnaire allows patients to use the Huma app to evaluate the impact of 8 key symptoms of myasthenia gravis on their daily life and share their responses with care teams in order to make more informed decisions about their healthcare.
 
 ## How it works
 
