@@ -1,5 +1,7 @@
-
-
+---
+sidebar_position: 12
+title: Spatial Span Test
+---
 
 The spatial span test is a cognitive test of a patient’s short-term memory. The test helps clinicians assess   short-term memory loss or cognitive decline.
 
