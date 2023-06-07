@@ -19,4 +19,4 @@ In the Clinician Portal, care teams will see the latest PROMIS CAT Pain Interfer
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Clinician View of PROMIS CAT Pain Interference](.assets/cp-module-details-promis-cat-pain-interference.png)
+![Clinician View of PROMIS CAT Pain Interference](./assets/cp-module-details-promis-cat-pain-interference.png)
