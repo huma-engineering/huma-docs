@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-title: Quality of Life
+title: Health and Wellbeing
 ---
 
-Quality of life is measured by a patient's ability to easily complete day to day tasks, such as walking, self-care, socialising, etc. Huma provides a collection of questionnaires to determine an individual's overall health in terms of their quality of life. Quality of life questionnaires allow care teams to work with patients to evaluate both positive and negative outcomes and make informed decisions about their ongoing healthcare.
+Health and Wellbeing are measured by a patient's ability to easily complete day to day tasks, such as walking, self-care, socialising, etc. Huma provides a collection of questionnaires to determine an individual's overall physical or mental health and how it impacts on their quality of life. 
 
-These questionnaires are often utilised to collect outcomes from patients after receiving specific treatments. 
+These questionnaires are often used to collect outcomes from patients after receiving specific treatments. 
 
 ## How it works
 
