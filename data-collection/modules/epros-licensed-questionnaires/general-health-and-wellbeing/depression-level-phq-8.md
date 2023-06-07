@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Depression Level - PHQ-8
 ---
 
-Depression is a mental health issue experienced widely throughout our society and can have a significant impact on how a person navigates their daily life. The Patient Health Questionnaire depression scale (PHQ-8) screens for and measures the severity of depression. Results are shared with care teams who can work with patients to provide the care that is needed.
+Depression is a mental health issue experienced widely throughout our society and can have a significant impact on how a person navigates their daily life. The patient health questionnaire depression scale (PHQ-8) screens for and measures the severity of depression. Results are shared with care teams who can work with patients to provide the care that is needed.
 
 ## How it works
 
@@ -13,7 +13,7 @@ The PHQ-8 questionnaire is a quick and effective depression assessment tool for 
 - More than half the days
 - Nearly every day
 
-To start, patients select the Depression Level - PHQ-8 module and click "Add". When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+To start, patients select the Depression Level - PHQ-8 module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![Depression Level - PHQ-8 in Huma App](./assets/depression-level-phq-8.png)
 
