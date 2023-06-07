@@ -1,8 +1,8 @@
 ---
 sidebar_position: 7
-title: VR-12 Health Survey
+title: Veterans RAND-12 Health Survey
 ---
-The Veteran RAND-12 health survey is a licensed quality-of-life PROM questionnaire where patients make a self-assessment about their current level of health. The questionnaire allows patients to use the Huma app to continually evaluate their quality of life and share their responses with care teams in order to make more informed decisions about their healthcare.
+The Veterans RAND-12 health survey is a licensed quality-of-life PROM questionnaire where patients make a self-assessment about their current level of health. The questionnaire allows patients to use the Huma app to continually evaluate their quality of life and share their responses with care teams in order to make more informed decisions about their healthcare.
 
 It is also a valuable tool in research that could be used to measure, compare and value health status across disease areas.
 
