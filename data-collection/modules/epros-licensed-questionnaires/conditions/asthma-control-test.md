@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Asthma Control Test (ACT)
 ---
-The Asthma Control Test is a questionnaire where patients answer 5 questions about their asthma symptoms over the previous 4 weeks to help their care team asses the severity of their condition.
+The asthma control test is a questionnaire where patients answer 5 questions about their asthma symptoms over the previous 4 weeks to help their care team asses the severity of their condition.
 
 ## How it works
 
