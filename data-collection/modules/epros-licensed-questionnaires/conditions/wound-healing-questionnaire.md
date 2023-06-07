@@ -1,4 +1,7 @@
-
+---
+sidebar_position: 9
+title: Wound Healing Questionnaire (WHQ)
+---
 
 The Bluebelle wound healing questionnaire (WHQ) is a self-administered outcome tool to measure the efficacy of wound healing after surgery. 
 
