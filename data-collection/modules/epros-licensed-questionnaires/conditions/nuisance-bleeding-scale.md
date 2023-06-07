@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 title: Nuisance Bleeding Scale Questionnaire
 ---
 
@@ -8,13 +8,13 @@ Nuisance bleeding is any bleeding that is considered to be a nuisance or annoyan
 
 ## How it works
 
-The Nuisance Bleeding Scale Questionnaire is a quick and effective assessment tool for care teams. Patients answer a series of questions about their nuisance bleeding and answers are provided to care teams to help them provide appropriate and timely healthcare.
+The nuisance bleeding scale questionnaire is a quick and effective assessment tool for care teams. Patients answer a series of questions about their nuisance bleeding and answers are provided to care teams to help them provide appropriate and timely healthcare.
  
-To start, patients select the Nuisance Bleeding Scale Questionnaire module and click "Add". When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
+To start, patients select the Nuisance Bleeding Scale module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 In the Clinician Portal, care teams will see the latest Nuisance Bleeding score for their patient, with concerning scores flagged for attention. In the Patient Summary, care teams can view all historical data in graph or table form.
 
-The Nuisance Bleeding Scale questionnaire contains 24 questions:
+The nuisance bleeding scale questionnaire contains 24 questions:
 
 ## Questions
 
