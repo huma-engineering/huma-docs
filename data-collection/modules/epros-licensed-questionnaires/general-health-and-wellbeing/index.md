@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Health and Wellbeing
+title: General Health and Wellbeing
 ---
 
 Health and Wellbeing are measured by a patient's ability to easily complete day to day tasks, such as walking, self-care, socialising, etc. Huma provides a collection of questionnaires to determine an individual's overall physical or mental health and how it impacts on their quality of life. 
