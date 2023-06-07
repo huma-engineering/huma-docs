@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 10
 title: Self-Rated Health module 
 ---
 
@@ -7,7 +7,7 @@ The Self-rated Health module provides a way for patients to record how they are 
 
 ## How it works
 
-The module asks patients to answer a simple question; “In general, how would you rate your physical health?”. They can answer "Excellent", "Very Good", "Good",  "Fair" or "Poor".
+The module asks patients to answer a simple question; “In general, how would you rate your physical health?”. Patients select from the following responses: Excellent; Very Good; Good; Fair; Poor.
 
 ![Self-Rated Health](./assets/SelfRated01.png)
 
