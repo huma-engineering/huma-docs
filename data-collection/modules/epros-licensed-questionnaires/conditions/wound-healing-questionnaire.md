@@ -9,11 +9,12 @@ The WHQ consists of a 41 questions about the condition of the wound. Some questi
 
 To start, patients select the WHQ module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. 
 
-
+![Wound Healing Questionnaire (WHQ) in Huma App](./assets/whq.png)
 
 In the Clinician Portal, care teams will see the latest WHQ score for their patient, with concerning scores flagged for attention.
 
-
+![Wound Healing Questionnaire (WHQ) in Huma App](./assets/cp-module-details-whq.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
+![Wound Healing Questionnaire (WHQ) in Huma App](./assets/cp-patient-summary-whq.png)
