@@ -17,6 +17,6 @@ In the Clinician Portal, care teams will see the latest QOL-DN score for their p
 
  In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
-![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-module-details-norfolk-quality-of-life-score.png)
+![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-module-details-norfolk-qol-dn.png)
 
 This questionnaire can be used in conjunction with the [Diabetes Distress Score Questionnaire](./diabetes-distress-score.md)
