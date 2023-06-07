@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: EQ-5D-5L
+title: Quality of Life Questionnaire (EQ-5D-5L)
 ---
 
 The EQ-5D-5L is a licensed quality-of-life PROM questionnaire where patients make a self-assessment about their current state of wellbeing. The questionnaire allows patients to use the Huma App to continually evaluate their quality of life and share their responses with care teams in order to make more informed decisions about their healthcare.
