@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Tracking modules 
 ---
 # Tracking modules
@@ -26,11 +26,7 @@ The table below shows which modules have the threshold option and what data entr
 | [Blood Glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
 | [Blood Pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
 | [Body Measurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
-| [Daily Check-in](../../../modules/general/daily-check-in.md) | No | Manual |
-| [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
-| [Cardiovascular Disease Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
 | [Electrocardiograph](../../../modules/physiological/ecg.md) | No | Sync (from Kardia) |
-| [Health Score](../../../modules/algorithm-based-assessments/health-score.md)| No | Manual, followed by calculated | 
 | [Heart rate](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
 | [Medications](../../../modules/general/medications.md) | No | Manual | 
