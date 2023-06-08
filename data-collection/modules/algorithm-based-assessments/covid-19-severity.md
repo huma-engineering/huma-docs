@@ -7,7 +7,7 @@ Huma aims to model the risk of individuals developing complications due to COVID
 
 ## How it works
 
-Patients will answer questions from the COVID-19 Severity Risk Score Questionnaire and their results will be stored and shared with their care team. 
+Patients will answer questions from the COVID-19 severity sisk score questionnaire and their results will be stored and shared with their care team. 
 
 In the Clinician Portal, care teams will see the latest COVID-19 severity risk score for their patient. Concerning scores will be flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
