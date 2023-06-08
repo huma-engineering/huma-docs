@@ -13,7 +13,7 @@ Patients answer a series of questions about how much alcohol they have consumed 
 
 **Add the types and amounts of alcohol you have consumed in the past week.**
 
-Select "Add" from the options below and add amount and strength
+Select **Add** from the options below and add amount and strength
 
 - Beer, Lager, or Cider
     - enter number of bottles (330ml)
