@@ -1,13 +1,13 @@
 ---
 sidebar_position: 7
-title: Heart Rate/Heart Rate Variability
+title: Heart Rate
 ---
 
-Depending on which source of data the readings will come from, the Heart Rate module can be used to collect Heart Rate, Heart Rate Variaibility and Classification. For Heart rate, the module records how many times a patient’s heart beats per minute. A healthy heart rate is between 60 and 100 bpm but can be affected by certain heart conditions, stress, anxiety, etc. 
+Depending on which source of data the readings come from, the Heart Rate module can be used to collect heart rate, heart rate variability and classification. For heart rate, the module records how many times a patient’s heart beats per minute. A healthy heart rate is between 60 and 100 bpm but can be affected by certain heart conditions, stress, anxiety, etc. 
 
 Heart rate variability measures the difference between your individual heartbeats. These fluctuations are undetectable without a specialised device, but can indicate current or future health problems, including heart conditions and mental health issues like anxiety and depression.
 
-Classification is the given outcome of the heart beat rhythm. Huma provides 2 possible heart rate classification outcome using Happitech's medical grade, Class IIa CE-certified SDK - Atrial Fibrillation and Normal Sinus Rhythm.
+Classification is the outcome of the heartbeat rhythm. Huma provides 2 possible heart rate classification outcomes using Happitech's medical grade, class IIa CE-certified SDK - atrial fibrillation and normal sinus rhythm.
 
 ## How it works
 
@@ -23,7 +23,7 @@ The time and date is added automatically at the moment they make the entry (alth
 
 ![Adding heart rate to the Huma App](./assets/heart-rate.png)
 
-Patients can view their historic reading results in a graph. In the Clinician Portal, care teams will be able to easily see the latest readings from their patients and any concerning readings will be flagged.  
+Patients can view their historic readings in a graph. In the Clinician Portal, care teams will be able to easily see the latest readings from their patients and any concerning readings will be flagged.  
 
 ![View patient heart rate in the Clinician Portal](./assets/cp-patient-list-heart-rate.png)
 
