@@ -21,8 +21,11 @@ A list of questionnaires are listed below along with their characteristics:
 | --- | --- | --- | --- | --- |
 | [Anxiety Level (GAD-7)](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Questionnaire | Yes | Yes | No |
 | [Asthma Control Test (ACT)](../../../modules/epros-licensed-questionnaires/quality-of-life/asthma-control-test.md) | Questionnaire | Yes | Yes | No |
+| [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | No | Manual; Camera (Happitech), followed by calculated | 
+| [Cardiovascular Disease Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | No | Manual; Camera (Happitech & BVI), followed by calculated |
 | [Chronic Obstructive Pulmonary Disease Assessment Test (COPD)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No |
 | [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
+| [Health Score](../../../modules/algorithm-based-assessments/health-score.md)| No | Manual, followed by calculated | 
 | [Quality of Life Questionnaire (EQ-5D-5L)](../../../modules/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) | PROM | Yes | No | No |
 | [Forgotten Joint Score (FJS) Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [Forgotten Joint Score (FJS) Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
