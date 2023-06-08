@@ -18,7 +18,7 @@ You have access to the **Medication list**, which shows all medications added by
 
 ## Adding new medications
 
-From the Medications module, you can add new medications to let your care team know about medications they may not have prescribed directly. Click the Add medication button then follow the instructions on the app for entering the name, dosage and frequency. 
+From the Medications module, you can add new medications to let your care team know about medications they may not have prescribed directly. Click the **Add medication** button then follow the instructions on the app for entering the name, dosage and frequency. 
 
 ![Medication module](../assets/ManageMeds03.png)
 
