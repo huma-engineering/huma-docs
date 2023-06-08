@@ -58,7 +58,7 @@ Choose one of the following
 
 #### Question 6
 
-**What kind of smoker are you?**
+**What kind of smoker were you?**
 
 Choose one of the following
 
@@ -67,7 +67,7 @@ Choose one of the following
 
 #### Question 7
 
-**How many years have were you a smoker**
+**How many years were you a smoker**
 
 Choose one of the following
 
@@ -100,7 +100,7 @@ Choose one of the following
 Choose one of the following
 
 - Rarely
-- Occasionaly
+- Occasionally
 - Often
 - Every day
 
