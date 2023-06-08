@@ -39,7 +39,7 @@ The table below shows which modules have the threshold option and what data entr
 | [Symptoms](../../../modules/general/symptoms.md) | Yes | Manual | 
 | [Temperature](../../../modules/physiological/temperature.md) | Yes | Manual |
 | [Weight](../../../modules/physiological/weight.md) | Yes | Manual | 
-| [Weight & BMI](../../../modules/physiological/bmi.md) | Yes | Manual, followed by calculated |
+| [Weight & BMI](../../../modules/physiological/weight-and-bmi.md) | Yes | Manual, followed by calculated |
 
 ## Configuring the module
 From the modules list, click the ![image](./assets/Edit.png) icon at the end of the row to configure the module.
