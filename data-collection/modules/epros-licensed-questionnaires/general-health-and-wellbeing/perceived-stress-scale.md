@@ -11,7 +11,7 @@ Patients are asked about their feelings and thoughts over the past month in orde
 
 In the Clinician Portal, care teams will see the latest Perceived Stress Scale (PSS) score for their patient, with concerning scores flagged for attention. In the Patient Summary, care teams can view all historical data in graph or table form.
 
-The Mental health: Perceived Stress Scale (PSS) questionnaire contains a total of ten questions:
+The perceived stress scale (PSS) questionnaire contains a total of ten questions:
 
 ## Questions
 
