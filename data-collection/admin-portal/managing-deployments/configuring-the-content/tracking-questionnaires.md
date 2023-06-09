@@ -45,7 +45,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [Self-Rated Health](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/self-rated-health.md) | PROM | Manual | Yes | Yes |
 | [Short-Form Health Survey (SF-36)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/short-form-health-survey.md) | PROM | Yes | Yes | No | 
 | [Veterans RAND Health Survey (VR-12)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/VR-12-health-survey.md) | PROM | Yes | Yes | No | 
-| [Bluebelle Wound Healing Questionnaire (WHQ)](../../../modules/epros-licensed-questionnaires/conditions/whq.md) | PROM | Yes | Yes | No | 
+| [Bluebelle Wound Healing Questionnaire (WHQ)](../../../modules/epros-licensed-questionnaires/conditions/wound-healing-questionnaire.md) | PROM | Yes | Yes | No | 
 
 ## Creating custom questionnaires
 You can create a completely new questionnaire from scratch. In the **Add track module** dropdown, select **Add new questionnaire**.
