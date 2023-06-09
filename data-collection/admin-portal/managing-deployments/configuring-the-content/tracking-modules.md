@@ -26,6 +26,8 @@ The table below shows which modules have the threshold option and what data entr
 | [Blood Glucose](../../../modules/physiological/blood-glucose.md) | Yes | Manual | 
 | [Blood Pressure](../../../modules/physiological/blood-pressure.md) | Yes | Manual |
 | [Body Measurement](../../../modules/physiological/body-measurement.md) | No | Manual or collect from camera (from BVI) | 
+| [Breathlessness](../../../modules/general/breathlessness.md) | No | Manual | 
+| [Daily Check-In](../../../modules/general/daily-check-in.md) | No | Manual |
 | [Electrocardiograph](../../../modules/physiological/electrocardiograph.md) | No | Sync (from Kardia) |
 | [Heart rate](../../../modules/physiological/heart-rate.md) | Yes | Manual; Camera (from Happitech); Sync (from Apple Health, Google Fit) | 
 | [Journal](../../../modules/general/journal.md) | No | Manual | 
