@@ -31,11 +31,17 @@ A list of questionnaires are listed below along with their characteristics:
 | [Forgotten Joint Score (FJS) Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [Forgotten Joint Score (FJS) Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
 | [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/conditions/kccq.md) | PROM | Yes | Yes | No |  
+| [Knee Health (IKDC)](../../../modules/epros-licensed-questionnaires/joint-surgery/idkc.md)  | PROM | Yes | Yes | No | 
 | [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](../../../modules/epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
+| [Lysholm & Tegner Knee Mobility](../../../modules/epros-licensed-questionnaires/joint-surgery/lysholm-and-tegner.md)  | PROM | Yes | Yes | No | 
 | [Myesthenia Gravis Questionnaire (MG-ADL)](../../../modules/epros-licensed-questionnaires/conditions/mg-adl.md) | PROM | Yes | Yes | No |
+| [Nuisance Bleeding](../../../modules/epros-licensed-questionnaires/conditions/nuisance-bleeding.md) | PROM | Yes | Yes | No |
+| [Oxford Anthroplasty Early Change Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oacs.md)  | PROM | Yes | Yes | No |
+| [Oxford Anthroplasty Early Recovery Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oars.md)  | PROM | Yes | Yes | No |
 | [Quality of Life Diabetic Neuropathy Score (Norfolk QoL-DN)](../../../modules/epros-licensed-questionnaires/conditions/qol-dn.md) | PROM | Yes | Yes | No | 
 | [Oxford Knee Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | PROM | Yes | Yes | No | 
 | [Oxford Hip Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | PROM | Yes | Yes | No | 
+| [Oxford Shoulder Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-shoulder-score.md) | PROM | Yes | Yes | No | 
 | [Patient Activation Measure (PAM 13)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/patient-activation-measure-13.md) | PROM | Yes | No | No |
 | [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/perceived-stress-scale.md) | PROM | Yes/No | No | Yes |
 | [Depression Level (PHQ-8)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/depression-level-phq-8.md) | PROM | Yes | Yes | No | 
