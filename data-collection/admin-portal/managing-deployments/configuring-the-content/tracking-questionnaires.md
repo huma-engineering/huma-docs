@@ -30,7 +30,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [Quality of Life Questionnaire (EQ-5D-5L)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/eq-5d-5l.md) | PROM | Yes | No | No |
 | [Forgotten Joint Score (FJS) Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [Forgotten Joint Score (FJS) Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
-| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
+| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/conditions/kccq.md) | PROM | Yes | Yes | No |  
 | [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](../../../modules/epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
 | [Myesthenia Gravis Questionnaire (MG-ADL)](../../../modules/epros-licensed-questionnaires/conditions/mg-adl.md) | PROM | Yes | Yes | No |
 | [Quality of Life Diabetic Neuropathy Score (Norfolk QoL-DN)](../../../modules/epros-licensed-questionnaires/conditions/qol-dn.md) | PROM | Yes | Yes | No | 
