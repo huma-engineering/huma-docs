@@ -15,6 +15,8 @@ To start, patients select the PROMIS Global Health module and click **Add**. Whe
 
 In the Clinician Portal, care teams will see the latest PROMIS Global Health score for their patient, with concerning scores flagged for attention.
 
-<!-- ![Clinician view of gloabl health](./assets/) -->
+![PROMIS Global Health in Huma App](./assets/cp-module-details-promis-global-health.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
+
+![PROMIS Global Health in Huma App](./assets/cp-patient-summary-promis-global-health.png)
