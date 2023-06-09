@@ -22,7 +22,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | Algorithm-based | Manual, followed by calculated |
 | [Anxiety Level (GAD-7)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/anxiety-level-gad-7.md) | PROM | Yes | Yes | No |
 | [Asthma Control Test (ACT)](../../../modules/epros-licensed-questionnaires/conditions/asthma-control-test.md) | PROM | Yes | Yes | No |
-| [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | Algorythm-based | Manual; Camera (Happitech), followed by calculated | 
+| [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | Algorithm-based | Manual; Camera (Happitech), followed by calculated | 
 | [Cardiovascular Disease Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | Algorithm-based | Manual; Camera (Happitech & BVI), followed by calculated |
 | [Chronic Obstructive Pulmonary Disease Assessment Test (COPD)](../../../modules/epros-licensed-questionnaires/conditions/COPD.md) | PROM | Yes | Yes | No |
 | [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/conditions/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
