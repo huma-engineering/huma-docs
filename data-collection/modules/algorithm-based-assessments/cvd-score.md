@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: CVD Risk Score
+title: Cardiovascular Risk
 ---
 
-The CVD risk score asseses the risk of a patient developing cardiovascular disease (CVD) over the next 10 years and helps them make better choices that will improve their longevity. 
+The cardiovascular risk score asseses the risk of a patient developing cardiovascular disease (CVD) over the next 10 years and helps them make better choices that will improve their longevity. 
 
 ## How it works
 
