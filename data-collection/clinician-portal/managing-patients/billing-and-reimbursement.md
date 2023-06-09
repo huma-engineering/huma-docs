@@ -28,13 +28,13 @@ You can filter the patient list for those patients awaiting onboarding for billi
 
 ![Billing](./assets/Billing03.png)
 
-## Adding appointments and tracking compliance
+### Adding appointments and tracking compliance
 
 From the appointments page of the patient dashboard, clinicians can schedule calls. These calls are a key requirement for CPT code 99457 and 99458 and the cumulative timestamp for that calendar month appears at the bottom-right, across all patient specific pages.
 
 ![Billing](./assets/Billing04.png)
 
-From any of the patient dashboard screens, you will see a timestamp at the bottom right showing patient compliance for the current billing period. click the timestamp to view the billing requirement status for the current time period.
+Click the timestamp to view the billing requirement status for the current time period.
 
 ![Billing](./assets/Billing05.png)
 
@@ -42,13 +42,13 @@ For codes with a pending status, hover over the information icon to see what act
 
 ![Billing](./assets/Billing06.png)
 
-From the patient list, you can monitor billing compliance for all patients. Select Patients billing from the filters at the top to see a list of all patients onboarded for billing along with their status for the different billing codes. Colour-coded alerts let you see quickly which patients are not complying with billing requirements and which elements they are missing i.e. calls or number of days.
+From the patient list, you can monitor billing compliance for all patients. Select **Patients billing** from the filters at the top to see a list of all patients onboarded for billing along with their status for the different billing codes. Colour-coded alerts let you see quickly which patients are not complying with billing requirements and which elements they are missing i.e. calls or number of days.
 
 You can use the second filters to choose the priority with which to view your patients. Prioritise by billing code and order either by proximity of deadline or in ascending/descending order.
 
 ![Billing](./assets/Billing07.png)
 
-## Exporting billing information
+### Exporting billing information
 
 Billing information for the entire patient population can be exported in an aggregated report in order to provide a statement for the purpose of billing or reimbursement.
 
