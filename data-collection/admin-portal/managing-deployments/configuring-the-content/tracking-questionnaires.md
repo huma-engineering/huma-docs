@@ -31,7 +31,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [Forgotten Joint Score (FJS) Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [Forgotten Joint Score (FJS) Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
 | [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/conditions/kccq.md) | PROM | Yes | Yes | No |  
-| [Knee Health (IKDC)](../../../modules/epros-licensed-questionnaires/joint-surgery/knee-health-idkc.md)  | PROM | Yes | Yes | No | 
+| [Knee Health (IKDC)](../../../modules/epros-licensed-questionnaires/joint-surgery/knee-health-ikdc.md)  | PROM | Yes | Yes | No | 
 | [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](../../../modules/epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
 | [Lysholm & Tegner Knee Mobility](../../../modules/epros-licensed-questionnaires/joint-surgery/lysholm-tegner.md)  | PROM | Yes | Yes | No | 
 | [Myesthenia Gravis Questionnaire (MG-ADL)](../../../modules/epros-licensed-questionnaires/conditions/mg-adl.md) | PROM | Yes | Yes | No |
