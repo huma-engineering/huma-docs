@@ -48,6 +48,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [PROMIS Pain Interference](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-cat-pain-interference.md) | PROM | Yes | No | No |
 | [PROMIS Physical Function](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-cat-physical-function.md) | PROM | Yes | No | No |
 | [PROMIS Global Health Survey](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-global-health.md) | PROM | Yes | No | No | 
+| [quickDASH Questionnaire](../../../modules/epros-licensed-questionnaires/joint-surgery/quickdash.md) | PROM | Yes | No | No | 
 | [Self-Rated Health](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/self-rated-health.md) | PROM | Manual | Yes | Yes |
 | [Short-Form Health Survey (SF-36)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/short-form-health-survey.md) | PROM | Yes | Yes | No | 
 | [Spatial Span Test](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/spatial-span-test.md) | PROM | Yes | Yes | No | 
