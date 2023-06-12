@@ -48,4 +48,4 @@ Once the Fitbit is connected, data will be collected automatically and synced to
 
 Unless otherwise specified, Fitbit products and services are not medical devices, and are not intended to diagnose, treat, cure or prevent any disease. With regard to accuracy, Fitbit has developed products and services to track certain wellness information as accurately as reasonably possible. The accuracy of Fitbit’s products and services is not intended to be equivalent to medical devices or scientific measurement devices.  This should be clearly communicated to the client prior to deployment.
 
-**Related articles**: [Pairing devices](../getting-started/pairing-devices.md); [Entering your health data]((../getting-started/entering-your-health-data.md))
+**Related articles**: [Pairing devices](../getting-started/pairing-devices.md); [Entering your health data](./entering-your-health-data.md)
