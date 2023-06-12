@@ -50,6 +50,7 @@ A list of questionnaires are listed below along with their characteristics:
 | [PROMIS Global Health Survey](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-global-health.md) | PROM | Yes | No | No | 
 | [Self-Rated Health](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/self-rated-health.md) | PROM | Manual | Yes | Yes |
 | [Short-Form Health Survey (SF-36)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/short-form-health-survey.md) | PROM | Yes | Yes | No | 
+| [Spatial Span Test](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/spatial-span-test.md) | PROM | Yes | Yes | No | 
 | [Veterans RAND Health Survey (VR-12)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/VR-12-health-survey.md) | PROM | Yes | Yes | No | 
 | [Bluebelle Wound Healing Questionnaire (WHQ)](../../../modules/epros-licensed-questionnaires/conditions/wound-healing-questionnaire.md) | PROM | Yes | Yes | No | 
 
