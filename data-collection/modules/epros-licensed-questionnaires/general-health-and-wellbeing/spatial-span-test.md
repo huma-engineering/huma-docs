@@ -21,5 +21,5 @@ In the Clinician Portal, care teams will see the latest Spatial Span Test score 
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Spatial Spain Test](./assets/cp-patient-summary-spatial-span.png)
+![Spatial Spain Test](./assets/cp-patient-summary-spatial-span-test.png)
 
