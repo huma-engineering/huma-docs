@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Tracking questionnaires 
 ---
 # Tracking questionnaires and ePROs
@@ -13,35 +13,47 @@ Questionnaires can be added to the Deployment as a tracking module in the same w
 ![image](./assets/Questionnaires01.png)
 
 ## Questionnaire list
-Questionnaires fall into two categories; **Questionnaires** or **PROMs** (Patient Recorded Outcome Measures), also known as ePROs or PROs. PROMs have set questions and answer options which cannot be modified and a score assigned which can sometimes be displayed to patients. PROMs appear as a standalone module to patients and care teams whereas questionnaires are grouped under the umbrella 'Questionnaires' module. Questionnaires can be scored but don't have to be and the scores are not shown to patients. As such, these are fully customisable (unlike ePROs). 
+Questionnaires fall into two categories; **Questionnaires** or **PROMs** (patient recorded outcome measures), also known as ePROs or PROs. PROMs have set questions and answer options which cannot be modified and a score assigned which can sometimes be displayed to patients. PROMs appear as a standalone module to patients and care teams whereas questionnaires are grouped under the umbrella 'Questionnaires' module. Questionnaires can be scored but don't have to be and the scores are not shown to patients. As such, these are fully customisable (unlike ePROs). 
 
 A list of questionnaires are listed below along with their characteristics:   
 
 | Questionnaire | Type | Scored | Score shown to patient | Can be modified |
 | --- | --- | --- | --- | --- |
-| [Anxiety Level (GAD-7)](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | Questionnaire | Yes | Yes | No |
-| [Asthma Control Test (ACT)](../../../modules/epros-licensed-questionnaires/quality-of-life/asthma-control-test.md) | Questionnaire | Yes | Yes | No |
-| [Chronic Obstructive Pulmonary Disease Assessment Test (COPD)](../../../modules/epros-licensed-questionnaires/quality-of-life/COPD.md) | PROM | Yes | Yes | No |
-| [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
-| [Quality of Life Questionnaire (EQ-5D-5L)](../../../modules/epros-licensed-questionnaires/quality-of-life/eq-5d-5l.md) | PROM | Yes | No | No |
+| [Audio Word Recall](../../../modules/algorithm-based-assessments/audio-word-recall.md) | Algorithm-based | Manual, followed by calculated |
+| [Anxiety Level (GAD-7)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/anxiety-level-gad-7.md) | PROM | Yes | Yes | No |
+| [Asthma Control Test (ACT)](../../../modules/epros-licensed-questionnaires/conditions/asthma-control-test.md) | PROM | Yes | Yes | No |
+| [COVID-19 Risk Score](../../../modules/algorithm-based-assessments/covid-19-severity.md) | Algorithm-based | Manual; Camera (Happitech), followed by calculated | 
+| [Cardiovascular Disease Risk Score](../../../modules/algorithm-based-assessments/cvd-score.md) | Algorithm-based | Manual; Camera (Happitech & BVI), followed by calculated |
+| [Chronic Obstructive Pulmonary Disease Assessment Test (COPD)](../../../modules/epros-licensed-questionnaires/conditions/COPD.md) | PROM | Yes | Yes | No |
+| [Diabetes Distress Score (DDS)](../../../modules/epros-licensed-questionnaires/conditions/diabetes-distress-score.md)| PROM | Yes | Yes | No | 
+| [Health Score](../../../modules/algorithm-based-assessments/health-score.md)| Algorithm-based | Manual, followed by calculated | 
+| [Quality of Life Questionnaire (EQ-5D-5L)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/eq-5d-5l.md) | PROM | Yes | No | No |
 | [Forgotten Joint Score (FJS) Knee](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-knee.md) | PROM | Yes | Yes | No | 
 | [Forgotten Joint Score (FJS) Hip](../../../modules/epros-licensed-questionnaires/joint-surgery/fjs-hip.md) | PROM | Yes | Yes | No | 
-| [Generalised Anxiety Disorder Level (GAD-7)](../../../modules/epros-licensed-questionnaires/mental-health/anxiety-level-gad-7.md) | PROM | Yes | Yes | No | 
-| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/heart-failure/kansas-city-cardiomyopathy-questionnaire.md) | PROM | Yes | Yes | No |  
+| [Kansas City Cardiomyopathy Questionnaire (KCCQ)](../../../modules/epros-licensed-questionnaires/conditions/kccq.md) | PROM | Yes | Yes | No |  
+| [Knee Health (IKDC)](../../../modules/epros-licensed-questionnaires/joint-surgery/knee-health-ikdc.md)  | PROM | Yes | Yes | No | 
 | [Knee Injury and Osteoarthritis Outcome Score (KOOS/WOMAC)](../../../modules/epros-licensed-questionnaires/joint-surgery/koos-womac.md)  | PROM | Yes | Yes | No | 
-| [Myesthenia Gravis Questionnaire (MG-ADL)](../../../modules/epros-licensed-questionnaires/quality-of-life/mg-adl.md) | PROM | Yes | Yes | No |
-| [Quality of Life Diabetic Neuropathy Score (Norfolk QoL-DN)](../../../modules/epros-licensed-questionnaires/diabetes-diabetic-polyneuropathy/qol-dn.md) | PROM | Yes | Yes | No | 
+| [Lysholm & Tegner Knee Mobility](../../../modules/epros-licensed-questionnaires/joint-surgery/lysholm-tegner.md)  | PROM | Yes | Yes | No | 
+| [Myesthenia Gravis Questionnaire (MG-ADL)](../../../modules/epros-licensed-questionnaires/conditions/mg-adl.md) | PROM | Yes | Yes | No |
+| [Nuisance Bleeding](../../../modules/epros-licensed-questionnaires/conditions/nuisance-bleeding-scale.md) | PROM | Yes | Yes | No |
+| [Oxford Anthroplasty Early Change Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oacs.md)  | PROM | Yes | Yes | No |
+| [Oxford Anthroplasty Early Recovery Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oars.md)  | PROM | Yes | Yes | No |
+| [Quality of Life Diabetic Neuropathy Score (Norfolk QoL-DN)](../../../modules/epros-licensed-questionnaires/conditions/qol-dn.md) | PROM | Yes | Yes | No | 
 | [Oxford Knee Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-knee-score.md) | PROM | Yes | Yes | No | 
 | [Oxford Hip Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-hip-score.md) | PROM | Yes | Yes | No | 
-| [Patient Activation Measure (PAM 13)](../../../modules/epros-licensed-questionnaires/patient-activation/patient-activation-measure-13.md) | PROM | Yes | No | No |
-| [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/mental-health/perceived-stress-scale.md) | Questionnaire | Yes/No | No | Yes |
-| [Depression Level (PHQ-8)](../../../modules/epros-licensed-questionnaires/mental-health/depression-level-phq-8.md) | PROM | Yes | Yes | No | 
-| [PROMIS Pain Interference](../../../modules/epros-licensed-questionnaires/pain/promis-cat-pain-interference.md) | PROM | Yes | No | No |
-| [PROMIS Physical Function](../../../modules/epros-licensed-questionnaires/mobility/promis-cat-physical-function.md) | PROM | Yes | No | No |
-| [PROMIS Global Health Survey](../../../modules/epros-licensed-questionnaires/quality-of-life/promis-global-health.md) | PROM | Yes | No | No | 
-| [Self-Rated Health](../../../modules/general/self-rated-health.md) | No | Manual |
-| [Short-Form Health Survey (SF-36)](../../../modules/epros-licensed-questionnaires/quality-of-life/short-form-health-survey.md) | PROM | Yes | Yes | No | 
-| [Veterans RAND Health Survey (VR-12)](../../../modules/epros-licensed-questionnaires/quality-of-life/VR-12-health-survey.md) | PROM | Yes | Yes | No | 
+| [Oxford Shoulder Score](../../../modules/epros-licensed-questionnaires/joint-surgery/oxford-shoulder-score.md) | PROM | Yes | Yes | No | 
+| [Patient Activation Measure (PAM 13)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/patient-activation-measure-13.md) | PROM | Yes | No | No |
+| [Perceived Stress Scale](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/perceived-stress-scale.md) | PROM | Yes/No | No | Yes |
+| [Depression Level (PHQ-8)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/depression-level-phq-8.md) | PROM | Yes | Yes | No | 
+| [PROMIS Pain Interference](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-cat-pain-interference.md) | PROM | Yes | No | No |
+| [PROMIS Physical Function](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-cat-physical-function.md) | PROM | Yes | No | No |
+| [PROMIS Global Health Survey](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/promis-global-health.md) | PROM | Yes | No | No | 
+| [quickDASH Questionnaire](../../../modules/epros-licensed-questionnaires/joint-surgery/quickdash.md) | PROM | Yes | No | No | 
+| [Self-Rated Health](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/self-rated-health.md) | PROM | Manual | Yes | Yes |
+| [Short-Form Health Survey (SF-36)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/short-form-health-survey.md) | PROM | Yes | Yes | No | 
+| [Spatial Span Test](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/spatial-span-test.md) | PROM | Yes | Yes | No | 
+| [Veterans RAND Health Survey (VR-12)](../../../modules/epros-licensed-questionnaires/general-health-and-wellbeing/VR-12-health-survey.md) | PROM | Yes | Yes | No | 
+| [Bluebelle Wound Healing Questionnaire (WHQ)](../../../modules/epros-licensed-questionnaires/conditions/wound-healing-questionnaire.md) | PROM | Yes | Yes | No | 
 
 ## Creating custom questionnaires
 You can create a completely new questionnaire from scratch. In the **Add track module** dropdown, select **Add new questionnaire**.

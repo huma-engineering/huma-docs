@@ -1,13 +1,13 @@
 ---
-sidebar_position: 15
+sidebar_position: 13
 title: Weight 
 ---
 
-Helping Patients manage their Weight is critical for good health as it can lower the risk of many conditions and ailments. 
+Helping Patients manage their weight is critical for good health as it can lower the risk of many conditions and ailments. 
 
 ## How it works
 
-Using a typical bathroom scale, patients weigh themselves and enter the reading into the Huma App in either kilograms, pounds, or stones and pounds,  depending on the preferred units selected in the Huma App.
+Using a typical bathroom scale, patients weigh themselves and enter the reading into the Huma App in either kilograms, pounds, or stones and pounds,  depending on the preferred units selected in the Huma App. Some scales may be able to connect with the Huma App for automatic syncing of data. 
 
 ![Adding weight to the Huma App](./assets/weight.png)
 

@@ -3,7 +3,7 @@ sidebar_position: 3
 title: ePROS / Licensed Questionnaires
 ---
 
-# Questionnaires
+# Licensed Questionnaires
 
 Questionnaires are used to collect feedback from patients so their care team are able to make informed decisions about their healthcare.
 

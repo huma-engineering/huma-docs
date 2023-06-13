@@ -3,7 +3,7 @@ sidebar_position: 6
 title: Medications 
 ---
 
-It is important that both patients and their care team can keep track of and share changes to any patient medications . The Medications module allows patients or their care team to make a log of the medications they are taking along with their dosage and frequency. In addition, it allows them to keep track of when and how much they need to take via a notifications system.
+It is important that both patients and their care team can keep track of and share changes to any patient medications. The Medications module allows patients or their care team to make a log of the medications they are taking along with their dosage and frequency. In addition, it allows them to keep track of when and how much they need to take via a notifications system.
 
 ## How it works
 
@@ -11,7 +11,7 @@ Patients or their care teams can enter the names of any medications they are tak
 
 ![Medications in the Huma App](./assets/medications.png)
 
-In the In the **Medication log**, patients can see a historic view of the medications they have been taking and the **Medications list** is where they can view and edit their current dosages and schedule.
+In the **Medication log**, patients can see a historic view of the medications they have been taking and the **Medications list** is where they can view and edit their current dosages and schedule.
 
 In the Patient Summary, care teams will be able to see the patient's listed medications along with their dosage and frequency. The patient's adherence to the schedule will also be shown.
 
