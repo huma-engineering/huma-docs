@@ -48,17 +48,17 @@ You can find a list of your paired devices on your **Paired devices** list.
 ![take and sync](../assets/TakeSync03.png)
 
 ### Adding symptoms
-The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. 
+The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. Logging your symptoms on a regular basis helps the care team to see patterns and plan your care accordingly.
 
-Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your Deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
+Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
 
-In the following screens, you will be asked to grade each symptom on a sliding scale. Choose the one that best applies in that moment and click **Next**.
+![symptoms](../assets/Symptoms01.png)
 
-![symptoms](../assets/symptoms.png)
+In the following screens, you will be asked to grade each of the selected symptoms on a sliding scale. Choose the one that best applies in that moment and click **Next**. Some symptoms might ask you for additional information which can be useful for your care team.
 
-Once you have graded all your symptoms, you’ll see a summary of your responses. If everything is correct, click **Submit** and your responses will be saved along with the time and date for your care team to review. Click **Done** to return back to the Symptoms page. 
+![symptoms](../assets/symptoms02.png)
 
-Logging your symptoms on a regular basis helps the care team to see patterns and plan your care accordingly.
+Once you have graded all your symptoms and answered any additional questions, you’ll see a summary of your responses. If everything is correct, click **Submit** and your responses will be saved along with the time and date for your care team to review. Click **Done** to return back to the Symptoms page.
 
 ### Adding photos
 Click the **Photos** module and click **Add** to add your photo. To add your photo directly using the camera on your device, click **Take photo** or 
