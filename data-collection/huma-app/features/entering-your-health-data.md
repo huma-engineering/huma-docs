@@ -56,7 +56,7 @@ Open the **Symptoms** module and you will see a list of the symptoms that have b
 
 In the following screens, you will be asked to grade each of the selected symptoms on a sliding scale. Choose the one that best applies in that moment and click **Next**. Some symptoms might ask you for additional information which can be useful for your care team.
 
-![symptoms](../assets/symptoms02.png)
+![symptoms](../assets/Symptoms02.png)
 
 Once you have graded all your symptoms and answered any additional questions, you’ll see a summary of your responses. If everything is correct, click **Submit** and your responses will be saved along with the time and date for your care team to review. Click **Done** to return back to the Symptoms page.
 
