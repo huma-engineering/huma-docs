@@ -12,7 +12,9 @@ This module is available for US clients only.
 
 ## How it works
 
-Onboarding patients for billing ensures that all relevant billing details are shown in the billing export. On the **Patient List**, find the patient you want to onboard, open the menu and click **Enroll for billing**. In the billing details window, enter the insurance carrier(s), the billing provider and the primary diagnosis.
+Onboarding patients for billing ensures that all relevant billing details are shown in the billing export. On the **Patient List**, find the patient you want to onboard, open the menu and click **Enroll for billing**. 
+
+In the billing details window, enter the insurance carrier(s), the billing provider and the primary diagnosis.
 
 ![Billing](./assets/Billing01.png)
 
