@@ -3,8 +3,13 @@ sidebar_position: 3
 title: Entering your health data
 ---
 # Entering your health data
-
 **User**: Patient, Helper
+- [Adding data manually](#adding-data-manually)
+- [Adding data using the camera](#adding-data-using-the-camera)
+- [Syncing data from a device](#syncing-data-from-a-device)
+- [Adding symptoms](#adding-symptoms)
+- [Adding photos](#adding-photos)
+- [Responding to questionnaires](#responding-to-questionnaires)
 
 The key function of the Huma App is for collecting patient data and sharing it with care teams. Patients will be reminded via their to do list of data they need to add and can also enter it, as needed, by looking for the module on the Track page.
 
