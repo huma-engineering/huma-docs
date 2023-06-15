@@ -11,6 +11,8 @@ The key function of the Huma App is for collecting patient data and sharing it w
 - SpO2 (blood oxygen levels during sleep)
 - Sleep (sleep stages and sleep duration)
 
+It’s important to note that Fitbit cannot be used alongside any other devices when connected. The only exception to this is the Omron Blood Pressure device which will collect heart rate data alongside the Fitbit. In this case, the results will display the source so that patients and clinicians can differentiate the two. 
+
 The following devices will collect all the data required for these modules: Sense 2; Versa 4; Inspire 3; Charge 5; Luxe; Versa 2.  
 
 ## How it works​
@@ -21,15 +23,23 @@ Go to your profile and select **Apps**.
 
 ![Fitbit Connectivity](../assets/Fitbit01.png)
 
-Before you can connect, you will need to allow the Huma app to access Fitbit data. Follow the instructions in the app to allow permissions within the Fitbit app.
-
-![Fitbit Connectivity](../assets/Fitbit02.png)
-
-Once you have granted permissions, you’ll see a list of devices which are available for pairing. Select Fitbit and then click **Connect to Fitbit** and follow the instructions.
+On the Apps screen, you’ll see a list of devices which are available for pairing. Select Fitbit and then click **Connect to Fitbit** and follow the instructions. 
 
 ![Fitbit Connectivity](../assets/Fitbit03.png)
 
+You can also connect your Fitbit account directly from the Track module. Open the track module (only Heart Rate, Respiratory Rate, Sleep, SpO2 or Steps) and click **Sync via Fitbit**. On the next screen, click **Connect to Fitbit** and follow the instructions. 
+
+Alternately, you can connect from the To-do page. You’ll find a task called **Connect your Fitbit account**. Just click it, then follow the instructions. 
+
+![Fitbit Connectivity](../assets/Fitbit05.png)
+
+Before you can connect, you will need to allow the Huma app to access Fitbit data. Follow the instructions in the app to allow permissions within the Fitbit app. You can revoke access at any time.
+
+![Fitbit Connectivity](../assets/Fitbit02.png)
+
 When pairing is completed successfully, you’ll see a success message and your Fitbit will appear on the list of apps.
+
+If you want to switch to manual data entry for any of the modules Fitbit collects data for, you will need to disconnect it first from this screen.
 
 ![Fitbit Connectivity](../assets/Fitbit04.png)
 
@@ -46,6 +56,6 @@ Once the Fitbit is connected, data will be collected automatically and synced to
 
 ## Intended use
 
-Unless otherwise specified, Fitbit products and services are not medical devices, and are not intended to diagnose, treat, cure or prevent any disease. With regard to accuracy, Fitbit has developed products and services to track certain wellness information as accurately as reasonably possible. The accuracy of Fitbit’s products and services is not intended to be equivalent to medical devices or scientific measurement devices.  This should be clearly communicated to the client prior to deployment.
+Unless otherwise specified, Fitbit products and services are not medical devices, and are not intended to diagnose, treat, cure or prevent any disease. Fitbit has developed products and services to track certain wellness information as accurately as reasonably possible. However, the data collected is not intended to be equivalent to medical devices or scientific measurement devices and should be clearly communicated to the client prior to deployment.
 
 **Related articles**: [Pairing devices](../getting-started/pairing-devices.md); [Entering your health data](./entering-your-health-data.md)
