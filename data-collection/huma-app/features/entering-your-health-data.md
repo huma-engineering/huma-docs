@@ -4,6 +4,12 @@ title: Entering your health data
 ---
 # Entering your health data
 **User**: Patient, Helper
+- [Adding data manually](#adding-data-manually)
+- [Adding data using the camera](#adding-data-using-the-camera)
+- [Syncing data from a device](#syncing-data-from-a-device)
+- [Adding symptoms](#adding-symptoms)
+- [Adding photos](#adding-photos)
+- [Responding to questionnaires](#responding-to-questionnaires)
 
 The key function of the Huma App is for collecting patient data and sharing it with care teams. Patients will be reminded via their to do list of data they need to add and can also enter it, as needed, by looking for the module on the Track page.
 
@@ -48,17 +54,17 @@ You can find a list of your paired devices on your **Paired devices** list.
 ![take and sync](../assets/TakeSync03.png)
 
 ### Adding symptoms
-The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. 
+The **Symptoms** module lets you keep track of how you are feeling in terms of specific symptoms. Logging your symptoms on a regular basis helps the care team to see patterns and plan your care accordingly.
 
-Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your Deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
+Open the **Symptoms** module and you will see a list of the symptoms that have been configured for your deployment. Select all of the ones that apply and click **Next**. To deselect a symptom, just click it again.
 
-In the following screens, you will be asked to grade each symptom on a sliding scale. Choose the one that best applies in that moment and click **Next**.
+![symptoms](../assets/Symptoms01.png)
 
-![symptoms](../assets/symptoms.png)
+In the following screens, you will be asked to grade each of the selected symptoms on a sliding scale. Choose the one that best applies in that moment and click **Next**. Some symptoms might ask you for additional information which can be useful for your care team.
 
-Once you have graded all your symptoms, you’ll see a summary of your responses. If everything is correct, click **Submit** and your responses will be saved along with the time and date for your care team to review. Click **Done** to return back to the Symptoms page. 
+![symptoms](../assets/Symptoms02.png)
 
-Logging your symptoms on a regular basis helps the care team to see patterns and plan your care accordingly.
+Once you have graded all your symptoms and answered any additional questions, you’ll see a summary of your responses. If everything is correct, click **Submit** and your responses will be saved along with the time and date for your care team to review. Click **Done** to return back to the Symptoms page.
 
 ### Adding photos
 Click the **Photos** module and click **Add** to add your photo. To add your photo directly using the camera on your device, click **Take photo** or 
