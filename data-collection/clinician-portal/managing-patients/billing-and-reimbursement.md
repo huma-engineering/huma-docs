@@ -44,7 +44,7 @@ For codes with a pending status, hover over the information icon to see what act
 
 ![Billing](./assets/Billing06.png)
 
-From the patient list, you can monitor billing compliance for all patients. Select Patients billing from the filters at the top to see a list of all patients along with their status for the different billing codes. Colour-coded alerts let you see quickly which patients are not complying with billing requirements and which elements they are missing i.e. calls or number of days.
+From the patient list, you can monitor billing compliance for all patients. Select **Patients billing** from the filters at the top to see a list of all patients along with their status for the different billing codes. Colour-coded alerts let you see quickly which patients are not complying with billing requirements and which elements they are missing i.e. calls or number of days.
 
 You can use the second filter to choose the CPT code that you want to prioritise. Patients are automatically prioritised by proximity of deadline. Code 99454 has a double sorting logic where first patients are sorted by proximity to the deadline and then by the number of missing readings. You can also see the overall number of missing calls at a glance at the top left of the list.
 
@@ -54,7 +54,7 @@ You can use the second filter to choose the CPT code that you want to prioritise
 
 Billing information can be exported in an aggregated report in order to provide a statement for the purpose of billing or reimbursement. 
 
-From the patient list menu, select Export data. Then, in the export window, select the patient or patients you would like to export the data for. If selecting **All patients**, remember that this only includes those patients who have been onboarded for billing. 
+From the patient list menu, select **Export data**. Then, in the export window, select the patient or patients you would like to export the data for. If selecting **All patients**, remember that this only includes those patients who have been onboarded for billing. 
 
 Under the selected activities, questionnaires and notes, make sure **Billing status** is checked along with any clinical data you would like to export. Choose the type of file you want to download and click **Export ZIP file**.
  
