@@ -81,8 +81,8 @@ module.exports = {
           items: [
             {
               type: 'doc',
-              label: 'Trust & Security',
-              docsPluginId: 'trust-security',
+              label: 'Trust Centre',
+              docsPluginId: 'trust-centre',
               docId: 'index',
             },
           ],
@@ -167,10 +167,9 @@ module.exports = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'trust-security',
-        path: 'trust-security',
-        routeBasePath: 'trust-security',
-        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
+        id: 'trust-centre',
+        path: 'trust-centre',
+        routeBasePath: 'trust-centre',
       },
     ],
     ['docusaurus-node-polyfills', { excludeAliases: ['console']}]
