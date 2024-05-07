@@ -1,0 +1,61 @@
+---
+sidebar_position: 1
+---
+
+# Getting Started with Huma Android SDK
+
+Welcome to the Huma Android SDK! This guide will help you get started with integrating the Huma SDK into your Android application.
+
+## Setting Up Your Development Environment
+
+Here are the steps to set up your development environment:
+
+1. **Add the Huma SDK Maven repository to your project**: Open your `settings.gradle.kts` file and add the following code to the `dependencyResolutionManagement` section:
+
+```kotlin
+maven {
+    url = uri("https://maven.pkg.github.com/huma-engineering/huma-android-sdk")
+    credentials {
+        username = "***"
+        password = "***"
+    }
+}
+```
+Note: Replace *** with your GitHub username and GitHub token.
+
+2. **Add the Huma SDK dependency to your project**: Open your `build.gradle.kts` file and add the following code to the `dependencies` section:
+
+```kotlin
+dependencies {
+    // Other dependencies...
+
+    // Install BOM for resolving dependency versions
+    implementation(platform("com.huma:android-sdk-bom:2.x.x"))
+    implementation("com.huma.sdk:appkit-core")
+    
+    /* AppKit dependencies */
+    // Default Onboarding steps support
+    implementation("com.huma.sdk:appkit-onboarding")
+    // Default Profile support
+    implementation("com.huma.sdk:appkit-profile")
+    
+    /* Optional dependencies */
+    // Replace with the actual modules, use only if need to extend the Foundation layer
+    implementation("com.huma.sdk:foundation-...")
+    // Replace with the actual modules, use only if need to extend the SDK layer
+    implementation("com.huma.sdk:sdk-...")
+    // Replace with the actual AppKit modules
+    implementation("com.huma.sdk:appkit-...")
+    
+    /* Plugin dependencies */
+    // Replace with the actual Plugin modules
+    implementation("com.huma.sdk:plugins-...")
+    // Replace with the actual Plugin device module
+    implementation("com.huma.sdk:plugin-device...")
+    // Replace with the actual Plugin Huma module
+    implementation("com.huma.sdk:plugin-module...")
+    // Replace with the actual Plugin widget module
+    implementation("com.huma.sdk:plugin-widget...")
+}
+```
+
