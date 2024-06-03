@@ -4,5 +4,47 @@ sidebar_position: 1
 
 # How to configure Foundation (Android)
 
+The Foundation layer need to be configured with minimal setup to use the Huma SDK. 
+It is the base layer of the Huma SDK and is required to be configured before using any other layer of the SDK.
+
+To configure it you need to prepare your project based on this [page](../Getting%20Started/Android).
+
+```kotlin
+context.installHumaSdk {
+    foundation {
+        // Network configuration
+        network {
+            sslSecurityEnabled = true/false (default is false) // Enable or disable SSL security
+            networkErrorHandlers = listOf() // List of network error handlers that will be used to respond on network errors
+            offlineModeStateProvider = OfflineModeStateProvider() // (Optional) Used to define the offline mode availability
+            interceptors = listOf() // List of interceptors that will be used to intercept network requests (OKHttp interceptors)
+            networkInterceptors = listOf() // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
+            environments = mapOf<String, EnvConfigData>() // Map of environment configurations used for network requests
+        }
+        router {
+            startActivityClass = MainActivity::class.java
+            crashHandling = CrashHandling.Debug
+        }
+        analytics {
+            segment(
+                writeKey = "v7LDkaAnE2wXUIt0VrO3HiVz6QELv205",
+            )
+            sentry(
+                context = context,
+                env = "sample_app_${BuildConfig.FLAVOR}_${BuildConfig.BUILD_TYPE}",
+                dsn = "https://d89da50646e84134bb0d027359a9959c@o585585.ingest.sentry.io/5751203",
+                release = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
+            )
+        }
+        security {
+            screenCaptureEnabled = true
+            tapJackingProtectionToBeAppliedOnWholeApp = false
+            tapJackingFeatureEnabled = false
+        }
+    }
+}
+```
+
+
 * [SDK](../SDK/Android)
 * [AppKit](../AppKit/Android)
