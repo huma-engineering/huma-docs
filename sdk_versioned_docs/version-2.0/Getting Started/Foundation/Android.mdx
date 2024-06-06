@@ -16,31 +16,32 @@ To configure it you need to prepare your project based on this [page](../Getting
 context.installHumaSdk {
     foundation {
         network { // (Required) Network configuration
-            sslSecurityEnabled = true / false(default is false) // Enable or disable SSL security
-            networkErrorHandlers =
-                listOf() // List of network error handlers that will be used to respond on network errors
-            offlineModeStateProvider =
-                OfflineModeStateProvider() // (Optional) Used to define the offline mode availability
-            interceptors =
-                listOf() // List of interceptors that will be used to intercept network requests (OKHttp interceptors)
-            networkInterceptors =
-                listOf() // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
-            environments =
-                mapOf<String, EnvConfigData>() // (Required) Map of environment configurations used for network requests
+            // (false by default) Enable or disable SSL security
+            sslSecurityEnabled = true / false
+            // List of network error handlers that will be used to respond on network errors
+            networkErrorHandlers = listOf()
+            // (Optional) Used to define the offline mode availability
+            offlineModeStateProvider = OfflineModeStateProvider()
+            // List of interceptors that will be used to intercept network requests (OKHttp interceptors)
+            interceptors = listOf()
+            // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
+            networkInterceptors = listOf()
+            // (Required) Map of environment configurations used for network requests
+            environments = mapOf<String, EnvConfigData>() 
         }
         router { // (Required) Router configuration
-            startActivityClass =
-                MainActivity::class.java // Define the start activity class to open on push actions and navigation
-            splashActivityClass =
-                SplashActivity::class.java // (Optional) Define the splash activity class to open on push actions and navigation
-            crashHandling =
-                CrashHandling.Debug // (Optional) Define the crash handling mode, use None if you want to handle crashes by yourself
+            // Define the start activity class to open on push actions and navigation
+            startActivityClass = MainActivity::class.java
+            // (Optional) Define the splash activity class to open on push actions and navigation
+            splashActivityClass = SplashActivity::class.java
+            // (Optional) Define the crash handling mode, use None if you want to handle crashes by yourself
+            crashHandling = CrashHandling.Debug 
         }
         analytics { // (Optional) Analytics configuration
-            tracker =
-                Analytics.Tracker // (Optional) Define the tracker to be used for analytics events
-            errorMonitor =
-                ErrorMonitorWrapper.ErrorMonitor // (Optional) Define the error monitor to be used for error monitoring
+            // (Optional) Define the tracker to be used for analytics events
+            tracker = Analytics.Tracker
+            // (Optional) Define the error monitor to be used for error monitoring
+            errorMonitor = ErrorMonitorWrapper.ErrorMonitor 
             segment(
                 // Segment configuration with implementation("com.huma.sdk:plugin-segment:+")
                 writeKey = "...",
@@ -54,22 +55,22 @@ context.installHumaSdk {
             )
         }
         security { // (Optional) Security configuration
-            screenCaptureEnabled =
-                true / false // (true by default) Enable or disable screen capture in Huma user flows
-            tapJackingProtectionToBeAppliedOnWholeApp =
-                true / false // (false by default) Enable or disable tapJacking protection in Huma user flows
-            tapJackingFeatureEnabled =
-                true / false // (false by default) Enable or disable tapJacking feature in Huma user flows
+            // (true by default) Enable or disable screen capture in Huma user flows
+            screenCaptureEnabled = true / false
+            // (false by default) Enable or disable tapJacking protection in Huma user flows
+            tapJackingProtectionToBeAppliedOnWholeApp = true / false
+            // (false by default) Enable or disable tapJacking feature in Huma user flows
+            tapJackingFeatureEnabled = true / false 
         }
         notification { // (Optional) Notification configuration
-            handlers =
-                listOf() // List of notification handlers that will be used to handle notifications from Huma Platform. Use only if you have custom notification from Huma Platform
+            // List of notification handlers that will be used to handle notifications from Huma Platform. Use only if you have custom notification from Huma Platform
+            handlers = listOf() 
         }
         helper { // (Optional) Helper configuration
-            sealedClassesToSerialize =
-                listOf() // List of sealed classes that will be used to serialize and deserialize data. Use only if you are having custom sealed classes in api response from Huma Platform
-            offlineModeStateProvider =
-                OfflineModeStateProvider() // (Optional) Used to override default offline mode availability provider
+            // List of sealed classes that will be used to serialize and deserialize data. Use only if you are having custom sealed classes in api response from Huma Platform
+            sealedClassesToSerialize = listOf()
+            // (Optional) Used to override default offline mode availability provider
+            offlineModeStateProvider = OfflineModeStateProvider() 
         }
     }
 }
