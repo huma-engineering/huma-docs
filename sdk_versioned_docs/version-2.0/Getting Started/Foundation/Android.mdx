@@ -4,47 +4,86 @@ sidebar_position: 1
 
 # How to configure Foundation (Android)
 
-The Foundation layer need to be configured with minimal setup to use the Huma SDK. 
-It is the base layer of the Huma SDK and is required to be configured before using any other layer of the SDK.
+## Introduction
+The Foundation layer need to be configured with minimal setup to use the Huma SDK.
+It is the base layer of the Huma SDK and is required to be configured before using any other layer
+of the SDK.
 
+## Configuration
 To configure it you need to prepare your project based on this [page](../Getting%20Started/Android).
 
 ```kotlin
 context.installHumaSdk {
     foundation {
-        // Network configuration
-        network {
-            sslSecurityEnabled = true/false (default is false) // Enable or disable SSL security
-            networkErrorHandlers = listOf() // List of network error handlers that will be used to respond on network errors
-            offlineModeStateProvider = OfflineModeStateProvider() // (Optional) Used to define the offline mode availability
-            interceptors = listOf() // List of interceptors that will be used to intercept network requests (OKHttp interceptors)
-            networkInterceptors = listOf() // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
-            environments = mapOf<String, EnvConfigData>() // Map of environment configurations used for network requests
+        network { // (Required) Network configuration
+            sslSecurityEnabled = true / false(default is false) // Enable or disable SSL security
+            networkErrorHandlers =
+                listOf() // List of network error handlers that will be used to respond on network errors
+            offlineModeStateProvider =
+                OfflineModeStateProvider() // (Optional) Used to define the offline mode availability
+            interceptors =
+                listOf() // List of interceptors that will be used to intercept network requests (OKHttp interceptors)
+            networkInterceptors =
+                listOf() // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
+            environments =
+                mapOf<String, EnvConfigData>() // (Required) Map of environment configurations used for network requests
         }
-        router {
-            startActivityClass = MainActivity::class.java
-            crashHandling = CrashHandling.Debug
+        router { // (Required) Router configuration
+            startActivityClass =
+                MainActivity::class.java // Define the start activity class to open on push actions and navigation
+            splashActivityClass =
+                SplashActivity::class.java // (Optional) Define the splash activity class to open on push actions and navigation
+            crashHandling =
+                CrashHandling.Debug // (Optional) Define the crash handling mode, use None if you want to handle crashes by yourself
         }
-        analytics {
+        analytics { // (Optional) Analytics configuration
+            tracker =
+                Analytics.Tracker // (Optional) Define the tracker to be used for analytics events
+            errorMonitor =
+                ErrorMonitorWrapper.ErrorMonitor // (Optional) Define the error monitor to be used for error monitoring
             segment(
-                writeKey = "v7LDkaAnE2wXUIt0VrO3HiVz6QELv205",
+                // Segment configuration with implementation("com.huma.sdk:plugin-segment:+")
+                writeKey = "...",
             )
             sentry(
+                // Sentry configuration with implementation("com.huma.sdk:plugin-sentry:+")
                 context = context,
-                env = "sample_app_${BuildConfig.FLAVOR}_${BuildConfig.BUILD_TYPE}",
-                dsn = "https://d89da50646e84134bb0d027359a9959c@o585585.ingest.sentry.io/5751203",
-                release = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
+                env = "...",
+                dsn = "...",
+                release = "...",
             )
         }
-        security {
-            screenCaptureEnabled = true
-            tapJackingProtectionToBeAppliedOnWholeApp = false
-            tapJackingFeatureEnabled = false
+        security { // (Optional) Security configuration
+            screenCaptureEnabled =
+                true / false // (true by default) Enable or disable screen capture in Huma user flows
+            tapJackingProtectionToBeAppliedOnWholeApp =
+                true / false // (false by default) Enable or disable tapJacking protection in Huma user flows
+            tapJackingFeatureEnabled =
+                true / false // (false by default) Enable or disable tapJacking feature in Huma user flows
+        }
+        notification { // (Optional) Notification configuration
+            handlers =
+                listOf() // List of notification handlers that will be used to handle notifications from Huma Platform. Use only if you have custom notification from Huma Platform
+        }
+        helper { // (Optional) Helper configuration
+            sealedClassesToSerialize =
+                listOf() // List of sealed classes that will be used to serialize and deserialize data. Use only if you are having custom sealed classes in api response from Huma Platform
+            offlineModeStateProvider =
+                OfflineModeStateProvider() // (Optional) Used to override default offline mode availability provider
         }
     }
 }
 ```
+## Explanation
+Only this that is required to be configured is the `environments` in the `network` configuration and
+main activity class in the `router` configuration.
 
+Next move to SDK layer configuration [here](../SDK/Android). But this step is optional as Appkit is
+also exposing most of the SDK functionalities. But it's good tho know how to configure it.
+
+Or you can move to AppKit layer configuration [here](../AppKit/Android).
+
+## Next Steps
 
 * [SDK](../SDK/Android)
 * [AppKit](../AppKit/Android)
