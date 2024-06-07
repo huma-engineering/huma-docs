@@ -19,11 +19,11 @@ Also make sure to setup the Foundation layer before configuring the SDK.
 context.installHumaSdk {
     sdk {
         // (Required if not using AppKit) Deployment repository to be used for fetching deployments
-        deploymentRepository = DeploymentRepository
+        deploymentRepository = DeploymentRepository()
         // (Required if not using AppKit) Modules repository to be used for fetching modules
-        modulesRepo = ModulesRepo
+        modulesRepo = ModulesRepo()
         // (Required if not using AppKit) User repository to be used for fetching user data
-        userRepo = UserRepo
+        userRepo = UserRepo()
 
         actionKit {
             // (Optional) List of key action providers to be used for fetching key actions
@@ -35,19 +35,19 @@ context.installHumaSdk {
         }
         authKit {
             // (Required if not using AppKit) Auth repository to be used for fetching auth data
-            authRepository = AuthRepository
+            authRepository = AuthRepository()
             // (Required if not using AppKit) Invitation repository to be used for fetching invitations
-            invitationRepository = InvitationRepository
+            invitationRepository = InvitationRepository()
             // (Required if not using AppKit) Logout repository to be used for logging out user
-            logoutRepository = LogoutRepository
+            logoutRepository = LogoutRepository()
             // (Required if not using AppKit) Regions repository to be used for fetching regions
-            regionsRepository = RegionsRepository
+            regionsRepository = RegionsRepository()
             // (Required if not using AppKit) User repository to be used for fetching user data
-            userRepository = UserRepository
+            userRepository = UserRepository()
             // (Required if not using AppKit) Deployment selector repository to be used for selecting deployment
-            deploymentSelectorRepo = DeploymentSelectorRepo
+            deploymentSelectorRepo = DeploymentSelectorRepo()
             // (Required if not using AppKit) Retained account repository to be used for retaining account
-            retainedAccountRepo = RetainedAccountRepo
+            retainedAccountRepo = RetainedAccountRepo()
             // (Optional) Enable or disable manual signup, by default it is false
             manualSignup = true / false
             // (Optional) Enable or disable retaining credentials, by default it is false
@@ -84,7 +84,7 @@ context.installHumaSdk {
         }
         storage {
             // (Required if not using AppKit) Storage repository to be used for fetching storage data (AWS, Google Cloud, etc.)
-            storageRepository = StorageRepository
+            storageRepository = StorageRepository()
         }
         onboardingKit {
             // (Required if not using AppKit) AppKit will add generic onboarding steps during initialization. 
