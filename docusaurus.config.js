@@ -85,6 +85,12 @@ module.exports = {
               docsPluginId: 'trust-security',
               docId: 'index',
             },
+            {
+              type: 'doc',
+              label: 'Releases',
+              docsPluginId: 'releases',
+              docId: 'index',
+            }
           ],
         },
         {
@@ -170,6 +176,15 @@ module.exports = {
         id: 'trust-security',
         path: 'trust-security',
         routeBasePath: 'trust-security',
+        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'releases',
+        path: 'releases',
+        routeBasePath: 'releases',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
