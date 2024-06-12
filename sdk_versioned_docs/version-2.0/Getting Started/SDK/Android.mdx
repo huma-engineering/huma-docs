@@ -70,10 +70,10 @@ context.installHumaSdk {
         moduleKit {
             installModules {
                 // Install modules, by default all 1st party modules are installed automatically if dependencies are added in build.gradle.kts
-                listOf<Module>()
+                listOf<ModuleProvider>()
             }
             //Alternatively you can install via
-            installModule(Module1(), Module2(), ...)
+            installModule(ModuleProvider1(), ModuleProvider2(), ...)
 
             installModuleCardViewOverride {
                 // Install module card view overrides, used for customizing module card views in existing modules

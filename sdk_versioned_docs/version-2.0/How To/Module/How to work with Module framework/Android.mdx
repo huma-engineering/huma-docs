@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+In Huma SDK Module framework is split between to layers - SDK and AppKit. SDK layer called
+ModuleKit, and AppKit - Modules.
+
+* ModuleKit (SDK) is responsible for generic module architecture without any relation to APIs.
+* Modules (AppKit) is build on ModuleKit and tailored to Huma Platforms APIs. It also provides
+  generic user flow that is used in 1st party modules.
+
+## How to use Module Kit
+
+Most of the ModuleKit features are accessible thru it's manager that is available after SDK
+initialization.
+
+To get it's instance call
+
+```kotlin
+HumaModuleKitManager.getInstance()
+```
+
+In general, usual usecase include ```findModule``` function to find specific instance of a module.
+Or accessing ```module``` list, or subscribe to it's ```moduleState```.
+
+You can check the rest of the functions in this [HumaModuleKitManager](../../../References/Module/Android/Module)
+
+## How to use Modules (AppKit)

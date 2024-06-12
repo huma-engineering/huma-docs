@@ -1,0 +1,90 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+## How to create a new module
+
+To create a new module it is required to create at least two classes. The module itself and it's
+provider.
+
+### Define Module class
+
+To create a module class use [Module](../../../References/Module/Android/Module) interface to describe a
+module.
+
+There is a few sub interfaces that used across first party modules and adds to a ```Module```
+interface.
+
+* ```ModuleWithDetails``` adds a details action to open a screen with Module details. Default
+  behaviour is provided thru a delegate and can be called
+  with ```private val detailsDelegate by defaultDetailsDelegate(moduleConfigId)```
+* ```ModuleWithInput``` adds an input action to open input screen. Default
+  behaviour is not provided in ModuleKit library.
+
+> **Note:** It is recommended to use abstract ```BaseModule``` class instead on ```Module``` to have
+> the generic functionality in your module without extra code.
+
+There are few others that are not used in specific use cases and can be checked
+in [References](../../../References/Module/Android/Module)
+
+### Create provider
+
+Each module need to be created via provider. One provider can return multiple modules, so it you
+have several custom modules, you can use one ```ModuleProvider```.
+
+Let's create ```ModuleProvider``` provider:
+
+```kotlin
+class YourModuleProvider : ModuleProvider {
+
+    override suspend fun provideModules(): List<Module> {
+        return listOf(YourModule())
+    }
+
+    override suspend fun refreshData(): Boolean {
+        //do module data refresh
+        return true // or false if you failed to refresh the data
+    }
+}
+```
+
+Then register it ether via initializer or manager.
+
+> **Note:** Recommended way
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        moduleKit {
+            installModule(YourModuleProvider())
+        }
+    }
+}
+```
+
+Or
+
+```kotlin
+HumaModuleKitMananger.getInstance().registerModuleProvider(YourModuleProvider())
+```
+
+### How to get it's instance back
+
+To obtain your module instance you can access ```modules``` list directly to find it, or
+use ```findModule``` function to search it based on predefined parameters.
+
+> **Note:** Do not create module instances outside of your module provider, as there is many SDK
+> features that can trigger module recreation. Also do not put heavy object inside module instance
+> as it's kept in memory for easy and quick access.
+
+## How to use Modules (AppKit)
+
+As Modules library is build on to of ModuleKit, all interfaces and interactions are practically the
+same. Modules library adds a layer between Huma Platform APIs and SDK. Also it provides a set of
+additional delegates for Huma Specific user flows.
+
+### What's added with Modules library
+
+
