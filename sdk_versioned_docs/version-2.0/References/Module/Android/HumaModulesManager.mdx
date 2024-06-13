@@ -1,0 +1,60 @@
+---
+sidebar_position: 1
+---
+
+# HumaModulesManager
+
+The `HumaModulesManager` is a class that provides a single point of access to the HumaModule
+features in the Huma SDK. It is responsible for managing modules and their lifecycle within the
+application.
+
+## Getting an Instance
+
+An instance of `HumaModulesManager` can be retrieved using the `getInstance` method.
+
+```kotlin
+HumaModulesManager.getInstance()
+```
+
+## Methods
+
+### installModules
+
+This method is used to install the provided modules.
+
+```kotlin
+fun installModules(humaModuleLibraries: List<HumaModuleLibrary>)
+```
+
+### registerImportProcessor
+
+This method is used to register one or more import processors.
+
+```kotlin
+override fun registerImportProcessor(vararg processor: ImportModuleProcessor)
+```
+
+### refreshData
+
+This is a suspending function to refresh the data. It should be called from a coroutine or another
+suspending function.
+
+```kotlin
+override suspend fun refreshData(vararg moduleId: String?, from: Instant?)
+```
+
+### registerSectionOverride
+
+This method is used to register one or more section overrides.
+
+```kotlin
+override fun registerSectionOverride(vararg sectionOverride: SectionOverride)
+```
+
+### registerModuleInputOverride
+
+This method is used to register one or more module input overrides.
+
+```kotlin
+override fun registerModuleInputOverride(vararg moduleInputOverride: ModuleInputOverride)
+```
