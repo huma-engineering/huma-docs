@@ -1,0 +1,73 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+## How to add new steps to onboarding
+
+### Create a new onboarding step
+
+To add new steps to the onboarding flow, you need to create a new `OnboardingStep` object and add it
+to the `onboardingSteps` list.
+
+```kotlin
+class YourOnboardingStep : OnboardingStep {
+
+    override suspend fun getActivityIntent(
+        context: Context,
+        params: OnboardingStepParams,
+    ): Intent? {
+        // Create and return an Intent for the step if your step needs to be displayed. 
+        // Return null when your step is passed.
+        return Intent(context, YourActivity::class.java)
+    }
+
+    suspend fun submitResult(
+        resultCode: ResultCode,
+        resultsIntent: Intent,
+    ): Result<StepSuccessScreen, Error> {
+        // Your intent will be ran with launcher. You can return result code and intent object. 
+        // You can use this method to handle the result of the step.
+        return StepSuccessScreen.Disabled.ok() // if nothing need to be done on result
+        // or
+        return StepSuccessScreen.Enabled(intent) // if you need to pass open extra screen on submit
+    }
+
+    fun getAnalyticsName(): String? {
+        return "YourOnboardingStep"
+    }
+}
+```
+
+### Register the new step
+
+To register your step in onboarding flow, you need to add it to the `onboardingSteps` list in the
+initializer flow.
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        onboardingKit {
+            steps {
+                listOf<OnboardingStep>(
+                    YourOnboardingStep()
+                )
+            }
+        }
+    }
+    //or
+    appkit {
+        onboarding {
+            // if you want to replace default onboarding steps pass true, 
+            // otherwise your step will be added to the end of the list
+            overrideDefault = false
+            steps {
+                listOf<OnboardingStep>(
+                    YourOnboardingStep()
+                )
+            }
+        }
+    }
+}
+```

@@ -1,0 +1,18 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+Onboarding flow can be started by calling the `launchOnboardingFlow` method. This method will start
+the onboarding flow. 
+
+```kotlin
+HumaOnboardingKitManager.launchOnboardingFlow(context) { status: Boolean, error: String? ->
+    if (status) {
+        // Onboarding flow finished successfully
+    } else {
+        // Onboarding flow failed to finish successfully
+    }
+}
+```
