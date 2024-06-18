@@ -147,3 +147,7 @@ class YourModuleInitializer : HumaModuleLibrary {
     }
 }
 ```
+
+After that you can access your module
+via ```HumaModulesManager.getInstance().findModule<YourModule>()``` if it's present in the
+deployment.
