@@ -142,14 +142,14 @@ If you want to customize component / server config consumption look into `hsppro
 folder, [example](https://github.com/huma-engineering/huma-respi-server/tree/master/hspproviders)
 
 :::note
-Not a bad idea to look into [their parents](framework/server/hsp_providers.py) definition to see what
+Not a bad idea to look into [their parents](https://github.com/huma-engineering/huma-server-platform/tree/master/framework/server/hsp_providers.py) definition to see what
 you can do
 :::
 
-1. [PhoenixServerProvider](framework/templates/project/template/hspproviders/component_provider.py)
+1. [PhoenixServerProvider](https://github.com/huma-engineering/huma-server-platform/tree/master/framework/templates/project/template/hspproviders/component_provider.py)
 
    Need to customise celery worker? add new stuff this is the place to customise
-2. [ComponentProvider](framework/templates/project/template/hspproviders/phoenix_server_provider.py)
+2. [ComponentProvider](https://github.com/huma-engineering/huma-server-platform/tree/master/framework/templates/project/template/hspproviders/phoenix_server_provider.py)
 
    Need to supply new argument in hsp config to your component, change argument rendering logic this is the place to
    look and change
