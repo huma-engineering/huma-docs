@@ -13,16 +13,18 @@ blocks in the installHumaSdk block.
 context.installHumaSdk {
     sdk {
         actionKit {
-            providers = listOf<KeyActionProvider>() // List of KeyActionProvider, empty by default
-            datetimeRange =
-                DateTimeRange() // DateTimeRange, by default range is -3 months to +14 days from today
-            keyActionViewOverride = null // KeyActionViewOverride, null by default
+            // List of KeyActionProvider, empty by default
+            providers = listOf<KeyActionProvider>()
+            // DateTimeRange, by default range is -3 months to +14 days from today
+            datetimeRange = DateTimeRange()
+            // KeyActionViewOverride, null by default
+            keyActionViewOverride = null 
         }
     }
     appkit {
         action {
-            processors =
-                listOf<ImportKeyActionProcessor>() // List of ImportKeyActionProcessor, empty by default
+            // List of ImportKeyActionProcessor, empty by default
+            processors = listOf<ImportKeyActionProcessor>() 
         }
     }
 }
