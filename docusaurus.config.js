@@ -36,18 +36,11 @@ module.exports = {
         src: '../img/huma_logo_black.svg',
       },
       items: [
-        {
-          type: 'dropdown',
-          position: 'left',
+         {
+          type: 'doc',
           label: 'Product documentation',
-          items: [
-            {
-              type: 'doc',
-              label: 'Data collection',
-              docsPluginId: 'data-collection',
-              docId: 'index',
-            },
-          ],
+          docsPluginId: 'data-collection',
+          docId: 'index',
         },
         {
           type: 'dropdown',
