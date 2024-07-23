@@ -128,8 +128,7 @@ Once you have created a few content pieces, you can start adding those to the de
 
 The profile page of the app displays the user account information. It allows users to view and edit their personal information and account settings. If you selected an app template, you will find the profile page in the app overview. 
 
-[ADD IMAGE]
-
+![alt text](<../managing-deployments/configuring-the-content/assets/Profile edit-0.png>)
 In the right-hand panel, you can edit the configuration of the profile page. Click the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Edit configuration</span> button to select which profile fields, IDs, contact details, gender options, and onboarding fields will be shown in the app. You can also add <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Custom fields</span> that you would like your users to enter in their profile page. After editing the configuration of your profile page, click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Save changes</span>.
 
 [ADD IMAGE]
