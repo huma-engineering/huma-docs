@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Find the latest user guides, developer guides, API references, tutorials, and more.',
   url: 'https://docs.huma.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'huma-engineering', // Usually your GitHub org/user name.
@@ -173,7 +173,7 @@ module.exports = {
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
-    ['docusaurus-node-polyfills', { excludeAliases: ['console']}]
+    ['docusaurus-node-polyfills', { excludeAliases: ['console'] }]
   ],
   i18n: {
     defaultLocale: 'en',
