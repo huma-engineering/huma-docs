@@ -11,7 +11,6 @@ Huma Builder Templates are designed to streamline your app creation right from t
 2. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Create</span>.
 3. Pick any template to start with. If you do not see a suitable template for your app, select the template <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Huma Demo</span>. 
 
-[ADD IMAGE]
 
 Alternatively, you can start with a blank page. A page equals a tab on the navigation menu of the Huma Care App. When starting with a blank page, you will be asked to enter the page details. For more information, see the below section "Step 2: Design the app interface".
 
