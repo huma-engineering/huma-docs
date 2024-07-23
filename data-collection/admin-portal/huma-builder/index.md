@@ -61,7 +61,7 @@ Widgets are functional building blocks of the Huma Care App that can be added, e
 4. Remove or reset widget settings to their default by selecting the three dots of each widget card on the left-hand side panel.
 5. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Save changes</span> to save your progress.
 
-[ADD IMAGE]
+![alt text](<../managing-deployments/configuring-the-content/assets/Adding- edit widgets.png>)
 
 ## Step 3: Creating app content
 
@@ -76,21 +76,27 @@ The Huma Builder CMS is a powerful content management system designed to simplif
 7. Add <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Tags</span> which will help you find articles more easily once you decide where to place your content in your app.
 8. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Save changes</span> to save your edits.
 
-[ADD IMAGE]
+![alt text](<../managing-deployments/configuring-the-content/assets/Creating content-0.png>)
 
 <div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Tip: Adding external URLs or media as an article type</strong><br/>
   <span>If your article type is an external URL, add your external resource by entering the URL in the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>External URL</span> field. If your article type is a media asset, such as an image or video, add your asset by clicking the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Media</span> button under the Body section.</span>
 </div>
 
-[ADD IMAGE]
 
+![alt text](<../managing-deployments/configuring-the-content/assets/Creating content-p1.png>)
+
+![alt text](<../managing-deployments/configuring-the-content/assets/Creating content- p2.png>)
 ### Add assets
 
 Assets like images and videos can be uploaded to visually enhance your articles and make them more engaging for your users. You can either use existing assets from the Huma library or upload your own. To access the assets, select the image icon in the left side panel. You can upload images in JPG or PNG format (up to 2MB each) and videos in MP4 or MOV format (up to 100MB each). Once uploaded, these assets will be available in your CMS editor for immediate use.
 
-[ADD IMAGE]
 
+![alt text](<../managing-deployments/configuring-the-content/assets/Upload media-0.png>)
+
+![alt text](<../managing-deployments/configuring-the-content/assets/Upload media-1.png>)
+
+![alt text](<../managing-deployments/configuring-the-content/assets/Upload media-2.png>)
 ### Adding content to your app
  
 Once you have created a few content pieces, you can start adding those to the desired pages of your app. 
@@ -98,15 +104,21 @@ Once you have created a few content pieces, you can start adding those to the de
 1. Go to the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Builder</span> page. Select the page of your app that you want to add content to. 
 2. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>+ New widget</span> in the left side panel, then scroll
 
+
  down and select <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Feature articles</span>.
 3. Choose which articles will be shown under the dropdown button <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>All articles</span>.
 
-[ADD IMAGE]
+![alt text](<../managing-deployments/configuring-the-content/assets/Feature articles-0.png>)
+
 
 ### Content sources
 
-- <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>All articles</span> will show all content pieces available in the CMS. 
-- <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Filter by tags</span> allows you to add content with specific tags. 
+- <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>All articles</span> will show all content pieces available in the CMS.
+
+![alt text](<../managing-deployments/configuring-the-content/assets/Feature articles-1.png>)
+- <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Filter by tags</span> allows you to add content with specific tags.
+ 
+ ![alt text](<../managing-deployments/configuring-the-content/assets/Feature articles-2.png>)
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Manual list</span> allows you to search and add available content in the CMS. 
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Advanced query</span> allows you to apply advanced logic to which content pieces will be shown.
 
