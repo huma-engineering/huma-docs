@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Start with a template
+title: Huma Builder
 ---
 # Introduction to the Huma Builder
 The Admin Portal is the place where the technical structures (Organisations and Deployments) are configured. 
