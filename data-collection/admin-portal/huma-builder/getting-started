@@ -62,7 +62,7 @@ Widgets are functional building blocks of the Huma Care App, that can be added, 
 2. Configure the layout or functionality of a widget in the side panel on the right. 
 3. Change the order of widgets by dragging the 6 dots of a widget card to the desired position.
 4. Remove or reset widget settings to their default by selecting the three dots of each widget card on the left hand side panel.
-5. Click <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Save changes</span> to save your progress.
+5. All the changes are <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;">automatically saved</span>.
 
 ![\[ADD IMAGE\]](<../managing-deployments/configuring-the-content/assets/Adding- edit widgets.png>)
 
@@ -73,13 +73,15 @@ The Huma Builder CMS is a powerful content management system designed to simplif
 1. Select the app that you want to add content to.
 2. Access the CMS by clicking the collection icon.
 3. Click <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Create</span> to add another article.
+![alt text](<../managing-deployments/configuring-the-content/assets/Creating content-0.png>)
 4. Skip the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Content ID</span> field. This field will be auto-populated once you save your new article. 
-5. Add the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Title </span> , upload the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Feature image</span> that will appear in the app, and select the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Article type</span>. 
+5. Add the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Title </span> , upload the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Feature image</span> that will appear in the app, and select the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Article type</span>.
+![alt text](<../managing-deployments/configuring-the-content/assets/Creating content-p1.png>) 
 6. In the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Body</span> section, add the main content of your article. You can use formatting tools to style your test, add headings, lists, quotes, and links. 
+![alt text](<../managing-deployments/configuring-the-content/assets/Creating content- p2.png>)
 7. Add <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Tags</span> which will help you find articles more easily once you decide where to place your content in your app.
 8. Click <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;"> Save changes</span> to save your edits.
 
-[ADD IMAGE]
 
 
 
@@ -90,7 +92,6 @@ The Huma Builder CMS is a powerful content management system designed to simplif
 <p></p>
 
 
-[ADD IMAGE]
 
 ### Add assets  ###
 
