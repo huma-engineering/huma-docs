@@ -146,6 +146,7 @@ Enabling <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 
 
 
 
+
 ## Step 5: Add connected devices
 
 ## Step 6: Edit app settings
@@ -154,7 +155,14 @@ The settings section in the Huma Builder allows you to customise your app furthe
 
 [ADD IMAGE]
 
-## Step 7: Preview your app
+## Step 7: Staff members
+
+Once you click on the <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;">  Invite</span> button in the top left, you can either add emails manually or import them via an Excel file.
+
+After adding emails, select which platforms to give staff access, including the App Builder and Care Portal.
+
+Complete the invitation process by clicking on  <span style="background-color: #EBEBEB; padding: 0 5px; border-radius: 5px;">  Send Staff Members Invites</span>
+## Step 8: Preview your app
 
 You can preview your app at any time during your editing process. Select the app you want to preview, and click on the phone icon at the bottom of the navigation bar. 
 
