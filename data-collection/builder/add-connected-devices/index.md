@@ -1,4 +1,6 @@
 ---
 sidebar_position: 6
-title: Creating app content
+title: Add connected device
 ---
+
+![alt text](<../assets/Connect Devices.png>)

@@ -20,6 +20,7 @@ The Huma Builder CMS is a powerful content management system designed to simplif
   <span>If your article type is an external URL, add your external resource by entering the URL in the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>External URL</span> field. If your article type is a media asset, such as an image or video, add your asset by clicking the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Media</span> button under the Body section.</span>
 </div>
 
+<br/>
 
 ![alt text](<../assets/Creating content-p1.png>)
 

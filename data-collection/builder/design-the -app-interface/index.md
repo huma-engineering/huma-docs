@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title:   Design the app interface
+title: Design the app interface
 ---
 Once you have selected a template, you will see different pages of your app. Select any page to start designing and editing its contents. Follow the steps below to design your app interface.
 

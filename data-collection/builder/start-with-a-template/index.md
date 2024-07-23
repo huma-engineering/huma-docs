@@ -3,8 +3,6 @@ sidebar_position: 2
 title: Start with a template
 ---
 
-## Step 1: Start with a template
-
 Huma Builder Templates are designed to streamline your app creation right from the start - no matter what type of app you are creating. Select from a variety of pre-built templates that can be easily customised. All you have to do is select a template and edit the existing components and app interface. Follow the steps below for a headstart to building your first app:
 
 1. Navigate to <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>My apps</span> in the side panel of the Huma Builder. 
