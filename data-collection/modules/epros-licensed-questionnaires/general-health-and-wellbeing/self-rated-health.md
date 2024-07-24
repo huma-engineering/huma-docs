@@ -11,7 +11,7 @@ The module asks patients to answer a simple question; “In general, how would y
 
 ![Self-Rated Health](./assets/SelfRated01.png)
 
-Both patients and their care teams can review their answers to this question to notice how their general daily health fluctuates. In the Care Portal, care teams can easily see the patient's last recorded reading in the **Self-rated Health** column.
+Both patients and their care teams can review their answers to this question to notice how their general daily health fluctuates. In the Huma Portal, care teams can easily see the patient's last recorded reading in the **Self-rated Health** column.
 
 ![Self-Rated Health](./assets/SelfRated02.png)
 

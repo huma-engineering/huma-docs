@@ -10,7 +10,7 @@ Once you have created your Huma account, you will be able to create a new app us
 
 <div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>What is the Huma Builder?</strong><br/>
-  <span>The Huma Builder is a GenAI-powered, modular platform for app creation. This no-code solution lets enterprises, small businesses, and practices develop regulated health apps. It offers a wide range of pre-built templates, widgets, and features that are easily customizable. Huma Builder provides the infrastructure to build custom health apps with minimal technical effort. It also includes a care portal for clinicians to monitor patient health or track cohort data over time.</span>
+  <span>The Huma Builder is a GenAI-powered, modular platform for app creation. This no-code solution lets enterprises, small businesses, and practices develop regulated health apps. It offers a wide range of pre-built templates, widgets, and features that are easily customizable. Huma Builder provides the infrastructure to build custom health apps with minimal technical effort. It also includes a Huma Portal for clinicians to monitor patient health or track cohort data over time.</span>
 </div>
 
 <br/>

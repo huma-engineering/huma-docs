@@ -15,9 +15,9 @@
     "message": "Api 1",
     "description": "Navbar item with label Api 1"
   },
-  "item.label.Care Portal": {
-    "message": "Care Portal",
-    "description": "Navbar item with label Care Portal"
+  "item.label.Huma Portal": {
+    "message": "Huma Portal",
+    "description": "Navbar item with label Huma Portal"
   },
   "item.label.Huma Mobile App": {
     "message": "Huma Mobile App",

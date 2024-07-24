@@ -16,12 +16,12 @@ Patients answer a series of questions about their mobilty now compared to pre-su
 
 At the end of the questionnaire, patients are assigned a score from -50 to +50 which is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Reminders can also be set to help stay on track.
 
-![Oxford Arthroplasty Early Change Score in the Huma Care App](./assets/oacs.png)
+![Oxford Arthroplasty Early Change Score in the Huma App](./assets/oacs.png)
 
-In the Care Portal, care teams will see the latest Oxford Arthroplasty Early Change Score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Oxford Arthroplasty Early Change Score for their patient, with concerning scores flagged for attention.
 
-![Oxford Arthroplasty Early Change Score in the Care Portal](./assets/cp-patient-list-oacs.png)
+![Oxford Arthroplasty Early Change Score in the Huma Portal](./assets/cp-patient-list-oacs.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Oxford Arthroplasty Early Change Score in the Care Portal](./assets/cp-module-details-oacs.png)
+![Oxford Arthroplasty Early Change Score in the Huma Portal](./assets/cp-module-details-oacs.png)

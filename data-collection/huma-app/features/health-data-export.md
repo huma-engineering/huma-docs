@@ -4,7 +4,7 @@ title: Health data export
 ---
 # Health data export 
 
-Huma Care App lets patients download a summary of their health data for some modules. Downloads and can be requested in either PDF or CSV format. 
+Huma App lets patients download a summary of their health data for some modules. Downloads and can be requested in either PDF or CSV format. 
 
 ## How it works
 Data can be exported from the **Profile** section by clicking on **Download your data** then **Request a download**. You will be asked to authenticate the download with biometrics or your password.

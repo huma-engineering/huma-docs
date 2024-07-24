@@ -9,7 +9,7 @@ Stress is a risk factor for many health conditions. The Perceived Stress Scale (
 
 Patients are asked about their feelings and thoughts over the past month in order to assess how different situations are perceived as stressful. To start, patients select the Perceived Stress Scale (PSS) module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team, with higher scores indicating greater levels of perceived stress. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-In the Care Portal, care teams will see the latest Perceived Stress Scale (PSS) score for their patient, with concerning scores flagged for attention. In the Patient Summary, care teams can view all historical data in graph or table form.
+In the Huma Portal, care teams will see the latest Perceived Stress Scale (PSS) score for their patient, with concerning scores flagged for attention. In the Patient Summary, care teams can view all historical data in graph or table form.
 
 The perceived stress scale (PSS) questionnaire contains a total of ten questions:
 

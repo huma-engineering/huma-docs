@@ -11,7 +11,7 @@ Huma Builder Templates are designed to streamline your app creation right from t
 
 ![alt text](../assets/Tempelate.png)
 
-Alternatively, you can start with a blank page. A page equals a tab on the navigation menu of the Huma Care App. When starting with a blank page, you will be asked to enter the page details. For more information, see the below section "Step 2: Design the app interface".
+Alternatively, you can start with a blank page. A page equals a tab on the navigation menu of the Huma App. When starting with a blank page, you will be asked to enter the page details. For more information, see the below section "Step 2: Design the app interface".
 
 <div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Tip: Preview the app template on your phone</strong><br/>

@@ -7,6 +7,6 @@ There a number of conditions which can affect a patient's daily life. Huma's con
 
 ## How it works
 
-The questionnaires ask questions about how the patient can perform certain tasks and about the severity of symptoms related to the condition. Results are shared with care teams via the Care Portal where they can look for trends and prioritise accordingly.
+The questionnaires ask questions about how the patient can perform certain tasks and about the severity of symptoms related to the condition. Results are shared with care teams via the Huma Portal where they can look for trends and prioritise accordingly.
 
 

@@ -13,9 +13,9 @@ disability.
 To start, patients select the **Oxford Shoulder Score** module and click **Add**. From within the module, patients can view their progress in a graph and 
 also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Oxford Shoulder Score in the Huma Care App](./assets/oss-patient-app.png)
+![Oxford Shoulder Score in the Huma App](./assets/oss-patient-app.png)
 
-In the Care Portal, care teams will see the latest Oxford Shoulder Score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Oxford Shoulder Score for their patient, with concerning scores flagged for attention.
 
 ![Oxford Shoulder Score in CP](./assets/cp-oss-one.png)
 

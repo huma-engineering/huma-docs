@@ -4,7 +4,7 @@
 
 **User**: Patient
 
-The key function of the Huma Care App is for collecting patient data and sharing it with care teams. We try to make that as easy as possible by allowing connected medical devices to be synced via Bluetooth or other automated connectivity methods.
+The key function of the Huma App is for collecting patient data and sharing it with care teams. We try to make that as easy as possible by allowing connected medical devices to be synced via Bluetooth or other automated connectivity methods.
 
 ## How it works
 

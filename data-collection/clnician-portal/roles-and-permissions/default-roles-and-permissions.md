@@ -5,12 +5,12 @@ title: Default roles and permissions
 # Default roles and permissions
 **User**: Admin; Access Controller
 
-The Care Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. 
+The Huma Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. 
 
 The portal has a number of default user roles which can be assigned to users via invitation. Some of these roles (Admin and Access Controller) can also be invited from the Admin Portal. 
 
 The following table shows the specific permissions associated with each of these roles.
-## Care Portal user roles and permissions
+## Huma Portal user roles and permissions
 
 |                          | Contributor | Admin | Organisation Staff | Deployment Staff | Access Controller |
 | ------------------------ | ----------- | ----- | ------------------ | ---------------- | ----------------- |

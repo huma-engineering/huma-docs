@@ -5,7 +5,7 @@ title: Inviting patients
 # Inviting Patients
 **User**: Admin; Access Controller; Deployment Staff; Organisation Staff; Patients
 
-Once the Care Portal is set up and ready to go, you need to invite patients. Patients can only get access to the Huma Care App via an invitation. Any user with ‘manage patient data’ permissions can invite patients. 
+Once the Huma Portal is set up and ready to go, you need to invite patients. Patients can only get access to the Huma App via an invitation. Any user with ‘manage patient data’ permissions can invite patients. 
 ## How it works​
 Open the dropdown menu next to your name at the top-right of the portal and select **Invite Patients**.
 
@@ -19,7 +19,7 @@ Now, enter the email addresses of the users you want to invite and click **Send 
 
 ![Send invites](./assets/InvitingPatient03.png)
 
-They will receive an email inviting them to a 2-step process. First, they will be asked to download the Huma Care App. Once the user has downloaded the Huma Care App, they will be able to click the link to create their account.
+They will receive an email inviting them to a 2-step process. First, they will be asked to download the Huma App. Once the user has downloaded the Huma App, they will be able to click the link to create their account.
 
 ![Email 2](./assets/InvitingPatient04.png)
 

@@ -8,7 +8,7 @@ title: Scheduling appointments
 The Huma experience connects care teams and patients through the portal’s telemedicine functionality. Options include calling or messaging the patient from within the portal or scheduling appointments.
 ## How it works​
 
-Scheduling an appointment in the Care Portal is simple. From the Patient Dashboard, click the ![Telemedicine](./assets/Telemedicine.png) tab and select either **Upcoming Appointments** or **Past Appointments**. Next, click the **Schedule an appointment** button to open the scheduling window. 
+Scheduling an appointment in the Huma Portal is simple. From the Patient Dashboard, click the ![Telemedicine](./assets/Telemedicine.png) tab and select either **Upcoming Appointments** or **Past Appointments**. Next, click the **Schedule an appointment** button to open the scheduling window. 
 
 ![Scheduling](./assets/Scheduling01.png)
 

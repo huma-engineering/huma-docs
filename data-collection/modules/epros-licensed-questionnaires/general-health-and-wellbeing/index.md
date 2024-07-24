@@ -9,6 +9,6 @@ These questionnaires are often used to collect outcomes from patients after rece
 
 ## How it works
 
-Questionnaires are presented as a collection of subjective questions that assess levels of health in daily functions. That data is shared with care teams in the Care Portal where they can look for trends and responses that might require prioritisation.
+Questionnaires are presented as a collection of subjective questions that assess levels of health in daily functions. That data is shared with care teams in the Huma Portal where they can look for trends and responses that might require prioritisation.
 
 

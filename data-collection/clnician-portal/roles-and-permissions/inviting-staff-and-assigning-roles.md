@@ -5,9 +5,9 @@ title: Inviting staff and assigning roles
 # Inviting staff and assigning roles
 **User**: Admin; Access Controller
 
-The Care Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. The portal has a number of different user roles available so that users can only access or edit what they need to. 
+The Huma Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. The portal has a number of different user roles available so that users can only access or edit what they need to. 
 
-> ⚠️ **INFO**: If you have a default role assigned, you must be an Administrator or Access Controller to be able to invite staff to the Care Portal. If you have a custom role assigned, this must include the 'invite staff members' permission.
+> ⚠️ **INFO**: If you have a default role assigned, you must be an Administrator or Access Controller to be able to invite staff to the Huma Portal. If you have a custom role assigned, this must include the 'invite staff members' permission.
 
 ## How it works​
 From the **All staff members** list, open the dropdown menu at the top-right of the list and select **Invite staff members**.

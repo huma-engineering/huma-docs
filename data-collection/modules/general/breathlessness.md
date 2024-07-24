@@ -9,12 +9,12 @@ Shortness of breath can be caused by conditions such as asthma, chest infections
 
 The Breathlessness module asks patients to answer a simple question about their degree of breathlessness. Their response is converted into a score out of 5 which is shared with their care team, allowing them to monitor their level of breathlessness over time.
 
-![Adding a breathlessness score to Huma Care App](./assets/breathlessness.png)
+![Adding a breathlessness score to Huma App](./assets/breathlessness.png)
 
-Patients can view their historic breathlessness scores in a graph. In the Care Portal, care teams will be able to see the latest breathlessness scores from their patients. 
+Patients can view their historic breathlessness scores in a graph. In the Huma Portal, care teams will be able to see the latest breathlessness scores from their patients. 
 
-![Viewing Patient data in the Care Portal](./assets/cp-patient-list-breathlessness.png)
+![Viewing Patient data in the Huma Portal](./assets/cp-patient-list-breathlessness.png)
 
 The Patient Summary displays a more detailed view of the patient's historic scores in graph or table form.
 
-![Viewing Patient data in the Care Portal](./assets/cp-module-details-breathlessness.png)
+![Viewing Patient data in the Huma Portal](./assets/cp-module-details-breathlessness.png)

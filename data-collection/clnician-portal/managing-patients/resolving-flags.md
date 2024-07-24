@@ -5,7 +5,7 @@ title: Resolving flags
 # Resolving flags and adding notes
 **User**: Admin; Access Controller; Deployment Staff; Organisation Staff
 
-The Care Portal uses flags to indicate to the care team vitals that fall outside the RAG thresholds that have been configured as acceptable. Adding a note confirms that you have reviewed that flagged information and it will be logged as resolved.
+The Huma Portal uses flags to indicate to the care team vitals that fall outside the RAG thresholds that have been configured as acceptable. Adding a note confirms that you have reviewed that flagged information and it will be logged as resolved.
 
 The flag system allows clinicians to easilly view which patients have amber and red vital signs and help direct their care. 
 ## How it works​

@@ -9,10 +9,10 @@ Physical exercise is a good measure of a patient's health. Walking helps patient
 
 Huma accesses the patient's step count from their fitness tracker, either Apple Health or Google Fit, and presents the data to their care team via the Steps module.
 
-Patients first need to sync the Huma Care App with Google Fit or Apple Health by following the instructions in the Steps module. The data will automatically be populated in the Huma Care App.
+Patients first need to sync the Huma App with Google Fit or Apple Health by following the instructions in the Steps module. The data will automatically be populated in the Huma App.
 
-![Adding steps tracking in the Huma Care App](./assets/steps.png)
+![Adding steps tracking in the Huma App](./assets/steps.png)
 
-Patients can view their steps data in a graph and care teams can view also see it from the Care Portal.
+Patients can view their steps data in a graph and care teams can view also see it from the Huma Portal.
 
 ![Steps data](./assets/cp-patient-list-steps.png)

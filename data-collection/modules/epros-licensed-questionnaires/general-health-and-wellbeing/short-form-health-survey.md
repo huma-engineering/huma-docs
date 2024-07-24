@@ -19,12 +19,12 @@ Patients respond to questions that assess their wellbeing across 8 categories:
 
 To start, patients select the SF-36 module and click **Add**. When they have answered all the questions they will be assigned a score out of 100 for each of the eight categories, with 100 representing the highest level of functioning. The scores are then shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Short Form Health Survey in Huma Care App ](./assets/short-form-health-survey.png)
+![Short Form Health Survey in Huma App ](./assets/short-form-health-survey.png)
 
-In the Care Portal, care teams will see the latest SF-36 score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest SF-36 score for their patient, with concerning scores flagged for attention.
 
-![Short Form Health Survey in Care Portal ](./assets/cp-patient-list-sf-36.png)
+![Short Form Health Survey in Huma Portal ](./assets/cp-patient-list-sf-36.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Short Form Health Survey in Care Portal ](./assets/cp-patient-summary-sf-36.png)
+![Short Form Health Survey in Huma Portal ](./assets/cp-patient-summary-sf-36.png)

@@ -3,11 +3,11 @@ sidebar_position: 1
 title: COVID-19 Monthly Questionnaire
 ---
 
-The Fenland Study for COVID-19 is looking to gather data on how many people have evidence in their blood of previous infection with COVID-19 and then to investigate whether it is possible to identify the COVID-19 pre-symptomatic phase using signs and symptoms collected via the Huma Care App. This information will help scientists develop better methods of early detection.
+The Fenland Study for COVID-19 is looking to gather data on how many people have evidence in their blood of previous infection with COVID-19 and then to investigate whether it is possible to identify the COVID-19 pre-symptomatic phase using signs and symptoms collected via the Huma App. This information will help scientists develop better methods of early detection.
 
 ## How it works
 
-Patients will answer questions about tests and symptoms of COVID-19 over the past month. Care teams can view new and historical results in the Care Portal and concerning scores will be flagged for attention.  
+Patients will answer questions about tests and symptoms of COVID-19 over the past month. Care teams can view new and historical results in the Huma Portal and concerning scores will be flagged for attention.  
 
 In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 

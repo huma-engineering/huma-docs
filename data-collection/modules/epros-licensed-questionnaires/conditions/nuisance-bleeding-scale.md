@@ -12,7 +12,7 @@ The nuisance bleeding scale questionnaire is a quick and effective assessment to
  
 To start, patients select the Nuisance Bleeding Scale module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-In the Care Portal, care teams will see the latest Nuisance Bleeding score for their patient, with concerning scores flagged for attention. In the Patient Summary, care teams can view all historical data in graph or table form.
+In the Huma Portal, care teams will see the latest Nuisance Bleeding score for their patient, with concerning scores flagged for attention. In the Patient Summary, care teams can view all historical data in graph or table form.
 
 The nuisance bleeding scale questionnaire contains 24 questions:
 

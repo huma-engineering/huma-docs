@@ -9,7 +9,7 @@ Food security exists when people have physical, social and economic access to su
 
 Patients will answer two simple questions about food security and their results will be stored and shared with their care team. 
 
-In the Care Portal, care teams will see the latest score for their patients, with concerning scores flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
+In the Huma Portal, care teams will see the latest score for their patients, with concerning scores flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
 ### Questions
 

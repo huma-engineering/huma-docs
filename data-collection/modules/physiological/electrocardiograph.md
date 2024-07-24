@@ -7,11 +7,11 @@ An ECG is often used alongside other tests to help diagnose and monitor conditio
 
 ## How it works
 
-This feature is available to sync with ECG devices. Patients open the module and tap on **Sync** to retrieve the data from their device and sync it with the Huma Care App.
+This feature is available to sync with ECG devices. Patients open the module and tap on **Sync** to retrieve the data from their device and sync it with the Huma App.
 
 ![Add a ECG Monitoring - AliveCor result](./assets/ecg.png)
 
-Patients can view their historic ECG results in a graph. In the Care Portal, care teams will be able to easily see the results of the latest ECG readings. 
+Patients can view their historic ECG results in a graph. In the Huma Portal, care teams will be able to easily see the results of the latest ECG readings. 
 
 Results check for normal, abnormal or inconclusive results including, but not limited to:
 - Sinus rhythm

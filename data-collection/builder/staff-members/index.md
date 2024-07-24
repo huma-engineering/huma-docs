@@ -8,7 +8,7 @@ Once you click on the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px
 
 ![alt text](<../assets/invite staff-0.png>)
 
-After adding emails, select which platforms to give staff access, including the App Builder and Care Portal.
+After adding emails, select which platforms to give staff access, including the App Builder and Huma Portal.
 
 ![alt text](<../assets/invite-staff-1.png>)
 

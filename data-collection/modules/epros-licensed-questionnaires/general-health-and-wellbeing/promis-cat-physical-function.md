@@ -13,9 +13,9 @@ Patients respond to questions about daily activities and answer from a set of mu
 
 To start, patients select the PROMIS CAT Physical Function module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![PROMIS CAT Physical Function in the Huma Care App](./assets/promis-cat-physical-function.png)
+![PROMIS CAT Physical Function in the Huma App](./assets/promis-cat-physical-function.png)
 
-In the Care Portal, care teams will see the latest PROMIS CAT Physical Function score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest PROMIS CAT Physical Function score for their patient, with concerning scores flagged for attention.
  
 ![Clinician view of PROMIS CAT Physical Function](./assets/cp-patient-summary-promis-cat-physical-function.png)
 

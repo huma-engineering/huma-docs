@@ -9,7 +9,7 @@ The Telehealth Survey helps assess the adoption of digital information and commu
 
 Patients answer questions regarding their use of technology as part of their healthcare journey. Patients can view their progress from insode the module and set a reminder to help keep on track.
 
-In the Care Portal, care teams will see the latest Telehealth Survey results for their patient. In the Patient Summary, they will be able to see all historical data in table form.
+In the Huma Portal, care teams will see the latest Telehealth Survey results for their patient. In the Patient Summary, they will be able to see all historical data in table form.
 
 The Telehealth Survey No. 2 has a total of 8 questions:
 
@@ -19,11 +19,11 @@ The Telehealth Survey No. 2 has a total of 8 questions:
 
 Choose between 1 and 5
 
-#### 2. Seeing my health information and study progress on the Huma Care App makes me feel more motivated to complete the study
+#### 2. Seeing my health information and study progress on the Huma App makes me feel more motivated to complete the study
 
 Choose between 1 and 5
 
-#### 3. Seeing my health information and study progress on the Huma Care App makes me feel more motivated to take my medication
+#### 3. Seeing my health information and study progress on the Huma App makes me feel more motivated to take my medication
 
 Choose between 1 and 5
 
