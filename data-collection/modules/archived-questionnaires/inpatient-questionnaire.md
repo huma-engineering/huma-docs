@@ -9,7 +9,7 @@ The Inpatient Questionnaire is a way of collecting information about overnight h
 
 Patients will answer questions about the details of their hospital stay, including dates and the specialities they visited. 
 
-In the Clinician Portal, care teams will see the latest Inpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
+In the Care Portal, care teams will see the latest Inpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
 
 The Inpatient Questionnaire has 7 questions in total.
 

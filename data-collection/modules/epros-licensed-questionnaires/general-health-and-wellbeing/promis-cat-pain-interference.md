@@ -11,9 +11,9 @@ Patients respond to questions that ask how often or how severely pain interferes
 
 To start, patients select the PROMIS CAT Pain Interference module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.  
 
-![PROMIS CAT Pain Interference in the Huma App](./assets/promis-cat-pain-interference.png)
+![PROMIS CAT Pain Interference in the Huma Care App](./assets/promis-cat-pain-interference.png)
 
-In the Clinician Portal, care teams will see the latest PROMIS CAT Pain Interference score for their patient, with concerning scores flagged for attention. 
+In the Care Portal, care teams will see the latest PROMIS CAT Pain Interference score for their patient, with concerning scores flagged for attention. 
 
 ![Clinician View of PROMIS CAT Pain Interference](./assets/cp-patient-summary-promis-cat-pain-interference.png)
 

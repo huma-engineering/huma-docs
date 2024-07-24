@@ -9,11 +9,11 @@ Patient activation looks at how confident a patient is when it comes to managing
 
 Patients answer generic questions about how they feel about their health. To start, patients select the Patient Activation Measure-13 module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Patient Activation Measure-13 in the Huma App](./assets/patient-activation-measure-13.png)
+![Patient Activation Measure-13 in the Huma Care App](./assets/patient-activation-measure-13.png)
 
 ## Clinicians
 
-In the Clinician Portal, care teams will see the latest Patient Activation Measure-13 score for their patient, with concerning scores flagged for attention.
+In the Care Portal, care teams will see the latest Patient Activation Measure-13 score for their patient, with concerning scores flagged for attention.
 
 ![Clinician View of Patient Activation Measure-13](./assets/cp-patient-summary-pam-13.png)
 

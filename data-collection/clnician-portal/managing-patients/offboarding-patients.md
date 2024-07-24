@@ -5,7 +5,7 @@ title: Offboarding patients
 # Offboarding patients
 **User**: Deployment Staff 
 
-When a patient has reached the end of their journey with Huma - either by completing the trial, changing to another medical provider or another reason - they should be offboarded, meaning they will no longer have access to the Huma App and they will no longer be monitored in the Clinician Portal.
+When a patient has reached the end of their journey with Huma - either by completing the trial, changing to another medical provider or another reason - they should be offboarded, meaning they will no longer have access to the Huma Care App and they will no longer be monitored in the Care Portal.
 
 ## How it works​
 On the **Patient List**, find the patient you want to offboard. Open the menu at the end of the row and click **Stop monitoring patient**.
@@ -20,9 +20,9 @@ Select the reason that best describes why you want to stop monitoring the patien
 
 ![Choose reason](./assets/OffboardPatient03.png)
 
-The patient will be informed that they have been offboarded and will no longer have access to the Huma App. If they try to log in, they will see a message giving some of the reasons why they may have been offboarded. 
+The patient will be informed that they have been offboarded and will no longer have access to the Huma Care App. If they try to log in, they will see a message giving some of the reasons why they may have been offboarded. 
 
-Although they are no longer being monitored, offboarded patients can still be found in the Clinician Portal by selecting **Offboarded patients** in the **Patient type** filters.
+Although they are no longer being monitored, offboarded patients can still be found in the Care Portal by selecting **Offboarded patients** in the **Patient type** filters.
 
 ![Filters menu](./assets/OffboardPatient04.png)
 
@@ -34,6 +34,6 @@ Offboarded patients can also be reactivated. Just open the menu at the end of th
 
 ![Reactivate patient](./assets/OffboardPatient06.png)
 
-Once reactivated, the patient will receive a notification and email to tell them that they once again have access to the Huma App. 
+Once reactivated, the patient will receive a notification and email to tell them that they once again have access to the Huma Care App. 
 
 **Related articles**: [Inviting patients](../roles-and-permissions/inviting-patients.md)

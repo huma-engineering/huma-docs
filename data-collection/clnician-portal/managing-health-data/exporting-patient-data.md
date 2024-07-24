@@ -5,7 +5,7 @@ title: Exporting patient data
 # Exporting patient data
 **User**: Admin; Deployment Staff; Organisation Staff
 
-Patient data can be exported from the Clinician Portal and used to show results, for reports, etc..
+Patient data can be exported from the Care Portal and used to show results, for reports, etc..
 
 ## How it works​
 You can export patient data from one of two places; the first is the patient menu on the **Patient List** screen. Just select **Export data** from the menu.

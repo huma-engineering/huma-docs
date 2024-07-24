@@ -7,11 +7,11 @@ The sleep module helps to track different aspects of sleep such as sleep stages,
 
 ## How it works
 
-This module syncs data from Fitbit. From the **Track** screen, open the Sleep module to automatically retrieve data from Fitbit and sync it with the Huma App.
+This module syncs data from Fitbit. From the **Track** screen, open the Sleep module to automatically retrieve data from Fitbit and sync it with the Huma Care App.
 
 ![Sleep](./assets/Sleep01.png)
 
-In the clinician portal, care teams can view an overview of patient sleep data. Hovering over the data opens a more detailed view.
+In the Care Portal, care teams can view an overview of patient sleep data. Hovering over the data opens a more detailed view.
 
 ![Sleep](./assets/Sleep02.png)
 

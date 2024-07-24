@@ -11,9 +11,9 @@ Patients answer a series of multple-choice questions about their knee. Questions
 
 To start, patients can select the Lysholm & Tegner module and click "Add". From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Lysholm & Tegner in Huma App](./assets/lyshom-tegner.png)
+![Lysholm & Tegner in Huma Care App](./assets/lyshom-tegner.png)
 
-In the Clinician Portal, care teams will see the latest Lysholm & Tegner score for their patient, with concerning scores flagged for attention.
+In the Care Portal, care teams will see the latest Lysholm & Tegner score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Lysholm & Tegner](./assets/cp-patient-list-lysholm-tegner.png)
 

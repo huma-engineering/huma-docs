@@ -5,7 +5,7 @@ title: Track modules
 # Track modules
 **User**: Patient, Helper
 
-The key function of the Huma App is for collecting patient data and sharing it with care teams. The Track screen is where patients can access all of the modules assigned to them by their care team.
+The key function of the Huma Care App is for collecting patient data and sharing it with care teams. The Track screen is where patients can access all of the modules assigned to them by their care team.
 
 ## How it works​
 

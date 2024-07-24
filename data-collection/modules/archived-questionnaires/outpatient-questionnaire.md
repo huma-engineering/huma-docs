@@ -9,7 +9,7 @@ The Outpatient Questionnaire is a way of collecting information about hospital v
 
 Patients will answer questions about the details of their hospital stay, including dates and the specialities they visited. 
 
-In the Clinician Portal, care teams will see the latest Outpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
+In the Care Portal, care teams will see the latest Outpatient Questionnaire responses from their patient. In the Patient Summary, care teams will be able to see all historical data in table form.
 
 The Outpatient Questionnaire has 4 questions in total.
 

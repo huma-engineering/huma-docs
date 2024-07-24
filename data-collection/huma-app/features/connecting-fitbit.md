@@ -3,7 +3,7 @@ sidebar_position: 6
 title: Connecting Fitbit
 ---
 
-The key function of the Huma App is for collecting patient data and sharing it with care teams. Patients using a Fitbit device can sync this to the app to collect health data for the following modules:
+The key function of the Huma Care App is for collecting patient data and sharing it with care teams. Patients using a Fitbit device can sync this to the app to collect health data for the following modules:
 - Heart Rate
 - Heart Rate Variability (average HRV value during sleep)
 - Steps
@@ -15,13 +15,13 @@ The following devices will collect all the data required for these modules: Sens
 
 ## How it works​
 
-To connect your Fitbit to the Huma app, you must have a registered Fitbit account and your watch must already be paired with the Fitbit app on your phone.
+To connect your Fitbit to the Huma Care App, you must have a registered Fitbit account and your watch must already be paired with the Fitbit app on your phone.
 
 Go to your profile and select **Apps**. 
 
 ![Fitbit Connectivity](../assets/Fitbit01.png)
 
-Before you can connect, you will need to allow the Huma app to access Fitbit data. Follow the instructions in the app to allow permissions within the Fitbit app.
+Before you can connect, you will need to allow the Huma Care App to access Fitbit data. Follow the instructions in the app to allow permissions within the Fitbit app.
 
 ![Fitbit Connectivity](../assets/Fitbit02.png)
 
@@ -35,7 +35,7 @@ When pairing is completed successfully, you’ll see a success message and your 
 
 ## Data sync frequency
 
-Once the Fitbit is connected, data will be collected automatically and synced to the Huma app at the following intervals:
+Once the Fitbit is connected, data will be collected automatically and synced to the Huma Care App at the following intervals:
 
 - Heart Rate - Hourly
 - Heart Rate Variability - Once every 24 hrs

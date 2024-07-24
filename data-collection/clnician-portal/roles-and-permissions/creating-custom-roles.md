@@ -5,7 +5,7 @@ title: Custom roles
 # Creating custom roles
 **User**: Admin; Access Controller; 
 
-The Clinician Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. The portal has a number of default user roles which can be assigned to users via invitation. 
+The Care Portal is one easy-to-use interface for all care team and administrative users to easily view and track patient data, contact patients and/or to manage other users and their roles. The portal has a number of default user roles which can be assigned to users via invitation. 
 
 However, if the default roles do not fully serve the needs of the Organisation, specific custom roles can also be created using any configuration of permissions.
 ## How it works
@@ -34,13 +34,13 @@ Next, you can check the permissions that you want to assign to this role by sele
 - **Edit roles and permissions** - The user can edit and view custom roles.
 - **Add/remove staff members** - The user can invite staff, assign roles and also remove them.
 - **View staff in Organisation** - Allows users to see who else is a staff member in the organisation and what role they have been assigned.
-- **Offboard patients** - Allows the user to remove patient access to the Huma app through offboarding.
+- **Offboard patients** - Allows the user to remove patient access to the Huma Care App through offboarding.
 
 Once you have selected the permissions, click **Submit** to save the role.
 
 ![Select permissions](./assets/CustomRoles05.png)
 
-Now, when you invite staff to the Clinician Portal, you will find the new role available on the dropdown.
+Now, when you invite staff to the Care Portal, you will find the new role available on the dropdown.
 
 ![Select new role](./assets/CustomRoles06.png)
 

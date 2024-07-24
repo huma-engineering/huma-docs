@@ -5,11 +5,11 @@ title: Logging in
 # Logging into the Portal
 **User**: All staff roles
 
-Getting set up with an account in the Clinician Portal, whatever your role may be, works through invitations. Once a new Deployment has been created on the Admin Portal, an invite will be sent out for an Administrator or Access Controller role.
+Getting set up with an account in the Care Portal, whatever your role may be, works through invitations. Once a new Deployment has been created on the Admin Portal, an invite will be sent out for an Administrator or Access Controller role.
 
-These users, or any users on the Clinician Portal with permission to add other staff members, will be able to invite other users.
+These users, or any users on the Care Portal with permission to add other staff members, will be able to invite other users.
 ## How it works​
-When you receive your invitation to join the Clinician Portal, you will be informed of your role in the email.
+When you receive your invitation to join the Care Portal, you will be informed of your role in the email.
 
 ![Welcome Email](./assets/LoggingIn01.png)
 

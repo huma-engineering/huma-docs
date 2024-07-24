@@ -7,7 +7,7 @@ The Huma product offers an easy way of collecting information about a patient's 
 
 ## How it works
 
-The first time a patient signs in, they will be prompted to complete the COVID-19 Baseline Questionnaire. In subsequent responses, they will answer questions about tests and symptoms of COVID-19 over the past month. Care teams can view new and historical results in the Clinician Portal and concerning scores will be flagged for attention.  
+The first time a patient signs in, they will be prompted to complete the COVID-19 Baseline Questionnaire. In subsequent responses, they will answer questions about tests and symptoms of COVID-19 over the past month. Care teams can view new and historical results in the Care Portal and concerning scores will be flagged for attention.  
 
 In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 

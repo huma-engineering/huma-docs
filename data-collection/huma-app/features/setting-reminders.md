@@ -5,7 +5,7 @@ title: Setting reminders
 # Setting reminders
 **User**: Patient, Helper
 
-The key function of the Huma App is for collecting patient data and sharing it with care teams. Regular data entry is key to providing the care team with adequate information for optimal care. The **reminders** functionality allows patients to set up custom notifications so that they don’t have to remember when and which data to enter into the Huma App.
+The key function of the Huma Care App is for collecting patient data and sharing it with care teams. Regular data entry is key to providing the care team with adequate information for optimal care. The **reminders** functionality allows patients to set up custom notifications so that they don’t have to remember when and which data to enter into the Huma Care App.
 
 ## How it works​
 

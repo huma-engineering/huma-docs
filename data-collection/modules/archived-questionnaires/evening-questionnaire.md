@@ -9,7 +9,7 @@ The Evening Questionnaire is a way of collecting information about a patient's d
 
 The patient answers three simple questions about their day. From within the module, patients can view their progress in a graph and view their previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help stay on track.
 
-In the Clinician Portal, care teams will see the latest Evening Questionnaire score for their patients, with any concerning scores flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
+In the Care Portal, care teams will see the latest Evening Questionnaire score for their patients, with any concerning scores flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
 ## Questions
 

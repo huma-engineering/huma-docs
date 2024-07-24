@@ -1,8 +1,8 @@
 ---
 sidebar_position: 8
-title: staff members
+title: Invite staff members
 ---
-Once you click on the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Invite</span> button in the top left, you can either add emails manually or import them via an Excel file.
+Once you click on the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Invite</span> button in the top right, you can either add emails manually or import them via an Excel file.
 
 <br/>
 

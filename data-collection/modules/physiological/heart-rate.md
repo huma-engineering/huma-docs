@@ -13,7 +13,7 @@ Classification is the outcome of the heartbeat rhythm. Huma provides 2 possible 
 
 Patients have a number of ways in which to collect their heart rate reading:
 
-- connecting the Huma App to Apple Health or Google Fit
+- connecting the Huma Care App to Apple Health or Google Fit
 - taking the reading manually  
 - using their smartphone camera to take the reading
 
@@ -21,12 +21,12 @@ Using the smartphone camera collection method also gives the user a heart rate v
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed). 
 
-![Adding heart rate to the Huma App](./assets/heart-rate.png)
+![Adding heart rate to the Huma Care App](./assets/heart-rate.png)
 
-Patients can view their historic readings in a graph. In the Clinician Portal, care teams will be able to easily see the latest readings from their patients and any concerning readings will be flagged.  
+Patients can view their historic readings in a graph. In the Care Portal, care teams will be able to easily see the latest readings from their patients and any concerning readings will be flagged.  
 
-![View patient heart rate in the Clinician Portal](./assets/cp-patient-list-heart-rate.png)
+![View patient heart rate in the Care Portal](./assets/cp-patient-list-heart-rate.png)
 
 The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
-![View patient heart rate in the Clinician Portal](./assets/cp-module-details-heart-rate.png)
+![View patient heart rate in the Care Portal](./assets/cp-module-details-heart-rate.png)

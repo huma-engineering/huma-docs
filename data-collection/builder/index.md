@@ -15,4 +15,4 @@ Each Deployment can have its own specific branding, features, onboarding steps a
 
 To create a completely new Organisation configuration, you need to be invited as an Organisation Owner. You can email ithelpdesk@huma.com to request an invitation. 
 
-Once the Organisation and Deployment configurations are complete, Organisation Staff or Access Controllers can be invited to manage it. The Access Controller can then invite an Admin user to manage the Clinician Portal, which is where care and research teams can view patient data.
+Once the Organisation and Deployment configurations are complete, Organisation Staff or Access Controllers can be invited to manage it. The Access Controller can then invite an Admin user to manage the Care Portal, which is where care and research teams can view patient data.

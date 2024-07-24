@@ -7,14 +7,14 @@ Huma provides quantifiable data and questionnaires from patients to inform and g
 
 ## How it works
 
-Patients upload photos to the Huma App or take them directly using the phone camera and add a note for their care team. They will also be able to access a history of previous photos uploaded.
+Patients upload photos to the Huma Care App or take them directly using the phone camera and add a note for their care team. They will also be able to access a history of previous photos uploaded.
 
-![Adding a photo in the Huma App](./assets/photos.png)
+![Adding a photo in the Huma Care App](./assets/photos.png)
 
-In the Clinician Portal, care teams can view photos submitted by their patients. 
+In the Care Portal, care teams can view photos submitted by their patients. 
 
-![Photos in the Clinician Portal](./assets/cp-patient-summary-photos.png)
+![Photos in the Care Portal](./assets/cp-patient-summary-photos.png)
 
 By clicking on the module summary, clinicians can see when the photos were submitted, along with notes from the patient.
 
-![Photos in the Clinician Portal](./assets/cp-module-details-photos.png)
+![Photos in the Care Portal](./assets/cp-module-details-photos.png)

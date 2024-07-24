@@ -11,9 +11,9 @@ Patients answer questions about the functionality of their knee on a subjective 
 
 To start, patients select the KOOS/WOMAC module and click **Add** to start. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![KOOS/WOMAC in Huma App](./assets/koos-womac.png)
+![KOOS/WOMAC in Huma Care App](./assets/koos-womac.png)
 
-In the Clinician Portal, care teams will see the number of entries for KOOS/WOMAC and the date of the last entry.
+In the Care Portal, care teams will see the number of entries for KOOS/WOMAC and the date of the last entry.
 
 ![Clinician view of KOOS/WOMAC](./assets/cp-patient-list-koos-womac.png)
 

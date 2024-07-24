@@ -15,13 +15,13 @@ To start answering the questionnaire, patients select quickDash Questionnaire an
 From within the module, patients can view their progress in a graph and also access all their previous results. 
 Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Disabilities of the Arm, Shoulder and Hand in Huma App](./assets/dash-patient-app.png)
+![Disabilities of the Arm, Shoulder and Hand in Huma Care App](./assets/dash-patient-app.png)
 
-In the Clinician Portal, care teams will see the latest quickDash score for their patient, with concerning scores flagged for attention.
+In the Care Portal, care teams will see the latest quickDash score for their patient, with concerning scores flagged for attention.
 
-![Disabilities of the Arm, Shoulder and Hand in Clinician Portal](./assets/cp-module-details-dash-one.png)
+![Disabilities of the Arm, Shoulder and Hand in Care Portal](./assets/cp-module-details-dash-one.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Disabilities of the Arm, Shoulder and Hand in Clinician Portal Two](./assets/cp-module-details-dash-two.png)
+![Disabilities of the Arm, Shoulder and Hand in Care Portal Two](./assets/cp-module-details-dash-two.png)
 

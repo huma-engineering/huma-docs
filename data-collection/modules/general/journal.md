@@ -11,8 +11,8 @@ Just like any journal, patients can note down and share with their care team any
 
 ![Adding to the journal](./assets/journal.png)
 
-Patients can view their past entries from within the Huma App. In the Clinician Portal, care teams can also view all data submitted to the journal.
+Patients can view their past entries from within the Huma Care App. In the Care Portal, care teams can also view all data submitted to the journal.
 
-![Journal in Clinician Portal](./assets/cp-patient-summary-journal.png)
+![Journal in Care Portal](./assets/cp-patient-summary-journal.png)
 
-![Journal in Clinician Portal](./assets/cp-module-details-journal.png)
+![Journal in Care Portal](./assets/cp-module-details-journal.png)

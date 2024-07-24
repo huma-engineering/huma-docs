@@ -11,9 +11,9 @@ Patients are asked a series of multiple-choice questions about how they feel and
 
 To start, patients select the Oxford Knee Score module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Oxford Knee Score in the Huma App](./assets/oxford-knee-score.png)
+![Oxford Knee Score in the Huma Care App](./assets/oxford-knee-score.png)
 
-In the Clinician Portal, care teams will see the latest Oxford Knee Score for their patient, with concerning scores flagged for attention.
+In the Care Portal, care teams will see the latest Oxford Knee Score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Oxford Knee School](./assets/cp-patient-list-oxford-knee-score.png)
 

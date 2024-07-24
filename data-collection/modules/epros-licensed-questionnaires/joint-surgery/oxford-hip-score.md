@@ -11,14 +11,14 @@ Patients are asked a series of multiple-choice questions about how they feel and
 
 To start, patients select the Oxford Hip Score module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Oxford Hip Score in the Huma App](./assets/oxford-hip-score.png)
+![Oxford Hip Score in the Huma Care App](./assets/oxford-hip-score.png)
 
 ## Clinicians
 
-In the Clinician Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention. 
+In the Care Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention. 
 
-![Oxford Hip Score in the Clinician Portal](./assets/cp-patient-list-oxford-hip-score.png)
+![Oxford Hip Score in the Care Portal](./assets/cp-patient-list-oxford-hip-score.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Oxford Hip Score in the Clinician Portal](./assets/cp-module-details-oxford-hip-score.png)
+![Oxford Hip Score in the Care Portal](./assets/cp-module-details-oxford-hip-score.png)

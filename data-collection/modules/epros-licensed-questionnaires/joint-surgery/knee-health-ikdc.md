@@ -11,9 +11,9 @@ Patients answer a number of subjective questions about knee function divided int
 
 To start, patients select the Knee Health IKDC module and click **Add**. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![International Knee Documentation Committee in Huma App](./assets/knee-health-ikdc.png)
+![International Knee Documentation Committee in Huma Care App](./assets/knee-health-ikdc.png)
 
-In the Clinician Portal, care teams will see the latest Knee Health IKDC score for their patient, with concerning scores flagged for attention.
+In the Care Portal, care teams will see the latest Knee Health IKDC score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of International Knee Documentation Committee](./assets/cp-patient-list-ikdc.png)
 

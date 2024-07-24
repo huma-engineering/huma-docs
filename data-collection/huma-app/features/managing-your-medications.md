@@ -4,7 +4,7 @@ title: Managing your medications
 ---
 **User**: Patient, Helper
 
-The Huma App not only helps you track and manage your symptoms, but also provides a means to measure these against the medications you are taking. You can follow the medications schedule set for you by your care team and also make changes to it yourself.
+The Huma Care App not only helps you track and manage your symptoms, but also provides a means to measure these against the medications you are taking. You can follow the medications schedule set for you by your care team and also make changes to it yourself.
 
 ## How it works
 

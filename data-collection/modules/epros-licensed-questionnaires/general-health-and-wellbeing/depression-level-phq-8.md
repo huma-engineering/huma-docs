@@ -15,9 +15,9 @@ The PHQ-8 questionnaire is a quick and effective depression assessment tool for 
 
 To start, patients select the Depression Level - PHQ-8 module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
-![Depression Level - PHQ-8 in Huma App](./assets/depression-level-phq-8.png)
+![Depression Level - PHQ-8 in Huma Care App](./assets/depression-level-phq-8.png)
 
-In the Clinician Portal, care teams will see the latest Depression Level - PHQ-8 score for their patient, with concerning scores flagged for attention.
+In the Care Portal, care teams will see the latest Depression Level - PHQ-8 score for their patient, with concerning scores flagged for attention.
 
 ![Clilnician view of Depression Level - PHQ-8](./assets/cp-patient-list-phq-8.png)
 

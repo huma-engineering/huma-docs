@@ -9,12 +9,12 @@ The Huma sign-up process is intuitive and accessible, enabling patients, and peo
 
 The onboarding steps are configured so that all the essential information is collected from the patient at the outset, ensuring all their needs and capabilities are accounted for.
 ## How it works​
-You will be invited to the Huma App by email or direct link from your care team. 
+You will be invited to the Huma Care App by email or direct link from your care team. 
 ### Login
 
-The email will give you the direct iOS and Android links to download the Huma App. 
+The email will give you the direct iOS and Android links to download the Huma Care App. 
 
-After downloading the Huma App, you will be able to create your account by clicking **Activate Account** in the email on your mobile device.
+After downloading the Huma Care App, you will be able to create your account by clicking **Activate Account** in the email on your mobile device.
 
 > ⚠️ **INFO**: If you're signing up via direct link, you will have to enter your email address and verify it by entering a 6-digit code sent from your care team.
 
@@ -26,17 +26,17 @@ You can pause 2-factor authentication by checking the box **Remember me for 14 d
 
 ### Onboarding
 
-The onboarding process consists of a number of screens that will ask you for information, consent or preferences on using the Huma App. The exact onboarding steps will depend on the Deployment configuration. Once you have completed all the steps, you can access the Huma App features. 
+The onboarding process consists of a number of screens that will ask you for information, consent or preferences on using the Huma Care App. The exact onboarding steps will depend on the Deployment configuration. Once you have completed all the steps, you can access the Huma Care App features. 
 
 ### Data processing agreement
-As the Huma App allows the collection of data from patients, you must provide informed consent to Huma as part of the terms and conditions of using the Huma App.
+As the Huma Care App allows the collection of data from patients, you must provide informed consent to Huma as part of the terms and conditions of using the Huma Care App.
 
 You will be taken through the terms and conditions and finally asked to consent by checking a box. 
 
 ![Data Consent](../assets/econsent.png)
 
 ### ID Verification
-In some cases, it is important to confirm that the person using the Huma App is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular Deployment.
+In some cases, it is important to confirm that the person using the Huma Care App is the person entering the details. ID verification is an onboarding step that is used to ensure the right person is logging in to a particular Deployment.
 
 There are two possible steps to identity verification - documentation and facial recognition. With the first step, you will need to photograph a form of ID such as a passport or national identity document. The second step is to take a photo of your face. It should take around 60 seconds to complete the verification process and you will be informed via push notification once the process is complete.
 
@@ -52,9 +52,9 @@ On receipt of your signature, Huma will generate an electronic informed consent 
 You can withdraw your consent at any time from your [Profile](../features/data-privacy-and-security.md).
 
 ### Helper agreement
-You can allow another party to manage data entry on your behalf if you are unable to use the Huma App yourself. 
+You can allow another party to manage data entry on your behalf if you are unable to use the Huma Care App yourself. 
 
-You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the Huma App, helpers can enter data into modules in the same way that a patient would.
+You or your care team can invite helpers. Once helpers receive their invite, they are prompted to download the Huma Care App and are taken through the sign up and onboarding process. This includes the Helper Agreement, in which they must agree to entering data on your behalf. Once in the Huma Care App, helpers can enter data into modules in the same way that a patient would.
 
 ![Helper agreement](../assets/helpertrio.png)
 

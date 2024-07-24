@@ -3,13 +3,13 @@ sidebar_position: 2
 title: COVID-19 Severity Risk Score Questionnaire
 ---
 
-Huma aims to model the risk of individuals developing complications due to COVID-19. The risk score is calculated using routinely-collected symptoms, demographics, pre-existing conditions and vital signs, all of which can be collected via the Huma App.  
+Huma aims to model the risk of individuals developing complications due to COVID-19. The risk score is calculated using routinely-collected symptoms, demographics, pre-existing conditions and vital signs, all of which can be collected via the Huma Care App.  
 
 ## How it works
 
 Patients will answer questions from the COVID-19 severity risk score questionnaire and their results will be stored and shared with their care team. 
 
-In the Clinician Portal, care teams will see the latest COVID-19 severity risk score for their patient. Concerning scores will be flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
+In the Care Portal, care teams will see the latest COVID-19 severity risk score for their patient. Concerning scores will be flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
 ## Questions
 

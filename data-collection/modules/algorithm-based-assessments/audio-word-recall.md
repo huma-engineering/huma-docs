@@ -11,7 +11,7 @@ The Rey Auditory Verbal Learning Test (RAVLT) provides a standardised procedure 
 
 The patient will be asked to listen to a list of words that will be read out loud to them. They will then have to repeat back as many words as they can remember from the list, speaking clearly into their phone. This cycle will be repeated several times with the patient being led through the process with clear step-by-step instructions.
 
-![Accessing the Audio Word Recall in the Huma App](./assets/audio-word-recall.png)
+![Accessing the Audio Word Recall in the Huma Care App](./assets/audio-word-recall.png)
 
 The aim of the test is to find the patient's recall limits and they would not usually be expected to be able to recall every word from all the lists.
 
