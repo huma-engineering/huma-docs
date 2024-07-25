@@ -1,0 +1,91 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+## How to add a new tab
+
+Appkit allows to add extra tabs to generic main screen flow. This is useful when you want to add a
+new feature to the app that is not part of the main flow.
+
+### Create a new tab
+
+To create a new tab, you need to create a class that implements the `Tab` interface.
+
+```kotlin
+class MyTab : Tab {
+    override val id: Int = 0
+    override val analyticsName: String = "MyTab"
+    override val name: TextRes = TextRes.Resource(R.string.my_tab_name)
+    override val iconResId: Int = R.drawable.ic_my_tab
+    override val fragment: (Context) -> Fragment = {
+        MyFragment()
+    }
+    override val order: Int = 0
+}
+```
+
+### Create a new `TapProvider` to expose the new tab to the Appkit
+
+To expose the new tab to the Appkit, you need to create a new `TabProvider` that will provide the
+new tab.
+
+```kotlin
+class MyTabProvider : TabProvider {
+    val tabs: List<Tab> = listOf(MyTab())
+}
+```
+
+### Add the new tab to the `SdkInitializer`
+
+To add the new tab to the Appkit, you need to add the new `TabProvider` to the `SdkInitializer`.
+
+```kotlin
+context.installHumaSdk(
+    appkit {
+        // Add the new tab provider to a set of existing tab providers
+        addTabProviders(MyTabProvider())
+        // or replace the existing tab providers with the new one
+        setTabProviders(MyTabProvider())
+    }
+)
+```
+
+## How to control the order of tabs
+
+### Set the order of tabs in the `Tab` implementation
+
+You can control the order of tabs by setting the `order` property of the tab. The tab with the
+lowest order will be displayed first.
+
+```kotlin
+class MyTab : Tab {
+    // other properties
+    override val order: Int = 0
+}
+```
+
+### Set the order of tabs in the `TabOrderProvider` implementation
+
+You can control the order of tabs by setting the order in the `TabOrderProvider` implementation.
+
+```kotlin
+class MyTabOrderProvider : TabOrderProvider {
+    fun orderTabs(tabs: List<Tab>): List<Tab> {
+        return tabs.sortedBy { your_ordering_logic }
+    }
+}
+```
+
+### Add the new `TabOrderProvider` to the `SdkInitializer`
+
+To add the new `TabOrderProvider` to the Appkit, you need to add it to the `SdkInitializer`.
+
+```kotlin
+context.installHumaSdk(
+    appkit {
+        tabOrderProvider = MyTabOrderProvider()
+    }
+)
+```

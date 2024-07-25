@@ -78,7 +78,7 @@ var uid: String by immutablePref(UID, "") //immutable shared preferences field w
 
 **Notifications**
 
-`NotificationManager` allows registering new notification types and processing them via `PushNotificationHandler`. Also `NotificationManager` requires to provide auth state via `AuthStateProvider` as it has auto signoff on logout. If you using [Huma Auth SDK](/sdk/Authentication/Android) it will register `AuthStateProvider` internally.
+`NotificationManager` allows registering new notification types and processing them via `PushNotificationHandler`. Also `NotificationManager` requires to provide auth state via `AuthStateProvider` as it has auto signoff on logout. If you using [Huma Auth SDK](../Authentication/Android) it will register `AuthStateProvider` internally.
 
 ```
 //register PushNotificationHandler
