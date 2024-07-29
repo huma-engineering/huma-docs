@@ -59,6 +59,12 @@ module.exports = {
               docsPluginId: 'sdk',
               docId: 'intro',
             },
+            {
+              type: 'doc',
+              label: 'Releases',
+              docsPluginId: 'releases',
+              docId: 'index',
+            }
           ],
         },
         {
@@ -154,7 +160,16 @@ module.exports = {
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
-    ['docusaurus-node-polyfills', { excludeAliases: ['console'] }]
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'releases',
+        path: 'releases',
+        routeBasePath: 'releases',
+        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
+      },
+    ],
+    ['docusaurus-node-polyfills', { excludeAliases: ['console']}]
   ],
   i18n: {
     defaultLocale: 'en',
