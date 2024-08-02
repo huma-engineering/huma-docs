@@ -141,6 +141,17 @@ The HumaModulesManager provides an option to override the modules inputs with
 The HumaModulesManager provides an option to refresh the data with ```refreshData``` function. You
 can call it without any parameters to refresh all modules, or with specific module ids to refresh.
 
+### Query module data
+To query module data you can use ```fetchModuleData``` function.
+```kotlin
+HumaModuleKitManager.getInstance().fetchModuleData(
+     moduleConfigId: ModuleConfigId?, 
+     moduleId: ModuleId?, 
+     period: TimePeriod?, 
+     refreshModulesBeforeFetch: Boolean
+)
+```
+
 ```kotlin
 HumaModulesManager.getInstance().refreshData()
 ```

@@ -5,11 +5,13 @@ sidebar_position: 1
 # How to configure Foundation (Android)
 
 ## Introduction
+
 The Foundation layer need to be configured with minimal setup to use the Huma SDK.
 It is the base layer of the Huma SDK and is required to be configured before using any other layer
 of the SDK.
 
 ## Configuration
+
 To configure it you need to prepare your project based on this [page](../Getting Started/Android).
 
 ```kotlin
@@ -27,7 +29,7 @@ context.installHumaSdk {
             // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
             networkInterceptors = listOf()
             // (Required) Map of environment configurations used for network requests
-            environments = mapOf<String, EnvConfigData>() 
+            environments = mapOf<String, EnvConfigData>()
         }
         router { // (Required) Router configuration
             // Define the start activity class to open on push actions and navigation
@@ -35,13 +37,13 @@ context.installHumaSdk {
             // (Optional) Define the splash activity class to open on push actions and navigation
             splashActivityClass = SplashActivity::class.java
             // (Optional) Define the crash handling mode, use None if you want to handle crashes by yourself
-            crashHandling = CrashHandling.Debug 
+            crashHandling = CrashHandling.Debug
         }
         analytics { // (Optional) Analytics configuration
             // (Optional) Define the tracker to be used for analytics events
             tracker = Analytics.Tracker
             // (Optional) Define the error monitor to be used for error monitoring
-            errorMonitor = ErrorMonitorWrapper.ErrorMonitor 
+            errorMonitor = ErrorMonitorWrapper.ErrorMonitor
             segment(
                 // Segment configuration with implementation("com.huma.sdk:plugin-segment:+")
                 writeKey = "...",
@@ -60,22 +62,30 @@ context.installHumaSdk {
             // (false by default) Enable or disable tapJacking protection in Huma user flows
             tapJackingProtectionToBeAppliedOnWholeApp = true / false
             // (false by default) Enable or disable tapJacking feature in Huma user flows
-            tapJackingFeatureEnabled = true / false 
+            tapJackingFeatureEnabled = true / false
         }
         notification { // (Optional) Notification configuration
             // List of notification handlers that will be used to handle notifications from Huma Platform. Use only if you have custom notification from Huma Platform
-            handlers = listOf() 
+            handlers = listOf()
         }
         helper { // (Optional) Helper configuration
             // List of sealed classes that will be used to serialize and deserialize data. Use only if you are having custom sealed classes in api response from Huma Platform
             sealedClassesToSerialize = listOf()
             // (Optional) Used to override default offline mode availability provider
-            offlineModeStateProvider = OfflineModeStateProvider() 
+            offlineModeStateProvider = OfflineModeStateProvider()
         }
     }
 }
 ```
+
+## JSON Configuration
+
+By using Huma Gradle Plugin, you can also configure the environments using JSON configuration.
+To do that, add the Gradle Plugin to your project and paste the _huma-sdk-config.json_ to app or
+flavour folder
+
 ## Explanation
+
 Only this that is required to be configured is the `environments` in the `network` configuration and
 main activity class in the `router` configuration.
 
