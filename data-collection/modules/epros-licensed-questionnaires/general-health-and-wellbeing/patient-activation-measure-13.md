@@ -13,7 +13,7 @@ Patients answer generic questions about how they feel about their health. To sta
 
 ## Clinicians
 
-In the Clinician Portal, care teams will see the latest Patient Activation Measure-13 score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Patient Activation Measure-13 score for their patient, with concerning scores flagged for attention.
 
 ![Clinician View of Patient Activation Measure-13](./assets/cp-patient-summary-pam-13.png)
 

@@ -14,7 +14,7 @@ In the right-hand panel, you can edit the configuration of the profile page. Cli
 
 ### Enable appointments
 
-On your profile page, you can enable a range of features shown in the right side panel. In addition to the default options, you can also toggle on <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Appointments</span>. Enabling this feature will allow app users and clinicians using the Huma Care Portal to schedule appointments and join virtual calls on Huma. 
+On your profile page, you can enable a range of features shown in the right side panel. In addition to the default options, you can also toggle on <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Appointments</span>. Enabling this feature will allow app users and clinicians using the Huma Huma Portal to schedule appointments and join virtual calls on Huma. 
 
 ### Lock app
 

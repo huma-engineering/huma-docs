@@ -5,7 +5,7 @@ title: Filter and sorting the patient list
 # Filters and sorting the Patient List
 **User**: Admin; Access Controller; Deployment Staff; Contributor; Organisation Staff
 
-The **Patient List** is the main dashboard of the Clinician Portal and where you can find all patients listed along with their vitals. This list can be filtered, sorted and customised according to the needs of the user. 
+The **Patient List** is the main dashboard of the Huma Portal and where you can find all patients listed along with their vitals. This list can be filtered, sorted and customised according to the needs of the user. 
 ## How it works​
 You can access the Patient List filters via the icon![Filters icon](./assets/FiltersIcon.png) at the top-right of the portal.
 

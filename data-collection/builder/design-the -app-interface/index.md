@@ -6,7 +6,7 @@ Once you have selected a template, you will see different pages of your app. Sel
 
 ### Editing page details
 
-Each page that is shown in the app overview will appear in the bottom navigation of the Huma Care App. Once the app user signs into the app, each page is introduced with a small tutorial. Follow the steps below to change the page details:
+Each page that is shown in the app overview will appear in the bottom navigation of the Huma App. Once the app user signs into the app, each page is introduced with a small tutorial. Follow the steps below to change the page details:
 
 1. Click the small gear icon next to the page name.
 2. Edit all fields that appear in the modal. The text in the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Description</span> field will appear in the onboarding tutorial once a user onboards to the app.
@@ -14,7 +14,7 @@ Each page that is shown in the app overview will appear in the bottom navigation
 
 ### Adding, editing and removing widgets
 
-Widgets are functional building blocks of the Huma Care App that can be added, edited, and rearranged in any desired way to create an interface of the app. 
+Widgets are functional building blocks of the Huma App that can be added, edited, and rearranged in any desired way to create an interface of the app. 
 
 1. Add widgets by clicking <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>+ New widget</span> in the left side panel.
 2. Configure the layout or functionality of a widget in the side panel on the right. 

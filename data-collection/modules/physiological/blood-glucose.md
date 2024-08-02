@@ -13,7 +13,7 @@ Patients input their result and the time and date is added automatically at the 
 
 ![Add a blood glucose result](./assets/blood-glucose.png)
 
-Patients can view their historic blood glucose results in a graph. In the Clinician Portal, care teams will be able to easily see the latest blood glucose readings from their patients and any concerning readings will be flagged. 
+Patients can view their historic blood glucose results in a graph. In the Huma Portal, care teams will be able to easily see the latest blood glucose readings from their patients and any concerning readings will be flagged. 
 
 ![View blood glucose from the Patient List](./assets/cp-patient-list-blood-glucose.png)
 

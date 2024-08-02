@@ -13,10 +13,10 @@ In the BMI module, patients can report weight changes and see how this affects t
 
 ![Reporting Weight for BMI in the Huma App](./assets/bmi.png)
 
-Patients can view their BMI evolution presented in a graph. In the Clinician Portal, care teams will be able to easily see the latest BMI entries from their patients and any concerning values will be flagged. 
+Patients can view their BMI evolution presented in a graph. In the Huma Portal, care teams will be able to easily see the latest BMI entries from their patients and any concerning values will be flagged. 
 
-![Viewing BMI in the Clinician Portal](./assets/cp-patient-list-bmi.png)
+![Viewing BMI in the Huma Portal](./assets/cp-patient-list-bmi.png)
 
 The Patient Summary displays a more detailed view of the patient's BMI data in graph or table form.
 
-![Viewing BMI module details in the Clinician Portal](./assets/cp-module-details-bmi.png)
+![Viewing BMI module details in the Huma Portal](./assets/cp-module-details-bmi.png)

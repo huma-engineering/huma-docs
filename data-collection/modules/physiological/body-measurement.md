@@ -19,4 +19,4 @@ The Huma App uses profile data such as height, weight, age and gender collected 
 
 ![Adding data to body measurements](./assets/body-measurements.png)
 
-This module helps patients to understand their health and the data collected is not viewable to care teams in the Clinician Portal. 
+This module helps patients to understand their health and the data collected is not viewable to care teams in the Huma Portal. 

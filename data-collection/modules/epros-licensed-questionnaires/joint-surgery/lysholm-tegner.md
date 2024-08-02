@@ -13,7 +13,7 @@ To start, patients can select the Lysholm & Tegner module and click "Add". From 
 
 ![Lysholm & Tegner in Huma App](./assets/lyshom-tegner.png)
 
-In the Clinician Portal, care teams will see the latest Lysholm & Tegner score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Lysholm & Tegner score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Lysholm & Tegner](./assets/cp-patient-list-lysholm-tegner.png)
 

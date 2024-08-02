@@ -23,10 +23,10 @@ The time and date is added automatically at the moment they make the entry (alth
 
 ![Adding heart rate to the Huma App](./assets/heart-rate.png)
 
-Patients can view their historic readings in a graph. In the Clinician Portal, care teams will be able to easily see the latest readings from their patients and any concerning readings will be flagged.  
+Patients can view their historic readings in a graph. In the Huma Portal, care teams will be able to easily see the latest readings from their patients and any concerning readings will be flagged.  
 
-![View patient heart rate in the Clinician Portal](./assets/cp-patient-list-heart-rate.png)
+![View patient heart rate in the Huma Portal](./assets/cp-patient-list-heart-rate.png)
 
 The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
-![View patient heart rate in the Clinician Portal](./assets/cp-module-details-heart-rate.png)
+![View patient heart rate in the Huma Portal](./assets/cp-module-details-heart-rate.png)

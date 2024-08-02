@@ -5,7 +5,7 @@ title: Inviting patients
 # Inviting Patients
 **User**: Admin; Access Controller; Deployment Staff; Organisation Staff; Patients
 
-Once the Clinician Portal is set up and ready to go, you need to invite patients. Patients can only get access to the Huma App via an invitation. Any user with ‘manage patient data’ permissions can invite patients. 
+Once the Huma Portal is set up and ready to go, you need to invite patients. Patients can only get access to the Huma App via an invitation. Any user with ‘manage patient data’ permissions can invite patients. 
 ## How it works​
 Open the dropdown menu next to your name at the top-right of the portal and select **Invite Patients**.
 

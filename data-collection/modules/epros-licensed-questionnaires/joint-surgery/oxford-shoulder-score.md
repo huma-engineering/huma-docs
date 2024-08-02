@@ -15,7 +15,7 @@ also access all their previous results. Daily, weekly, or monthly reminders can 
 
 ![Oxford Shoulder Score in the Huma App](./assets/oss-patient-app.png)
 
-In the Clinician Portal, care teams will see the latest Oxford Shoulder Score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Oxford Shoulder Score for their patient, with concerning scores flagged for attention.
 
 ![Oxford Shoulder Score in CP](./assets/cp-oss-one.png)
 

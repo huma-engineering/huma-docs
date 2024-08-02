@@ -13,7 +13,7 @@ To start, patients select the Oxford Knee Score module and click **Add**. From w
 
 ![Oxford Knee Score in the Huma App](./assets/oxford-knee-score.png)
 
-In the Clinician Portal, care teams will see the latest Oxford Knee Score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Oxford Knee Score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Oxford Knee School](./assets/cp-patient-list-oxford-knee-score.png)
 

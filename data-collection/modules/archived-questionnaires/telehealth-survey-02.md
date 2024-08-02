@@ -9,7 +9,7 @@ The Telehealth Survey helps assess the adoption of digital information and commu
 
 Patients answer questions regarding their use of technology as part of their healthcare journey. Patients can view their progress from insode the module and set a reminder to help keep on track.
 
-In the Clinician Portal, care teams will see the latest Telehealth Survey results for their patient. In the Patient Summary, they will be able to see all historical data in table form.
+In the Huma Portal, care teams will see the latest Telehealth Survey results for their patient. In the Patient Summary, they will be able to see all historical data in table form.
 
 The Telehealth Survey No. 2 has a total of 8 questions:
 

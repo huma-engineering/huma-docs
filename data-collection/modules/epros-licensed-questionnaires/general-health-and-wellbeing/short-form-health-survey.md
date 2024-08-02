@@ -21,10 +21,10 @@ To start, patients select the SF-36 module and click **Add**. When they have ans
 
 ![Short Form Health Survey in Huma App ](./assets/short-form-health-survey.png)
 
-In the Clinician Portal, care teams will see the latest SF-36 score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest SF-36 score for their patient, with concerning scores flagged for attention.
 
-![Short Form Health Survey in Clinician Portal ](./assets/cp-patient-list-sf-36.png)
+![Short Form Health Survey in Huma Portal ](./assets/cp-patient-list-sf-36.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Short Form Health Survey in Clinician Portal ](./assets/cp-patient-summary-sf-36.png)
+![Short Form Health Survey in Huma Portal ](./assets/cp-patient-summary-sf-36.png)

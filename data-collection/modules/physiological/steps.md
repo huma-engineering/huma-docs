@@ -13,6 +13,6 @@ Patients first need to sync the Huma App with Google Fit or Apple Health by foll
 
 ![Adding steps tracking in the Huma App](./assets/steps.png)
 
-Patients can view their steps data in a graph and care teams can view also see it from the Clinician Portal.
+Patients can view their steps data in a graph and care teams can view also see it from the Huma Portal.
 
 ![Steps data](./assets/cp-patient-list-steps.png)

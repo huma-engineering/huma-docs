@@ -15,7 +15,7 @@ From within the module, patients can view their progress in a graph and also acc
 
 ![Spatial Spain Test](./assets/spatial-span.png)
 
-In the Clinician Portal, care teams will see the latest Spatial Span Test score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Spatial Span Test score for their patient, with concerning scores flagged for attention.
 
 ![Spatial Spain Test](./assets/cp-module-details-spatial-span.png)
 

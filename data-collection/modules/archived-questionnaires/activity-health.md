@@ -7,7 +7,7 @@ There are many reasons why being active and eating a healthy diet is important. 
 
 ## How it works
 
-Patients will answer questions in the Huma App about the activity taken and food consumed in the previous seven days. Care teams can view and track patient responses to the questionnaire in the Clinician Portal. Both patients and their care team will be able to view past reponses to track how their habits are changing.
+Patients will answer questions in the Huma App about the activity taken and food consumed in the previous seven days. Care teams can view and track patient responses to the questionnaire in the Huma Portal. Both patients and their care team will be able to view past reponses to track how their habits are changing.
 
 In the Patient Summary, care teams can view all historical data displayed as a graph or a table of results.
 

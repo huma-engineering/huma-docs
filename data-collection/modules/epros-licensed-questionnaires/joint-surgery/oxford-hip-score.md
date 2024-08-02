@@ -15,10 +15,10 @@ To start, patients select the Oxford Hip Score module and click **Add**. From wi
 
 ## Clinicians
 
-In the Clinician Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention. 
+In the Huma Portal, care teams will see the latest Oxford Hip Score for their patient, with concerning scores flagged for attention. 
 
-![Oxford Hip Score in the Clinician Portal](./assets/cp-patient-list-oxford-hip-score.png)
+![Oxford Hip Score in the Huma Portal](./assets/cp-patient-list-oxford-hip-score.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Oxford Hip Score in the Clinician Portal](./assets/cp-module-details-oxford-hip-score.png)
+![Oxford Hip Score in the Huma Portal](./assets/cp-module-details-oxford-hip-score.png)

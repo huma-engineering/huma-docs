@@ -7,7 +7,7 @@ The Fenland Study for COVID-19 is looking to gather data on how many people have
 
 ## How it works
 
-Patients will answer questions about tests and symptoms of COVID-19 over the past month. Care teams can view new and historical results in the Clinician Portal and concerning scores will be flagged for attention.  
+Patients will answer questions about tests and symptoms of COVID-19 over the past month. Care teams can view new and historical results in the Huma Portal and concerning scores will be flagged for attention.  
 
 In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 

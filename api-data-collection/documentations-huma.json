@@ -2300,7 +2300,7 @@
                       "properties": {
                         "details": {
                           "type": "string",
-                          "example": "As part of this programme, you may be contacted to provide feedback on your experiences either using the HUMA app or being part of the remote patient monitoring programme."
+                          "example": "As part of this programme, you may be contacted to provide feedback on your experiences either using the Huma App or being part of the remote patient monitoring programme."
                         },
                         "title": {
                           "type": "string",

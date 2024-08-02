@@ -11,7 +11,7 @@ The Norfolk quality of life-diabetic neuropathy questionnaire allows patients to
 
 Patients can view their progress in a graph and view all previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
-In the Clinician Portal, care teams will see the latest QOL-DN score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest QOL-DN score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Norfolk Quality of Life-Diabetic Neuropathy (QOL-DN)](./assets/cp-patient-list-norfolk-quality-of-life-score.png)
 

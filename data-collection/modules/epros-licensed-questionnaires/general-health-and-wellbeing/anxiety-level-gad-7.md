@@ -17,7 +17,7 @@ To start, patients select the GAD-7 module and click **Add**. When they have ans
 
 ![Anxiety Level - GAD-7 in the Huma App](./assets/anxiety-level-gad-7.png)
 
-In the Clinician Portal, care teams will see the latest Anxiety Level - GAD-7 score for their patient, with concerning scores flagged for attention. 
+In the Huma Portal, care teams will see the latest Anxiety Level - GAD-7 score for their patient, with concerning scores flagged for attention. 
 
 ![Clinician view of Anxiety Level - GAD-7](./assets/cp-patient-list-gad-7.png)
 

@@ -2,7 +2,7 @@
 sidebar_position: 4
 title: Huma App
 ---
-The Huma App is the place where patients enter their health data. The information provided via the Huma App will be displayed in the Clinician Portal for care and research teams to track. 
+The Huma App is the place where patients enter their health data. The information provided via the Huma App will be displayed in the Huma Portal for care and research teams to track. 
 
 Patients [submit their data](./features/entering-your-health-data.md) in the form of both [quantitative (e.g. heart rate, blood pressure) and qualitative (e.g. questionnaires, photos) data](./features/track-modules.md), depending on the modules assigned in the Deployment configuration. They will be instructed on what data to collect and when to submit it via a series of [tasks on their homepage](./features/to-dos.md). 
 
@@ -13,4 +13,4 @@ The Huma App’s telemedicine functionality allows care teams to contact their p
 Patients can manage their data and settings via their [Profile](./getting-started/personal-information-account-settings.md) page.
 
 ## Users
-Both patients and their helpers can enter data into the Huma App. Patients are invited from the Clinician Portal and helpers are invited from either the Clinician Portal or by patients, from the Huma App itself.
+Both patients and their helpers can enter data into the Huma App. Patients are invited from the Huma Portal and helpers are invited from either the Huma Portal or by patients, from the Huma App itself.

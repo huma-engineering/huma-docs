@@ -5,7 +5,7 @@ title: Calls and appointments
 # Calls and appointments
 **User**: Patient
 
-Patients sometimes need additional support from their care team in the form of direct consultation. The Huma App facilitates this with the Telemedicine function which permits secure video and audio calls. Care teams can [schedule appointments](../../clinician-portal/telemedicine/scheduling-appointments.md) or [call their patient](../../clinician-portal/telemedicine/calling-patients.md) directly from the Telemedicine section of the Clinician Portal.
+Patients sometimes need additional support from their care team in the form of direct consultation. The Huma App facilitates this with the Telemedicine function which permits secure video and audio calls. Care teams can [schedule appointments](../../clinician-portal/telemedicine/scheduling-appointments.md) or [call their patient](../../clinician-portal/telemedicine/calling-patients.md) directly from the Telemedicine section of the Huma Portal.
 
 ## How it works​
 

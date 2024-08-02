@@ -13,9 +13,9 @@ Patients count the number of breaths they take over the course of a minute and e
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic results from within the module. Reminders can be set to help them stay on track and make sure they don't miss an entry.
 
-In the Clinician Portal, care teams will be able to easily see the latest respiratory rate from their patients and any concerning readings will be flagged.  
-![Viewing a Patient's respiratory rate in the Clinician Portal](./assets/cp-patient-list-respiratory-rate.png)
+In the Huma Portal, care teams will be able to easily see the latest respiratory rate from their patients and any concerning readings will be flagged.  
+![Viewing a Patient's respiratory rate in the Huma Portal](./assets/cp-patient-list-respiratory-rate.png)
 
 The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
-![Viewing a Patient's respiratory rate in the Clinician Portal](./assets/cp-module-details-respiratory-rate.png)
+![Viewing a Patient's respiratory rate in the Huma Portal](./assets/cp-module-details-respiratory-rate.png)

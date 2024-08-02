@@ -13,7 +13,7 @@ To start, patients select the WHQ module and click **Add**. From within the modu
 
 ![Wound Healing Questionnaire (WHQ) in Huma App](./assets/whq.png)
 
-In the Clinician Portal, care teams will see the latest WHQ score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest WHQ score for their patient, with concerning scores flagged for attention.
 
 ![Wound Healing Questionnaire (WHQ) in Huma App](./assets/cp-patient-list-whq.png)
 

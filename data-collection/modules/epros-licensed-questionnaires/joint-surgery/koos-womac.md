@@ -13,7 +13,7 @@ To start, patients select the KOOS/WOMAC module and click **Add** to start. From
 
 ![KOOS/WOMAC in Huma App](./assets/koos-womac.png)
 
-In the Clinician Portal, care teams will see the number of entries for KOOS/WOMAC and the date of the last entry.
+In the Huma Portal, care teams will see the number of entries for KOOS/WOMAC and the date of the last entry.
 
 ![Clinician view of KOOS/WOMAC](./assets/cp-patient-list-koos-womac.png)
 

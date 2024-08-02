@@ -15,7 +15,7 @@ To start, patients select the PROMIS CAT Physical Function module and click **Ad
 
 ![PROMIS CAT Physical Function in the Huma App](./assets/promis-cat-physical-function.png)
 
-In the Clinician Portal, care teams will see the latest PROMIS CAT Physical Function score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest PROMIS CAT Physical Function score for their patient, with concerning scores flagged for attention.
  
 ![Clinician view of PROMIS CAT Physical Function](./assets/cp-patient-summary-promis-cat-physical-function.png)
 

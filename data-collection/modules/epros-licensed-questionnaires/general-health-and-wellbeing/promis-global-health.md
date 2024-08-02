@@ -13,7 +13,7 @@ To start, patients select the PROMIS Global Health module and click **Add**. Whe
 
 ![PROMIS Global Health in Huma App](./assets/promis-cat-global-health.png)
 
-In the Clinician Portal, care teams will see the latest PROMIS Global Health score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest PROMIS Global Health score for their patient, with concerning scores flagged for attention.
 
 ![PROMIS Global Health in Huma App](./assets/cp-module-details-promis-global-health.png)
 

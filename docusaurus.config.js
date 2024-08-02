@@ -37,53 +37,27 @@ module.exports = {
       },
       items: [
         {
-          type: 'dropdown',
+          type: 'doc',
           position: 'left',
-          label: 'Product documentation',
-          items: [
-            {
-              type: 'doc',
-              label: 'Data collection',
-              docsPluginId: 'data-collection',
-              docId: 'index',
-            },
-          ],
+          label: 'Product',
+          docsPluginId: 'data-collection',
+          docId: 'index',
         },
         {
           type: 'dropdown',
           position: 'left',
-          label: 'API',
+          label: 'Developer Resources',
           items: [
             {
-              label: 'Data collection',
+              label: 'API',
               to: "api-data-collection",
               docsPluginId: 'api-data-collection',
             },
-            // {
-            //   type: 'doc',
-            //   label: 'Integration',
-            //   docsPluginId: 'api-integration',
-            //   docId: 'intro',
-            // },
-          ],
-        },
-        {
-          type: 'doc',
-          position: 'left',
-          label: 'SDK',
-          docsPluginId: 'sdk',
-          docId: 'intro',
-        },
-        {
-          type: 'dropdown',
-          position: 'left',
-          label: 'Resources',
-          items: [
             {
               type: 'doc',
-              label: 'Trust & Security',
-              docsPluginId: 'trust-security',
-              docId: 'index',
+              label: 'SDK',
+              docsPluginId: 'sdk',
+              docId: 'intro',
             },
             {
               type: 'doc',
@@ -92,6 +66,13 @@ module.exports = {
               docId: 'index',
             }
           ],
+        },
+        {
+          position: 'left',
+          type: 'doc',
+          label: 'Trust & Security',
+          docsPluginId: 'trust-security',
+          docId: 'index',
         },
         {
           type: 'localeDropdown',
