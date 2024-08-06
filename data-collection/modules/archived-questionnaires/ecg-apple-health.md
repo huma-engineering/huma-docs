@@ -10,7 +10,7 @@ This feature is available to iPhone users with iOS14 or later, or Apple Watch Se
 
 ![Adding ECG tracking from Apple Watch to Huma App](../physiological/assets/ecg.png)
 
-Patients can view their historic ECG results in a graph. In the Clinician Portal, care teams will be able to easily see the results of the latest ECG readings, recorded as one of the following status and its severity:
+Patients can view their historic ECG results in a graph. In the Huma Portal, care teams will be able to easily see the results of the latest ECG readings, recorded as one of the following status and its severity:
 
 - Sinus rhythm
 - Atrial fibrillation

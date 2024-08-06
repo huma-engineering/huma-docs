@@ -13,10 +13,10 @@ Patients will measure their oxygen saturation using a pulse oximeter and enter t
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic blood oxygen results from within the module. Reminders can be set to help them stay on track and make sure they don't miss a reading.
 
-In the Clinician Portal, care teams will be able to easily see the latest blood saturation readings from their patients in the SpO2 column and any concerning readings will be flagged. 
+In the Huma Portal, care teams will be able to easily see the latest blood saturation readings from their patients in the SpO2 column and any concerning readings will be flagged. 
 
-![Viewing oxygen saturation in the Clinician Portal](./assets/cp-patient-list-oxygen-saturation.png)
+![Viewing oxygen saturation in the Huma Portal](./assets/cp-patient-list-oxygen-saturation.png)
 
 The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
-![Viewing oxygen saturation in the Clinician Portal](./assets/cp-module-details-oxygen-saturation.png)
+![Viewing oxygen saturation in the Huma Portal](./assets/cp-module-details-oxygen-saturation.png)

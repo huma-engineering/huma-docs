@@ -18,10 +18,10 @@ At the end of the questionnaire, patients are assigned a score out of 100 which 
 
 ![Oxford Arthroplasty Early Recovery Score in Huma App](./assets/oars.png)
 
-In the Clinician Portal, care teams will see the latest Oxford Arthroplasty Early Recovery Score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Oxford Arthroplasty Early Recovery Score for their patient, with concerning scores flagged for attention.
 
-![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-patient-list-oars.png)
+![Oxford Arthroplasty Early Recovery Score in the Huma Portal](./assets/cp-patient-list-oars.png)
 
 In the Patient Summary, care teams can view all historical data in graph or table form.
 
-![Oxford Arthroplasty Early Recovery Score in the Clinician Portal](./assets/cp-module-details-oars.png)
+![Oxford Arthroplasty Early Recovery Score in the Huma Portal](./assets/cp-module-details-oars.png)

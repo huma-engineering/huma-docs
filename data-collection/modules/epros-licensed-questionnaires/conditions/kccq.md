@@ -13,10 +13,10 @@ From the KCCQ module, patients can start the questionnaire by clicking **Add**. 
 
 ![Kansas City Cardiomyopathy Questionnaire in the Huma App](./assets/kccq.png)
 
-In the Clinician Portal, care teams will see the latest KCCQ score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest KCCQ score for their patient, with concerning scores flagged for attention.
 
-![Kansas City Cardiomyopathy Questionnaire in the Clinician Portal](./assets/cp-patient-list-kccq.png)
+![Kansas City Cardiomyopathy Questionnaire in the Huma Portal](./assets/cp-patient-list-kccq.png)
 
 In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
-![Kansas City Cardiomyopathy Questionnaire in the Clinician Portal](./assets/cp-module-details-kccq.png)
+![Kansas City Cardiomyopathy Questionnaire in the Huma Portal](./assets/cp-module-details-kccq.png)

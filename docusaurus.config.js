@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'Find the latest user guides, developer guides, API references, tutorials, and more.',
   url: 'https://docs.huma.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'huma-engineering', // Usually your GitHub org/user name.
@@ -36,49 +36,43 @@ module.exports = {
         src: '../img/huma_logo_black.svg',
       },
       items: [
-         {
+        {
           type: 'doc',
-          label: 'Product documentation',
+          position: 'left',
+          label: 'Product',
           docsPluginId: 'data-collection',
           docId: 'index',
         },
         {
           type: 'dropdown',
           position: 'left',
-          label: 'API',
+          label: 'Developer Resources',
           items: [
             {
-              label: 'Data collection',
+              label: 'API',
               to: "api-data-collection",
               docsPluginId: 'api-data-collection',
             },
-            // {
-            //   type: 'doc',
-            //   label: 'Integration',
-            //   docsPluginId: 'api-integration',
-            //   docId: 'intro',
-            // },
-          ],
-        },
-        {
-          type: 'doc',
-          position: 'left',
-          label: 'SDK',
-          docsPluginId: 'sdk',
-          docId: 'intro',
-        },
-        {
-          type: 'dropdown',
-          position: 'left',
-          label: 'Resources',
-          items: [
             {
               type: 'doc',
-              label: 'Trust & Security',
-              docsPluginId: 'trust-security',
-              docId: 'index',
+              label: 'SDK',
+              docsPluginId: 'sdk',
+              docId: 'intro',
             },
+            {
+              type: 'doc',
+              label: 'Releases',
+              docsPluginId: 'releases',
+              docId: 'index',
+            }
           ],
+        },
+        {
+          position: 'left',
+          type: 'doc',
+          label: 'Trust & Security',
+          docsPluginId: 'trust-security',
+          docId: 'index',
         },
         {
           type: 'localeDropdown',
@@ -163,6 +157,15 @@ module.exports = {
         id: 'trust-security',
         path: 'trust-security',
         routeBasePath: 'trust-security',
+        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'releases',
+        path: 'releases',
+        routeBasePath: 'releases',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],

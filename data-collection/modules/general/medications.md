@@ -15,8 +15,8 @@ In the **Medication log**, patients can see a historic view of the medications t
 
 In the Patient Summary, care teams will be able to see the patient's listed medications along with their dosage and frequency. The patient's adherence to the schedule will also be shown.
 
-![View medications in the Clinician Portal](./assets/cp-patient-summary-medications.png)
+![View medications in the Huma Portal](./assets/cp-patient-summary-medications.png)
 
 The detailed view shows a list of the patient's current medications. From the **Adherence** column, clinicians can access a calendar view of the patients medication adherence for the current month or previous months. Clinicians can also see any previous medications by switching to the **Archived medications** view. New medications can also be added by the care team from this page.
 
-![View patient heart rate in the Clinician Portal](./assets/cp-module-details-medications.png)
+![View patient heart rate in the Huma Portal](./assets/cp-module-details-medications.png)

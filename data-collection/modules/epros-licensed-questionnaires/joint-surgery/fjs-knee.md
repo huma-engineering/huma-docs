@@ -11,7 +11,7 @@ Patients answer a number of multiple choice questions about knee joint awareness
 
 ![Forgotten Joint Score Knee in Huma App](./assets/fjs-knee.png)
 
-In the Clinician Portal, care teams will see the latest FJS Knee score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest FJS Knee score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Forgotten Joint Score Knee](./assets/cp-patient-list-fjs-knee.png)
 

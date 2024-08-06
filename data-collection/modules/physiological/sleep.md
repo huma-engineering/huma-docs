@@ -11,7 +11,7 @@ This module syncs data from Fitbit. From the **Track** screen, open the Sleep mo
 
 ![Sleep](./assets/Sleep01.png)
 
-In the clinician portal, care teams can view an overview of patient sleep data. Hovering over the data opens a more detailed view.
+In the Huma Portal, care teams can view an overview of patient sleep data. Hovering over the data opens a more detailed view.
 
 ![Sleep](./assets/Sleep02.png)
 

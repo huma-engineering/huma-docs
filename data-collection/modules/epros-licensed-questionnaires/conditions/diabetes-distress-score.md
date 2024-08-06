@@ -15,7 +15,7 @@ From the Diabetes Distress Score module, patients can start the questionnaire by
 
 Patients can view their progress in a graph and view all previous results in a table. Patients can also set a daily, weekly, or monthly reminder to help keep on track.
 
-In the Clinician Portal, care teams will see the latest diabetes distress score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest diabetes distress score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Diabetes Distress Score](./assets/cp-patient-list-diabetes-distress-score.png)
 

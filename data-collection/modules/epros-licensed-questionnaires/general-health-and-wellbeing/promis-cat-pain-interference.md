@@ -13,7 +13,7 @@ To start, patients select the PROMIS CAT Pain Interference module and click **Ad
 
 ![PROMIS CAT Pain Interference in the Huma App](./assets/promis-cat-pain-interference.png)
 
-In the Clinician Portal, care teams will see the latest PROMIS CAT Pain Interference score for their patient, with concerning scores flagged for attention. 
+In the Huma Portal, care teams will see the latest PROMIS CAT Pain Interference score for their patient, with concerning scores flagged for attention. 
 
 ![Clinician View of PROMIS CAT Pain Interference](./assets/cp-patient-summary-promis-cat-pain-interference.png)
 

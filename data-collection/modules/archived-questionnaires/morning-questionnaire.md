@@ -9,7 +9,7 @@ Good sleep is essential for good health. The Morning Questionnaire is a way of c
 
 The patient answers three simple questions about their sleep. From within the module, patients can view their progress in a graph and view their previous results in a table. Patients can also set a reminder to help stay on track.
 
-In the Clinician Portal, care teams will see the latest Morning Questionnaire score for their patients, with any concerning scores flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
+In the Huma Portal, care teams will see the latest Morning Questionnaire score for their patients, with any concerning scores flagged for attention. In the Patient Summary, care teams will be able to see all historical data in graph or table form.
 
 ## Questions
 

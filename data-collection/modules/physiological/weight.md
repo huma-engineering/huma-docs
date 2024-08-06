@@ -13,10 +13,10 @@ Using a typical bathroom scale, patients weigh themselves and enter the reading 
 
 The time and date is added automatically at the moment they make the entry (although this can be edited if needed) and patients will also be able to view all their historic readings from within the module. Reminders can be set to help them stay on track and make sure they don't miss an entry.
 
-In the Clinician Portal, care teams will be able to easily see the latest weight entries from their patients.
+In the Huma Portal, care teams will be able to easily see the latest weight entries from their patients.
 
-![Viewing weight in the Clinician Portal](./assets/cp-patient-list-weight.png)
+![Viewing weight in the Huma Portal](./assets/cp-patient-list-weight.png)
 
 The Patient Summary displays a more detailed view of the patient's historic readings in graph or table form.
 
-![Viewing weight in the Clinician Portal](./assets/cp-module-details-weight.png)
+![Viewing weight in the Huma Portal](./assets/cp-module-details-weight.png)

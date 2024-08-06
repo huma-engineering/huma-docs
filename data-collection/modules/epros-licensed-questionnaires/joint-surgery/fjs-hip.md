@@ -11,7 +11,7 @@ Patients answer a number of multiple choice questions about hip joint awareness.
 
 ![Forgotten Joint Score Hip in the Huma App ](./assets/fjs-hip.png)
 
-In the Clinician Portal, care teams will see the latest FJS Hip score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest FJS Hip score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of Forgotten Joint Score Hip](./assets/cp-patient-list-fjs-hip.png)
 

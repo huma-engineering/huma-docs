@@ -11,10 +11,10 @@ Patients upload photos to the Huma App or take them directly using the phone cam
 
 ![Adding a photo in the Huma App](./assets/photos.png)
 
-In the Clinician Portal, care teams can view photos submitted by their patients. 
+In the Huma Portal, care teams can view photos submitted by their patients. 
 
-![Photos in the Clinician Portal](./assets/cp-patient-summary-photos.png)
+![Photos in the Huma Portal](./assets/cp-patient-summary-photos.png)
 
 By clicking on the module summary, clinicians can see when the photos were submitted, along with notes from the patient.
 
-![Photos in the Clinician Portal](./assets/cp-module-details-photos.png)
+![Photos in the Huma Portal](./assets/cp-module-details-photos.png)

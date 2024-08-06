@@ -13,7 +13,7 @@ To start, patients select the Knee Health IKDC module and click **Add**. From wi
 
 ![International Knee Documentation Committee in Huma App](./assets/knee-health-ikdc.png)
 
-In the Clinician Portal, care teams will see the latest Knee Health IKDC score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest Knee Health IKDC score for their patient, with concerning scores flagged for attention.
 
 ![Clinician view of International Knee Documentation Committee](./assets/cp-patient-list-ikdc.png)
 

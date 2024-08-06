@@ -6,13 +6,13 @@ The asthma control test is a questionnaire where patients answer 5 questions abo
 
 ## How it works
 
-Patients answer questions about their asthma symptoms and their impact on daily life. Questions are scored on a scale from 1-5, giving them a total score out of 25, which is shared with care teams via the Clinician Portal.
+Patients answer questions about their asthma symptoms and their impact on daily life. Questions are scored on a scale from 1-5, giving them a total score out of 25, which is shared with care teams via the Huma Portal.
 
 To start, patients select the ACT module and click **Add**. When they have answered all the questions, they will be assigned a score that is shared with their care team. From within the module, patients can view their progress in a graph and also access all their previous results. Daily, weekly, or monthly reminders can be set to help stay on track.
 
 ![ACT](./assets/ACT01.png)
 
-In the Clinician Portal, care teams will see the latest ACT assessment test score for their patient, with concerning scores flagged for attention.
+In the Huma Portal, care teams will see the latest ACT assessment test score for their patient, with concerning scores flagged for attention.
 
 ![ACT](./assets/ACT02.png)
 
