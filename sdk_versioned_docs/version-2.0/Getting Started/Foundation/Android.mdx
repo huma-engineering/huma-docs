@@ -1,0 +1,100 @@
+---
+sidebar_position: 1
+---
+
+# How to configure Foundation (Android)
+
+## Introduction
+
+The Foundation layer need to be configured with minimal setup to use the Huma SDK.
+It is the base layer of the Huma SDK and is required to be configured before using any other layer
+of the SDK.
+
+## Configuration
+
+To configure it you need to prepare your project based on this [page](../Getting Started/Android).
+
+```kotlin
+context.installHumaSdk {
+    foundation {
+        network { // (Required) Network configuration
+            // (false by default) Enable or disable SSL security
+            sslSecurityEnabled = true / false
+            // List of network error handlers that will be used to respond on network errors
+            networkErrorHandlers = listOf()
+            // (Optional) Used to define the offline mode availability
+            offlineModeStateProvider = OfflineModeStateProvider()
+            // List of interceptors that will be used to intercept network requests (OKHttp interceptors)
+            interceptors = listOf()
+            // List of network interceptors that will be used to intercept network requests (OKHttp network interceptors)
+            networkInterceptors = listOf()
+            // (Required) Map of environment configurations used for network requests
+            environments = mapOf<String, EnvConfigData>()
+        }
+        router { // (Required) Router configuration
+            // Define the start activity class to open on push actions and navigation
+            startActivityClass = MainActivity::class.java
+            // (Optional) Define the splash activity class to open on push actions and navigation
+            splashActivityClass = SplashActivity::class.java
+            // (Optional) Define the crash handling mode, use None if you want to handle crashes by yourself
+            crashHandling = CrashHandling.Debug
+        }
+        analytics { // (Optional) Analytics configuration
+            // (Optional) Define the tracker to be used for analytics events
+            tracker = Analytics.Tracker
+            // (Optional) Define the error monitor to be used for error monitoring
+            errorMonitor = ErrorMonitorWrapper.ErrorMonitor
+            segment(
+                // Segment configuration with implementation("com.huma.sdk:plugin-segment:+")
+                writeKey = "...",
+            )
+            sentry(
+                // Sentry configuration with implementation("com.huma.sdk:plugin-sentry:+")
+                context = context,
+                env = "...",
+                dsn = "...",
+                release = "...",
+            )
+        }
+        security { // (Optional) Security configuration
+            // (true by default) Enable or disable screen capture in Huma user flows
+            screenCaptureEnabled = true / false
+            // (false by default) Enable or disable tapJacking protection in Huma user flows
+            tapJackingProtectionToBeAppliedOnWholeApp = true / false
+            // (false by default) Enable or disable tapJacking feature in Huma user flows
+            tapJackingFeatureEnabled = true / false
+        }
+        notification { // (Optional) Notification configuration
+            // List of notification handlers that will be used to handle notifications from Huma Platform. Use only if you have custom notification from Huma Platform
+            handlers = listOf()
+        }
+        helper { // (Optional) Helper configuration
+            // List of sealed classes that will be used to serialize and deserialize data. Use only if you are having custom sealed classes in api response from Huma Platform
+            sealedClassesToSerialize = listOf()
+            // (Optional) Used to override default offline mode availability provider
+            offlineModeStateProvider = OfflineModeStateProvider()
+        }
+    }
+}
+```
+
+## JSON Configuration
+
+By using Huma Gradle Plugin, you can also configure the environments using JSON configuration.
+To do that, add the Gradle Plugin to your project and paste the _huma-sdk-config.json_ to app or
+flavour folder
+
+## Explanation
+
+Only this that is required to be configured is the `environments` in the `network` configuration and
+main activity class in the `router` configuration.
+
+Next move to SDK layer configuration [here](../SDK/Android). But this step is optional as Appkit is
+also exposing most of the SDK functionalities. But it's good tho know how to configure it.
+
+Or you can move to AppKit layer configuration [here](../AppKit/Android).
+
+## Next Steps
+
+* [SDK](../SDK/Android)
+* [AppKit](../AppKit/Android)

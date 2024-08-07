@@ -4,6 +4,8 @@ endif
 
 SHELL:=/bin/bash
 
+run-local:
+	yarn start
 
 .PHONY: serve
 serve: build

@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+## How to start auth flow
+
+To start the authentication flow, you need to register a callback in your activity or fragment. This
+callback will be called when the authentication flow is completed. 
+
+```kotlin
+HumaAuthKitManager.getInstance().registerAuthResult(activity)
+```
+
+Then call the openAuthUI method to start the authentication flow.
+
+```kotlin
+HumaAuthKitManager.getInstance().openAuthUI { status: Boolean ->
+    if (status) {
+        // Authentication was successful
+    } else {
+        // Authentication failed
+    }
+}
+```

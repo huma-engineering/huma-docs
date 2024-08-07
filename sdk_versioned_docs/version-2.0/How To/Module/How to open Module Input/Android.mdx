@@ -1,0 +1,29 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+## How to open Module Input
+
+To open a module input screen, you need to call the `openInput` method of the `Module` interface.
+This method is available in the `ModuleWithInput` interface, which extends the `Module` interface.
+
+To open the module input screen, you need to get the module instance and call the `openInput` method
+
+```kotlin
+val module =
+    HumaModuleKitManager.getInstace().findModule<ModuleWithInput>(moduleId = "your_module_id")
+val callSource = object : ModuleEventSource { // used to track user events
+    override val analyticsName: String = "your_source"
+}
+module?.openInput(context, callSource) {
+    // this callback is called when the user submits the input
+    // to send the user input onModuleInputSubmit should be called
+    module.onModuleInputSubmit(it)
+}
+```
+
+> **Note:** The ```module.onModuleInputSubmit(it)``` can be called from anywhere in the app, not
+> only from the input screen. It can be used to submit the data from background tasks or other. Just
+> make sure that the data is in valid format.

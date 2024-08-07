@@ -1,0 +1,125 @@
+---
+sidebar_position: 1
+---
+
+# HumaModuleKitManager
+
+The `HumaModuleKitManager` is a class that provides a single point of access to the ModuleKit features in the Huma SDK. It is responsible for managing modules and their lifecycle within the application.
+
+```kotlin
+HumaModuleKitManager.init(context, moduleProviders, moduleCardViewOverride)
+```
+
+## Getting an Instance
+
+An instance of `HumaModuleKitManager` can be retrieved using the `getInstance` method.
+
+```kotlin
+HumaModuleKitManager.getInstance()
+```
+
+## Methods
+
+### modules
+
+This property returns a list of all registered modules.
+
+```kotlin
+HumaModuleKitManager.getInstance().modules
+```
+
+### lifeEventModules
+
+This property returns a list of modules which contain static event data.
+
+```kotlin
+HumaModuleKitManager.getInstance().lifeEventModules
+```
+
+### modulesState
+
+This property returns a `StateFlow` for observing changes in the list of modules.
+
+```kotlin
+HumaModuleKitManager.getInstance().modulesState
+```
+
+### lifeEventState
+
+This property returns a `StateFlow` for observing changes in the list of life event modules.
+
+```kotlin
+HumaModuleKitManager.getInstance().lifeEventState
+```
+
+### registerModuleProvider
+
+This method is used to register one or more module providers.
+
+```kotlin
+HumaModuleKitManager.getInstance().registerModuleProvider(provider)
+```
+
+### refreshModules
+
+This is a suspending function to refresh the list of modules. It should be called from a coroutine or another suspending function.
+
+```kotlin
+HumaModuleKitManager.getInstance().refreshModules()
+```
+
+### refreshData
+
+This is a suspending function to refresh the data. It should be called from a coroutine or another suspending function.
+
+```kotlin
+HumaModuleKitManager.getInstance().refreshData()
+```
+
+### hasModule
+
+This method checks if a module exists based on the provided parameters.
+
+```kotlin
+HumaModuleKitManager.getInstance().hasModule(moduleConfigId, moduleId, moduleClass, includeCombinedModule)
+```
+
+### findModule
+
+This method finds a module based on the provided parameters.
+
+```kotlin
+HumaModuleKitManager.getInstance().findModule(moduleConfigId, moduleId, includeCombinedModule, moduleClass)
+```
+
+### findModuleWithRefresh
+
+This is a suspending function that finds a module with refresh based on the provided parameters. It should be called from a coroutine or another suspending function.
+
+```kotlin
+HumaModuleKitManager.getInstance().findModuleWithRefresh(moduleConfigId, moduleId, includeCombinedModule, moduleClass)
+```
+
+### clearModuleCache
+
+This method is used to clear parsed modules from cache.
+
+```kotlin
+HumaModuleKitManager.getInstance().clearModuleCache()
+```
+
+### notifyModuleDataRefreshed
+
+This method is used to notify that the data for a specific module has been refreshed.
+
+```kotlin
+HumaModuleKitManager.getInstance().notifyModuleDataRefreshed(moduleConfigId)
+```
+
+### onModuleDataRefreshed
+
+This method is used to register a callback to be invoked when the data for a specific module has been refreshed.
+
+```kotlin
+HumaModuleKitManager.getInstance().onModuleDataRefreshed(onRefreshed)
+```
