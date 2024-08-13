@@ -30,10 +30,10 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
    pod init
    ```
 
-3.	Open the generated Podfile and add the HumaAppKit and Huma widgets dependencies (check specific documentation):
+3.	Open the generated Podfile, define the spec sources and add Huma dependencies in your Podfile:
    ```ruby
-   # Podfile
-
+   source 'https://github.com/CocoaPods/Specs.git'
+   source 'git@github.com:huma-engineering/huma-ios-specs.git'
    platform :ios, '16.0'
 
    target 'CustomerAppSample' do

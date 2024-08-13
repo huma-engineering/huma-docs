@@ -7,8 +7,11 @@ import TabItem from '@theme/TabItem';
 
 # Quick start iOS
 
-1.	Add the HumaAppKit and Huma widgets dependencies into your Podfile and install pods:
+1.	Define the spec sources and add Huma dependencies in your Podfile:
    ```ruby
+    source 'https://github.com/CocoaPods/Specs.git'
+    source 'git@github.com:huma-engineering/huma-ios-specs.git'
+
     pod 'HumaAppKit'
     pod 'HumaHeaderWidget'
     pod 'HumaVitalWidget'
