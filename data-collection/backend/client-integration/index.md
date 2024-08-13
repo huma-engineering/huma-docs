@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Client Integration Guide
+title: Integration Quickstart
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,34 +12,53 @@ This guide provides step-by-step instructions to integrate our product into your
 
 ### Prerequisites
 
-- Access to our cloud portal.
-- Your system's ability to make HTTP requests.
+- Access to Huma Admin Portal.
+- Installed [Huma Python Client](https://github.com/huma-engineering/huma-python-client)
 - Huma Android/iOS SDK integrated in your project.
 
 ### Steps to Integrate
 
 #### 1. Obtain and Configure API Domain and Client Details
 
-1. Log in to the [Cloud Portal](https://your-cloud-portal-url.com).
+1. Log in to the [Huma Portal](https://your-cloud-portal-url.com).
 2. Navigate to the **API Keys** section.
-3. Copy the secret key provided for your integration.
-4. Configure the API domain, projectId, and clientId you will use for authentication.
+3. Download the `huma-config.json` configuration file with secrets provided for your integration.
+4. Copy the `huma-config.json` to your project directory.
 
-The default values are:
+![img_1.png](img_1.png)
 
-- Domain: `https://api.default-domain.com`
-- Project ID: `p1`
-- Client ID: `c1` (for iOS) and `c2` (for Android)
+5. Install python client
 
-#### 2. User Authentication
+```bash
+pip install huma_python_client
+```
+
+#### 2. Initialize library
+
+Basic initialization is pretty simple, just provide the path to your `huma-config.json`
+
+```python
+from huma_python_client import HumaApiClient
+
+client = HumaApiClient(config_file="config.json")
+
+# Register a new user
+response = client.register("user@example.com", "FirstName", "LastName")
+print(response)
+
+# Login a user
+response = client.login("user@example.com")
+print(response)
+```
+
+### Endpoint Implementation Example
 
 User authentication should be handled via your original endpoints. The "Get Huma Token" endpoint (`{domain}/private/huma-token`) should be protected and based on the current authenticated user, perform the requests to Huma backend.
 
-### Custom Endpoint Implementation Example
 To implement the `private/huma-token` endpoint:
 
-1. Attempt to sign in the user using the `/auth/v1/private/signin` endpoint.
-2. If the user does not exist (returns a 403 status), sign them up using the `/auth/v1/private/signup` endpoint.
+1. Attempt to sign in the user using the `client.login()` method.
+2. If the user does not exist (returns a 403 status), sign them up using the `client.register()` method.
 3. Return the tokens and user ID (uid) received from the Huma backend.
 
 The following example demonstrates how to implement the `private/huma-token` endpoint.
@@ -48,282 +67,42 @@ The following example demonstrates how to implement the `private/huma-token` end
 <TabItem value="python" label="Python">
 
 ```py
-import requests
-from flask import Flask, request, jsonify
+from fastapi import APIRouter, HTTPException, Depends
+from huma_python_client.client import HumaApiClient, APIClientError as HumaError, ClientType as HumaClientType
 
-app = Flask(__name__)
+from app.dependencies import authenticate
+from app.models.database import User
+from app.models.responses import HumaTokenResponse
+from app.models.user import HumaTokenRequestBody
 
-HUMA_URL = 'https://api.default-domain.com'
-VERIFICATION_TOKEN = 'YOUR_SECRET_FROM_CLOUD_PORTAL'
-client_id = 'c1'
-project_id = 'p1'
+router = APIRouter(prefix="/private", dependencies=[Depends(authenticate)], tags=['Huma'])
 
-@app.route('/private/huma-token', methods=['POST'])
-def get_huma_token():
-    user_email = request.json['email']
-    first_name = request.json.get('firstName', '')
-    last_name = request.json.get('lastName', '')
-    activation_code = request.json.get('activationCode', '')
+@router.get("/huma-token")
+def get_huma_token(request_body: HumaTokenRequestBody = Depends(), current_user: User = Depends(authenticate)) -> HumaTokenResponse:
+    """
+    Interacts with Huma backend to auth the user and provide the auth and refresh tokens for Huma sdk.
+    """
+    huma_api = HumaApiClient(config_file="huma-config.json")
+    try:
+        rsp_json = huma_api.login(current_user.email, request_body.client_type)
+    except HumaError:
+        rsp_json = sign_up_user(current_user, huma_api, request_body.client_type)
+    return HumaTokenResponse(
+        authToken=rsp_json["authToken"],
+        refreshToken=rsp_json["refreshToken"],
+        authTokenExpiresIn=rsp_json["authTokenExpiresIn"],
+        refreshTokenExpiresIn=rsp_json["expiresIn"],
+        uid=rsp_json["uid"]
+    )
 
-    # Try to sign in the user
-    signin_url = f"{HUMA_URL}/auth/v1/private/signin"
-    signin_data = {
-        "method": 4,
-        "email": user_email,
-        "clientId": client_id,
-        "projectId": project_id
-    }
-    headers = {"verification-token": VERIFICATION_TOKEN}
-    signin_response = requests.post(signin_url, json=signin_data, headers=headers)
 
-    if signin_response.status_code == 200:
-        return jsonify(signin_response.json())
-    elif signin_response.status_code == 403:
-        # If user doesn't exist, sign them up
-        signup_url = f"{HUMA_URL}/auth/v1/private/signup"
-        signup_data = {
-            "method": 4,
-            "email": user_email,
-            "userAttributes": {
-                "familyName": first_name,
-                "givenName": last_name
-            },
-            "validationData": {
-                "activationCode": activation_code
-            },
-            "clientId": client_id,
-            "projectId": project_id
-        }
-        signup_response = requests.post(signup_url, json=signup_data, headers=headers)
-        if signup_response.status_code == 200:
-            return jsonify(signup_response.json())
-        else:
-            return jsonify({"error": "Failed to sign up user"}), signup_response.status_code
-    else:
-        return jsonify({"error": "Failed to sign in user"}), signin_response.status_code
+def sign_up_user(user: User, huma_api: HumaApiClient, client_type: HumaClientType) -> dict:
+    try:
+        huma_api.register(user.email, user.firstName, user.lastName, client_type)
+    except HumaError as e:
+        raise HTTPException(status_code=400, detail=f"Huma signup error: {str(e)}")
+    return huma_api.login(user.email, client_type)
 
-if __name__ == '__main__':
-    app.run(debug=True)
-```
-
-</TabItem>
-<TabItem value="go" label="Go">
-
-```go
-package main
-
-import (
-    "encoding/json"
-    "fmt"
-    "net/http"
-    "bytes"
-    "io/ioutil"
-    "log"
-
-    "github.com/gin-gonic/gin"
-)
-
-const (
-    HUMA_URL            = "https://api.default-domain.com"
-    VERIFICATION_TOKEN  = "YOUR_SECRET_FROM_CLOUD_PORTAL"
-    CLIENT_ID           = "c1"
-    PROJECT_ID          = "p1"
-)
-
-type SignInRequest struct {
-    Method    int    `json:"method"`
-    Email     string `json:"email"`
-    ClientID  string `json:"clientId"`
-    ProjectID string `json:"projectId"`
-}
-
-type SignUpRequest struct {
-    Method         int               `json:"method"`
-    Email          string            `json:"email"`
-    UserAttributes map[string]string `json:"userAttributes"`
-    ValidationData map[string]string `json:"validationData"`
-    ClientID       string            `json:"clientId"`
-    ProjectID      string            `json:"projectId"`
-}
-
-func main() {
-    router := gin.Default()
-
-    router.POST("/private/huma-token", func(c *gin.Context) {
-        var requestBody map[string]interface{}
-        if err := c.BindJSON(&requestBody); err != nil {
-            c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
-            return
-        }
-
-        userEmail := requestBody["email"].(string)
-        firstName := requestBody["firstName"].(string)
-        lastName := requestBody["lastName"].(string)
-        activationCode := requestBody["activationCode"].(string)
-
-        // Try to sign in the user
-        signinReq := SignInRequest{
-            Method:    4,
-            Email:     userEmail,
-            ClientID:  CLIENT_ID,
-            ProjectID: PROJECT_ID,
-        }
-        signinReqBody, _ := json.Marshal(signinReq)
-
-        signinURL := fmt.Sprintf("%s/auth/v1/private/signin", HUMA_URL)
-        req, _ := http.NewRequest("POST", signinURL, bytes.NewBuffer(signinReqBody))
-        req.Header.Set("Content-Type", "application/json")
-        req.Header.Set("verification-token", VERIFICATION_TOKEN)
-
-        client := &http.Client{}
-        signinResp, err := client.Do(req)
-        if err != nil {
-            c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to sign in user"})
-            return
-        }
-        defer signinResp.Body.Close()
-
-        if signinResp.StatusCode == http.StatusOK {
-            body, _ := ioutil.ReadAll(signinResp.Body)
-            var responseBody map[string]interface{}
-            json.Unmarshal(body, &responseBody)
-            c.JSON(http.StatusOK, responseBody)
-        } else if signinResp.StatusCode == http.StatusForbidden {
-            // If user doesn't exist, sign them up
-            signupReq := SignUpRequest{
-                Method:    4,
-                Email:     userEmail,
-                UserAttributes: map[string]string{
-                    "familyName": firstName,
-                    "givenName":  lastName,
-                },
-                ValidationData: map[string]string{
-                    "activationCode": activationCode,
-                },
-                ClientID:  CLIENT_ID,
-                ProjectID: PROJECT_ID,
-            }
-            signupReqBody, _ := json.Marshal(signupReq)
-
-            signupURL := fmt.Sprintf("%s/auth/v1/private/signup", HUMA_URL)
-            req, _ := http.NewRequest("POST", signupURL, bytes.NewBuffer(signupReqBody))
-            req.Header.Set("Content-Type", "application/json")
-            req.Header.Set("verification-token", VERIFICATION_TOKEN)
-
-            signupResp, err := client.Do(req)
-            if err != nil {
-                c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to sign up user"})
-                return
-            }
-            defer signupResp.Body.Close()
-
-            if signupResp.StatusCode == http.StatusOK {
-                body, _ := ioutil.ReadAll(signupResp.Body)
-                var responseBody map[string]interface{}
-                json.Unmarshal(body, &responseBody)
-                c.JSON(http.StatusOK, responseBody)
-            } else {
-                c.JSON(signupResp.StatusCode, gin.H{"error": "Failed to sign up user"})
-            }
-        } else {
-            c.JSON(signinResp.StatusCode, gin.H{"error": "Failed to sign in user"})
-        }
-    })
-
-    router.Run(":8080")
-}
-```
-
-</TabItem>
-</Tabs>
-
-### Authentication Example
-
-To authenticate the user and obtain a Huma token, you need to implement a function that sends a POST request to the private/huma-token endpoint with the user's email. The endpoint should return the tokens and user ID (uid) if the authentication is successful.
-
-<Tabs>
-<TabItem value="python" label="Python">
-
-```py
-import requests
-
-get_huma_token_url = "https://api.default-domain.com/private/huma-token"
-secret = 'YOUR_SECRET_FROM_CLOUD_PORTAL'
-
-def get_huma_token(user_email):
-    headers = {
-        'Content-Type': 'application/json',
-        'Authorization': f'Bearer {secret}'
-    }
-    payload = {
-        'email': user_email,
-        'projectId': 'p1',
-        'clientId': 'c1'
-    }
-    response = requests.post(get_huma_token
-
-_url, json=payload, headers=headers)
-
-    if response.status_code != 200:
-        raise Exception('Failed to get Huma token')
-
-    return response.json()  # Contains tokens and uid
-```
-
-</TabItem>
-<TabItem value="javascript" label="JavaScript">
-
-```js
-const getHumaTokenUrl = 'https://api.default-domain.com/private/huma-token';
-const secret = 'YOUR_SECRET_FROM_CLOUD_PORTAL';
-
-async function getHumaToken(userEmail) {
-  const response = await fetch(getHumaTokenUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${secret}`
-    },
-    body: JSON.stringify({
-      email: userEmail,
-      projectId: 'p1',
-      clientId: 'c1'
-    })
-  });
-
-  if (!response.ok) {
-    throw new Error('Failed to get Huma token');
-  }
-
-  const data = await response.json();
-  return data; // Contains tokens and uid
-}
-
-// Example of usage
-getHumaToken('user@example.com')
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
-```
-
-</TabItem>
-</Tabs>
-
-### SDK Integration Examples
-
-<Tabs>
-<TabItem value="android" label="Android">
-
-```java
-// Assuming you have received authToken, refreshToken, and uid from the previous step
-HumaSDK.initialize(context, authToken, refreshToken, uid);
-```
-
-</TabItem>
-<TabItem value="ios" label="iOS">
-
-```swift
-// Assuming you have received authToken, refreshToken, and uid from the previous step
-HumaSDK.initialize(context: self, authToken: authToken, refreshToken: refreshToken, uid: uid);
 ```
 
 </TabItem>
