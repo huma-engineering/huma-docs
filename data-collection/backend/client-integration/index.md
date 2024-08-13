@@ -25,7 +25,7 @@ This guide provides step-by-step instructions to integrate our product into your
 3. Download the `huma-config.json` configuration file with secrets provided for your integration.
 4. Copy the `huma-config.json` to your project directory.
 
-![img_1.png](img_1.png)
+![config_file.png](config_file.png)
 
 5. Install python client
 
