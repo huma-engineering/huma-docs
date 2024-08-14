@@ -7,14 +7,14 @@ import TabItem from '@theme/TabItem';
 
 # Getting Started with iOS SDK
 
-This guide will demonstrate how to integrate widget-based screens from Huma SDK into an existing tab-based iOS application. We'll use the CustomerAppSample, a sample weather app, as an example. The integration involves adding your SDK using CocoaPods, configuring the SDK within the AppDelegate, and adding a .plist file.
+This guide will demonstrate how to integrate widget-based screens from Huma SDK into an existing iOS application. We'll use the CustomerAppSample, a sample weather app, as an example. The integration involves adding your SDK using CocoaPods, configuring the SDK within the AppDelegate, and adding a .plist file.
 
 ## Prerequisites
 
 - Xcode installed on your machine
 - CocoaPods installed on your machine
 - Basic understanding of Swift and iOS development
-- A pre-existing tab-based iOS application (CustomerAppSample in this case)
+- A pre-existing iOS application (CustomerAppSample in this case)
 
 ## Step 1: Set Up CocoaPods
 
@@ -30,11 +30,11 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
    pod init
    ```
 
-3.	Open the generated Podfile and add the HumaAppKit and Huma widgets dependencies:
+3.	Open the generated Podfile, define the spec sources and add Huma dependencies in your Podfile:
    ```ruby
-   # Podfile
-
-   platform :ios, '11.0'
+   source 'https://github.com/CocoaPods/Specs.git'
+   source 'git@github.com:huma-engineering/huma-ios-specs.git'
+   platform :ios, '16.0'
 
    target 'CustomerAppSample' do
      use_frameworks!
@@ -88,9 +88,6 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
     import UIKit
     import HumaAppKit
     import HumaAuth
-    import HumaVitalWidget
-    import HumaHeaderWidget
-
     ```
 3.	Add the SDK initialization method:
     ```swift
@@ -101,6 +98,10 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
             }
         }
     }
+    ```
+4. Add the log out handler:
+    ```swift
+        coordinator.onLogOut = { HumaApp.endUserSession() }
     ```
 4.	Call this initialization method in the application(_:didFinishLaunchingWithOptions:) method:
 
@@ -133,7 +134,51 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
 ## Step 4: Integrate SDK Widget-Based Screens
 
 <Tabs>
-<TabItem value="tabbar" label="Into Tab Bar" default>
+<TabItem value="push" label="Push" default>
+1. Import the SDK:
+
+```swift
+import HumaAppKit
+```
+
+2. Declare a token property in your view controller class to store the returned reference.
+
+```swift
+var token: Any?
+```
+
+3. Add the method to push SDK screen:
+
+```swift
+token = HumaApp.pushWidgetScreen(withID: "ScreenID", into: navigationController!)
+```
+</TabItem>
+<TabItem value="present" label="Present" default>
+1. Import the SDK:
+
+```swift
+import HumaAppKit
+```
+
+2. Declare a token property in your view controller class to store the returned reference.
+
+```swift
+var token: Any?
+```
+
+3. Add the method to present SDK screen:
+
+```swift
+token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self)
+```
+
+4. You can also configure the presentation style:
+
+```swift
+token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self, config: .init(modalPresentationStyle: .fullScreen, showsCloseButton: true))
+```
+</TabItem>
+<TabItem value="tabbar" label="Tab Bar" default>
 
 1. Open your main view controller that contains the Tab Bar Controller setup.
 2. Import your SDK:
@@ -146,7 +191,7 @@ import HumaAppKit
 
 ```swift
 class MainTabBarController: UITabBarController {
-    var sdkToken: Any?
+    var token: Any?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,27 +199,7 @@ class MainTabBarController: UITabBarController {
     }
 
     func insertSDKScreens() {
-        sdkToken = HumaApp.insertWidgetTabs(into: self)
-    }
-}
-```
-    
-</TabItem>
-<TabItem value="standalone" label="As standalone screens" default>
-
-1. Open your main view controller that contains the Tab Bar Controller setup.
-2. Import your SDK:
-
-```swift
-import HumaAppKit
-```
-
-3. Add the method to insert SDK screens:
-
-```swift
-class Todo {
-    func underDevelopment() {
-        // TODO: update documentation, once SDK allows this
+        token = HumaApp.insertWidgetTabs(into: self)
     }
 }
 ```
