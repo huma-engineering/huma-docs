@@ -16,7 +16,17 @@ class MyAuthenticationProvider : AuthenticationProvider {
 }
 ```
 
+Where `AuthData` is a data class that contains the auth token and refresh token.
+
+```kotlin
+data class AuthData(
+    val authToken: String,
+    val refreshToken: String,
+)
+```
+
 Then register this class in SDK initializer
+
 ```kotlin
 context.installHumaSdk {
     sdk {
@@ -31,3 +41,13 @@ context.installHumaSdk {
 
 > **Note:** Make sure to close all the activities that are not part of the Huma SDK flow before
 > calling the `start` method.
+
+If  `AuthenticationProvider` is registered with `autoInitAuthProvider` method, SDK will
+automatically call `onTokenRequired` on start.
+
+In on other case, when it's registered with `authProvider` method, you should do this call when your
+are ready to authorise user.
+
+```kotlin
+HumaAuthKitManager.getInstance().authorize()
+```
