@@ -37,20 +37,26 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
+          type: 'dropdown',
           position: 'left',
-          label: 'Product',
-          docsPluginId: 'data-collection',
-          docId: 'index',
+          label: 'Products',
+          items: [
+            {
+              type: 'doc',
+              label: 'Workspace',
+              docsPluginId: 'data-collection',
+              docId: 'index',
+            },
+          ],
         },
         {
           type: 'dropdown',
           position: 'left',
-          label: 'Developer Resources',
+          label: 'Developer',
           items: [
             {
               label: 'API',
-              to: "api-data-collection",
+              to: "api",
               docsPluginId: 'api-data-collection',
             },
             {
@@ -59,20 +65,20 @@ module.exports = {
               docsPluginId: 'sdk',
               docId: 'intro',
             },
-            {
-              type: 'doc',
-              label: 'Releases',
-              docsPluginId: 'releases',
-              docId: 'index',
-            }
           ],
         },
         {
+          type: 'dropdown',
           position: 'left',
-          type: 'doc',
-          label: 'Trust & Security',
-          docsPluginId: 'trust-security',
-          docId: 'index',
+          label: 'Resources',
+          items: [
+            {
+              type: 'doc',
+              label: 'Trust & Security',
+              docsPluginId: 'trust-security',
+              docId: 'index',
+            },
+          ],
         },
         {
           type: 'localeDropdown',
@@ -113,7 +119,7 @@ module.exports = {
       {
         specs: [{
           id: 'api-data-collection',
-          route: 'api-data-collection',
+          route: 'api',
           spec: 'api-data-collection/documentations-huma.json',
         }]
       }
@@ -131,7 +137,7 @@ module.exports = {
       {
         id: 'data-collection',
         path: 'data-collection',
-        routeBasePath: 'data-collection',
+        routeBasePath: 'workspace',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
@@ -160,16 +166,7 @@ module.exports = {
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'releases',
-        path: 'releases',
-        routeBasePath: 'releases',
-        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
-      },
-    ],
-    ['docusaurus-node-polyfills', { excludeAliases: ['console']}]
+    ['docusaurus-node-polyfills', { excludeAliases: ['console'] }]
   ],
   i18n: {
     defaultLocale: 'en',
