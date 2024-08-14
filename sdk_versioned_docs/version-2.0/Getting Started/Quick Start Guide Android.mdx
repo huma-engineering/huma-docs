@@ -59,24 +59,20 @@ plugins {
 4. Download the `huma-sdk-config.json` file from the Builder portal and add it to your project's app
    folder.
 
-```json
-{
-  "environment": {
-    "url": "https://***/api/",
-    "bucket": "***",
-    "clientId": "c2",
-    "projectId": "p1",
-    "region": "eu",
-    "platform": "Android"
-  }
-}
-```
+![Alt text](../../../assets/android-json-placement.png)
 
 5. Initialize Huma SDK in your Application class or
    using [AppStartup library](https://developer.android.com/topic/libraries/app-startup):
 
 ```kotlin
 context.installHumaSdk()
+```
+
+6. To get started with you screen, you can use the following code:
+
+```kotlin
+val humaAppKitManager = HumaAppKitManager.getInstance(context)
+val screen = humaAppKitManager.findScreen("screenId")
 ```
 
 After this steps you can start using Huma SDK in your project. To get more information about the
