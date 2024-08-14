@@ -37,7 +37,7 @@
 @font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-Medium.woff2') format('woff2'),
-      url('/fonts/NotoSans-Medium.woff') format('woff');
+    url('/fonts/NotoSans-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 @font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-SemiBold.woff2') format('woff2'),
-      url('/fonts/NotoSans-SemiBold.woff') format('woff');
+    url('/fonts/NotoSans-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -55,7 +55,7 @@
 @font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-Bold.woff2') format('woff2'),
-      url('/fonts/NotoSans-Bold.woff') format('woff');
+    url('/fonts/NotoSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 @font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-Regular.woff2') format('woff2'),
-      url('/fonts/NotoSans-Regular.woff') format('woff');
+    url('/fonts/NotoSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -73,7 +73,7 @@
 @font-face {
   font-family: 'Noto Sans';
   src: url('/fonts/NotoSans-Light.woff2') format('woff2'),
-      url('/fonts/NotoSans-Light.woff') format('woff');
+    url('/fonts/NotoSans-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -166,10 +166,12 @@ html[data-theme="dark"] {
   font-family: var(--ifm-font-family-secondary);
   font-size: 1.875rem;
 }
-.markdown > h2 {
+
+.markdown>h2 {
   font-size: 1.5rem;
 }
-.markdown > h3 {
+
+.markdown>h3 {
   font-size: 1.375rem;
 }
 
@@ -185,7 +187,7 @@ html[data-theme="dark"] {
   color: var(--ifm-navbar-search-input-color);
 }
 
-.dropdown > .navbar__link {
+.dropdown>.navbar__link {
   display: flex;
   align-items: center;
   padding-right: 20px;
@@ -210,6 +212,7 @@ html[data-theme="dark"] {
 .navbar__link:hover {
   color: var(--ifm-menu-color);
 }
+
 .navbar__link--active,
 .dropdown__link--active,
 .dropdown__link--active:hover {
@@ -228,7 +231,7 @@ html[data-theme="dark"] {
 }
 
 .navbar__item.navbar__link:not(.header-github-link)::after,
-.navbar__items:not(.navbar__items--right) .navbar__item.dropdown::after{
+.navbar__items:not(.navbar__items--right) .navbar__item.dropdown::after {
   content: '';
   width: 100%;
   height: 2px;
@@ -246,7 +249,7 @@ html[data-theme="dark"] {
 }
 
 .navbar__item.navbar__link.navbar__link--active::after,
-.navbar__items:not(.navbar__items--right) .navbar__item.dropdown.navbar__item--active::after{
+.navbar__items:not(.navbar__items--right) .navbar__item.dropdown.navbar__item--active::after {
   transform: scaleX(1);
 }
 
@@ -264,7 +267,7 @@ html[data-theme="dark"] {
   border-bottom: 1px solid var(--ifm-menu-color-background-activ);
 }
 
-.dropdown > .navbar__link:after {
+.dropdown>.navbar__link:after {
   border: none;
   background-image: var(--ifm-menu-link-sublist-icon);
   background-size: contain;
@@ -304,7 +307,7 @@ html[data-theme="dark"] {
   padding-right: 2.7rem;
 }
 
-.navbar  {
+.navbar {
   padding-left: var(--ifm-menu-link-padding-horizontal);
 }
 
@@ -326,7 +329,7 @@ html[data-theme="dark"] {
   margin: 0;
 }
 
-.table-of-contents a{
+.table-of-contents a {
   max-width: 260px;
   display: block;
   margin: 0;
@@ -335,7 +338,7 @@ html[data-theme="dark"] {
   padding: 0.5rem 1rem;
 }
 
-.table-of-contents a::after{
+.table-of-contents a::after {
   content: '';
   display: block;
   width: 3px;
@@ -350,7 +353,7 @@ html[data-theme="dark"] {
   transition: transform 300ms ease;
 }
 
-.table-of-contents .table-of-contents__link--active::after{
+.table-of-contents .table-of-contents__link--active::after {
   transform: scaleY(1);
 }
 
@@ -363,7 +366,8 @@ html[data-theme="dark"] {
   color: var(--ifm-color-primary);
 }
 
-.container.container--fluid, footer .container {
+.container.container--fluid,
+footer .container {
   max-width: var(--ifm-container-width-page);
 }
 
@@ -407,7 +411,7 @@ html[data-theme="dark"] {
 
 .padding-top--large {
   padding-top: var(--imf-container-padding) !important;
-} 
+}
 
 .padding-bottom--large {
   padding-bottom: var(--imf-container-padding) !important;
@@ -415,7 +419,7 @@ html[data-theme="dark"] {
 
 .padding-left--large {
   padding-left: var(--imf-container-padding) !important;
-} 
+}
 
 .padding-right--large {
   padding-right: var(--imf-container-padding) !important;
@@ -433,29 +437,37 @@ html[data-theme="dark"] {
   .container.padding-top--md.padding-bottom--lg {
     padding: var(--ifm-spacing-horizontal) !important;
   }
+
   .padding--large {
     padding: var(--ifm-spacing-horizontal) !important;
   }
+
   .api-info {
     padding: var(--ifm-spacing-horizontal) !important;
   }
+
   .navbar-sidebar__item.menu {
     padding-left: 0;
     padding-right: 0;
   }
+
   .menu__link {
     padding-left: var(--ifm-spacing-horizontal);
   }
+
   .navbar__item.dropdown {
     display: none;
   }
+
   .navbar__item.navbar__link {
     display: none;
   }
+
   .search-bar {
     width: 200px;
   }
-  .navbar  {
+
+  .navbar {
     padding-left: var(--ifm-spacing-horizontal);
     padding-right: var(--ifm-spacing-horizontal);
   }
@@ -474,13 +486,11 @@ html[data-theme="dark"] {
   width: 24px;
   height: 24px;
   display: flex;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
-    no-repeat;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
 }
 
 [data-theme='dark'] .header-github-link::before {
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
-    no-repeat;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
 }
 
 .footer__items {
