@@ -53,7 +53,7 @@ print(response)
 
 ### Endpoint Implementation Example
 
-User authentication should be handled via your original endpoints. The "Get Huma Token" endpoint (`{domain}/private/huma-token`) should be protected and based on the current authenticated user, perform the requests to Huma backend.
+User authentication should be handled via your original endpoints. The "Get Huma Token" endpoint (for example: `{domain}/private/huma-token`) should be protected and based on the current authenticated user, perform the requests to Huma backend.
 
 To implement the `private/huma-token` endpoint:
 
