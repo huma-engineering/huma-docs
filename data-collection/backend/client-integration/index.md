@@ -67,8 +67,9 @@ The following example demonstrates how to implement the `private/huma-token` end
 <TabItem value="python" label="Python">
 
 ```py
-from fastapi import APIRouter, HTTPException, Depends
-from huma_python_client.client import HumaApiClient, APIClientError as HumaError, ClientType as HumaClientType
+from fastapi import APIRouter, Depends
+from huma_python_client.client import HumaApiClient
+from huma_python_client.exceptions import UserDoesNotExistError as HumaUserNotExistError
 
 from app.dependencies import authenticate
 from app.models.database import User
@@ -77,16 +78,17 @@ from app.models.user import HumaTokenRequestBody
 
 router = APIRouter(prefix="/private", dependencies=[Depends(authenticate)], tags=['Huma'])
 
+
 @router.get("/huma-token")
 def get_huma_token(request_body: HumaTokenRequestBody = Depends(), current_user: User = Depends(authenticate)) -> HumaTokenResponse:
     """
     Interacts with Huma backend to auth the user and provide the auth and refresh tokens for Huma sdk.
     """
-    huma_api = HumaApiClient(config_file="huma-config.json")
+    huma_client = HumaApiClient(config_file="huma-config.json")
     try:
-        rsp_json = huma_api.login(current_user.email, request_body.client_type)
-    except HumaError:
-        rsp_json = sign_up_user(current_user, huma_api, request_body.client_type)
+        rsp_json = huma_client.login(current_user.email, request_body.client_type)
+    except HumaUserNotExistError:
+        rsp_json = huma_client.register(current_user.email, current_user.firstName, current_user.lastName, request_body.client_type)
     return HumaTokenResponse(
         authToken=rsp_json["authToken"],
         refreshToken=rsp_json["refreshToken"],
@@ -94,14 +96,6 @@ def get_huma_token(request_body: HumaTokenRequestBody = Depends(), current_user:
         refreshTokenExpiresIn=rsp_json["expiresIn"],
         uid=rsp_json["uid"]
     )
-
-
-def sign_up_user(user: User, huma_api: HumaApiClient, client_type: HumaClientType) -> dict:
-    try:
-        huma_api.register(user.email, user.firstName, user.lastName, client_type)
-    except HumaError as e:
-        raise HTTPException(status_code=400, detail=f"Huma signup error: {str(e)}")
-    return huma_api.login(user.email, client_type)
 
 ```
 
