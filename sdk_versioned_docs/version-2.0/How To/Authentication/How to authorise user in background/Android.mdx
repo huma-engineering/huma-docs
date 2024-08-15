@@ -43,10 +43,10 @@ context.installHumaSdk {
 > calling the `start` method.
 
 If  `AuthenticationProvider` is registered with `autoInitAuthProvider` method, SDK will
-automatically call `onTokenRequired` on start.
+automatically call `onTokenRequired` on the app start.
 
 In on other case, when it's registered with `authProvider` method, you should do this call when your
-are ready to authorise user.
+are ready to authorise the user.
 
 ```kotlin
 HumaAuthKitManager.getInstance().authorize()
