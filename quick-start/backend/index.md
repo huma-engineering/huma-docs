@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: Integration Quickstart
+title: Backend integration
 ---
 
 import Tabs from '@theme/Tabs';
