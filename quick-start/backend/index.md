@@ -62,9 +62,6 @@ To implement the `private/huma-token` endpoint:
 
 The following example demonstrates how to implement the `private/huma-token` endpoint.
 
-<Tabs>
-<TabItem value="python" label="FastAPI">
-
 ```py
 from fastapi import APIRouter, Depends
 from huma_python_client.client import HumaApiClient
@@ -90,9 +87,6 @@ def get_huma_token(request_body: HumaTokenRequestBody = Depends(), current_user:
         rsp_json = huma_client.register(current_user.email, current_user.firstName, current_user.lastName, request_body.client_type)
     return HumaTokenResponse(**rsp_json)
 ```
-
-</TabItem>
-</Tabs>
 
 ### Conclusion
 
