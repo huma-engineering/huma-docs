@@ -69,7 +69,50 @@ plugins {
 context.installHumaSdk()
 ```
 
-6. To get started with you screen, you can use the following code:
+6. If you will use Huma SDK as an integration to your project you need to create `AuthenticationProvider`
+
+```kotlin
+class MyAuthenticationProvider : AuthenticationProvider {
+    override suspend fun onTokenRequired(reason: Reason): AuthData? {
+        // do a call to your backend to obtain huma session
+    }
+}
+```
+
+Where `AuthData` is a data class that contains the auth token and refresh token.
+
+```kotlin
+data class AuthData(
+    val authToken: String,
+    val refreshToken: String,
+)
+```
+
+Then register this class in SDK initializer
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        authKit {
+            authProvider(MyAuthenticationProvider())
+            // or
+            autoInitAuthProvider(MyAuthenticationProvider())
+        }
+    }
+}
+```
+
+If  `AuthenticationProvider` is registered with `autoInitAuthProvider` method, SDK will
+automatically call `onTokenRequired` on the app start.
+
+In on other case, when it's registered with `authProvider` method, you should do this call when your
+are ready to authorise the user.
+
+```kotlin
+HumaAuthKitManager.getInstance().authorize()
+```
+
+7. To get started with you screen, you can use the following code:
 
 ```kotlin
 val humaAppKitManager = HumaAppKitManager.getInstance(context)
