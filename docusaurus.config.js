@@ -54,6 +54,13 @@ module.exports = {
           position: 'left',
           label: 'Developer',
           items: [
+            { 
+              type: 'doc',
+              label: 'Quick Start',
+              to: "quick-start",
+              docsPluginId: 'quick-start',
+              docId: 'intro',
+            },
             {
               label: 'API',
               to: "api",
@@ -155,6 +162,14 @@ module.exports = {
         id: 'sdk',
         path: 'sdk',
         routeBasePath: 'sdk',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'quick-start',
+        path: 'quick-start',
+        routeBasePath: 'quick-start',
       },
     ],
     [
