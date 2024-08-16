@@ -30,7 +30,7 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
    pod init
    ```
 
-3.	Open the generated Podfile, define the spec sources and add Huma dependencies in your Podfile:
+3.	Open the generated _Podfile_, define the spec sources and add Huma dependencies in your _Podfile_:
    ```ruby
    source 'https://github.com/CocoaPods/Specs.git'
    source 'git@github.com:huma-engineering/huma-ios-specs.git'
@@ -73,7 +73,7 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
 
 ## Step 2: Add the HumaEnvironment.plist File
 
-1.	Download the `HumaEnvironment.plist` file from the Builder portal and add it to your project's app folder.
+1.	Download the _HumaEnvironment.plist_ file from the Builder portal and add it to your project's app folder.
 
     ![Alt text](../../../assets/ios-plist-placement.png)
 
@@ -175,8 +175,11 @@ class MainTabBarController: UITabBarController {
 </TabItem>
 </Tabs>
 
+## Step 5: Update Info.plist if needed
 
-## Step 5: Build and Run the App
+1.  Make sure that _NSCameraUsageDescription_ and _NSMotionUsageDescription_ keys are present in the Info.plist
+
+## Step 6: Build and Run the App
 
 1.	Select your target device or simulator in Xcode.
 2.	Click the “Run” button or press Cmd + R.

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Quick start: iOS
 
-1.	Define the spec sources and add Huma dependencies and post_install in your Podfile:
+1.	Define the spec sources and add Huma dependencies and `post_install` in your Podfile:
    ```ruby
     source 'https://github.com/CocoaPods/Specs.git'
     source 'git@github.com:huma-engineering/huma-ios-specs.git'
@@ -29,7 +29,7 @@ sidebar_position: 2
     end
    ```
 
-2. Download the `HumaEnvironment.plist` file from the Builder portal and add it to your project's app folder.
+2. Download the _HumaEnvironment.plist_ file from the Builder portal and add it to your project's app folder.
 
     ![Alt text](../../assets/ios-plist-placement.png)
 
@@ -39,7 +39,7 @@ sidebar_position: 2
     import HumaFoundation
     import HumaAppKit
     ```
-4.  Implement AnyHumaAuthProvider protocol:
+4.  Implement `AnyHumaAuthProvider` protocol:
     ```swift
     extension APIClient: AnyHumaAuthProvider {
         static var initialAuthData: AuthData? {
@@ -55,7 +55,7 @@ sidebar_position: 2
         }
     }
     ```
-5.	Initialize the SDK in in the application(_:didFinishLaunchingWithOptions:) method:
+5.	Initialize the SDK in in the `application(_:didFinishLaunchingWithOptions:)` method:
     ```swift
     HumaApp.initialize()
     ```
@@ -67,3 +67,4 @@ sidebar_position: 2
     ```swift
     HumaApp.endUserSession()
     ```
+8.  Make sure that _NSCameraUsageDescription_ and _NSMotionUsageDescription_ keys are present in the Info.plist
