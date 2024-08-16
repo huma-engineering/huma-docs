@@ -43,6 +43,19 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
      pod 'HumaAppKit'
      pod 'HumaHeaderWidget'
      pod 'HumaVitalWidget'
+     pod 'HumaRealmPlugin' # in a short future, we will remove the need to add this pod
+
+     # in a short future, we will remove the need to add post_install
+     # currently, it's needed due to a 3r-party dependency (FlagPhoneNumber)
+     post_install do |installer|
+        installer.pods_project.build_configurations.each do |config|
+            installer.pods_project.targets.each do |target|
+                target.build_configurations.each do |config|
+                    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0' # or your minimum deployment target
+                end
+            end
+        end
+     end
    end
    ```
 
@@ -86,49 +99,20 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
 2.	Import your SDK at the top of the file:
     ```swift
     import UIKit
+    import HumaFoundation
     import HumaAppKit
-    import HumaAuth
     ```
-3.	Add the SDK initialization method:
+4.	Execute the SDK initialization method in the application(_:didFinishLaunchingWithOptions:) method:
+
     ```swift
-    func initializeHumaSDK() {
-        HumaApp.initialize() { app in
-            app.configureAuth {
-                $0.initialAuthDataProvider = { Networking.shared.sdkAuthData?.authData }
-            }
-        }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        HumaApp.initialize()
+        return true
     }
     ```
 4. Add the log out handler:
     ```swift
-        coordinator.onLogOut = { HumaApp.endUserSession() }
-    ```
-4.	Call this initialization method in the application(_:didFinishLaunchingWithOptions:) method:
-
-    ```swift
-    @UIApplicationMain
-    class AppDelegate: UIResponder, UIApplicationDelegate {
-
-        var window: UIWindow?
-
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            // Override point for customization after application launch.
-
-            // Initialize YourSDKName
-            initializeHumaSDK()
-
-            return true
-        }
-
-        // MARK: UISceneSession Lifecycle
-
-        func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-            return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-        }
-
-        func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        }
-    }
+    coordinator.onLogOut = { HumaApp.endUserSession() }
     ```
 
 ## Step 4: Integrate SDK Widget-Based Screens
