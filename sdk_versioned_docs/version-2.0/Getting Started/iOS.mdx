@@ -46,7 +46,7 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
      pod 'HumaRealmPlugin' # in a short future, we will remove the need to add this pod
 
      # in a short future, we will remove the need to add post_install
-     # currently, it's needed due to a 3r-party dependency (FlagPhoneNumber)
+     # currently, it's needed due to a 3rd-party dependency (FlagPhoneNumber)
      post_install do |installer|
         installer.pods_project.build_configurations.each do |config|
             installer.pods_project.targets.each do |target|
@@ -73,25 +73,9 @@ This guide will demonstrate how to integrate widget-based screens from Huma SDK 
 
 ## Step 2: Add the HumaEnvironment.plist File
 
-1.	In Xcode, right-click on the CustomerAppSample project in the Project Navigator.
-2.	Select New File....
-3.	Choose Property List and name it HumaEnvironment.plist.
-4.	Add the following content to the HumaEnvironment.plist file:
+1.	Download the `HumaEnvironment.plist` file from the Builder portal and add it to your project's app folder.
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-        <key>url</key>
-        <string>https://rpm-build-gcp-uk-api.staging.huma.com</string>
-        <key>bucket</key>
-        <string>hu-gcp-uk-build-rpm-bck</string>
-        <key>country</key>
-        <string>gb</string>
-    </dict>
-    </plist>
-    ```
+    ![Alt text](../../../assets/ios-plist-placement.png)
 
 ## Step 3: Initialize the SDK
 

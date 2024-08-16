@@ -17,7 +17,7 @@ sidebar_position: 2
     pod 'HumaRealmPlugin' # in a short future, we will remove the need to add this pod
 
     # in a short future, we will remove the need to add post_install
-    # currently, it's needed due to a 3r-party dependency (FlagPhoneNumber)
+    # currently, it's needed due to a 3rd-party dependency (FlagPhoneNumber)
     post_install do |installer|
         installer.pods_project.build_configurations.each do |config|
             installer.pods_project.targets.each do |target|
@@ -29,22 +29,9 @@ sidebar_position: 2
     end
    ```
 
-2.	Add the HumaEnvironment.plist file with the following content to your project:
+2. Download the `HumaEnvironment.plist` file from the Builder portal and add it to your project's app folder.
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-        <key>url</key>
-        <string>https://rpm-build-gcp-uk-api.staging.huma.com</string>
-        <key>bucket</key>
-        <string>hu-gcp-uk-build-rpm-bck</string>
-        <key>country</key>
-        <string>gb</string>
-    </dict>
-    </plist>
-    ```
+    ![Alt text](../../assets/ios-plist-placement.png)
 
 3.	Import the Huma SDK in AppDelegate.swift:
     ```swift
