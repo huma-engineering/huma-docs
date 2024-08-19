@@ -60,48 +60,61 @@ Once you have created a few content pieces, you can start adding those to the de
 ### Advanced Query
 
 In Advanced query, there are some key variables, primitives, functions, and basic conditional logic you can use to create your query.
-- Key Variables
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>EMPTY</span>: Represents an empty list. Use this when you don't want to return any articles. For example, <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles) if user.age >= 18 else EMPTY</span> will return a list of unread articles if the user is an adult, and no articles if they are not.
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>NOW</span>: Refers to the current date and time.
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>TODAY</span>: Refers to the current date.
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>articles</span>: Represents all available articles. This is typically used as the first parameter in most functions, such as <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles)</span>, <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>limit(articles, 5)</span>, or <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>filter(articles, tag="HR")</span>.
+* **Key Variables**
+  - `EMPTY`: Represents an empty list. Use this when you don't want to return any articles. For example, `unread(articles) if user.age >= 18 else EMPTY` will return a list of unread articles if the user is an adult, and no articles if they are not.
+  - `NOW`: Refers to the current date and time.
+  - `TODAY`: Refers to the current date.
+  - `articles` : Represents all available articles. This is typically used as the first parameter in most functions, such as `unread(articles)`, `limit(articles, 5)`, or `filter(articles, tag="HR")`.
 
-- Primitives
-`data.<primitive>`: Serves as a placeholder for any last recorded basic metric, such as HeartRate, Weight, or BMI. This can include multiple nested fields like:
-`data.<primitive>.flags`: A flags object that includes flags.gray, flags.amber, and flags.red. These attributes represent the severity levels calculated for the metric.
-`data.<primitive>.value`: The value recorded by the user, typically a number or a decimal, depending on the metric.
-Examples of more complex primitives that can be used in queries include:
-data.BloodPressure.systolicValue
-data.BloodPressure.diastolicValue
-data.CVDRiskScore.roundedValue
+* **Primitives**
+  - `data.<primitive>`: Serves as a placeholder for any last recorded basic metric, such as HeartRate, Weight, or BMI. This can include multiple nested fields like:
+  - `data.<primitive>.flags`: A flags object that includes `flags.gray`, `flags.amber`, and `flags.red`. These attributes represent the severity levels calculated for the metric.
+  - `data.<primitive>.value`: The value recorded by the user, typically a number or a decimal, depending on the metric.
+  - More complex primitives:
+    - `data.BloodPressure.systolicValue`
+    - `data.BloodPressure.diastolicValue`
+    - `data.CVDRiskScore.roundedValue`
 
-- Functions `limit(articles: array, count: int)`: Limits the number of articles to the specified count.
+* **Functions** 
+  - `limit(articles: array, count: int)`: Limits the number of articles to the specified count.
 Example: 
-```
-limit(unread(articles), 2)
-``` 
-will show a maximum of 2 unread articles.
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles: array)</span>: Filters articles to show only those that are unread.
-Example: unread(articles) will display all unread articles.
+`limit(unread(articles), 2)` will show a maximum of 2 unread articles.
+  - `unread(articles: array)`: Filters articles to show only those that are unread.
+    
+    Example: 
 
-- Conditions
-Our DSL follows Python syntax, enabling the creation of complex conditional logic.
-if/else:
+        unread(articles)
+        
+    It will display all unread articles.
+    
 
-Example: 
-```
-<if true result> if data.HeartRate.flags else <else result>
-```
-Usage: 
-```
-filter(articles, tag="HR") if data.HeartRate.flags.red > 0 else limit(unread(articles), 2)
-```
+* **Conditions**
 
-This condition displays articles tagged with "HR" if the last HeartRate record is in the red severity level. Otherwise, it shows 2 unread articles.
-and/or:
-Example: unread(articles) if data.HeartRate.flags.amber or data.HeartRate.flags.red else random(articles, 2)
-This condition returns all unread articles if the last HeartRate record is within amber or red severity levels. Otherwise, it shows 2 random articles.
-Addition:
-Example: filter(articles, tag="HR") + filter(articles, tag="sport")
-This will display all articles tagged with either "HR" or "sport."
+  Our DSL follows Python syntax, enabling the creation of complex conditional logic.
+  -  `if/else`:
+
+      Example: 
+    
+         <if true result> if data.HeartRate.flags else <else result>
+    
+      Usage: 
+      ```
+      filter(articles, tag="HR") if data.HeartRate.flags.red > 0 else limit(unread(articles), 2)
+      ```
+      This condition displays articles tagged with "HR" if the last HeartRate record is in the red severity level. Otherwise, it shows 2 unread articles.
+
+  - `and/or`:
+    
+    Example: 
+              
+        unread(articles) if data.HeartRate.flags.amber or data.HeartRate.flags.red else random(articles, 2)
+    This condition returns all unread articles if the last HeartRate record is within amber or red severity levels. Otherwise, it shows 2 random articles.
+
+  - `+` (add operation):
+    
+    Example: 
+              
+        filter(articles, tag="HR") + filter(articles, tag="sport")
+    This will display all articles tagged with either "HR" or "sport."
+
 This guide should provide a clear understanding of how to leverage the "Featured Article" feature using DSL Queries. Use these tools to tailor the content you see to match your specific needs and interests.
