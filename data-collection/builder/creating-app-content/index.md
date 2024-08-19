@@ -67,25 +67,36 @@ In Advanced query, there are some key variables, primitives, functions, and basi
 <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>articles</span>: Represents all available articles. This is typically used as the first parameter in most functions, such as <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles)</span>, <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>limit(articles, 5)</span>, or <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>filter(articles, tag="HR")</span>.
 
 - Primitives
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>data.<primitive></span>: Serves as a placeholder for any last recorded basic metric, such as HeartRate, Weight, or BMI. This can include multiple nested fields like:
-data.<primitive>.flags: A flags object that includes flags.gray, flags.amber, and flags.red. These attributes represent the severity levels calculated for the metric.
-data.<primitive>.value: The value recorded by the user, typically a number or a decimal, depending on the metric.
+`data.<primitive>`: Serves as a placeholder for any last recorded basic metric, such as HeartRate, Weight, or BMI. This can include multiple nested fields like:
+`data.<primitive>.flags`: A flags object that includes flags.gray, flags.amber, and flags.red. These attributes represent the severity levels calculated for the metric.
+`data.<primitive>.value`: The value recorded by the user, typically a number or a decimal, depending on the metric.
 Examples of more complex primitives that can be used in queries include:
 data.BloodPressure.systolicValue
 data.BloodPressure.diastolicValue
 data.CVDRiskScore.roundedValue
 
-- Functions
-<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>limit(articles: array, count: int)</span>: Limits the number of articles to the specified count.
-Example: limit(unread(articles), 2) will show a maximum of 2 unread articles.
+- Functions `limit(articles: array, count: int)`: Limits the number of articles to the specified count.
+Example: 
+```
+limit(unread(articles), 2)
+``` 
+will show a maximum of 2 unread articles.
 <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles: array)</span>: Filters articles to show only those that are unread.
 Example: unread(articles) will display all unread articles.
 
 - Conditions
 Our DSL follows Python syntax, enabling the creation of complex conditional logic.
 if/else:
-Example: <if true result> if data.HeartRate.flags else <else result>
-Usage: filter(articles, tag="HR") if data.HeartRate.flags.red > 0 else limit(unread(articles), 2)
+
+Example: 
+```
+<if true result> if data.HeartRate.flags else <else result>
+```
+Usage: 
+```
+filter(articles, tag="HR") if data.HeartRate.flags.red > 0 else limit(unread(articles), 2)
+```
+
 This condition displays articles tagged with "HR" if the last HeartRate record is in the red severity level. Otherwise, it shows 2 unread articles.
 and/or:
 Example: unread(articles) if data.HeartRate.flags.amber or data.HeartRate.flags.red else random(articles, 2)
