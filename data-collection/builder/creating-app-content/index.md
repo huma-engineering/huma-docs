@@ -40,10 +40,7 @@ Assets like images and videos can be uploaded to visually enhance your articles 
 Once you have created a few content pieces, you can start adding those to the desired pages of your app. 
 
 1. Go to the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Builder</span> page. Select the page of your app that you want to add content to. 
-2. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>+ New widget</span> in the left side panel, then scroll
-
-
- down and select <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Feature articles</span>.
+2. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>+ New widget</span> in the left side panel, then scroll down and select <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Feature articles</span>.
 3. Choose which articles will be shown under the dropdown button <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>All articles</span>.
 
 ![alt text](<../assets/Feature articles-0.png>)
@@ -59,4 +56,41 @@ Once you have created a few content pieces, you can start adding those to the de
  ![alt text](<../assets/Feature articles-2.png>)
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Manual list</span> allows you to search and add available content in the CMS. 
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Advanced query</span> allows you to apply advanced logic to which content pieces will be shown.
+  
+### Advanced Query
 
+In Advanced query, there are some key variables, primitives, functions, and basic conditional logic you can use to create your query.
+- Key Variables
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>EMPTY</span>: Represents an empty list. Use this when you don't want to return any articles. For example, <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles) if user.age >= 18 else EMPTY</span> will return a list of unread articles if the user is an adult, and no articles if they are not.
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>NOW</span>: Refers to the current date and time.
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>TODAY</span>: Refers to the current date.
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>articles</span>: Represents all available articles. This is typically used as the first parameter in most functions, such as <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles)</span>, <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>limit(articles, 5)</span>, or <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>filter(articles, tag="HR")</span>.
+
+- Primitives
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>data.<primitive></span>: Serves as a placeholder for any last recorded basic metric, such as HeartRate, Weight, or BMI. This can include multiple nested fields like:
+data.<primitive>.flags: A flags object that includes flags.gray, flags.amber, and flags.red. These attributes represent the severity levels calculated for the metric.
+data.<primitive>.value: The value recorded by the user, typically a number or a decimal, depending on the metric.
+Examples of more complex primitives that can be used in queries include:
+data.BloodPressure.systolicValue
+data.BloodPressure.diastolicValue
+data.CVDRiskScore.roundedValue
+
+- Functions
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>limit(articles: array, count: int)</span>: Limits the number of articles to the specified count.
+Example: limit(unread(articles), 2) will show a maximum of 2 unread articles.
+<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>unread(articles: array)</span>: Filters articles to show only those that are unread.
+Example: unread(articles) will display all unread articles.
+
+- Conditions
+Our DSL follows Python syntax, enabling the creation of complex conditional logic.
+if/else:
+Example: <if true result> if data.HeartRate.flags else <else result>
+Usage: filter(articles, tag="HR") if data.HeartRate.flags.red > 0 else limit(unread(articles), 2)
+This condition displays articles tagged with "HR" if the last HeartRate record is in the red severity level. Otherwise, it shows 2 unread articles.
+and/or:
+Example: unread(articles) if data.HeartRate.flags.amber or data.HeartRate.flags.red else random(articles, 2)
+This condition returns all unread articles if the last HeartRate record is within amber or red severity levels. Otherwise, it shows 2 random articles.
+Addition:
+Example: filter(articles, tag="HR") + filter(articles, tag="sport")
+This will display all articles tagged with either "HR" or "sport."
+This guide should provide a clear understanding of how to leverage the "Featured Article" feature using DSL Queries. Use these tools to tailor the content you see to match your specific needs and interests.
