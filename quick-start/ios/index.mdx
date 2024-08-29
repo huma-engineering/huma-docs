@@ -3,6 +3,7 @@ title: iOS SDK
 sidebar_position: 2
 ---
 
+[button url="http://www.google.com"]
 
 # Quick start: iOS
 
@@ -16,7 +17,7 @@ sidebar_position: 2
     pod 'HumaVitalWidget'
    ```
 
-2.	Add the HumaEnvironment.plist file with the following content to your project:
+2.	Add the [HumaEnvironment.plist](/api/integration/v1/configs/android) file with the following content to your project:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -49,5 +50,5 @@ sidebar_position: 2
     ```
 5.	Present the screen from SDK in your view controller code:
     ```swift
-        self.token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self)
+    self.token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self)
     ```
