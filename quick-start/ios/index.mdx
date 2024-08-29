@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Quick start: iOS
 
-1.	Define the spec sources and add Huma dependencies in your Podfile:
+1.	Define the spec sources and add Huma dependencies and `post_install` in your Podfile:
    ```ruby
     source 'https://github.com/CocoaPods/Specs.git'
     source 'git@github.com:huma-engineering/huma-ios-specs.git'
@@ -14,40 +14,57 @@ sidebar_position: 2
     pod 'HumaAppKit'
     pod 'HumaHeaderWidget'
     pod 'HumaVitalWidget'
+    pod 'HumaRealmPlugin' # in a short future, we will remove the need to add this pod
+
+    # in a short future, we will remove the need to add post_install
+    # currently, it's needed due to a 3rd-party dependency (FlagPhoneNumber)
+    post_install do |installer|
+        installer.pods_project.build_configurations.each do |config|
+            installer.pods_project.targets.each do |target|
+                target.build_configurations.each do |config|
+                    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0' # or your minimum deployment target
+                end
+            end
+        end
+    end
    ```
 
-2.	Add the HumaEnvironment.plist file with the following content to your project:
+2. Download the _HumaEnvironment.plist_ file from the Builder portal and add it to your project's app folder.
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-    <dict>
-        <key>url</key>
-        <string>https://hp-deployment-nsbx-1107.sbx.huma.com/</string>
-        <key>bucket</key>
-        <string>ccp-hsp-nsbx-1107-bucket</string>
-        <key>country</key>
-        <string>gb</string>
-    </dict>
-    </plist>
-    ```
+    ![Alt text](../../assets/ios-plist-placement.png)
 
 3.	Import the Huma SDK in AppDelegate.swift:
     ```swift
     import UIKit
+    import HumaFoundation
     import HumaAppKit
-    import HumaAuth
     ```
-4.	Initialize the SDK in in the application(_:didFinishLaunchingWithOptions:) method:
+4.  Implement `AnyHumaAuthProvider` protocol:
     ```swift
-    HumaApp.initialize() { app in
-        app.configureAuth {
-            $0.initialAuthDataProvider = { Networking.shared.sdkAuthData?.authData }
+    extension APIClient: AnyHumaAuthProvider {
+        static var initialAuthData: AuthData? {
+            guard let response = shared.humaTokenResponse else { return nil }
+            
+            return AuthData(
+                userID: response.uid,
+                refreshToken: response.refreshToken,
+                refreshTokenExpiresIn: response.refreshTokenExpiresIn,
+                authToken: response.authToken,
+                authTokenExpiresIn: response.authTokenExpiresIn
+            )
         }
     }
     ```
-5.	Present the screen from SDK in your view controller code:
+5.	Initialize the SDK in in the `application(_:didFinishLaunchingWithOptions:)` method:
     ```swift
-        self.token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self)
+    HumaApp.initialize()
     ```
+6.	Present the screen from SDK in your view controller code:
+    ```swift
+    self.token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self)
+    ```
+7.  Remember to end user session on log out:
+    ```swift
+    HumaApp.endUserSession()
+    ```
+8.  Make sure that _NSCameraUsageDescription_ and _NSMotionUsageDescription_ keys are present in the Info.plist
