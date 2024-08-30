@@ -20,10 +20,10 @@ This guide provides step-by-step instructions to integrate our product into your
 #### 1. Obtain and Configure API Domain and Client Details
 
 1. Log in to the [Huma Workspace](https://workspace.huma.com/).
-2. Click [here](https://workspace-gcp-uk.api.huma.com/api/integration/v1/configs/backend) to download the `huma-config.json` configuration file with secrets provided for your integration.
-3. Copy the `huma-config.json` to your project directory.
+2. Download the [huma-config.json](https://workspace-gcp-uk.api.huma.com/api/integration/v1/configs/backend) file with secrets provided for your integration.
+3. Add it to your project directory.
 
-![config_file.png](config_file.png)
+![config_file.png](../../assets/backend_integration_config_file.png)
 
 4. Install python client
 
