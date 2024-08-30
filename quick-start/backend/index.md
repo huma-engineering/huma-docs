@@ -23,7 +23,7 @@ This guide provides step-by-step instructions to integrate our product into your
 2. Download the [huma-config.json](https://workspace-gcp-uk.api.huma.com/api/integration/v1/configs/backend) file with secrets provided for your integration.
 3. Add it to your project directory.
 
-![config_file.png](../../assets/backend_integration_config_file)
+![config_file.png](../../assets/backend_integration_config_file.png)
 
 4. Install python client
 
