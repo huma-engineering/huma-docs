@@ -5,7 +5,7 @@ title: Create a new app
 
 # Create a new app
  
-Once you have created your Huma account, you will be able to create a new app using the Huma Builder. In general, there are 8 steps you can follow to ensure your app is ready to go. We suggest you create a quick test app first before launching your real app and inviting users to it.
+After creating your Huma account, you can build a new app with the Huma Builder.  There are 8 steps to follow to ensure your app is ready for launch. Every app starts as a draft, allowing you to test it before it goes live.
 <br/>
 
 <div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
