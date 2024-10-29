@@ -3,17 +3,20 @@ sidebar_position: 2
 title: Start with a template
 ---
 
-Huma Builder Templates are designed to streamline your app creation right from the start - no matter what type of app you are creating. Select from a variety of pre-built templates that can be easily customised. All you have to do is select a template and edit the existing components and app interface. Follow the steps below for a headstart to building your first app:
+Huma Builder's templates streamline app creation from the start, regardless of the type of app you're building. Choose from a variety of pre-built templates that are easily customizable. Simply select a template and edit the existing components and app interface.
+To get a head start on building your first app, follow these steps:
 
-1. Navigate to <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>My apps</span> in the side panel of the Huma Builder. 
-2. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Create</span>.
-3. Pick any template to start with. If you do not see a suitable template for your app, select the template <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Huma Demo</span>. 
+1. Navigate to <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>App templates</span> in the Huma Builder's side panel.
+2. Select the template that best suits your needs from the available options.
+3. If you're creating a Software as a Medical Device (SaMD) app, check the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>SaMD</span> checkbox.
+4. Click the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Clone</span> button to begin editing the template. 
 
 ![alt text](../assets/Tempelate.png)
 
-Alternatively, you can start with a blank page. A page equals a tab on the navigation menu of the Huma App. When starting with a blank page, you will be asked to enter the page details. For more information, see the below section "Step 2: Design the app interface".
+You can also start with a blank template, providing a canvas for your creativity. Add tabs, widgets, and features to build a completely custom app.
+<p>For detailed instructions on adding and customizing these elements, see "Step 2: Design the app interface" below.</p>
 
 <div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Tip: Preview the app template on your phone</strong><br/>
-  <span>Have a quick look at your app to get a sense of the look and feel. To preview your app at any time during editing, refer to this section {} </span>
+  <span>Have a quick look at your app to get a sense of the look and feel. To preview your app at any time during editing, refer to the "Preview your app" section.</span>
 </div>
