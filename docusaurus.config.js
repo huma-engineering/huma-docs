@@ -127,7 +127,7 @@ module.exports = {
         specs: [{
           id: 'api-data-collection',
           route: 'api',
-          spec: 'api-data-collection/documentations-huma.json',
+          spec: 'https://rpm-demo-gcp-uk-api.staging.huma.com/openapi.json',
         }]
       }
     ]
