@@ -53,4 +53,5 @@ And the content of the file would we somthing similar to this, You shouldn't cha
   exported from the zip file
   ![alt text](<../assets/localization-import-dialogue.png>)
 
-> **INFO**: The uploaded file will be merged to what is already there and translate
+> **INFO**: If a localization for that language already exists, the uploaded file will be merged to what is already
+> there and translate.
