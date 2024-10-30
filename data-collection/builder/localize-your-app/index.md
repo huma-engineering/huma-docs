@@ -10,7 +10,7 @@ Huma app builder has a **Hybrid** approach to localization and translation.
 2. **Widget-specific texts**: You are responsible for translating the texts you configure in your widgets via the
    localization section in the settings.
 
-There are two ways to localize the widgets
+There are two ways to localize the widgets.
 
 #### 1. Through the Huma Panel
 
@@ -29,29 +29,39 @@ There are two ways to localize the widgets
   ![alt text](<../assets/localization-localize.png>)
 - Once done click save, and preview the changes in the app.
 
-> **INFO**: Any missing localization will default to your **app default language**.
+:::info
+Any missing localization will default to your **app default language**.
+:::
 
 #### 2. Import/Export
 
-You can import and export, localizations as well in order to for example outsource the translation process
+You can import and export the localizations as well if needed, for example, to outsource the translation process.
 
 - Click on the three dots of a language that is fully translated
   ![alt text](<../assets/localization-export-import.png>)
 
-- Extract the file and you see this file structure like so
+- Extract the file and you see this file structure so
 
   ![alt text](<../assets/localization-export-content.png>)
 
-And the content of the file would we somthing similar to this, You shouldn't change the keys, only the values
+The content of the file would be something similar to this, You shouldn't change the keys, only the values
 ![alt text](<../assets/localization-export-file-content.png>)
 
-> **INFO**: The zip name is not important when uploading but the `lang` folder and files names are relevant so keep them
-> consistent. You should rename the file to other valid language codes, do the translation and then import it to the
-> panel.
+:::info
+
+The zip name is not important when uploading but the `lang` folder and file names are relevant so keep them
+consistent. You should rename the file to other valid language codes, do the translation, and then import it to the
+panel.
+
+:::
 
 - And once you are done with localization go ahead to import it, from the modal pick the language you want to be
   exported from the zip file
   ![alt text](<../assets/localization-import-dialogue.png>)
 
-> **INFO**: If a localization for that language already exists, the uploaded file will be merged to what is already
-> there and translate.
+:::info
+
+If a localization for that language already exists, the uploaded file will be merged to what is already there and
+translate.
+
+:::
