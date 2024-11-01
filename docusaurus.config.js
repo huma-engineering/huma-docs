@@ -105,7 +105,7 @@ module.exports = {
       ],
     },
     prism: {
-      additionalLanguages: ['kotlin']
+      additionalLanguages: ['kotlin', 'swift']
     }
   },
   presets: [
