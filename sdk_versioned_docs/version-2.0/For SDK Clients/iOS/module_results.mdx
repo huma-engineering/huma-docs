@@ -1,12 +1,12 @@
 ---
 title: Accessing Module Results
-description: Usage guide for Module Access in iOS SDK with compile-time safe module keys
+description: Usage guide for Module Access in iOS SDK with compile-time-safe module keys
 sidebar_position: 2
 ---
 
 # Module Access Documentation
 
-The iOS SDK provides a compile-time-safe method for accessing and observing module results. Using `ModuleAccess.ModuleKey` and `ModuleAccess.ModuleDoubleKey`, developers can directly retrieve or observe data from specific modules with the assurance that type safety is maintained.
+The iOS SDK provides a compile-time-safe method for accessing and observing module results. Using `ModuleResultAccess.Key` and `ModuleResultAccess.DoubleKey`, developers can directly retrieve or observe data from specific modules with the assurance that type safety is maintained.
 
 ## Overview
 
@@ -17,7 +17,7 @@ Different frameworks define module keys for specific types of data (e.g., standa
 Before accessing specific modules, ensure you’ve imported the necessary frameworks:
 - Always import `HumaAppKit` to access the `HumaApp` interface.
 - For standard modules like blood glucose and BMI, import `HumaModules`.
-- For custom modules, such as HealthKit-related modules, import `HumaHealthKit` or other frameworks as described [here](./module_keys_reference).
+- For custom modules, such as HealthKit-related modules, import `HumaHealthKit` or other frameworks as described in the [Module Keys Reference](./module_keys_reference).
 
 ## Usage
 
@@ -29,15 +29,13 @@ To fetch results, use the `getModuleResults` method and pass a module-specific k
 
 ```swift
 HumaApp.getModuleResults(
-    for module: ModuleAccess.ModuleKey<Primitive>,
-    limit: Int = .zero,
-    completion: @escaping RepositoryCompletion<[ModuleResult<Primitive>]>
+    for module: ModuleResultAccess.Key<Value>,
+    completion: @escaping RepositoryCompletion<[Value]>
 )
 
 HumaApp.getModuleResults(
-    for module: ModuleAccess.ModuleDoubleKey<Primitive1, Primitive2>,
-    limit: Int = .zero,
-    completion: @escaping RepositoryCompletion<ModuleAccess.ModuleDoubleKeyResult<Primitive1, Primitive2>>
+    for module: ModuleResultAccess.DoubleKey<Value1, Value2>,
+    completion: @escaping ModuleResultAccess.DoubleKey<Value1, Value2>.ResultCompletion
 ) 
 ```
 
@@ -72,15 +70,10 @@ import HumaAppKit
 import HumaModules
 
 HumaApp.getModuleResults(for: .bmi) { result in
-    switch result {
-    case .success(let bmiResults):
-        let bmiValues = bmiResults.primitive1.map(\.primitive.rawValue)
-        let weightValues = bmiResults.primitive2.map(\.primitive.rawValue)
-        print("Fetched BMI results: \(bmiValues)")
-        print("Fetched Weight results: \(weightValues)")
-    case .failure(let error):
-        print("Error fetching BMI results: \(error)")
-    }
+    let bmiValues = result.values1.map(\.primitive.rawValue)
+    let weightValues = result.values2.map(\.primitive.rawValue)
+    print("Fetched BMI results: \(bmiValues)")
+    print("Fetched Weight results: \(weightValues)")
 }
 ```
 
@@ -111,9 +104,13 @@ For real-time data, use the `observeModuleResults` method. This method enables o
 
 ```swift
 HumaApp.observeModuleResults(
-    for module: ModuleAccess.ModuleKey<Primitive>,
-    limit: Int = .zero,
-    listener: @escaping RepositoryCompletion<[ModuleResult<Primitive>]>
+    for module: ModuleResultAccess.Key<Value>,
+    listener: @escaping RepositoryCompletion<[Value]>
+) -> AnyObject
+
+HumaApp.observeModuleResults(
+    for module: ModuleResultAccess.DoubleKey<Value1, Value2>,
+    completion: @escaping ModuleResultAccess.DoubleKey<Value1, Value2>.ResultCompletion
 ) -> AnyObject
 ```
 
