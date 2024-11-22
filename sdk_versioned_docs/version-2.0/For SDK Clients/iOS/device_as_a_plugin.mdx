@@ -9,18 +9,14 @@ import TabItem from '@theme/TabItem';
 
 # Device as a Plugin
 
-In this documentation, we introduce a new capability of the SDK that allows developers to integrate external devices into the iOS application using a plugin-based approach. This new API facilitates seamless integration of device connection/disconnection flows directly into the profile screen of your app.
-
-This feature is currently focused on the **first part of the device integration**:
-
-1. **Integrating device connection/disconnection flows into the profile screen**.
-2. _(Coming Soon)_ Integrating external sources of data into modules.
+This documentation introduces the new capabilities of the SDK for integrating external devices into your iOS application.
 
 ## ✨ Overview
 
-The new API offers a streamlined way to extend your application's functionality by embedding support for external devices as plugins. This approach simplifies the integration process and ensures a consistent user experience when managing connected devices.
+The API enables seamless integration and management of external devices within your app. It supports:
 
-To get started, implement the `AnyExternalDeviceProvider` protocol and register your custom device provider in the app.
+1. **Device connection/disconnection flows** (e.g., adding or removing a device).
+2. **Syncing data from devices**, categorized by module IDs, such as *"BloodGlucose"* or *"BloodPressure"*, enabling integration with specific application modules.
 
 ## 🛠️ Implementation Guide
 
@@ -36,25 +32,27 @@ public protocol AnyExternalDeviceProvider: DeviceManufacturePresentable {
     func isAdded(_ id: String) -> Bool
     func addDevice(_ id: String, in navigation: UINavigationController, completion: @escaping () -> Void)
     func removeDevice(_ id: String, in navigation: UINavigationController)
+    func syncData(for device: ExternalDevice, _ completion: @escaping (Result<DeviceSyncResult, Error>) -> Void)
 }
 ```
 
 ### 2. Define the Device Model
 
-The ExternalDevice struct is used to represent a connected device:
+The ExternalDevice struct is used to represent a connected device; includes a supportedModuleID property to indicate which module the device integrates with::
 
 ```swift
 public struct ExternalDevice: Hashable, DevicePresentable {
-    public let id: String
+    public let identifier: String
     public let name: String
     public let model: String
-
     public var displayName: String? { name }
+    let supportedModuleID: String
 
-    public init(id: String, name: String, model: String) {
-        self.id = id
+    public init(id: String, name: String, model: String, supportedModuleID: String) {
+        self.identifier = id
         self.name = name
         self.model = model
+        self.supportedModuleID = supportedModuleID
     }
 }
 ```
@@ -95,6 +93,14 @@ final class MyDeviceProvider: AnyExternalDeviceProvider {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         navigation.present(alert, animated: true)
     }
+
+    func syncData(
+        for device: HumaDevicesPlugin.ExternalDevice,
+        _ completion: @escaping (Result<HumaDevicesPlugin.DeviceSyncResult, any Error>) -> Void
+    ) {
+        // returning hardcoded blood pressure data in this example
+        completion(.success(.dataSynced(.bloodPressure([.init(value: .init(min: 60, max: 120))]))))
+    }
 }
 ```
 
@@ -121,11 +127,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 ```
-
-### 🗒️ Additional Notes
-
-	•	Make sure to import both HumaAppKit and HumaDevicesPlugin in your project.
-	•	This feature currently supports only device connection and disconnection flows. Data integration into modules will be available shortly.
 
 ### 📦 Dependencies
 
