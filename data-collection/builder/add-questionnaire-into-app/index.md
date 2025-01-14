@@ -14,7 +14,7 @@ The questionnaires enable you to create a structured set of questions to gather 
 
 Adding a custom questionnaire into your app is straightforward:
 
-* **Navigate to the app builder:** Open the Huma Builder within your platform and go to the screen where you want to add the questionnaire.
+* **Navigate to the app builder:** Open the Huma Studio within your platform and go to the screen where you want to add the questionnaire.
 * **Open the widgets menu:** Click on the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Widget   \+</span> on the left sidebar to access the widget selection menu.
 * **Add questionnaire widget:** Scroll through the widgets and find the Click on the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Questionnaire</span> option, then click to add it to your screen.
 

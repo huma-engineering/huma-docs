@@ -2,7 +2,7 @@
 sidebar_position: 4
 title: Add articles and media
 ---
-The Huma Builder CMS is a powerful content management system designed to simplify the creation of articles, videos, and other assets. This user-friendly platform enables you to add, edit, and organise content within your app, ensuring it reaches the right users at the right time. Follow the steps below to add a new article to your app:
+The Huma Studio CMS is a powerful content management system designed to simplify the creation of articles, videos, and other assets. This user-friendly platform enables you to add, edit, and organise content within your app, ensuring it reaches the right users at the right time. Follow the steps below to add a new article to your app:
 
 1. Select the app that you want to add content to.
 2. Access the CMS by clicking the collection icon.
