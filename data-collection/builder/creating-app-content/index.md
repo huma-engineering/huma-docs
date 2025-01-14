@@ -36,7 +36,7 @@ Assets like images and videos can be uploaded to visually enhance your articles 
 
 ![alt text](<../assets/Upload media-2.png>)
 
-### How to Use HI to Generate Images for Your Articles
+### How to use HI to generate images for your articles
 
 Enhance your articles with engaging visuals using the HI feature. Here’s how you can easily create and integrate images into your content:
 
