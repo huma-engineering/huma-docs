@@ -35,6 +35,21 @@ Assets like images and videos can be uploaded to visually enhance your articles 
 ![alt text](<../assets/Upload media-1.png>)
 
 ![alt text](<../assets/Upload media-2.png>)
+
+### How to Use HI to Generate Images for Your Articles
+
+Enhance your articles with engaging visuals using the HI feature. Here’s how you can easily create and integrate images into your content:
+
+1. After writing your article or content, click on the<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}> HI </span> icon at the top of the navigation bar.
+2. You have two options:
+    * Copy and paste your full article into the prompt.
+    * Simply write a title or key details about your article and ask HI to generate an image.
+3. Once the image is generated, review it. If you're happy with the result, click on the image asset. It will be automatically saved into the<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}> My Assets</span> section.
+4. When you're ready to include the image, click on<span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Media</span> in your article editor. You'll find the image in My Assets, ready to be added to your content.
+
+![alt text](<../assets/Upload media-3.png>)
+
+![alt text](<../assets/Upload media-4.png>)
 ### Adding content to your app
  
 Once you have created a few content pieces, you can start adding those to the desired pages of your app. 
@@ -52,9 +67,14 @@ Once you have created a few content pieces, you can start adding those to the de
 
 ![alt text](<../assets/Feature articles-1.png>)
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Filter by tags</span> allows you to add content with specific tags.
- 
- ![alt text](<../assets/Feature articles-2.png>)
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Manual list</span> allows you to search and add available content in the CMS. 
+
+![alt text](<../assets/Feature articles-2.png>)
+
+![alt text](<../assets/Feature articles-3.png>)
+
+![alt text](<../assets/Feature articles-4.png>)
+
 - <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Advanced query</span> allows you to apply advanced logic to which content pieces will be shown.
   
 ### Advanced Query
