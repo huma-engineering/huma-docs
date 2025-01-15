@@ -20,6 +20,6 @@ After adding emails, select which platforms to give staff access, including the 
 
 ![alt text](<../assets/invite-staff-5.png>)
 
-![alt text](<../assets/invite-staff-6.png>
+![alt text](<../assets/invite-staff-6.png>)
 
 Complete the invitation process by clicking on <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Send Staff Members Invites</span> button.
