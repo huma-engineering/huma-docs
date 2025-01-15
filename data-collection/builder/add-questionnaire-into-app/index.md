@@ -45,8 +45,6 @@ Under the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRad
 * **Schedule:** Set a specific time for sending out the questionnaire to respondents.  
 * **Footnote text:** Add any relevant clinical advice, disclaimers, or trademark text here.
 
-![alt text](<../assets/add-questionnaire-into-app-widget-list-setting.png>)
-
 ## Add questions to the questionnaire 
 
 Next, in the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Questions</span> tab, add all the necessary questions by clicking the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>\+ New question</span> button. Configure each question using the right sidebar to suit your specific needs.
