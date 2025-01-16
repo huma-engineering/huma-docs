@@ -2,8 +2,11 @@
 sidebar_position: 3
 title: Huma Portal
 ---
+import HumaportalIcon from './assets/huma-portal-icon.png'
 
-# Huma Portal
+
+# <img src={HumaportalIcon} alt="Icon description" width="60" height="60"/> <br/> the Huma portal
+
 
 The Huma Portal is the place where care and research teams can view and track patient data. 
 
