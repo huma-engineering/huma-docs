@@ -1,12 +1,11 @@
-import HumaStudioIcon from './assets/huma-studio-icon.png'
-
 ---
 sidebar_position: 3
 title: Huma Studio
 ---
+import HumaStudioIcon from './assets/huma-studio-icon.png'
 
 
-# <img src={HumaStudioIcon} alt="Icon description" width="24" height="24"/> <br/> Introduction to the Huma Studio
+# <img src={HumaStudioIcon} alt="Icon description" width="40" height="40"/> <br/> Introduction to the Huma Studio
 The Admin Portal is the place where the technical structures (Organisations and Deployments) are configured. 
 
 When a healthcare or study program wants to use Huma for remote data collection, the Huma operations team will build a new Organisation for them within the Admin Portal.
