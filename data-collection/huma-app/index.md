@@ -2,7 +2,7 @@
 sidebar_position: 4
 title: Huma Care
 ---
-import HumacareIcon from '../assets/huma-care-icon.png'
+import HumacareIcon from './assets/huma-care-icon.png'
 
 
 # <img src={HumacareIcon} alt="Icon description" width="60" height="60"/> <br/> the Huma Care
