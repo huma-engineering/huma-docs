@@ -16,8 +16,12 @@ Our goal is to create a consistent, intuitive interface that aligns with your br
 
  Providing clear instructions for incorporating your device data with our system.
 
+import humadesign from '../../assets/overview-design-guide.png'
 
-![config_file.png](../../assets/overview-design-guide.png)
+
+# <img src={humadesign} alt="Icon description" width="350" height="900"/>
+
+
 
 
 
@@ -35,7 +39,7 @@ A visual representation, such as a photo, illustration, or diagram, used to clar
 
 A secondary text providing additional context or a brief explanation of the title.
 
-#### 4. Instructional text
+#### 4. Body text
 
 Clear and actionable steps that guide the user through a process.
 
@@ -77,10 +81,58 @@ To help users better understand instructions or information by showing the produ
 
 
 ### Example
-1. Log in to the [Huma Workspace](https://workspace.huma.com/).
-2. Download the [huma-config.json](https://workspace-gcp-uk.api.huma.com/api/integration/v1/configs/backend) file with secrets provided for your integration.
-3. Add it to your project directory.
 
+
+## Title
+
+The title is a concise text that highlights the most important information or step within a section. 
+### Purpose
+
+To give users a quick summary or elaboration of the section's main idea.
+### Guildline
+*  Limit to 1 sentence.
+
+*  Use a slightly bigger font size than the body text for better visibility and emphasis.
+
+*  Should not repeat the header verbatim.
+
+
+### Example
+
+
+## Body text
+
+Body text refers to the main content used to provide detailed information, instructions, or descriptions within the interface. It typically supports the title and subtitle by elaborating on key points.
+### Purpose
+
+To communicate clear, concise, and actionable information to the user.
+### Guildline
+*  Use short, simple and straightforward language.
+
+*  Avoid technical jargon unless it’s necessary and clearly explained.
+
+*  Use a consistent tone and style throughout.
+
+
+### Example
+
+
+## Button
+
+Buttons are interactive UI elements used to trigger actions or navigate users to different parts of the interface. They are one of the primary ways users interact with the product.
+### Purpose
+
+To guide users towards completing key actions.
+### Guildline
+*  Use concise, action-oriented text.
+
+*  Avoid vague labels like "Click here" or "Do it."
+
+*  Keep text short, ideally 1-3 words.
+
+*  There are 4 types of buttons.
+
+### Example
 
 
 4. Install python client
