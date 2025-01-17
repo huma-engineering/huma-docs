@@ -5,7 +5,7 @@ title: Huma Care
 import HumacareIcon from './assets/huma-care-icon.png'
 
 
-# <img src={HumacareIcon} alt="Icon description" width="60" height="60"/> <br/> the Huma Care
+# <img src={HumacareIcon} alt="Icon description" width="60" height="60"/> <br/> Huma Care
 The Huma care App is the place where patients enter their health data. The information provided via the Huma App will be displayed in the Huma Portal for care and research teams to track. 
 
 Patients [submit their data](./features/entering-your-health-data.md) in the form of both [quantitative (e.g. heart rate, blood pressure) and qualitative (e.g. questionnaires, photos) data](./features/track-modules.md), depending on the modules assigned in the Deployment configuration. They will be instructed on what data to collect and when to submit it via a series of [tasks on their homepage](./features/to-dos.md). 

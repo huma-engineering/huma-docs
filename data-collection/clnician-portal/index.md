@@ -5,7 +5,7 @@ title: Huma Portal
 import HumaportalIcon from './assets/huma-portal-icon.png'
 
 
-# <img src={HumaportalIcon} alt="Icon description" width="60" height="60"/> <br/> the Huma portal
+# <img src={HumaportalIcon} alt="Icon description" width="60" height="60"/> <br/> Huma portal
 
 
 The Huma Portal is the place where care and research teams can view and track patient data. 
