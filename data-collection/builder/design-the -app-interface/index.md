@@ -23,3 +23,7 @@ Widgets are functional building blocks of the Huma App that can be added, edited
 5. Click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Save changes</span> to save your progress.
 
 ![alt text](<../assets/Adding- edit widgets.png>)
+
+![alt text](<../assets/Adding- edit widgets-1.png>)
+
+![alt text](<../assets/Adding- edit widgets-2.png>)
