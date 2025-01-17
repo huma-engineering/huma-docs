@@ -24,10 +24,14 @@ import humadesign from '../../assets/overview-design-guide.png'
 
 
 
-
 #### 1. Header
 
 The title is a concise text that highlights the most important information or step within a section.
+
+import headerimage from '../../assets/Header-image-guide.png'
+
+
+# <img src={headerimage} alt="Icon description" width="100" height="100"/>
 
 
 #### 2. Image
@@ -35,6 +39,10 @@ The title is a concise text that highlights the most important information or st
 A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.
 
 
+import imageguide from '../../assets/Image-design-guide.png'
+
+
+# <img src={imageguide} alt="Icon description" width="100" height="100"/>
 #### 3. Title
 
 A secondary text providing additional context or a brief explanation of the title.
@@ -43,6 +51,10 @@ A secondary text providing additional context or a brief explanation of the titl
 
 Clear and actionable steps that guide the user through a process.
 
+import bodytext from '../../assets/bodytext-design-guide.png'
+
+
+# <img src={bodytext} alt="Icon description" width="150" height="150"/>
 
 #### 5. button
 
