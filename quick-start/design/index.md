@@ -28,10 +28,6 @@ import humadesign from '../../assets/overview-design-guide.png'
 
 The title is a concise text that highlights the most important information or step within a section.
 
-import headerimage from '../../assets/Header-image-guide.png'
-
-
-# <img src={headerimage} alt="Icon description" width="100" height="100"/>
 
 
 #### 2. Image
@@ -39,10 +35,6 @@ import headerimage from '../../assets/Header-image-guide.png'
 A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.
 
 
-import imageguide from '../../assets/Image-design-guide.png'
-
-
-# <img src={imageguide} alt="Icon description" width="100" height="100"/>
 #### 3. Title
 
 A secondary text providing additional context or a brief explanation of the title.
@@ -51,10 +43,6 @@ A secondary text providing additional context or a brief explanation of the titl
 
 Clear and actionable steps that guide the user through a process.
 
-import bodytext from '../../assets/bodytext-design-guide.png'
-
-
-# <img src={bodytext} alt="Icon description" width="150" height="150"/>
 
 #### 5. button
 
@@ -63,6 +51,11 @@ Interactive elements that trigger actions when clicked or tapped.
 
 
 ## Header
+
+import headerimage from '../../assets/Header-image-guide.png'
+
+
+# <img src={headerimage} alt="Icon description" width="400" height="400"/>
 
 The title is a concise text that highlights the most important information or step within a section. 
 ### Purpose
@@ -79,6 +72,11 @@ To grab the user’s attention and provide clear context for what follows.
 
 
 ## Image
+
+import imageguide from '../../assets/Image-design-guide.png'
+
+
+# <img src={imageguide} alt="Icon description" width="400" height="400"/>
 
 A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.
 ### Purpose
@@ -97,6 +95,12 @@ To help users better understand instructions or information by showing the produ
 
 ## Title
 
+import titletext from '../../assets/Title-design-guide.png'
+
+
+# <img src={titletext} alt="Icon description" width="400" height="400"/>
+
+
 The title is a concise text that highlights the most important information or step within a section. 
 ### Purpose
 
@@ -114,6 +118,12 @@ To give users a quick summary or elaboration of the section's main idea.
 
 ## Body text
 
+import bodytext from '../../assets/bodytext-design-guide.png'
+
+
+# <img src={bodytext} alt="Icon description" width="400" height="400"/>
+
+
 Body text refers to the main content used to provide detailed information, instructions, or descriptions within the interface. It typically supports the title and subtitle by elaborating on key points.
 ### Purpose
 
@@ -130,6 +140,11 @@ To communicate clear, concise, and actionable information to the user.
 
 
 ## Button
+
+import button from '../../assets/Button-guide.png'
+
+
+# <img src={button} alt="Icon description" width="300" height="300"/>
 
 Buttons are interactive UI elements used to trigger actions or navigate users to different parts of the interface. They are one of the primary ways users interact with the product.
 ### Purpose
