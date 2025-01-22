@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: Design guildline
+title: Design guideline
 ---
 
 
@@ -21,7 +21,18 @@ import humadesign from '../../assets/overview-design-guide.png'
 
 # <img src={humadesign} alt="Icon description" width="350" height="900"/>
 
-
+<table>
+<thead>
+<tr>
+<th>1. Header</th>
+<th><dis>The title is a concise text that highlights the most important information or step within a section.</dis></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2. Image</td>
+<td><dis>hA visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.</dis></td>
+</tr>
 
 
 #### 1. Header
