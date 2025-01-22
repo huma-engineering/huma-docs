@@ -21,18 +21,16 @@ import humadesign from '../../assets/overview-design-guide.png'
 
 # <img src={humadesign} alt="Icon description" width="350" height="900"/>
 
-<table>
-<thead>
-<tr>
-<th>1. Header</th>
-<th><dis>The title is a concise text that highlights the most important information or step within a section.</dis></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2. Image</td>
-<td><dis>hA visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.</dis></td>
-</tr>
+| Number        | discription 
+|-------------  |----------
+| 1. Header     | The title is a concise text that highlights the most important information or step within a section.  
+|  2. Image | A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.   
+| 3. Title   | A secondary text providing additional context or a brief explanation of the title.   
+| 4. Body text | Clear and actionable steps that guide the user through a process.
+  | 5. Button | Interactive elements that trigger actions when clicked or tapped.
+
+
+
 
 
 #### 1. Header
