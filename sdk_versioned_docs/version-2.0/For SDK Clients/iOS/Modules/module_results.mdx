@@ -1,0 +1,162 @@
+---
+title: Accessing module results
+description: Usage guide for Module Access in iOS SDK with compile-time-safe module keys
+sidebar_position: 2
+---
+
+# Accessing module results
+
+The iOS SDK provides a compile-time-safe method for accessing and observing module results. Using `ModuleResultAccess.Key` and `ModuleResultAccess.DoubleKey`, developers can directly retrieve or observe data from specific modules with the assurance that type safety is maintained.
+
+## Overview
+
+Different frameworks define module keys for specific types of data (e.g., standard modules, custom modules like HealthKit, etc.). By leveraging predefined, strongly-typed keys, you can access module results with dot-syntax, ensuring that only valid keys for your frameworks are available at compile time. This approach provides clarity and type safety by specifying the result type based on the module key used.
+
+## Importing Required Frameworks
+
+Before accessing specific modules, ensure you’ve imported the necessary frameworks:
+- Always import `HumaAppKit` to access the `HumaApp` interface.
+- For standard modules like blood glucose and BMI, import `HumaModules`.
+- For custom modules, such as HealthKit-related modules, import `HumaHealthKit` or other frameworks as described in the [Module Keys Reference](./module_keys_reference).
+
+## Usage
+
+### Fetching Module Results
+
+To fetch results, use the `getModuleResults` method and pass a module-specific key. The result type within the completion closure is automatically inferred based on the module key, ensuring type safety.
+
+#### Syntax
+
+```swift
+HumaApp.getModuleResults(
+    for module: ModuleResultAccess.Key<Value>,
+    completion: @escaping RepositoryCompletion<[Value]>
+)
+
+HumaApp.getModuleResults(
+    for module: ModuleResultAccess.DoubleKey<Value1, Value2>,
+    completion: @escaping ModuleResultAccess.DoubleKey<Value1, Value2>.ResultCompletion
+) 
+```
+
+#### Example: Fetching Health Data (Blood Glucose, BMI, Sleep)
+
+After importing the relevant frameworks, use dot-syntax to access specific modules. Each module key provides a completion handler result with the corresponding data type.
+
+#### Example 1: Blood Pressure
+
+```swift
+import HumaAppKit
+import HumaModules
+
+HumaApp.getModuleResults(for: .bloodPressure) { result in
+    switch result {
+    case .success(let bloodPressureResults):
+        let formattedValues = bloodPressureResults.map(\.primitive).map {
+            "\($0.systolicValue) / \($0.diastolicValue)"
+        }
+        print("Fetched blood pressure results: \(formattedValues)")
+    case .failure(let error):
+        print("Error fetching blood pressure results: \(error)")
+    }
+}
+```
+
+#### Example 2: BMI (Weight & BMI)
+*Uses ModuleAccess.ModuleDoubleKey (two primitive types per one module)*
+
+```swift
+import HumaAppKit
+import HumaModules
+
+HumaApp.getModuleResults(for: .bmi) { result in
+    let bmiValues = result.values1.map(\.primitive.rawValue)
+    let weightValues = result.values2.map(\.primitive.rawValue)
+    print("Fetched BMI results: \(bmiValues)")
+    print("Fetched Weight results: \(weightValues)")
+}
+```
+
+#### Example 3: Sleep
+
+```swift
+HumaApp.getModuleResults(for: .sleep) { result in
+    switch result {
+    case .success(let sleepResults):
+        print("Fetched sleep results: \(sleepResults)")
+        sleepResults.forEach { moduleResult in
+            let asleepHours = moduleResult.primitive.duration - moduleResult.primitive.awake
+            let startDate = moduleResult.startDateTime.iso8601ShortDate
+            let endDate = moduleResult.startDateTime.iso8601ShortDate
+            print("Slept for \(asleepHours) between \(startDate) and \(endDate)")
+        }
+    case .failure(let error):
+        print("Error fetching sleep results: \(error)")
+    }
+}
+```
+
+### Observing Module Results
+
+For real-time data, use the `observeModuleResults` method. This method enables observation of module-specific updates, and the result type in the listener varies based on the module key provided.
+
+#### Syntax
+
+```swift
+HumaApp.observeModuleResults(
+    for module: ModuleResultAccess.Key<Value>,
+    listener: @escaping RepositoryCompletion<[Value]>
+) -> AnyObject
+
+HumaApp.observeModuleResults(
+    for module: ModuleResultAccess.DoubleKey<Value1, Value2>,
+    completion: @escaping ModuleResultAccess.DoubleKey<Value1, Value2>.ResultCompletion
+) -> AnyObject
+```
+
+#### Example
+
+Keep a reference to the observer to maintain the observation. Observers are deallocated if their references are released.
+
+#### Example 1. Blood Glucose
+
+```swift
+import HumaAppKit
+import HumaModules
+
+let observer = HumaApp.observeModuleResults(for: .bloodGlucose) { result in
+    switch result {
+    case .success(let glucoseResults):
+        print("Observed new blood glucose results: \(glucoseResults)")
+    case .failure(let error):
+        print("Error observing blood glucose results: \(error)")
+    }
+}
+```
+
+#### Example 2. Sleep
+
+```swift
+import HumaAppKit
+import HumaHealthKit
+
+let observer = HumaApp.observeModuleResults(for: .sleep) { result in
+    switch result {
+    case .success(let sleepResults):
+        print("Observed new sleep results: \(sleepResults)")
+    case .failure(let error):
+        print("Error observing sleep results: \(error)")
+    }
+}
+```
+
+## Benefits of Compile-Time Safety
+
+The dot-syntax approach ensures that only valid module keys are available at compile time. This means:
+
+- Type Safety: The type of the result in completion or listener closures automatically adapts based on the module key.
+- Error Prevention: Only modules defined in the imported frameworks are accessible, minimizing the risk of invalid key usage.
+
+## Additional Information
+
+For a full list of available modules across SDKs, including definitions and example data types, please refer to the [Module Reference Documentation](./module_keys_reference).
