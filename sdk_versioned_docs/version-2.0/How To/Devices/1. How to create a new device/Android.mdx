@@ -67,6 +67,11 @@ class MyDevice : DeviceIntegration {
 }
 ```
 
+This diagrams represents the device connection flow lifecycle:
+![android-device-connection-flow-from-settings.png](../../../../../assets/android-device-connection-flow-from-settings.png)
+![android-device-connection-flow-from-module-details.png](../../../../../assets/android-device-connection-flow-from-module-details.png)
+![android-device-disconnect-flow.png](../../../../../assets/android-device-disconnect-flow.png)
+
 Next step is to implement the extension interface. For example,
 `DeviceIntegrationWithDataCollectionFlow`:
 
@@ -89,6 +94,10 @@ class MyDevice : DeviceIntegration, DeviceIntegrationWithDataCollectionFlow {
 
 By implementing this interface, you will see "Sync" button in the device settings screen and in
 Module Details screen of the module that supports this data type.
+
+This diagrams represents the data collection flow lifecycle:
+
+![android-device-sync-flow.png](../../../../../assets/android-device-sync-flow.png)
 
 Let's implement the `DeviceIntegrationWithBackgroundSync` interface:
 
@@ -113,6 +122,9 @@ By implementing this interface, you will get a callback when the refresh event w
 system or a user.
 If there is a new data available, you can call `onDataRefreshed` with the new data. Otherwise, you
 can ignore the call.
+
+This diagrams represents the background sync flow lifecycle:
+![android-device-background-sync-flow.png](../../../../../assets/android-device-background-sync-flow.png)
 
 Finally, let's implement the `DeviceIntegrationWithOptions` interface:
 
