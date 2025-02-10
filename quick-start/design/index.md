@@ -23,7 +23,7 @@ import humadesign from '../../assets/overview-design-guide.png'
 
 | Number          | Description1 
 |-------------    |----------
-| 1.Header       | The title is a concise text that highlights the most important information or step within a section.  
+| 1. Header       | The title is a concise text that highlights the most important information or step within a section.  
 |  2. Image       | A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.   
 | 3. Title        | A secondary text providing additional context or a brief explanation of the title.   
 | 4. Body text    | Clear and actionable steps that guide the user through a process.
@@ -33,52 +33,33 @@ import humadesign from '../../assets/overview-design-guide.png'
 
 
 
-#### 1. Header
-
-The title is a concise text that highlights the most important information or step within a section.
-
-
-
-#### 2. Image
-
-A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.
-
-
-#### 3. Title
-
-A secondary text providing additional context or a brief explanation of the title.
-
-#### 4. Body text
-
-Clear and actionable steps that guide the user through a process.
-
-
-#### 5. button
-
-Interactive elements that trigger actions when clicked or tapped.
-
-
-
 ## Header
 
-import headerimage from '../../assets/Header-image-guide.png'
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
 
+<div style="max-width: 60%;">
+The title is a concise text that highlights the most important information or step within a section.
 
-# <img src={headerimage} alt="Icon description" width="400" height="400"/>
-
-The title is a concise text that highlights the most important information or step within a section. 
 ### Purpose
 
 To grab the user’s attention and provide clear context for what follows.
-### Guildline
-*  Use a maximum of 3-5 words.
 
-*  Avoid technical jargon; prioritize clarity.
+### Guidelines
 
+- Use a maximum of 3-5 words.
+- Avoid technical jargon; prioritize clarity.
+</div>
+
+<img src="../../assets/Header-image-guide.png" alt="Header guide" width="300" height="300"/>
+
+</div>
 
 ### Example
 
-
+<div style="display: flex; gap: 20px;">
+    <img src="../../assets/Header-Do.png" alt="Header Do" width="300" height="300"/>
+    <img src="../../assets/Header-Don't.png" alt="Header Don't" width="300" height="300"/>
+</div>
 
 ## Image
 
