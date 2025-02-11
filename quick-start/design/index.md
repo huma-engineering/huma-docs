@@ -9,222 +9,230 @@ title: Design guideline
 This guideline provides a comprehensive framework for companies and organizations integrating their health devices with our digital platform. By following these design principles, you can ensure a seamless and user-friendly experience for your customers while leveraging the full potential of our technology.
 Our goal is to create a consistent, intuitive interface that aligns with your brand and optimally engages end-users. This document outlines the essential components for designing and customizing screens within our platform, including:
 
-### Consistency:
+### Consistency
 
   Adhering to established design patterns for a unified user experience.
-### Integration:
+### Integration
 
  Providing clear instructions for incorporating your device data with our system.
 
 import humadesign from '../../assets/overview-design-guide.png'
 
 
-# <img src={humadesign} alt="Icon description" width="350" height="900"/>
+<table>
+  <tr>
+    <td align="center">
+      <img src={humadesign} alt="Icon description" width="500" height="500"/>
+    </td>
+    <td>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Header</td>
+            <td>The title is a concise text that highlights the most important information or step within a section.</td>
+          </tr>
+          <tr>
+            <td>2. Image</td>
+            <td>A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.</td>
+          </tr>
+          <tr>
+            <td>3. Title</td>
+            <td>A secondary text providing additional context or a brief explanation of the title.</td>
+          </tr>
+          <tr>
+            <td>4. Body text</td>
+            <td>Clear and actionable steps that guide the user through a process.</td>
+          </tr>
+          <tr>
+            <td>5. Button</td>
+            <td>Interactive elements that trigger actions when clicked or tapped.</td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
 
-| Number          | Description1 
-|-------------    |----------
-| 1. Header       | The title is a concise text that highlights the most important information or step within a section.  
-|  2. Image       | A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.   
-| 3. Title        | A secondary text providing additional context or a brief explanation of the title.   
-| 4. Body text    | Clear and actionable steps that guide the user through a process.
-  | 5. Button     | Interactive elements that trigger actions when clicked or tapped.
 
 
 
 
 
-## Header
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+### Header 
+The title is a concise text that highlights the most important information or step within a section. 
 
-<div style="max-width: 60%;">
-The title is a concise text that highlights the most important information or step within a section.
+import headerguide from '../../assets/Header-image-guide.png'
 
-### Purpose
+# <img src={headerguide} alt="Icon description" width="300" height="300"/>
+
+**Purpose**
 
 To grab the user’s attention and provide clear context for what follows.
 
-### Guidelines
+**Guidline**
 
 - Use a maximum of 3-5 words.
 - Avoid technical jargon; prioritize clarity.
-</div>
 
-<img src="../../assets/Header-image-guide.png" alt="Header guide" width="300" height="300"/>
 
-</div>
+**Example**
 
-### Example
 
-<div style="display: flex; gap: 20px;">
-    <img src="../../assets/Header-Do.png" alt="Header Do" width="300" height="300"/>
-    <img src="../../assets/Header-Don't.png" alt="Header Don't" width="300" height="300"/>
-</div>
+import headerexampledo from '../../assets/Header-Do.png'
+import headerexampledonot from '../../assets/Header-Donot.png'
+
+<table>
+  <tr>
+    <td align="center"><img src={headerexampledo} alt="Icon description" width="300" height="300"/></td>
+    <td align="center"><img src={headerexampledonot} alt="Icon description" width="300" height="300"/></td>
+  </tr>
+</table>
+
+
+
 
 ## Image
+A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.
 
 import imageguide from '../../assets/Image-design-guide.png'
 
+# <img src={imageguide} alt="Icon description" width="200" height="200"/>
 
-# <img src={imageguide} alt="Icon description" width="400" height="400"/>
-
-A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.
-### Purpose
+**Purpose**
 
 To help users better understand instructions or information by showing the product or process in a clear and relatable way.
-### Guildline
-*  Use high-resolution images for clarity.
 
-*  Keep the visuals simple and focused on the key elements being explained.
+**Guideline**
+- Use high-resolution images for clarity.
 
-*  Ensure images are responsive and accessible (e.g., provide alt text for screen readers).
+- Keep the visuals simple and focused on the key elements being explained.
+
+- Ensure images are responsive and accessible (e.g., provide alt text for screen readers).
 
 
-### Example
+**Example**
 
+import imageexampledo from '../../assets/exampleinagedo.png'
+import imageexampledonot from '../../assets/exampleimagedonot.png'
+
+<table>
+  <tr>
+    <td align="center"><img src={imageexampledo} alt="Icon description" width="300" height="300"/></td>
+    <td align="center"><img src={imageexampledonot} alt="Icon description" width="300" height="300"/></td>
+  </tr>
+</table>
 
 ## Title
 
 import titletext from '../../assets/Title-design-guide.png'
 
 
-# <img src={titletext} alt="Icon description" width="400" height="400"/>
+# <img src={titletext} alt="Icon description" width="300" height="300"/>
 
 
 The title is a concise text that highlights the most important information or step within a section. 
-### Purpose
+
+**Purpose**
 
 To give users a quick summary or elaboration of the section's main idea.
-### Guildline
-*  Limit to 1 sentence.
 
-*  Use a slightly bigger font size than the body text for better visibility and emphasis.
+**Guideline**
+- Limit to 1 sentence.
 
-*  Should not repeat the header verbatim.
+- Use a slightly bigger font size than the body text for better visibility and emphasis.
+
+- Should not repeat the header verbatim.
 
 
-### Example
+**Example**
 
+import titleexampledo from '../../assets/titleexampledo.png'
+import titleexampledonot from '../../assets/titleexampledonot.png'
+
+<table>
+  <tr>
+    <td align="center"><img src={titleexampledo} alt="Icon description" width="300" height="300"/></td>
+    <td align="center"><img src={titleexampledonot} alt="Icon description" width="300" height="300"/></td>
+  </tr>
+</table>
 
 ## Body text
 
 import bodytext from '../../assets/bodytext-design-guide.png'
 
-
-# <img src={bodytext} alt="Icon description" width="400" height="400"/>
-
-
 Body text refers to the main content used to provide detailed information, instructions, or descriptions within the interface. It typically supports the title and subtitle by elaborating on key points.
-### Purpose
+
+# <img src={bodytext} alt="Icon description" width="300" height="300"/>
+
+
+
+
+**Purpose**
 
 To communicate clear, concise, and actionable information to the user.
-### Guildline
-*  Use short, simple and straightforward language.
 
-*  Avoid technical jargon unless it’s necessary and clearly explained.
+**Guideline**
 
-*  Use a consistent tone and style throughout.
+- Use short, simple and straightforward language.
+
+- Avoid technical jargon unless it’s necessary and clearly explained.
+
+- Use a consistent tone and style throughout.
 
 
-### Example
+**Example**
 
+import bodytextexampledo from '../../assets/bodytextexampledo.png'
+import bodytextexampledonot from '../../assets/bodytextexampledonot.png'
+
+<table>
+  <tr>
+    <td align="center"><img src={bodytextexampledo} alt="Icon description" width="300" height="300"/></td>
+    <td align="center"><img src={bodytextexampledonot} alt="Icon description" width="300" height="300"/></td>
+  </tr>
+</table>
 
 ## Button
 
 import button from '../../assets/Button-guide.png'
 
+Buttons are interactive UI elements used to trigger actions or navigate users to different parts of the interface. They are one of the primary ways users interact with the product.
 
 # <img src={button} alt="Icon description" width="300" height="300"/>
 
-Buttons are interactive UI elements used to trigger actions or navigate users to different parts of the interface. They are one of the primary ways users interact with the product.
-### Purpose
+
+**Purpose**
 
 To guide users towards completing key actions.
-### Guildline
-*  Use concise, action-oriented text.
 
-*  Avoid vague labels like "Click here" or "Do it."
+**Guideline**
+- Use concise, action-oriented text.
 
-*  Keep text short, ideally 1-3 words.
+- Avoid vague labels like "Click here" or "Do it."
 
-*  There are 4 types of buttons.
+- Keep text short, ideally 1-3 words.
 
-### Example
+- There are 4 types of buttons.
 
-
-4. Install python client
-
-```bash
-pip install huma_python_client
-```
-
-#### 2. Initialize library
-
-Basic initialization is pretty simple, just provide the path to your `huma-config.json` and your deployment id.
-
-```python
-from huma_python_client import HumaApiClient, ClientType
-
-client = HumaApiClient(config_file="config.json")
-
-# Register a new user
-response = client.register(
-    email="user@example.com",
-    first_name="FirstName",
-    last_name="LastName",
-    client_type=ClientType.IOS,
-    deployment_id="5d386cc6ff885918d96edb3a"
-)
-print(response)
-
-# Login a user
-response = client.login(
-    email="user@example.com",
-    client_type=ClientType.IOS,
-    deployment_id="5d386cc6ff885918d96edb3a"
-)
-print(response)
-```
-
-### Endpoint Implementation Example
-
-User authentication should be handled via your original endpoints. The "Get Huma Token" endpoint (for example: `{domain}/private/huma-token`) should be protected and based on the current authenticated user, perform the requests to Huma backend.
-
-To implement the `private/huma-token` endpoint:
-
-1. Attempt to sign in the user using the `client.login()` method.
-2. If the user does not exist (returns a 403 status), sign them up using the `client.register()` method.
-3. Return the tokens and user ID (uid) received from the Huma backend.
-
-The following example demonstrates how to implement the `private/huma-token` endpoint.
-
-```py
-from fastapi import APIRouter, Depends
-from huma_python_client.client import HumaApiClient
-from huma_python_client.exceptions import UserDoesNotExistError as HumaUserNotExistError
-
-from app.dependencies import authenticate
-from app.models.database import User
-from app.models.responses import HumaTokenResponse
-from app.models.user import HumaTokenRequestBody
-
-router = APIRouter(prefix="/private", dependencies=[Depends(authenticate)], tags=['Huma'])
+import buttontypes from '../../assets/buttontypes.png'
 
 
-@router.get("/huma-token")
-def get_huma_token(request_body: HumaTokenRequestBody = Depends(), current_user: User = Depends(authenticate)) -> HumaTokenResponse:
-    """
-    Interacts with Huma backend to auth the user and provide the auth and refresh tokens for Huma sdk.
-    """
-    huma_deployment_id = "***PUT YOUR DEPLOYMENT ID HERE***"
-    huma_client = HumaApiClient(config_file="huma-config.json")
-    try:
-        rsp_json = huma_client.login(current_user.email, request_body.client_type, huma_deployment_id)
-    except HumaUserNotExistError:
-        rsp_json = huma_client.register(current_user.email, current_user.firstName, current_user.lastName, request_body.client_type, huma_deployment_id)
-    return HumaTokenResponse(**rsp_json)
-```
+# <img src={buttontypes}/>
+**Example**
 
-### Conclusion
+import buttonexampledo from '../../assets/buttonexampledo.png'
+import buttonexampledonot from '../../assets/buttonexampledonot.png'
 
-By following these steps, you can integrate our product seamlessly into your system. If you have any questions or need further assistance, please contact our support team.
+<table>
+  <tr>
+    <td align="center"><img src={buttonexampledo} alt="Icon description" width="300" height="300"/></td>
+    <td align="center"><img src={buttonexampledonot} alt="Icon description" width="300" height="300"/></td>
+  </tr>
+</table>

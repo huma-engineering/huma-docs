@@ -12,7 +12,7 @@ In the right-hand panel, you can edit the configuration of the profile page. Cli
 ![alt text](<../assets/Profile edit-1.png>)
 
 ![alt text](<../assets/Profile edit-2.png>)
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '1px', borderRightWidth: '1px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Tip: Adding a new profile page from scratch</strong><br/>
   <span>If you did not start building your app using a template, create a new page. You can call that page "Profile" and select the profile icon so it will be clear to the user what they can expect when clicking on that page. Once you are in that page, click <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>+ New widget</span> and scroll down to <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Profile (Full page)</span>. Since this is a full-page widget spanning the entire page, you won't be able to select any other widget in addition to the profile.</span>
 </div>

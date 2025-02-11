@@ -37,13 +37,13 @@ You can also start inviting users to download and use your app.
 
 After publishing your app, you'll see a "Published" label next to its name in the header. This indicates you're viewing the live version. To make further edits:
 
-1. **Enable "Edit" mode.** on the top right of the screen. This creates a new draft of your app.
-2. **Make the necessary changes to the draft.**
-3. **Publish the updated draft.**  The publishing process is the same as for the initial launch.
+1. **Enable "Edit" mode** on the top right of the screen. This creates a new draft of your app.
+2. **Make the necessary changes to the draft**
+3. **Publish the updated draft**  The publishing process is the same as for the initial launch.
 
 ![Edit-Published-App.png](../assets/Edit-Published-App.png)
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '1px', borderRightWidth: '1px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Quick tip</strong><br/>
   <span>Remember that any changes you make to the draft won't affect the live version until you publish the updated version.</span>
 </div>

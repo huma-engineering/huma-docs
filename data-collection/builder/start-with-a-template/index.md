@@ -16,7 +16,7 @@ To get a head start on building your first app, follow these steps:
 You can also start with a blank template, providing a canvas for your creativity. Add tabs, widgets, and features to build a completely custom app.
 <p>For detailed instructions on adding and customizing these elements, see "Step 2: Design the app interface" below.</p>
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '1px', borderRightWidth: '1px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Tip: Preview the app template on your phone</strong><br/>
   <span>Have a quick look at your app to get a sense of the look and feel. To preview your app at any time during editing, refer to the "Preview your app" section.</span>
 </div>
