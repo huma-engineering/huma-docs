@@ -19,48 +19,30 @@ Our goal is to create a consistent, intuitive interface that aligns with your br
 import humadesign from '../../assets/overview-design-guide.png'
 
 
+
 <table>
   <tr>
+    <td>
+     <h4>1. Header</h4>
+     <p>The title is a concise text that highlights the most important information or step within a section.</p>
+
+  <h4>2. Image</h4>
+      <p>A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.</p>
+
+  <h4>3. Title</h4>
+      <p>A secondary text providing additional context or a brief explanation of the title.</p>
+
+  <h4>4. Body text</h4>
+      <p>Clear and actionable steps that guide the user through a process.</p>
+
+  <h4>5. Button</h4>
+      <p>Interactive elements that trigger actions when clicked or tapped.</p>
+    </td>
     <td align="center">
       <img src={humadesign} alt="Icon description" width="500" height="500"/>
     </td>
-    <td>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1. Header</td>
-            <td>The title is a concise text that highlights the most important information or step within a section.</td>
-          </tr>
-          <tr>
-            <td>2. Image</td>
-            <td>A visual representation, such as a photo, illustration, or diagram, used to clarify concepts, demonstrate functionality, or provide context.</td>
-          </tr>
-          <tr>
-            <td>3. Title</td>
-            <td>A secondary text providing additional context or a brief explanation of the title.</td>
-          </tr>
-          <tr>
-            <td>4. Body text</td>
-            <td>Clear and actionable steps that guide the user through a process.</td>
-          </tr>
-          <tr>
-            <td>5. Button</td>
-            <td>Interactive elements that trigger actions when clicked or tapped.</td>
-          </tr>
-        </tbody>
-      </table>
-    </td>
   </tr>
 </table>
-
-
-
 
 
 
@@ -225,7 +207,7 @@ import buttontypes from '../../assets/buttontypes.png'
 
 
 # <img src={buttontypes}/>
-**Example**
+**Example** ### Example
 
 import buttonexampledo from '../../assets/buttonexampledo.png'
 import buttonexampledonot from '../../assets/buttonexampledonot.png'

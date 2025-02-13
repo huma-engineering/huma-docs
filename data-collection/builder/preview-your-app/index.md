@@ -14,7 +14,7 @@ You can preview your app at any time during the editing process to see how it wi
 
 If you haven't downloaded the app from the App Store or Google Play yet, you'll be prompted to do so first. Once the Huma App is installed on your phone, you can preview your customised app.
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '1px', borderRightWidth: '1px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: '#EFF9FA', border: 'transparent', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Important:</strong><br/>
   Preview mode is only available when you are editing a draft version of your app. If you see an "Edit" button instead of a "Preview" button, you are likely viewing the published version.  To access Preview mode, switch to the draft version of your app first.
 </div>
