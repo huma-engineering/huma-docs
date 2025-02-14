@@ -68,14 +68,9 @@ To grab the user’s attention and provide clear context for what follows.
 
 
 import headerexampledo from '../../assets/Header-Do.png'
-import headerexampledonot from '../../assets/Header-Donot.png'
 
-<table>
-  <tr>
-    <td align="center"><img src={headerexampledo} alt="Icon description" width="300" height="300"/></td>
-    <td align="center"><img src={headerexampledonot} alt="Icon description" width="300" height="300"/></td>
-  </tr>
-</table>
+
+<img src={headerexampledo} alt="Icon description" width="500" height="500"/>
 
 
 
@@ -101,15 +96,10 @@ To help users better understand instructions or information by showing the produ
 
 **Example**
 
-import imageexampledo from '../../assets/exampleinagedo.png'
 import imageexampledonot from '../../assets/exampleimagedonot.png'
 
-<table>
-  <tr>
-    <td align="center"><img src={imageexampledo} alt="Icon description" width="300" height="300"/></td>
-    <td align="center"><img src={imageexampledonot} alt="Icon description" width="300" height="300"/></td>
-  </tr>
-</table>
+
+ <img src={imageexampledonot} alt="Icon description" width="550" height="550"/>
 
 ## Title
 
@@ -136,14 +126,9 @@ To give users a quick summary or elaboration of the section's main idea.
 **Example**
 
 import titleexampledo from '../../assets/titleexampledo.png'
-import titleexampledonot from '../../assets/titleexampledonot.png'
 
-<table>
-  <tr>
-    <td align="center"><img src={titleexampledo} alt="Icon description" width="300" height="300"/></td>
-    <td align="center"><img src={titleexampledonot} alt="Icon description" width="300" height="300"/></td>
-  </tr>
-</table>
+<img src={titleexampledo} alt="Icon description" width="500" height="500"/>
+    
 
 ## Body text
 
@@ -172,14 +157,9 @@ To communicate clear, concise, and actionable information to the user.
 **Example**
 
 import bodytextexampledo from '../../assets/bodytextexampledo.png'
-import bodytextexampledonot from '../../assets/bodytextexampledonot.png'
 
-<table>
-  <tr>
-    <td align="center"><img src={bodytextexampledo} alt="Icon description" width="300" height="300"/></td>
-    <td align="center"><img src={bodytextexampledonot} alt="Icon description" width="300" height="300"/></td>
-  </tr>
-</table>
+<img src={bodytextexampledo} alt="Icon description" width="500" height="500"/>
+   
 
 ## Button
 
@@ -207,14 +187,9 @@ import buttontypes from '../../assets/buttontypes.png'
 
 
 # <img src={buttontypes}/>
-**Example** ### Example
+**Example** 
 
 import buttonexampledo from '../../assets/buttonexampledo.png'
-import buttonexampledonot from '../../assets/buttonexampledonot.png'
 
-<table>
-  <tr>
-    <td align="center"><img src={buttonexampledo} alt="Icon description" width="300" height="300"/></td>
-    <td align="center"><img src={buttonexampledonot} alt="Icon description" width="300" height="300"/></td>
-  </tr>
-</table>
+<img src={buttonexampledo} alt="Icon description" width="500" height="500"/>
+
