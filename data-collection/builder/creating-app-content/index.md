@@ -15,9 +15,9 @@ The Huma Studio CMS is a powerful content management system designed to simplify
 
 ![alt text](<../assets/Creating content-0.png>)
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: '#EFF9FA', border: 'transparent', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>Tip: Adding external URLs or media as an article type</strong><br/>
-  <span>If your article type is an external URL, add your external resource by entering the URL in the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>External URL</span> field. If your article type is a media asset, such as an image or video, add your asset by clicking the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Media</span> button under the Body section.</span>
+  <span>If your article type is an external URL, add your external resource by entering the URL in the <span style={{ backgroundColor: '#CBEBF0', padding: '0 5px', borderRadius: '5px' }}>External URL</span> field. If your article type is a media asset, such as an image or video, add your asset by clicking the <span style={{ backgroundColor: '#CBEBF0', padding: '0 5px', borderRadius: '5px' }}>Media</span> button under the Body section.</span>
 </div>
 
 <br/>

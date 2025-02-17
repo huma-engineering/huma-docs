@@ -4,8 +4,8 @@ title: Add questionnaire into app
 ---
 The questionnaires enable you to create a structured set of questions to gather valuable health information from patients, supporting monitoring, assessment, and early diagnosis. This feature provides clinicians, patients, and caregivers with critical insights into a patient’s health status.
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
-  <span><strong>Tip: Explore and use  pre-made clinical questionnaires </strong><br /> The <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>ePROs</span> widgets offer pre-made clinical questionnaires designed for various health purposes. The Huma ePROs have been approved by the licensors for use in digital health applications. It’s helpful to explore these options to see if one meets your needs before creating a custom questionnaire from scratch.</span>
+<div style={{ backgroundColor: '#EFF9FA', border: 'transparent', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+  <span><strong>Tip: Explore and use  pre-made clinical questionnaires </strong><br /> The <span style={{ backgroundColor: '#CBEBF0', padding: '0 5px', borderRadius: '5px' }}>ePROs</span> widgets offer pre-made clinical questionnaires designed for various health purposes. The Huma ePROs have been approved by the licensors for use in digital health applications. It’s helpful to explore these options to see if one meets your needs before creating a custom questionnaire from scratch.</span>
 </div>
 
 ![alt text](<../assets/add-questionnaire-into-app-widget-list.png>)
@@ -51,7 +51,7 @@ Next, in the <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', border
 
 ![alt text](<../assets/add-questionnaire-into-app-widget-list-question-v1.png>)
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: '#EFF9FA', border: 'transparent', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <span><strong>Tip: Set up questions for accurate score calculations</strong><br /> If you've enabled score calculation, you'll use both single-choice and scale questions in your calculations. For single-choice questions, ensure they are marked as required and assign accurate numerical values to each answer option. Scale questions will automatically have values based on the scale settings but also need to be required for accurate scoring.</span>
 </div><br />
 
@@ -111,7 +111,7 @@ At the top-right of the score boxes, click the three-dot menu to access configur
 
 Save your changes and preview the screen to ensure the questionnaire looks and functions as expected.
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: '#EFF9FA', border: 'transparent', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <span><strong>Tip: Save changes to prevent losing your work</strong><br /> If you close the browser or discard changes none of your changes will be applied. To avoid this, click "Save" and wait for a confirmation message. If the "Save" button is disabled, review all tabs and items for errors and address them.</span></div><br />
 
   ![alt text](<../assets/add-questionnaire-into-app-widget-list-save.png>)

@@ -8,7 +8,7 @@ title: Create a new app
 After creating your Huma account, you can build a new app with the Huma Studio.  There are 8 steps to follow to ensure your app is ready for launch. Every app starts as a draft, allowing you to test it before it goes live.
 <br/>
 
-<div style={{ backgroundColor: 'transparent', border: '1px solid #297A7A', borderBottomWidth: '3px', borderRightWidth: '3px', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
+<div style={{ backgroundColor: '#EFF9FA', border: 'transparent', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>
   <strong>What is the Huma Studio?</strong><br/>
   <span>The Huma Studio is a GenAI-powered, modular platform for app creation. This no-code solution lets enterprises, small businesses, and practices develop regulated health apps. It offers a wide range of pre-built templates, widgets, and features that are easily customizable. Huma Studio provides the infrastructure to build custom health apps with minimal technical effort. It also includes a Huma Portal for clinicians to monitor patient health or track cohort data over time.</span>
 </div>
