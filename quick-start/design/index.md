@@ -80,7 +80,7 @@ A visual representation, such as a photo, illustration, or diagram, used to clar
 
 import imageguide from '../../assets/Image-design-guide.png'
 
-# <img src={imageguide} alt="Icon description" width="200" height="200"/>
+# <img src={imageguide} alt="Icon description" width="300" height="300"/>
 
 **Purpose**
 
@@ -96,10 +96,10 @@ To help users better understand instructions or information by showing the produ
 
 **Example**
 
-import imageexampledonot from '../../assets/exampleimagedonot.png'
+import imageexampleDo from '../../assets/imageexampleDo.png'
 
 
- <img src={imageexampledonot} alt="Icon description" width="550" height="550"/>
+ <img src={imageexampleDo} alt="Icon description" width="550" height="550"/>
 
 ## Title
 
