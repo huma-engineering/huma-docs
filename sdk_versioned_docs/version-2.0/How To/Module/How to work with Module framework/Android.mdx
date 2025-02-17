@@ -141,17 +141,6 @@ The HumaModulesManager provides an option to override the modules inputs with
 The HumaModulesManager provides an option to refresh the data with ```refreshData``` function. You
 can call it without any parameters to refresh all modules, or with specific module ids to refresh.
 
-### Query module data
-To query module data you can use ```fetchModuleData``` function.
-```kotlin
-HumaModuleKitManager.getInstance().fetchModuleData(
-     moduleConfigId: ModuleConfigId?, 
-     moduleId: ModuleId?, 
-     period: TimePeriod?, 
-     refreshModulesBeforeFetch: Boolean
-)
-```
-
 ```kotlin
 HumaModulesManager.getInstance().refreshData()
 ```
@@ -161,3 +150,32 @@ or
 ```kotlin
 HumaModulesManager.getInstance().refreshData("module_id")
 ```
+
+### Query module data
+
+To query module data you can use ```fetchModuleData``` function.
+
+```kotlin
+HumaModuleKitManager.getInstance().fetchModuleData(
+    moduleConfigId: ModuleConfigId?,
+moduleId: ModuleId?,
+period: TimePeriod?,
+refreshModulesBeforeFetch: Boolean
+)
+```
+
+You can also observe the data with ```observeModuleData``` function.
+
+```kotlin
+HumaModuleKitManager.getInstance().observeModuleData(
+    moduleConfigId: ModuleConfigId?,
+moduleId: ModuleId?,
+period: TimePeriod?,
+refreshModulesBeforeFetch: Boolean
+)
+```
+
+Both of those methods return the list of ```ModuleResult<T>``` where T is the data type that module.
+Each module follows generic schema where T is module name with "Record" suffix. For example, for
+HeartRate module, the data type is HeartRateRecord. But you can use a star symbol to get generic object and
+check the type.
