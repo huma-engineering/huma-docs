@@ -1,0 +1,163 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+In Huma SDK Module framework is split between to layers - SDK and AppKit. SDK layer called
+ModuleKit, and AppKit - Modules.
+
+* ModuleKit (SDK) is responsible for generic module architecture without any relation to APIs.
+* Modules (AppKit) is build on ModuleKit and tailored to Huma Platforms APIs. It also provides
+  generic user flow that is used in 1st party modules.
+
+## How to use Module Kit
+
+Most of the ModuleKit features are accessible thru it's manager that is available after SDK
+initialization.
+
+To get it's instance call
+
+```kotlin
+HumaModuleKitManager.getInstance()
+```
+
+### Install modules
+
+To add new module use this [instructions](../How%20to%20add%20a%20new%20Module/Android).
+
+### Refresh Modules
+
+To initialize or refresh modules list, you can use ```refreshModules``` function.
+
+```kotlin
+HumaModuleKitManager.getInstance().refreshModules()
+```
+
+It is called automatically on authentication, but if your are not using generic flow, it might be
+required to call it manually.
+You can check the rest of the functions in
+this [HumaModuleKitManager](../../../References/Module/Android/HumaModuleKitManager)
+
+### Refresh Data
+
+To refresh modules data you can use ```refreshData``` function.
+
+```kotlin
+HumaModuleKitManager.getInstance().refreshData()
+```
+
+This action will call ```refreshData``` on all module providers that are registered in the manager.
+
+### Find Module
+
+There is a few ways to locate a specific module.
+
+1. In the list of all modules
+
+```kotlin
+val module = HumaModuleKitManager.getInstance().modules.find { YOUR_CONDITION }
+```
+
+2. Using find function
+
+```kotlin
+// All parameters are optional
+HumaModuleKitManager.getInstance().findModule(
+    moduleConfigId = ModuleConfigId,
+    moduleId = ModuleId,
+    includeCombinedModule = false, // includes the search in combined modules (e.g. Questionnaire)
+    moduleClass = KClass<T>
+)
+```
+
+Alternatively, you can use ```findModuleWithRefresh``` to trigger module refresh is search was not
+successful with existing data.
+
+```kotlin
+// All parameters are optional
+HumaModuleKitManager.getInstance().findModuleWithRefresh(
+    moduleConfigId = ModuleConfigId,
+    moduleId = ModuleId,
+    includeCombinedModule = false, // includes the search in combined modules (e.g. Questionnaire)
+    moduleClass = KClass<T>
+)
+```
+
+### Override module cards looks
+
+Using ```registerCardOverride``` function you can override the module card view. It will be used in
+all modules that extends from BaseModule.
+
+```kotlin
+HumaModuleKitManager.getInstance().registerCardOverride(MyCardOverride())
+```
+
+It is useful when you want to style the cards in a specific way or add some additional information.
+
+## How to use Modules (AppKit)
+
+Modules library is build on top of ModuleKit. It's manager exposes functionality that is tailored to
+using Huma Platform APIs. Please refer to
+[HumaModulesManager](../../../References/Module/Android/HumaModulesManager) for more information.
+
+### Install modules
+
+By default all 1st party modules are installed automatically. If you want to install custom modules,
+and you don't want to use initializers, you can use ```installModules``` function.
+
+```kotlin
+HumaModulesManager.getInstance().installModules(listOf(HumaModuleLibrary()))
+```
+
+### Install module import processors
+
+If you have a custom module that works with Huma Platform APIs and it's data received via deployment
+configuration, you can use import processors to process the data and create a module instance.
+
+Add custom import processors, you can use ```registerImportProcessor``` function.
+
+```kotlin
+HumaModulesManager.getInstance().registerImportProcessor(MyImportProcessor())
+```
+
+Please refer to [How to add a new Module](../How%20to%20add%20a%20new%20Module/Android) for more
+information.
+
+### Override sections
+
+The HumaModulesManager provides an option to override the modules sections
+with```registerSectionOverride``` function. The override class with receive the list of sections on
+Module details screen open. It can be used to modify the sections list, or add new sections.
+
+### Override module inputs
+
+The HumaModulesManager provides an option to override the modules inputs with
+```registerModuleInputOverride``` function. The override class with receive the call on
+```openInput``` function call. It can be used to modify the inputs list, or add new inputs.
+
+### Refresh data
+
+The HumaModulesManager provides an option to refresh the data with ```refreshData``` function. You
+can call it without any parameters to refresh all modules, or with specific module ids to refresh.
+
+### Query module data
+To query module data you can use ```fetchModuleData``` function.
+```kotlin
+HumaModuleKitManager.getInstance().fetchModuleData(
+     moduleConfigId: ModuleConfigId?, 
+     moduleId: ModuleId?, 
+     period: TimePeriod?, 
+     refreshModulesBeforeFetch: Boolean
+)
+```
+
+```kotlin
+HumaModulesManager.getInstance().refreshData()
+```
+
+or
+
+```kotlin
+HumaModulesManager.getInstance().refreshData("module_id")
+```

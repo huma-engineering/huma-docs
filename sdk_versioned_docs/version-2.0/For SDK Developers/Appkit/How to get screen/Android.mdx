@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+
+# Android
+
+## How to get screen
+
+To get the screen, you need to call the `screens` field on the `HumaAppKitManager` instance.
+
+```kotlin
+val humaAppKitManager = HumaAppKitManager.getInstance(context)
+val screen = humaAppKitManager.screens
+```
+
+To observe the screen changes, you can use the `screensState` field on the `HumaAppKitManager` instance.
+
+```kotlin
+val humaAppKitManager = HumaAppKitManager.getInstance(context)
+humaAppKitManager.screensState.collect { screens ->
+    // Handle screen changes
+}
+```
+
+To get specific screen, you can use the `findScreen` method on the `HumaAppKitManager` instance.
+
+```kotlin
+val humaAppKitManager = HumaAppKitManager.getInstance(context)
+val screen = humaAppKitManager.findScreen("screenId")
+```

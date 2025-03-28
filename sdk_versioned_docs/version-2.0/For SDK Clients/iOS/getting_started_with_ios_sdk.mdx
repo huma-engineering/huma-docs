@@ -1,0 +1,220 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Getting started with iOS SDK
+
+This guide will demonstrate how to integrate widget-based screens from Huma SDK into an existing iOS application. We'll use the CustomerAppSample, a sample weather app, as an example. The integration involves adding your SDK using CocoaPods, configuring the SDK within the AppDelegate, and adding a .plist file.
+
+## Prerequisites
+
+- Xcode installed on your machine
+- CocoaPods installed on your machine
+- Basic understanding of Swift and iOS development
+- A pre-existing iOS application (CustomerAppSample in this case)
+
+## Step 1: Set Up CocoaPods
+
+1. Open Terminal and navigate to your project directory:
+
+   ```sh
+   cd /path/to/CustomerAppSample
+   ```
+
+2. Initialize CocoaPods in your project (if not already initialized):
+
+   ```sh
+   pod init
+   ```
+
+3.	Open the generated Podfile, define the spec sources and add Huma dependencies in your Podfile:
+   ```ruby
+   source 'https://github.com/CocoaPods/Specs.git'
+   source 'git@github.com:huma-engineering/huma-ios-specs.git'
+   platform :ios, '16.0'
+
+   target 'CustomerAppSample' do
+     use_frameworks!
+
+     # Pods for CustomerAppSample
+     pod 'HumaAppKit'
+     pod 'HumaHeaderWidget'
+     pod 'HumaVitalWidget'
+   end
+   ```
+
+4.	Install the pod:
+
+   ```sh
+   pod install
+   ```
+
+5.	Open the generated .xcworkspace file in Xcode:
+
+   ```sh
+   open CustomerAppSample.xcworkspace
+   ```
+
+## Step 2: Add the HumaEnvironment.plist File
+
+1.	In Xcode, right-click on the CustomerAppSample project in the Project Navigator.
+2.	Select New File....
+3.	Choose Property List and name it HumaEnvironment.plist.
+4.	Add the following content to the HumaEnvironment.plist file:
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+        <key>url</key>
+        <string>https://hp-deployment-nsbx-1107.sbx.huma.com/</string>
+        <key>bucket</key>
+        <string>ccp-hsp-nsbx-1107-bucket</string>
+        <key>country</key>
+        <string>gb</string>
+    </dict>
+    </plist>
+    ```
+
+## Step 3: Initialize the SDK
+
+1.	Open AppDelegate.swift in your project.
+2.	Import your SDK at the top of the file:
+    ```swift
+    import UIKit
+    import HumaAppKit
+    import HumaAuth
+    ```
+3.	Add the SDK initialization method:
+    ```swift
+    func initializeHumaSDK() {
+        HumaApp.initialize() { app in
+            app.configureAuth {
+                $0.initialAuthDataProvider = { Networking.shared.sdkAuthData?.authData }
+            }
+        }
+    }
+    ```
+4. Add the log out handler:
+    ```swift
+        coordinator.onLogOut = { HumaApp.endUserSession() }
+    ```
+4.	Call this initialization method in the application(_:didFinishLaunchingWithOptions:) method:
+
+    ```swift
+    @UIApplicationMain
+    class AppDelegate: UIResponder, UIApplicationDelegate {
+
+        var window: UIWindow?
+
+        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            // Override point for customization after application launch.
+
+            // Initialize YourSDKName
+            initializeHumaSDK()
+
+            return true
+        }
+
+        // MARK: UISceneSession Lifecycle
+
+        func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+            return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        }
+
+        func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+        }
+    }
+    ```
+
+## Step 4: Integrate SDK Widget-Based Screens
+
+<Tabs>
+<TabItem value="push" label="Push" default>
+1. Import the SDK:
+
+```swift
+import HumaAppKit
+```
+
+2. Declare a token property in your view controller class to store the returned reference.
+
+```swift
+var token: Any?
+```
+
+3. Add the method to push SDK screen:
+
+```swift
+token = HumaApp.pushWidgetScreen(withID: "ScreenID", into: navigationController!)
+```
+</TabItem>
+<TabItem value="present" label="Present" default>
+1. Import the SDK:
+
+```swift
+import HumaAppKit
+```
+
+2. Declare a token property in your view controller class to store the returned reference.
+
+```swift
+var token: Any?
+```
+
+3. Add the method to present SDK screen:
+
+```swift
+token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self)
+```
+
+4. You can also configure the presentation style:
+
+```swift
+token = HumaApp.presentWidgetScreen(withID: "ScreenID", from: self, config: .init(modalPresentationStyle: .fullScreen, showsCloseButton: true))
+```
+</TabItem>
+<TabItem value="tabbar" label="Tab Bar" default>
+
+1. Open your main view controller that contains the Tab Bar Controller setup.
+2. Import your SDK:
+
+```swift
+import HumaAppKit
+```
+
+3. Add the method to insert SDK screens:
+
+```swift
+class MainTabBarController: UITabBarController {
+    var token: Any?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        insertSDKScreens()
+    }
+
+    func insertSDKScreens() {
+        token = HumaApp.insertWidgetTabs(into: self)
+    }
+}
+```
+    
+</TabItem>
+</Tabs>
+
+
+## Step 5: Build and Run the App
+
+1.	Select your target device or simulator in Xcode.
+2.	Click the “Run” button or press Cmd + R.
+
+Your CustomerAppSample should now include new widget-based screens from Huma SDK.
+
+## Conclusion
+
+You have successfully integrated widget-based screens from Huma SDK into an existing tab-based iOS application. For further customization and usage of the SDK, refer to the SDK’s official documentation.
