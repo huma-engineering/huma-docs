@@ -1,0 +1,165 @@
+---
+id: integrating-fitness-trackers
+title: Integrating fitness trackers for automatic readings
+---
+
+# Integrating devices for automatic readings
+
+This documentation introduces the new capabilities of the SDK for integrating custom Fitness trackers for automatic readings into the Huma App.
+
+> 💡 **Info**: The API for custom fitness trackers currently supports the following data types:
+> - **Steps**
+> - **Sleep**
+> - **Heart Rate**
+> - **Oxygen Saturation**
+
+## ✨ Overview
+
+<details>
+  <summary>▶ Click to view the video</summary>
+
+  <video controls width="30%">
+    <source src="/videos/ios_device_as_a_plugin_2.mov" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+</details>
+
+The API provides seamless integration of custom fitness trackers into your app, enabling automatic data readings for supported health metrics. Fitness trackers can provide hourly or daily data, depending on the tracker type and metric.
+
+> **Note**: The SDK handles automatic readings by periodically fetching data from connected trackers. Ensure that your tracker implementations adhere to the protocols to support this functionality.
+
+### Key Features
+- **Automatic Data Fetching**: The SDK fetches data periodically based on tracker availability.
+- **Multiple Data Types**: Supports data for Steps, Sleep, Heart Rate, and Oxygen Saturation.
+- **Grouped Results**: Provides grouped results for hourly data, combining raw and processed information.
+
+---
+
+## 🛠️ Implementation Guide
+
+### 1. Define an External Tracker Provider
+
+Create a class that conforms to the `AnyExternalTrackerProvider` protocol. This is the entry point for providing access to your custom trackers.
+
+```swift
+/// A protocol defining external tracker providers, offering optional access to external trackers
+/// for oxygen saturation, heart rate, steps, and sleep.
+public protocol AnyExternalTrackerProvider {
+    /// A tracker for oxygen saturation, if available.
+    var oxygenSaturationTracker: AnyExternalOxygenSaturationTracker? { get }
+    /// A tracker for heart rate, if available.
+    var heartRateTracker: AnyExternalHeartRateTracker? { get }
+    /// A tracker for steps, if available.
+    var stepsTracker: AnyExternalStepsTracker? { get }
+    /// A tracker for sleep, if available.
+    var sleepTracker: AnyExternalSleepTracker? { get }
+}
+
+// Example Implementation
+class MyTrackerProvider: AnyExternalTrackerProvider {
+    var oxygenSaturationTracker: AnyExternalOxygenSaturationTracker? {
+        MyOxygenSaturationTracker()
+    }
+    var heartRateTracker: AnyExternalHeartRateTracker? {
+        MyHeartRateTracker()
+    }
+    var stepsTracker: AnyExternalStepsTracker? {
+        MyStepsTracker()
+    }
+    var sleepTracker: AnyExternalSleepTracker? {
+        MySleepTracker()
+    }
+}
+```
+
+### 2. Implement Individual Trackers
+
+For each type of tracker, create a class that conforms to the respective protocol (`AnyExternalStepsTracker`, `AnyExternalSleepTracker`, etc.).
+
+**Example: Steps Tracker**
+
+```swift
+class MyStepsTracker: AnyExternalStepsTracker {
+    let displayName = "Custom Steps Tracker"
+    var isConnected: Bool = false
+
+    func connect(with context: ExternalTrackers.PairingContext) async {
+        // Logic for connecting the tracker
+    }
+
+    func disconnect(with context: ExternalTrackers.PairingContext) async {
+        // Logic for disconnecting the tracker
+    }
+
+    func fetchHourlyReadings(for hourRange: DateInterval) async throws -> HourResult {
+        // Fetch hourly steps data and return a grouped result
+    }
+}
+```
+
+**Example: Sleep Tracker**
+
+```swift
+class MySleepTracker: AnyExternalSleepTracker {
+    let displayName = "Custom Sleep Tracker"
+    var isConnected: Bool = false
+
+    func connect(with context: ExternalTrackers.PairingContext) async {
+        // Logic for connecting the tracker
+    }
+
+    func disconnect(with context: ExternalTrackers.PairingContext) async {
+        // Logic for disconnecting the tracker
+    }
+
+    func fetchReadings(for dateRange: DateInterval) async throws -> [ModuleData.Sleep] {
+        // Fetch sleep data for the specified date range
+    }
+}
+```
+
+### 3. Pairing and Disconnecting Devices
+
+The `connect(with:)` and `disconnect(with:)` methods are automatically called by the SDK when pairing or disconnecting trackers. Implement these methods to handle device-specific pairing logic.
+
+### 4. Fetching Data Automatically
+
+The SDK automatically calls the `fetchHourlyReadings(for:)` or `fetchReadings(for:)` methods to retrieve data from the connected trackers. Ensure your implementation efficiently handles these calls and returns accurate data.
+
+
+### 5. Register the Tracker Provider
+
+Once you have implemented your custom tracker provider, register it in your AppDelegate during the application initialization:
+
+```swift
+import HumaAppKit
+import HumaHealthKit
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        HumaApp.initialize { app in
+            app.configureHealthApps {
+                $0.setAdditionalSources(additionalSources)
+            }
+        }
+
+        return true
+    }
+
+    private func makeAdditionalSources() -> [AnyPassiveDataSource] {
+        let manager = ExternalTrackerManager.shared
+        manager.registerProvider(BloodeasureTrackerPlugin())
+        return manager.makePassiveDataSources()
+    }
+}
+```
+
+### 📦 Dependencies
+
+```swift
+import HumaAppKit
+import HumaHealthKit
+```
