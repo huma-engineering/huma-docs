@@ -1,0 +1,278 @@
+---
+id: devices
+title: Devices
+sidebar_label: Devices
+sidebar_position: 3
+---
+
+The Device Integration API enables you to add new device types to the Huma Craft SDK, making it
+easy to support devices not natively handled by the Huma platform.
+
+### Device integration interface and it's extension
+
+The base interface for device integration is `DeviceIntegration`. It describes a device, it's
+connection flow, and the meta data like device type, manufacturer, etc. Additionally, it defines
+data types that are supported by the device. The Data types are defined in SDK and used by 1st
+party modules. If you have a custom module that needs to support a new device, you can define a
+new data type in the module and use it in the device integration.
+
+The `DeviceIntegration` interface has 3 extension interfaces:
+
+- `DeviceIntegrationWithOptions` - allows to pass additional options to the device integration.
+For example, you can pass a custom configuration to the device integration. Will be shown in the
+Device Settings screen.
+- `DeviceIntegrationWithDataCollectionFlow` - allows to add a data collection flow to the device
+integration. For example, you can have a screen where you connect to your device, initiate a
+measurement session, and submit results.
+- `DeviceIntegrationWithBackgroundSync` - allows to add a background sync to the device integration.
+For example, you can sync data from the device when the refresh event will be triggered by system
+or a user. As an example of this event is a user's manual pull-to-refresh action.
+
+It is recommended to use one of the extension interfaces to implement the device integration.
+
+---
+
+### Device integration implementation
+
+To create a new device, you need to implement the `DeviceIntegration` interface and it's extension
+
+```kotlin
+class MyDevice : DeviceIntegration {
+
+    override val name: String = "Sample Device"
+    override val manufacturer: String = "Sample Manufacturer"
+    override val model: String = "Sample Model"
+    override val isDeviceConnected: Boolean =
+        true / false //return true if the device is connected, it will be used to show the connected state in the UI
+    override val canConnectToDevice: Boolean =
+        true / false //return true if the device can be connected, it will be used to show the connect button in the UI
+    override val supportedModuleDataTypes: List<KClass<out ModuleDataType<*>>> =
+        listOf(MyDataType::class)
+    override val lastSyncDateTime: Long? =
+        null //return the last sync date time, it will be used to show the last sync date time in the UI
+
+    override suspend fun onConnectToDevice(context: Context): Intent {
+        return Intent(context, MyConnectActivity::class.java)
+    }
+
+    override suspend fun onDisconnectFromDevice(context: Context): Intent? {
+        //disconnect from the device without UI
+        disconnectFromDevice()
+        return null
+        //disconnect from the device with UI
+        return Intent(context, MyDisconnectActivity::class.java)
+    }
+}
+```
+
+---
+
+Next step is to implement the extension interface. For example,
+`DeviceIntegrationWithDataCollectionFlow`:
+
+```kotlin
+class MyDevice : DeviceIntegration, DeviceIntegrationWithDataCollectionFlow {
+    ... //DeviceIntegration implementation
+
+    override suspend fun onOpenDataCollectionFlow(
+        context: Context,
+        range: Range?, //optional range for the data collection flow, can be ignored if not needed
+        module: Module?, //if flow opened from the module, it will be passed here, otherwise it will be null
+    ): Intent {
+        return Intent(context, MyDataCollectionActivity::class.java).apply {
+            putExtra("range", range)
+            putExtra("module", module)
+        }
+    }
+}
+```
+
+By implementing this interface, you will see "Sync" button in the device settings screen and in
+Module Details screen of the module that supports this data type.
+
+---
+
+Let's implement the `DeviceIntegrationWithBackgroundSync` interface:
+
+```kotlin
+class MyDevice : DeviceIntegration,
+    DeviceIntegrationWithDataCollectionFlow,
+    DeviceIntegrationWithBackgroundSync {
+    ... //DeviceIntegration and DeviceIntegrationWithDataCollectionFlow implementation
+
+    override suspend fun onRefreshData(
+        module: Module,
+        range: Range?,
+        onDataRefreshed: (ModuleDataType<*>) -> Unit,
+    ) {
+        //refresh data from the device
+        onDataRefreshed(MyDataType(/*data*/))
+    }
+}
+```
+
+By implementing this interface, you will get a callback when the refresh event will be triggered by
+system or a user. If there is a new data available, you can call `onDataRefreshed` with the new data.
+Otherwise, you can ignore the call.
+
+---
+
+Finally, let's implement the `DeviceIntegrationWithOptions` interface:
+
+```kotlin
+class MyDevice : DeviceIntegration,
+    DeviceIntegrationWithDataCollectionFlow,
+    DeviceIntegrationWithBackgroundSync,
+    DeviceIntegrationWithOptions {
+    ... //DeviceIntegration, DeviceIntegrationWithDataCollectionFlow and DeviceIntegrationWithBackgroundSync implementation
+
+    override val options: List<Pair<String, suspend (Context) -> Intent>> = listOf(
+        "Option 1" to { context -> Intent(context, MyOption1Activity::class.java) },
+        "Option 2" to { context -> Intent(context, MyOption2Activity::class.java) },
+    )
+}
+```
+
+By implementing this interface, you will see list of provided options as buttons in the device
+settings screen alongside with "Remove" button.
+
+---
+
+### Device integration registration
+
+When you have implemented the device integration, you need to register it in the Huma Craft SDK.
+To do this, you need to create a `DeviceIntegrationProvider` and register it in the SDK.
+
+```kotlin
+class MyDeviceIntegrationProvider : DeviceIntegrationProvider {
+
+    override fun getDeviceIntegrations(): List<DeviceIntegration> {
+        return listOf(MyDevice()) //return list of device integrations, if your plugin has multiple devices, return all of them here or separate them into different providers
+    }
+}
+```
+
+Next, you need to register the provider in the SDK:
+
+```kotlin
+context.installHumaCraftSdk(
+    splashActivity = null,
+    widgetProviders = null,
+    deviceProviders = listOf(
+        MyDeviceIntegrationProvider(),
+        ... //register other providers if needed
+    )
+)
+```
+
+After that, you will see your device in the device list in the app in device settings screen and
+supported modules.
+
+---
+
+### How connect device and module
+
+The device integration API allows to integrate with existing and new data types of Huma Craft SDK.
+The data type is an abstract entity that represents a specific type of data that can be collected
+from a device and submitted to a module. Huma Craft SDK defines several data types that are used by
+1st party modules. Developers can define their own data types in their custom modules.
+
+#### How to use predefined data types
+
+```kotlin
+class MyDevice : DeviceIntegration {
+
+    override val supportedModuleDataTypes: List<KClass<out ModuleDataType<*>>> =
+        listOf(BloodPressureModuleDataType::class)
+
+}
+```
+
+When you declare one or more predefined module data types from `kotlin`
+`com.huma.sdk.module_kit.ability.generic` package, no extra steps required.
+
+#### How to add new data type and connect device and module
+
+There might be a case where you have your custom module and you want to add support for your device.
+
+1. Create custom DataType
+
+    ```kotlin
+    data class MyDataType(
+        override val data: MyData,
+        override val timestamp: Long,
+        override val source: String?,
+    ) : ModuleDataType<MyModuleDataType.MyData> {
+
+        data class MyData(
+            val field1: Int,
+            val field2: Int,
+        )
+    }
+    ```
+
+2. Add your `MyDataType` to your device
+
+    ```kotlin
+    class MyDevice : DeviceIntegration {
+
+        override val supportedModuleDataTypes: List<KClass<out ModuleDataType<*>>> =
+            listOf(MyDataType::class)
+
+    }
+    ```
+
+3. Add your `MyDataType` to your module
+
+    ```kotlin
+    class MyModule : BaseModule(),
+        /* any other extra module dependencies */,
+        ModuleWithDeviceIntegration, //define that your module supports device integration
+        ModuleWithDataTypeInput, //define that your module supports data type input
+        ModuleWithResult<MyResult> //(optional) define the result data api.
+    // It is used out of the scope for this feature,
+    //but device integration relays on results api to get the required
+    //range for background and foreground data refresh {
+    {
+        override val dataTypes: List<KClass<out ModuleDataType<*>>>
+            get() = listOf(MyDataType::class)
+
+        override val dataTypeToModuleResultConverters: List<(ModuleDataType<*>) -> ModuleInputResult?>
+            get() = listOf(MyDataTypeToValueConverter())
+
+        private val deviceSyncDelegate = DeviceSyncDelegate.get(this)
+
+        override val extraButtons: List<ExtraButton>
+            get() = listOfNotNull(
+                deviceSyncDelegate.syncButton(resources)
+                /* Your other buttons, if there is any */
+            )
+    }
+    ```
+
+    Where `MyDataTypeToValueConverter` is a converter that converts generic data type to a module
+    specific input.
+
+---
+
+### How to submit device data
+
+To submit device data your device flow should call a `submitData` from `HumaModuleKitManager`.
+
+```kotlin
+HumaModuleKitManager.getInstance().submitData(
+    data = MyDataType(),
+    //(optional) This parameter is used to define app behaviour during submission flow
+    params = ModuleInputSubmitParams(...),
+    //(optional) This parameter is used to submit data to a specific module rather then all the modules that supports passed data type.
+    moduleConfigId = "moduleConfigId",
+    //(optional) This parameter is used to submit data to a specific module rather then all the modules that supports passed data type.
+    moduleId = "moduleId",
+    //(optional) This parameter is used to submit data to a specific module rather then all the modules that supports passed data type.
+    moduleClass = MyModule::class,
+)
+```
+
+All optional parameter can be passed or skipped. Each parameter except `params` is used to filter
+out the modules where data will be submitted. If all fields are null, SDK will find and submit the
+`dataType` to all modules that are listed as supported for provided data type.
