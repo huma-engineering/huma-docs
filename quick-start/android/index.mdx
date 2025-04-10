@@ -126,3 +126,60 @@ After this steps you can start using Huma SDK in your project. To get more infor
 configuration options please refer to the [Getting Started](../sdk/%2FGetting%20Started/Android.mdx)
 section.
 
+8. To create a new device integration module, you need to create a new `DeviceIntegration`
+
+```kotlin
+class MyDevice : DeviceIntegration {
+
+    override val name: String = "Sample Device"
+    override val manufacturer: String = "Sample Manufacturer"
+    override val model: String = "Sample Model"
+    override val isDeviceConnected: Boolean =
+        true / false //return true if the device is connected, it will be used to show the connected state in the UI
+    override val canConnectToDevice: Boolean =
+        true / false //return true if the device can be connected, it will be used to show the connect button in the UI 
+    override val supportedModuleDataTypes: List<KClass<out ModuleDataType<*>>> =
+        listOf(MyDataType::class)
+    override val lastSyncDateTime: Long? =
+        null //return the last sync date time, it will be used to show the last sync date time in the UI
+
+    override suspend fun onConnectToDevice(context: Context): Intent {
+        return Intent(context, MyConnectActivity::class.java)
+    }
+
+    override suspend fun onDisconnectFromDevice(context: Context): Intent? {
+        //disconnect from the device without UI
+        disconnectFromDevice()
+        return null
+        //disconnect from the device with UI
+        return Intent(context, MyDisconnectActivity::class.java)
+    }
+}
+```
+
+Then create provider for this device integration
+
+```kotlin
+class MyDeviceIntegrationProvider : DeviceIntegrationProvider {
+
+    override fun getDeviceIntegrations(): List<DeviceIntegration> {
+        return listOf(MyDevice()) //return list of device integrations, if your plugin has multiple devices, return all of them here or separate them into different providers
+    }
+}
+```
+
+Then register this class in SDK initializer
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        deviceIntegration {
+            registerDeviceProvider(
+                MyDeviceIntegrationProvider(),
+                ... //register other providers if needed
+            )
+        }
+    }
+}
+```
+For more information, please refer to the [Device Integration](../../sdk/How%20To/Devices/How%20to%20create%20a%20new%20device/Android#how-to-create-a-new-device) section.
