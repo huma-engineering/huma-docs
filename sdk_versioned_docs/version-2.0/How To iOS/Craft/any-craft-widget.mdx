@@ -1,0 +1,143 @@
+---
+id: any-craft-widget
+title: AnyCraftWidget Protocol
+sidebar_label: Widget
+---
+
+# AnyCraftWidget Protocol
+
+The `AnyCraftWidget` protocol defines how to build **widget add-ons** in the Craft SDK. Each widget can present either a **standard display mode** (title, description, and tap action) or a fully **custom `UIView`**.
+
+Widgets are meant to be modular and reusable, and are initially tested using the `CraftApp` sample environment before being integrated into the production **Huma app**.
+
+---
+
+## Protocol Definition
+
+```swift
+public protocol AnyCraftWidget {
+    init(context: PresentationContext)
+    var displayMode: WidgetDisplayMode { get }
+}
+```
+
+### `init(context:)`
+The widget is initialized with a `PresentationContext`, which provides presentation utilities like navigation.
+
+### `displayMode`
+Defines how the widget should be rendered. You can choose between:
+- `.standard(StandardConfig)`
+- `.custom(UIView)`
+
+---
+
+## PresentationContext
+
+```swift
+public struct PresentationContext {
+    public let navigationController: UINavigationController
+}
+```
+
+This context provides a `UINavigationController` to allow widgets to **push** or **present** new view controllers.
+
+---
+
+## WidgetDisplayMode
+
+```swift
+enum WidgetDisplayMode {
+    case standard(StandardConfig)
+    case custom(UIView)
+
+    struct StandardConfig {
+        let title: String
+        let description: String
+        let onTap: () -> Void
+    }
+}
+```
+
+---
+
+## Example: Standard Mode
+
+```swift
+import UIKit
+
+final class MyWidget: AnyCraftWidget {
+    private let context: PresentationContext
+
+    required init(context: PresentationContext) {
+        self.context = context
+    }
+
+    var displayMode: WidgetDisplayMode {
+        .standard(
+            WidgetDisplayMode.StandardConfig(
+                title: "My Widget",
+                description: "Tap to perform a sample action.",
+                onTap: {
+                    print("MyWidget tapped!")
+                    // Use `context.navigationController` to push a screen
+                }
+            )
+        )
+    }
+}
+```
+
+---
+
+## Example: Custom View Mode
+
+```swift
+import UIKit
+
+final class MyWidget: AnyCraftWidget {
+    private let context: PresentationContext
+
+    required init(context: PresentationContext) {
+        self.context = context
+    }
+
+    var displayMode: WidgetDisplayMode {
+        let view = UIView()
+        view.backgroundColor = .systemBlue
+
+        let label = UILabel()
+        label.text = "Custom Widget View"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+
+        return .custom(view)
+    }
+}
+```
+
+---
+
+## 🚀 Testing Widgets in the Sample App
+
+The `CraftApp` is a **testbed app** used for developing and testing widget add-ons in isolation before integrating them into the production **Huma app**.
+
+```swift
+CraftApp.initialize { config in
+    config.registerWidget(MyWidget.self, for: "com.huma.my_widget")
+}
+```
+
+- Register widgets by their unique identifier.
+- Later, all widgets will be registered into the main Huma app.
+
+---
+
+## 📚 See Also
+
+- [`Sample App Usage`](./craft-sample-app)
