@@ -1,0 +1,114 @@
+---
+sidebar_position: 1
+title: How to work with Actions framework
+---
+
+## How to configure the Actions framework
+
+To configure Actions framework, you need to call `actionKit` and `action` in `sdk` and `appkit`
+blocks in the installHumaSdk block.
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        actionKit {
+            // List of KeyActionProvider, empty by default
+            providers = listOf<KeyActionProvider>()
+            // DateTimeRange, by default range is -3 months to +14 days from today
+            datetimeRange = DateTimeRange()
+            // KeyActionViewOverride, null by default
+            keyActionViewOverride = null 
+        }
+    }
+    appkit {
+        action {
+            // List of ImportKeyActionProcessor, empty by default
+            processors = listOf<ImportKeyActionProcessor>() 
+        }
+    }
+}
+```
+
+All those fields are optional. If you don't provide any of them, the default values will be used.
+
+> **Note:** `datetimeRange` is used to specify the range of the key actions that should be fetched.
+
+> **Note:** `keyActionViewOverride` is used to override the default view of the key action.
+
+### How to override the default view of the key action
+
+To override the default view of the key action, you need to create a class that implements the
+KeyActionViewOverride interface.
+
+```kotlin
+class CustomKeyActionViewOverride : KeyActionViewOverride {
+    @Composable
+    override fun override(
+        modifier: Modifier,
+        keyAction: KeyAction,
+        config: KeyActionCardConfig
+    ): Boolean {
+        // Draw a composable view for the key action
+        return true // Return true if the view was drawn, false otherwise. If false, the default view specified in the KeyAction will be used.
+    }
+}
+```
+
+## How to work with `HumaActionsKitManager`
+
+### How to fetch key actions
+
+To fetch key actions, there is a few methods in the `HumaActionsKitManager` class.
+
+```kotlin
+val humaActionsKitManager = HumaActionsKitManager.getInstance()
+
+val keyActions = humaActionsKitManager.keyActions // List of key actions
+val toDoKeyActions = humaActionsKitManager.toDoKeyActions // List of to-do key actions
+val comingUpKeyActions = humaActionsKitManager.comingUpKeyActions // List of coming up key actions
+val previousKeyActions = humaActionsKitManager.previousKeyActions // List of previous key actions
+val localKeyActions = humaActionsKitManager.localKeyActions // List of local key actions
+val keyActionStates = humaActionsKitManager.keyActionStates // StateFlow<List> of key actions
+```
+
+### How to set new refresh time range
+
+To set a new refresh time range, you need to call the `setTimeRange` method.
+
+```kotlin
+HumaActionsKitManager.getInstance().setTimeRange(
+    Pair(
+        Instant.now().minus(1, ChronoUnit.DAYS),
+        Instant.now().plus(1, ChronoUnit.DAYS)
+    )
+)
+```
+
+### How to refresh key actions
+
+To refresh key actions, you need to call the `refreshKeyActions` or `refreshKeyActionsSync` methods.
+
+```kotlin
+HumaActionsKitManager.getInstance().refreshKeyActions() // Asynchronous
+// or
+HumaActionsKitManager.getInstance().refreshKeyActionsSync() // Synchronous (suspend function)
+```
+
+### How to mark key action as read
+
+To mark key action as read, you need to call the `markKeyActionRead` method.
+
+```kotlin
+
+// mark specific key action as read
+HumaActionsKitManager.getInstance().markKeyActionRead(keyAction)
+// or
+// mark list of key actions as read by key action id and due date
+HumaActionsKitManager.getInstance().markKeyActionRead(keyActionId: String, dueDate: Instant?)
+// or
+// mark key actions by predicate, once is used to mark only first key action
+HumaActionsKitManager.getInstance().markKeyActionReadBy(once: Boolean) { keyaction -> true / false } 
+```
+> **Note:** `HumaActionsManager` has similar methods, that work the same way.
+
+

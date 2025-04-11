@@ -1,0 +1,150 @@
+---
+sidebar_position: 3
+title: How to add a new module
+---
+
+To create a new module it is required to create at least two classes. The module itself and it's
+provider.
+
+### Define Module class
+
+To create a module class use [Module](../../../References/Module/Android/Module) interface to
+describe a
+module.
+
+There is a few sub interfaces that used across first party modules and adds to a ```Module```
+interface.
+
+* ```ModuleWithDetails``` adds a details action to open a screen with Module details. Default
+  behaviour is provided thru a delegate and can be called
+  with ```private val detailsDelegate by defaultDetailsDelegate(moduleConfigId)```
+* ```ModuleWithInput``` adds an input action to open input screen. Default
+  behaviour is not provided in ModuleKit library.
+
+> **Note:** It is recommended to use abstract ```BaseModule``` class instead on ```Module``` to have
+> the generic functionality in your module without extra code.
+
+There are few others that are not used in specific use cases and can be checked
+in [References](../../../References/Module/Android/Module)
+
+### Create provider
+
+Each module need to be created via provider. One provider can return multiple modules, so it you
+have several custom modules, you can use one ```ModuleProvider```.
+
+Let's create ```ModuleProvider``` provider:
+
+```kotlin
+class YourModuleProvider : ModuleProvider {
+
+    override suspend fun provideModules(): List<Module> {
+        return listOf(YourModule())
+    }
+
+    override suspend fun refreshData(): Boolean {
+        //do module data refresh
+        return true // or false if you failed to refresh the data
+    }
+}
+```
+
+Then register it ether via initializer or manager.
+
+> **Note:** Recommended way
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        moduleKit {
+            installModule(YourModuleProvider())
+        }
+    }
+}
+```
+
+Or
+
+```kotlin
+HumaModuleKitMananger.getInstance().registerModuleProvider(YourModuleProvider())
+```
+
+### How to get it's instance back
+
+To obtain your module instance you can access ```modules``` list directly to find it, or
+use ```findModule``` function to search it based on predefined parameters.
+
+> **Note:** Do not create module instances outside of your module provider, as there is many SDK
+> features that can trigger module recreation. Also do not put heavy object inside module instance
+> as it's kept in memory for easy and quick access.
+
+## How to create Huma specific module (AppKit)
+
+As Modules library is build on to of ModuleKit, all interfaces and interactions are practically the
+same. Modules library adds a layer between Huma Platform APIs and SDK. Also it provides a set of
+additional delegates for Huma Specific user flows.
+
+### Processor instead of Provider
+
+Modules library has it's own way of creating modules. Instead of provider, it uses processor as
+modules are created based on deployment configuration. In the processor you process the deployment
+and return the module instance.
+
+### How to create a module processor
+
+To create a module processor you need to implement an abstract ```ImportModuleProcessor``` class.
+
+```kotlin
+class YourModuleProcessor : ImportModuleProcessor<YourModule>() {
+
+    override fun processConfig(moduleConfig: List<ModuleConfig>): List<Pair<ModuleConfigId, Module>> {
+        return moduleConfig
+            .filter {
+                it.moduleId == YourModule.MODULE_ID
+            }.mapNotNull { config ->
+                val moduleId = config.id ?: return@mapNotNull null
+                registerModuleConfigId(moduleId) // Make sure to call this function to register moduleConfigId
+                moduleId to YourModule(...)
+            }
+
+    }
+}
+```
+
+Then register it via manager.
+
+```kotlin
+HumaModulesManager.getInstance().registerImportProcessor(YourModuleProcessor())
+```
+
+### How to add your module via initializer
+
+To add your module via initializer you can use ```installModules``` function.
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        modules {
+            installModules(YourModuleInitializer())
+        }
+    }
+}
+```
+
+Where ```YourModuleInitializer``` is a class that implements ```HumaModuleLibrary``` interface.
+
+```kotlin
+class YourModuleInitializer : HumaModuleLibrary {
+
+    override fun initialize(context: Context) {
+        // do your module initialization here, like DI setup, etc.
+    }
+
+    override fun provideModuleProcessor(): List<ImportModuleProcessor> {
+        return listOf(ImportModuleProcessor())
+    }
+}
+```
+
+After that you can access your module
+via ```HumaModulesManager.getInstance().findModule<YourModule>()``` if it's present in the
+deployment.
