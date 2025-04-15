@@ -10,97 +10,152 @@ import TabItem from '@theme/TabItem';
 
 # Models API
 
-The `Models API` in the `CraftAPI` module allows developers to **fetch** and **submit** models from/to the HumaCraft backend.
+The `Models API` in the `CraftAPI` module enables developers to **fetch** and **submit** data models to the HumaCraft backend, using detailed metadata for versioning and identification.
 
 ## Overview
 
-This API provides two core functions:
+This API provides two primary operations:
 
-- `getModel`: Fetch a model from the backend.
-- `submitModel`: Submit an `Encodable` model to the backend.
+- [`getModel`](#getmodelmetadata): Fetch a model from the backend using `GetMetadata`.
+- [`submitModel`](#submitmodelmodelmetadata): Submit an `Encodable` model using `PostMetadata`.
+
+Both methods are fully asynchronous using Swift Concurrency (`async/await`) and are designed for flexibility and extensibility across different model versions and add-on deployments.
 
 ---
 
-## `getModel(named:version:)`
+## `getModel(metadata:)`
 
-Fetches a model of a specified type from the backend.
+Fetches a model of the specified type from the backend using metadata.
 
 ### Declaration
 
 ```swift
-public static func getModel<T: Decodable>(named modelName: String, version: Int = 1) async throws -> T
+public static func getModel<T: Decodable>(metadata: GetMetadata) async throws -> T
 ```
 
 ### Parameters
 
-| Name       | Type     | Description                                 |
-|------------|----------|---------------------------------------------|
-| `modelName`| `String` | The name of the model to fetch.             |
-| `version`  | `Int`    | The version of the model (defaults to `1`). |
+| Name       | Type         | Description                                                       |
+|------------|--------------|-------------------------------------------------------------------|
+| `metadata` | `GetMetadata`| Contains the model name, version, add-on ID, and add-on version. |
 
 ### Returns
 
-A decoded instance of type `T`.
+A decoded instance of the model conforming to `Decodable`.
 
 ### Throws
 
-An error if the request fails (e.g., network issues, decoding errors).
+An error if the request fails (e.g., network issue, decoding error, or empty result).
 
 ### Example
 
 ```swift
-let userModel: UserModel = try await CraftAPI.getModel(named: "user")
+let metadata = CraftAPI.GetMetadata(
+    modelName: "user",
+    addonID: "com.example.myaddon",
+    addonVersion: "1.0.0"
+)
+
+let userModel: UserModel = try await CraftAPI.getModel(metadata: metadata)
 ```
 
 ---
 
-## `submitModel(model:named:version:)`
+## `submitModel(model:metadata:)`
 
-Submits an encoded model to the backend.
+Submits an `Encodable` model to the backend using metadata.
 
 ### Declaration
 
 ```swift
-public static func submitModel<T: Encodable>(model: T, named modelName: String, version: Int = 1) async throws
+public static func submitModel<T: Encodable>(model: T, metadata: PostMetadata) async throws
 ```
 
 ### Parameters
 
-| Name        | Type       | Description                                           |
-|-------------|------------|-------------------------------------------------------|
-| `model`     | `T`        | The model instance to be submitted.                  |
-| `modelName` | `String`   | The name under which to store the model.             |
-| `version`   | `Int`      | The version to submit (defaults to `1`).             |
+| Name        | Type           | Description                                                      |
+|-------------|----------------|------------------------------------------------------------------|
+| `model`     | `T`            | The model instance to be submitted. Must conform to `Encodable`. |
+| `metadata`  | `PostMetadata` | Contains model name, version, deployment ID, add-on ID, and version. |
 
 ### Throws
 
-An error if the request fails (e.g., serialization or server issues).
+An error if the submission fails (e.g., serialization or server error).
 
 ### Example
 
 ```swift
 let newUser = UserModel(id: "123", name: "Alice")
-try await CraftAPI.submitModel(model: newUser, named: "user")
+let metadata = CraftAPI.PostMetadata(
+    modelName: "user",
+    deploymentID: "deployment-abc123",
+    addonID: "com.example.myaddon",
+    addonVersion: "1.0.0"
+)
+
+try await CraftAPI.submitModel(model: newUser, metadata: metadata)
+```
+
+---
+
+## Metadata Types
+
+### `GetMetadata`
+
+Used when fetching models from the backend.
+
+```swift
+/// Metadata required to fetch a model from the HumaCraft backend.
+public struct GetMetadata {
+    /// The name of the model to fetch.
+    let modelName: String
+    /// The version of the API to use. Defaults to 1.
+    let apiVersion: Int = 1
+    /// The unique identifier of the add-on.
+    let addonID: String
+    /// The version of the add-on.
+    let addonVersion: String
+}
+```
+
+### `PostMetadata`
+
+Used when submitting models to the backend.
+
+```swift
+/// Metadata required to submit a model to the HumaCraft backend.
+public struct PostMetadata {
+    /// The name of the model being submitted.
+    let modelName: String
+    /// The version of the API to use. Defaults to 1.
+    let apiVersion: Int = 1
+    /// The unique identifier of the deployment.
+    let deploymentID: String
+    /// The unique identifier of the add-on.
+    let addonID: String
+    /// The version of the add-on.
+    let addonVersion: String
+}
 ```
 
 ---
 
 ## Endpoint Structure
 
-Internally, the API constructs the following endpoints:
+The API builds the following endpoints dynamically using the provided metadata:
 
 - **GET** `/dj/craft/models/{modelName}/v{version}/`
 - **POST** `/dj/craft/models/{modelName}/v{version}/`
 
-> ℹ️ These endpoints are subject to change. Update the `Endpoint` implementation accordingly if the API path evolves.
+> ℹ️ Note: These paths may change. Ensure `Endpoint.getCraftModel` and `Endpoint.postCraftModel` are updated accordingly.
 
 ---
 
 ## Notes
 
-- Uses Swift Concurrency (`async/await`).
-- Model types must conform to `Encodable` or `Decodable` accordingly.
-- Designed for flexibility across versioned model schemas.
+- Utilizes Swift Concurrency for modern async code.
+- Requires model types to conform to `Encodable` or `Decodable`.
+- Metadata allows precise control over versioning, deployment targeting, and add-on identification.
 
 ## 📚 See Also
 
