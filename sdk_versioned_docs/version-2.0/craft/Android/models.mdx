@@ -1,0 +1,173 @@
+---
+id: models-api
+title: Models API
+sidebar_label: Models API
+sidebar_position: 1
+---
+
+The `Models API` in the `CraftAPI` enables developers to **fetch** and **submit** data models to the
+HumaCraft backend, using detailed metadata for versioning and identification.
+
+To get the `CraftAPI` instance, use the following method.
+
+```kotlin
+val craftAPI = CraftAPI.getInstance()
+```
+
+## Overview
+
+`CraftAPI` provides two core functions:
+
+- `getModel`: Fetch a model from the backend using `GetMetadata`
+- `submitModel`: Submits a model to the backend using `PostMetadata`
+
+---
+
+## `getModel()`
+
+Fetches a model of the specified type from the backend using metadata.
+
+### Function Signature
+
+```kotlin
+fun getModel(
+    getMetadata: GetMetadata,
+    onSuccess: (Any) -> Unit,
+    onFailure: (Throwable) -> Unit
+)
+```
+
+### Parameters
+
+| Name              | Type                  | Description                                                          |
+|-------------------|-----------------------|----------------------------------------------------------------------|
+| `getMetadata`     | `GetMetadata`         | Contains the modelName, addonId, addonVersion, apiVersion, and limit.|
+| `onSuccess`       | `(Any) -> Unit`       | Callback invoked on successful data retrieval.                       |
+| `onFailure`       | `(Throwable) -> Unit` | Callback invoked when an error occurs.                               |
+
+### Handling Callbacks in `getModel`
+
+#### `onSuccess` Callback
+
+The `onSuccess` callback provides an `Any` object, which represents the retrieved models.
+
+Since `Any` is a generic type, you need to convert it into a specific data class that matches the
+expected structure.
+
+You can refer to the provided sample app for an example of how to properly parse and convert this
+data.
+
+#### `onFailure` Callback
+
+The `onFailure` callback provides a `Throwable` object, which contains details about any errors that
+occur during the model retrieval process. You can use this throwable to log errors, display
+meaningful messages, or handle failures gracefully in your application.
+
+### Example
+```kotlin
+val getMetadata = GetMetadata(
+    modelName = MODEL_NAME,
+    addonId = ADDON_ID,
+    addonVersion = ADDON_VERSION,
+    apiVersion = API_VERSION,
+    limit = RECORDS_FETCH_LIMIT
+)
+craftAPI.getModel(
+    getMetadata = getMetadata,
+    onSuccess = { response ->
+        val getDataResponse = GetDataResponseConverter.from(response)
+        isDataAvailable = getDataResponse.isNotEmpty()
+    },
+    onFailure = {
+        isDataAvailable = false
+        Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
+    }
+)
+```
+
+---
+
+## `submitModel()`
+
+Submits a model to the HumaCraft backend using metadata.
+
+### Function Signature
+
+```kotlin
+fun submitModel(
+    dataRecord: Any,
+    postMetadata: PostMetadata,
+    onSuccess: (Any) -> Unit,
+    onFailure: (Throwable) -> Unit
+)
+```
+
+### Parameters
+
+| Name              | Type                  | Description                                               |
+|-------------------|-----------------------|-----------------------------------------------------------|
+| `dataRecord`      | `Any`                 | The data object to be submitted.                          |
+| `postMetadata`    | `PostMetadata`        | Contains modelName, addonId, addonVersion, and apiVersion.|
+| `onSuccess`       | `(Any) -> Unit`       | Callback invoked on successful submission.                |
+| `onFailure`       | `(Throwable) -> Unit` | Callback invoked when an error occurs.                    |
+
+### Handling Callbacks in `submitDataRecord`
+
+#### `onSuccess` Callback
+
+The `onSuccess` callback is triggered when the model is successfully submitted to the HumaCraft
+backend. It provides an `Any` object, which represents the success response returned by the server.
+
+Since the response type is generic (`Any`), you will need to create a converter to cast or parse this
+object into a specific success data class that matches your use case.
+
+You can refer to the provided sample app for an example of how to properly parse and convert this
+data.
+
+#### `onFailure` Callback
+
+The `onFailure` callback is invoked when the model submission fails. It provides a `Throwable` object
+containing detailed information about the error, such as network issues, invalid data, or server
+errors.
+
+You can use this throwable to log the error, show user feedback, or trigger retry logic in your app.
+
+### Example
+```kotlin
+val userModel = UserModel(id = 1, name = "Alice")
+val postMetadata = PostMetadata(
+    modelName = MODEL_NAME,
+    addonId = ADDON_ID,
+    addonVersion = ADDON_VERSION,
+    apiVersion = API_VERSION
+)
+CraftAPI.getInstance().submitModel(
+    dataRecord = userModel,
+    postMetadata = postMetadata,
+    onSuccess = {
+        val submissionResult = SubmissionResponseConverter.from(response)
+        isSubmissionSuccessful = submissionResult.success == true
+    },
+    onFailure = {
+        Toast.makeText(context, it.message, Toast.LENGTH_SHORT).show()
+    }
+)
+```
+
+---
+
+## Endpoint Structure
+
+Internally, the Craft Package constructs the following endpoints:
+```kotlin
+// GET
+"/dj/craft/models/${getMetadata.modelName}/v${getMetadata.apiVersion}/?addon_id=${getMetadata.addonId}&version=${getMetadata.addonVersion}&limit=${getMetadata.limit}"
+
+// POST
+"/dj/craft/models/${postMetadata.modelName}/v${postMetadata.apiVersion}/"
+```
+
+> ℹ️ These endpoints are subject to change.
+
+---
+
