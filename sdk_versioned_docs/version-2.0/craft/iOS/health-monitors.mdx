@@ -1,0 +1,148 @@
+---
+id: health-monitors
+title: Health Monitors
+sidebar_label: Health Monitors
+sidebar_position: 4
+---
+
+# Health Monitors
+
+Health monitors in the Craft SDK provide structured access to health metrics such as heart rate, oxygen saturation, sleep, and steps. Each monitor defines connection logic and data retrieval APIs.
+
+---
+
+## `AnyHealthMonitor`
+
+```swift
+public protocol AnyHealthMonitor {
+    var displayName: String { get }
+    var isConnected: Bool { get }
+
+    func connect(with context: PresentationContext) async
+    func disconnect(with context: PresentationContext) async
+}
+```
+
+Each monitor must expose:
+- `displayName`: for UI presentation
+- `isConnected`: for status
+- `connect` / `disconnect`: to manage connectivity
+
+---
+
+## Health Monitor Provider
+
+```swift
+public protocol AnyHealthMonitorProvider {
+    var heartRateMonitor: AnyHeartRateMonitor? { get }
+    var oxygenSaturationMonitor: AnyOxygenSaturationMonitor? { get }
+    var sleepMonitor: AnySleepMonitor? { get }
+    var stepsMonitor: AnyStepsMonitor? { get }
+}
+```
+
+You can bundle multiple monitors into a single provider object for registration.
+
+---
+
+## `AnyHeartRateMonitor`
+
+```swift
+public protocol AnyHeartRateMonitor: AnyHealthMonitor {
+    func fetchHourlyReadings(for hourRange: DateInterval) async throws -> GroupedResult<HeartRate>
+}
+```
+
+Returns heart rate readings grouped into hourly buckets.
+
+---
+
+## `AnyOxygenSaturationMonitor`
+
+```swift
+public protocol AnyOxygenSaturationMonitor: AnyHealthMonitor {
+    func fetchReadings(for dateRange: DateInterval) async throws -> [OxygenSaturation]
+}
+```
+
+Fetches raw SpO₂ readings over a date range.
+
+---
+
+## `AnySleepMonitor`
+
+```swift
+public protocol AnySleepMonitor: AnyHealthMonitor {
+    func fetchReadings(for dateRange: DateInterval) async throws -> [Sleep]
+}
+```
+
+Fetches detailed sleep data, including stages, durations, and source.
+
+---
+
+## `AnyStepsMonitor`
+
+```swift
+public protocol AnyStepsMonitor: AnyHealthMonitor {
+    func fetchHourlyReadings(for hourRange: DateInterval) async throws -> GroupedResult<Steps>
+}
+```
+
+Fetches hourly grouped step data.
+
+---
+
+## Readings & Grouping
+
+All monitor data is returned as structured types in `HealthMonitorReadings`.
+
+### GroupedResult
+
+```swift
+struct GroupedResult<Raw> {
+    let hourlyValue: HourlyValue
+    let rawData: [Raw]
+}
+```
+
+### HourlyValue
+
+```swift
+struct HourlyValue {
+    let startDateTime: Date
+    let minutes0to14: Double?
+    let minutes15to29: Double?
+    let minutes30to44: Double?
+    let minutes45to59: Double?
+}
+```
+
+---
+
+## Examples of Readings
+
+- **HeartRate**: `value` in bpm
+- **OxygenSaturation**: `value` in %
+- **Steps**: `value` as step count
+- **Sleep**: detailed durations for REM, deep, light, awake, and more
+
+---
+
+## 🚀 Using the Sample App
+
+To test your custom monitor provider in the sample app:
+
+```swift
+CraftApp.initialize { config in
+    config.registedHealthMonitorProvider(MyMonitorProvider())
+}
+```
+
+`MyMonitorProvider` must conform to `AnyHealthMonitorProvider` and can include one or more monitor implementations.
+
+---
+
+## 📚 See Also
+
+- [`Sample App Usage`](./craft-sample-app)

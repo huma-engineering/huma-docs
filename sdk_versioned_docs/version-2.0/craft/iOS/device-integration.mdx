@@ -1,0 +1,160 @@
+---
+id: device-integration
+title: Device Integration
+sidebar_label: Device Integration
+sidebar_position: 3
+---
+
+# Device Integration
+
+This guide explains how to integrate external health or sensor devices using the Craft SDK.
+
+---
+
+## `AnyDevice` Protocol
+
+The `AnyDevice` protocol defines how a device should behave, including pairing, unpairing, and syncing data.
+
+```swift
+public protocol AnyDevice {
+    associatedtype Reading: AnyDeviceReading
+
+    var id: String { get }
+    var displayName: String { get }
+    var model: String { get }
+    var isPaired: Bool { get }
+
+    func pair(with context: PresentationContext) async throws
+    func unpair(with context: PresentationContext) async throws
+    func sync(with context: DeviceSyncContext) async throws -> [Reading]
+}
+```
+
+### Key Responsibilities
+
+- **Pair/Unpair**: Handle secure connection setup or disconnection.
+- **Sync**: Fetch readings and return them using your custom `Reading` type.
+
+---
+
+## `DeviceSyncContext`
+
+Used during synchronization to specify the time range:
+
+```swift
+public struct DeviceSyncContext {
+    public let startDateTime: Date?
+}
+```
+
+---
+
+## `AnyDeviceReading` Protocol
+
+```swift
+public protocol AnyDeviceReading {
+    var startDateTime: Date { get }
+    var source: String? { get }
+}
+```
+
+Each reading includes a timestamp and an optional source label (e.g., device name or app ID).
+
+---
+
+## Built-in Readings
+
+The SDK provides common health readings under `DeviceReadings`:
+
+```swift
+DeviceReadings.Weight
+DeviceReadings.Temperature
+DeviceReadings.BloodGlucose
+DeviceReadings.BloodPressure
+```
+
+### Example: Blood Pressure
+
+```swift
+public struct BloodPressure: AnyDeviceReading {
+    var startDateTime: Date
+    var source: String?
+    var systolic: Double
+    var diastolic: Double
+}
+```
+
+---
+
+## `AnyDeviceGroup`
+
+Groups multiple devices from the same manufacturer or category:
+
+```swift
+public protocol AnyDeviceGroup {
+    var displayName: String { get }
+    var devices: [any AnyDevice] { get }
+}
+```
+
+## Example Device Implementation
+
+```swift
+final class MyThermometer: AnyDevice {
+    let id = "thermo_001"
+    let displayName = "My Thermometer"
+    let model = "THERMO-X"
+    var isPaired: Bool = false
+
+    func pair(with context: PresentationContext) async throws {
+        // UI logic or connection flow
+        isPaired = true
+    }
+
+    func unpair(with context: PresentationContext) async throws {
+        isPaired = false
+    }
+
+    func sync(with context: DeviceSyncContext) async throws -> [DeviceReadings.Temperature] {
+        return [
+            DeviceReadings.Temperature(
+                startDateTime: Date(),
+                source: "MyThermometer",
+                value: 36.8
+            )
+        ]
+    }
+}
+```
+
+### Example Device Group
+
+```swift
+struct WithingsGroup: AnyDeviceGroup {
+    let displayName = "Withings Devices"
+    let devices: [any AnyDevice] = [
+        MyScale(),
+        MyThermometer()
+    ]
+}
+```
+
+---
+
+## 🚀 Using the Sample App for Testing
+
+To test your custom devices in the sample app, register your `AnyDeviceGroup` during initialization:
+
+```swift
+CraftApp.initialize { config in
+    config.registerDeviceGroup(MyDeviceGroup())
+}
+```
+
+This will launch the test environment with your device group available for pairing and syncing.
+
+---
+
+## 📚 See Also
+
+- [`Sample App Usage`](./craft-sample-app)

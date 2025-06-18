@@ -1,0 +1,16 @@
+---
+sidebar_position: 1
+title: How to open Module Details
+---
+
+To open a module details screen, you need to call the `openDetails` method of the `Module`
+interface. This method is available in the `ModuleWithDetails` interface, which extends the `Module`
+interface.
+
+To open the module details screen, you need to get module instance and call the `openDetails` method
+
+```kotlin
+val module =
+    HumaModuleKitManager.getInstace().findModule<ModuleWithDetails>(moduleId = "your_module_id")
+module?.openDetails(context)
+```

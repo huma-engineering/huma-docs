@@ -1,0 +1,162 @@
+---
+id: models-api
+title: Models API
+sidebar_label: Models API
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Models API
+
+The `Models API` in the `CraftAPI` module enables developers to **fetch** and **submit** data models to the HumaCraft backend, using detailed metadata for versioning and identification.
+
+## Overview
+
+This API provides two primary operations:
+
+- [`getModel`](#getmodelmetadata): Fetch a model from the backend using `GetMetadata`.
+- [`submitModel`](#submitmodelmodelmetadata): Submit an `Encodable` model using `PostMetadata`.
+
+Both methods are fully asynchronous using Swift Concurrency (`async/await`) and are designed for flexibility and extensibility across different model versions and add-on deployments.
+
+---
+
+## `getModel(metadata:)`
+
+Fetches a model of the specified type from the backend using metadata.
+
+### Declaration
+
+```swift
+public static func getModel<T: Decodable>(metadata: GetMetadata) async throws -> T
+```
+
+### Parameters
+
+| Name       | Type         | Description                                                       |
+|------------|--------------|-------------------------------------------------------------------|
+| `metadata` | `GetMetadata`| Contains the model name, version, add-on ID, and add-on version. |
+
+### Returns
+
+A decoded instance of the model conforming to `Decodable`.
+
+### Throws
+
+An error if the request fails (e.g., network issue, decoding error, or empty result).
+
+### Example
+
+```swift
+let metadata = CraftAPI.GetMetadata(
+    modelName: "user",
+    addonID: "com.example.myaddon",
+    addonVersion: "1.0.0"
+)
+
+let userModel: UserModel = try await CraftAPI.getModel(metadata: metadata)
+```
+
+---
+
+## `submitModel(model:metadata:)`
+
+Submits an `Encodable` model to the backend using metadata.
+
+### Declaration
+
+```swift
+public static func submitModel<T: Encodable>(model: T, metadata: PostMetadata) async throws
+```
+
+### Parameters
+
+| Name        | Type           | Description                                                      |
+|-------------|----------------|------------------------------------------------------------------|
+| `model`     | `T`            | The model instance to be submitted. Must conform to `Encodable`. |
+| `metadata`  | `PostMetadata` | Contains model name, version, deployment ID, add-on ID, and version. |
+
+### Throws
+
+An error if the submission fails (e.g., serialization or server error).
+
+### Example
+
+```swift
+let newUser = UserModel(id: "123", name: "Alice")
+let metadata = CraftAPI.PostMetadata(
+    modelName: "user",
+    deploymentID: "deployment-abc123",
+    addonID: "com.example.myaddon",
+    addonVersion: "1.0.0"
+)
+
+try await CraftAPI.submitModel(model: newUser, metadata: metadata)
+```
+
+---
+
+## Metadata Types
+
+### `GetMetadata`
+
+Used when fetching models from the backend.
+
+```swift
+/// Metadata required to fetch a model from the HumaCraft backend.
+public struct GetMetadata {
+    /// The name of the model to fetch.
+    let modelName: String
+    /// The version of the API to use. Defaults to 1.
+    let apiVersion: Int = 1
+    /// The unique identifier of the add-on.
+    let addonID: String
+    /// The version of the add-on.
+    let addonVersion: String
+}
+```
+
+### `PostMetadata`
+
+Used when submitting models to the backend.
+
+```swift
+/// Metadata required to submit a model to the HumaCraft backend.
+public struct PostMetadata {
+    /// The name of the model being submitted.
+    let modelName: String
+    /// The version of the API to use. Defaults to 1.
+    let apiVersion: Int = 1
+    /// The unique identifier of the deployment.
+    let deploymentID: String
+    /// The unique identifier of the add-on.
+    let addonID: String
+    /// The version of the add-on.
+    let addonVersion: String
+}
+```
+
+---
+
+## Endpoint Structure
+
+The API builds the following endpoints dynamically using the provided metadata:
+
+- **GET** `/dj/craft/models/{modelName}/v{version}/`
+- **POST** `/dj/craft/models/{modelName}/v{version}/`
+
+> ℹ️ Note: These paths may change. Ensure `Endpoint.getCraftModel` and `Endpoint.postCraftModel` are updated accordingly.
+
+---
+
+## Notes
+
+- Utilizes Swift Concurrency for modern async code.
+- Requires model types to conform to `Encodable` or `Decodable`.
+- Metadata allows precise control over versioning, deployment targeting, and add-on identification.
+
+## 📚 See Also
+
+- [`Sample App Usage`](./craft-sample-app)

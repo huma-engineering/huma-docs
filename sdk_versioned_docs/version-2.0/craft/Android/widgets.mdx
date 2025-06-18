@@ -1,0 +1,112 @@
+---
+id: widgets
+title: Widgets
+sidebar_label: Widget
+sidebar_position: 3
+---
+
+## How to add a Widget
+
+### Create a Widget class
+
+To add a widget to your app, create a new class that extends the `Widget` class.
+
+```kotlin
+/**
+ * A custom implementation of the [Widget] class.
+ *
+ * This widget defines its own unique ID, type, display order,
+ * and behavior for rendering, viewing, and refreshing.
+ */
+class CustomWidget : Widget {
+
+    /** Unique identifier for this widget instance. */
+    override val id: String = "custom_widget_id"
+
+    /** Type of the widget, used for classification or rendering logic. */
+    override val type: String = "custom_widget_type"
+
+    /** Display order of the widget relative to others. */
+    override val order: Int = 0
+
+    /**
+     * Composable function that renders the widget's UI.
+     */
+    @Composable
+    override fun WidgetCard() {
+        // TODO: Implement the UI for the widget
+    }
+
+    /**
+     * Called when the widget becomes visible to the user.
+     */
+    override fun onViewed() {
+        // TODO: Handle widget view event
+    }
+
+    /**
+     * Called when the widget needs to refresh its content.
+     */
+    override suspend fun onRefresh() {
+        // TODO: Refresh widget data
+    }
+}
+```
+
+### Create a WidgetProvider
+
+To register this widget with the Widget framework, create a `WidgetProvider` and supply your custom
+widget through it.
+
+```kotlin
+/**
+ * Provides custom widgets to the Widget framework.
+ *
+ * This implementation returns a list of widgets to be rendered,
+ * and optionally performs initialization logic when the provider is set up.
+ */
+class CustomWidgetProvider : WidgetProvider {
+
+    /**
+     * Optional initialization logic for the widget provider.
+     *
+     * Override this if any setup or dependency injection is needed before
+     * widgets are provided.
+     */
+    override fun initializer() {
+        // TODO: Add initialization logic if needed
+    }
+
+    /**
+     * Supplies a list of widgets to the framework.
+     *
+     * @param params A list of [WidgetParams] that can be used to configure widgets dynamically.
+     * @return A list of [Widget] instances to be rendered.
+     */
+    override fun provideWidgets(params: List<WidgetParams>): List<Widget> {
+        return listOf(CustomWidget())
+    }
+}
+```
+
+### Register the WidgetProvider
+
+#### Register the `WidgetProvider` in the Huma Craft SDK initializer (Recommended)
+
+Next, register the `WidgetProvider` using `context.installHumaCraftSdk`.
+
+```kotlin
+context.installHumaCraftSdk(
+    widgetProviders = listOf(CustomWidgetProvider()), // Register custom widget providers
+    deviceProviders = null,
+    splashActivity = null
+)
+```
+
+#### Register the `WidgetProvider` directly with `HumaWidgetKitManager`
+
+Alternatively, register the `WidgetProvider` directly with the `HumaWidgetKitManager`.
+
+```kotlin
+HumaWidgetKitManager.getInstance().registerWidgetProvider(CustomWidgetProvider())
+```

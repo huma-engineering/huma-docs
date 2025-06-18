@@ -1,0 +1,34 @@
+---
+sidebar_position: 0
+title: How to work with Widget framework
+---
+
+## How to configure Widget framework
+
+> **Note:** This feature step is optional. You can skip this step if you don't need to add any
+> custom widgets to the SDK.
+
+To configure the Widget framework, add `widgetKit` block in the SdkInitializer:
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        widgetKit {
+            widgetProviders {
+                add(CustomWidgetProvider())
+            }
+        }
+    }
+}
+```
+
+## How to get the instance of your Widget
+
+To get the instance of your widget, you can use the `HumaWidgetKitManager`:
+
+```kotlin
+val widgetManager = HumaWidgetKitManager.getInstance()
+widgetManager.provideWidget(
+    "custom_widget_id" to "custom_widget_type"
+)
+```

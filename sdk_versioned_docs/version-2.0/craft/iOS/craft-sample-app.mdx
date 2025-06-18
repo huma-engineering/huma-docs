@@ -1,0 +1,94 @@
+---
+id: craft-sample-app
+title: Craft Sample App
+sidebar_label: Sample App Usage
+sidebar_position: 0
+---
+
+# Craft Sample App Usage
+
+The **Craft Sample App** is used to preview and test your widgets, device integrations, and health monitor providers before integrating them into the production Huma app.
+
+---
+
+## Required File: `HumaEnvironment.plist`
+
+Your project **must include** a file named `HumaEnvironment.plist` in the main bundle.  
+This file provides essential configuration for the Huma SDK.
+
+### Example Content
+
+| Key           | Type   | Example Value                            |
+|----------------|--------|------------------------------------------|
+| `domain`       | String | `rpmdevgcpukapi.staging.huma.com`       |
+| `bucket`       | String | `hu-gcp-uk-dev-rpm-bck`                 |
+| `countryCode`  | String | `gb`                                    |
+| `bucketRegion` | String | `eu`                                    |
+
+> ✅ Ensure this file is included in your app target and not excluded from builds.
+
+---
+
+## App Initialization
+
+Call `CraftApp.initialize` **before** `CraftApp.launch` inside your `AppDelegate.swift`.
+
+```swift
+CraftApp.initialize { config in
+    config.registerWidget(MyWidget.self, for: "com.huma.my_widget")
+    config.registerDeviceGroup(MyDeviceGroup())
+    config.registedHealthMonitorProvider(MyMonitorProvider())
+}
+```
+
+---
+
+## 🚀 Sample `AppDelegate.swift`
+
+```swift
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+) -> Bool {
+    CraftApp.initialize { config in
+        config.registedHealthMonitorProvider(MyMonitorProvider())
+    }
+
+    CraftApp.launch(with: launchOptions)
+    return true
+}
+```
+
+---
+
+## 🚀 Sample `SceneDelegate.swift`
+
+```swift
+func scene(
+    _ scene: UIScene,
+    willConnectTo session: UISceneSession,
+    options connectionOptions: UIScene.ConnectionOptions
+) {
+    if let windowScene = scene as? UIWindowScene {
+        CraftApp.connect(to: windowScene, options: connectionOptions)
+    }
+}
+```
+
+---
+
+## ⚙️ What `CraftApp.initialize` Does
+
+- Registers widgets in the `widgetRegistry`
+- Registers health monitor providers and converts them into passive data sources
+- Registers external device manufacturers using the `DevicesPlugin`
+- Adds permission handlers for new devices
+- Configures default modules (`HumaModules`, `HealthKit`, etc.)
+
+---
+
+## 📚 See Also
+
+- [`AnyCraftWidget`](./any-craft-widget)
+- [`AnyDeviceGroup`](./device-integration)
+- [`AnyHealthMonitorProvider`](./health-monitors)

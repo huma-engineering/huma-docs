@@ -1,0 +1,86 @@
+---
+sidebar_position: 1
+title: How to configure auth flow
+---
+
+In ideal case, the SDK should be able to handle the authentication flow without any additional
+configuration. However, in some cases, you might want to configure in the authentication flow
+manually.
+
+### Configure auth types
+
+Auth flow support two authentication types:
+
+* Email
+* Phone
+
+To configure this auth types you need to set them in the ```SdkInitializer```:
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        authKit {
+            configAuthTypes {
+                email(buttonTextRes = R.string.email)
+                phone(buttonTextRes = R.string.phone)
+            }
+        }
+    }
+}
+```
+
+### Configure manual Signup
+
+This option allows you to enable or disable manual signup in the authentication flow. When set
+to `true`, manual signup is enabled. When set to `false`, the signup process is handled
+automatically by the SDK.
+
+You can set this option in the `SdkInitializer`:
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        authKit {
+            manualSignup = true
+        }
+    }
+}
+```
+
+#### Retain Credentials
+
+This option instructs the SDK to retain user credentials. This could be useful in cases where you
+need to switch between accounts regularly, the user's credentials are saved for future logins. When
+set to `true`, user credentials are retained. When set to `false`, user credentials are not retained
+after logout.
+
+You can set this option in the `SdkInitializer`:
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        authKit {
+            retainCredentials = true
+        }
+    }
+}
+```
+
+#### Manual Deployment Switch
+
+This option allows manual switching of deployment environments. This could be useful in a
+development or testing scenario where switching between different environments (like staging,
+production, etc.) is required. When set to `true`, manual deployment switching is enabled. When set
+to `false`, the deployment environment is handled automatically by the SDK.
+
+You can set this option in the `SdkInitializer`:
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        authKit {
+            manualDeploymentSwitch = true
+        }
+    }
+}
+```

@@ -1,0 +1,243 @@
+---
+id: integrating-devices
+title: Integrating devices for on-demand readings
+---
+
+# Integrating devices for on-demand readings
+
+This documentation introduces the new capabilities of the SDK for integrating custom Devices for on-demand readings into the Huma App.
+
+> 💡 **Info**: The API for custom devices currently supports the following data types:
+> - **Blood Glucose**
+> - **Blood Pressure**
+> - **Temperature**
+> - **Weight**
+
+## ✨ Overview
+
+<details>
+  <summary>▶ Click to view the video</summary>
+
+  <video controls width="30%">
+    <source src="/videos/ios_device_as_a_plugin_1.mov" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+</details>
+
+The API enables seamless integration and management of custom devices within your app. It supports:
+
+1. **Device connection/disconnection flows** (e.g., adding or removing a device).
+2. **Syncing data from devices**, categorized by data types, such as *"BloodGlucose"* or *"BloodPressure"*, enabling integration with specific application modules.
+
+
+## 🛠️ Implementation Guide
+
+### 1. Define an External Device Manufacturer
+
+To integrate a new set of devices, create a class that conforms to the `AnyExternalDeviceManufacturer` protocol. This protocol requires you to implement the following properties:
+
+```swift
+/// A protocol representing a manufacturer of external devices.
+public protocol AnyExternalDeviceManufacturer {
+    /// A human-readable name for the manufacturer.
+    var displayName: String { get }
+    
+    /// The list of single-reading devices supported by the manufacturer.
+    var singleReadingDevices: [any AnySingleReadingExternalDevice] { get }
+    
+    /// The list of multi-reading devices supported by the manufacturer.
+    var multiReadingDevices: [any AnyMultiReadingExternalDevice] { get }
+}
+
+// Example Implementation
+class MyDeviceManufacturer: AnyExternalDeviceManufacturer {
+    let displayName = "Bloodeasure"
+    let singleReadingDevices: [any AnySingleReadingExternalDevice] = [MyBloodPressureDevice()]
+    let multiReadingDevices: [any AnyMultiReadingExternalDevice] = []
+}
+```
+
+### 2. Define a Single-Reading Device
+
+For devices that provide a single type of reading, create a class that conforms to the `AnySingleReadingExternalDevice` protocol.
+
+```swift
+/// A namespace containing types and protocols related to external devices.
+public enum ExternalDevices {
+    
+    /// Represents the context required for pairing/unpairing an external device.
+    public struct PairingContext {
+        /// The navigation controller used to present the pairing/unpairing UI.
+        public let navigationController: UINavigationController
+    }
+    
+    /// Represents the context required for syncing data from an external device.
+    public struct SyncingContext {
+        /// The starting date and time for data synchronization, or `nil` for no restriction.
+        public let startDateTime: Date?
+    }
+}
+
+/// A protocol representing a generic external device.
+///
+/// **Note:** This protocol is not intended to be implemented directly.
+/// Instead, implement `AnySingleReadingDevice` or `AnyMultiReadingDevice`.
+public protocol AnyExternalDeviceBase {
+    /// A unique identifier for the device.
+    var id: String { get }
+    
+    /// A human-readable name for the device.
+    var displayName: String { get }
+    
+    /// The model of the device.
+    var model: String { get }
+    
+    /// Indicates whether the device is currently paired.
+    var isPaired: Bool { get }
+    
+    /// The data types supported by the device.
+    var supportedDataTypes: [ModuleData.AnyDataType] { get }
+
+    /// Determines if the device supports a specific data type.
+    /// - Parameter dataType: The data type to check for support.
+    /// - Returns: A Boolean value indicating whether the data type is supported.
+    func supportsDataType(_ dataType: ModuleData.AnyDataType) -> Bool
+    
+    /// Pairs the device using the provided context.
+    /// - Parameter context: The pairing context containing necessary information.
+    /// - Throws: An error if the pairing process fails.
+    func pair(with context: ExternalDevices.PairingContext) async throws
+    
+    /// Unpairs the device using the provided context.
+    /// - Parameter context: The pairing context containing necessary information.
+    /// - Throws: An error if the unpairing process fails.
+    func unpair(with context: ExternalDevices.PairingContext) async throws
+}
+
+/// A protocol representing a single-reading device capable of synchronizing one type of data.
+public protocol AnySingleReadingExternalDevice: AnyExternalDeviceBase {
+    /// The type of data that this device can produce during synchronization.
+    associatedtype Reading: AnyModuleData
+
+    /// Synchronizes readings from the device.
+    /// - Parameter context: The syncing context containing necessary information.
+    /// - Returns: An array of synchronized data.
+    /// - Throws: An error if the synchronization process fails.
+    func sync(with context: ExternalDevices.SyncingContext) async throws -> [Reading]
+}
+
+// Example Implementation
+class MyBloodPressureDevice: AnySingleReadingExternalDevice {
+    let id = "device1"
+    let displayName = "Blood Pressure Monitor"
+    let model = "BP-100"
+    let isPaired = false
+    let supportedDataTypes = [ModuleData.BloodPressure.self]
+
+    func pair(with context: ExternalDevices.PairingContext) async throws {
+        // Logic for pairing
+    }
+
+    func unpair(with context: ExternalDevices.PairingContext) async throws {
+        // Logic for unpairing
+    }
+
+    func sync(with context: ExternalDevices.SyncingContext) async throws -> [ModuleData.BloodPressure] {
+        // Logic for syncing data
+        let data = ModuleData.BloodPressure(date, source: "Bloodeasure", systolic: 120, diastolic: 80)
+        return [data]
+    }
+}
+```
+
+### 3. Define a Multi-Reading Device
+
+For devices that can provide multiple types of readings, create a class that conforms to the AnyMultiReadingExternalDevice protocol.
+
+```swift
+/// A protocol representing a multi-reading device capable of synchronizing multiple types of data.
+public protocol AnyMultiReadingExternalDevice: AnyExternalDeviceBase {
+    /// The data types that this device can produce during synchronization.
+    var supportedDataTypes: [ModuleData.AnyDataType] { get }
+
+    /// Synchronizes readings of a specific type from the device.
+    /// - Parameters:
+    ///   - context: The syncing context containing necessary information.
+    ///   - type: The data type to synchronize.
+    /// - Returns: An array of synchronized data of the specified type.
+    /// - Throws: An error if the synchronization process fails.
+    func sync(
+        with context: ExternalDevices.SyncingContext,
+        ofType type: ModuleData.AnyDataType
+    ) async throws -> [AnyModuleData]
+}
+
+// Example Implementation
+class MyMultiReadingDevice: AnyMultiReadingExternalDevice {
+    let id = "device2"
+    let displayName = "Multi Sensor"
+    let model = "MS-200"
+    let isPaired = true
+    let supportedDataTypes = [ModuleData.BloodPressure.self, ModuleData.Weight.self]
+
+    func pair(with context: ExternalDevices.PairingContext) async throws {
+        // Logic for pairing
+    }
+
+    func unpair(with context: ExternalDevices.PairingContext) async throws {
+        // Logic for unpairing
+    }
+
+    func sync(
+        with context: ExternalDevices.SyncingContext,
+        ofType type: ModuleData.AnyDataType
+    ) async throws -> [AnyModuleData] {
+        // Logic for syncing data of the specified type
+    }
+}
+```
+
+### 4. Pairing and Unpairing Devices
+
+The `pair(with:)` and `unpair(with:)` methods in your device implementation will be called automatically by the SDK during the appropriate stages of device management. You only need to provide the logic for how pairing and unpairing should be handled.
+
+There's no need to manually invoke these methods.
+
+
+### 5. Syncing Data from Devices
+
+The SDK automatically handles data synchronization by calling the `sync(with:)` method for single-reading devices or `sync(with:ofType:)` for multi-reading devices. Ensure that your implementation includes the logic for retrieving data from the device and returning it in the expected format.
+
+These methods will be invoked as part of the SDK's data flow, and you don't need to call them explicitly.
+
+### 6. Register the Device Manufacturer
+
+Once you have implemented your custom device manufacturer, register it in your AppDelegate during the application initialization:
+
+```swift
+import HumaAppKit
+import HumaDevicesPlugin
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let devicePlugin = DevicesPlugin()
+        devicePlugin.registerExternalManufacturer(MyDeviceManufacturer())
+        
+        HumaApp.initialize { app in
+            app.configureDevices(devicePlugin)
+        }
+
+        return true
+    }
+}
+```
+
+### 📦 Dependencies
+
+```swift
+import HumaAppKit
+import HumaDevicesPlugin
+```
