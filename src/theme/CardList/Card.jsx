@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import { findFirstCategoryLink, useDocById } from '@docusaurus/theme-common';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-import isInternalUrl from '@docusaurus/isInternalUrl';
 import { translate } from '@docusaurus/Translate';
+import {findFirstCategoryLink} from "@docusaurus/theme-common/internal";
 
 function CardContainer({ href, children }) {
   const className = clsx(
