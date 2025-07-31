@@ -1,0 +1,80 @@
+---
+sidebar_position: 0
+title: Getting started
+---
+
+Welcome to the Huma Android SDK! This guide will help you get started with integrating the Huma SDK into your Android application.
+
+## Setting Up Your Development Environment
+
+Here are the steps to set up your development environment:
+
+1. **Add the Huma SDK Maven repository to your project**: Open your `settings.gradle.kts` file and add the following code to the `dependencyResolutionManagement` section:
+
+```kotlin
+maven {
+    url = uri("https://maven.pkg.github.com/huma-engineering/huma-android-sdk")
+    credentials {
+        username = "***"
+        password = "***"
+    }
+}
+```
+Note: Replace *** with your GitHub username and GitHub token.
+
+2. **Add the Huma SDK dependency to your project**: Open your `build.gradle.kts` file and add the following code to the `dependencies` section:
+
+```kotlin
+dependencies {
+    // Other dependencies...
+
+    // Install BOM for resolving dependency versions
+    implementation(platform("com.huma:android-sdk-bom:2.x.x"))
+    implementation("com.huma.sdk:appkit")
+    
+    /* Optional dependencies */
+    // Use only if need to use the Foundation layer without the AppKit and SDK
+    implementation("com.huma.sdk:foundation")
+    // Use only if need to use the SDK layer without the AppKit
+    implementation("com.huma.sdk:sdk")
+    
+    /* Plugin dependencies */
+    // Replace with the actual Plugin modules
+    implementation("com.huma.sdk:plugins-...")
+    // Replace with the actual Plugin device module
+    implementation("com.huma.sdk:plugin-device...")
+    // Replace with the actual Plugin Huma module
+    implementation("com.huma.sdk:plugin-module...")
+    // Replace with the actual Plugin widget module
+    implementation("com.huma.sdk:plugin-widget...")
+}
+```
+
+3. Initialize Huma SDK in your Application class or
+   using [AppStartup library](https://developer.android.com/topic/libraries/app-startup):
+```kotlin
+context.installHumaSdk {
+    foundation {
+        // Go to Foundation section for more details
+    }
+    sdk {
+        // Go to SDK section for more details
+    }
+    appKit {
+        // Go to AppKit section for more details
+    }
+    // Plugin configurations
+}
+```
+
+4. (Optional) Add Huma gradle plugin to your project:
+```kotlin
+plugins {
+    id("com.huma.sdk.gradle-plugin") version "1.0.0"
+}
+```
+
+* [Foundation](Foundation/Android)
+* [SDK](SDK/Android)
+* [AppKit](AppKit/Android)
+

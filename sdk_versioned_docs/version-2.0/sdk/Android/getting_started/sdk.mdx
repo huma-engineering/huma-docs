@@ -1,0 +1,125 @@
+---
+sidebar_position: 3
+title: How to configure SDK
+---
+
+## Introduction
+
+The SDK layer need to be configured if not using AppKit or there is a need to configure features
+that are not available in AppKit. Also there is a few features that are available in SDK layer only.
+
+Like Modules, Key Actions, Widgets that are not integrated with Huma Platform.
+
+## Configuration
+To configure it you need to prepare your project based on this [page](../Getting Started/Android).
+Also make sure to setup the Foundation layer before configuring the SDK.
+
+```kotlin
+context.installHumaSdk {
+    sdk {
+        // (Required if not using AppKit) Deployment repository to be used for fetching deployments
+        deploymentRepository = DeploymentRepository()
+        // (Required if not using AppKit) Modules repository to be used for fetching modules
+        modulesRepo = ModulesRepo()
+        // (Required if not using AppKit) User repository to be used for fetching user data
+        userRepo = UserRepo()
+
+        actionKit {
+            // (Optional) List of key action providers to be used for fetching key actions
+            providers = listOf<KeyActionProvider>
+            // (Optional) Default datetime range to be used for fetching key actions. By default it is 2 weeks from now and 3 months in the past
+            datetimeRange = DateTimeRange.Default
+            // (Optional) List of key action view overrides to be used for customizing key action views 
+            keyActionViewOverride = listOf<KeyActionViewOverride>
+        }
+        authKit {
+            // (Required if not using AppKit) Auth repository to be used for fetching auth data
+            authRepository = AuthRepository()
+            // (Required if not using AppKit) Invitation repository to be used for fetching invitations
+            invitationRepository = InvitationRepository()
+            // (Required if not using AppKit) Logout repository to be used for logging out user
+            logoutRepository = LogoutRepository()
+            // (Required if not using AppKit) Regions repository to be used for fetching regions
+            regionsRepository = RegionsRepository()
+            // (Required if not using AppKit) User repository to be used for fetching user data
+            userRepository = UserRepository()
+            // (Required if not using AppKit) Deployment selector repository to be used for selecting deployment
+            deploymentSelectorRepo = DeploymentSelectorRepo()
+            // (Required if not using AppKit) Retained account repository to be used for retaining account
+            retainedAccountRepo = RetainedAccountRepo()
+            // (Optional) Enable or disable manual signup, by default it is false
+            manualSignup = true / false
+            // (Optional) Enable or disable retaining credentials, by default it is false
+            retainCredentials = true / false
+            // (Optional) Enable or disable manual deployment switch, by default it is false
+            manualDeploymentSwitch = true / false
+            // (Optional) List of auth types to be used for authentication, by default it is Email
+            authTypes = listOf<AuthType>
+        }
+        deviceIntegration {
+            // (Optional) Enable or disable showing fitness tracker on startup, by default it is false
+            showFitnessTrackerOnStartup = true / false
+            installModules {
+                // Install device integration modules, by default all 1st party modules are installed automatically if dependencies are added in build.gradle.kts
+                listOf<DeviceIntegrationLibrary>()
+            }
+            //Alternatively you can install via
+            installModule(DeviceIntegrationLibrary1(), DeviceIntegrationLibrary2(), ...)
+        }
+        moduleKit {
+            installModules {
+                // Install modules, by default all 1st party modules are installed automatically if dependencies are added in build.gradle.kts
+                listOf<ModuleProvider>()
+            }
+            //Alternatively you can install via
+            installModule(ModuleProvider1(), ModuleProvider2(), ...)
+
+            installModuleCardViewOverride {
+                // Install module card view overrides, used for customizing module card views in existing modules
+                listOf<ModuleCardViewOverride>
+            }
+            //Alternatively you can install via
+            installModuleCardViewOverride(ModuleCardViewOverride1(), ModuleCardViewOverride2(), ...)
+        }
+        storage {
+            // (Required if not using AppKit) Storage repository to be used for fetching storage data (AWS, Google Cloud, etc.)
+            storageRepository = StorageRepository()
+        }
+        onboardingKit {
+            // (Required if not using AppKit) AppKit will add generic onboarding steps during initialization. 
+            // AppKit also exposes the same option to register onboarding steps
+            steps {
+                listOf<OnboardingStep>() // List of onboarding steps to be used for onboarding
+            }
+        }
+        profileKit {
+            // (Required if not using AppKit) Profile repository for profile screen
+            profileSettingsRepository = ProfileSettingsRepository()
+            // Show debug sections in profile screen
+            showDebugProfileSection = true / false
+        }
+        questionnaire {
+            // Use to add more question types to the questionnaire engine
+            questions = listOf<RegisterQuestionParams>()
+            // For questions that use validation flow both local and remote
+            commonValidator = CommonValidator()
+        }
+        unitsKit {
+            // (Optional) List of units to be used for preferred units flow. By default it is empty and set by AppKit
+            configSource = PreferredUnitsConfigSource()
+        }
+        widgetKit {
+            // Install widget providers, by default all 1st party widget providers are installed automatically if dependencies are added in build.gradle.kts
+            installProviders(WidgetProvider1(), WidgetProvider2(), ...)
+        }
+    }
+}
+```
+
+## Previous Steps
+
+* [Foundation](../Foundation/Android)
+
+## Next Steps
+
+* [AppKit](../AppKit/Android)

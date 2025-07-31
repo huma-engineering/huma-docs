@@ -1,0 +1,205 @@
+---
+id: craft-sample-app
+title: Craft Sample App Usage
+sidebar_label: Sample App Usage
+sidebar_position: 0
+---
+
+Welcome to Huma Craft! This guide will walk you through integrating the Huma Craft Package into your
+Android app.
+
+## Setting Up Your Development Environment
+
+Follow these steps to set up your development environment:
+
+1. **Add the Huma SDK Maven repository to your project**: Open your `settings.gradle.kts` file and
+include the following code in the `dependencyResolutionManagement` section:
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven(url = "https://storage.googleapis.com/download.flutter.io")
+        maven(url = "https://jitpack.io")
+        maven {
+            url = uri("https://maven.pkg.github.com/huma-engineering/huma-android-sdk")
+            credentials {
+                username = "***"
+                password = "***"
+            }
+        }
+        maven {
+            setUrl("https://maven.pkg.github.com/xim-Lifelight/lifelight-controlled-config-android-sdk")
+            credentials {
+                username = "***"
+                password = "***"
+            }
+        }
+    }
+}
+```
+Note: Replace *** with your GitHub username and GitHub token.
+
+2. **Add the Huma Gradle plugin to your project**:
+
+    4.1 Open app level `build.gradle.kts` file and include the following code in the `plugins`
+    section:
+    ```kotlin
+    plugins {
+        id("com.huma.sdk.gradle-plugin") version "1.0.0"
+    }
+    ```
+
+    4.2 Open project level `build.gradle.kts` file and include the following code in the `plugins`
+    section:
+    ```kotlin
+        plugins {
+            id("com.huma.sdk.gradle-plugin") version "1.0.0" apply false
+        }
+    ```
+
+3. **Add the Huma Craft dependency to your project**: Open your `build.gradle.kts` file and include
+the following code in the `dependencies` section:
+
+```kotlin
+dependencies {
+    // Add Huma Craft Package
+    implementation("com.huma.sdk:plugin-craft-api:x.x.x")
+}
+```
+
+4. Download the `huma-sdk-config.json` file from the Builder portal and add it to your project's app
+   folder.
+
+![Alt text](../../../../assets/android-json-placement.png)
+
+Alternatively, manually create the `huma-sdk-config.json` file inside the app folder and include the
+following JSON:
+
+```json
+{
+  "environment": {
+    "url": "https://rpmdevgcpukapi.staging.huma.com/api/",
+    "bucket": "hu-gcp-uk-dev-rpm-bck",
+    "clientId": "c2",
+    "projectId": "p1",
+    "region": "eu",
+    "platform": "Android"
+  }
+}
+```
+
+5. Initialize the Craft package in your Application class or
+   use the [App Startup library](https://developer.android.com/topic/libraries/app-startup):
+```kotlin
+class SdkInitializer : Initializer<Unit> {
+
+    override fun create(context: Context) {
+        context.installHumaCraftSdk(
+            widgetProviders = null,
+            deviceProviders = null,
+            splashActivity = null
+        )
+    }
+
+    override fun dependencies() = emptyList<Class<out Initializer<*>?>?>()
+}
+```
+
+6. Configure `AndroidManifest.xml` (Optional, if required)
+
+To ensure compatibility and prevent conflicts with existing backup and data extraction settings in
+the host application, add the following attribute to the `<application>` tag in your
+`AndroidManifest.xml`:
+
+```xml
+<application
+    tools:replace="android:fullBackupContent, android:dataExtractionRules">
+```
+
+If you encounter a Manifest Merger Failed error due to conflicting dependencies in the host
+application's manifest, add the following `<meta-data>` entry inside the `<application>` tag in your
+`AndroidManifest.xml`:
+
+```xml
+<meta-data
+    android:name="com.google.mlkit.vision.DEPENDENCIES"
+    android:value="face,ocr,barcode"
+    tools:replace="android:value" />
+```
+
+To ensure compatibility with different Android versions and avoid manifest merge conflicts,
+add the following `<uses-permission>` entry in your `AndroidManifest.xml`:
+
+```xml
+<uses-permission
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="29"
+    tools:ignore="ScopedStorage"
+    tools:replace="android:maxSdkVersion" />
+```
+
+To ensure proper deep linking and interaction with the Huma SDK, add the following activity entry
+inside the `<application>` tag in your `AndroidManifest.xml`:
+
+Replace `yourdomain.com` with the actual domain used for deep linking in your application
+```xml
+<activity
+    android:name="com.huma.appkit.activity.MainActivity"
+    android:exported="true"
+    android:launchMode="singleTask">
+
+    <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+        <data android:pathPrefix="/login" />
+        <data android:pathPrefix="/reset-password" />
+        <data android:pathPrefix="/open-app" />
+        <data android:pathPrefix="/signin" />
+        <data android:pathPrefix="/signup" />
+        <data android:pathPrefix="/register" />
+        <data android:pathPrefix="/download-user-data" />
+        <data android:host="yourdomain.com" />
+    </intent-filter>
+
+</activity>
+```
+
+If your application includes a SplashActivity, ensure it supports deep linking by adding the
+following entry inside the `<application>` tag in your `AndroidManifest.xml`:
+
+```xml
+<activity
+    android:name=".ui.activity.SplashActivity"
+    android:exported="true">
+
+    <!-- Defines the launcher activity -->
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+
+    <!-- Deep linking support -->
+    <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="https" />
+        <data android:host="huma.onelink.me" />
+        <data android:host="yourdeeplinkdomain.com" />
+        <data android:host="yourseconddeeplinkdomain.com" />
+        <data android:host="yourthirdeplinkdomain.com" />
+    </intent-filter>
+
+</activity>
+
+```
