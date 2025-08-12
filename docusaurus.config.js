@@ -47,6 +47,12 @@ module.exports = {
               docsPluginId: 'data-collection',
               docId: 'index',
             },
+            {
+              type: 'doc',
+              label: 'Study',
+              docsPluginId: 'huma-study',
+              docId: 'index',
+            },
           ],
         },
         {
@@ -145,6 +151,15 @@ module.exports = {
         id: 'data-collection',
         path: 'data-collection',
         routeBasePath: 'workspace',
+        editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'huma-study',
+        path: 'huma-study',
+        routeBasePath: 'huma-study',
         editUrl: 'https://github.com/huma-engineering/huma-docs/edit/master',
       },
     ],
