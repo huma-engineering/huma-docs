@@ -75,67 +75,7 @@ Once you have created a few content pieces, you can start adding those to the de
 
 ![alt text](<../assets/Feature articles-4.png>)
 
-- <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Advanced query</span> allows you to apply advanced logic to which content pieces will be shown.
-  
-### Advanced Query
+- <span style={{ backgroundColor: '#EBEBEB', padding: '0 5px', borderRadius: '5px' }}>Advanced query</span> allows you to apply advanced logic to which content pieces will be shown. 
 
-In Advanced query, there are some key variables, primitives, functions, and basic conditional logic you can use to create your query.
-* **Key Variables**
-  - `EMPTY`: Represents an empty list. Use this when you don't want to return any articles. For example, `unread(articles) if user.age >= 18 else EMPTY` will return a list of unread articles if the user is an adult, and no articles if they are not.
-  - `NOW`: Refers to the current date and time.
-  - `TODAY`: Refers to the current date.
-  - `articles` : Represents all available articles. This is typically used as the first parameter in most functions, such as `unread(articles)`, `limit(articles, 5)`, or `filter(articles, tag="HR")`.
-
-* **Primitives**
-  - `data.<primitive>`: Serves as a placeholder for any last recorded basic metric, such as HeartRate, Weight, or BMI. This can include multiple nested fields like:
-  - `data.<primitive>.flags`: A flags object that includes `flags.gray`, `flags.amber`, and `flags.red`. These attributes represent the severity levels calculated for the metric.
-  - `data.<primitive>.value`: The value recorded by the user, typically a number or a decimal, depending on the metric.
-  - More complex primitives:
-    - `data.BloodPressure.systolicValue`
-    - `data.BloodPressure.diastolicValue`
-    - `data.CVDRiskScore.roundedValue`
-
-* **Functions** 
-  - `limit(articles: array, count: int)`: Limits the number of articles to the specified count.
-Example: 
-`limit(unread(articles), 2)` will show a maximum of 2 unread articles.
-  - `unread(articles: array)`: Filters articles to show only those that are unread.
-    
-    Example: 
-
-        unread(articles)
-        
-    It will display all unread articles.
-    
-
-* **Conditions**
-
-  Our DSL follows Python syntax, enabling the creation of complex conditional logic.
-  -  `if/else`:
-
-      Example: 
-    
-         <if true result> if data.HeartRate.flags else <else result>
-    
-      Usage: 
-      ```
-      filter(articles, tag="HR") if data.HeartRate.flags.red > 0 else limit(unread(articles), 2)
-      ```
-      This condition displays articles tagged with "HR" if the last HeartRate record is in the red severity level. Otherwise, it shows 2 unread articles.
-
-  - `and/or`:
-    
-    Example: 
-              
-        unread(articles) if data.HeartRate.flags.amber or data.HeartRate.flags.red else random(articles, 2)
-    This condition returns all unread articles if the last HeartRate record is within amber or red severity levels. Otherwise, it shows 2 random articles.
-
-  - `+` (add operation):
-    
-    Example: 
-              
-        filter(articles, tag="HR") + filter(articles, tag="sport")
-    This will display all articles tagged with either "HR" or "sport."
-
-This guide should provide a clear understanding of how to leverage the "Featured Article" feature using DSL Queries. Use these tools to tailor the content you see to match your specific needs and interests.
+[Learn more about Advanced Query](../advanced-queries/).
 
