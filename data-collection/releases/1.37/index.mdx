@@ -1,0 +1,77 @@
+---
+sidebar_position: 3
+title: '1.37'
+---
+
+# 1.36
+| Product | Version | Release Date |
+|---------|---------|--------------|
+| RPM    | 1.37    | 2025-09-30   |
+| Virtual     | 1.10        | 2025-09-30   |
+| Seha  | 1.9        | 2025-09-30   |
+| HealthCare  | 1.14        | 2025-09-30   |
+
+## 💻 Virtual Visit Widget
+
+We are launching a **fullscreen Virtual Visit Widget** using a **direct-to-consumer (D2C) model** to provide patients with a simple, engaging product for **hypertension management**.
+
+#### Key Features:
+- **Dashboard View:** Displays the latest blood pressure readings along with actionable insights.
+- **Patient Questionnaire:** Captures medication intake, experienced symptoms, and current blood pressure.
+- **Self-Signup Flow:** Allows users to opt in for hypertension tracking and begin their monitoring journey.
+- **Freemium Offering:** This virtual visit experience will be part of our freemium product, providing accessible hypertension management tools to all users.
+
+## 🔗 EMR Innovar Integration Update
+
+We have updated our **EMR integration** by switching from **Redox** to **Innovar** for **sending billing data** and **performing patient search** for **RCSM clinics**.
+
+#### Key Benefits:
+- **Cost Efficiency:** Innovar provides lower costs without compromising performance.
+- **Improved Workflows:** Enables faster and smoother workflows for clinicians and staff.
+- **Reliable Data Handling:** Maintains accurate and timely exchange of patient and billing information.
+
+## 💰 Billing Portal – API Layer
+
+We are launching a new **Billing Portal** product. This epic focuses on the **API layer**, which supports the backend workflows required for automated report generation, storage, review/approval, and client access.
+
+#### Key Features:
+- **Monthly Billing Reports:** Generate and store reports, including statements, CPT codes, and medical records.
+- **Invoices for Clinics:** Provide invoices with the ability to add descriptions for clarity.
+- **Account Manager Actions:** Allow account managers to fetch, update, and approve invoices efficiently.
+- **Client Access APIs:** Expose APIs for clients to retrieve reports and invoices, with options to export in **PDF** or **Excel** formats.
+
+This API layer ensures a **robust, scalable, and secure backend** to support automated billing and reporting workflows across clinics and client organizations.
+
+## ✉️ Automated Clinician Email Flow
+
+We are implementing an **automated email flow** that sends patients a **nurse’s Calendly link and/or phone number**, allowing them to easily **book a call** or **initiate direct communication**.
+
+#### Key Features:
+- Added secure email-sending functionality directly from clinician dashboards.
+- Supports email for patient follow-ups, summaries, and appointment reminders.
+- Logs all outbound communication for compliance and traceability.
+
+## 🎮 FiveLives Game Integration and Widget
+We are integrating games provided by **Five Lives Health** ([Five Lives • Boost your memory and brain health](https://www.fiveliveshealth.com)) into our app for our client **Servier**.
+
+### Games Included:
+- **Spot Me**
+- **Back Back**
+- **Cheery**
+- **Bubble Pop**
+- **Think Twice**
+
+#### Key Features:
+- Integrated FiveLives cognitive game module within the platform.
+- Enabled real-time engagement tracking and analytics.
+- Added a standalone widget for patient access and progress tracking.
+
+## ⚙️ Optimize Application Structure (Migration to Django and Removal of Flask)
+- Completed backend migration from Flask to Django framework.
+- Improved code maintainability, performance, and scalability.
+- Standardized API layer and implemented centralized configuration management.
+
+## 🔐 Single Sign-On (SSO) – Web
+- Implemented secure SSO for web users using industry-standard OAuth2/OpenID protocols.
+- Supports integration with enterprise identity providers (e.g., Azure AD, Okta).
+- Simplified login process and enhanced session security.
